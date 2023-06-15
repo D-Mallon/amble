@@ -1,0 +1,41 @@
+This is a step by step guide for how you should approach and upload your work to github.
+
+Step 1: Per the Trello tasks list, please be clear on what file and features you are working on. If two people work 
+on the same file, it will be a pain to get the files merged properly / stop stuff breaking. Ideally, where 
+possible, let's try not to work on the same file as someone else until they've pushed to github.
+
+Step 2: Open your command line. Naviagate to the project folder. Ensure that everything is working by typing "git 
+status"
+
+Step 3: Type "git pull" to get the most up-to-date version of the repository
+
+Step 4: Type "git branch (insert branch name here)" to create a new branch where you will make all your changes. 
+Naming convention TBC but I would suggest just using a clear feature name.
+
+Step 5: Navigate to the new branch with "git checkout (insert branch name)"
+
+Step 6: Make any changes to the file you are working on
+
+Step 7: Type "git add --all"/ "git add ." and "git commit -m "insert message here"" to add our files and commit 
+like normal. Please decribe the changes clearly and accurately as this will make oversight and tidy-ups a lot 
+easier.
+
+Step 8: Navigate back to the testDeployment branch with "git checkout testDeployment"
+
+Step 9: Merge your branch with testDeployment using "git merge (insert branch name)"
+
+Step 10: Push to guthub with "git push"
+
+Step 10: Every 2/3 days, please delete the outdated / completed branch with "git branch --delete (insert branch 
+name)"
+
+Step 11: "git pull" to ensure that you are up to date with all changes.
+
+Please do this every time you make an edit so we don't get caught in a web of individual changes.
+
+The idea is that testDeployment will be the real testing branch for us - this is the one the team will use to 
+figure out whether we have broken anything substantial. The 'main' branch is the one I will be automatically 
+pulling to the server (in an ideal world) i.e. once the testDeployment branch has been tested and approved, I / the 
+team (point to discuss) can merge the testDeployment branch into the main branch, therefore making it live on the 
+server. We do not want the version on the server to crash / have bugs at all throughout the process, this should be 
+our fall back throughout the project acting as a working MVP.
