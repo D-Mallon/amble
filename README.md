@@ -14,4 +14,3 @@ GOOGLE_API_KEY = "XXX"
 8) python manage.py migrate
 9) python manage.py runserver
 10) https://localhost:8000
-
