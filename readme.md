@@ -22,3 +22,28 @@
 - i am the readme.md file, if Finbar has done a good job I should explain everything you need to know
 - requirements.txt contains the environment dependencies, this is used to create the virtual environment (hopefully vscode does this for you)
 - vite.config.js is a configuration file for vite, it can be ignored
+
+## How to Run the Project
+- open the project in vscode, the folder structure should be as described above (20-04-2023)
+- at the bottom right of the screen there might be a pop-up stating that vscode has detected a virtual environment
+- if this is the case click yes and vscode should create the virtual environment for you
+- if not open the terminal and type `python -m venv django-env` (this will create the virtual environment)
+- then type `source django-env/bin/activate` (this will activate the virtual environment)
+- then type `pip install -r requirements.txt` (this will install the environment dependencies)
+- then type `python manage.py runserver` (this will run the server)[Django]
+- open a new terminal and type `npm run dev` (this will run the frontend)[React]
+- the project should now be running on the django localhost (probably http://127.0.0.1:8000/)
+
+## Resources
+- Django is a backend framework, React is a frontend framework, Vite is a frontend build tool for React
+- If you do nothing else in this section watch the first three videos, it's 30 minutes well spent:
+- This video does a very good job of explaining Django: https://www.youtube.com/watch?v=0sMtoedWaf0
+- This video does a very good job of explaining React: https://www.youtube.com/watch?v=s2skans2dP4
+- This video does a very good job of explaining Vite: https://www.youtube.com/watch?v=89NJdbYTgJ8
+- The following stack overflow posts explains the steps taken to create our virtual environment and can be ignored: 
+* https://stackoverflow.com/questions/41427500/creating-a-virtualenv-with-preinstalled-packages-as-in-requirements-txt
+* https://stackoverflow.com/questions/36446599/zsh-command-not-found-django-admin-when-starting-a-django-project
+- This explains how React has been integrated with Django and can also be ignored:
+* https://www.youtube.com/watch?v=9Iq-0OYkoX0
+* https://vitejs.dev/guide/backend-integration.html
+- I'll add more info to this section as I remember/find it
