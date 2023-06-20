@@ -1,0 +1,4205 @@
+{
+    "5029111": {
+        "name": "Battery Park",
+        "location": {
+            "latitude": 40.7030272,
+            "longitude": -74.0157205
+        },
+        "busi": 0.01,
+        "poll": 0.95
+    },
+    "22727025": {
+        "name": "Bryant Park",
+        "location": {
+            "latitude": 40.7537508,
+            "longitude": -73.9835384
+        },
+        "busi": 0.39,
+        "poll": 0.92
+    },
+    "22899286": {
+        "name": "Madison Square Park",
+        "location": {
+            "latitude": 40.7421868,
+            "longitude": -73.987872
+        },
+        "busi": 0.33,
+        "poll": 0.79
+    },
+    "22899302": {
+        "name": "Washington Square Park",
+        "location": {
+            "latitude": 40.730896,
+            "longitude": -73.9975857
+        },
+        "busi": 0.31,
+        "poll": 0.12
+    },
+    "22900913": {
+        "name": "Dr. Gertrude B. Kelly Playground",
+        "location": {
+            "latitude": 40.7416557,
+            "longitude": -74.0020105
+        },
+        "busi": 0.23,
+        "poll": 0.34
+    },
+    "22900959": {
+        "name": "Chelsea Park",
+        "location": {
+            "latitude": 40.7499194,
+            "longitude": -74.0006702
+        },
+        "busi": 0.13,
+        "poll": 0.08
+    },
+    "22901074": {
+        "name": "Gramercy Park",
+        "location": {
+            "latitude": 40.737939,
+            "longitude": -73.9859225
+        },
+        "busi": 0.56,
+        "poll": 0.81
+    },
+    "22903972": {
+        "name": "Chelsea Waterside Park",
+        "location": {
+            "latitude": 40.7492535,
+            "longitude": -74.0074571
+        },
+        "busi": 0.84,
+        "poll": 0.02
+    },
+    "22904239": {
+        "name": "14th Street Park",
+        "location": {
+            "latitude": 40.742717,
+            "longitude": -74.0082549
+        },
+        "busi": 0.56,
+        "poll": 0.43
+    },
+    "22926662": {
+        "name": "Liberty Park",
+        "location": {
+            "latitude": 40.7102299,
+            "longitude": -74.0135844
+        },
+        "busi": 0.37,
+        "poll": 0.96
+    },
+    "22926980": {
+        "name": "Washington Market Park",
+        "location": {
+            "latitude": 40.7170293,
+            "longitude": -74.0116375
+        },
+        "busi": 0.05,
+        "poll": 0.51
+    },
+    "22941918": {
+        "name": "DeWitt Clinton Park",
+        "location": {
+            "latitude": 40.7682011,
+            "longitude": -73.9942676
+        },
+        "busi": 0.37,
+        "poll": 0.1
+    },
+    "22961817": {
+        "name": "Jackson Square Park",
+        "location": {
+            "latitude": 40.7390049,
+            "longitude": -74.0028822
+        },
+        "busi": 0.57,
+        "poll": 0.21
+    },
+    "22961821": {
+        "name": "Corporal John A. Seravalli Playground",
+        "location": {
+            "latitude": 40.7390844,
+            "longitude": -74.0048187
+        },
+        "busi": 0.9,
+        "poll": 0.79
+    },
+    "22961904": {
+        "name": "Clement Clarke Moore Park",
+        "location": {
+            "latitude": 40.7466119,
+            "longitude": -74.0043038
+        },
+        "busi": 0.61,
+        "poll": 0.58
+    },
+    "23048485": {
+        "name": "Tudor City Greens - North Park",
+        "location": {
+            "latitude": 40.7495583,
+            "longitude": -73.9705138
+        },
+        "busi": 0.39,
+        "poll": 0.42
+    },
+    "23048493": {
+        "name": "Tudor City Greens - South Park",
+        "location": {
+            "latitude": 40.7488541,
+            "longitude": -73.9710191
+        },
+        "busi": 0.6,
+        "poll": 0.7
+    },
+    "25026338": {
+        "name": "Zuccotti Park",
+        "location": {
+            "latitude": 40.7092314,
+            "longitude": -74.0112539
+        },
+        "busi": 0.28,
+        "poll": 0.8
+    },
+    "25162896": {
+        "name": "Tompkins Square Park",
+        "location": {
+            "latitude": 40.7264724,
+            "longitude": -73.9816871
+        },
+        "busi": 0.75,
+        "poll": 0.56
+    },
+    "25428484": {
+        "name": "Gantry Plaza State Park",
+        "location": {
+            "latitude": 40.7463702,
+            "longitude": -73.9572413
+        },
+        "busi": 0.83,
+        "poll": 0.63
+    },
+    "30657456": {
+        "name": "Christopher Park",
+        "location": {
+            "latitude": 40.7335833,
+            "longitude": -74.0022513
+        },
+        "busi": 0.29,
+        "poll": 0.33
+    },
+    "30657462": {
+        "name": "Sheridan Square Garden",
+        "location": {
+            "latitude": 40.7330286,
+            "longitude": -74.0021296
+        },
+        "busi": 0.39,
+        "poll": 0.65
+    },
+    "31009822": {
+        "name": "Stuyvesant Cove Park",
+        "location": {
+            "latitude": 40.7328321,
+            "longitude": -73.9739596
+        },
+        "busi": 0.47,
+        "poll": 0.54
+    },
+    "33804388": {
+        "name": "East River Esplanade",
+        "location": {
+            "latitude": 40.7449775,
+            "longitude": -73.9704665
+        },
+        "busi": 0.43,
+        "poll": 0.82
+    },
+    "33804405": {
+        "name": "Asser Levy Playground",
+        "location": {
+            "latitude": 40.7364315,
+            "longitude": -73.9756432
+        },
+        "busi": 0.87,
+        "poll": 0.75
+    },
+    "33819583": {
+        "name": "Marsha P. Johnson State Park",
+        "location": {
+            "latitude": 40.7215886,
+            "longitude": -73.9620733
+        },
+        "busi": 0.71,
+        "poll": 0.44
+    },
+    "36185652": {
+        "name": "Bellevue Society Garden",
+        "location": {
+            "latitude": 40.7380949,
+            "longitude": -73.9745264
+        },
+        "busi": 0.67,
+        "poll": 0.72
+    },
+    "36865288": {
+        "name": "Desalvio Playground",
+        "location": {
+            "latitude": 40.7216408,
+            "longitude": -73.9961097
+        },
+        "busi": 0.39,
+        "poll": 0.18
+    },
+    "37003318": {
+        "name": "Riverside Park",
+        "location": {
+            "latitude": 40.7880268,
+            "longitude": -73.982186
+        },
+        "busi": 0.83,
+        "poll": 0.48
+    },
+    "39015952": {
+        "name": "Schaefer Esplanade",
+        "location": {
+            "latitude": 40.7089973,
+            "longitude": -73.9692464
+        },
+        "busi": 0.32,
+        "poll": 0.67
+    },
+    "39243853": {
+        "name": "Morningside Park",
+        "location": {
+            "latitude": 40.8060522,
+            "longitude": -73.9580625
+        },
+        "busi": 0.53,
+        "poll": 0.63
+    },
+    "44225581": {
+        "name": "Petrosino Square",
+        "location": {
+            "latitude": 40.7217802,
+            "longitude": -73.9974692
+        },
+        "busi": 0.05,
+        "poll": 0.96
+    },
+    "48686595": {
+        "name": "WNYC Transmitter Park",
+        "location": {
+            "latitude": 40.7298528,
+            "longitude": -73.9614003
+        },
+        "busi": 0.08,
+        "poll": 0.92
+    },
+    "53189828": {
+        "name": "DeLury Square",
+        "location": {
+            "latitude": 40.7091073,
+            "longitude": -74.0050236
+        },
+        "busi": 0.67,
+        "poll": 0.69
+    },
+    "55208798": {
+        "name": "Triangle Park",
+        "location": {
+            "latitude": 39.1863871,
+            "longitude": -96.5769944
+        },
+        "busi": 0.85,
+        "poll": 0.56
+    },
+    "55208799": {
+        "name": "CiCo Park",
+        "location": {
+            "latitude": 39.1999683,
+            "longitude": -96.6195443
+        },
+        "busi": 0.51,
+        "poll": 0.38
+    },
+    "55208800": {
+        "name": "Goodnow Park",
+        "location": {
+            "latitude": 39.190589,
+            "longitude": -96.5624241
+        },
+        "busi": 0.26,
+        "poll": 0.78
+    },
+    "55208801": {
+        "name": "Griffith Ball Park",
+        "location": {
+            "latitude": 39.1737038,
+            "longitude": -96.5748531
+        },
+        "busi": 0.22,
+        "poll": 0.41
+    },
+    "55208802": {
+        "name": "Northeast Community Park",
+        "location": {
+            "latitude": 39.2004873,
+            "longitude": -96.5472162
+        },
+        "busi": 0.8,
+        "poll": 0.29
+    },
+    "55208803": {
+        "name": "City Park",
+        "location": {
+            "latitude": 39.1815962,
+            "longitude": -96.5757823
+        },
+        "busi": 0.91,
+        "poll": 0.42
+    },
+    "56469108": {
+        "name": "Brooklyn Bridge Park",
+        "location": {
+            "latitude": 40.697899,
+            "longitude": -73.9989911
+        },
+        "busi": 0.48,
+        "poll": 0.83
+    },
+    "60107178": {
+        "name": "Frank Anneberg Park",
+        "location": {
+            "latitude": 39.1853761,
+            "longitude": -96.63215
+        },
+        "busi": 0.62,
+        "poll": 0.95
+    },
+    "63944003": {
+        "name": "Sojourner Truth Park",
+        "location": {
+            "latitude": 39.1729502,
+            "longitude": -96.5734402
+        },
+        "busi": 0.6,
+        "poll": 0.57
+    },
+    "66324582": {
+        "name": "Warner Park",
+        "location": {
+            "latitude": 39.1726051,
+            "longitude": -96.6121568
+        },
+        "busi": 0.86,
+        "poll": 0.65
+    },
+    "66374787": {
+        "name": "Columbus Park",
+        "location": {
+            "latitude": 40.7151001,
+            "longitude": -74.0000509
+        },
+        "busi": 0.17,
+        "poll": 0.36
+    },
+    "67145672": {
+        "name": "Optimist Park",
+        "location": {
+            "latitude": 39.1856753,
+            "longitude": -96.6048097
+        },
+        "busi": 0.16,
+        "poll": 0.19
+    },
+    "70419911": {
+        "name": "Longs Park",
+        "location": {
+            "latitude": 39.1758843,
+            "longitude": -96.5824496
+        },
+        "busi": 0.86,
+        "poll": 0.71
+    },
+    "72840783": {
+        "name": "Eisenhower Baseball Complex",
+        "location": {
+            "latitude": 39.2170664,
+            "longitude": -96.5675004
+        },
+        "busi": 0.06,
+        "poll": 0.11
+    },
+    "74175421": {
+        "name": "Pioneer Park",
+        "location": {
+            "latitude": 39.1925111,
+            "longitude": -96.5942448
+        },
+        "busi": 0.79,
+        "poll": 0.83
+    },
+    "75311774": {
+        "name": "Battery Park City Ball Fields",
+        "location": {
+            "latitude": 40.7160843,
+            "longitude": -74.0140082
+        },
+        "busi": 0.03,
+        "poll": 0.85
+    },
+    "75364733": {
+        "name": "Bogardus Garden",
+        "location": {
+            "latitude": 40.7158736,
+            "longitude": -74.0090666
+        },
+        "busi": 0.8,
+        "poll": 0.66
+    },
+    "86144190": {
+        "name": "Abingdon Square",
+        "location": {
+            "latitude": 40.7372675,
+            "longitude": -74.0053868
+        },
+        "busi": 0.47,
+        "poll": 0.56
+    },
+    "86144198": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.736377,
+            "longitude": -74.0054892
+        },
+        "busi": 0.47,
+        "poll": 0.23
+    },
+    "86256760": {
+        "name": "Arthur Strickler Triangle",
+        "location": {
+            "latitude": 40.7368584,
+            "longitude": -74.0058066
+        },
+        "busi": 0.23,
+        "poll": 0.93
+    },
+    "86336886": {
+        "name": "Sherman Square",
+        "location": {
+            "latitude": 40.7773648,
+            "longitude": -73.9823502
+        },
+        "busi": 0.26,
+        "poll": 0.75
+    },
+    "86338375": {
+        "name": "Greenacre Park",
+        "location": {
+            "latitude": 40.7562735,
+            "longitude": -73.9692846
+        },
+        "busi": 0.59,
+        "poll": 0.89
+    },
+    "86714429": {
+        "name": "Kimlau Square",
+        "location": {
+            "latitude": 40.713421,
+            "longitude": -73.9979986
+        },
+        "busi": 0.58,
+        "poll": 0.79
+    },
+    "95163097": {
+        "name": "Empire-Fulton Ferry State Park",
+        "location": {
+            "latitude": 40.7042728,
+            "longitude": -73.9923851
+        },
+        "busi": 0.35,
+        "poll": 0.31
+    },
+    "95833119": {
+        "name": "Cooper Triangle",
+        "location": {
+            "latitude": 40.7288189,
+            "longitude": -73.9907764
+        },
+        "busi": 0.72,
+        "poll": 0.95
+    },
+    "104077634": {
+        "name": "Gorman Memorial Park",
+        "location": {
+            "latitude": 40.8556942,
+            "longitude": -73.9324027
+        },
+        "busi": 0.02,
+        "poll": 0.97
+    },
+    "104078386": {
+        "name": "Bennett Park",
+        "location": {
+            "latitude": 40.8528398,
+            "longitude": -73.938113
+        },
+        "busi": 0.4,
+        "poll": 0.94
+    },
+    "104169861": {
+        "name": "Isham Park",
+        "location": {
+            "latitude": 40.8696523,
+            "longitude": -73.9190761
+        },
+        "busi": 0.39,
+        "poll": 0.76
+    },
+    "105715154": {
+        "name": "Fort Washington Park",
+        "location": {
+            "latitude": 40.8531632,
+            "longitude": -73.9398863
+        },
+        "busi": 0.93,
+        "poll": 0.83
+    },
+    "108153375": {
+        "name": "Collect Pond Park",
+        "location": {
+            "latitude": 40.716328,
+            "longitude": -74.0018252
+        },
+        "busi": 0.13,
+        "poll": 0.18
+    },
+    "108153676": {
+        "name": "Duarte Square",
+        "location": {
+            "latitude": 40.7225449,
+            "longitude": -74.0055296
+        },
+        "busi": 0.43,
+        "poll": 0.01
+    },
+    "108159406": {
+        "name": "Carl Schurz Park",
+        "location": {
+            "latitude": 40.7752127,
+            "longitude": -73.9437574
+        },
+        "busi": 0.81,
+        "poll": 0.44
+    },
+    "108159407": {
+        "name": "Thomas Jefferson Park",
+        "location": {
+            "latitude": 40.7932541,
+            "longitude": -73.9353945
+        },
+        "busi": 0.16,
+        "poll": 0.06
+    },
+    "108199253": {
+        "name": "Robert Moses Plaza",
+        "location": {
+            "latitude": 40.7707338,
+            "longitude": -73.9847792
+        },
+        "busi": 0.1,
+        "poll": 0.18
+    },
+    "108199260": {
+        "name": "St. Peter's Garden",
+        "location": {
+            "latitude": 40.7711578,
+            "longitude": -73.9854676
+        },
+        "busi": 0.28,
+        "poll": 0.9
+    },
+    "108201933": {
+        "name": "Mill Rock Park",
+        "location": {
+            "latitude": 40.7804689,
+            "longitude": -73.9385927
+        },
+        "busi": 0.69,
+        "poll": 0.5
+    },
+    "108220705": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7630623,
+            "longitude": -73.9481835
+        },
+        "busi": 0.3,
+        "poll": 0.36
+    },
+    "108235832": {
+        "name": "Corlears Hook Park",
+        "location": {
+            "latitude": 40.7117107,
+            "longitude": -73.9792885
+        },
+        "busi": 0.96,
+        "poll": 0.32
+    },
+    "108235833": {
+        "name": "Rector Park",
+        "location": {
+            "latitude": 40.709189,
+            "longitude": -74.016925
+        },
+        "busi": 0.61,
+        "poll": 0.22
+    },
+    "108235836": {
+        "name": "Seward Park",
+        "location": {
+            "latitude": 40.7148304,
+            "longitude": -73.9891502
+        },
+        "busi": 0.0,
+        "poll": 0.33
+    },
+    "108235837": {
+        "name": "Vietnam Veterans Plaza",
+        "location": {
+            "latitude": 40.7026897,
+            "longitude": -74.0097625
+        },
+        "busi": 0.22,
+        "poll": 0.83
+    },
+    "108235842": {
+        "name": "John V. Lindsay East River Park",
+        "location": {
+            "latitude": 40.7185542,
+            "longitude": -73.976023
+        },
+        "busi": 0.07,
+        "poll": 0.53
+    },
+    "108236534": {
+        "name": "Wards Island Park",
+        "location": {
+            "latitude": 40.7861499,
+            "longitude": -73.9296327
+        },
+        "busi": 0.67,
+        "poll": 0.67
+    },
+    "108237827": {
+        "name": "Wallenberg Playground",
+        "location": {
+            "latitude": 40.8529616,
+            "longitude": -73.9267854
+        },
+        "busi": 0.03,
+        "poll": 0.57
+    },
+    "108237828": {
+        "name": "Jackie Robinson Park",
+        "location": {
+            "latitude": 40.8267343,
+            "longitude": -73.9412148
+        },
+        "busi": 0.96,
+        "poll": 0.43
+    },
+    "108239585": {
+        "name": "Jacob H. Schiff Playground",
+        "location": {
+            "latitude": 40.8205186,
+            "longitude": -73.9520188
+        },
+        "busi": 0.28,
+        "poll": 0.48
+    },
+    "108239586": {
+        "name": "Montefiore Park",
+        "location": {
+            "latitude": 40.8214533,
+            "longitude": -73.9535643
+        },
+        "busi": 0.13,
+        "poll": 0.6
+    },
+    "108239588": {
+        "name": "Alexander Hamilton Playground",
+        "location": {
+            "latitude": 40.8230955,
+            "longitude": -73.9512438
+        },
+        "busi": 0.53,
+        "poll": 0.01
+    },
+    "108239589": {
+        "name": "Saint Nicholas Park",
+        "location": {
+            "latitude": 40.8172175,
+            "longitude": -73.9489593
+        },
+        "busi": 0.82,
+        "poll": 0.89
+    },
+    "108295732": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7657936,
+            "longitude": -73.9476698
+        },
+        "busi": 0.56,
+        "poll": 0.31
+    },
+    "108295735": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7664493,
+            "longitude": -73.9468825
+        },
+        "busi": 0.19,
+        "poll": 0.53
+    },
+    "108295739": {
+        "name": "Manhattan Park Parcel A",
+        "location": {
+            "latitude": 40.7654725,
+            "longitude": -73.946894
+        },
+        "busi": 0.02,
+        "poll": 0.35
+    },
+    "108296005": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.760694,
+            "longitude": -73.9517296
+        },
+        "busi": 0.05,
+        "poll": 0.07
+    },
+    "108315458": {
+        "name": "FDR Four Freedoms State Park",
+        "location": {
+            "latitude": 40.7506326,
+            "longitude": -73.9603839
+        },
+        "busi": 0.77,
+        "poll": 0.02
+    },
+    "109267278": {
+        "name": "Coenties Slip Park",
+        "location": {
+            "latitude": 40.7034788,
+            "longitude": -74.0105207
+        },
+        "busi": 0.7,
+        "poll": 0.37
+    },
+    "109269750": {
+        "name": "Grand Army Plaza",
+        "location": {
+            "latitude": 40.764415,
+            "longitude": -73.9733608
+        },
+        "busi": 0.85,
+        "poll": 0.86
+    },
+    "109328312": {
+        "name": "Joseph C. Sauer Park",
+        "location": {
+            "latitude": 40.7281595,
+            "longitude": -73.9797195
+        },
+        "busi": 0.06,
+        "poll": 0.64
+    },
+    "109330342": {
+        "name": "James Madison Plaza",
+        "location": {
+            "latitude": 40.7114325,
+            "longitude": -74.0003718
+        },
+        "busi": 0.25,
+        "poll": 0.54
+    },
+    "109441961": {
+        "name": "Titanic Memorial Park",
+        "location": {
+            "latitude": 40.7075392,
+            "longitude": -74.0036904
+        },
+        "busi": 0.49,
+        "poll": 0.55
+    },
+    "109447376": {
+        "name": "Louise Nevelson Plaza",
+        "location": {
+            "latitude": 40.7076565,
+            "longitude": -74.0079164
+        },
+        "busi": 0.96,
+        "poll": 0.08
+    },
+    "111563947": {
+        "name": "Peretz Square",
+        "location": {
+            "latitude": 40.7229342,
+            "longitude": -73.9878534
+        },
+        "busi": 0.32,
+        "poll": 0.27
+    },
+    "112692313": {
+        "name": "Bowling Green",
+        "location": {
+            "latitude": 40.7050354,
+            "longitude": -74.0136629
+        },
+        "busi": 0.76,
+        "poll": 0.67
+    },
+    "113690621": {
+        "name": "Marsh & McLennan Public Space",
+        "location": {
+            "latitude": 40.75669,
+            "longitude": -73.9815898
+        },
+        "busi": 0.46,
+        "poll": 0.22
+    },
+    "113723738": {
+        "name": "Straus Park",
+        "location": {
+            "latitude": 40.8018962,
+            "longitude": -73.9682115
+        },
+        "busi": 0.65,
+        "poll": 0.87
+    },
+    "117994215": {
+        "name": "Samuel N. Bennerson 2nd Playground",
+        "location": {
+            "latitude": 40.7738043,
+            "longitude": -73.9869758
+        },
+        "busi": 0.19,
+        "poll": 0.18
+    },
+    "117994217": {
+        "name": "Damrosch Park",
+        "location": {
+            "latitude": 40.7723209,
+            "longitude": -73.9850051
+        },
+        "busi": 0.43,
+        "poll": 0.38
+    },
+    "118116798": {
+        "name": "Pier 84",
+        "location": {
+            "latitude": 40.7637561,
+            "longitude": -74.0013936
+        },
+        "busi": 0.81,
+        "poll": 0.62
+    },
+    "118116802": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7746717,
+            "longitude": -73.9889625
+        },
+        "busi": 0.22,
+        "poll": 0.91
+    },
+    "118505053": {
+        "name": "Clinton Cove",
+        "location": {
+            "latitude": 40.7706616,
+            "longitude": -73.9954545
+        },
+        "busi": 0.12,
+        "poll": 0.28
+    },
+    "118524658": {
+        "name": "Johnny Hartman Plaza",
+        "location": {
+            "latitude": 40.8241497,
+            "longitude": -73.9486126
+        },
+        "busi": 0.39,
+        "poll": 0.14
+    },
+    "118524659": {
+        "name": "Courtney Callender Playground",
+        "location": {
+            "latitude": 40.8100335,
+            "longitude": -73.9400997
+        },
+        "busi": 0.94,
+        "poll": 0.72
+    },
+    "118524660": {
+        "name": "Alice Kornegay Triangle",
+        "location": {
+            "latitude": 40.8064189,
+            "longitude": -73.9353004
+        },
+        "busi": 0.32,
+        "poll": 0.1
+    },
+    "118524662": {
+        "name": "Colonel Charles Young Triangle",
+        "location": {
+            "latitude": 40.8272244,
+            "longitude": -73.9358637
+        },
+        "busi": 0.09,
+        "poll": 0.27
+    },
+    "118524664": {
+        "name": "Renaissance Playground",
+        "location": {
+            "latitude": 40.8212878,
+            "longitude": -73.9413653
+        },
+        "busi": 0.9,
+        "poll": 0.93
+    },
+    "118524667": {
+        "name": "Harlem Lane Playground",
+        "location": {
+            "latitude": 40.8259868,
+            "longitude": -73.9349482
+        },
+        "busi": 0.39,
+        "poll": 0.61
+    },
+    "118524668": {
+        "name": "Howard Bennett Playground",
+        "location": {
+            "latitude": 40.8136382,
+            "longitude": -73.9386348
+        },
+        "busi": 0.45,
+        "poll": 0.26
+    },
+    "118524669": {
+        "name": "Moore Playground",
+        "location": {
+            "latitude": 40.8094037,
+            "longitude": -73.938501
+        },
+        "busi": 0.01,
+        "poll": 1.0
+    },
+    "118524671": {
+        "name": "Colonel Charles Young Playground",
+        "location": {
+            "latitude": 40.8191237,
+            "longitude": -73.935624
+        },
+        "busi": 0.68,
+        "poll": 0.39
+    },
+    "118524675": {
+        "name": "Riverside Park",
+        "location": {
+            "latitude": 40.8290212,
+            "longitude": -73.953451
+        },
+        "busi": 0.62,
+        "poll": 0.43
+    },
+    "118524677": {
+        "name": "Frederick Johnson Park",
+        "location": {
+            "latitude": 40.8247169,
+            "longitude": -73.9355292
+        },
+        "busi": 0.31,
+        "poll": 0.25
+    },
+    "118524678": {
+        "name": "Abraham Lincoln Playground",
+        "location": {
+            "latitude": 40.812198,
+            "longitude": -73.9371517
+        },
+        "busi": 0.89,
+        "poll": 0.15
+    },
+    "118524689": {
+        "name": "Holcombe Rucker Park",
+        "location": {
+            "latitude": 40.829198,
+            "longitude": -73.9361184
+        },
+        "busi": 0.47,
+        "poll": 0.94
+    },
+    "118524694": {
+        "name": "Riverbank State Park",
+        "location": {
+            "latitude": 40.8254269,
+            "longitude": -73.9565197
+        },
+        "busi": 0.1,
+        "poll": 0.23
+    },
+    "118524697": {
+        "name": "Crack Is Wack Playground",
+        "location": {
+            "latitude": 40.8044855,
+            "longitude": -73.9317785
+        },
+        "busi": 0.9,
+        "poll": 0.3
+    },
+    "118524700": {
+        "name": "Harlem River Park",
+        "location": {
+            "latitude": 40.8059758,
+            "longitude": -73.9336626
+        },
+        "busi": 0.98,
+        "poll": 0.96
+    },
+    "118524701": {
+        "name": "Bradhurst Urban Renewal Park",
+        "location": {
+            "latitude": 40.8226795,
+            "longitude": -73.9400884
+        },
+        "busi": 0.74,
+        "poll": 0.31
+    },
+    "118524706": {
+        "name": "Convent Garden",
+        "location": {
+            "latitude": 40.828365,
+            "longitude": -73.9427004
+        },
+        "busi": 0.06,
+        "poll": 0.54
+    },
+    "118528233": {
+        "name": "Sakura Park",
+        "location": {
+            "latitude": 40.8130779,
+            "longitude": -73.962112
+        },
+        "busi": 0.43,
+        "poll": 0.98
+    },
+    "118528235": {
+        "name": "West Harlem Piers Park",
+        "location": {
+            "latitude": 40.8191647,
+            "longitude": -73.9611293
+        },
+        "busi": 0.71,
+        "poll": 0.53
+    },
+    "118528587": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7972777,
+            "longitude": -73.9768346
+        },
+        "busi": 0.6,
+        "poll": 0.47
+    },
+    "118529212": {
+        "name": "Inwood Hill Park",
+        "location": {
+            "latitude": 40.8722547,
+            "longitude": -73.9253479
+        },
+        "busi": 0.1,
+        "poll": 1.0
+    },
+    "124814434": {
+        "name": "Bogardus Plaza",
+        "location": {
+            "latitude": 40.7159015,
+            "longitude": -74.0092316
+        },
+        "busi": 0.02,
+        "poll": 0.34
+    },
+    "129002500": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7199923,
+            "longitude": -73.9645033
+        },
+        "busi": 0.79,
+        "poll": 0.12
+    },
+    "129700421": {
+        "name": "Wagner Park",
+        "location": {
+            "latitude": 40.705538,
+            "longitude": -74.0183661
+        },
+        "busi": 0.02,
+        "poll": 0.56
+    },
+    "129700423": {
+        "name": "South Cove Park",
+        "location": {
+            "latitude": 40.7073325,
+            "longitude": -74.0184369
+        },
+        "busi": 0.62,
+        "poll": 0.83
+    },
+    "129700430": {
+        "name": "The Esplanade",
+        "location": {
+            "latitude": 40.711556,
+            "longitude": -74.0171986
+        },
+        "busi": 0.17,
+        "poll": 0.62
+    },
+    "136812195": {
+        "name": "Stagg Hill Park",
+        "location": {
+            "latitude": 39.1660814,
+            "longitude": -96.6123042
+        },
+        "busi": 0.88,
+        "poll": 0.0
+    },
+    "144333814": {
+        "name": "Joseph Slifka Park",
+        "location": {
+            "latitude": 40.743948,
+            "longitude": -73.9729184
+        },
+        "busi": 0.75,
+        "poll": 0.56
+    },
+    "147035202": {
+        "name": "Duane Park",
+        "location": {
+            "latitude": 40.7171562,
+            "longitude": -74.0094215
+        },
+        "busi": 0.76,
+        "poll": 0.96
+    },
+    "147475917": {
+        "name": "Hamilton Fish Park",
+        "location": {
+            "latitude": 40.7197929,
+            "longitude": -73.9808332
+        },
+        "busi": 0.35,
+        "poll": 0.22
+    },
+    "154416663": {
+        "name": "Dante Park",
+        "location": {
+            "latitude": 40.77192,
+            "longitude": -73.9825711
+        },
+        "busi": 0.33,
+        "poll": 0.28
+    },
+    "154416666": {
+        "name": "Richard Tucker Square",
+        "location": {
+            "latitude": 40.7734422,
+            "longitude": -73.9818886
+        },
+        "busi": 0.88,
+        "poll": 0.1
+    },
+    "159028631": {
+        "name": "Channel Gardens",
+        "location": {
+            "latitude": 40.758446,
+            "longitude": -73.9779564
+        },
+        "busi": 0.21,
+        "poll": 0.45
+    },
+    "160903868": {
+        "name": "McKinley Playground",
+        "location": {
+            "latitude": 40.7242531,
+            "longitude": -73.9857747
+        },
+        "busi": 0.19,
+        "poll": 0.54
+    },
+    "161768219": {
+        "name": "Hudson River Park",
+        "location": {
+            "latitude": 40.7194932,
+            "longitude": -74.0144394
+        },
+        "busi": 0.86,
+        "poll": 0.37
+    },
+    "162601421": {
+        "name": "Blue Earth Plaza",
+        "location": {
+            "latitude": 39.1756169,
+            "longitude": -96.5598231
+        },
+        "busi": 0.0,
+        "poll": 0.36
+    },
+    "162604009": {
+        "name": "Bluemont Hill Park",
+        "location": {
+            "latitude": 39.1922744,
+            "longitude": -96.5632155
+        },
+        "busi": 0.84,
+        "poll": 0.02
+    },
+    "169483357": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7572689,
+            "longitude": -73.9947724
+        },
+        "busi": 0.19,
+        "poll": 0.27
+    },
+    "169920486": {
+        "name": "Taylor Park",
+        "location": {
+            "latitude": 45.8518742,
+            "longitude": -111.3328105
+        },
+        "busi": 0.59,
+        "poll": 0.18
+    },
+    "171562481": {
+        "name": "Father Demo Square",
+        "location": {
+            "latitude": 40.7302244,
+            "longitude": -74.0021376
+        },
+        "busi": 0.04,
+        "poll": 0.98
+    },
+    "171805412": {
+        "name": "Luther Gulick Playground",
+        "location": {
+            "latitude": 40.7158754,
+            "longitude": -73.9818757
+        },
+        "busi": 0.02,
+        "poll": 0.18
+    },
+    "171815618": {
+        "name": "Pier 35 Park",
+        "location": {
+            "latitude": 40.7095904,
+            "longitude": -73.9884481
+        },
+        "busi": 0.48,
+        "poll": 0.34
+    },
+    "177068788": {
+        "name": "Laurie M. Tisch Illumination Lawn",
+        "location": {
+            "latitude": 40.7733857,
+            "longitude": -73.9835496
+        },
+        "busi": 0.31,
+        "poll": 0.8
+    },
+    "178575123": {
+        "name": "Riverside Park",
+        "location": {
+            "latitude": 40.8068603,
+            "longitude": -73.9680684
+        },
+        "busi": 0.21,
+        "poll": 0.03
+    },
+    "194212578": {
+        "name": "Tecumseh Playground",
+        "location": {
+            "latitude": 40.7818184,
+            "longitude": -73.9785715
+        },
+        "busi": 0.37,
+        "poll": 0.5
+    },
+    "197064614": {
+        "name": "James J Walker Park",
+        "location": {
+            "latitude": 40.7298088,
+            "longitude": -74.0061054
+        },
+        "busi": 0.44,
+        "poll": 0.34
+    },
+    "197066133": {
+        "name": "Pier 45",
+        "location": {
+            "latitude": 40.7331785,
+            "longitude": -74.0124101
+        },
+        "busi": 0.27,
+        "poll": 0.87
+    },
+    "199925533": {
+        "name": "Marcus Garvey Memorial Park",
+        "location": {
+            "latitude": 40.8044864,
+            "longitude": -73.9436727
+        },
+        "busi": 0.8,
+        "poll": 0.38
+    },
+    "201158183": {
+        "name": "Irish Hunger Memorial",
+        "location": {
+            "latitude": 40.7151544,
+            "longitude": -74.0165528
+        },
+        "busi": 0.57,
+        "poll": 0.33
+    },
+    "202314561": {
+        "name": "Sunset Park",
+        "location": {
+            "latitude": 39.1755735,
+            "longitude": -96.5956404
+        },
+        "busi": 0.67,
+        "poll": 0.57
+    },
+    "208360494": {
+        "name": "The Queen Elizabeth II September 11th Garden",
+        "location": {
+            "latitude": 40.704797,
+            "longitude": -74.0093346
+        },
+        "busi": 0.38,
+        "poll": 0.34
+    },
+    "217722093": {
+        "name": "J. Hood Wright Park",
+        "location": {
+            "latitude": 40.8464722,
+            "longitude": -73.941255
+        },
+        "busi": 0.42,
+        "poll": 0.37
+    },
+    "218327131": {
+        "name": "Verizon Plaza",
+        "location": {
+            "latitude": 40.7548157,
+            "longitude": -73.9851583
+        },
+        "busi": 1.0,
+        "poll": 0.43
+    },
+    "219612698": {
+        "name": "Finn Square",
+        "location": {
+            "latitude": 40.7186426,
+            "longitude": -74.0068689
+        },
+        "busi": 0.65,
+        "poll": 0.46
+    },
+    "221922459": {
+        "name": "Chelsea Waterside Park",
+        "location": {
+            "latitude": 40.7511887,
+            "longitude": -74.0093436
+        },
+        "busi": 0.41,
+        "poll": 0.25
+    },
+    "221922480": {
+        "name": "Riverside Park South",
+        "location": {
+            "latitude": 40.7772231,
+            "longitude": -73.9905567
+        },
+        "busi": 0.61,
+        "poll": 0.4
+    },
+    "222233979": {
+        "name": "Marble Hill Playground",
+        "location": {
+            "latitude": 40.8775125,
+            "longitude": -73.908139
+        },
+        "busi": 0.53,
+        "poll": 0.89
+    },
+    "224028029": {
+        "name": "132nd Street Block Association Park",
+        "location": {
+            "latitude": 40.8123187,
+            "longitude": -73.943153
+        },
+        "busi": 0.35,
+        "poll": 0.2
+    },
+    "224029303": {
+        "name": "Rev. Linnette C Williamson Memorial Park",
+        "location": {
+            "latitude": 40.8094612,
+            "longitude": -73.9429209
+        },
+        "busi": 0.64,
+        "poll": 0.84
+    },
+    "224031776": {
+        "name": "Collyer Brothers Park",
+        "location": {
+            "latitude": 40.8085313,
+            "longitude": -73.9410487
+        },
+        "busi": 0.9,
+        "poll": 0.91
+    },
+    "224034804": {
+        "name": "A Philip Randolph Square",
+        "location": {
+            "latitude": 40.8038286,
+            "longitude": -73.952422
+        },
+        "busi": 0.1,
+        "poll": 0.22
+    },
+    "225132539": {
+        "name": "Dr. Ronald E. McNair Playground",
+        "location": {
+            "latitude": 40.8025387,
+            "longitude": -73.9381332
+        },
+        "busi": 0.52,
+        "poll": 0.96
+    },
+    "225134048": {
+        "name": "Dream Street Park",
+        "location": {
+            "latitude": 40.8027407,
+            "longitude": -73.9350402
+        },
+        "busi": 0.48,
+        "poll": 0.14
+    },
+    "225134049": {
+        "name": "Harlem Art Park",
+        "location": {
+            "latitude": 40.8010442,
+            "longitude": -73.9388073
+        },
+        "busi": 0.62,
+        "poll": 0.25
+    },
+    "225135028": {
+        "name": "Mayor Wagner Pool",
+        "location": {
+            "latitude": 40.8016837,
+            "longitude": -73.9325907
+        },
+        "busi": 0.88,
+        "poll": 0.76
+    },
+    "225143097": {
+        "name": "Martin Luther King Playground",
+        "location": {
+            "latitude": 40.8002087,
+            "longitude": -73.9503857
+        },
+        "busi": 0.33,
+        "poll": 0.78
+    },
+    "225159200": {
+        "name": "Hancock Park",
+        "location": {
+            "latitude": 40.8095436,
+            "longitude": -73.9532979
+        },
+        "busi": 0.98,
+        "poll": 0.28
+    },
+    "225171034": {
+        "name": "Peter Minuit Playground",
+        "location": {
+            "latitude": 40.7947722,
+            "longitude": -73.9472299
+        },
+        "busi": 0.63,
+        "poll": 0.91
+    },
+    "225173496": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.8063252,
+            "longitude": -73.9344249
+        },
+        "busi": 0.63,
+        "poll": 0.44
+    },
+    "225173571": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.8078192,
+            "longitude": -73.9346167
+        },
+        "busi": 0.55,
+        "poll": 0.86
+    },
+    "225173572": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.8069688,
+            "longitude": -73.9353248
+        },
+        "busi": 0.86,
+        "poll": 0.31
+    },
+    "225173799": {
+        "name": "Each One Teach One",
+        "location": {
+            "latitude": 40.8071736,
+            "longitude": -73.9345657
+        },
+        "busi": 0.71,
+        "poll": 0.63
+    },
+    "225188061": {
+        "name": "Mae Grant Playground",
+        "location": {
+            "latitude": 40.7924257,
+            "longitude": -73.9494365
+        },
+        "busi": 0.2,
+        "poll": 0.58
+    },
+    "225188879": {
+        "name": "Sunshine Playground",
+        "location": {
+            "latitude": 40.7884898,
+            "longitude": -73.9478109
+        },
+        "busi": 0.86,
+        "poll": 0.78
+    },
+    "225188968": {
+        "name": "Cherry Tree Park",
+        "location": {
+            "latitude": 40.7872445,
+            "longitude": -73.9471949
+        },
+        "busi": 0.84,
+        "poll": 0.61
+    },
+    "225189359": {
+        "name": "White Playground",
+        "location": {
+            "latitude": 40.7916462,
+            "longitude": -73.9458897
+        },
+        "busi": 0.04,
+        "poll": 0.59
+    },
+    "225189391": {
+        "name": "103rd Street Community Garden",
+        "location": {
+            "latitude": 40.7909291,
+            "longitude": -73.9486547
+        },
+        "busi": 0.9,
+        "poll": 0.31
+    },
+    "225189513": {
+        "name": "Poor Richard's Playground",
+        "location": {
+            "latitude": 40.7926185,
+            "longitude": -73.9426331
+        },
+        "busi": 0.03,
+        "poll": 0.99
+    },
+    "225190178": {
+        "name": "Marx Brothers Playground",
+        "location": {
+            "latitude": 40.7842492,
+            "longitude": -73.9459882
+        },
+        "busi": 0.4,
+        "poll": 0.76
+    },
+    "225190195": {
+        "name": "Stanley Isaacs Courts",
+        "location": {
+            "latitude": 40.7834698,
+            "longitude": -73.9441011
+        },
+        "busi": 0.79,
+        "poll": 0.89
+    },
+    "225190397": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7853549,
+            "longitude": -73.9427366
+        },
+        "busi": 0.01,
+        "poll": 0.98
+    },
+    "225190636": {
+        "name": "Playground 103",
+        "location": {
+            "latitude": 40.7869524,
+            "longitude": -73.9390245
+        },
+        "busi": 0.75,
+        "poll": 0.68
+    },
+    "225190643": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7893497,
+            "longitude": -73.9382443
+        },
+        "busi": 0.09,
+        "poll": 0.83
+    },
+    "225191605": {
+        "name": "Harlem River Drive Park",
+        "location": {
+            "latitude": 40.8148592,
+            "longitude": -73.9343099
+        },
+        "busi": 0.17,
+        "poll": 0.92
+    },
+    "225336126": {
+        "name": "Randalls Island Park",
+        "location": {
+            "latitude": 40.7938563,
+            "longitude": -73.9217786
+        },
+        "busi": 0.75,
+        "poll": 0.99
+    },
+    "226010200": {
+        "name": "Jacob K. Javits Playground",
+        "location": {
+            "latitude": 40.8589557,
+            "longitude": -73.9349368
+        },
+        "busi": 0.53,
+        "poll": 0.89
+    },
+    "237054245": {
+        "name": "Plaza de las Americas",
+        "location": {
+            "latitude": 40.8460987,
+            "longitude": -73.9381037
+        },
+        "busi": 0.11,
+        "poll": 0.25
+    },
+    "237393267": {
+        "name": "Southpoint Park",
+        "location": {
+            "latitude": 40.7523609,
+            "longitude": -73.9587446
+        },
+        "busi": 0.01,
+        "poll": 0.25
+    },
+    "237397736": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7145611,
+            "longitude": -73.9910703
+        },
+        "busi": 0.69,
+        "poll": 0.34
+    },
+    "239982768": {
+        "name": "LentSpace",
+        "location": {
+            "latitude": 40.7227168,
+            "longitude": -74.0057708
+        },
+        "busi": 0.86,
+        "poll": 0.52
+    },
+    "239988106": {
+        "name": "Spring Street Park",
+        "location": {
+            "latitude": 40.724913,
+            "longitude": -74.0044414
+        },
+        "busi": 0.3,
+        "poll": 0.31
+    },
+    "239988114": {
+        "name": "Minetta Triangle",
+        "location": {
+            "latitude": 40.7298853,
+            "longitude": -74.0018589
+        },
+        "busi": 0.82,
+        "poll": 0.8
+    },
+    "239988118": {
+        "name": "Father Fagan Park",
+        "location": {
+            "latitude": 40.7267003,
+            "longitude": -74.0033094
+        },
+        "busi": 0.37,
+        "poll": 0.0
+    },
+    "239988120": {
+        "name": "Jefferson Market Garden",
+        "location": {
+            "latitude": 40.7344325,
+            "longitude": -73.9995026
+        },
+        "busi": 0.36,
+        "poll": 0.36
+    },
+    "241883186": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7954341,
+            "longitude": -73.9721055
+        },
+        "busi": 0.45,
+        "poll": 0.49
+    },
+    "242113355": {
+        "name": "Playground One",
+        "location": {
+            "latitude": 40.7122529,
+            "longitude": -73.9974005
+        },
+        "busi": 0.74,
+        "poll": 0.83
+    },
+    "244977216": {
+        "name": "William E. Passannante Ballfield",
+        "location": {
+            "latitude": 40.728579,
+            "longitude": -74.0022425
+        },
+        "busi": 0.27,
+        "poll": 0.53
+    },
+    "244978444": {
+        "name": "Winston Churchill Square",
+        "location": {
+            "latitude": 40.7298571,
+            "longitude": -74.0024499
+        },
+        "busi": 0.38,
+        "poll": 0.2
+    },
+    "246964616": {
+        "name": "Booker T Washington Playground",
+        "location": {
+            "latitude": 40.8009598,
+            "longitude": -73.9637796
+        },
+        "busi": 0.16,
+        "poll": 0.89
+    },
+    "249665058": {
+        "name": "Playground of the Americas",
+        "location": {
+            "latitude": 40.728006,
+            "longitude": -74.0026728
+        },
+        "busi": 0.71,
+        "poll": 0.99
+    },
+    "250049345": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7195161,
+            "longitude": -74.0109504
+        },
+        "busi": 0.95,
+        "poll": 0.7
+    },
+    "250051493": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7178178,
+            "longitude": -74.0112569
+        },
+        "busi": 0.96,
+        "poll": 0.61
+    },
+    "250265505": {
+        "name": "Hartman Triangle",
+        "location": {
+            "latitude": 40.7207559,
+            "longitude": -73.9806992
+        },
+        "busi": 0.8,
+        "poll": 0.69
+    },
+    "252823151": {
+        "name": "Straus Square",
+        "location": {
+            "latitude": 40.7142374,
+            "longitude": -73.9899111
+        },
+        "busi": 0.66,
+        "poll": 0.11
+    },
+    "254594895": {
+        "name": "Audubon Playground",
+        "location": {
+            "latitude": 40.8416095,
+            "longitude": -73.9381178
+        },
+        "busi": 0.35,
+        "poll": 0.4
+    },
+    "257389723": {
+        "name": "Twentyfour Sycamores Park",
+        "location": {
+            "latitude": 40.7594475,
+            "longitude": -73.9586677
+        },
+        "busi": 0.09,
+        "poll": 0.1
+    },
+    "257671578": {
+        "name": "Penn South Playground",
+        "location": {
+            "latitude": 40.7474929,
+            "longitude": -73.9987079
+        },
+        "busi": 0.2,
+        "poll": 0.29
+    },
+    "264003876": {
+        "name": "Paley Park",
+        "location": {
+            "latitude": 40.7603437,
+            "longitude": -73.9750748
+        },
+        "busi": 0.86,
+        "poll": 0.72
+    },
+    "264851981": {
+        "name": "Big Screen Plaza1",
+        "location": {
+            "latitude": 40.7472248,
+            "longitude": -73.990373
+        },
+        "busi": 0.24,
+        "poll": 0.45
+    },
+    "266077859": {
+        "name": "Hells Kitchen Park",
+        "location": {
+            "latitude": 40.7629731,
+            "longitude": -73.9925633
+        },
+        "busi": 0.79,
+        "poll": 0.45
+    },
+    "266097823": {
+        "name": "Matthews-Palmer Playground",
+        "location": {
+            "latitude": 40.7613978,
+            "longitude": -73.9927341
+        },
+        "busi": 0.48,
+        "poll": 0.82
+    },
+    "266113539": {
+        "name": "Ramone Aponte Park",
+        "location": {
+            "latitude": 40.7614489,
+            "longitude": -73.9893455
+        },
+        "busi": 0.4,
+        "poll": 0.16
+    },
+    "270791455": {
+        "name": "Freeman Plaza West",
+        "location": {
+            "latitude": 40.7242344,
+            "longitude": -74.0074749
+        },
+        "busi": 0.71,
+        "poll": 0.17
+    },
+    "271035454": {
+        "name": "Colorado Park",
+        "location": {
+            "latitude": 39.1767654,
+            "longitude": -96.565963
+        },
+        "busi": 0.16,
+        "poll": 0.56
+    },
+    "281499420": {
+        "name": "Lower East Side Playground",
+        "location": {
+            "latitude": 40.7293823,
+            "longitude": -73.9829156
+        },
+        "busi": 0.91,
+        "poll": 0.65
+    },
+    "287462475": {
+        "name": "Bellevue South Park",
+        "location": {
+            "latitude": 40.7400387,
+            "longitude": -73.9780496
+        },
+        "busi": 0.49,
+        "poll": 0.01
+    },
+    "292727035": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7111594,
+            "longitude": -74.0058691
+        },
+        "busi": 0.61,
+        "poll": 0.12
+    },
+    "293720019": {
+        "name": "Balsley Park",
+        "location": {
+            "latitude": 40.7674642,
+            "longitude": -73.9856951
+        },
+        "busi": 0.04,
+        "poll": 0.77
+    },
+    "295969929": {
+        "name": "St. Catherine's Park",
+        "location": {
+            "latitude": 40.7652136,
+            "longitude": -73.9587494
+        },
+        "busi": 0.83,
+        "poll": 0.39
+    },
+    "304129981": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7141821,
+            "longitude": -73.9851165
+        },
+        "busi": 0.84,
+        "poll": 0.08
+    },
+    "317355661": {
+        "name": "Henry M. Jackson Playground",
+        "location": {
+            "latitude": 40.7139646,
+            "longitude": -73.981496
+        },
+        "busi": 0.79,
+        "poll": 0.33
+    },
+    "318328998": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.8005903,
+            "longitude": -73.9581806
+        },
+        "busi": 0.66,
+        "poll": 0.23
+    },
+    "318329003": {
+        "name": "Roosevelt Triangle",
+        "location": {
+            "latitude": 40.8113293,
+            "longitude": -73.9544008
+        },
+        "busi": 0.31,
+        "poll": 0.66
+    },
+    "319615856": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7601079,
+            "longitude": -73.9505807
+        },
+        "busi": 0.34,
+        "poll": 0.36
+    },
+    "321905068": {
+        "name": "Riverwalk Commons",
+        "location": {
+            "latitude": 40.7589617,
+            "longitude": -73.9528666
+        },
+        "busi": 0.86,
+        "poll": 0.94
+    },
+    "324750157": {
+        "name": "First Park",
+        "location": {
+            "latitude": 40.7234173,
+            "longitude": -73.9892626
+        },
+        "busi": 0.64,
+        "poll": 0.94
+    },
+    "324975287": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.714787,
+            "longitude": -74.001878
+        },
+        "busi": 0.38,
+        "poll": 0.57
+    },
+    "324975291": {
+        "name": "Canal Park",
+        "location": {
+            "latitude": 40.7254013,
+            "longitude": -74.0105312
+        },
+        "busi": 0.11,
+        "poll": 0.85
+    },
+    "325008929": {
+        "name": "Alfred E. Smith Playground",
+        "location": {
+            "latitude": 40.710613,
+            "longitude": -73.9974893
+        },
+        "busi": 0.65,
+        "poll": 0.78
+    },
+    "325008930": {
+        "name": "Tanahey Playground",
+        "location": {
+            "latitude": 40.7101263,
+            "longitude": -73.9953543
+        },
+        "busi": 0.06,
+        "poll": 0.07
+    },
+    "328238569": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7072737,
+            "longitude": -74.0006237
+        },
+        "busi": 0.4,
+        "poll": 0.0
+    },
+    "329041506": {
+        "name": "Freeman Plaza East",
+        "location": {
+            "latitude": 40.7240917,
+            "longitude": -74.0065116
+        },
+        "busi": 0.03,
+        "poll": 0.19
+    },
+    "329041537": {
+        "name": "Freeman Plaza North",
+        "location": {
+            "latitude": 40.7243541,
+            "longitude": -74.0065666
+        },
+        "busi": 0.92,
+        "poll": 0.59
+    },
+    "329988114": {
+        "name": "Verdi Square",
+        "location": {
+            "latitude": 40.7791313,
+            "longitude": -73.9816274
+        },
+        "busi": 0.11,
+        "poll": 0.28
+    },
+    "334715965": {
+        "name": "Poses Park",
+        "location": {
+            "latitude": 40.7674465,
+            "longitude": -73.9635001
+        },
+        "busi": 0.05,
+        "poll": 0.54
+    },
+    "338690598": {
+        "name": "Altenbrand Park",
+        "location": {
+            "latitude": 45.860485,
+            "longitude": -111.3276198
+        },
+        "busi": 0.05,
+        "poll": 0.59
+    },
+    "338690606": {
+        "name": "Railroad Park",
+        "location": {
+            "latitude": 45.8570268,
+            "longitude": -111.3335524
+        },
+        "busi": 0.83,
+        "poll": 0.55
+    },
+    "338690607": {
+        "name": "Railroad Park",
+        "location": {
+            "latitude": 45.8559745,
+            "longitude": -111.331591
+        },
+        "busi": 0.15,
+        "poll": 0.64
+    },
+    "343765233": {
+        "name": "Peter Detmold Park",
+        "location": {
+            "latitude": 40.7536615,
+            "longitude": -73.9635268
+        },
+        "busi": 0.24,
+        "poll": 0.33
+    },
+    "351201923": {
+        "name": "Tramway Plaza",
+        "location": {
+            "latitude": 40.7609599,
+            "longitude": -73.9644278
+        },
+        "busi": 0.34,
+        "poll": 0.41
+    },
+    "353000933": {
+        "name": "Ruppert Park",
+        "location": {
+            "latitude": 40.7809662,
+            "longitude": -73.9501489
+        },
+        "busi": 0.21,
+        "poll": 0.0
+    },
+    "353133685": {
+        "name": "Park Avenue Malls",
+        "location": {
+            "latitude": 40.7869307,
+            "longitude": -73.9522659
+        },
+        "busi": 0.16,
+        "poll": 0.17
+    },
+    "357523569": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.8339778,
+            "longitude": -73.9452121
+        },
+        "busi": 0.77,
+        "poll": 0.0
+    },
+    "361478686": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 39.1933112,
+            "longitude": -96.5856899
+        },
+        "busi": 0.93,
+        "poll": 0.96
+    },
+    "362684406": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.8033166,
+            "longitude": -73.954381
+        },
+        "busi": 0.91,
+        "poll": 0.27
+    },
+    "362826160": {
+        "name": "Harlem Valley Garden",
+        "location": {
+            "latitude": 40.8145685,
+            "longitude": -73.9435785
+        },
+        "busi": 0.66,
+        "poll": 0.82
+    },
+    "362827398": {
+        "name": "Mandela Garden",
+        "location": {
+            "latitude": 40.8107974,
+            "longitude": -73.9499718
+        },
+        "busi": 0.29,
+        "poll": 0.86
+    },
+    "367660740": {
+        "name": "Roberto Clemente State Park",
+        "location": {
+            "latitude": 40.8564479,
+            "longitude": -73.9191945
+        },
+        "busi": 0.3,
+        "poll": 0.24
+    },
+    "367859701": {
+        "name": "Hunter\u2019s Point South Waterfront Park",
+        "location": {
+            "latitude": 40.7410012,
+            "longitude": -73.9610654
+        },
+        "busi": 0.84,
+        "poll": 0.16
+    },
+    "371120098": {
+        "name": "Chealsea Green",
+        "location": {
+            "latitude": 40.7415933,
+            "longitude": -73.9960607
+        },
+        "busi": 0.15,
+        "poll": 0.27
+    },
+    "372721441": {
+        "name": "Teardrop Park",
+        "location": {
+            "latitude": 40.7167736,
+            "longitude": -74.0156166
+        },
+        "busi": 0.45,
+        "poll": 0.55
+    },
+    "375369088": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7090264,
+            "longitude": -74.0080705
+        },
+        "busi": 0.94,
+        "poll": 0.46
+    },
+    "375369089": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7091468,
+            "longitude": -74.0082314
+        },
+        "busi": 0.0,
+        "poll": 0.23
+    },
+    "376015439": {
+        "name": "CU SIPA Commons",
+        "location": {
+            "latitude": 40.807298,
+            "longitude": -73.9599478
+        },
+        "busi": 0.0,
+        "poll": 0.94
+    },
+    "376015442": {
+        "name": "CU SE Field",
+        "location": {
+            "latitude": 40.806367,
+            "longitude": -73.9623446
+        },
+        "busi": 0.38,
+        "poll": 0.53
+    },
+    "378359193": {
+        "name": "Vincent F. Albano Jr. Playground",
+        "location": {
+            "latitude": 40.7419438,
+            "longitude": -73.9783848
+        },
+        "busi": 0.03,
+        "poll": 0.08
+    },
+    "378364365": {
+        "name": "Peter's Field",
+        "location": {
+            "latitude": 40.7361158,
+            "longitude": -73.9815688
+        },
+        "busi": 0.31,
+        "poll": 0.93
+    },
+    "379634622": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.736497,
+            "longitude": -74.0103959
+        },
+        "busi": 0.08,
+        "poll": 0.8
+    },
+    "379634625": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7346149,
+            "longitude": -74.0105573
+        },
+        "busi": 0.4,
+        "poll": 0.43
+    },
+    "379657566": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7526667,
+            "longitude": -73.9704924
+        },
+        "busi": 0.88,
+        "poll": 0.01
+    },
+    "379747570": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7515363,
+            "longitude": -73.9697087
+        },
+        "busi": 0.94,
+        "poll": 0.64
+    },
+    "379749111": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7535038,
+            "longitude": -73.9704538
+        },
+        "busi": 0.46,
+        "poll": 0.34
+    },
+    "379758354": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7495206,
+            "longitude": -73.9760712
+        },
+        "busi": 0.46,
+        "poll": 1.0
+    },
+    "380425199": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7516246,
+            "longitude": -73.9730606
+        },
+        "busi": 0.49,
+        "poll": 0.68
+    },
+    "384213466": {
+        "name": "B\u0142onie P\u0142o\u0144ska",
+        "location": {
+            "latitude": 52.6270784,
+            "longitude": 20.3777162
+        },
+        "busi": 0.08,
+        "poll": 0.86
+    },
+    "385106972": {
+        "name": "Ralph Bunche Park",
+        "location": {
+            "latitude": 40.7493256,
+            "longitude": -73.969745
+        },
+        "busi": 0.56,
+        "poll": 0.37
+    },
+    "395678163": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7445517,
+            "longitude": -73.9862513
+        },
+        "busi": 0.68,
+        "poll": 0.12
+    },
+    "400780940": {
+        "name": "Teardrop Park South",
+        "location": {
+            "latitude": 40.7157927,
+            "longitude": -74.0160302
+        },
+        "busi": 0.85,
+        "poll": 0.3
+    },
+    "400782867": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.714576,
+            "longitude": -74.0139461
+        },
+        "busi": 0.23,
+        "poll": 0.12
+    },
+    "400782868": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7063887,
+            "longitude": -74.0165613
+        },
+        "busi": 0.95,
+        "poll": 0.04
+    },
+    "400782869": {
+        "name": "Vesey Green",
+        "location": {
+            "latitude": 40.7149552,
+            "longitude": -74.0166948
+        },
+        "busi": 0.31,
+        "poll": 0.71
+    },
+    "400782871": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.71596,
+            "longitude": -74.0135378
+        },
+        "busi": 0.59,
+        "poll": 0.31
+    },
+    "400782872": {
+        "name": "West Thames Park",
+        "location": {
+            "latitude": 40.7088371,
+            "longitude": -74.0157564
+        },
+        "busi": 0.69,
+        "poll": 0.24
+    },
+    "410310399": {
+        "name": "Coleman Playground",
+        "location": {
+            "latitude": 40.7111652,
+            "longitude": -73.9933311
+        },
+        "busi": 0.63,
+        "poll": 0.48
+    },
+    "410312671": {
+        "name": "Roger Schultz Community Park",
+        "location": {
+            "latitude": 39.1713926,
+            "longitude": -96.6377867
+        },
+        "busi": 0.32,
+        "poll": 0.86
+    },
+    "413055246": {
+        "name": "City Hall Park",
+        "location": {
+            "latitude": 40.7128841,
+            "longitude": -74.0060845
+        },
+        "busi": 0.14,
+        "poll": 0.6
+    },
+    "427818536": {
+        "name": "Central Park",
+        "location": {
+            "latitude": 40.7825293,
+            "longitude": -73.9655068
+        },
+        "busi": 0.67,
+        "poll": 0.77
+    },
+    "440055119": {
+        "name": "Minetta Green",
+        "location": {
+            "latitude": 40.7303446,
+            "longitude": -74.0016029
+        },
+        "busi": 0.84,
+        "poll": 0.72
+    },
+    "440055120": {
+        "name": "West Fourth Street Courts",
+        "location": {
+            "latitude": 40.7312486,
+            "longitude": -74.0009604
+        },
+        "busi": 0.8,
+        "poll": 0.17
+    },
+    "449139914": {
+        "name": "Urban Park",
+        "location": {
+            "latitude": 40.7235239,
+            "longitude": -74.0034678
+        },
+        "busi": 0.41,
+        "poll": 0.35
+    },
+    "453456965": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7157919,
+            "longitude": -74.006181
+        },
+        "busi": 0.88,
+        "poll": 0.09
+    },
+    "453461400": {
+        "name": "Elizabeth Street Garden",
+        "location": {
+            "latitude": 40.7221953,
+            "longitude": -73.9947837
+        },
+        "busi": 0.56,
+        "poll": 0.14
+    },
+    "453528989": {
+        "name": "Dry Dock Playground",
+        "location": {
+            "latitude": 40.7254397,
+            "longitude": -73.9754832
+        },
+        "busi": 0.32,
+        "poll": 0.0
+    },
+    "455314804": {
+        "name": "Trygve Lie Plaza",
+        "location": {
+            "latitude": 40.7484918,
+            "longitude": -73.9704129
+        },
+        "busi": 0.87,
+        "poll": 0.87
+    },
+    "458511171": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7603632,
+            "longitude": -73.9823986
+        },
+        "busi": 0.71,
+        "poll": 0.48
+    },
+    "458642434": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7647609,
+            "longitude": -73.9828725
+        },
+        "busi": 0.39,
+        "poll": 0.19
+    },
+    "458642435": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7661451,
+            "longitude": -73.9830132
+        },
+        "busi": 0.62,
+        "poll": 0.42
+    },
+    "462302471": {
+        "name": "Manuel Plaza",
+        "location": {
+            "latitude": 40.7276683,
+            "longitude": -73.9921173
+        },
+        "busi": 0.51,
+        "poll": 0.34
+    },
+    "468472672": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7610842,
+            "longitude": -73.9783735
+        },
+        "busi": 0.36,
+        "poll": 0.2
+    },
+    "468485719": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7305654,
+            "longitude": -73.9748081
+        },
+        "busi": 0.05,
+        "poll": 0.55
+    },
+    "468548548": {
+        "name": "West 111th Street People's Garden",
+        "location": {
+            "latitude": 40.803897,
+            "longitude": -73.9635414
+        },
+        "busi": 0.1,
+        "poll": 0.02
+    },
+    "468555499": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.81501,
+            "longitude": -73.9622763
+        },
+        "busi": 0.19,
+        "poll": 0.5
+    },
+    "468591558": {
+        "name": "West 104th Street Garden",
+        "location": {
+            "latitude": 40.7968848,
+            "longitude": -73.9619463
+        },
+        "busi": 0.36,
+        "poll": 0.45
+    },
+    "468946468": {
+        "name": "Main Street Park",
+        "location": {
+            "latitude": 40.7044276,
+            "longitude": -73.989602
+        },
+        "busi": 0.56,
+        "poll": 0.4
+    },
+    "469101347": {
+        "name": "Tenzer Garden",
+        "location": {
+            "latitude": 40.8498324,
+            "longitude": -73.9291411
+        },
+        "busi": 0.62,
+        "poll": 0.17
+    },
+    "469101348": {
+        "name": "Danciger Quadrangle",
+        "location": {
+            "latitude": 40.850316,
+            "longitude": -73.928956
+        },
+        "busi": 0.67,
+        "poll": 0.15
+    },
+    "469786115": {
+        "name": "Girl Scout Park",
+        "location": {
+            "latitude": 39.1830051,
+            "longitude": -96.590397
+        },
+        "busi": 0.85,
+        "poll": 0.41
+    },
+    "469786305": {
+        "name": "Douglas Park",
+        "location": {
+            "latitude": 39.1747565,
+            "longitude": -96.5709719
+        },
+        "busi": 0.69,
+        "poll": 0.29
+    },
+    "471549306": {
+        "name": "NYC AIDS Memorial Park at St. Vincent's Triangle",
+        "location": {
+            "latitude": 40.7371836,
+            "longitude": -74.0011967
+        },
+        "busi": 0.18,
+        "poll": 0.69
+    },
+    "473565702": {
+        "name": "Rapkin-Gayle Plaza",
+        "location": {
+            "latitude": 40.7204001,
+            "longitude": -73.9991398
+        },
+        "busi": 0.31,
+        "poll": 0.67
+    },
+    "474169900": {
+        "name": "Lieutenant William Tighe Triangle",
+        "location": {
+            "latitude": 40.8658571,
+            "longitude": -73.9279994
+        },
+        "busi": 0.08,
+        "poll": 0.6
+    },
+    "474173970": {
+        "name": "Sherman Creek",
+        "location": {
+            "latitude": 40.8608411,
+            "longitude": -73.9182038
+        },
+        "busi": 0.24,
+        "poll": 0.89
+    },
+    "474175699": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.8601542,
+            "longitude": -73.9185091
+        },
+        "busi": 1.0,
+        "poll": 0.52
+    },
+    "474199302": {
+        "name": "Monsignor Kett Playground",
+        "location": {
+            "latitude": 40.8625304,
+            "longitude": -73.9209396
+        },
+        "busi": 0.18,
+        "poll": 0.17
+    },
+    "476650290": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.8379833,
+            "longitude": -73.9459572
+        },
+        "busi": 0.34,
+        "poll": 0.18
+    },
+    "479358564": {
+        "name": "Rooftop Park",
+        "location": {
+            "latitude": 40.7576241,
+            "longitude": -73.9686533
+        },
+        "busi": 0.32,
+        "poll": 0.06
+    },
+    "480966277": {
+        "name": "148th Street Block Association Park",
+        "location": {
+            "latitude": 40.8243789,
+            "longitude": -73.9389915
+        },
+        "busi": 0.21,
+        "poll": 0.99
+    },
+    "483509921": {
+        "name": "Poinsettia Community Garden",
+        "location": {
+            "latitude": 40.808972,
+            "longitude": -73.9588785
+        },
+        "busi": 0.65,
+        "poll": 0.6
+    },
+    "483509926": {
+        "name": "Ruggles Commons",
+        "location": {
+            "latitude": 40.8056356,
+            "longitude": -73.9628429
+        },
+        "busi": 0.52,
+        "poll": 0.12
+    },
+    "483702983": {
+        "name": "Augustus Saint-Gaudens Playground",
+        "location": {
+            "latitude": 40.7355499,
+            "longitude": -73.9821423
+        },
+        "busi": 0.13,
+        "poll": 0.91
+    },
+    "486673873": {
+        "name": "Kansas State University Quad",
+        "location": {
+            "latitude": 39.1915166,
+            "longitude": -96.5812405
+        },
+        "busi": 0.22,
+        "poll": 0.94
+    },
+    "497484756": {
+        "name": "Albert Capsouto Park",
+        "location": {
+            "latitude": 40.7220549,
+            "longitude": -74.0059139
+        },
+        "busi": 0.38,
+        "poll": 0.75
+    },
+    "498671779": {
+        "name": "Drumgoole Plaza",
+        "location": {
+            "latitude": 40.7110399,
+            "longitude": -74.0041141
+        },
+        "busi": 0.07,
+        "poll": 0.13
+    },
+    "504045549": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7072581,
+            "longitude": -74.0083037
+        },
+        "busi": 0.77,
+        "poll": 0.63
+    },
+    "531272222": {
+        "name": "CS Garden",
+        "location": {
+            "latitude": 40.8091383,
+            "longitude": -73.9599533
+        },
+        "busi": 0.21,
+        "poll": 0.98
+    },
+    "531580782": {
+        "name": "Robert Moses Playground",
+        "location": {
+            "latitude": 40.7481062,
+            "longitude": -73.9692778
+        },
+        "busi": 0.37,
+        "poll": 0.5
+    },
+    "538080002": {
+        "name": "Elizabeth H. Berger Plaza",
+        "location": {
+            "latitude": 40.7066764,
+            "longitude": -74.0140208
+        },
+        "busi": 0.57,
+        "poll": 0.9
+    },
+    "539005582": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7156052,
+            "longitude": -74.0150931
+        },
+        "busi": 0.35,
+        "poll": 0.38
+    },
+    "544675664": {
+        "name": "Mitchell Park",
+        "location": {
+            "latitude": 40.8401868,
+            "longitude": -73.9400483
+        },
+        "busi": 0.48,
+        "poll": 0.88
+    },
+    "580123906": {
+        "name": "Mulry Square",
+        "location": {
+            "latitude": 40.7362506,
+            "longitude": -74.0010873
+        },
+        "busi": 0.1,
+        "poll": 0.13
+    },
+    "581666857": {
+        "name": "Jane Street Garden",
+        "location": {
+            "latitude": 40.738004,
+            "longitude": -74.0045481
+        },
+        "busi": 0.31,
+        "poll": 0.13
+    },
+    "585788256": {
+        "name": "Central Park Carousel",
+        "location": {
+            "latitude": 40.7699426,
+            "longitude": -73.9752476
+        },
+        "busi": 0.47,
+        "poll": 0.09
+    },
+    "588483880": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.8446978,
+            "longitude": -73.9329917
+        },
+        "busi": 0.25,
+        "poll": 0.95
+    },
+    "608663280": {
+        "name": "Domino Park",
+        "location": {
+            "latitude": 40.7146788,
+            "longitude": -73.967802
+        },
+        "busi": 0.9,
+        "poll": 0.95
+    },
+    "613509792": {
+        "name": "Tribeca Park",
+        "location": {
+            "latitude": 40.7202027,
+            "longitude": -74.0056402
+        },
+        "busi": 0.6,
+        "poll": 0.52
+    },
+    "618103176": {
+        "name": "Northview Park",
+        "location": {
+            "latitude": 39.2084586,
+            "longitude": -96.5631476
+        },
+        "busi": 0.76,
+        "poll": 0.22
+    },
+    "664153164": {
+        "name": "Bill \"Bojangles\" Robinson Playground",
+        "location": {
+            "latitude": 40.8252699,
+            "longitude": -73.9372963
+        },
+        "busi": 0.71,
+        "poll": 0.51
+    },
+    "664153165": {
+        "name": "LaGuardia Corner Garden",
+        "location": {
+            "latitude": 40.7279235,
+            "longitude": -73.9988616
+        },
+        "busi": 0.26,
+        "poll": 0.86
+    },
+    "664697032": {
+        "name": "Monterey Public Garden",
+        "location": {
+            "latitude": 40.785788,
+            "longitude": -73.949994
+        },
+        "busi": 0.09,
+        "poll": 0.43
+    },
+    "672251427": {
+        "name": "Abe Lebewohl Park",
+        "location": {
+            "latitude": 40.7300001,
+            "longitude": -73.9870591
+        },
+        "busi": 0.24,
+        "poll": 0.1
+    },
+    "672481885": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.701841,
+            "longitude": -74.0147319
+        },
+        "busi": 0.52,
+        "poll": 0.1
+    },
+    "675913161": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7123128,
+            "longitude": -73.9916567
+        },
+        "busi": 0.01,
+        "poll": 0.83
+    },
+    "675935774": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7147518,
+            "longitude": -73.9926339
+        },
+        "busi": 0.17,
+        "poll": 0.86
+    },
+    "675935775": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7187024,
+            "longitude": -73.9906477
+        },
+        "busi": 0.33,
+        "poll": 0.3
+    },
+    "675935776": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7178532,
+            "longitude": -73.9910848
+        },
+        "busi": 0.18,
+        "poll": 1.0
+    },
+    "675935777": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7167999,
+            "longitude": -73.9916173
+        },
+        "busi": 0.11,
+        "poll": 0.68
+    },
+    "675935778": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.715654,
+            "longitude": -73.9922088
+        },
+        "busi": 0.24,
+        "poll": 0.0
+    },
+    "675935779": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7113496,
+            "longitude": -73.9922318
+        },
+        "busi": 0.03,
+        "poll": 0.7
+    },
+    "675935780": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7120492,
+            "longitude": -73.9923541
+        },
+        "busi": 0.85,
+        "poll": 0.55
+    },
+    "675937259": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7142311,
+            "longitude": -73.9970905
+        },
+        "busi": 0.17,
+        "poll": 0.49
+    },
+    "675962287": {
+        "name": "Sophie Irene Loeb Playground",
+        "location": {
+            "latitude": 40.7133595,
+            "longitude": -73.9943004
+        },
+        "busi": 0.37,
+        "poll": 0.04
+    },
+    "684670439": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7426586,
+            "longitude": -73.9756162
+        },
+        "busi": 0.4,
+        "poll": 0.45
+    },
+    "687661469": {
+        "name": "First Street Green Cultural Park",
+        "location": {
+            "latitude": 40.723751,
+            "longitude": -73.9903251
+        },
+        "busi": 0.11,
+        "poll": 0.77
+    },
+    "702078581": {
+        "name": "McMahon Lawn",
+        "location": {
+            "latitude": 40.7713558,
+            "longitude": -73.9865241
+        },
+        "busi": 0.13,
+        "poll": 0.18
+    },
+    "705304809": {
+        "name": "30 Lincoln Plaza",
+        "location": {
+            "latitude": 40.7707961,
+            "longitude": -73.9814012
+        },
+        "busi": 0.54,
+        "poll": 0.76
+    },
+    "718412868": {
+        "name": "Leighlinbridge Park",
+        "location": {
+            "latitude": 41.4281031,
+            "longitude": -87.9977817
+        },
+        "busi": 0.52,
+        "poll": 0.65
+    },
+    "718415770": {
+        "name": "Manhattan Central Park",
+        "location": {
+            "latitude": 41.4195564,
+            "longitude": -87.9875522
+        },
+        "busi": 0.45,
+        "poll": 0.48
+    },
+    "718422589": {
+        "name": "Brookstone springs park",
+        "location": {
+            "latitude": 41.4336857,
+            "longitude": -87.985379
+        },
+        "busi": 0.15,
+        "poll": 0.12
+    },
+    "718422594": {
+        "name": "Wilson Creek Park",
+        "location": {
+            "latitude": 41.4261723,
+            "longitude": -88.003415
+        },
+        "busi": 0.96,
+        "poll": 0.6
+    },
+    "718422595": {
+        "name": "Round barn park",
+        "location": {
+            "latitude": 41.4503816,
+            "longitude": -87.997477
+        },
+        "busi": 0.55,
+        "poll": 0.08
+    },
+    "718438725": {
+        "name": "Murphy Park",
+        "location": {
+            "latitude": 40.7303687,
+            "longitude": -73.9734976
+        },
+        "busi": 0.48,
+        "poll": 0.14
+    },
+    "718471254": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7640426,
+            "longitude": -73.9544696
+        },
+        "busi": 0.97,
+        "poll": 0.8
+    },
+    "727964618": {
+        "name": "Lafayette Square",
+        "location": {
+            "latitude": 40.8035524,
+            "longitude": -73.9580337
+        },
+        "busi": 0.27,
+        "poll": 0.93
+    },
+    "743395860": {
+        "name": "The Elevated Acre",
+        "location": {
+            "latitude": 40.7032051,
+            "longitude": -74.0087006
+        },
+        "busi": 0.63,
+        "poll": 0.87
+    },
+    "746768630": {
+        "name": "Gustafson Grove",
+        "location": {
+            "latitude": 41.4209953,
+            "longitude": -87.986305
+        },
+        "busi": 0.21,
+        "poll": 0.53
+    },
+    "759460622": {
+        "name": "Minerva Bernadino Green Street",
+        "location": {
+            "latitude": 40.8028294,
+            "longitude": -73.9640762
+        },
+        "busi": 0.12,
+        "poll": 0.1
+    },
+    "765274333": {
+        "name": "Playground 11",
+        "location": {
+            "latitude": 40.7310982,
+            "longitude": -73.9763847
+        },
+        "busi": 0.65,
+        "poll": 0.88
+    },
+    "765274338": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7324171,
+            "longitude": -73.9792686
+        },
+        "busi": 0.29,
+        "poll": 0.78
+    },
+    "769716502": {
+        "name": "Hillman Park",
+        "location": {
+            "latitude": 40.7151983,
+            "longitude": -73.982351
+        },
+        "busi": 0.18,
+        "poll": 0.07
+    },
+    "769716504": {
+        "name": "Sol Lain Playground",
+        "location": {
+            "latitude": 40.7142341,
+            "longitude": -73.9838951
+        },
+        "busi": 0.9,
+        "poll": 0.8
+    },
+    "793720073": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7444405,
+            "longitude": -73.9717305
+        },
+        "busi": 0.49,
+        "poll": 0.11
+    },
+    "800212158": {
+        "name": "Community Island Pond",
+        "location": {
+            "latitude": 40.7025673,
+            "longitude": -74.0054799
+        },
+        "busi": 0.28,
+        "poll": 0.55
+    },
+    "800212164": {
+        "name": "Catherine Slip Malls",
+        "location": {
+            "latitude": 40.7095081,
+            "longitude": -73.9961545
+        },
+        "busi": 0.31,
+        "poll": 0.87
+    },
+    "821278619": {
+        "name": "Small Square",
+        "location": {
+            "latitude": 40.8170021,
+            "longitude": -73.9588657
+        },
+        "busi": 0.77,
+        "poll": 0.42
+    },
+    "833335529": {
+        "name": "Little Island",
+        "location": {
+            "latitude": 40.7420048,
+            "longitude": -74.0106097
+        },
+        "busi": 0.51,
+        "poll": 0.2
+    },
+    "837603512": {
+        "name": "Pier 26",
+        "location": {
+            "latitude": 40.7212402,
+            "longitude": -74.0146496
+        },
+        "busi": 0.7,
+        "poll": 0.08
+    },
+    "889019981": {
+        "name": "Lighthouse Park",
+        "location": {
+            "latitude": 40.7719982,
+            "longitude": -73.9409857
+        },
+        "busi": 0.4,
+        "poll": 0.32
+    },
+    "889906332": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7575423,
+            "longitude": -73.9528616
+        },
+        "busi": 0.4,
+        "poll": 0.74
+    },
+    "889906443": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7674104,
+            "longitude": -73.9451183
+        },
+        "busi": 0.04,
+        "poll": 0.13
+    },
+    "890862707": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7127252,
+            "longitude": -73.9985494
+        },
+        "busi": 0.08,
+        "poll": 0.39
+    },
+    "890862858": {
+        "name": "Fishbridge Garden",
+        "location": {
+            "latitude": 40.7090589,
+            "longitude": -74.0013302
+        },
+        "busi": 0.78,
+        "poll": 0.21
+    },
+    "890862859": {
+        "name": "Pearl Street Playground",
+        "location": {
+            "latitude": 40.7079571,
+            "longitude": -74.003871
+        },
+        "busi": 0.8,
+        "poll": 0.79
+    },
+    "891074490": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7104212,
+            "longitude": -74.0058293
+        },
+        "busi": 0.35,
+        "poll": 0.26
+    },
+    "891134387": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7165399,
+            "longitude": -74.0148155
+        },
+        "busi": 0.17,
+        "poll": 0.18
+    },
+    "891134388": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7173682,
+            "longitude": -74.014168
+        },
+        "busi": 0.96,
+        "poll": 0.0
+    },
+    "893841834": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7352313,
+            "longitude": -74.0017222
+        },
+        "busi": 0.67,
+        "poll": 0.64
+    },
+    "893841889": {
+        "name": "Washington Commons",
+        "location": {
+            "latitude": 40.7384531,
+            "longitude": -74.0083015
+        },
+        "busi": 0.84,
+        "poll": 0.45
+    },
+    "894035808": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7298816,
+            "longitude": -74.002776
+        },
+        "busi": 0.72,
+        "poll": 0.07
+    },
+    "895611180": {
+        "name": "West 87th Street Garden",
+        "location": {
+            "latitude": 40.787094,
+            "longitude": -73.9709212
+        },
+        "busi": 0.94,
+        "poll": 0.18
+    },
+    "895757747": {
+        "name": "Joan of Arc Park",
+        "location": {
+            "latitude": 40.7942118,
+            "longitude": -73.976389
+        },
+        "busi": 0.08,
+        "poll": 0.08
+    },
+    "904714816": {
+        "name": "Happy Warrior Playground",
+        "location": {
+            "latitude": 40.7954197,
+            "longitude": -73.9684305
+        },
+        "busi": 0.58,
+        "poll": 0.18
+    },
+    "917854288": {
+        "name": "Foxford Park",
+        "location": {
+            "latitude": 41.4324944,
+            "longitude": -87.991316
+        },
+        "busi": 0.78,
+        "poll": 0.01
+    },
+    "918302837": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7777983,
+            "longitude": -73.9873252
+        },
+        "busi": 0.74,
+        "poll": 0.53
+    },
+    "936649910": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7537495,
+            "longitude": -73.9926078
+        },
+        "busi": 0.12,
+        "poll": 0.86
+    },
+    "943557523": {
+        "name": "Dorrence Brook Square",
+        "location": {
+            "latitude": 40.8181963,
+            "longitude": -73.9472809
+        },
+        "busi": 0.96,
+        "poll": 0.76
+    },
+    "954250916": {
+        "name": "Dekovats Park",
+        "location": {
+            "latitude": 40.7793517,
+            "longitude": -73.9442344
+        },
+        "busi": 0.3,
+        "poll": 0.46
+    },
+    "954250919": {
+        "name": "Samuel Marx Triangle",
+        "location": {
+            "latitude": 40.802576,
+            "longitude": -73.9527698
+        },
+        "busi": 0.24,
+        "poll": 0.47
+    },
+    "959894788": {
+        "name": "Roger Morris Park",
+        "location": {
+            "latitude": 40.8345035,
+            "longitude": -73.9385228
+        },
+        "busi": 0.15,
+        "poll": 0.32
+    },
+    "959895071": {
+        "name": "McKenna Square Park",
+        "location": {
+            "latitude": 40.8383487,
+            "longitude": -73.9391569
+        },
+        "busi": 0.19,
+        "poll": 0.82
+    },
+    "964819132": {
+        "name": "Seward Park Extension Park",
+        "location": {
+            "latitude": 40.7171165,
+            "longitude": -73.9884804
+        },
+        "busi": 0.85,
+        "poll": 0.37
+    },
+    "964822654": {
+        "name": "Seward Park Extension Park",
+        "location": {
+            "latitude": 40.7168088,
+            "longitude": -73.9848922
+        },
+        "busi": 0.34,
+        "poll": 0.34
+    },
+    "973521995": {
+        "name": "Ahearn Park",
+        "location": {
+            "latitude": 40.7148041,
+            "longitude": -73.9834567
+        },
+        "busi": 0.36,
+        "poll": 0.85
+    },
+    "976724943": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7294006,
+            "longitude": -73.9911035
+        },
+        "busi": 0.59,
+        "poll": 0.13
+    },
+    "985281628": {
+        "name": "Seward Park High School - Community Playground",
+        "location": {
+            "latitude": 40.7158595,
+            "longitude": -73.9891313
+        },
+        "busi": 0.47,
+        "poll": 0.37
+    },
+    "990936691": {
+        "name": "Pier 42 Upland Park",
+        "location": {
+            "latitude": 40.7102679,
+            "longitude": -73.9818413
+        },
+        "busi": 0.68,
+        "poll": 0.86
+    },
+    "997819338": {
+        "name": "Andrew Haswell Green Park",
+        "location": {
+            "latitude": 40.7594825,
+            "longitude": -73.9575866
+        },
+        "busi": 0.66,
+        "poll": 0.71
+    },
+    "1000328539": {
+        "name": "Quinlan Natural Area",
+        "location": {
+            "latitude": 39.1916687,
+            "longitude": -96.5777447
+        },
+        "busi": 0.05,
+        "poll": 0.85
+    },
+    "1015980340": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7168628,
+            "longitude": -73.9867292
+        },
+        "busi": 0.0,
+        "poll": 0.94
+    },
+    "1016487162": {
+        "name": "Queensborough Oval",
+        "location": {
+            "latitude": 40.7592353,
+            "longitude": -73.9600741
+        },
+        "busi": 0.91,
+        "poll": 0.92
+    },
+    "1018935492": {
+        "name": "Vladeck Park",
+        "location": {
+            "latitude": 40.7123997,
+            "longitude": -73.9820519
+        },
+        "busi": 0.64,
+        "poll": 0.85
+    },
+    "1021760821": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7562014,
+            "longitude": -74.0035176
+        },
+        "busi": 0.86,
+        "poll": 0.51
+    },
+    "1023817153": {
+        "name": "Pier 76",
+        "location": {
+            "latitude": 40.7591506,
+            "longitude": -74.005364
+        },
+        "busi": 0.62,
+        "poll": 0.46
+    },
+    "1025959315": {
+        "name": "The Square",
+        "location": {
+            "latitude": 40.8180211,
+            "longitude": -73.9589542
+        },
+        "busi": 0.57,
+        "poll": 0.17
+    },
+    "1047300491": {
+        "name": "Alsop Bird Sanctuary",
+        "location": {
+            "latitude": 39.1852572,
+            "longitude": -96.5829407
+        },
+        "busi": 0.25,
+        "poll": 0.73
+    },
+    "1050429781": {
+        "name": "Southeast Park",
+        "location": {
+            "latitude": 39.1751134,
+            "longitude": -96.5578418
+        },
+        "busi": 0.73,
+        "poll": 0.75
+    },
+    "1051886996": {
+        "name": "Westwood Park",
+        "location": {
+            "latitude": 39.1755857,
+            "longitude": -96.590851
+        },
+        "busi": 0.72,
+        "poll": 0.05
+    },
+    "1051886997": {
+        "name": "Ledgestone Park",
+        "location": {
+            "latitude": 39.1770273,
+            "longitude": -96.6412988
+        },
+        "busi": 0.07,
+        "poll": 0.89
+    },
+    "1055856948": {
+        "name": "Cedar Acres Natural Park",
+        "location": {
+            "latitude": 39.1909652,
+            "longitude": -96.6009794
+        },
+        "busi": 0.06,
+        "poll": 0.67
+    },
+    "1059903962": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7500032,
+            "longitude": -73.9756477
+        },
+        "busi": 0.65,
+        "poll": 0.06
+    },
+    "1068258666": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7443685,
+            "longitude": -73.9781439
+        },
+        "busi": 0.84,
+        "poll": 1.0
+    },
+    "1068603579": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7474521,
+            "longitude": -73.9837467
+        },
+        "busi": 0.57,
+        "poll": 0.13
+    },
+    "1077518596": {
+        "name": "Hester Street Park",
+        "location": {
+            "latitude": 40.7154087,
+            "longitude": -73.9893119
+        },
+        "busi": 0.73,
+        "poll": 0.73
+    },
+    "1077570058": {
+        "name": "Briarcliffe Park",
+        "location": {
+            "latitude": 39.1855184,
+            "longitude": -96.6138969
+        },
+        "busi": 0.16,
+        "poll": 0.42
+    },
+    "1077570059": {
+        "name": "Jorgenson Park",
+        "location": {
+            "latitude": 39.1848334,
+            "longitude": -96.5909099
+        },
+        "busi": 0.44,
+        "poll": 0.42
+    },
+    "1077570061": {
+        "name": "Osage Street Pocket Park",
+        "location": {
+            "latitude": 39.1822997,
+            "longitude": -96.5610408
+        },
+        "busi": 0.77,
+        "poll": 0.72
+    },
+    "1077570062": {
+        "name": "Third Street Pocket Park",
+        "location": {
+            "latitude": 39.1819194,
+            "longitude": -96.5604117
+        },
+        "busi": 0.6,
+        "poll": 0.76
+    },
+    "1077570063": {
+        "name": "StoneHaven Park",
+        "location": {
+            "latitude": 39.1655344,
+            "longitude": -96.6195967
+        },
+        "busi": 0.01,
+        "poll": 0.69
+    },
+    "1082729243": {
+        "name": "Saint Vartan Park",
+        "location": {
+            "latitude": 40.7456086,
+            "longitude": -73.9748201
+        },
+        "busi": 0.31,
+        "poll": 0.33
+    },
+    "1083638354": {
+        "name": "Snowbird Natural Area",
+        "location": {
+            "latitude": 39.2104749,
+            "longitude": -96.6060096
+        },
+        "busi": 0.0,
+        "poll": 0.58
+    },
+    "1083911850": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7231734,
+            "longitude": -73.987557
+        },
+        "busi": 0.77,
+        "poll": 0.15
+    },
+    "1084102822": {
+        "name": "Wildcat Creek Linear Park",
+        "location": {
+            "latitude": 39.1775069,
+            "longitude": -96.5988287
+        },
+        "busi": 0.84,
+        "poll": 1.0
+    },
+    "1087523912": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7408339,
+            "longitude": -73.9794828
+        },
+        "busi": 0.52,
+        "poll": 0.31
+    },
+    "1090764362": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7801006,
+            "longitude": -73.9524877
+        },
+        "busi": 1.0,
+        "poll": 0.13
+    },
+    "1095508395": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.8674781,
+            "longitude": -73.9228727
+        },
+        "busi": 0.94,
+        "poll": 0.95
+    },
+    "1102946711": {
+        "name": "Sutton Place Park",
+        "location": {
+            "latitude": 40.7568007,
+            "longitude": -73.9602424
+        },
+        "busi": 1.0,
+        "poll": 0.4
+    },
+    "1105868289": {
+        "name": "Spencer Park",
+        "location": {
+            "latitude": 39.1865756,
+            "longitude": -96.6041518
+        },
+        "busi": 0.68,
+        "poll": 0.29
+    },
+    "1107165183": {
+        "name": "Anibal Aviles Playground",
+        "location": {
+            "latitude": 40.801159,
+            "longitude": -73.9627985
+        },
+        "busi": 0.76,
+        "poll": 0.73
+    },
+    "1121582607": {
+        "name": "Herald Square",
+        "location": {
+            "latitude": 40.750256,
+            "longitude": -73.987625
+        },
+        "busi": 0.7,
+        "poll": 0.89
+    },
+    "1121932385": {
+        "name": "Greeley Square Park",
+        "location": {
+            "latitude": 40.7487036,
+            "longitude": -73.9883472
+        },
+        "busi": 0.58,
+        "poll": 0.9
+    },
+    "1127559545": {
+        "name": "Peck Slip",
+        "location": {
+            "latitude": 40.7078001,
+            "longitude": -74.0015491
+        },
+        "busi": 0.81,
+        "poll": 0.86
+    },
+    "1127851294": {
+        "name": "Imagination Playground",
+        "location": {
+            "latitude": 40.7061989,
+            "longitude": -74.0040983
+        },
+        "busi": 0.8,
+        "poll": 0.09
+    },
+    "1135559125": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.8505811,
+            "longitude": -73.9407742
+        },
+        "busi": 0.47,
+        "poll": 0.77
+    },
+    "1141662701": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7569158,
+            "longitude": -73.9662011
+        },
+        "busi": 0.14,
+        "poll": 0.76
+    },
+    "1173199006": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7825984,
+            "longitude": -73.949957
+        },
+        "busi": 0.04,
+        "poll": 0.16
+    },
+    "1173199007": {
+        "name": "Unknown Park",
+        "location": {
+            "latitude": 40.7826106,
+            "longitude": -73.9501576
+        },
+        "busi": 0.51,
+        "poll": 0.51
+    },
+    "1751075": {
+        "name": "John Jay Park",
+        "location": {
+            "latitude": 40.7692516,
+            "longitude": -73.9496384
+        },
+        "busi": 0.89,
+        "poll": 0.12
+    },
+    "2389631": {
+        "name": "Governors Island",
+        "location": {
+            "latitude": 40.6886726,
+            "longitude": -74.0193961
+        },
+        "busi": 0.35,
+        "poll": 0.42
+    },
+    "3690816": {
+        "name": "Highbridge Park",
+        "location": {
+            "latitude": 40.8460051,
+            "longitude": -73.9319502
+        },
+        "busi": 0.68,
+        "poll": 0.31
+    },
+    "4099553": {
+        "name": "Sara D. Roosevelt Park",
+        "location": {
+            "latitude": 40.7196275,
+            "longitude": -73.9925973
+        },
+        "busi": 0.13,
+        "poll": 0.54
+    },
+    "5625630": {
+        "name": "Fort Tryon Park",
+        "location": {
+            "latitude": 40.8619781,
+            "longitude": -73.9326365
+        },
+        "busi": 0.13,
+        "poll": 0.1
+    },
+    "6802606": {
+        "name": "Mannahatta Park",
+        "location": {
+            "latitude": 40.7047834,
+            "longitude": -74.006686
+        },
+        "busi": 0.49,
+        "poll": 0.07
+    },
+    "6992452": {
+        "name": "Dag Hammarskjold Plaza",
+        "location": {
+            "latitude": 40.7523203,
+            "longitude": -73.9688866
+        },
+        "busi": 0.67,
+        "poll": 0.08
+    },
+    "7095444": {
+        "name": "Union Square Park",
+        "location": {
+            "latitude": 40.7358088,
+            "longitude": -73.9904565
+        },
+        "busi": 0.9,
+        "poll": 0.72
+    },
+    "7095669": {
+        "name": "Stuyvesant Square",
+        "location": {
+            "latitude": 40.7336501,
+            "longitude": -73.9839997
+        },
+        "busi": 0.84,
+        "poll": 0.92
+    },
+    "7109446": {
+        "name": "Theodore Roosevelt Park",
+        "location": {
+            "latitude": 40.7813637,
+            "longitude": -73.9740819
+        },
+        "busi": 0.23,
+        "poll": 0.45
+    },
+    "7141751": {
+        "name": "The High Line",
+        "location": {
+            "latitude": 40.7479527,
+            "longitude": -74.0045759
+        },
+        "busi": 0.52,
+        "poll": 0.63
+    },
+    "8176996": {
+        "name": "Old Slip Park",
+        "location": {
+            "latitude": 40.7038707,
+            "longitude": -74.0085649
+        },
+        "busi": 0.72,
+        "poll": 0.45
+    },
+    "8456861": {
+        "name": "Columbia University Well Garden",
+        "location": {
+            "latitude": 40.8081586,
+            "longitude": -73.9607078
+        },
+        "busi": 0.01,
+        "poll": 0.41
+    },
+    "9340888": {
+        "name": "North Lawn",
+        "location": {
+            "latitude": 40.7509571,
+            "longitude": -73.9662951
+        },
+        "busi": 0.68,
+        "poll": 0.94
+    },
+    "9643461": {
+        "name": "Nelson A. Rockefeller Park",
+        "location": {
+            "latitude": 40.716889,
+            "longitude": -74.0152879
+        },
+        "busi": 0.51,
+        "poll": 1.0
+    },
+    "9791559": {
+        "name": "Liberty Island",
+        "location": {
+            "latitude": 40.6898273,
+            "longitude": -74.0453434
+        },
+        "busi": 0.92,
+        "poll": 0.07
+    },
+    "10025591": {
+        "name": "West 59th Street Recreation Center",
+        "location": {
+            "latitude": 40.7712414,
+            "longitude": -73.988724
+        },
+        "busi": 0.4,
+        "poll": 0.5
+    },
+    "10170445": {
+        "name": "Low Plaza",
+        "location": {
+            "latitude": 40.8076784,
+            "longitude": -73.9622466
+        },
+        "busi": 0.18,
+        "poll": 0.01
+    },
+    "10571875": {
+        "name": "Duke Ellington Circle",
+        "location": {
+            "latitude": 40.7968563,
+            "longitude": -73.949257
+        },
+        "busi": 0.83,
+        "poll": 0.59
+    },
+    "11037505": {
+        "name": "Charles B. Benenson Grove",
+        "location": {
+            "latitude": 40.7714021,
+            "longitude": -73.9835705
+        },
+        "busi": 0.25,
+        "poll": 0.48
+    },
+    "11077079": {
+        "name": "African Burial Ground National Monument",
+        "location": {
+            "latitude": 40.7145261,
+            "longitude": -74.004464
+        },
+        "busi": 0.1,
+        "poll": 0.4
+    },
+    "11225305": {
+        "name": "Honey Locust Park",
+        "location": {
+            "latitude": 40.7601599,
+            "longitude": -73.9628992
+        },
+        "busi": 0.45,
+        "poll": 0.33
+    },
+    "13613032": {
+        "name": "Thomas Paine Park",
+        "location": {
+            "latitude": 40.714782,
+            "longitude": -74.0027707
+        },
+        "busi": 0.02,
+        "poll": 0.09
+    },
+    "13678220": {
+        "name": "Bella Abzug Park",
+        "location": {
+            "latitude": 40.7558415,
+            "longitude": -74.0003803
+        },
+        "busi": 0.22,
+        "poll": 0.87
+    },
+    "14374901": {
+        "name": "Sherman Creek",
+        "location": {
+            "latitude": 40.8585719,
+            "longitude": -73.9216107
+        },
+        "busi": 0.82,
+        "poll": 0.23
+    },
+    "14425097": {
+        "name": "Saint Vartan Park",
+        "location": {
+            "latitude": 40.7452795,
+            "longitude": -73.9740145
+        },
+        "busi": 0.72,
+        "poll": 0.73
+    },
+    "15039698": {
+        "name": "Silverstein Family Park",
+        "location": {
+            "latitude": 40.7131852,
+            "longitude": -74.0114448
+        },
+        "busi": 0.17,
+        "poll": 0.07
+    },
+    "15902634": {
+        "name": "Brooklyn Banks",
+        "location": {
+            "latitude": 40.7114732,
+            "longitude": -74.0027148
+        },
+        "busi": 0.03,
+        "poll": 0.86
+    }
+}
