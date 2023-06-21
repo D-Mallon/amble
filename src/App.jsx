@@ -4,13 +4,15 @@ import './App.css'
 
 const reactLogo = "react.svg"
 const viteLogo = "vite.svg"
+const appleLogo = "apple.png"
 const reactLogoPath = `/static/${reactLogo}`
 const viteLogoPath = `/static/${viteLogo}`
+const appleLogoPath = `/static/${appleLogo}`
 
 function App() {
   return (
     <div>
-      <h1>My React App</h1>
+      <h1>State of Mind</h1>
       <Map />
       <div>
         <a href="https://vitejs.dev" target="_blank">
@@ -24,4 +26,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;

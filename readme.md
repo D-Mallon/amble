@@ -27,11 +27,16 @@
 - open the project in vscode, the folder structure should be as described above (20-04-2023)
 - at the bottom right of the screen there might be a pop-up stating that vscode has detected a virtual environment
 - if this is the case click yes and vscode should create the virtual environment for you
+- need to find a way to automatically install the dependencies
 - if not open the terminal and type `python -m venv django-env` (this will create the virtual environment)
 - then type `source django-env/bin/activate` (this will activate the virtual environment)
+- then type `pip install vite` (this will install the frontend build tool)
 - then type `pip install -r requirements.txt` (this will install the environment dependencies)
+- then type `python manage.py migrate` (this will create the database)
 - then type `python manage.py runserver` (this will run the server)[Django]
-- open a new terminal and type `npm run dev` (this will run the frontend)[React]
+- open a new terminal and type `npm i` then `npm run dev` (this will run the frontend)[React]
+- if you get an error with google-map-react, try `npm install --save google-map-react`
+- (https://nodejs.org/en/download/)[Node.js] needs to be installed for the above commands to work
 - the project should now be running on the django localhost (probably http://127.0.0.1:8000/)
 
 ## Resources
