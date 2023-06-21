@@ -31,6 +31,7 @@
 - (https://nodejs.org/en/download/)[Node.js] needs to be installed for the following commands to work
 - if not open the terminal and type `python -m venv django-env` (this will create the virtual environment)
 - then type `source django-env/bin/activate` (this will activate the virtual environment)
+- (if the above command does not work it may be necessary to hard code the path to the virtual environment)
 - then type `pip install -r requirements.txt` (this will install the environment dependencies)
 - then type `pip install vite` (this will install the frontend build tool)
 - then type `python manage.py migrate` (this will create the database)
