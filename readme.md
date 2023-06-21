@@ -36,7 +36,7 @@
 - then type `python manage.py migrate` (this will create the database)
 - then type `python manage.py runserver` (this will run the server)[Django]
 - open a new terminal and type `npm i` then `npm run dev` (this will run the frontend)[React]
-- if you get an error with google-map-react, try `npm install --save google-map-react`
+- if you get an error with google-map-react, try `npm install --save google-map-react --legacy-peer-deps` or `npm install google-map-react --legacy-peer-deps`
 - the project should now be running on the django localhost (probably http://127.0.0.1:8000/)
 
 ## Resources
