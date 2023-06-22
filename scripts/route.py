@@ -45,7 +45,7 @@ print(f"Starting location: {user_latitude}, {user_longitude}")
 print("-----------------------------------------")
 
 # Define the predefined distance to be covered
-predefined_distance = 8  # Adjust this value as needed
+predefined_distance = 7  # Adjust this value as needed
 
 visited_parks = []  # List to store visited parks
 
@@ -64,9 +64,9 @@ while predefined_distance > 0:
             closest_distances.append(distance)
             closest_parks.append(park_id)
 
-    # Sort the parks based on distance and select the 10 closest parks
+    # Sort the parks based on distance and select the 7 closest parks
     sorted_indices = sorted(range(len(closest_distances)), key=lambda k: closest_distances[k])
-    closest_parks = [closest_parks[i] for i in sorted_indices[:10]]
+    closest_parks = [closest_parks[i] for i in sorted_indices[:7]]
 
     # Select the park with the lowest combination of "busi" and "poll" values
     selected_park = min(closest_parks, key=lambda park: data[park]["busi"] + data[park]["poll"])
