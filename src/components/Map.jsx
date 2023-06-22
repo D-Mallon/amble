@@ -4,17 +4,22 @@ import parks from './parks.json';
 
 const Map = () => {
   const renderMarkers = (map, maps) => {
-    const markers = Object.values(parks).map((park) => ({
+    const markers = Object.entries(parks).map(([id, park]) => ({
+      id: id,
       lat: park.location.latitude,
       lng: park.location.longitude,
       name: park.name,
     }));
 
     markers.forEach((marker) => {
-      new maps.Marker({
+      const markerInstance = new maps.Marker({
         position: { lat: marker.lat, lng: marker.lng },
         map: map,
         title: marker.name,
+      });
+
+      markerInstance.addListener('click', () => {
+        console.log('Marker clicked:', marker.id);
       });
     });
   };
@@ -35,7 +40,7 @@ const Map = () => {
     }
   }, []);
 
-  return (
+  return (  
     <div style={{ height: '30rem', width: '70rem' }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: 'AIzaSyCaDJuOV60ZndmKjCNiUvY2M3BBMEVsUYc' }}

@@ -44,15 +44,42 @@ if response.status_code == 200:
             "poll": random.randint(0, 100) / 100,
         }
 
+    min_lat = 40.6
+    max_lat = 40.9
+    min_lon = -74.1
+    max_lon = -73.9
+    parks_to_remove = [95163097, 
+                       468946468, 
+                       48686595, 
+                       33819583, 
+                       129002500, 
+                       608663280, 
+                       39015952, 
+                       367859701, 
+                       25428484, 
+                       222233979, 
+                       367660740,
+                       56469108,
+                       2389631,
+                       9791559]
+
+    filtered_data = {}
+
+    for key, park in park_data.items():
+        latitude = park["location"]["latitude"]
+        longitude = park["location"]["longitude"]
+
+        if (min_lat <= latitude <= max_lat) and (min_lon <= longitude <= max_lon) and (key not in parks_to_remove):
+            filtered_data[key] = park
+
     # Convert the dictionary to a JSON object
-    json_data = json.dumps(park_data, indent=4)
+    json_data = json.dumps(filtered_data, indent=4)
     print(json_data)
 
     # Export the dictionary as a JSON file
     with open("src/components/parks.json", "w") as outfile:
-        json.dump(park_data, outfile, indent=4)
-
-    print("Exported park data to park_data.json")
+        json.dump(filtered_data , outfile, indent=4)
+        print("Exported park data to parks.json")
 
 else:
     print("Error: Failed to fetch park data.")
