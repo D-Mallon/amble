@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import mapboxgl, { Marker } from 'mapbox-gl';
 import parks from './parks.json';
 import "./Map.css";
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -22,6 +23,17 @@ const Map = () => {
     }));
 
     setMarkers(newMarkers);
+    console.log(newMarkers);
+
+    map.current.on('load', () => {
+      newMarkers.forEach((marker) => {
+        const el = document.createElement('div');
+        el.className = 'marker';
+        new mapboxgl.Marker(el)
+          .setLngLat([marker.longitude, marker.latitude])
+          .addTo(map.current);
+      });
+    });
   }, []);
 
   useEffect(() => {
