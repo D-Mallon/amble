@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from 'react';
 import Map from "./components/Map";
 import "./App.css";
-
+import mapboxgl from 'mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+mapboxgl.accessToken = 'pk.eyJ1IjoiZmluYmFyYWxsYW4iLCJhIjoiY2xqY3NtYWN6MjV0ODNqcXhhaTY4aGQxdSJ9.VeVQzxCCtpyP_MeT1CkjOg';
 
 const reactLogo = "react.svg";
 const viteLogo = "vite.svg";
 const reactLogoPath = `/static/${reactLogo}`;
 const viteLogoPath = `/static/${viteLogo}`;
-
-
 
 function App() {
   return (

@@ -24,7 +24,7 @@ if response.status_code == 200:
     data = response.json()
 
     # Create a dictionary to hold the park data
-    park_data = {}
+    park_data = []
 
     # Extract park information from the response
     parks = data.get("elements", [])
@@ -37,12 +37,13 @@ if response.status_code == 200:
         longitude = park.get("center", {}).get("lon")
 
         # Add park data to the dictionary
-        park_data[park_id] = {
+        park_data.append({
+            "id": park_id,
             "name": park_name,
             "location": {"latitude": latitude, "longitude": longitude},
             "busi": random.randint(0, 100) / 100,
             "poll": random.randint(0, 100) / 100,
-        }
+        })
 
     min_lat = 40.6
     max_lat = 40.9
@@ -63,23 +64,21 @@ if response.status_code == 200:
                        2389631,
                        9791559]
 
-    filtered_data = {}
+    filtered_data = []
 
-    for key, park in park_data.items():
+    for park in park_data:
+        id = park["id"]
         latitude = park["location"]["latitude"]
         longitude = park["location"]["longitude"]
 
-        if (min_lat <= latitude <= max_lat) and (min_lon <= longitude <= max_lon) and (key not in parks_to_remove):
-            filtered_data[key] = park
+        if (min_lat <= latitude <= max_lat) and (min_lon <= longitude <= max_lon) and (id not in parks_to_remove):
+            filtered_data.append(park)
 
-    # Convert the dictionary to a JSON object
-    json_data = json.dumps(filtered_data, indent=4)
-    print(json_data)
+    json_data = {"data": filtered_data}
 
     # Export the dictionary as a JSON file
     with open("src/components/parks.json", "w") as outfile:
-        json.dump(filtered_data , outfile, indent=4)
+        json.dump(json_data, outfile, indent=4)
         print("Exported park data to parks.json")
-
 else:
     print("Error: Failed to fetch park data.")
