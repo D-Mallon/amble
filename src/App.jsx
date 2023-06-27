@@ -12,7 +12,7 @@ const appleLogoPath = `/static/${appleLogo}`
 function App() {
   return (
     <div>
-      <h1>State of Mind</h1>
+      <h1>Amble</h1>
       <Map />
       <div>
         <a href="https://vitejs.dev" target="_blank">
