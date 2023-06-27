@@ -1,59 +1,53 @@
-import React, { useEffect } from 'react';
-import GoogleMapReact from 'google-map-react';
+import React, { useRef, useEffect, useState } from 'react';
 import parks from './parks.json';
+import "./Map.css";
+import 'mapbox-gl/dist/mapbox-gl.css';
+mapboxgl.accessToken = 'pk.eyJ1IjoiZmluYmFyYWxsYW4iLCJhIjoiY2xqY3NtYWN6MjV0ODNqcXhhaTY4aGQxdSJ9.VeVQzxCCtpyP_MeT1CkjOg';
 
 const Map = () => {
-  const renderMarkers = (map, maps) => {
-    const markers = Object.entries(parks).map(([id, park]) => ({
-      id: id,
-      lat: park.location.latitude,
-      lng: park.location.longitude,
+  useEffect(() => {
+    if (map.current) return; // initialize map only once
+    map.current = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: [lng, lat],
+      zoom: zoom
+    });
+
+    const newMarkers = parks.data.map((park) => ({
+      id: park.id,
       name: park.name,
+      latitude: park.location.latitude,
+      longitude: park.location.longitude
     }));
 
-    markers.forEach((marker) => {
-      const markerInstance = new maps.Marker({
-        position: { lat: marker.lat, lng: marker.lng },
-        map: map,
-        title: marker.name,
-      });
-
-      markerInstance.addListener('click', () => {
-        console.log('Marker clicked:', marker.id);
-      });
-    });
-  };
-
-  const apiIsLoaded = (map, maps) => {
-    renderMarkers(map, maps);
-  };
-
-  useEffect(() => {
-    // Call the renderMarkers function immediately
-    const mapRef = document.querySelector('.google-map-react');
-    if (mapRef) {
-      const mapInstance = mapRef.getMap();
-      const mapsInstance = mapRef.getMaps();
-      if (mapInstance && mapsInstance) {
-        renderMarkers(mapInstance, mapsInstance);
-      }
-    }
+    setMarkers(newMarkers);
   }, []);
 
+  useEffect(() => {
+    if (!map.current) return; // wait for map to initialize
+    map.current.on('move', () => {
+      setLng(map.current.getCenter().lng.toFixed(4));
+      setLat(map.current.getCenter().lat.toFixed(4));
+      setZoom(map.current.getZoom().toFixed(2));
+    });
+  });
+
+  const mapContainer = useRef(null);
+  const map = useRef(null);
+  const [lat, setLat] = useState(40.727872);
+  const [lng, setLng] = useState(-73.993157);
+  const [zoom, setZoom] = useState(12.4);
+  const [markers, setMarkers] = useState([]);
+
   return (
-    <div style={{ height: '50rem', width: '60rem' }}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyCaDJuOV60ZndmKjCNiUvY2M3BBMEVsUYc' }}
-        defaultCenter={{
-          lat: 40.748333,
-          lng: -73.985278,
-        }}
-        defaultZoom={12.7}
-        yesIWantToUseGoogleMapApiInternals
-        onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
-      />
+    <div>
+      <div className="sidebar">
+        Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+      </div>
+      <div ref={mapContainer} className="map-container" />
     </div>
   );
-};
+}
 
 export default Map;
