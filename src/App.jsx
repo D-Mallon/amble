@@ -8,7 +8,7 @@ const viteLogo = "vite.svg";
 const reactLogoPath = `/static/${reactLogo}`;
 const viteLogoPath = `/static/${viteLogo}`;
 import { createTheme } from '@mui/material/styles';
-// import StartPlace from "./components/start_place";
+import StartPlace from "./components/start_place";
 import StartTime from './components/start_time';
 import Preference from './components/preference';
 import Distance from './components/walk_distance';
@@ -31,7 +31,7 @@ function App() {
 
           <div className="start-place">
             <span className="text_bar_3">Start Place:</span>
-            {/* <StartPlace />  */}
+            <StartPlace />
           </div>
 
           <div className="start-time">

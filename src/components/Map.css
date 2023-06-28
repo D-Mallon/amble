@@ -33,3 +33,21 @@
   border-radius: 50%;
   border: 2px solid #fff;
 }
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.custom-popup {
+  color: #000; /* Set the text color to black */
+}
+
+.popup-content {
+  color: #000; /* Set the text color to black */
+  padding: 10px; /* Padding */
+}
