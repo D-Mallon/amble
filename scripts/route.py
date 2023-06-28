@@ -28,7 +28,7 @@ with open("src/components/parks.json") as json_file:
 latitudes = []
 longitudes = []
 
-for park_id, park_data in data.items():
+for park_data in data["data"]:
     latitudes.append(park_data["location"]["latitude"])
     longitudes.append(park_data["location"]["longitude"])
 
@@ -41,7 +41,7 @@ max_longitude = max(longitudes)
 user_latitude = round(random.uniform(min_latitude, max_latitude), 7)
 user_longitude = round(random.uniform(min_longitude, max_longitude), 7)
 
-print(f"Starting location: {user_latitude}, {user_longitude}")
+print(f"Starting location: ({user_latitude}, {user_longitude})")
 print("-----------------------------------------")
 
 # Define the predefined distance to be covered
@@ -54,26 +54,26 @@ while predefined_distance > 0:
     closest_distances = []  # List to store distances to closest parks
 
     # Calculate distances to all parks from the current location
-    for park_id, park_data in data.items():
-        if park_id not in visited_parks:
+    for park_data in data["data"]:
+        if park_data not in visited_parks:
             park_latitude = park_data["location"]["latitude"]
             park_longitude = park_data["location"]["longitude"]
             distance = calculate_distance(
                 user_latitude, user_longitude, park_latitude, park_longitude
             )
             closest_distances.append(distance)
-            closest_parks.append(park_id)
+            closest_parks.append(park_data)
 
     # Sort the parks based on distance and select the 7 closest parks
     sorted_indices = sorted(range(len(closest_distances)), key=lambda k: closest_distances[k])
     closest_parks = [closest_parks[i] for i in sorted_indices[:7]]
 
     # Select the park with the lowest combination of "busi" and "poll" values
-    selected_park = min(closest_parks, key=lambda park: data[park]["busi"] + data[park]["poll"])
+    selected_park = min(closest_parks, key=lambda park: park["busi"] + park["poll"])
 
     # Calculate distance to the selected park
-    park_latitude = data[selected_park]["location"]["latitude"]
-    park_longitude = data[selected_park]["location"]["longitude"]
+    park_latitude = selected_park["location"]["latitude"]
+    park_longitude = selected_park["location"]["longitude"]
     distance_to_park = calculate_distance(
         user_latitude, user_longitude, park_latitude, park_longitude
     )
@@ -85,13 +85,14 @@ while predefined_distance > 0:
     visited_parks.append(selected_park)
 
     # Print information about the current journey
-    park_name = data[selected_park]["name"]
-    park_busi = data[selected_park]["busi"]
-    park_poll = data[selected_park]["poll"]
+    park_name = selected_park["name"]
+    park_busi = selected_park["busi"]
+    park_poll = selected_park["poll"]
     print(f"Visiting Park: {park_name}")
     print(f"Busyness Rating: {park_busi}")
     print(f"Pollution Level: {park_poll}")
     print(f"Remaining Distance: {predefined_distance} km")
+    print(f"Location: ({park_latitude}, {park_longitude})")
     print("-------------------------")
 
     # Update the user's location for the next iteration
