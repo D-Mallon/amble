@@ -48,16 +48,16 @@ body {
   padding: 0;
 }
 
-/* body::before {
+body::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* 灰色透明背景颜色 
-  z-index: 0; /* 确保在下方 
-} */
+  background-color: rgba(0, 0, 0, 0.3); 
+  z-index: 0; 
+}
 
 .menu-button {
   position: absolute;
@@ -107,7 +107,7 @@ body {
   overflow: hidden;
 }
 .green-bar {
-  background-color: #05be87;
+  background-color: #004d40;
   height: 2.8rem;
   position: absolute;
   top: 0;
@@ -130,7 +130,7 @@ body {
 }
 
 .text_bar_2 {
-  color: #05be87;
+  color: #354648;
   font-size: 0.9rem;
   font-weight: normal;
   /* padding-left: 24px; */
@@ -139,12 +139,18 @@ body {
   
 }
 
+.spacer1 {
+  width: 15px; /* 设置空格宽度 */
+  display: inline-block; /* 将元素作为行内块级元素显示 */
+}
+
 .text_bar_3 {
   color: #040404;
   font-size: 1.2rem;
   font-weight: normal;
   /* padding-left: 24px; */
   margin-left: 24px;
+  margin-right: 70px;
   font-family: "Comic Sans MS", cursive;
  
 }
@@ -170,7 +176,6 @@ body {
 .start-time {
   background-color: #ffffff;
   height: 3rem;
- 
   margin-bottom: 60px; 
 
 }
@@ -185,15 +190,14 @@ body {
 .preference {
   background-color: #ffffff;
   height: 3rem;
- 
   margin-bottom: 180px; 
   
 
 }
 
 .gainroute-button {
-  background-color: #05be87;
-  color: #fced48;
+  background-color: #004d40;
+  color: #CBDAC5;
   border: none;
   border-radius: 0;
   padding: 15px 30px;
@@ -223,7 +227,7 @@ body {
 .additional-block-close {
   width: 2.8rem;
   height: 2.8rem;
-  background-color: #05be87;
+  background-color: #004d40;
   right:0;
   display: flex;
   justify-content: center;

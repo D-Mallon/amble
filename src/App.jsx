@@ -1,13 +1,18 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Map from "./components/Map";
 import "./App.css";
-import mapboxgl from 'mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
-mapboxgl.accessToken = 'pk.eyJ1IjoiZmluYmFyYWxsYW4iLCJhIjoiY2xqY3NtYWN6MjV0ODNqcXhhaTY4aGQxdSJ9.VeVQzxCCtpyP_MeT1CkjOg';
+
 
 const reactLogo = "react.svg";
 const viteLogo = "vite.svg";
 const reactLogoPath = `/static/${reactLogo}`;
 const viteLogoPath = `/static/${viteLogo}`;
+import { createTheme } from '@mui/material/styles';
+// import StartPlace from "./components/start_place";
+import StartTime from './components/start_time';
+import Preference from './components/preference';
+import Distance from './components/walk_distance';
+
 
 function App() {
   return (
@@ -23,25 +28,31 @@ function App() {
           <div className="green-bar">
             <span className="text_bar">Walking Setting</span>
           </div>
-          
-  <div className="start-place">
-  <span className="text_bar_3">Start Place:</span>
-  </div>
 
-  <div className="start-time">
-  <span className="text_bar_3">Start Time:</span>
-  </div>
+          <div className="start-place">
+            <span className="text_bar_3">Start Place:</span>
+            {/* <StartPlace />  */}
+          </div>
 
-  <div className="walk-duration">
-  <span className="text_bar_3">Walk Duration:</span>
-  </div>
+          <div className="start-time">
+            <span className="text_bar_3">Start Time:</span>
+            <StartTime /> 
+          </div>
 
-  <div className="preference">
-  <span className="text_bar_3">Preference:</span>
-  </div>
+          <div className="walk-duration">
+            <span className="text_bar_3">Distance:</span>
+            <span className="spacer1">&nbsp;</span>
+            <Distance /> 
+          </div>
+
+
+          <div className="preference">
+            <span className="text_bar_3">Preference:</span>
+            < Preference /> 
+          </div>
 
   <div className="gain-route">
-    <button className="gainroute-button">Gain a Route also checking if Github works!!</button>
+    <button className="gainroute-button">Gain a Route</button>
   </div>
         </div>
 
@@ -58,7 +69,7 @@ function App() {
               />
             </div>
           </div>
-          <Map></Map>
+          <Map />
         </div>
       </div>
     </div>
@@ -66,3 +77,5 @@ function App() {
 }
 
 export default App;
+
+

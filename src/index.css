@@ -26,7 +26,8 @@ a:hover {
 
 body {
   margin: 0,auto;
-  /* display: flex; this line is breaking mapbox*/ 
+  display: flex; 
+  /* this line is breaking mapbox  */
   place-items: center;
   min-width: 100vh;
   min-height: 100vh;
