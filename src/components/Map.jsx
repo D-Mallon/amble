@@ -73,6 +73,18 @@ const Map = () => {
               'icon-image': 'cat',
               'icon-size': 0.25,
             },
+            paint: {
+              'icon-opacity': 0.8
+            }
+          });
+          // Set the cursor style to pointer when hovering over markers
+          map.current.on('mouseenter', 'markers', () => {
+            map.current.getCanvas().style.cursor = 'pointer';
+          });
+
+          // Reset the cursor style when not hovering over markers
+          map.current.on('mouseleave', 'markers', () => {
+            map.current.getCanvas().style.cursor = '';
           });
         }
       );
@@ -86,10 +98,10 @@ const Map = () => {
           const popupContent = features[0].properties.name;
           const id = features[0].properties.id;
 
-          const popup = new mapboxgl.Popup({className: 'custom-popup'})
-          .setLngLat(coordinates)
-          .setHTML(`<div class="popup-content">${popupContent}<br>${id}</div>`)
-          .addTo(map.current);
+          const popup = new mapboxgl.Popup({ className: 'custom-popup' })
+            .setLngLat(coordinates)
+            .setHTML(`<div class="popup-content">${popupContent}<br>${id}</div>`)
+            .addTo(map.current);
         }
       });
     });
