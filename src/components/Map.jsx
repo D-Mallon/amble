@@ -84,10 +84,11 @@ const Map = () => {
         if (features.length > 0) {
           const coordinates = features[0].geometry.coordinates.slice();
           const popupContent = features[0].properties.name;
+          const id = features[0].properties.id;
 
           const popup = new mapboxgl.Popup({className: 'custom-popup'})
           .setLngLat(coordinates)
-          .setHTML(`<div class="popup-content">${popupContent}${coordinates}</div>`)
+          .setHTML(`<div class="popup-content">${popupContent}<br>${id}</div>`)
           .addTo(map.current);
         }
       });
