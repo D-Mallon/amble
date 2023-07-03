@@ -3,19 +3,84 @@ import mapboxgl from 'mapbox-gl';
 import parks from './parks.json';
 import './Map.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { Start } from '@mui/icons-material';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZmluYmFyYWxsYW4iLCJhIjoiY2xqY3NtYWN6MjV0ODNqcXhhaTY4aGQxdSJ9.VeVQzxCCtpyP_MeT1CkjOg';
 
-const reactLogo = 'react.svg';
-const reactLogoPath = `/static/${reactLogo}`;
-
-const Map = () => {
+const Map = ({inputValues}) => {
   const mapContainer = useRef(null);
   const map = useRef(null);
   const [lat, setLat] = useState(40.727872);
   const [lng, setLng] = useState(-73.993157);
   const [zoom, setZoom] = useState(12.4);
   const [markers, setMarkers] = useState([]);
+
+  console.log('Map inputValues:', inputValues);
+  
+  const displayRoute = async (inputValues) => {
+    try {
+      console.log("displayRoute inputValues:", inputValues[0], inputValues[1], inputValues[2], inputValues[3]);
+      const response = await fetch(
+        `https://api.mapbox.com/directions/v5/mapbox/walking/${inputValues[1]},${inputValues[0]};${inputValues[3]},${inputValues[2]}?geometries=geojson&access_token=${mapboxgl.accessToken}`
+      );
+
+      console.log('response:', response);
+
+      const data = await response.json();
+
+      console.log('data:', data);
+
+      // Retrieve the route coordinates from the API response
+      const routeCoordinates = data.routes[0].geometry.coordinates;
+      console.log('routeCoordinates:', routeCoordinates);
+
+      // Create a GeoJSON feature with the route coordinates
+      const routeGeoJSON = {
+        type: 'Feature',
+        properties: {},
+        geometry: {
+          type: 'LineString',
+          coordinates: routeCoordinates,
+        },
+      };
+
+      if (!map.current)
+        return;
+
+      // Clear existing map layers (if any)
+      if (map.current.getSource('route')) {
+        map.current.removeLayer('route');
+        map.current.removeSource('route');
+      }
+
+      // Add the route layer to the map
+      map.current.addSource('route', {
+        type: 'geojson',
+        data: routeGeoJSON,
+      });
+      map.current.addLayer({
+        id: 'route',
+        type: 'line',
+        source: 'route',
+        layout: {
+          'line-join': 'round',
+          'line-cap': 'round',
+        },
+        paint: {
+          'line-color': '#3b9ddd',
+          'line-width': 4,
+        },
+      });
+
+      // Fit the map to display the route
+      const bounds = new mapboxgl.LngLatBounds();
+      routeCoordinates.forEach((coord) => bounds.extend(coord));
+      map.current.fitBounds(bounds, { padding: 40 });
+
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -100,7 +165,7 @@ const Map = () => {
 
           const popup = new mapboxgl.Popup({ className: 'custom-popup' })
             .setLngLat(coordinates)
-            .setHTML(`<div class="popup-content">${popupContent}<br>${id}</div>`)
+            .setHTML(`<div class="popup-content">${popupContent}<br>${id}<br>${coordinates}</div>`)
             .addTo(map.current);
         }
       });
@@ -118,6 +183,7 @@ const Map = () => {
 
   return (
     <div>
+      <button type="submit" onClick={() => {displayRoute(inputValues)}}>Go!</button>
       <div className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>

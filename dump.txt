@@ -194,3 +194,14 @@ const Map = () => {
 }
 
 export default Map;
+
+- - - Navigation Controls - - -
+    // map.current.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+
+    // const directions = new MapboxDirections({
+    //   accessToken: mapboxgl.accessToken,
+    //   unit: 'metric',
+    //   profile: 'mapbox/walking'
+    // });
+
+    // map.current.addControl(directions, 'bottom-left');
