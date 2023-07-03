@@ -13,5 +13,4 @@ urlpatterns = [
     path('api/users/', views.user_view),
     re_path(r'^api/users/(?P<pk>[0-9]+)$', views.user_view),
     path("", TemplateView.as_view(template_name="base.html")),
-    
 ]
