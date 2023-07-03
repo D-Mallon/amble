@@ -245,7 +245,6 @@ body::before {
   height: 20rem;
   margin-bottom: 180px; 
 }
-
 .submit-button {
   background-color: #004d40;
   color: #CBDAC5;
@@ -253,6 +252,7 @@ body::before {
   border-radius: 0;
   padding: 15px 30px;
   cursor: pointer;
+  margin-top: 2rem;
 }
 label {
   margin-bottom: 0.4rem;
@@ -263,7 +263,6 @@ textarea {
   padding: 0.4rem;
   width: 30%;
 }
-
-button {
+/* button {
   margin-top: 2rem;
-}
+} */
