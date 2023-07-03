@@ -24,8 +24,7 @@ for zone in alldata["data"]:
 count = 0        
 for i in range(len(taxi_zone_number)):     
     count += 1   
-    #print(f'Taxi Zone Number = {taxi_zone_number[i]} and Taxi Zone Name = {taxi_zone_name[i]}')
-#print(f'Total Number of Taxi Zones = {count} \n')
+    f'Total Number of Taxi Zones = {count} \n'
 
 #Function to clean polygon data and output Polygon object
 def get_zone_poly(num):
@@ -144,7 +143,7 @@ if response.status_code == 200:
     print(f'No. of Parks = {count}')
 
     # Export the dictionary as a JSON file
-    with open("parks.json", "w") as outfile:
+    with open("src/components/parks.json", "w") as outfile:
         json.dump(filtered_data , outfile, indent=4)
         print("Exported park data to parks.json")
 
