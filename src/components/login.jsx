@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import "./login.css";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -38,8 +39,10 @@ const Login = () => {
   };
 
   return (
+    <div className="login-area">
     <form onSubmit={handleSubmit}>
-        <div>
+        
+            <div>
             <label htmlFor="first_name">First Name:</label>
             <input
                 type="text"
@@ -48,8 +51,8 @@ const Login = () => {
                 value={formData.first_name}
                 onChange={handleChange}
             />
-        </div>
-        <div>
+            </div>
+            <div>
             <label htmlFor="last_name">Last Name:</label>
             <input
                 type="text"
@@ -57,39 +60,41 @@ const Login = () => {
                 value={formData.last_name}
                 onChange={handleChange}
             />
-        </div>
-        <div>
-            <label htmlFor="email">Email:</label>
-            <input
-                type="text"
-                name="email"
-                id="email"
-                value={formData.email}
-                onChange={handleChange}
-            />
-        </div>
-        <div>
-            <label htmlFor="address">Address:</label>
-            <input
-                type="text"
-                name="address"
-                id="address"
-                value={formData.address}
-                onChange={handleChange}
-            />
-        </div>
-        <div>
-            <label htmlFor="password">Password:</label>
-            <input
-                type="text"
-                name="password"
-                id="password"
-                value={formData.password}
-                onChange={handleChange}
-            />
-        </div>
-      <button type="submit">Submit</button>
+            </div>
+            <div>
+                <label htmlFor="email">Email:</label>
+                <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                />
+            </div>
+            <div>
+                <label htmlFor="address">Address:</label>
+                <input
+                    type="text"
+                    name="address"
+                    id="address"
+                    value={formData.address}
+                    onChange={handleChange}
+                />
+            </div>
+            <div>
+                <label htmlFor="password">Password:</label>
+                <input
+                    type="text"
+                    name="password"
+                    id="password"
+                    value={formData.password}
+                    onChange={handleChange}
+                />
+            </div>
+        
+      <button type="submit" className='submit-button'>Submit</button>
     </form>
+    </div>
   );
 };
 
