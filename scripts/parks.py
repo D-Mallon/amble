@@ -143,7 +143,7 @@ if response.status_code == 200:
     print(f'No. of Parks = {count}')
 
     # Export the dictionary as a JSON file
-    with open("parks.json", "w") as outfile:
+    with open("src/components/parks.json", "w") as outfile:
         json.dump(filtered_data , outfile, indent=4)
         print("Exported park data to parks.json")
 
