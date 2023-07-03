@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -55,7 +55,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3); 
+  background-color: rgba(255, 255, 255, 0.6); 
   z-index: 0; 
 }
 
@@ -68,8 +68,10 @@ body::before {
 }
 
 .PlanWin {
-  width: 80rem;
-  height: 50rem;
+  /* width: 80rem;
+  height: 50rem; */
+  width: 95rem;
+  height: 52rem;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -81,7 +83,7 @@ body::before {
 
 
 .PlanSet {
-  width: 40%;
+  width: 35%;
   height: 100%;
   background-color: #ffffff;
   position: relative;
@@ -101,7 +103,7 @@ body::before {
 } */
 
 .PlanMap {
-  width: 60%;
+  width: 65%;
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -149,8 +151,8 @@ body::before {
   font-size: 1.2rem;
   font-weight: normal;
   /* padding-left: 24px; */
-  margin-left: 24px;
-  margin-right: 70px;
+  margin-left: 34px;
+  margin-right: 55px;
   font-family: "Comic Sans MS", cursive;
  
 }
