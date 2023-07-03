@@ -33,4 +33,23 @@
   height: 12px;
   border-radius: 50%;
   border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.custom-popup {
+  color: #000; /* Set the text color to black */
+}
+
+.popup-content {
+  color: #000; /* Set the text color to black */
+  padding: 15px; /* Padding */
 }

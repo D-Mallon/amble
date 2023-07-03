@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
@@ -10,7 +9,6 @@ import dayjs from 'dayjs';
 
 export default function StartTime() {
  
-
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DemoContainer sx={{ width: 270 }} components={['DateTimePicker']}>
