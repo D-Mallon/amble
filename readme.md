@@ -38,6 +38,8 @@
 - then type `python manage.py runserver` (this will run the server)[Django]
 - open a new terminal and type `npm i` then `npm run dev` (this will run the frontend)[React]
 - if you get an error with google-map-react, try `npm install --save google-map-react --legacy-peer-deps` or `npm install google-map-react --legacy-peer-deps`
+- another npm dependancy to be installed manually: npm install @mui/material @emotion/react @emotion/styled --legacy-peer-deps
+- need to check --save
 - the project should now be running on the django localhost (probably http://127.0.0.1:8000/)
 
 ## Resources

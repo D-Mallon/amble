@@ -20,6 +20,7 @@
     "@mui/x-date-pickers": "^6.9.0",
     "@react-google-maps/api": "^2.18.1",
     "autosuggest-highlight": "^3.3.4",
+    "axios": "^1.4.0",
     "dayjs": "^1.11.8",
     "google-map-react": "^2.2.1",
     "google-maps-react": "^2.0.6",
