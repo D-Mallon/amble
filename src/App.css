@@ -165,12 +165,11 @@ body::before {
 
 .start-place {
   background-color: #ffffff;
-  
   height:3rem;
   margin-top: 140px;
   margin-bottom: 60px; 
-  
- 
+
+
 }
 
 .start-time {
@@ -184,15 +183,12 @@ body::before {
   background-color: #ffffff;
   height: 3rem;
   margin-bottom: 60px;
-  
 }
 
 .preference {
   background-color: #ffffff;
   height: 3rem;
   margin-bottom: 180px; 
-  
-
 }
 
 .gainroute-button {
@@ -241,3 +237,32 @@ body::before {
   height: 85%;
   object-fit: contain;
 }
+
+/* Styling for login area */
+.login-area {
+  background-color: #ffffff;
+  height: 20rem;
+  height: 20rem;
+  margin-bottom: 180px; 
+}
+.submit-button {
+  background-color: #004d40;
+  color: #CBDAC5;
+  border: none;
+  border-radius: 0;
+  padding: 15px 30px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+label {
+  margin-bottom: 0.4rem;
+  display: block;
+}
+input,
+textarea {
+  padding: 0.4rem;
+  width: 30%;
+}
+/* button {
+  margin-top: 2rem;
+} */

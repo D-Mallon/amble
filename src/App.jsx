@@ -13,6 +13,7 @@ import StartTime from './components/start_time';
 import Preference from './components/preference';
 import Distance from './components/walk_distance';
 
+import Login from "./components/login";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
             </div>
           </div>
           <Map />
+          {/* <Login /> */}
         </div>
       </div>
     </div>
