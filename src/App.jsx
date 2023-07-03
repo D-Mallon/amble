@@ -2,14 +2,11 @@ import React, { useRef, useEffect, useState } from 'react';
 import Map from "./components/Map";
 import "./App.css";
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZmluYmFyYWxsYW4iLCJhIjoiY2xqY3NtYWN6MjV0ODNqcXhhaTY4aGQxdSJ9.VeVQzxCCtpyP_MeT1CkjOg';
-
 import { createTheme } from '@mui/material/styles';
-import start_place from "./components/start_place";
-import start_time from './components/start_time';
-import preference from './components/preference';
-import distance from './components/walk_distance';
-
+import StartPlace from "./components/start_place";
+import StartTime from './components/start_time';
+import Preference from './components/preference';
+import Distance from './components/walk_distance';
 
 function App() {
 
@@ -17,7 +14,6 @@ function App() {
     -73.9904522895813,
     40.74218481889335,
     -73.98786664009094]);
-  console.log('App inputValues:', inputValues);
 
   return (
     <div>

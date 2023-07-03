@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const StartPlace = ({inputValues, setInputValues, displayRoute}) => {
+const StartPlace = ({inputValues, setInputValues}) => {
 
     const handleInputChange = (index, value) => {
         setInputValues((prevInputValues) => {
@@ -9,8 +9,6 @@ const StartPlace = ({inputValues, setInputValues, displayRoute}) => {
             return updatedValues;
         });
     };
-
-    console.log('StartPlace inputValues:', inputValues);
 
     return (
         <div>
