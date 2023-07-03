@@ -70,8 +70,8 @@ function App() {
               />
             </div>
           </div>
-          {/* <Map /> */}
-          <Login />
+          <Map />
+          {/* <Login /> */}
         </div>
       </div>
     </div>
