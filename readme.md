@@ -36,7 +36,7 @@
 - then type `pip install vite` (this will install the frontend build tool)
 - then type `python manage.py migrate` (this will create the database)
 - then type `python manage.py runserver` (this will run the server)[Django]
-- open a new terminal and type `npm i` then `npm run dev` (this will run the frontend)[React]
+- open a new terminal and type `npm i --legacy-peer-deps` then `npm run dev` (this will run the frontend)[React]
 - if you get an error with google-map-react, try `npm install --save google-map-react --legacy-peer-deps` or `npm install google-map-react --legacy-peer-deps`
 - another npm dependancy to be installed manually: npm install @mui/material @emotion/react @emotion/styled --legacy-peer-deps
 - need to check --save
