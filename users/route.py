@@ -1,9 +1,28 @@
 import json
 import requests
-from .views import handle_routeinput_data
 
 import random
 from math import radians, sin, cos, sqrt, atan2
+
+###########Accessing Data from Database###################################
+import psycopg2 #For accessing the Database
+
+conn = psycopg2.connect(
+   database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
+) #establishing the connection
+
+conn.autocommit = True #Setting auto commit false
+cursor = conn.cursor() #Creating a cursor object using the cursor() method
+cursor.execute('''SELECT * from users_userroute''') #Retrieving data
+result = cursor.fetchone(); #Fetching 1st row from the table
+print(result)
+conn.commit() #Commit your changes in the database
+conn.close() #Closing the connection
+
+amble_distance = float(result[3])
+print(f'Amble distance = {amble_distance}')
+user_latitude = float(result[1])
+user_longitude = float(result[2])
 
 # Function to calculate the distance between two coordinates using the haversine formula
 def calculate_distance(lat1, lon1, lat2, lon2):
@@ -41,8 +60,8 @@ min_longitude = min(longitudes)
 max_longitude = max(longitudes)
 
 # Generate random starting point within the park boundaries
-user_latitude = round(random.uniform(min_latitude, max_latitude), 7)
-user_longitude = round(random.uniform(min_longitude, max_longitude), 7)
+# user_latitude = round(random.uniform(min_latitude, max_latitude), 7)
+# user_longitude = round(random.uniform(min_longitude, max_longitude), 7)
 
 
 # route_data = handle_routeinput_data()
@@ -54,13 +73,11 @@ print("-----------------------------------------")
 # Define the predefined distance to be covered
 # predefined_distance = 7  # Adjust this value as needed
 
-predefined_distance = 7  # Adjust this value as needed
-x = handle_routeinput_data
-print(type(x))
+# predefined_distance = 7  # Adjust this value as needed
 
 visited_parks = []  # List to store visited parks
 
-while predefined_distance > 0:
+while amble_distance > 0:
     closest_parks = []  # List to store closest parks
     closest_distances = []  # List to store distances to closest parks
 
@@ -90,7 +107,7 @@ while predefined_distance > 0:
     )
 
     # Reduce the predefined distance by the distance to the selected park
-    predefined_distance -= distance_to_park
+    amble_distance -= distance_to_park
 
     # Add the selected park to the visited parks list
     visited_parks.append(selected_park)
@@ -102,7 +119,7 @@ while predefined_distance > 0:
     print(f"Visiting Park: {park_name}")
     print(f"Busyness Rating: {park_busi}")
     print(f"Pollution Level: {park_poll}")
-    print(f"Remaining Distance: {predefined_distance} km")
+    print(f"Remaining Distance: {amble_distance} km")
     print(f"Location: ({park_latitude}, {park_longitude})")
     print("-------------------------")
 
