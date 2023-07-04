@@ -25,7 +25,8 @@ const Map = ({inputValues}) => {
         center: [lng, lat],
         zoom: zoom,
       });
-  
+      
+      console.log('parks:', parks)
       const newMarkers = parks.data.map((park) => ({
         id: park.id,
         name: park.name,
