@@ -71,8 +71,8 @@ function App() {
               />
             </div>
           </div>
-          <Map inputValues={inputValues}/>
-          {/* <Login /> */}
+          {/* <Map inputValues={inputValues}/> */}
+          <Login />
         </div>
       </div>
     </div>
