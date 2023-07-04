@@ -17,6 +17,7 @@ const RouteInputs = () => {
 
     axios
       .post('/users', formData, {
+        // Need this header as axios sends dorm data as application/json which is not compatible with django request.POST
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
