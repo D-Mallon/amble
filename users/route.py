@@ -1,6 +1,6 @@
 import json
 import requests
-from views import handle_routeinput_data
+from .views import handle_routeinput_data
 
 import random
 from math import radians, sin, cos, sqrt, atan2
@@ -56,7 +56,7 @@ print("-----------------------------------------")
 
 predefined_distance = 7  # Adjust this value as needed
 x = handle_routeinput_data
-print(type(data))
+print(type(x))
 
 visited_parks = []  # List to store visited parks
 
