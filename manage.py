@@ -2,7 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
+from shapely.geometry import Point, Polygon
 
 def main():
     """Run administrative tasks."""

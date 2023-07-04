@@ -56,7 +56,7 @@ all_zones = []
 for i in range(count):
     all_zones.append(get_zone_poly(i))
 
-###########################Build Parks Json File####################
+########################### Build Parks JSON File ####################
 # Define the Overpass API query
 overpass_query = """
 [out:json];
@@ -79,7 +79,7 @@ if response.status_code == 200:
     data = response.json()
 
     # Create a dictionary to hold the park data
-    park_data = {}
+    park_data = []
 
     # Extract park information from the response
     parks = data.get("elements", [])
@@ -98,13 +98,14 @@ if response.status_code == 200:
                 taxizone = all_zones[i][0]
 
         # Add park data to the dictionary
-        park_data[park_id] = {
+        park_data.append({
+            "id": park_id,
             "name": park_name,
             "location": {"latitude": latitude, "longitude": longitude},
             "taxizone": taxizone,
             "busi": random.randint(0, 100) / 100,
             "poll": random.randint(0, 100) / 100,
-        }
+        })
 
     min_lat = 40.6
     max_lat = 40.9
@@ -125,22 +126,20 @@ if response.status_code == 200:
                        2389631,
                        9791559]
 
-    filtered_data = {}
+    filtered_data = []
     
-    count = 0 #counts the number of parks
-    for key, park in park_data.items():
-        count += 1
-        latitude = park["location"]["latitude"]
-        longitude = park["location"]["longitude"]
+    for park in park_data:
+            id = park["id"]
+            latitude = park["location"]["latitude"]
+            longitude = park["location"]["longitude"]
 
-        if (min_lat <= latitude <= max_lat) and (min_lon <= longitude <= max_lon) and (key not in parks_to_remove):
-            filtered_data[key] = park
+            if (min_lat <= latitude <= max_lat) and (min_lon <= longitude <= max_lon) and (id not in parks_to_remove):
+                filtered_data.append(park)
     
     # Convert the dictionary to a JSON object
-    json_data = json.dumps(filtered_data, indent=4)
+    json_data = {"data": filtered_data}
     
-    print(json_data)
-    print(f'No. of Parks = {count}')
+    print(f'No. of Parks = {park_data.__len__()}')
 
     # Export the dictionary as a JSON file
     with open("src/components/parks.json", "w") as outfile:
