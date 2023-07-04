@@ -4,13 +4,14 @@ import "./App.css";
 
 import Interface from "./components/Interface";
 import Login from "./components/login";
+import Comms from "./components/Comms.jsx";
 
 function App() {
 
-  const [inputValues, setInputValues] = useState([40.73581157695216,
-    -73.9904522895813,
-    40.74218481889335,
-    -73.98786664009094]);
+  const [inputValues, setInputValues] = useState({
+    latitude: 0,
+    longitude: 0,
+  });
 
   return (
     <div>
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Interface />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/comms" element={<Comms />} />
         </Routes>
     	</Router >
     </div >

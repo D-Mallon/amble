@@ -14,4 +14,5 @@ urlpatterns = [
     re_path(r'^api/users/(?P<pk>[0-9]+)$', views.user_view),
     path("", TemplateView.as_view(template_name="base.html")),
     path("login", TemplateView.as_view(template_name="base.html")),
+    path("comms", TemplateView.as_view(template_name="base.html")),
 ]
