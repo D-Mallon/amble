@@ -9,6 +9,7 @@ import Preference from './components/preference';
 import Distance from './components/walk_distance';
 
 import Login from "./components/login";
+import RouteInputs from "./components/latlondis";
 
 function App() {
 
@@ -71,8 +72,9 @@ function App() {
               />
             </div>
           </div>
-          <Map inputValues={inputValues}/>
+          {/* <Map inputValues={inputValues}/> */}
           {/* <Login /> */}
+          <RouteInputs />
         </div>
       </div>
     </div>
