@@ -244,7 +244,7 @@ body::before {
 .login-area {
   background-color: #ffffff;
   height: 20rem;
-  height: 20rem;
+  width: 50rem;
   margin-bottom: 180px; 
 }
 .submit-button {
