@@ -4,7 +4,7 @@ from users import views
 
 urlpatterns = [
     
-    path('users', views.handle_routeinpput_data),
+    path('users', views.handle_routeinput_data),
     path('users', views.user_view),
     
     # re_path(r'^users/$', views.user_view),
