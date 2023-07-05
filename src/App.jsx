@@ -1,13 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
-import Map from "./components/Map";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./App.css";
 
-import { createTheme } from '@mui/material/styles';
-import StartPlace from "./components/start_place";
-import StartTime from './components/start_time';
-import Preference from './components/preference';
-import Distance from './components/walk_distance';
-
+import Interface from "./components/Interface";
 import Login from "./components/login";
 import RouteInputs from "./components/latlondis";
 
@@ -19,18 +14,17 @@ function App() {
     -73.98786664009094]);
 
   return (
-<div>
+    <div>
       <Router>
         <Routes>
           <Route exact path="/" element={<Interface />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/latlondis" element={<RouteInputs />} />
+          <Route path="/latlondist" element={<RouteInputs />} />
         </Routes>
     	</Router >
-</div >
+    </div >
   );
 }
 
 export default App;
-
 
