@@ -112,8 +112,17 @@ const Map = ({inputValues}) => {
   const displayRoute = async (inputValues) => {
     console.log('inputValues:', inputValues)
     try {
-      const response = await fetch(`https://api.mapbox.com/directions/v5/mapbox/walking/${inputValues["startLatitude"]},${inputValues["startLongitude"]};${inputValues["endLatitude"]},${inputValues["endLongitude"]}?geometries=geojson&access_token=${mapboxgl.accessToken}`
-      );
+      const apicall = `https://api.mapbox.com/directions/v5/mapbox/walking/` +
+      `${inputValues["startLatitude"]},` +
+      `${inputValues["startLongitude"]};` +
+      `${-74.00610566139221},` +
+      `${40.72981171731587};` +
+      `${-73.97927284240723},` +
+      `${40.732413348907244};` +
+      `${inputValues["endLatitude"]},`+
+      `${inputValues["endLongitude"]}?` +
+      `geometries=geojson&access_token=${mapboxgl.accessToken}`
+      const response = await fetch(apicall);
       console.log('response:', response);
       const data = await response.json();
       console.log('data:', data);
