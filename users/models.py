@@ -10,3 +10,11 @@ class User(models.Model):
 
     def __str__(self):
         return self.email
+    
+class UserRoute(models.Model):
+    latitude = models.CharField("Latitude", max_length=30)
+    longitude = models.CharField("Longitude", max_length=30)
+    distance = models.CharField("Distance",max_length=30)
+
+    def __str__(self):
+        return self.email

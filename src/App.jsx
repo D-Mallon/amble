@@ -4,6 +4,7 @@ import "./App.css";
 
 import Interface from "./components/Interface";
 import Login from "./components/login";
+import RouteInputs from "./components/latlondis";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Interface />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/latlondist" element={<RouteInputs />} />
         </Routes>
     	</Router >
     </div >
