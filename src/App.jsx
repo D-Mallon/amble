@@ -20,12 +20,13 @@ function App() {
 
   return (
 <div>
-    <Router>
-    <Routes>
-      <Route exact path="/" element={<Interface />} />
-      <Route path="/login" element={<Login />} />
-    </Routes>
-  </Router >
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Interface />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/latlondis" element={<RouteInputs />} />
+        </Routes>
+    	</Router >
 </div >
   );
 }
