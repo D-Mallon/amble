@@ -4,20 +4,20 @@ import requests
 import random
 from math import radians, sin, cos, sqrt, atan2
 
-###########Accessing Data from Database###################################
-import psycopg2 #For accessing the Database
+########### Accessing Data from Database ###################################
+import psycopg2 #For getting the fetch method
 
 conn = psycopg2.connect(
    database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
-) #establishing the connection
+) #Establish the connection
 
-conn.autocommit = True #Setting auto commit false
-cursor = conn.cursor() #Creating a cursor object using the cursor() method
-cursor.execute('''SELECT * from users_userroute''') #Retrieving data
-result = cursor.fetchone(); #Fetching 1st row from the table
+conn.autocommit = True #Set auto commit false
+cursor = conn.cursor() #Create a cursor object
+cursor.execute('''SELECT * from users_userroute''') #Retrieve data
+result = cursor.fetchone(); #Fetch 1st row from the table
 print(result)
-conn.commit() #Commit your changes in the database
-conn.close() #Closing the connection
+conn.commit() #Commit changes in the database
+conn.close() #Close the connection
 
 amble_distance = float(result[3])
 print(f'Amble distance = {amble_distance}')
@@ -63,7 +63,6 @@ max_longitude = max(longitudes)
 # user_latitude = round(random.uniform(min_latitude, max_latitude), 7)
 # user_longitude = round(random.uniform(min_longitude, max_longitude), 7)
 
-
 # route_data = handle_routeinput_data()
 # route_data_json = route_data.json()
 
@@ -71,8 +70,6 @@ print(f"Starting location: ({user_latitude}, {user_longitude})")
 print("-----------------------------------------")
 
 # Define the predefined distance to be covered
-# predefined_distance = 7  # Adjust this value as needed
-
 # predefined_distance = 7  # Adjust this value as needed
 
 visited_parks = []  # List to store visited parks
