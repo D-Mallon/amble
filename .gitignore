@@ -29,10 +29,12 @@ dist-ssr
 *.pot
 *.pyc
 __pycache__/
+backend/__pycache__
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media
+django-env/
 
 # Distribution / packaging
 .Python
