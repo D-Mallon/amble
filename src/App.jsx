@@ -6,6 +6,11 @@ import Interface from "./components/Interface";
 import Login from "./components/login";
 import RouteInputs from "./components/latlondis";
 
+// If a route can not be displayed this function is invoked from Route path
+function MatchAllRoute() {
+  return <h2>The requested page does not exist</h2>;
+}
+
 function App() {
 
   const [inputValues, setInputValues] = useState([40.73581157695216,
@@ -29,8 +34,4 @@ function App() {
   );
 }
 
-// If a route can not be displayed this function is invoked from Route path
-function MatchAllRoute() {
-  return <h2>The requested page does not exist</h2>;
-}
 export default App;

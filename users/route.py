@@ -113,11 +113,13 @@ while amble_distance > 0:
     park_name = selected_park["name"]
     park_busi = selected_park["busi"]
     park_poll = selected_park["poll"]
+    park_taxi = selected_park["taxizone"]
     print(f"Visiting Park: {park_name}")
     print(f"Busyness Rating: {park_busi}")
     print(f"Pollution Level: {park_poll}")
     print(f"Remaining Distance: {amble_distance} km")
     print(f"Location: ({park_latitude}, {park_longitude})")
+    print(f"Taxi Zone: {park_taxi}")
     print("-------------------------")
 
     # Update the user's location for the next iteration
