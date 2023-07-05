@@ -19,11 +19,18 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Interface />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/latlondist" element={<RouteInputs />} />
+          <Route path="/latlondis" element={<RouteInputs />} />
+
+          <Route path="*" element={<MatchAllRoute />} />
+
         </Routes>
     	</Router >
     </div >
   );
 }
 
+// If a route can not be displayed this function is invoked from Route path
+function MatchAllRoute() {
+  return <h2>The requested page does not exist</h2>;
+}
 export default App;
