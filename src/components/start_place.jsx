@@ -20,7 +20,7 @@ const StartPlace = ({ inputValues, setInputValues }) => {
     })
       .then((response) => {
         console.log("errorless:", response.data);
-        
+        setInputValues({ ...inputValues, endLatitude: response.data["dest"][1], endLongitude: response.data["dest"][0]});
       })
       .catch((error) => {
         if (error.response) {
@@ -40,15 +40,15 @@ const StartPlace = ({ inputValues, setInputValues }) => {
         <label htmlFor="latitude">Latitude:</label>
         <input
           type="text"
-          name="latitude"
-          value={inputValues.latitude}
+          name="startLatitude"
+          value={inputValues.startLatitude}
           onChange={handleInputChange}
         />
         <label htmlFor="longitude">Longitude:</label>
         <input
           type="text"
-          name="longitude"
-          value={inputValues.longitude}
+          name="startLongitude"
+          value={inputValues.startLongitude}
           onChange={handleInputChange}
         />
         <button type="submit">Submit</button>

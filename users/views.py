@@ -27,10 +27,10 @@ def user_view(request):
 
 def handle_routeinpput_data(request):
     if request.method == 'POST':
-        latitude = request.POST.get('latitude')
-        longitude = request.POST.get('longitude')
+        latitude = request.POST.get('startLatitude')
+        longitude = request.POST.get('startLongitude')
 
         print(f'Latitude: {latitude} Longitude: {longitude}') 
 
-        response_data = {'dest': magic(float(latitude), float(longitude))}
+        response_data = {"dest": magic(float(latitude), float(longitude))}
         return JsonResponse(response_data)

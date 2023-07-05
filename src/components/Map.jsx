@@ -110,9 +110,9 @@ const Map = ({inputValues}) => {
   
   // logic for displaying the route on the map 
   const displayRoute = async (inputValues) => {
+    console.log('inputValues:', inputValues)
     try {
-      const response = await fetch(
-        `https://api.mapbox.com/directions/v5/mapbox/walking/${inputValues[1]},${inputValues[0]};${inputValues[3]},${inputValues[2]}?geometries=geojson&access_token=${mapboxgl.accessToken}`
+      const response = await fetch(`https://api.mapbox.com/directions/v5/mapbox/walking/${inputValues["startLatitude"]},${inputValues["startLongitude"]};${inputValues["endLatitude"]},${inputValues["endLongitude"]}?geometries=geojson&access_token=${mapboxgl.accessToken}`
       );
       console.log('response:', response);
       const data = await response.json();

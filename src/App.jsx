@@ -9,8 +9,10 @@ import Comms from "./components/Comms.jsx";
 function App() {
 
   const [inputValues, setInputValues] = useState({
-    latitude: -73.98786664009094,
-    longitude: 40.74218481889335,
+    startLatitude: -73.98786664009094,
+    startLongitude: 40.74218481889335,
+    endLatitude: 0,
+    endLongitude: 0,
   });
 
   return (
