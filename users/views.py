@@ -41,17 +41,3 @@ def user_route(request):
     
     return HttpResponseBadRequest('Unsupported request method.')
 
-
-
-    # if request.method == 'POST':
-    #     latitude = request.POST.get('latitude')
-    #     longitude = request.POST.get('longitude')
-    #     distance = request.POST.get('distance')
-
-    #     print(f'Latitude: {latitude} Longitude: {longitude} Distance: {distance} ') 
-    #     print(f'Latitude: {type(latitude)} ') 
-
-    #     response_data = {'latitude': latitude, 'longitude':longitude, 'distance':distance}
-    #     # response_data = {'message': 'Form data received successfully'}
-    #     print(response_data)
-    #     return JsonResponse(response_data)
