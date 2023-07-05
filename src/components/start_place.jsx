@@ -1,47 +1,60 @@
 import React from 'react';
+import axios from 'axios';
+import "./Comms.css";
 
-const StartPlace = ({inputValues, setInputValues}) => {
+const StartPlace = ({ inputValues, setInputValues }) => {
 
-    const handleInputChange = (index, value) => {
-        setInputValues((prevInputValues) => {
-            const updatedValues = [...prevInputValues];
-            updatedValues[index] = value;
-            return updatedValues;
-        });
-    };
+  const handleInputChange = (e) => {
+    setInputValues({ ...inputValues, [e.target.name]: e.target.value });
+  };
 
-    return (
-        <div>
-            Start Latitude:
-            <input
-                type="number"
-                value={inputValues[0]}
-                placeholder='Enter start latitude'
-                onChange={(e) => handleInputChange(0, e.target.value)}
-            />
-            Start Longitude:
-            <input
-                type="number"
-                value={inputValues[1]}
-                placeholder='Enter start longitude'
-                onChange={(e) => handleInputChange(1, e.target.value)}
-            />
-            End Latitude:
-            <input
-                type="number"
-                value={inputValues[2]}
-                placeholder='Enter end latitude'
-                onChange={(e) => handleInputChange(2, e.target.value)}
-            />
-            End Longitude:
-            <input
-                type="number"
-                value={inputValues[3]}
-                placeholder='Enter end longitude'
-                onChange={(e) => handleInputChange(3, e.target.value)}
-            />
-        </div>
-    );
+  const handleInputSubmit = (e) => {
+    e.preventDefault();
+
+    console.log("handleInputSubmit", inputValues);
+
+    axios.post('/users', inputValues, {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    })
+      .then((response) => {
+        console.log("errorless:", response.data);
+        setInputValues({ ...inputValues, endLatitude: response.data["dest"][1], endLongitude: response.data["dest"][0]});
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.log(error.response);
+          console.log("server responded with error");
+        } else if (error.request) {
+          console.log("network error");
+        } else {
+          console.log(error);
+        }
+      });
+  };
+
+  return (
+    <div className="comms">
+      <form onSubmit={handleInputSubmit}>
+        <label htmlFor="latitude">Latitude:</label>
+        <input
+          type="text"
+          name="startLatitude"
+          value={inputValues.startLatitude}
+          onChange={handleInputChange}
+        />
+        <label htmlFor="longitude">Longitude:</label>
+        <input
+          type="text"
+          name="startLongitude"
+          value={inputValues.startLongitude}
+          onChange={handleInputChange}
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div >
+  );
 }
 
 export default StartPlace;

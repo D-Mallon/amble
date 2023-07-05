@@ -4,27 +4,29 @@ import "./App.css";
 
 import Interface from "./components/Interface";
 import Login from "./components/login";
+import Comms from "./components/Comms.jsx";
 import RouteInputs from "./components/latlondis";
 
 function App() {
 
-  const [inputValues, setInputValues] = useState([40.73581157695216,
-    -73.9904522895813,
-    40.74218481889335,
-    -73.98786664009094]);
+  const [inputValues, setInputValues] = useState({
+    startLatitude: -73.98786664009094,
+    startLongitude: 40.74218481889335,
+    endLatitude: 0,
+    endLongitude: 0,
+  });
 
   return (
     <div>
       <Router>
         <Routes>
-          <Route exact path="/" element={<Interface />} />
+          <Route exact path="/" element={<Interface inputValues={inputValues} setInputValues={setInputValues} />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/comms" element={<Comms />} />
           <Route path="/latlondis" element={<RouteInputs />} />
-
           <Route path="*" element={<MatchAllRoute />} />
-
         </Routes>
-    	</Router >
+      </Router >
     </div >
   );
 }
