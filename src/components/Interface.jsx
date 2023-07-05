@@ -8,12 +8,7 @@ import StartTime from './start_time';
 import Preference from './preference';
 import Distance from './walk_distance';
 
-function Interface() {
-
-  const [inputValues, setInputValues] = useState([40.73581157695216,
-    -73.9904522895813,
-    40.74218481889335,
-    -73.98786664009094]);
+function Interface({ inputValues, setInputValues }) {
 
   return (
     <div>

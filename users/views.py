@@ -29,10 +29,8 @@ def handle_routeinpput_data(request):
     if request.method == 'POST':
         latitude = request.POST.get('latitude')
         longitude = request.POST.get('longitude')
-        distance = request.POST.get('distance')
 
-        print(f'Latitude: {latitude} Longitude: {longitude} Distance: {distance} ') 
-        print(f'Latitude: {type(latitude)} ') 
+        print(f'Latitude: {latitude} Longitude: {longitude}') 
 
-        response_data = {'sum': magic(int(latitude), int(longitude))}
+        response_data = {'dest': magic(float(latitude), float(longitude))}
         return JsonResponse(response_data)

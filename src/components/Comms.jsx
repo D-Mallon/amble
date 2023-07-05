@@ -16,8 +16,7 @@ function Comms() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios
-      .post('/users', formData, {
+    axios.post('/users', formData, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
@@ -40,22 +39,18 @@ function Comms() {
   return (
       <div className="comms">
         <form onSubmit={handleSubmit}>
-          <div>
             <label htmlFor="latitude">Latitude:</label>
             <input
               type="text"
               name="latitude"
               onChange={handleChange}
             />
-          </div>
-          <div>
             <label htmlFor="longitude">Longitude:</label>
             <input
               type="text"
               name="longitude"
               onChange={handleChange}
             />
-          </div>
           <button type="submit">Submit</button>
         </form>
       </div>

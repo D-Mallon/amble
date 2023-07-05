@@ -9,19 +9,19 @@ import Comms from "./components/Comms.jsx";
 function App() {
 
   const [inputValues, setInputValues] = useState({
-    latitude: 0,
-    longitude: 0,
+    latitude: -73.98786664009094,
+    longitude: 40.74218481889335,
   });
 
   return (
     <div>
       <Router>
         <Routes>
-          <Route exact path="/" element={<Interface />} />
+          <Route exact path="/" element={<Interface inputValues={inputValues} setInputValues={setInputValues} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/comms" element={<Comms />} />
         </Routes>
-    	</Router >
+      </Router >
     </div >
   );
 }

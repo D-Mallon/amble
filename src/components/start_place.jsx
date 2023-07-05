@@ -4,59 +4,57 @@ import "./Comms.css";
 
 const StartPlace = ({ inputValues, setInputValues }) => {
 
-    const handleInputChange = (index, value) => {
-        setInputValues((prevInputValues) => {
-            const updatedValues = [...prevInputValues];
-            updatedValues[index] = value;
-            return updatedValues;
-        });
-    };
+  const handleInputChange = (e) => {
+    setInputValues({ ...inputValues, [e.target.name]: e.target.value });
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    
-        axios
-          .post('/users', inputValues, {
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded',
-            },
-          })
-          .then((response) => {
-            console.log(response.data);
-          })
-          .catch((error) => {
-            if (error.response) {
-              console.log(error.response);
-              console.log("server responded with error");
-            } else if (error.request) {
-              console.log("network error");
-            } else {
-              console.log(error);
-            }
-          });
-      };
+  const handleInputSubmit = (e) => {
+    e.preventDefault();
 
-    return (
-        <div className="comms">
-            <form onSubmit={handleSubmit}>
-            <label htmlFor="latitude">Latitude:</label>
-            <input
-                type="number"
-                value={inputValues[0]}
-                placeholder='Enter start latitude'
-                onChange={(e) => handleInputChange(0, e.target.value)}
-            />
-            <label htmlFor="longitude">Longitude:</label>
-            <input
-                type="number"
-                value={inputValues[1]}
-                placeholder='Enter start longitude'
-                onChange={(e) => handleInputChange(1, e.target.value)}
-            />
-            <button type="submit">Submit</button>
-        </form>
-        </div >
-    );
+    console.log("handleInputSubmit", inputValues);
+
+    axios.post('/users', inputValues, {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    })
+      .then((response) => {
+        console.log("errorless:", response.data);
+        
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.log(error.response);
+          console.log("server responded with error");
+        } else if (error.request) {
+          console.log("network error");
+        } else {
+          console.log(error);
+        }
+      });
+  };
+
+  return (
+    <div className="comms">
+      <form onSubmit={handleInputSubmit}>
+        <label htmlFor="latitude">Latitude:</label>
+        <input
+          type="text"
+          name="latitude"
+          value={inputValues.latitude}
+          onChange={handleInputChange}
+        />
+        <label htmlFor="longitude">Longitude:</label>
+        <input
+          type="text"
+          name="longitude"
+          value={inputValues.longitude}
+          onChange={handleInputChange}
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div >
+  );
 }
 
 export default StartPlace;
