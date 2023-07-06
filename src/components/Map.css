@@ -10,7 +10,8 @@
 }
 
 .map-container {
-  height: 1000px;
+  width: 90rem;
+  height: 65rem;
 }
 
 .sidebar {
@@ -26,55 +27,29 @@
   border-radius: 4px;
 }
 
-.marker.parks {
-  background-color: hsl(123, 43%, 50%);
-}
-
-.marker.cafes {
-  background-color: rgb(239, 20, 255);
-}
-
-.marker.community {
-  background-color: hsl(201, 100%, 50%);
-}
-
-.marker.libraries {
-  background-color: hsl(38, 91%, 47%);
-}
-
-.marker.museums {
-  background-color: hsl(356, 94%, 26%);
-}
-
-.marker.restaurants {
-  background-color: hsl(50, 60%, 67%);
-}
-
-.marker.worships {
-  background-color: hsl(246, 54%, 43%);
-}
-
-.marker.walking {
-  background-color: hwb(240 35% 62%);
-}
-
 .marker {
+  background-color: #449e48;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   border: 2px solid #fff;
+  cursor: pointer;
 }
 
-.dataset-toggle {
-  background-color: rgba(35, 55, 75, 0.9);
-  color: #fff;
-  padding: 7px 200px 7px 5px;
-  font-family: monospace;
-  z-index: 1;
-  position: absolute;
-  top: 35px;
-  left: 0;
-  margin: 12px;
-  border-radius: 4px;
-  text-align: left;
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.custom-popup {
+  color: #000; /* Set the text color to black */
+}
+
+.popup-content {
+  color: #000; /* Set the text color to black */
+  padding: 15px; /* Padding */
 }
