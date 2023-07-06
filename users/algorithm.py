@@ -39,7 +39,7 @@ def magic(user_latitude, user_longitude):
     print("-----------------------------------------")
 
     # Define the predefined distance to be covered
-    predefined_distance = 7  # Adjust this value as needed
+    predefined_distance = 5  # Adjust this value as needed
 
     visited_parks = []  # List to store visited parks
 
@@ -82,15 +82,26 @@ def magic(user_latitude, user_longitude):
         park_name = selected_park["name"]
         park_busi = selected_park["busi"]
         park_poll = selected_park["poll"]
-        print(f"Visiting Park: {park_name}")
-        print(f"Busyness Rating: {park_busi}")
-        print(f"Pollution Level: {park_poll}")
-        print(f"Remaining Distance: {predefined_distance} km")
-        print(f"Location: ({park_latitude}, {park_longitude})")
-        print("-------------------------")
+        # print(f"Visiting Park: {park_name}")
+        # print(f"Busyness Rating: {park_busi}")
+        # print(f"Pollution Level: {park_poll}")
+        # print(f"Remaining Distance: {predefined_distance} km")
+        # print(f"Location: ({park_latitude}, {park_longitude})")
+        # print("-------------------------")
 
         # Update the user's location for the next iteration
         user_latitude = park_latitude
         user_longitude = park_longitude
 
-    return [park_latitude, park_longitude]
+    # print("Visited Parks:")
+    # for park in visited_parks:
+    #     print(f"Latitude: {park['location']['latitude']}, Longitude: {park['location']['longitude']}")
+
+    visited_locations = [(park['location']['latitude'], park['location']['longitude']) for park in visited_parks]
+    # print(visited_locations)
+    return visited_locations
+
+# magic(40.74218481889335, -73.98786664009094)
+
+# Latitue: 40
+# Longitude: -74
