@@ -10,10 +10,9 @@ import RouteInputs from "./components/latlondis";
 function App() {
 
   const [inputValues, setInputValues] = useState({
-    startLatitude: -73.98786664009094,
-    startLongitude: 40.74218481889335,
-    endLatitude: 0,
-    endLongitude: 0,
+    "latitude": 40.74218481889335,
+    "longitude": -73.98786664009094,
+    waypoints: [],
   });
 
   return (
