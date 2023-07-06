@@ -20,6 +20,12 @@ for zone in alldata["data"]:
         taxi_zone_number.append(zone[-2])
         taxi_zone_multipolygon.append(zone[-5])
 
+#Combine taxi zone name and number into a dictionary and write to a file
+taxi_data = dict(zip(taxi_zone_name, taxi_zone_number))
+with open('src/components/taxizones.json', 'w') as f:
+    f.write(json.dumps(taxi_data))
+print(taxi_data)
+
 # #Check Number of Taxi Zones
 count = 0        
 for i in range(len(taxi_zone_number)):     
