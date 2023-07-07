@@ -139,3 +139,6 @@ bower_components
 psd
 thumb
 sketch
+
+#Pickle
+/pickle_files
