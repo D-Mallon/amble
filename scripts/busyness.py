@@ -103,6 +103,10 @@ for k,v in taxi_data.items(): #k is name of the taxi zone and v is the taxi zone
     except IOError:
         print('File not found')
 
+#Write the busyness file to the pickle directory
+with open(os.path.join(pickle_dir, 'busyness_file'), 'w') as f:
+    f.write(json.dumps(taxi_zones_busyness))
+
 # #Get Taxi Zone ID
 # zone = file_name.rstrip('.pkl')
 # zone = int(zone.lstrip('scripts\zone_'))
