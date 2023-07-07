@@ -21,7 +21,7 @@ for zone in alldata["data"]:
         taxi_zone_multipolygon.append(zone[-5])
 
 #Combine taxi zone name and number into a dictionary and write to a file
-taxi_data = dict(zip(taxi_zone_name, taxi_zone_number))
+taxi_data = dict(zip(taxi_zone_number,taxi_zone_name))
 with open('src/components/taxizones.json', 'w') as f:
     f.write(json.dumps(taxi_data))
 print(taxi_data)

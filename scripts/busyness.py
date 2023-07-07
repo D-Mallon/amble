@@ -1,10 +1,9 @@
 import pickle
 import json
 import os
-# import sklearn
-# import numpy as np
-# import pandas as pd
 import datetime
+import numpy as np
+import pandas as pd
 
 import warnings # Stops warning from appearing
 warnings.filterwarnings('ignore')
@@ -13,20 +12,31 @@ warnings.filterwarnings('ignore')
 pickle_dir = r"C:\Users\corma\COMP47360\ucdSummerProject\src\pickle_files" # pickle files directory
 taxipath = r"C:\Users\corma\COMP47360\ucdSummerProject\src\components" #taxi zone data (name and number)
 
-#Open the taxi zone data file and create variable for taxi zone number
+#Open the taxi zone data file 
 with (open(os.path.join(taxipath, 'taxizones.json'), "rb")) as f:
     taxi_data = json.load(f)
-taxi_zone_number = 0 #This is a dummy variable.  Will be updated later
+
+#Get rid of unwanted taxi zones
+del taxi_data["103"]
+del taxi_data["153"]
+del taxi_data["194"]
+
+num_zones = len(taxi_data) # Number of taxi zones remaining
+
+#Create features starting with taxi dummy variables
+
+#taxi_zone_number = 0 #This is a dummy variable.  Will be updated later
 
 #Determine what day and month to get the busyness scores for
-day = 7 # day in the month - User Input
-month = 7 # month January = 1, December = 12 - User Input
-year = 2023
+year = 2023 #User Input
+month = 2 #User Input - month January = 1, December = 12
+day = 1 #User Input - day in the month
+hour = 23 #Initially set to 23 but will be updated later
 
 #Create Date and Time variables for use in the Pickle File
-xdate = datetime.datetime(year, month, day) #Produces datetime object
+xdate = datetime.datetime(year, month, day, hour) #Produces datetime object
 dow = xdate.weekday() #Produces Day of the Week
-timestamp = datetime.datetime.timestamp(xdate) #Produces Timestamp Object will be updated with hour data later
+timestamp = datetime.datetime.timestamp(xdate) #Produces Timestamp Object.  Will be updated with hour data later
 
 #Function to Update the day variables that comes from User Input
 def getDay(x,dow): # In this case, day of the week (dow) = 4 (Friday)
@@ -43,8 +53,7 @@ thursday = getDay(3,dow)
 friday = getDay(4,dow)
 saturday = getDay(5,dow)
 sunday = getDay(6,dow)
-
-hour = 0 #Default value
+day_of_week_features = [friday, monday, saturday, sunday, thursday, tuesday, wednesday,]
 
 #Set up weather variables - will need to come from api calls but dummy at the moment
 temperature = 46
@@ -52,22 +61,23 @@ humidity = 44
 wind_speed = 10
 precipitation = 0
 
-#Set up the Input values for the model.
-X = [taxi_zone_number,
-    hour,
-    temperature,
-    humidity,
-    wind_speed,
-    precipitation,
-    timestamp,
-    friday,
-    monday,
-    saturday,
-    sunday,
-    thursday,
-    tuesday,
-    wednesday,
-    ]
+# temperature = 0
+# humidity = 10
+# wind_speed = 50
+# precipitation = 50
+
+weather_features = [temperature, humidity, wind_speed, precipitation]
+
+# Function for Setting up the Input values for the model.
+def createX():
+    features = []
+    for i in taxi_data.keys():
+        features.append(i)
+    features.append(hour)
+    features.extend(weather_features)
+    features.append(timestamp)
+    features.extend(day_of_week_features)
+    return features
 
 #Open the Pickle File
 pickle_file = "2017_model.pkl"
@@ -76,36 +86,95 @@ busy_model = pickle.load(open(os.path.join(pickle_dir, pickle_file), 'rb'))
 #Create a dictionary to add busyness scores (for 1 day) for all zones
 taxi_zones_busyness = {} 
 
-#For each taxi zone
-for k,v in taxi_data.items(): #k is name of the taxi zone and v is the taxi zone number
+# df = pd.DataFrame(columns=['T1','T2','T3',4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,
+#                            26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,
+#                            51,52,53,54,55,56,57,58,59,60,61,'T62','T63','T64','Hour','Temp','Hum','Wind','Precip','Timestamp','Fri','Mon','Sat','Sun','Thur','Tues','Wed'])
+
+df = pd.DataFrame(columns=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,
+                           26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,
+                           51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77])
+# df.columns = df.columns.astype(str)
+
+#For each taxi zone and for each hour create inputs in a dataframe
+for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zone name
     try:
+        features = createX() # Create the X features for the model
+     
+        #Update the inputs for each of the taxi zone dummy variables
+        for i in range(num_zones):
+            if features[i] == k: #If the taxi zone number matches k, then replace k with 1
+                features[i] = 1
+            else:
+                features[i] = 0 #If the taxi zone number does not match k, then replace that number with 0
         
-        busy_score_list = [] # List for busyness score for each hour
-        X[0] = v # insert taxi zone number
-        
-        # Calculate busyness scores for each hour
+        # Create set of inputs for each hour in a dataframe
         for i in range(24): 
-            X[1] = i #Update the hour
+            features[num_zones] = i #Update the hour
 
-            a = datetime(year, month, day, i) #Update the timestamp
-            X[6] = datetime.timestamp(a) #Update the timestamp
-
-            result = busy_model.predict([X]) # Make the prediction for that hour
-            print(f'Timestamp = {X[6]} , Hour = {X[1]} , for taxi zone {v} Busyness Score = {result}')
-            busy_score_list.append(result) # Add that prediction to the list
-
-        #Add the busyness score list for that zone
-        taxi_zones_busyness[v] = busy_score_list
-        print(taxi_zones_busyness)
+            a = datetime.datetime(year, month, day, i) #Update the timestamp
+            features[num_zones+5] = datetime.datetime.timestamp(a) #Update the timestamp
+            
+            #Create a dataframe
+            df.loc[len(df)] = features
 
     except EnvironmentError:
         print('Failed to open file')
     except IOError:
         print('File not found')
 
-#Write the busyness file to the pickle directory
-with open(os.path.join(pickle_dir, 'busyness_file'), 'w') as f:
-    f.write(json.dumps(taxi_zones_busyness))
+# print(df.head())
+# print(df.tail())
+# print(df.info())
+
+busyness = busy_model.predict(df)
+df['Busyness'] = busyness
+
+print(df[[1,2,3,62,63,64,65,70,'Busyness']].head(60))
+print(df[[1,2,3,62,63,64,65,70,'Busyness']].tail(60))
+
+
+
+#     #print(X)  #Prints all the input features
+
+        #     result = busy_model.predict(X_predict) # Make the prediction for that hour
+        #     #print(f'Timestamp = {X[num_zones+5]} , Hour = {X[num_zones]} , for taxi zone {k} Busyness Score = {result}')
+        #     busy_score_list.append(result) # Add that prediction to the list
+
+        # print(busy_score_list)
+        # #Add the busyness score list for that zone
+        # taxi_zones_busyness[k] = busy_score_list
+        # #print(taxi_zones_busyness)
+
+
+
+
+# #Write the busyness file to the pickle directory
+# with open(os.path.join(pickle_dir, 'busyness_file'), 'w') as f:
+#     f.write(json.dumps(taxi_zones_busyness))
+
+  # # Convert the list to a NumPy array
+            # X_array = np.array(X)  
+            # X_reshaped = X_array.reshape(1, -1)
+            # #print(X_reshaped)  #Prints all the input features
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # #Get Taxi Zone ID
 # zone = file_name.rstrip('.pkl')

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import "./latlondis.css";
 
 const RouteInputs = () => {
   const [formData, setFormData] = useState({
@@ -38,9 +39,11 @@ const RouteInputs = () => {
   };
 
   return (
+    <div className="latlondis-area">
+      <h3>Route Planner Inputs</h3>
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="latitude">Latitude:</label>
+        <label htmlFor="latitude">Starting Latitude:</label>
         <input
           type="text"
           name="latitude"
@@ -49,7 +52,7 @@ const RouteInputs = () => {
         />
       </div>
       <div>
-        <label htmlFor="longitude">Longitude:</label>
+        <label htmlFor="longitude">Starting Longitude:</label>
         <input
           type="text"
           name="longitude"
@@ -58,7 +61,7 @@ const RouteInputs = () => {
         />
       </div>
       <div>
-        <label htmlFor="distance">Distance:</label>
+        <label htmlFor="distance">Distance to walk:</label>
         <input
         type="text"
           name="distance"
@@ -66,8 +69,9 @@ const RouteInputs = () => {
           onChange={handleChange}
         ></input>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" className='submit-button'>Submit</button>
     </form>
+    </div>
   );
 };
 
