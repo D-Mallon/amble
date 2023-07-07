@@ -7,7 +7,6 @@ import numpy as np
 import pandas as pd
 
 import pytz
-#from pytz import timezone # Creates timezone US/Eastern
 nyc = pytz.timezone("America/New_York")
 now= datetime.now(nyc)
 time_date = datetime.timestamp(now)
@@ -26,15 +25,13 @@ with (open(os.path.join(taxipath, 'taxizones.json'), "rb")) as f:
     taxi_data = json.load(f)
  
 #Determine what date and month to get the busyness scores
- # Initially just take todays date but will need to input future dates
-
 day = 6 # day in the month - User Input
 month = 7 #month January = 1, December = 12 - User Input
 year = 2023
 
 #Set up Time and Date variables - will need to come from User
-hour = 4
-timestamp = time_date #based on Year, Month, day, hour
+hour = 0
+timestamp = 0 #based on Year, Month, day, hour
 friday = 0
 monday = 0
 saturday = 0
@@ -154,9 +151,9 @@ for k,v in taxi_data.items():
         busy_score_list = []
 
         for i in range(24): # Calculate busyness scores for each hour for each model
-            X[0] = i
+            X[0] = i #hour
             a = datetime(year, month, day, i)
-            X[5] = datetime.timestamp(a)
+            X[5] = datetime.timestamp(a) #timestamp
             result = busy_model.predict([X])
             print(f'Timestamp = {X[5]} , Hour = {X[0]} , Busyness Score = {result}')
             busy_score_list.append(result)
