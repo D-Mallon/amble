@@ -42,7 +42,7 @@
 }
 
 body {
-  background: url(/static/newyork.jpg) no-repeat center fixed;
+  background: url(/static/images/newyork.jpg) no-repeat center fixed;
   background-size: cover;
   margin: 0;
   padding: 0;
