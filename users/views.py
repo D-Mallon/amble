@@ -28,11 +28,11 @@ def user_view(request):
 def user_route(request):
     if request.method == 'GET':
             userroute = UserRoute.objects.all()
-            serializer = UserRouteSerializer(user, many=True)
+            serializer = UserRouteSerializer(userroute, many=True)
             return Response(serializer.data)
 
     elif request.method == 'POST':
-        data = User.objects.all()
+        data = UserRoute.objects.all()
         serializer = UserRouteSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -40,4 +40,3 @@ def user_route(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     return HttpResponseBadRequest('Unsupported request method.')
-

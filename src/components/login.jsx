@@ -43,6 +43,7 @@ const Login = () => {
     <form onSubmit={handleSubmit}>
         
             <div>
+              <h3>Registration Form</h3>
             <label htmlFor="first_name">First Name:</label>
             <input
                 type="text"

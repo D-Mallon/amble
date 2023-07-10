@@ -1,17 +1,11 @@
 from django.contrib import admin
-from django.urls import path, re_path, include
-from users import views
+from django.urls import path
+from .views import user_view, user_route
 
 urlpatterns = [
+path('users', user_route, name ='user_route'), 
+path('users', user_view, name ='user_view'),
     
-    path('users', views.user_route),
-    path('users', views.user_view),
-    
-    # re_path(r'^users/$', views.user_view),
-    # re_path(r'^api/users/(?P<pk>[0-9]+)$', views.user_view),
-    # path('users', views.handle_routeinpput_data),
-    # re_path(r'^users/$', views.handle_routeinpput_data),
-    # re_path(r'^api/users/(?P<pk>[0-9]+)$', views.handle_routeinpput_data),
 ]
 
 

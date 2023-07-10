@@ -23,6 +23,8 @@ amble_distance = float(result[3])
 print(f'Amble distance = {amble_distance}')
 user_latitude = float(result[1])
 user_longitude = float(result[2])
+walk_start_time = float(result[4])
+print(f'Walk Start Time {walk_start_time}')
 
 # Function to calculate the distance between two coordinates using the haversine formula
 def calculate_distance(lat1, lon1, lat2, lon2):

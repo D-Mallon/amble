@@ -6,7 +6,8 @@ const RouteInputs = () => {
   const [formData, setFormData] = useState({
     latitude: '',
     longitude: '',
-    distance: ''
+    distance: '',
+    hour: ''
   });
 
   const handleChange = (e) => {
@@ -18,7 +19,7 @@ const RouteInputs = () => {
 
     axios
       .post('/users', formData, {
-        // Need this header as axios sends dorm data as application/json which is not compatible with django request.POST
+        // Need this header as axios sends Form data as application/json which is not compatible with django request.POST
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
@@ -69,6 +70,16 @@ const RouteInputs = () => {
           onChange={handleChange}
         ></input>
       </div>
+      <div>
+        <label htmlFor="distance">Hour (to start walk):</label>
+        <input
+        type="text"
+          name="hour"
+        //   value={formData.name}
+          onChange={handleChange}
+        ></input>
+      </div>
+
       <button type="submit" className='submit-button'>Submit</button>
     </form>
     </div>

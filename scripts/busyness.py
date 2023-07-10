@@ -22,6 +22,14 @@ del taxi_data["153"]
 del taxi_data["194"]
 
 num_zones = len(taxi_data) # Number of taxi zones remaining
+#taxi = 0 # Not used except to add to features list
+
+
+
+
+
+
+
 
 #Determine what day and month to get the busyness scores for
 year = 2023 #User Input
@@ -73,16 +81,16 @@ def createX():
     features.extend(weather_features)
     features.append(timestamp)
     features.extend(day_of_week_features)
+    #features.append(taxi)
     return features
-
-#Open the Pickle File
-pickle_file = "2017_model.pkl"
-busy_model = pickle.load(open(os.path.join(pickle_dir, pickle_file), 'rb'))
 
 #Create columns in the dataframe
 df = pd.DataFrame(columns=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,
                            26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,
                            51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77])
+
+#df['taxi_zone'] = pd.DataFrame(taxi_data.keys())
+#print(df.head())
 
 #For each taxi zone and for each hour create inputs in a dataframe
 for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zone name
@@ -91,6 +99,7 @@ for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zo
      
         #Update the inputs for each of the taxi zone dummy variables
         for i in range(num_zones):
+            #features[-1] = k
             if features[i] == k: #If the taxi zone number matches k, then replace k with 1
                 features[i] = 1
             else:
@@ -111,23 +120,59 @@ for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zo
     except IOError:
         print('File not found')
 
+# #Rename last column to taxi_zone
+# df = df.rename(columns={78:'taxi_zone'})
+# df2 = df.drop(['taxi_zone'], axis = 1)
+
 #Check what's being input into the model
-print('\nFirst 60 rows of inputs \n ----------------------------------------')
-print(df[[1,2,3,62,63,64,65,66,70]].head(60)) #1,2,3 are 1st 3 taxi zones, 62, 63, 64 are last 3 zones. 
-print('\nLast 60 rows of inputs \n ----------------------------------------') 
-print(df[[1,2,3,62,63,64,65,66,70]].tail(60)) #65 is hour, 66 is temp and 70 is timestamp
+# print('\nFirst 60 rows of inputs \n ----------------------------------------')
+# print(df[[1,2,3,62,63,64,65,66,70,'taxi_zone']].head(60)) #1,2,3 are 1st 3 taxi zones, 62, 63, 64 are last 3 zones. 
+# print('\nLast 60 rows of inputs \n ----------------------------------------') 
+# print(df2[[1,2,3,62,63,64,65,66,70]].tail(60)) #65 is hour, 66 is temp and 70 is timestamp
 
-#Make the predictions
-busyness_predictions = busy_model.predict(df) # Make the predictions
+# #Open the Pickle File
+# pickle_file = "2017_model.pkl"
+# busy_model = pickle.load(open(os.path.join(pickle_dir, pickle_file), 'rb'))
 
-#Add predictions column to df
-df['Pickle Busyness Predicted'] = busyness_predictions
+# #Make the predictions
+# busyness_predictions = busy_model.predict(df) # Make the predictions
 
-#Printout inputs and busyness scores
-print('\nFirst 60 rows of inputs and predictions \n ----------------------------------------')
-print(df[[1,2,3,62,63,64,65,66,70,'Pickle Busyness Predicted']].head(60))
-print('\nLast 60 rows of inputs and predictions \n ----------------------------------------')
-print(df[[1,2,3,62,63,64,65,66,70,'Pickle Busyness Predicted']].tail(60))
+# #Add predictions column to df
+# df['Pickle Busyness Predicted'] = busyness_predictions
+
+# #Print out inputs and busyness scores
+# print('\nFirst 60 rows of inputs and predictions \n ----------------------------------------')
+# print(df[[1,2,3,62,63,64,65,66,70,'Pickle Busyness Predicted']].head(60))
+# print('\nLast 60 rows of inputs and predictions \n ----------------------------------------')
+# print(df[[1,2,3,62,63,64,65,66,70,'Pickle Busyness Predicted']].tail(60))
+
+#df['taxi_zone'] = ''
+
+
+########### Accessing Data from Database ###################################
+import psycopg2 #For getting the fetch method
+
+conn = psycopg2.connect(
+   database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
+) #Establish the connection
+
+conn.autocommit = True #Set auto commit false
+cursor = conn.cursor() #Create a cursor object
+cursor.execute('''SELECT * from users_userroute''') #Retrieve data
+result = cursor.fetchone(); #Fetch 1st row from the table
+#print(result)
+conn.commit() #Commit changes in the database
+conn.close() #Close the connection
+
+walk_start_time = float(result[4])
+print(f'Walk Start Time {walk_start_time}')
+
+
+
+
+
+
+
 
 # #Write the busyness file to the pickle directory
 # with open(os.path.join(pickle_dir, 'busyness_file'), 'w') as f:
