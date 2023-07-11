@@ -9,6 +9,8 @@ from users.views import user_view, user_route
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('users.urls')),
+    # path('', include('users.urls')),
+    # path('', include('users.urls')),
     # path('users/',user_view),
     # path('users/',user_route),
     

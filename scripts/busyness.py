@@ -24,13 +24,6 @@ del taxi_data["194"]
 num_zones = len(taxi_data) # Number of taxi zones remaining
 #taxi = 0 # Not used except to add to features list
 
-
-
-
-
-
-
-
 #Determine what day and month to get the busyness scores for
 year = 2023 #User Input
 month = 2 #User Input - month January = 1, December = 12
@@ -45,9 +38,9 @@ timestamp = datetime.datetime.timestamp(xdate) #Produces Timestamp Object.  Will
 #Function to Update the day variables that comes from User Input
 def getDay(x,dow): # In this case, day of the week (dow) = 4 (Friday)
     if x == dow:
-        return 1
+        return 'True'
     else:
-        return 0
+        return 'False'
 
 #Compare the day of the week (dow) with the number of the day.  If it matches, that day = 1, else = 0 
 monday = getDay(0,dow)
@@ -101,9 +94,9 @@ for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zo
         for i in range(num_zones):
             #features[-1] = k
             if features[i] == k: #If the taxi zone number matches k, then replace k with 1
-                features[i] = 1
+                features[i] = 'True'
             else:
-                features[i] = 0 #If the taxi zone number does not match k, then replace k with 0
+                features[i] = 'False' #If the taxi zone number does not match k, then replace k with 0
         
         # Create set of inputs for each hour in a dataframe
         for i in range(24): 
@@ -125,47 +118,47 @@ for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zo
 # df2 = df.drop(['taxi_zone'], axis = 1)
 
 #Check what's being input into the model
-# print('\nFirst 60 rows of inputs \n ----------------------------------------')
-# print(df[[1,2,3,62,63,64,65,66,70,'taxi_zone']].head(60)) #1,2,3 are 1st 3 taxi zones, 62, 63, 64 are last 3 zones. 
-# print('\nLast 60 rows of inputs \n ----------------------------------------') 
-# print(df2[[1,2,3,62,63,64,65,66,70]].tail(60)) #65 is hour, 66 is temp and 70 is timestamp
+print('\nFirst 60 rows of inputs \n ----------------------------------------')
+print(df[[1,2,3,62,63,64,65,66,70]].head(60)) #1,2,3 are 1st 3 taxi zones, 62, 63, 64 are last 3 zones. 
+print('\nLast 60 rows of inputs \n ----------------------------------------') 
+print(df[[1,2,3,62,63,64,65,66,70]].tail(60)) #65 is hour, 66 is temp and 70 is timestamp
 
-# #Open the Pickle File
-# pickle_file = "2017_model.pkl"
-# busy_model = pickle.load(open(os.path.join(pickle_dir, pickle_file), 'rb'))
+#Open the Pickle File
+pickle_file = "2017_model.pkl"
+busy_model = pickle.load(open(os.path.join(pickle_dir, pickle_file), 'rb'))
 
-# #Make the predictions
-# busyness_predictions = busy_model.predict(df) # Make the predictions
+#Make the predictions
+busyness_predictions = busy_model.predict(df) # Make the predictions
 
-# #Add predictions column to df
-# df['Pickle Busyness Predicted'] = busyness_predictions
+#Add predictions column to df
+df['Pickle Busyness Predicted'] = busyness_predictions
 
-# #Print out inputs and busyness scores
-# print('\nFirst 60 rows of inputs and predictions \n ----------------------------------------')
-# print(df[[1,2,3,62,63,64,65,66,70,'Pickle Busyness Predicted']].head(60))
-# print('\nLast 60 rows of inputs and predictions \n ----------------------------------------')
-# print(df[[1,2,3,62,63,64,65,66,70,'Pickle Busyness Predicted']].tail(60))
+#Print out inputs and busyness scores
+print('\nFirst 60 rows of inputs and predictions \n ----------------------------------------')
+print(df[[1,2,3,62,63,64,65,66,70,'Pickle Busyness Predicted']].head(60))
+print('\nLast 60 rows of inputs and predictions \n ----------------------------------------')
+print(df[[1,2,3,62,63,64,65,66,70,'Pickle Busyness Predicted']].tail(60))
 
 #df['taxi_zone'] = ''
 
 
-########### Accessing Data from Database ###################################
-import psycopg2 #For getting the fetch method
+# ########### Accessing Data from Database ###################################
+# import psycopg2 #For getting the fetch method
 
-conn = psycopg2.connect(
-   database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
-) #Establish the connection
+# conn = psycopg2.connect(
+#    database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
+# ) #Establish the connection
 
-conn.autocommit = True #Set auto commit false
-cursor = conn.cursor() #Create a cursor object
-cursor.execute('''SELECT * from users_userroute''') #Retrieve data
-result = cursor.fetchone(); #Fetch 1st row from the table
-#print(result)
-conn.commit() #Commit changes in the database
-conn.close() #Close the connection
+# conn.autocommit = True #Set auto commit false
+# cursor = conn.cursor() #Create a cursor object
+# cursor.execute('''SELECT * from users_userroute''') #Retrieve data
+# result = cursor.fetchone(); #Fetch 1st row from the table
+# #print(result)
+# conn.commit() #Commit changes in the database
+# conn.close() #Close the connection
 
-walk_start_time = float(result[4])
-print(f'Walk Start Time {walk_start_time}')
+# walk_start_time = float(result[4])
+# print(f'Walk Start Time {walk_start_time}')
 
 
 
