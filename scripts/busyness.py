@@ -50,11 +50,18 @@ columns_names = ['Hour', 'Temperature', 'Humidity', 'Wind Speed', 'Precipitation
 #Create an empty dataframe
 df = pd.DataFrame(columns=columns_names)
 
-#Function to calculate timestamp and day of the week from inputs
+#Function to calculate timestamp and day of the week from inputs - set to todays date in NYC
 def create_ts(hour): 
-    year = 2023 #User Input
-    month = 7 #User Input - month January = 1, December = 12
-    day = 11 #User Input - day in the month
+    import pytz #Allows you to get time in different time
+    nyc_zone = pytz.timezone("America/New_York") 
+    nyc_time = datetime.datetime.now(nyc_zone)
+    year = nyc_time.year
+    month = nyc_time.month
+    day = nyc_time.day
+
+    # year = 2023 #User Input
+    # month = 7 #User Input - month January = 1, December = 12
+    # day = 11 #User Input - day in the month
 
     #Create Date and Time variables for use in the Pickle File
     xdate = datetime.datetime(year, month, day, hour) #Produces datetime object
