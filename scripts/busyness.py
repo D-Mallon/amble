@@ -136,13 +136,11 @@ busyness_predictions = busy_model.predict(df) # Make the predictions
 
 #Add predictions column to df
 df['Busyness Predicted'] = busyness_predictions
-# print(df[['Busyness Predicted','Hour', 'Temperature','TImestamp','Day_Tuesday','PULocationID_4','PULocationID_24','PULocationID_107']].head(60))
 
 #Drop Certain Columns
 df.drop(['Temperature', 'Humidity', 'Wind Speed', 'Precipitation',
         'Day_Friday', 'Day_Monday', 'Day_Saturday',
        'Day_Sunday', 'Day_Thursday', 'Day_Tuesday', 'Day_Wednesday'], axis=1, inplace = True)
-# df.drop(df.columns[[0]],axis=1, inplace=True)
 
 #Create a list of all the taxi zones (in order)
 names = []
@@ -157,13 +155,13 @@ for name in names:
     for i in range(24):
         tzones.append(name)
 
-#Create a new dataframe with this list
+#Create a new dataframe with this list of taxi ids for every hour
 df_taxi = pd.DataFrame(tzones,columns=["Taxi Zone ID"])
 
 #Merge taxi id's with rest of dataframe
 df = pd.concat([df, df_taxi], axis=1, join='inner')
 
-#Get rid of unwanted columns
+#Get rid of unwanted columns - essentially taxi zone dummy variable columns
 df.drop(['PULocationID_100', 'PULocationID_107',
        'PULocationID_113', 'PULocationID_114', 'PULocationID_116',
        'PULocationID_12', 'PULocationID_120', 'PULocationID_125',
@@ -188,4 +186,8 @@ df.drop(['PULocationID_100', 'PULocationID_107',
        'PULocationID_88', 'PULocationID_90'] ,axis=1, inplace = True)
 
 #Should be left with column for hour, busyness score, timestamp and taxi zone id
-print(df.head(30))
+# print(df.head(30))
+
+#Send dataframe as a json file
+df.to_json(r"C:\Users\corma\COMP47360\ucdSummerProject\src\components\busyness.json")
+
