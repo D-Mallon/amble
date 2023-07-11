@@ -1,5 +1,5 @@
 ### Amble Slogan ###
-Amble - The Peaceful Way
+amble - the peaceful way
 
 ### Baseline Sentence ###
 Sentance: The purpose of our application is to generate walking routes for users to guide them though the quiet corners of Manhattan. The route generating algorthm takes forecast conditions into our machine learning model to determine busyiness based on taxizone, citibike and subway data and pair this infomation with crimes statistics for areas of Manhattan to ensure users can enjoy a quiet, peaceful and safe journey!

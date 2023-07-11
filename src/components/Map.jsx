@@ -7,7 +7,12 @@ import { Start } from '@mui/icons-material';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZmluYmFyYWxsYW4iLCJhIjoiY2xqY3NtYWN6MjV0ODNqcXhhaTY4aGQxdSJ9.VeVQzxCCtpyP_MeT1CkjOg';
 
+import Sidebar from './mapSidebar';
+
 const Map = ({ inputValues }) => {
+  const [buttonPressed, setButtonPressed] = useState(false);
+  const [location, setLocation] = useState({ lat: null, lng: null, address: '' });
+
   // variables used to initialise the maps
   const mapContainer = useRef(null);
   const map = useRef(null);
@@ -198,12 +203,37 @@ const Map = ({ inputValues }) => {
     });
   });
 
+  useEffect(() => {
+    if (map.current) {
+      map.current.on('click', (e) => {
+        if (buttonPressed) {
+          setButtonPressed(false);
+          fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${e.lngLat.lng},${e.lngLat.lat}.json?access_token=${mapboxgl.accessToken}`)
+            .then(response => response.json())
+            .then(data => {
+              const address = data.features[0]?.place_name || 'Unknown location';
+              setLocation({
+                lat: e.lngLat.lat,
+                lng: e.lngLat.lng,
+                address: address
+              });
+            })
+            .catch(error => console.error('Error:', error));
+  
+          console.log('Selected location:', e.lngLat.lat, e.lngLat.lng);
+        }
+      });
+    }
+  }, [map.current, buttonPressed]); // Adding map.current to dependency array
+
   return (
     <div>
       <button type="submit" onClick={() => { displayRoute(inputValues) }}>Go!</button>
-      <div className="sidebar">
-        Longitude: {lng} | Latitude NEW: {lat} | Zoom: {zoom}
-      </div>
+        <button onClick={() => setButtonPressed(!buttonPressed)}>
+          {buttonPressed ? 'Selecting location...' : 'Select location'}
+        </button>
+        <span>{location.address}</span>
+        <Sidebar lng={lng} lat={lat} zoom={zoom} />
       <div ref={mapContainer} className="map-container" />
     </div>
   );
