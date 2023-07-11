@@ -62,7 +62,18 @@ all_zones = []
 for i in range(count):
     all_zones.append(get_zone_poly(i))
 
-########################### Build Parks JSON File ####################
+#################### Get Busyness Scores ##################################
+# Load busyness data from JSON file
+with open("src/components/busyness.json") as json_file:
+    all_busyness_data = json.load(json_file)
+
+
+
+
+
+
+
+#################### Build Parks JSON File ###############################
 # Define the Overpass API query
 overpass_query = """
 [out:json];
