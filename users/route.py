@@ -1,15 +1,17 @@
 import json
 import requests
+import axios
 
 import random
 from math import radians, sin, cos, sqrt, atan2
 
-########### Accessing Data from Database ###################################
-import psycopg2 #For getting the fetch method
+########### Accessing Data from Database (using fetch) ###################################
+import psycopg2 
 
+#Make a connection
 conn = psycopg2.connect(
    database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
-) #Establish the connection
+) 
 
 conn.autocommit = True #Set auto commit false
 cursor = conn.cursor() #Create a cursor object
@@ -18,6 +20,13 @@ result = cursor.fetchone(); #Fetch 1st row from the table
 print(result)
 conn.commit() #Commit changes in the database
 conn.close() #Close the connection
+
+
+
+
+
+
+
 
 amble_distance = float(result[3])
 print(f'Amble distance = {amble_distance}')
