@@ -5,7 +5,9 @@ import './Map.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { Start } from '@mui/icons-material';
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZmluYmFyYWxsYW4iLCJhIjoiY2xqY3NtYWN6MjV0ODNqcXhhaTY4aGQxdSJ9.VeVQzxCCtpyP_MeT1CkjOg';
+const apiKey = import.meta.env.VITE_MAPBOX_API_KEY
+mapboxgl.accessToken = apiKey;
+// mapboxgl.accessToken = 'pk.eyJ1IjoiZmluYmFyYWxsYW4iLCJhIjoiY2xqY3NtYWN6MjV0ODNqcXhhaTY4aGQxdSJ9.VeVQzxCCtpyP_MeT1CkjOg';
 
 import Sidebar from './mapSidebar';
 
