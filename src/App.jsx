@@ -7,6 +7,11 @@ import Login from "./components/login";
 import Comms from "./components/Comms.jsx";
 import RouteInputs from "./components/latlondis";
 
+// If a route can not be displayed this function is invoked from Route path
+function MatchAllRoute() {
+  return <h2>The requested page does not exist</h2>;
+}
+
 function App() {
 
   const [inputValues, setInputValues] = useState({
@@ -30,8 +35,4 @@ function App() {
   );
 }
 
-// If a route can not be displayed this function is invoked from Route path
-function MatchAllRoute() {
-  return <h2>The requested page does not exist</h2>;
-}
 export default App;

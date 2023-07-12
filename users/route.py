@@ -1,15 +1,17 @@
 import json
 import requests
+import axios
 
 import random
 from math import radians, sin, cos, sqrt, atan2
 
-########### Accessing Data from Database ###################################
-import psycopg2 #For getting the fetch method
+########### Accessing Data from Database (using fetch) ###################################
+import psycopg2 
 
+#Make a connection
 conn = psycopg2.connect(
    database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
-) #Establish the connection
+) 
 
 conn.autocommit = True #Set auto commit false
 cursor = conn.cursor() #Create a cursor object
@@ -19,10 +21,19 @@ print(result)
 conn.commit() #Commit changes in the database
 conn.close() #Close the connection
 
+
+
+
+
+
+
+
 amble_distance = float(result[3])
 print(f'Amble distance = {amble_distance}')
 user_latitude = float(result[1])
 user_longitude = float(result[2])
+walk_start_time = float(result[4])
+print(f'Walk Start Time {walk_start_time}')
 
 # Function to calculate the distance between two coordinates using the haversine formula
 def calculate_distance(lat1, lon1, lat2, lon2):
@@ -113,11 +124,13 @@ while amble_distance > 0:
     park_name = selected_park["name"]
     park_busi = selected_park["busi"]
     park_poll = selected_park["poll"]
+    park_taxi = selected_park["taxizone"]
     print(f"Visiting Park: {park_name}")
     print(f"Busyness Rating: {park_busi}")
     print(f"Pollution Level: {park_poll}")
     print(f"Remaining Distance: {amble_distance} km")
     print(f"Location: ({park_latitude}, {park_longitude})")
+    print(f"Taxi Zone: {park_taxi}")
     print("-------------------------")
 
     # Update the user's location for the next iteration

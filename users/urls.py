@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, re_path, include
-from users import views
+from . import views
 
 urlpatterns = [
     path('users', views.handle_routeinpput_data),
