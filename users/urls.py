@@ -3,6 +3,7 @@ from django.urls import path, re_path, include
 from users import views
 
 urlpatterns = [
+   
     path('users', views.user_view),
     path('users', views.handle_routeinpput_data),
     
