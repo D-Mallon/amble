@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import "./latlondis.css";
 
 const RouteInputs = () => {
   const [formData, setFormData] = useState({
@@ -38,6 +39,8 @@ const RouteInputs = () => {
   };
 
   return (
+
+    <div className="latlondis-area">
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="latitude">Latitude:</label>
@@ -66,8 +69,9 @@ const RouteInputs = () => {
           onChange={handleChange}
         ></input>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" className='submit-button'>Submit</button>
     </form>
+    </div>
   );
 };
 
