@@ -63,8 +63,9 @@ all_zones = []
 for i in range(count):
     all_zones.append(get_zone_poly(i))
 
-####### Start time - to get run time #########
-start_time = time.time()
+
+# ####### Start time - to get run time #########
+# start_time = time.time()
 
 #################### Get Busyness Scores ##################################
 # Load busyness data from JSON file
@@ -75,10 +76,12 @@ time_input = datetime.datetime.now()
 hour = time_input.hour
 
 #Function to get Busyness scores from json file
-def getBusy(hour,taxizone):
+def getBusy(taxizone):
+    all_hours = {}
     for d in busy_data:
-        if d["Hour"] == hour and d["Taxi Zone ID"] == taxizone:
-            return(d["Busyness Predicted"])
+        if d["Taxi Zone ID"] == taxizone:
+            all_hours[d["Hour"]] = d["Busyness Predicted"]
+    return(all_hours)
 
 #################### Build Parks JSON File ###############################
 # Define the Overpass API query
@@ -127,7 +130,7 @@ if response.status_code == 200:
             "name": park_name,
             "location": {"latitude": latitude, "longitude": longitude},
             "taxizone": taxizone,
-            "busi":   getBusy(hour,taxizone),
+            "busi":   getBusy(taxizone),
         })
 
     min_lat = 40.6
@@ -170,8 +173,8 @@ if response.status_code == 200:
 else:
     print("Error: Failed to fetch park data.")
 
-####### End time - to get run time #########
-end_time = time.time()
-run_time = round((end_time - start_time),1)
+# ####### End time - to get run time #########
+# end_time = time.time()
+# run_time = round((end_time - start_time),1)
 
-print(f'Run time to populate busyness scores for a particular hour = {run_time} seconds')
+# print(f'Run time to populate busyness scores for all 24 hours = {run_time} seconds')
