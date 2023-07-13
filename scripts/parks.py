@@ -168,7 +168,7 @@ if response.status_code == 200:
     # Export the dictionary as a JSON file
     with open("src/components/parks.json", "w") as outfile:
         json.dump(json_data , outfile, indent=4)
-        # print("Exported park data to parks.json")
+        print("Exported park data to parks.json")
 
 else:
     print("Error: Failed to fetch park data.")
@@ -176,5 +176,4 @@ else:
 # ####### End time - to get run time #########
 # end_time = time.time()
 # run_time = round((end_time - start_time),1)
-
 # print(f'Run time to populate busyness scores for all 24 hours = {run_time} seconds')
