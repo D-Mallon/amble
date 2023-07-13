@@ -86,8 +86,8 @@ overpass_query = """
 [out:json];
 area[name="Manhattan"]->.searchArea;
 (
-  way(area.searchArea)["leisure"="park"];
-  relation(area.searchArea)["leisure"="park"];
+way(area.searchArea)["leisure"="park"];
+relation(area.searchArea)["leisure"="park"];
 );
 out center;
 """
@@ -135,19 +135,19 @@ if response.status_code == 200:
     min_lon = -74.1
     max_lon = -73.9
     parks_to_remove = [95163097, 
-                       468946468, 
-                       48686595, 
-                       33819583, 
-                       129002500, 
-                       608663280, 
-                       39015952, 
-                       367859701, 
-                       25428484, 
-                       222233979, 
-                       367660740,
-                       56469108,
-                       2389631,
-                       9791559]
+                    468946468, 
+                    48686595, 
+                    33819583, 
+                    129002500, 
+                    608663280, 
+                    39015952, 
+                    367859701, 
+                    25428484, 
+                    222233979, 
+                    367660740,
+                    56469108,
+                    2389631,
+                    9791559]
 
     filtered_data = []
     
@@ -165,7 +165,7 @@ if response.status_code == 200:
     # Export the dictionary as a JSON file
     with open("src/components/parks.json", "w") as outfile:
         json.dump(json_data , outfile, indent=4)
-        print("Exported park data to parks.json")
+        # print("Exported park data to parks.json")
 
 else:
     print("Error: Failed to fetch park data.")
