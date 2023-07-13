@@ -67,12 +67,6 @@ for i in range(count):
 with open("src/components/busyness.json") as json_file:
     all_busyness_data = json.load(json_file)
 
-
-
-
-
-
-
 #################### Build Parks JSON File ###############################
 # Define the Overpass API query
 overpass_query = """
