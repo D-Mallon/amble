@@ -2,6 +2,22 @@ import json
 import random
 from math import radians, sin, cos, sqrt, atan2
 
+# ########### Accessing Data from Database (using fetch) ###################################
+# import psycopg2 
+
+# #Make a connection
+# conn = psycopg2.connect(
+#    database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
+# ) 
+
+# conn.autocommit = True #Set auto commit false
+# cursor = conn.cursor() #Create a cursor object
+# cursor.execute('''SELECT * from users_userroute''') #Retrieve data
+# result = cursor.fetchone(); #Fetch 1st row from the table
+# print(result)
+# conn.commit() #Commit changes in the database
+# conn.close() #Close the connection
+
 # Load park data from JSON file
 with open("src/components/parks.json") as json_file:
     data = json.load(json_file)
@@ -32,8 +48,11 @@ def calculate_distance(lat1, lon1, lat2, lon2):
 
     distance = R * c
     return distance
+    
 
-def magic(user_latitude, user_longitude):
+def magic(user_latitude, user_longitude, distance, hour):
+
+    
     
     print(f"Starting location: ({user_latitude}, {user_longitude})")
     print("-----------------------------------------")
