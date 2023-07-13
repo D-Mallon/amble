@@ -2,6 +2,7 @@ import requests
 import random
 import json
 import datetime
+import time
 
 ################# Getting Taxi Zone Location ##########################
 from shapely.geometry import Point, Polygon
@@ -61,6 +62,9 @@ def get_zone_poly(num):
 all_zones = []
 for i in range(count):
     all_zones.append(get_zone_poly(i))
+
+####### Start time - to get run time #########
+start_time = time.time()
 
 #################### Get Busyness Scores ##################################
 # Load busyness data from JSON file
@@ -165,3 +169,9 @@ if response.status_code == 200:
 
 else:
     print("Error: Failed to fetch park data.")
+
+####### End time - to get run time #########
+end_time = time.time()
+run_time = round((end_time - start_time),1)
+
+print(f'Run time to populate busyness scores for a particular hour = {run_time} seconds')

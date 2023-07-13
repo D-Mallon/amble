@@ -7,6 +7,7 @@ import pandas as pd
 import requests
 from dotenv import load_dotenv #To allow secret key for Weather API
 import os
+import time # To measue run time
 
 import warnings # Stops warning from appearing
 warnings.filterwarnings('ignore')
@@ -79,9 +80,11 @@ def getDay(x,dow): # In this case, day of the week (dow) = 4 (Friday)
     else:
         return False
 
-#Get weather data
-load_dotenv()
+####### Start time - to get run time #########
+start_time = time.time()
 
+#Get weather data
+load_dotenv() #allows secret Weather API key
 api_key = os.environ.get("WEATHER_API_KEY") #Key for Weather API
 url = f'http://api.weatherapi.com/v1/forecast.json?key={api_key}&q=New York City&days=1&aqi=no&alerts=no'
 response = requests.get(url)
@@ -196,11 +199,16 @@ df.drop(['PULocationID_100', 'PULocationID_107',
        'PULocationID_75', 'PULocationID_79', 'PULocationID_87',
        'PULocationID_88', 'PULocationID_90'] ,axis=1, inplace = True)
 
-#Should be left with column for hour, busyness score, timestamp and taxi zone id
-print(df.head(30))
-print(f'Day of the Week and Timestamp = {create_ts(0)}')
-
 #Send dataframe as a json file
 df.reset_index(drop=True, inplace=True) #This excludes the index
 df.to_json(r"C:\Users\corma\COMP47360\ucdSummerProject\src\components\busyness.json", orient='records')
 
+####### End time - to get run time #########
+end_time = time.time()
+run_time = round((end_time - start_time),1)
+
+print(f'Run time to produce busyness scores for 1 day = {run_time} seconds')
+
+# #Should be left with column for hour, busyness score, timestamp and taxi zone id
+# print(df.head(30))
+# print(f'Day of the Week and Timestamp = {create_ts(0)}')
