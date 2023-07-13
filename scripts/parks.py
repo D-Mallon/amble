@@ -1,7 +1,6 @@
 import requests
 import random
 import json
-import datetime
 
 ################# Getting Taxi Zone Location ##########################
 from shapely.geometry import Point, Polygon
@@ -25,6 +24,7 @@ for zone in alldata["data"]:
 taxi_data = dict(zip(taxi_zone_number,taxi_zone_name))
 with open('src/components/taxizones.json', 'w') as f:
     f.write(json.dumps(taxi_data))
+print(taxi_data)
 
 # #Check Number of Taxi Zones
 count = 0        
@@ -65,16 +65,7 @@ for i in range(count):
 #################### Get Busyness Scores ##################################
 # Load busyness data from JSON file
 with open("src/components/busyness.json") as json_file:
-    busy_data = json.load(json_file)
-
-time_input = datetime.datetime.now()
-hour = time_input.hour
-
-#Function to get Busyness scores from json file
-def getBusy(hour,taxizone):
-    for d in busy_data:
-        if d["Hour"] == hour and d["Taxi Zone ID"] == taxizone:
-            return(d["Busyness Predicted"])
+    all_busyness_data = json.load(json_file)
 
 #################### Build Parks JSON File ###############################
 # Define the Overpass API query
@@ -123,7 +114,8 @@ if response.status_code == 200:
             "name": park_name,
             "location": {"latitude": latitude, "longitude": longitude},
             "taxizone": taxizone,
-            "busi":   getBusy(hour,taxizone),
+            "busi": random.randint(0, 100) / 100,
+            "poll": random.randint(0, 100) / 100,
         })
 
     min_lat = 40.6
