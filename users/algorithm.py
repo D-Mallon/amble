@@ -50,7 +50,7 @@ def calculate_distance(lat1, lon1, lat2, lon2):
     return distance
     
 
-def magic(user_latitude, user_longitude, distance, hour):
+def magic(user_latitude, user_longitude):
 
     
     
