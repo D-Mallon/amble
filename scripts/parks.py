@@ -80,7 +80,7 @@ def getBusy(taxizone):
     all_hours = {}
     for d in busy_data:
         if d["Taxi Zone ID"] == taxizone:
-            all_hours[d["Hour"]] = d["Busyness Predicted"]
+            all_hours[d["Hour"]] = round(d["Busyness Predicted"],0)
     return(all_hours)
 
 #################### Build Parks JSON File ###############################
