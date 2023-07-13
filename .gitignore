@@ -96,7 +96,7 @@ profile_default/
 ipython_config.py
 
 # Environments
-# .env
+.env
 # .venv
 # env/
 # venv/
@@ -150,4 +150,4 @@ backend/__pycache__/urls.cpython-39.pyc
 /backend/__pycache__/urls.cpython-39.pyc
 
 #Pickle
-src/pickle_files
+src/Pickle Files
