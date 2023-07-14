@@ -50,10 +50,8 @@ def calculate_distance(lat1, lon1, lat2, lon2):
     return distance
     
 
-def magic(user_latitude, user_longitude, distance, hour):
+def magic(user_latitude, user_longitude, hour):
 
-    
-    
     print(f"Starting location: ({user_latitude}, {user_longitude})")
     print("-----------------------------------------")
 
@@ -81,8 +79,9 @@ def magic(user_latitude, user_longitude, distance, hour):
         sorted_indices = sorted(range(len(closest_distances)), key=lambda k: closest_distances[k])
         closest_parks = [closest_parks[i] for i in sorted_indices[:7]]
 
-        # Select the park with the lowest combination of "busi" and "poll" values
-        selected_park = min(closest_parks, key=lambda park: park["busi"] + park["poll"])
+        # Select the park with the lowest combination of "busi" values
+        selected_park = min(closest_parks, key=lambda park: park["busi"][hour])
+        print(selected_park["busi"][hour])
 
         # Calculate distance to the selected park
         park_latitude = selected_park["location"]["latitude"]
@@ -99,11 +98,9 @@ def magic(user_latitude, user_longitude, distance, hour):
 
         # Print information about the current journey
         park_name = selected_park["name"]
-        park_busi = selected_park["busi"]
-        park_poll = selected_park["poll"]
+        park_busi = selected_park["busi"][hour]
         # print(f"Visiting Park: {park_name}")
         # print(f"Busyness Rating: {park_busi}")
-        # print(f"Pollution Level: {park_poll}")
         # print(f"Remaining Distance: {predefined_distance} km")
         # print(f"Location: ({park_latitude}, {park_longitude})")
         # print("-------------------------")

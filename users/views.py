@@ -29,5 +29,6 @@ def handle_routeinpput_data(request):
     if request.method == 'POST':
         latitude = request.POST.get("latitude")
         longitude = request.POST.get("longitude")
-        response_data = {"waypoints": magic(float(latitude), float(longitude))}
+        hour = request.POST.get("hour")
+        response_data = {"waypoints": magic(float(latitude), float(longitude), str(hour))}
         return JsonResponse(response_data)
