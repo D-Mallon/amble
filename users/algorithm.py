@@ -82,7 +82,7 @@ def magic(user_latitude, user_longitude, hour):
 
         # Select the park with the lowest combination of "busi" values
         selected_park = min(closest_parks, key=lambda park: park["busi"][hour])
-        print(selected_park["busi"][hour])
+        # print(selected_park["busi"][hour])
 
         # Calculate distance to the selected park
         park_latitude = selected_park["location"]["latitude"]
