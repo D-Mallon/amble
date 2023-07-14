@@ -7,6 +7,7 @@ import pandas as pd
 import requests
 from dotenv import load_dotenv #To allow secret key for Weather API
 import os
+import time # To measue run time
 
 import warnings # Stops warning from appearing
 warnings.filterwarnings('ignore')
@@ -26,29 +27,29 @@ del taxi_data["194"]
 
 #Create column heading for dataframe
 columns_names = ['Hour', 'Temperature', 'Humidity', 'Wind Speed', 'Precipitation',
-       'TImestamp', 'PULocationID_100', 'PULocationID_107', 'PULocationID_113',
-       'PULocationID_114', 'PULocationID_116', 'PULocationID_12',
-       'PULocationID_120', 'PULocationID_125', 'PULocationID_127',
-       'PULocationID_128', 'PULocationID_13', 'PULocationID_137',
-       'PULocationID_140', 'PULocationID_141', 'PULocationID_142',
-       'PULocationID_143', 'PULocationID_144', 'PULocationID_148',
-       'PULocationID_151', 'PULocationID_152', 'PULocationID_158',
-       'PULocationID_161', 'PULocationID_162', 'PULocationID_163',
-       'PULocationID_164', 'PULocationID_166', 'PULocationID_170',
-       'PULocationID_186', 'PULocationID_202', 'PULocationID_209',
-       'PULocationID_211', 'PULocationID_224', 'PULocationID_229',
-       'PULocationID_230', 'PULocationID_231', 'PULocationID_232',
-       'PULocationID_233', 'PULocationID_234', 'PULocationID_236',
-       'PULocationID_237', 'PULocationID_238', 'PULocationID_239',
-       'PULocationID_24', 'PULocationID_243', 'PULocationID_244',
-       'PULocationID_246', 'PULocationID_249', 'PULocationID_261',
-       'PULocationID_262', 'PULocationID_263', 'PULocationID_4',
-       'PULocationID_41', 'PULocationID_42', 'PULocationID_43',
-       'PULocationID_45', 'PULocationID_48', 'PULocationID_50',
-       'PULocationID_68', 'PULocationID_74', 'PULocationID_75',
-       'PULocationID_79', 'PULocationID_87', 'PULocationID_88',
-       'PULocationID_90', 'Day_Friday', 'Day_Monday', 'Day_Saturday',
-       'Day_Sunday', 'Day_Thursday', 'Day_Tuesday', 'Day_Wednesday']
+    'TImestamp', 'PULocationID_100', 'PULocationID_107', 'PULocationID_113',
+    'PULocationID_114', 'PULocationID_116', 'PULocationID_12',
+    'PULocationID_120', 'PULocationID_125', 'PULocationID_127',
+    'PULocationID_128', 'PULocationID_13', 'PULocationID_137',
+    'PULocationID_140', 'PULocationID_141', 'PULocationID_142',
+    'PULocationID_143', 'PULocationID_144', 'PULocationID_148',
+    'PULocationID_151', 'PULocationID_152', 'PULocationID_158',
+    'PULocationID_161', 'PULocationID_162', 'PULocationID_163',
+    'PULocationID_164', 'PULocationID_166', 'PULocationID_170',
+    'PULocationID_186', 'PULocationID_202', 'PULocationID_209',
+    'PULocationID_211', 'PULocationID_224', 'PULocationID_229',
+    'PULocationID_230', 'PULocationID_231', 'PULocationID_232',
+    'PULocationID_233', 'PULocationID_234', 'PULocationID_236',
+    'PULocationID_237', 'PULocationID_238', 'PULocationID_239',
+    'PULocationID_24', 'PULocationID_243', 'PULocationID_244',
+    'PULocationID_246', 'PULocationID_249', 'PULocationID_261',
+    'PULocationID_262', 'PULocationID_263', 'PULocationID_4',
+    'PULocationID_41', 'PULocationID_42', 'PULocationID_43',
+    'PULocationID_45', 'PULocationID_48', 'PULocationID_50',
+    'PULocationID_68', 'PULocationID_74', 'PULocationID_75',
+    'PULocationID_79', 'PULocationID_87', 'PULocationID_88',
+    'PULocationID_90', 'Day_Friday', 'Day_Monday', 'Day_Saturday',
+    'Day_Sunday', 'Day_Thursday', 'Day_Tuesday', 'Day_Wednesday']
 
 #Create an empty dataframe
 df = pd.DataFrame(columns=columns_names)
@@ -61,10 +62,6 @@ def create_ts(hour):
     year = nyc_time.year
     month = nyc_time.month
     day = nyc_time.day
-
-    # year = 2023 #User Input
-    # month = 7 #User Input - month January = 1, December = 12
-    # day = 11 #User Input - day in the month
 
     #Create Date and Time variables for use in the Pickle File
     xdate = datetime.datetime(year, month, day, hour) #Produces datetime object
@@ -85,7 +82,8 @@ load_dotenv()
 api_key = os.environ.get("WEATHER_API_KEY") #Key for Weather API
 url = f'http://api.weatherapi.com/v1/forecast.json?key={api_key}&q=New York City&days=1&aqi=no&alerts=no'
 response = requests.get(url)
-data = response.json()
+weather_data = response.json()
+
 
 #Create Weather Variables
 temp = []
@@ -95,10 +93,10 @@ percip = []
 
 #Weather variables from Weather API
 for i in range(24):
-    temp.append(float(data['forecast']['forecastday'][0]['hour'][i]['temp_f']))
-    hum.append(float(data['forecast']['forecastday'][0]['hour'][i]["humidity"]))
-    wind.append(float(data['forecast']['forecastday'][0]['hour'][i]['wind_mph']))
-    percip.append(float(data['forecast']['forecastday'][0]['hour'][i]["precip_in"]))
+    temp.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]['temp_f']))
+    hum.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]["humidity"]))
+    wind.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]['wind_mph']))
+    percip.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]["precip_in"]))
 
 #Create dataframe for every taxi Zone and for every hour
 for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zone name
@@ -113,7 +111,7 @@ for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zo
                 new_row1.update({column:True}) #Make that entry True
             else:
                 new_row1.update({column:False}) #Else make that entry False
-     
+    
     #Create values for all other variables 
     for i in range(24): #For each hour (in a 24 hour period) add values to a new row
         new_row.update({'Hour':i})
@@ -151,7 +149,7 @@ df['Busyness Predicted'] = busyness_predictions
 #Drop Certain Columns
 df.drop(['Temperature', 'Humidity', 'Wind Speed', 'Precipitation',
         'Day_Friday', 'Day_Monday', 'Day_Saturday',
-       'Day_Sunday', 'Day_Thursday', 'Day_Tuesday', 'Day_Wednesday'], axis=1, inplace = True)
+    'Day_Sunday', 'Day_Thursday', 'Day_Tuesday', 'Day_Wednesday'], axis=1, inplace = True)
 
 #Create a list of all the taxi zones (in order)
 names = []
@@ -174,33 +172,44 @@ df = pd.concat([df, df_taxi], axis=1, join='inner')
 
 #Get rid of unwanted columns - essentially taxi zone dummy variable columns
 df.drop(['PULocationID_100', 'PULocationID_107',
-       'PULocationID_113', 'PULocationID_114', 'PULocationID_116',
-       'PULocationID_12', 'PULocationID_120', 'PULocationID_125',
-       'PULocationID_127', 'PULocationID_128', 'PULocationID_13',
-       'PULocationID_137', 'PULocationID_140', 'PULocationID_141',
-       'PULocationID_142', 'PULocationID_143', 'PULocationID_144',
-       'PULocationID_148', 'PULocationID_151', 'PULocationID_152',
-       'PULocationID_158', 'PULocationID_161', 'PULocationID_162',
-       'PULocationID_163', 'PULocationID_164', 'PULocationID_166',
-       'PULocationID_170', 'PULocationID_186', 'PULocationID_202',
-       'PULocationID_209', 'PULocationID_211', 'PULocationID_224',
-       'PULocationID_229', 'PULocationID_230', 'PULocationID_231',
-       'PULocationID_232', 'PULocationID_233', 'PULocationID_234',
-       'PULocationID_236', 'PULocationID_237', 'PULocationID_238',
-       'PULocationID_239', 'PULocationID_24', 'PULocationID_243',
-       'PULocationID_244', 'PULocationID_246', 'PULocationID_249',
-       'PULocationID_261', 'PULocationID_262', 'PULocationID_263',
-       'PULocationID_4', 'PULocationID_41', 'PULocationID_42',
-       'PULocationID_43', 'PULocationID_45', 'PULocationID_48',
-       'PULocationID_50', 'PULocationID_68', 'PULocationID_74',
-       'PULocationID_75', 'PULocationID_79', 'PULocationID_87',
-       'PULocationID_88', 'PULocationID_90'] ,axis=1, inplace = True)
+    'PULocationID_113', 'PULocationID_114', 'PULocationID_116',
+    'PULocationID_12', 'PULocationID_120', 'PULocationID_125',
+    'PULocationID_127', 'PULocationID_128', 'PULocationID_13',
+    'PULocationID_137', 'PULocationID_140', 'PULocationID_141',
+    'PULocationID_142', 'PULocationID_143', 'PULocationID_144',
+    'PULocationID_148', 'PULocationID_151', 'PULocationID_152',
+    'PULocationID_158', 'PULocationID_161', 'PULocationID_162',
+    'PULocationID_163', 'PULocationID_164', 'PULocationID_166',
+    'PULocationID_170', 'PULocationID_186', 'PULocationID_202',
+    'PULocationID_209', 'PULocationID_211', 'PULocationID_224',
+    'PULocationID_229', 'PULocationID_230', 'PULocationID_231',
+    'PULocationID_232', 'PULocationID_233', 'PULocationID_234',
+    'PULocationID_236', 'PULocationID_237', 'PULocationID_238',
+    'PULocationID_239', 'PULocationID_24', 'PULocationID_243',
+    'PULocationID_244', 'PULocationID_246', 'PULocationID_249',
+    'PULocationID_261', 'PULocationID_262', 'PULocationID_263',
+    'PULocationID_4', 'PULocationID_41', 'PULocationID_42',
+    'PULocationID_43', 'PULocationID_45', 'PULocationID_48',
+    'PULocationID_50', 'PULocationID_68', 'PULocationID_74',
+    'PULocationID_75', 'PULocationID_79', 'PULocationID_87',
+    'PULocationID_88', 'PULocationID_90'] ,axis=1, inplace = True)
 
 #Should be left with column for hour, busyness score, timestamp and taxi zone id
-print(df.head(30))
-print(f'Day of the Week and Timestamp = {create_ts(0)}')
+# print(df.head(30))
+# print(f'Day of the Week and Timestamp = {create_ts(0)}')
 
 #Send dataframe as a json file
 df.reset_index(drop=True, inplace=True) #This excludes the index
 df.to_json(r"C:\Users\corma\COMP47360\ucdSummerProject\src\components\busyness.json", orient='records')
 
+with open("src/components/weather.json", "w") as outfile:
+        json.dump(weather_data , outfile, indent=4)
+        print("Exported weather data to weather.json")
+# ####### End time - to get run time #########
+# end_time = time.time()
+# run_time = round((end_time - start_time),1)
+# print(f'Run time to produce busyness scores for 1 day = {run_time} seconds')
+
+# Print some output
+# print(df.head(30))
+# print(f'Day of the Week and Timestamp = {create_ts(0)}')

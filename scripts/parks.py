@@ -1,6 +1,8 @@
 import requests
 import random
 import json
+import datetime
+import time
 
 ################# Getting Taxi Zone Location ##########################
 from shapely.geometry import Point, Polygon
@@ -62,10 +64,25 @@ all_zones = []
 for i in range(count):
     all_zones.append(get_zone_poly(i))
 
+
+# ####### Start time - to get run time #########
+# start_time = time.time()
+
 #################### Get Busyness Scores ##################################
 # Load busyness data from JSON file
 with open("src/components/busyness.json") as json_file:
     all_busyness_data = json.load(json_file)
+
+time_input = datetime.datetime.now()
+hour = time_input.hour
+
+#Function to get Busyness scores from json file
+def getBusy(taxizone):
+    all_hours = {}
+    for d in busy_data:
+        if d["Taxi Zone ID"] == taxizone:
+            all_hours[d["Hour"]] = round(d["Busyness Predicted"],0)
+    return(all_hours)
 
 #################### Build Parks JSON File ###############################
 # Define the Overpass API query
@@ -73,8 +90,8 @@ overpass_query = """
 [out:json];
 area[name="Manhattan"]->.searchArea;
 (
-  way(area.searchArea)["leisure"="park"];
-  relation(area.searchArea)["leisure"="park"];
+way(area.searchArea)["leisure"="park"];
+relation(area.searchArea)["leisure"="park"];
 );
 out center;
 """
@@ -114,8 +131,7 @@ if response.status_code == 200:
             "name": park_name,
             "location": {"latitude": latitude, "longitude": longitude},
             "taxizone": taxizone,
-            "busi": random.randint(0, 100) / 100,
-            "poll": random.randint(0, 100) / 100,
+            "busi":   getBusy(taxizone),
         })
 
     min_lat = 40.6
@@ -123,19 +139,19 @@ if response.status_code == 200:
     min_lon = -74.1
     max_lon = -73.9
     parks_to_remove = [95163097, 
-                       468946468, 
-                       48686595, 
-                       33819583, 
-                       129002500, 
-                       608663280, 
-                       39015952, 
-                       367859701, 
-                       25428484, 
-                       222233979, 
-                       367660740,
-                       56469108,
-                       2389631,
-                       9791559]
+                    468946468, 
+                    48686595, 
+                    33819583, 
+                    129002500, 
+                    608663280, 
+                    39015952, 
+                    367859701, 
+                    25428484, 
+                    222233979, 
+                    367660740,
+                    56469108,
+                    2389631,
+                    9791559]
 
     filtered_data = []
     
@@ -157,3 +173,8 @@ if response.status_code == 200:
 
 else:
     print("Error: Failed to fetch park data.")
+
+# ####### End time - to get run time #########
+# end_time = time.time()
+# run_time = round((end_time - start_time),1)
+# print(f'Run time to populate busyness scores for all 24 hours = {run_time} seconds')

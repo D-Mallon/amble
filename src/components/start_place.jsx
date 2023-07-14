@@ -55,6 +55,13 @@ const StartPlace = ({ inputValues, setInputValues }) => {
           value={inputValues["longitude"]}
           onChange={handleInputChange}
         />
+        <label htmlFor="hour">Longitude:</label>
+        <input
+          type="text"
+          name="hour"
+          value={inputValues["hour"]}
+          onChange={handleInputChange}
+        />
         <button type="submit">Submit</button>
       </form>
     </div >
