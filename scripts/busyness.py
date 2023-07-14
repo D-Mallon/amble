@@ -25,8 +25,8 @@ del taxi_data["103"]
 del taxi_data["153"]
 del taxi_data["194"]
 
-####### Start time - to get run time #########
-start_time = time.time()
+# ####### Start time - to get run time #########
+# start_time = time.time()
 
 #Create column heading for dataframe
 columns_names = ['Hour', 'Temperature', 'Humidity', 'Wind Speed', 'Precipitation',
@@ -84,7 +84,8 @@ load_dotenv() #allows secret Weather API key
 api_key = os.environ.get("WEATHER_API_KEY") #Key for Weather API
 url = f'http://api.weatherapi.com/v1/forecast.json?key={api_key}&q=New York City&days=1&aqi=no&alerts=no'
 response = requests.get(url)
-data = response.json()
+weather_data = response.json()
+
 
 #Create Weather Variables
 temp = []
@@ -94,10 +95,10 @@ percip = []
 
 #Weather variables from Weather API
 for i in range(24):
-    temp.append(float(data['forecast']['forecastday'][0]['hour'][i]['temp_f']))
-    hum.append(float(data['forecast']['forecastday'][0]['hour'][i]["humidity"]))
-    wind.append(float(data['forecast']['forecastday'][0]['hour'][i]['wind_mph']))
-    percip.append(float(data['forecast']['forecastday'][0]['hour'][i]["precip_in"]))
+    temp.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]['temp_f']))
+    hum.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]["humidity"]))
+    wind.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]['wind_mph']))
+    percip.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]["precip_in"]))
 
 #Create dataframe for every taxi Zone and for every hour
 for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zone name
@@ -199,10 +200,13 @@ df.drop(['PULocationID_100', 'PULocationID_107',
 df.reset_index(drop=True, inplace=True) #This excludes the index
 df.to_json(r"C:\Users\corma\COMP47360\ucdSummerProject\src\components\busyness.json", orient='records')
 
-####### End time - to get run time #########
-end_time = time.time()
-run_time = round((end_time - start_time),1)
-print(f'Run time to produce busyness scores for 1 day = {run_time} seconds')
+with open("src/components/weather.json", "w") as outfile:
+        json.dump(weather_data , outfile, indent=4)
+        print("Exported weather data to weather.json")
+# ####### End time - to get run time #########
+# end_time = time.time()
+# run_time = round((end_time - start_time),1)
+# print(f'Run time to produce busyness scores for 1 day = {run_time} seconds')
 
 # Print some output
 # print(df.head(30))
