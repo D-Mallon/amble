@@ -23,7 +23,6 @@ const Map = ({ inputValues }) => {
   const { route, displayRoute } = useRouteDisplay(map.current, inputValues);
   const { location, setLocation } = useGeocoding(map.current, buttonPressed, setButtonPressed);
 
-    // New function for when place name input value changes
     const handlePlaceNameChange = async (event) => {
       setPlaceName(event.target.value);
   
