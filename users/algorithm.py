@@ -3,8 +3,21 @@ import random
 from math import radians, sin, cos, sqrt, atan2
 
 # Load park data from JSON file
-with open("src/components/parks.json") as json_file:
+#with open("src/components/parks.json") as json_file:
+#    data = json.load(json_file)
+
+#David has commented out the two lines above to try resolve routing issues. Trying to make routes absolute, as opposed to relative.
+
+import os
+from django.conf import settings
+
+file_path = os.path.join(settings.BASE_DIR, 'src/components/parks.json')
+with open(file_path) as json_file:
+    # make sure to indent the code that uses json_file
     data = json.load(json_file)
+    # any other code that needs to use json_file should also be indented
+
+#David additions above only.
 
 # Extract latitude and longitude values
 latitudes = []

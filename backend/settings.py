@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-)mx02xrtw2_l=hz#_#8q*=*=+za^^&cf2qd+jqvl837ja1d5$_"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['137.43.49.38', 'csi6220-2-vm2.ucd.ie']
 
@@ -135,13 +135,27 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-#STATIC_URL = "static/"
-STATIC_URL = "/static/"
+#STATIC_URL = "/static/"
+#STATICFILES_DIRS = [
+#    BASE_DIR / "dist",
+#    BASE_DIR / "public",
+#    ]
+#STATIC_ROOT = BASE_DIR / "static"
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.2/howto/static-files/
+
+# The URL to use when referring to static files (where they will be served from)
+STATIC_URL = '/static/'
+
+# The absolute path to the directory where `collectstatic` will collect static files for deployment.
+STATIC_ROOT = BASE_DIR / 'static'
+
+# This setting defines the additional locations the staticfiles app will traverse if the FileSystemFinder finder is enabled, e.g. if you use the collectstatic or findstatic management command or use the static file serving view.
 STATICFILES_DIRS = [
-    BASE_DIR / "dist",
-    BASE_DIR / "public",
-    ]
-STATIC_ROOT = BASE_DIR / "static"
+    BASE_DIR / 'dist',
+    BASE_DIR / 'public',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
