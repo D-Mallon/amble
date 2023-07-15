@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-// import "./login.css";
+import "./login.css";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -11,18 +11,21 @@ const Login = () => {
     password: '',
   });
 
-  const handleChange = (event) => {
+  const handleChange = (e) => {
     setFormData({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
+      ...formData, [e.target.name]: e.target.value,});
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
     axios
-    .post('/users', formData)
+    .post('/users', formData, {
+      // Need this header as axios sends Form data as application/json which is not compatible with django request.POST
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  })
     .then((response) => {
       console.log(response);
     })
@@ -40,26 +43,26 @@ const Login = () => {
 
   return (
     <div className="login-area">
+      <h3>Registration Form</h3>
     <form onSubmit={handleSubmit}>
-        
             <div>
             <label htmlFor="first_name">First Name:</label>
             <input
                 type="text"
                 name="first_name"
                 id="first_name"
-                value={formData.first_name}
+                // value={formData.first_name}
                 onChange={handleChange}
-            />
+                ></input>
             </div>
             <div>
             <label htmlFor="last_name">Last Name:</label>
             <input
                 type="text"
                 name="last_name"
-                value={formData.last_name}
+                // value={formData.last_name}
                 onChange={handleChange}
-            />
+                ></input>
             </div>
             <div>
                 <label htmlFor="email">Email:</label>
@@ -67,9 +70,9 @@ const Login = () => {
                     type="text"
                     name="email"
                     id="email"
-                    value={formData.email}
+                    // value={formData.email}
                     onChange={handleChange}
-                />
+                    ></input>
             </div>
             <div>
                 <label htmlFor="address">Address:</label>
@@ -77,9 +80,9 @@ const Login = () => {
                     type="text"
                     name="address"
                     id="address"
-                    value={formData.address}
+                    // value={formData.address}
                     onChange={handleChange}
-                />
+                    ></input>
             </div>
             <div>
                 <label htmlFor="password">Password:</label>
@@ -87,9 +90,9 @@ const Login = () => {
                     type="text"
                     name="password"
                     id="password"
-                    value={formData.password}
+                    // value={formData.password}
                     onChange={handleChange}
-                />
+                    ></input>
             </div>
         
       <button type="submit" className='submit-button'>Submit</button>

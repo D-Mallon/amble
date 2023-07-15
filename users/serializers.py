@@ -4,11 +4,11 @@ from .models import User, UserRoute
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('pk', 'first_name','last_name', 'email', 'address', 'password', 'registrationDate')
+        fields = ('first_name','last_name', 'email', 'address', 'password', 'registrationDate')
         #fields = ('__all__')
 
 class UserRouteSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserRoute
-        fields = ('pk', 'latitude', 'longitude', 'distance')
+        fields = ('id','latitude', 'longitude', 'distance','hour')
         #fields = ('__all__')

@@ -15,21 +15,24 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+#Set up environmental variables
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-)mx02xrtw2_l=hz#_#8q*=*=+za^^&cf2qd+jqvl837ja1d5$_"
+# SECRET_KEY = 'dp@4@6kdg6!7anyzq+tqoy!zo445+br*!ut6!55z62=b(na4d&'
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['137.43.49.38', 'csi6220-2-vm2.ucd.ie']
 
-
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -81,7 +84,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "backend.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -89,9 +91,9 @@ WSGI_APPLICATION = "backend.wsgi.application"
 #DATABASES = {
     # 'default': {
     #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'namesDB', 
-    #     'USER': 'postgres',
-    #     'PASSWORD': 'password',
+    #     'NAME': os.environ.get('DATABASE_NAME'), 
+    #     'USER': 'os.environ.get('DATABASE_USER'),
+    #     'PASSWORD': os.environ.get('DATABASE_PASS'),
     #     'HOST': '127.0.0.1', 
     #     'PORT': '5432',
     # }
@@ -122,7 +124,6 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -162,3 +163,4 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+print(os.environ.get("VITE_MAPBOX_API_KEY"))

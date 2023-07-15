@@ -6,6 +6,7 @@ const StartPlace = ({ inputValues, setInputValues }) => {
 
   const handleInputChange = (e) => {
     setInputValues({ ...inputValues, [e.target.name]: e.target.value });
+    console.log("handleInputChange", inputValues);
   };
 
   const handleInputSubmit = (e) => {
@@ -20,7 +21,10 @@ const StartPlace = ({ inputValues, setInputValues }) => {
     })
       .then((response) => {
         console.log("errorless:", response.data);
-        setInputValues({ ...inputValues, endLatitude: response.data["dest"][1], endLongitude: response.data["dest"][0]});
+        const waypoints = response.data["waypoints"];
+        console.log("waypoints:", waypoints);
+        setInputValues({ ...inputValues, ["waypoints"]: waypoints});
+        console.log("handleInputSubmit", inputValues);
       })
       .catch((error) => {
         if (error.response) {
@@ -40,15 +44,22 @@ const StartPlace = ({ inputValues, setInputValues }) => {
         <label htmlFor="latitude">Latitude:</label>
         <input
           type="text"
-          name="startLatitude"
-          value={inputValues.startLatitude}
+          name="latitude"
+          value={inputValues["latitude"]}
           onChange={handleInputChange}
         />
         <label htmlFor="longitude">Longitude:</label>
         <input
           type="text"
-          name="startLongitude"
-          value={inputValues.startLongitude}
+          name="longitude"
+          value={inputValues["longitude"]}
+          onChange={handleInputChange}
+        />
+        <label htmlFor="hour">Longitude:</label>
+        <input
+          type="text"
+          name="hour"
+          value={inputValues["hour"]}
           onChange={handleInputChange}
         />
         <button type="submit">Submit</button>
