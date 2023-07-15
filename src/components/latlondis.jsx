@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import "./latlondis.css";
 const RouteInputs = () => {
   const [formData, setFormData] = useState({
     latitude: '',
     longitude: '',
-    distance: ''
+    distance: '',
+    hour: ''
   });
 
   const handleChange = (e) => {
@@ -17,7 +18,7 @@ const RouteInputs = () => {
 
     axios
       .post('/users', formData, {
-        // Need this header as axios sends dorm data as application/json which is not compatible with django request.POST
+        // Need this header as axios sends Form data as application/json which is not compatible with django request.POST
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
@@ -38,9 +39,11 @@ const RouteInputs = () => {
   };
 
   return (
+    <div className="latlondis-area">
+      <h3>Route Planner Inputs</h3>
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="latitude">Latitude:</label>
+        <label htmlFor="latitude">Starting Latitude:</label>
         <input
           type="text"
           name="latitude"
@@ -49,7 +52,7 @@ const RouteInputs = () => {
         />
       </div>
       <div>
-        <label htmlFor="longitude">Longitude:</label>
+        <label htmlFor="longitude">Starting Longitude:</label>
         <input
           type="text"
           name="longitude"
@@ -58,7 +61,7 @@ const RouteInputs = () => {
         />
       </div>
       <div>
-        <label htmlFor="distance">Distance:</label>
+        <label htmlFor="distance">Distance to walk:</label>
         <input
         type="text"
           name="distance"
@@ -66,8 +69,19 @@ const RouteInputs = () => {
           onChange={handleChange}
         ></input>
       </div>
-      <button type="submit">Submit</button>
+      <div>
+        <label htmlFor="distance">Hour (to start walk):</label>
+        <input
+        type="text"
+          name="hour"
+        //   value={formData.name}
+          onChange={handleChange}
+        ></input>
+      </div>
+
+      <button type="submit" className='submit-button'>Submit</button>
     </form>
+    </div>
   );
 };
 

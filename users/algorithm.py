@@ -2,6 +2,22 @@ import json
 import random
 from math import radians, sin, cos, sqrt, atan2
 
+# ########### Accessing Data from Database (using fetch) ###################################
+# import psycopg2 
+
+# #Make a connection
+# conn = psycopg2.connect(
+#    database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
+# ) 
+
+# conn.autocommit = True #Set auto commit false
+# cursor = conn.cursor() #Create a cursor object
+# cursor.execute('''SELECT * from users_userroute''') #Retrieve data
+# result = cursor.fetchone(); #Fetch 1st row from the table
+# print(result)
+# conn.commit() #Commit changes in the database
+# conn.close() #Close the connection
+
 # Load park data from JSON file
 #with open("src/components/parks.json") as json_file:
 #    data = json.load(json_file)
@@ -45,14 +61,16 @@ def calculate_distance(lat1, lon1, lat2, lon2):
 
     distance = R * c
     return distance
-
-def magic(user_latitude, user_longitude):
     
+
+def magic(user_latitude, user_longitude, hour):
+
+
     print(f"Starting location: ({user_latitude}, {user_longitude})")
     print("-----------------------------------------")
 
     # Define the predefined distance to be covered
-    predefined_distance = 7  # Adjust this value as needed
+    predefined_distance = 5  # Adjust this value as needed
 
     visited_parks = []  # List to store visited parks
 
@@ -75,8 +93,9 @@ def magic(user_latitude, user_longitude):
         sorted_indices = sorted(range(len(closest_distances)), key=lambda k: closest_distances[k])
         closest_parks = [closest_parks[i] for i in sorted_indices[:7]]
 
-        # Select the park with the lowest combination of "busi" and "poll" values
-        selected_park = min(closest_parks, key=lambda park: park["busi"] + park["poll"])
+        # Select the park with the lowest combination of "busi" values
+        selected_park = min(closest_parks, key=lambda park: park["busi"][hour])
+        # print(selected_park["busi"][hour])
 
         # Calculate distance to the selected park
         park_latitude = selected_park["location"]["latitude"]
@@ -93,17 +112,26 @@ def magic(user_latitude, user_longitude):
 
         # Print information about the current journey
         park_name = selected_park["name"]
-        park_busi = selected_park["busi"]
-        park_poll = selected_park["poll"]
-        print(f"Visiting Park: {park_name}")
-        print(f"Busyness Rating: {park_busi}")
-        print(f"Pollution Level: {park_poll}")
-        print(f"Remaining Distance: {predefined_distance} km")
-        print(f"Location: ({park_latitude}, {park_longitude})")
-        print("-------------------------")
+        park_busi = selected_park["busi"][hour]
+        # print(f"Visiting Park: {park_name}")
+        # print(f"Busyness Rating: {park_busi}")
+        # print(f"Remaining Distance: {predefined_distance} km")
+        # print(f"Location: ({park_latitude}, {park_longitude})")
+        # print("-------------------------")
 
         # Update the user's location for the next iteration
         user_latitude = park_latitude
         user_longitude = park_longitude
 
-    return [park_latitude, park_longitude]
+    # print("Visited Parks:")
+    # for park in visited_parks:
+    #     print(f"Latitude: {park['location']['latitude']}, Longitude: {park['location']['longitude']}")
+
+    visited_locations = [(park['location']['latitude'], park['location']['longitude']) for park in visited_parks]
+    # print(visited_locations)
+    return visited_locations
+
+# magic(40.74218481889335, -73.98786664009094)
+
+# Latitue: 40
+# Longitude: -74

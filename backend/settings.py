@@ -10,26 +10,29 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
+from dotenv import load_dotenv
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Set up environmental variables
+load_dotenv()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-)mx02xrtw2_l=hz#_#8q*=*=+za^^&cf2qd+jqvl837ja1d5$_"
+# SECRET_KEY = 'dp@4@6kdg6!7anyzq+tqoy!zo445+br*!ut6!55z62=b(na4d&'
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['137.43.49.38', 'csi6220-2-vm2.ucd.ie']
 
-
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -53,7 +56,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    #"django.middleware.csrf.CsrfViewMiddleware",
+    # "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -81,21 +84,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "backend.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-#This was the original database that David has commented out for the purposes of setting up and testing apache.
-#DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'namesDB', 
-    #     'USER': 'postgres',
-    #     'PASSWORD': 'password',
-    #     'HOST': '127.0.0.1', 
-    #     'PORT': '5432',
-    # }
-#}
+# This was the original database that David has commented out for the purposes of setting up and testing apache.
+# DATABASES = {
+# 'default': {
+#     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#     'NAME': os.environ.get('DATABASE_NAME'),
+#     'USER': 'os.environ.get('DATABASE_USER'),
+#     'PASSWORD': os.environ.get('DATABASE_PASS'),
+#     'HOST': '127.0.0.1',
+#     'PORT': '5432',
+# }
+# }
 
 DATABASES = {
     'default': {
@@ -123,7 +125,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -135,12 +136,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-#STATIC_URL = "/static/"
-#STATICFILES_DIRS = [
+# STATIC_URL = "/static/"
+# STATICFILES_DIRS = [
 #    BASE_DIR / "dist",
 #    BASE_DIR / "public",
 #    ]
-#STATIC_ROOT = BASE_DIR / "static"
+# STATIC_ROOT = BASE_DIR / "static"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -162,3 +163,5 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+
+print(os.environ.get("VITE_MAPBOX_API_KEY"))
