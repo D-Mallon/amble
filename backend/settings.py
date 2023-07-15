@@ -10,14 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
+from dotenv import load_dotenv
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-#Set up environmental variables
-from dotenv import load_dotenv
-import os
+# Set up environmental variables
 load_dotenv()
 
 # Quick-start development settings - unsuitable for production
@@ -56,7 +56,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    #"django.middleware.csrf.CsrfViewMiddleware",
+    # "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -87,17 +87,17 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-#This was the original database that David has commented out for the purposes of setting up and testing apache.
-#DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': os.environ.get('DATABASE_NAME'), 
-    #     'USER': 'os.environ.get('DATABASE_USER'),
-    #     'PASSWORD': os.environ.get('DATABASE_PASS'),
-    #     'HOST': '127.0.0.1', 
-    #     'PORT': '5432',
-    # }
-#}
+# This was the original database that David has commented out for the purposes of setting up and testing apache.
+# DATABASES = {
+# 'default': {
+#     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#     'NAME': os.environ.get('DATABASE_NAME'),
+#     'USER': 'os.environ.get('DATABASE_USER'),
+#     'PASSWORD': os.environ.get('DATABASE_PASS'),
+#     'HOST': '127.0.0.1',
+#     'PORT': '5432',
+# }
+# }
 
 DATABASES = {
     'default': {
@@ -136,12 +136,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-#STATIC_URL = "/static/"
-#STATICFILES_DIRS = [
+# STATIC_URL = "/static/"
+# STATICFILES_DIRS = [
 #    BASE_DIR / "dist",
 #    BASE_DIR / "public",
 #    ]
-#STATIC_ROOT = BASE_DIR / "static"
+# STATIC_ROOT = BASE_DIR / "static"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
