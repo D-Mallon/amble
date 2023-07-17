@@ -28,6 +28,10 @@ parkObj = openJson(json_dir,file_park)
 file_library = 'library_locations.json'
 libraryObj = openJson(json_dir,file_library)
 
+#Create path to park nodes json file and open it
+file_parknode = 'park_node_locations.json'
+parkNodeObj = openJson(json_dir,file_parknode)
+
 #################### Update Busyness Scores ##################################
 #Function to get Busyness scores from json file
 def getBusy(taxizone):
@@ -45,17 +49,24 @@ for park in parkObj["data"]:
 #Save the updated json file
 with open(os.path.join(json_dir, file_park), 'w') as f:
     json.dump(parkObj, f, indent =4)
-# print('Successfully updated JSON file busyness scores')
+
+# Update park node data with latest busyness scores
+for parknode in parkNodeObj["data"]:
+    taxizone = str(parknode["taxi-zone"])
+    parknode["b-score"] = (getBusy(taxizone))
+
+#Save the updated park node json file
+with open(os.path.join(json_dir, file_parknode), 'w') as f:
+    json.dump(parkNodeObj, f, indent =4)
 
 # Update library data with latest busyness scores
 for library in libraryObj["data"]:
     taxizone = str(library["taxi-zone"])
     library["b-score"] = (getBusy(taxizone))
 
-#Save the updated json file
+#Save the updated library json file
 with open(os.path.join(json_dir, file_library), 'w') as f:
     json.dump(libraryObj, f, indent =4)
-# print('Successfully updated JSON file busyness scores')
 
 ####### End time - to get run time #########
 end_time = time.time()
