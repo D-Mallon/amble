@@ -1,22 +1,37 @@
 import json
 import random
 from math import radians, sin, cos, sqrt, atan2
+from collections import defaultdict # Allows merging of dictionaries with overwriting common keys
 
-# ########### Accessing Data from Database (using fetch) ###################################
-# import psycopg2 
 
-# #Make a connection
-# conn = psycopg2.connect(
-#    database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
-# ) 
+#Function to merge dictionaries
+def merge_json(json1, json2):
+    merged_json = defaultdict(list)
+    for key, value in json1.items():
+        merged_json[key].append(value) # Add values from json1
+    for key, value in json2.items():
+        merged_json[key].append(value)  # Add values from json2
+    return merged_json
 
-# conn.autocommit = True #Set auto commit false
-# cursor = conn.cursor() #Create a cursor object
-# cursor.execute('''SELECT * from users_userroute''') #Retrieve data
-# result = cursor.fetchone(); #Fetch 1st row from the table
-# print(result)
-# conn.commit() #Commit changes in the database
-# conn.close() #Close the connection
+# Load park data from JSON file
+with open("src/json-files/park_location.json") as json_file:
+    data = json.load(json_file)
+
+#Toggle to decide whether to include Library data
+include_library = False #One issue is Library IDs overlap with Park IDs
+# Load library data from JSON file
+if include_library == True:
+    with open("src/components/libraries.json") as json_file:
+        library_data = json.load(json_file)
+    merged_json = merge_json(data,library_data) #Would need to save this to 'data' if wanted to use in file
+    with open("src/components/merged.json",'w') as json_file:
+        json.dump(merged_json, json_file, indent=4)
+
+
+
+
+
+
 
 # Load park data from JSON file
 with open("src/components/parks.json") as json_file:
@@ -122,3 +137,21 @@ def magic(user_latitude, user_longitude, hour):
 
 # Latitue: 40
 # Longitude: -74
+
+
+
+# ########### Accessing Data from Database (using fetch) ###################################
+# import psycopg2 
+
+# #Make a connection
+# conn = psycopg2.connect(
+#    database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
+# ) 
+
+# conn.autocommit = True #Set auto commit false
+# cursor = conn.cursor() #Create a cursor object
+# cursor.execute('''SELECT * from users_userroute''') #Retrieve data
+# result = cursor.fetchone(); #Fetch 1st row from the table
+# print(result)
+# conn.commit() #Commit changes in the database
+# conn.close() #Close the connection
