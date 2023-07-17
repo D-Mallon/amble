@@ -3,7 +3,6 @@ import random
 from math import radians, sin, cos, sqrt, atan2
 from collections import defaultdict # Allows merging of dictionaries with overwriting common keys
 
-
 #Function to merge dictionaries
 def merge_json(json1, json2):
     merged_json = defaultdict(list)
@@ -14,27 +13,22 @@ def merge_json(json1, json2):
     return merged_json
 
 # Load park data from JSON file
-with open("src/json-files/park_location.json") as json_file:
+with open("src/json-files/park_locations.json") as json_file:
     data = json.load(json_file)
 
 #Toggle to decide whether to include Library data
-include_library = False #One issue is Library IDs overlap with Park IDs
+include_park_nodes = False 
 # Load library data from JSON file
-if include_library == True:
-    with open("src/components/libraries.json") as json_file:
-        library_data = json.load(json_file)
-    merged_json = merge_json(data,library_data) #Would need to save this to 'data' if wanted to use in file
-    with open("src/components/merged.json",'w') as json_file:
+if include_park_nodes == True:
+    with open("src/json-files/park_node_locations.json") as json_file:
+        parknode_data = json.load(json_file)
+    merged_json = merge_json(data,parknode_data) #Would need to save this to 'data' if wanted to use in file
+    with open("src/json-files/merged.json",'w') as json_file:
         json.dump(merged_json, json_file, indent=4)
 
 
-
-
-
-
-
 # Load park data from JSON file
-with open("src/components/parks.json") as json_file:
+with open("src/json-files/park_locations.json") as json_file:
     data = json.load(json_file)
 
 # Extract latitude and longitude values
