@@ -13,11 +13,11 @@
       "precinct": 13,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9938312,
-        40.737978
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.737978,
+        "longitude": -73.9938312
+      }
     },
     {
       "id": "MA6",
@@ -32,11 +32,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9900266,
-        40.7187837
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7187837,
+        "longitude": -73.9900266
+      }
     },
     {
       "id": "MA7",
@@ -51,11 +51,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9837251,
-        40.7557394
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7557394,
+        "longitude": -73.9837251
+      }
     },
     {
       "id": "MA8",
@@ -70,11 +70,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9228859,
-        40.8673822
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8673822,
+        "longitude": -73.9228859
+      }
     },
     {
       "id": "MA10",
@@ -89,11 +89,11 @@
       "precinct": 13,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9977377,
-        40.7400959
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7400959,
+        "longitude": -73.9977377
+      }
     },
     {
       "id": "MA11",
@@ -108,11 +108,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9908729,
-        40.7165969
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7165969,
+        "longitude": -73.9908729
+      }
     },
     {
       "id": "MA12",
@@ -127,11 +127,11 @@
       "precinct": 13,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.986775,
-        40.7392696
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7392696,
+        "longitude": -73.986775
+      }
     },
     {
       "id": "MA14",
@@ -146,11 +146,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.005072,
-        40.7137437
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7137437,
+        "longitude": -74.005072
+      }
     },
     {
       "id": "MA16",
@@ -165,11 +165,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9906463,
-        40.7502679
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7502679,
+        "longitude": -73.9906463
+      }
     },
     {
       "id": "MA17",
@@ -184,11 +184,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9815958,
-        40.7732296
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7732296,
+        "longitude": -73.9815958
+      }
     },
     {
       "id": "MA19",
@@ -203,11 +203,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9941473,
-        40.7466544
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7466544,
+        "longitude": -73.9941473
+      }
     },
     {
       "id": "MA20",
@@ -222,11 +222,11 @@
       "precinct": 13,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9873576,
-        40.7440374
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7440374,
+        "longitude": -73.9873576
+      }
     },
     {
       "id": "MA21",
@@ -241,11 +241,11 @@
       "precinct": 13,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9873437,
-        40.7432428
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7432428,
+        "longitude": -73.9873437
+      }
     },
     {
       "id": "MA22",
@@ -260,11 +260,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9974606,
-        40.7192537
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7192537,
+        "longitude": -73.9974606
+      }
     },
     {
       "id": "MA24",
@@ -279,11 +279,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0059445,
-        40.7494423
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7494423,
+        "longitude": -74.0059445
+      }
     },
     {
       "id": "MA25",
@@ -298,11 +298,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9319228,
-        40.8648684
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8648684,
+        "longitude": -73.9319228
+      }
     },
     {
       "id": "MA26",
@@ -317,11 +317,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9990481,
-        40.7194172
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7194172,
+        "longitude": -73.9990481
+      }
     },
     {
       "id": "MA27",
@@ -336,11 +336,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9933858,
-        40.7230882
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7230882,
+        "longitude": -73.9933858
+      }
     },
     {
       "id": "MA28",
@@ -355,11 +355,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9733215,
-        40.7813974
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7813974,
+        "longitude": -73.9733215
+      }
     },
     {
       "id": "MA31",
@@ -374,11 +374,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0067195,
-        40.74121
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.74121,
+        "longitude": -74.0067195
+      }
     },
     {
       "id": "MA32",
@@ -393,11 +393,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.941171,
-        40.8304543
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8304543,
+        "longitude": -73.941171
+      }
     },
     {
       "id": "MA33",
@@ -412,11 +412,11 @@
       "precinct": 28,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.947616,
-        40.8084179
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8084179,
+        "longitude": -73.947616
+      }
     },
     {
       "id": "MA34",
@@ -431,11 +431,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.99882,
-        40.7284684
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7284684,
+        "longitude": -73.99882
+      }
     },
     {
       "id": "MA35",
@@ -450,11 +450,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9858672,
-        40.7276111
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7276111,
+        "longitude": -73.9858672
+      }
     },
     {
       "id": "MA36",
@@ -469,11 +469,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0028203,
-        40.7173656
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7173656,
+        "longitude": -74.0028203
+      }
     },
     {
       "id": "MA37",
@@ -488,11 +488,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9985805,
-        40.72873
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.72873,
+        "longitude": -73.9985805
+      }
     },
     {
       "id": "MA38",
@@ -507,11 +507,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0028554,
-        40.7396591
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7396591,
+        "longitude": -74.0028554
+      }
     },
     {
       "id": "MA39",
@@ -526,11 +526,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9778791,
-        40.7257313
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7257313,
+        "longitude": -73.9778791
+      }
     },
     {
       "id": "MA40",
@@ -545,11 +545,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9776714,
-        40.7506893
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7506893,
+        "longitude": -73.9776714
+      }
     },
     {
       "id": "MA42",
@@ -564,11 +564,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9979055,
-        40.7238654
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7238654,
+        "longitude": -73.9979055
+      }
     },
     {
       "id": "MA43",
@@ -583,11 +583,11 @@
       "precinct": 32,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9430899,
-        40.8099499
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8099499,
+        "longitude": -73.9430899
+      }
     },
     {
       "id": "MA44",
@@ -602,11 +602,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9406753,
-        40.8393577
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8393577,
+        "longitude": -73.9406753
+      }
     },
     {
       "id": "MA48",
@@ -621,11 +621,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9781357,
-        40.7786086
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7786086,
+        "longitude": -73.9781357
+      }
     },
     {
       "id": "MA51",
@@ -640,11 +640,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9746411,
-        40.7815797
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7815797,
+        "longitude": -73.9746411
+      }
     },
     {
       "id": "MA52",
@@ -659,11 +659,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9731563,
-        40.7816493
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7816493,
+        "longitude": -73.9731563
+      }
     },
     {
       "id": "MA53",
@@ -678,11 +678,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0064354,
-        40.7470923
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7470923,
+        "longitude": -74.0064354
+      }
     },
     {
       "id": "MA55",
@@ -697,11 +697,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.990434,
-        40.7219487
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7219487,
+        "longitude": -73.990434
+      }
     },
     {
       "id": "MA56",
@@ -716,11 +716,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9892808,
-        40.720719
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.720719,
+        "longitude": -73.9892808
+      }
     },
     {
       "id": "MA57",
@@ -735,11 +735,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0020133,
-        40.7181761
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7181761,
+        "longitude": -74.0020133
+      }
     },
     {
       "id": "MA59",
@@ -754,11 +754,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9904291,
-        40.7185164
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7185164,
+        "longitude": -73.9904291
+      }
     },
     {
       "id": "MA60",
@@ -773,11 +773,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9833365,
-        40.7306017
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7306017,
+        "longitude": -73.9833365
+      }
     },
     {
       "id": "MA61",
@@ -792,11 +792,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9831736,
-        40.7187633
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7187633,
+        "longitude": -73.9831736
+      }
     },
     {
       "id": "MA62",
@@ -811,11 +811,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9826995,
-        40.7184451
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7184451,
+        "longitude": -73.9826995
+      }
     },
     {
       "id": "MA64",
@@ -830,11 +830,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9945529,
-        40.7343016
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7343016,
+        "longitude": -73.9945529
+      }
     },
     {
       "id": "MA65",
@@ -849,11 +849,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.004588,
-        40.7489761
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7489761,
+        "longitude": -74.004588
+      }
     },
     {
       "id": "MA66",
@@ -868,11 +868,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9920403,
-        40.7220357
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7220357,
+        "longitude": -73.9920403
+      }
     },
     {
       "id": "MA67",
@@ -887,11 +887,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.984974,
-        40.7209311
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7209311,
+        "longitude": -73.984974
+      }
     },
     {
       "id": "MA68",
@@ -906,11 +906,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9852723,
-        40.7208065
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7208065,
+        "longitude": -73.9852723
+      }
     },
     {
       "id": "MA71",
@@ -925,11 +925,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9931761,
-        40.7233254
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7233254,
+        "longitude": -73.9931761
+      }
     },
     {
       "id": "MA72",
@@ -944,11 +944,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9715855,
-        40.7949144
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7949144,
+        "longitude": -73.9715855
+      }
     },
     {
       "id": "MA73",
@@ -963,11 +963,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9188055,
-        40.8719113
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8719113,
+        "longitude": -73.9188055
+      }
     },
     {
       "id": "MA74",
@@ -982,11 +982,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9586445,
-        40.8172422
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8172422,
+        "longitude": -73.9586445
+      }
     },
     {
       "id": "MA75",
@@ -1001,11 +1001,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9926816,
-        40.7269555
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7269555,
+        "longitude": -73.9926816
+      }
     },
     {
       "id": "MA77",
@@ -1020,11 +1020,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9937321,
-        40.7257629
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7257629,
+        "longitude": -73.9937321
+      }
     },
     {
       "id": "MA78",
@@ -1039,11 +1039,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9795215,
-        40.7258135
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7258135,
+        "longitude": -73.9795215
+      }
     },
     {
       "id": "MA79",
@@ -1058,11 +1058,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9961249,
-        40.7117446
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7117446,
+        "longitude": -73.9961249
+      }
     },
     {
       "id": "MA80",
@@ -1077,11 +1077,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9956636,
-        40.7117466
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7117466,
+        "longitude": -73.9956636
+      }
     },
     {
       "id": "MA81",
@@ -1096,11 +1096,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9912954,
-        40.713402
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.713402,
+        "longitude": -73.9912954
+      }
     },
     {
       "id": "MA82",
@@ -1115,11 +1115,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9887194,
-        40.7196295
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7196295,
+        "longitude": -73.9887194
+      }
     },
     {
       "id": "MA83",
@@ -1134,11 +1134,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9892959,
-        40.7196517
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7196517,
+        "longitude": -73.9892959
+      }
     },
     {
       "id": "MA84",
@@ -1153,11 +1153,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.990232,
-        40.7200826
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7200826,
+        "longitude": -73.990232
+      }
     },
     {
       "id": "MA85",
@@ -1172,11 +1172,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9911739,
-        40.7191881
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7191881,
+        "longitude": -73.9911739
+      }
     },
     {
       "id": "MA87",
@@ -1191,11 +1191,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9899544,
-        40.7139131
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7139131,
+        "longitude": -73.9899544
+      }
     },
     {
       "id": "MA88",
@@ -1210,11 +1210,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0052494,
-        40.748353
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.748353,
+        "longitude": -74.0052494
+      }
     },
     {
       "id": "MA89",
@@ -1229,11 +1229,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9971521,
-        40.7167838
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7167838,
+        "longitude": -73.9971521
+      }
     },
     {
       "id": "MA90",
@@ -1248,11 +1248,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9879511,
-        40.7137046
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7137046,
+        "longitude": -73.9879511
+      }
     },
     {
       "id": "MA91",
@@ -1267,11 +1267,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9916176,
-        40.7151986
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7151986,
+        "longitude": -73.9916176
+      }
     },
     {
       "id": "MA92",
@@ -1286,11 +1286,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.991419,
-        40.7154412
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7154412,
+        "longitude": -73.991419
+      }
     },
     {
       "id": "MA93",
@@ -1305,11 +1305,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9889614,
-        40.7201441
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7201441,
+        "longitude": -73.9889614
+      }
     },
     {
       "id": "MA94",
@@ -1324,11 +1324,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9841125,
-        40.7224564
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7224564,
+        "longitude": -73.9841125
+      }
     },
     {
       "id": "MA95",
@@ -1343,11 +1343,11 @@
       "precinct": 32,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9446254,
-        40.8188292
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8188292,
+        "longitude": -73.9446254
+      }
     },
     {
       "id": "MA96",
@@ -1362,11 +1362,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9830825,
-        40.7249615
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7249615,
+        "longitude": -73.9830825
+      }
     },
     {
       "id": "MA97",
@@ -1381,11 +1381,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0070327,
-        40.745807
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.745807,
+        "longitude": -74.0070327
+      }
     },
     {
       "id": "MA98",
@@ -1400,11 +1400,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.992545,
-        40.7265986
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7265986,
+        "longitude": -73.992545
+      }
     },
     {
       "id": "MA99",
@@ -1419,11 +1419,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.992177,
-        40.7188203
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7188203,
+        "longitude": -73.992177
+      }
     },
     {
       "id": "MA101",
@@ -1438,11 +1438,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9902725,
-        40.771366
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.771366,
+        "longitude": -73.9902725
+      }
     },
     {
       "id": "MA102",
@@ -1457,11 +1457,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9755331,
-        40.7576183
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7576183,
+        "longitude": -73.9755331
+      }
     },
     {
       "id": "MA104",
@@ -1476,11 +1476,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0075391,
-        40.7475429
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7475429,
+        "longitude": -74.0075391
+      }
     },
     {
       "id": "MA105",
@@ -1495,11 +1495,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9919779,
-        40.7251309
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7251309,
+        "longitude": -73.9919779
+      }
     },
     {
       "id": "MA107",
@@ -1514,11 +1514,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9968271,
-        40.7170446
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7170446,
+        "longitude": -73.9968271
+      }
     },
     {
       "id": "MA108",
@@ -1533,11 +1533,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9847106,
-        40.7200219
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7200219,
+        "longitude": -73.9847106
+      }
     },
     {
       "id": "MA110",
@@ -1552,11 +1552,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9912916,
-        40.7158321
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7158321,
+        "longitude": -73.9912916
+      }
     },
     {
       "id": "MA111",
@@ -1571,11 +1571,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0049685,
-        40.7495759
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7495759,
+        "longitude": -74.0049685
+      }
     },
     {
       "id": "MA112",
@@ -1590,11 +1590,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9905701,
-        40.7267758
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7267758,
+        "longitude": -73.9905701
+      }
     },
     {
       "id": "MA113",
@@ -1609,11 +1609,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9937691,
-        40.7218041
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7218041,
+        "longitude": -73.9937691
+      }
     },
     {
       "id": "MA114",
@@ -1628,11 +1628,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9925494,
-        40.7250551
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7250551,
+        "longitude": -73.9925494
+      }
     },
     {
       "id": "MA115",
@@ -1647,11 +1647,11 @@
       "precinct": 13,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9800915,
-        40.7399127
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7399127,
+        "longitude": -73.9800915
+      }
     },
     {
       "id": "MA116",
@@ -1666,11 +1666,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9914924,
-        40.7188556
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7188556,
+        "longitude": -73.9914924
+      }
     },
     {
       "id": "MA117",
@@ -1685,11 +1685,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9850036,
-        40.7208764
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7208764,
+        "longitude": -73.9850036
+      }
     },
     {
       "id": "MA118",
@@ -1704,11 +1704,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9850348,
-        40.7208132
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7208132,
+        "longitude": -73.9850348
+      }
     },
     {
       "id": "MA119",
@@ -1723,11 +1723,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9905535,
-        40.7259794
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7259794,
+        "longitude": -73.9905535
+      }
     },
     {
       "id": "MA120",
@@ -1742,11 +1742,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9845324,
-        40.7244007
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7244007,
+        "longitude": -73.9845324
+      }
     },
     {
       "id": "MA122",
@@ -1761,11 +1761,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0054994,
-        40.7464281
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7464281,
+        "longitude": -74.0054994
+      }
     },
     {
       "id": "MA124",
@@ -1780,11 +1780,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9935566,
-        40.7208659
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7208659,
+        "longitude": -73.9935566
+      }
     },
     {
       "id": "MA125",
@@ -1799,11 +1799,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9933697,
-        40.7194437
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7194437,
+        "longitude": -73.9933697
+      }
     },
     {
       "id": "MA126",
@@ -1818,11 +1818,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.989593,
-        40.7622461
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7622461,
+        "longitude": -73.989593
+      }
     },
     {
       "id": "MA129",
@@ -1837,11 +1837,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9984234,
-        40.7332901
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7332901,
+        "longitude": -73.9984234
+      }
     },
     {
       "id": "MA131",
@@ -1856,11 +1856,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0044964,
-        40.7501321
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7501321,
+        "longitude": -74.0044964
+      }
     },
     {
       "id": "MA132",
@@ -1875,11 +1875,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0041806,
-        40.7500174
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7500174,
+        "longitude": -74.0041806
+      }
     },
     {
       "id": "MA133",
@@ -1894,11 +1894,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0043727,
-        40.7500805
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7500805,
+        "longitude": -74.0043727
+      }
     },
     {
       "id": "MA134",
@@ -1913,11 +1913,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0040157,
-        40.7499492
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7499492,
+        "longitude": -74.0040157
+      }
     },
     {
       "id": "MA135",
@@ -1932,11 +1932,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0042111,
-        40.7499804
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7499804,
+        "longitude": -74.0042111
+      }
     },
     {
       "id": "MA136",
@@ -1951,11 +1951,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0037006,
-        40.7498115
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7498115,
+        "longitude": -74.0037006
+      }
     },
     {
       "id": "MA137",
@@ -1970,11 +1970,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0035852,
-        40.7497696
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7497696,
+        "longitude": -74.0035852
+      }
     },
     {
       "id": "MA138",
@@ -1989,11 +1989,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.005004,
-        40.7498665
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7498665,
+        "longitude": -74.005004
+      }
     },
     {
       "id": "MA139",
@@ -2008,11 +2008,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0051872,
-        40.7499342
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7499342,
+        "longitude": -74.0051872
+      }
     },
     {
       "id": "MA140",
@@ -2027,11 +2027,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0054024,
-        40.7500313
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7500313,
+        "longitude": -74.0054024
+      }
     },
     {
       "id": "MA141",
@@ -2046,11 +2046,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0055421,
-        40.749778
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.749778,
+        "longitude": -74.0055421
+      }
     },
     {
       "id": "MA142",
@@ -2065,11 +2065,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0047674,
-        40.7495009
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7495009,
+        "longitude": -74.0047674
+      }
     },
     {
       "id": "MA143",
@@ -2084,11 +2084,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0048244,
-        40.7494518
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7494518,
+        "longitude": -74.0048244
+      }
     },
     {
       "id": "MA144",
@@ -2103,11 +2103,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0042332,
-        40.7492373
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7492373,
+        "longitude": -74.0042332
+      }
     },
     {
       "id": "MA145",
@@ -2122,11 +2122,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0038323,
-        40.7485527
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7485527,
+        "longitude": -74.0038323
+      }
     },
     {
       "id": "MA146",
@@ -2141,11 +2141,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0040119,
-        40.7486434
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7486434,
+        "longitude": -74.0040119
+      }
     },
     {
       "id": "MA147",
@@ -2160,11 +2160,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0043141,
-        40.7487557
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7487557,
+        "longitude": -74.0043141
+      }
     },
     {
       "id": "MA148",
@@ -2179,11 +2179,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0050793,
-        40.7491116
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7491116,
+        "longitude": -74.0050793
+      }
     },
     {
       "id": "MA149",
@@ -2198,11 +2198,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0052774,
-        40.749162
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.749162,
+        "longitude": -74.0052774
+      }
     },
     {
       "id": "MA150",
@@ -2217,11 +2217,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0061341,
-        40.7492207
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7492207,
+        "longitude": -74.0061341
+      }
     },
     {
       "id": "MA151",
@@ -2236,11 +2236,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0055599,
-        40.7490119
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7490119,
+        "longitude": -74.0055599
+      }
     },
     {
       "id": "MA152",
@@ -2255,11 +2255,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0054342,
-        40.7489832
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7489832,
+        "longitude": -74.0054342
+      }
     },
     {
       "id": "MA153",
@@ -2274,11 +2274,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0053524,
-        40.7489431
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7489431,
+        "longitude": -74.0053524
+      }
     },
     {
       "id": "MA154",
@@ -2293,11 +2293,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0052508,
-        40.7489086
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7489086,
+        "longitude": -74.0052508
+      }
     },
     {
       "id": "MA155",
@@ -2312,11 +2312,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0049963,
-        40.748787
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.748787,
+        "longitude": -74.0049963
+      }
     },
     {
       "id": "MA156",
@@ -2331,11 +2331,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0048372,
-        40.7487261
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7487261,
+        "longitude": -74.0048372
+      }
     },
     {
       "id": "MA157",
@@ -2350,11 +2350,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0048993,
-        40.7487583
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7487583,
+        "longitude": -74.0048993
+      }
     },
     {
       "id": "MA158",
@@ -2369,11 +2369,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0044742,
-        40.7485502
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7485502,
+        "longitude": -74.0044742
+      }
     },
     {
       "id": "MA159",
@@ -2388,11 +2388,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0055651,
-        40.7484842
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7484842,
+        "longitude": -74.0055651
+      }
     },
     {
       "id": "MA160",
@@ -2407,11 +2407,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0056655,
-        40.7485387
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7485387,
+        "longitude": -74.0056655
+      }
     },
     {
       "id": "MA161",
@@ -2426,11 +2426,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.006396,
-        40.7488232
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7488232,
+        "longitude": -74.006396
+      }
     },
     {
       "id": "MA162",
@@ -2445,11 +2445,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0049853,
-        40.7478552
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7478552,
+        "longitude": -74.0049853
+      }
     },
     {
       "id": "MA163",
@@ -2464,11 +2464,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0022364,
-        40.75193
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.75193,
+        "longitude": -74.0022364
+      }
     },
     {
       "id": "MA164",
@@ -2483,11 +2483,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0026522,
-        40.7521088
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7521088,
+        "longitude": -74.0026522
+      }
     },
     {
       "id": "MA165",
@@ -2502,11 +2502,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0041354,
-        40.7516496
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7516496,
+        "longitude": -74.0041354
+      }
     },
     {
       "id": "MA166",
@@ -2521,11 +2521,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0041652,
-        40.7516054
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7516054,
+        "longitude": -74.0041652
+      }
     },
     {
       "id": "MA167",
@@ -2540,11 +2540,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0045116,
-        40.7512794
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7512794,
+        "longitude": -74.0045116
+      }
     },
     {
       "id": "MA168",
@@ -2559,11 +2559,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0044236,
-        40.7512504
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7512504,
+        "longitude": -74.0044236
+      }
     },
     {
       "id": "MA169",
@@ -2578,11 +2578,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0044835,
-        40.7513197
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7513197,
+        "longitude": -74.0044835
+      }
     },
     {
       "id": "MA170",
@@ -2597,11 +2597,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.004452,
-        40.7513549
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7513549,
+        "longitude": -74.004452
+      }
     },
     {
       "id": "MA171",
@@ -2616,11 +2616,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0043977,
-        40.7512854
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7512854,
+        "longitude": -74.0043977
+      }
     },
     {
       "id": "MA172",
@@ -2635,11 +2635,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0031538,
-        40.7507088
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7507088,
+        "longitude": -74.0031538
+      }
     },
     {
       "id": "MA173",
@@ -2654,11 +2654,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0029311,
-        40.750597
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.750597,
+        "longitude": -74.0029311
+      }
     },
     {
       "id": "MA174",
@@ -2673,11 +2673,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0027621,
-        40.7505056
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7505056,
+        "longitude": -74.0027621
+      }
     },
     {
       "id": "MA175",
@@ -2692,11 +2692,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0027353,
-        40.7505158
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7505158,
+        "longitude": -74.0027353
+      }
     },
     {
       "id": "MA176",
@@ -2711,11 +2711,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0026414,
-        40.7501683
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7501683,
+        "longitude": -74.0026414
+      }
     },
     {
       "id": "MA177",
@@ -2730,11 +2730,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0034944,
-        40.7505666
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7505666,
+        "longitude": -74.0034944
+      }
     },
     {
       "id": "MA178",
@@ -2749,11 +2749,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0053206,
-        40.7474277
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7474277,
+        "longitude": -74.0053206
+      }
     },
     {
       "id": "MA179",
@@ -2768,11 +2768,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0024163,
-        40.7509297
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7509297,
+        "longitude": -74.0024163
+      }
     },
     {
       "id": "MA180",
@@ -2787,11 +2787,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0037157,
-        40.7501702
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7501702,
+        "longitude": -74.0037157
+      }
     },
     {
       "id": "MA181",
@@ -2806,11 +2806,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0035864,
-        40.7500552
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7500552,
+        "longitude": -74.0035864
+      }
     },
     {
       "id": "MA182",
@@ -2825,11 +2825,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0037594,
-        40.7501299
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7501299,
+        "longitude": -74.0037594
+      }
     },
     {
       "id": "MA183",
@@ -2844,11 +2844,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0035148,
-        40.7501029
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7501029,
+        "longitude": -74.0035148
+      }
     },
     {
       "id": "MA184",
@@ -2863,11 +2863,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0035878,
-        40.7501197
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7501197,
+        "longitude": -74.0035878
+      }
     },
     {
       "id": "MA185",
@@ -2882,11 +2882,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0041571,
-        40.7499597
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7499597,
+        "longitude": -74.0041571
+      }
     },
     {
       "id": "MA186",
@@ -2901,11 +2901,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0042354,
-        40.7499417
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7499417,
+        "longitude": -74.0042354
+      }
     },
     {
       "id": "MA187",
@@ -2920,11 +2920,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0041101,
-        40.7499777
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7499777,
+        "longitude": -74.0041101
+      }
     },
     {
       "id": "MA188",
@@ -2939,11 +2939,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0036085,
-        40.7497344
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7497344,
+        "longitude": -74.0036085
+      }
     },
     {
       "id": "MA189",
@@ -2958,11 +2958,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0041149,
-        40.749941
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.749941,
+        "longitude": -74.0041149
+      }
     },
     {
       "id": "MA190",
@@ -2977,11 +2977,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0036422,
-        40.7497859
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7497859,
+        "longitude": -74.0036422
+      }
     },
     {
       "id": "MA191",
@@ -2996,11 +2996,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0036348,
-        40.7497076
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7497076,
+        "longitude": -74.0036348
+      }
     },
     {
       "id": "MA192",
@@ -3015,11 +3015,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0036627,
-        40.7496717
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7496717,
+        "longitude": -74.0036627
+      }
     },
     {
       "id": "MA193",
@@ -3034,11 +3034,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0036923,
-        40.7487598
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7487598,
+        "longitude": -74.0036923
+      }
     },
     {
       "id": "MA194",
@@ -3053,11 +3053,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0057016,
-        40.7475857
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7475857,
+        "longitude": -74.0057016
+      }
     },
     {
       "id": "MA195",
@@ -3072,11 +3072,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.006149,
-        40.7477676
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7477676,
+        "longitude": -74.006149
+      }
     },
     {
       "id": "MA196",
@@ -3091,11 +3091,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0063018,
-        40.7478387
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7478387,
+        "longitude": -74.0063018
+      }
     },
     {
       "id": "MA197",
@@ -3110,11 +3110,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0066657,
-        40.7477523
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7477523,
+        "longitude": -74.0066657
+      }
     },
     {
       "id": "MA198",
@@ -3129,11 +3129,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0063743,
-        40.7476243
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7476243,
+        "longitude": -74.0063743
+      }
     },
     {
       "id": "MA199",
@@ -3148,11 +3148,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0060323,
-        40.7474851
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7474851,
+        "longitude": -74.0060323
+      }
     },
     {
       "id": "MA200",
@@ -3167,11 +3167,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0059397,
-        40.7474526
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7474526,
+        "longitude": -74.0059397
+      }
     },
     {
       "id": "MA201",
@@ -3186,11 +3186,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0057122,
-        40.7467918
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7467918,
+        "longitude": -74.0057122
+      }
     },
     {
       "id": "MA202",
@@ -3205,11 +3205,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0063448,
-        40.7470553
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7470553,
+        "longitude": -74.0063448
+      }
     },
     {
       "id": "MA203",
@@ -3224,11 +3224,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.006111,
-        40.7469617
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7469617,
+        "longitude": -74.006111
+      }
     },
     {
       "id": "MA204",
@@ -3243,11 +3243,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0062914,
-        40.7470364
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7470364,
+        "longitude": -74.0062914
+      }
     },
     {
       "id": "MA205",
@@ -3262,11 +3262,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0076175,
-        40.746867
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.746867,
+        "longitude": -74.0076175
+      }
     },
     {
       "id": "MA206",
@@ -3281,11 +3281,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0054234,
-        40.7462737
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7462737,
+        "longitude": -74.0054234
+      }
     },
     {
       "id": "MA207",
@@ -3300,11 +3300,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0054891,
-        40.7462423
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7462423,
+        "longitude": -74.0054891
+      }
     },
     {
       "id": "MA208",
@@ -3319,11 +3319,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0057581,
-        40.7460607
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7460607,
+        "longitude": -74.0057581
+      }
     },
     {
       "id": "MA209",
@@ -3338,11 +3338,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0062412,
-        40.7462478
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7462478,
+        "longitude": -74.0062412
+      }
     },
     {
       "id": "MA210",
@@ -3357,11 +3357,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.006296,
-        40.7462709
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7462709,
+        "longitude": -74.006296
+      }
     },
     {
       "id": "MA211",
@@ -3376,11 +3376,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0068656,
-        40.7465171
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7465171,
+        "longitude": -74.0068656
+      }
     },
     {
       "id": "MA212",
@@ -3395,11 +3395,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0068303,
-        40.7465678
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7465678,
+        "longitude": -74.0068303
+      }
     },
     {
       "id": "MA213",
@@ -3414,11 +3414,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0068474,
-        40.7465429
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7465429,
+        "longitude": -74.0068474
+      }
     },
     {
       "id": "MA214",
@@ -3433,11 +3433,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0068108,
-        40.7465936
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7465936,
+        "longitude": -74.0068108
+      }
     },
     {
       "id": "MA215",
@@ -3452,11 +3452,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0071808,
-        40.7466379
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7466379,
+        "longitude": -74.0071808
+      }
     },
     {
       "id": "MA216",
@@ -3471,11 +3471,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0069444,
-        40.7462706
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7462706,
+        "longitude": -74.0069444
+      }
     },
     {
       "id": "MA217",
@@ -3490,11 +3490,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0067977,
-        40.7462173
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7462173,
+        "longitude": -74.0067977
+      }
     },
     {
       "id": "MA218",
@@ -3509,11 +3509,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0061805,
-        40.7439372
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7439372,
+        "longitude": -74.0061805
+      }
     },
     {
       "id": "MA219",
@@ -3528,11 +3528,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0070663,
-        40.7455769
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7455769,
+        "longitude": -74.0070663
+      }
     },
     {
       "id": "MA220",
@@ -3547,11 +3547,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0077206,
-        40.7461924
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7461924,
+        "longitude": -74.0077206
+      }
     },
     {
       "id": "MA221",
@@ -3566,11 +3566,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9989918,
-        40.7380759
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7380759,
+        "longitude": -73.9989918
+      }
     },
     {
       "id": "MA222",
@@ -3585,11 +3585,11 @@
       "precinct": 13,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9932713,
-        40.7385275
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7385275,
+        "longitude": -73.9932713
+      }
     },
     {
       "id": "MA223",
@@ -3604,11 +3604,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9991606,
-        40.742528
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.742528,
+        "longitude": -73.9991606
+      }
     },
     {
       "id": "MA225",
@@ -3623,11 +3623,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9679875,
-        40.7714555
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7714555,
+        "longitude": -73.9679875
+      }
     },
     {
       "id": "MA226",
@@ -3642,11 +3642,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9764799,
-        40.7941111
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7941111,
+        "longitude": -73.9764799
+      }
     },
     {
       "id": "MA228",
@@ -3661,11 +3661,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9723395,
-        40.7701407
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7701407,
+        "longitude": -73.9723395
+      }
     },
     {
       "id": "MA229",
@@ -3680,11 +3680,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9725659,
-        40.770193
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.770193,
+        "longitude": -73.9725659
+      }
     },
     {
       "id": "MA230",
@@ -3699,11 +3699,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9727725,
-        40.7699059
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7699059,
+        "longitude": -73.9727725
+      }
     },
     {
       "id": "MA232",
@@ -3718,11 +3718,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9723702,
-        40.7697989
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7697989,
+        "longitude": -73.9723702
+      }
     },
     {
       "id": "MA233",
@@ -3737,11 +3737,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9731523,
-        40.7703769
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7703769,
+        "longitude": -73.9731523
+      }
     },
     {
       "id": "MA234",
@@ -3756,11 +3756,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9721367,
-        40.7706639
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7706639,
+        "longitude": -73.9721367
+      }
     },
     {
       "id": "MA235",
@@ -3775,11 +3775,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9665337,
-        40.7750382
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7750382,
+        "longitude": -73.9665337
+      }
     },
     {
       "id": "MA237",
@@ -3794,11 +3794,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0028881,
-        40.7144385
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7144385,
+        "longitude": -74.0028881
+      }
     },
     {
       "id": "MA238",
@@ -3813,11 +3813,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9785783,
-        40.7587051
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7587051,
+        "longitude": -73.9785783
+      }
     },
     {
       "id": "MA241",
@@ -3832,11 +3832,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9420363,
-        40.8471692
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8471692,
+        "longitude": -73.9420363
+      }
     },
     {
       "id": "MA243",
@@ -3851,11 +3851,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9851462,
-        40.7587593
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7587593,
+        "longitude": -73.9851462
+      }
     },
     {
       "id": "MA245",
@@ -3870,11 +3870,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9849891,
-        40.7590569
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7590569,
+        "longitude": -73.9849891
+      }
     },
     {
       "id": "MA246",
@@ -3889,11 +3889,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.964572,
-        40.781033
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.781033,
+        "longitude": -73.964572
+      }
     },
     {
       "id": "MA247",
@@ -3908,11 +3908,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9710098,
-        40.7699607
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7699607,
+        "longitude": -73.9710098
+      }
     },
     {
       "id": "MA248",
@@ -3927,11 +3927,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9764403,
-        40.7737621
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7737621,
+        "longitude": -73.9764403
+      }
     },
     {
       "id": "MA249",
@@ -3946,11 +3946,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9676966,
-        40.8005515
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8005515,
+        "longitude": -73.9676966
+      }
     },
     {
       "id": "MA251",
@@ -3965,11 +3965,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9732913,
-        40.7794692
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7794692,
+        "longitude": -73.9732913
+      }
     },
     {
       "id": "MA252",
@@ -3984,11 +3984,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9559997,
-        40.7886205
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7886205,
+        "longitude": -73.9559997
+      }
     },
     {
       "id": "MA253",
@@ -4003,11 +4003,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.974118,
-        40.7747533
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7747533,
+        "longitude": -73.974118
+      }
     },
     {
       "id": "MA254",
@@ -4022,11 +4022,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9717355,
-        40.7731728
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7731728,
+        "longitude": -73.9717355
+      }
     },
     {
       "id": "MA255",
@@ -4041,11 +4041,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9592113,
-        40.7843754
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7843754,
+        "longitude": -73.9592113
+      }
     },
     {
       "id": "MA256",
@@ -4060,11 +4060,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9760662,
-        40.7660454
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7660454,
+        "longitude": -73.9760662
+      }
     },
     {
       "id": "MA257",
@@ -4079,11 +4079,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9766301,
-        40.7660429
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7660429,
+        "longitude": -73.9766301
+      }
     },
     {
       "id": "MA258",
@@ -4098,11 +4098,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9666796,
-        40.7789243
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7789243,
+        "longitude": -73.9666796
+      }
     },
     {
       "id": "MA259",
@@ -4117,11 +4117,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9718893,
-        40.7728773
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7728773,
+        "longitude": -73.9718893
+      }
     },
     {
       "id": "MA260",
@@ -4136,11 +4136,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.975779,
-        40.7657085
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7657085,
+        "longitude": -73.975779
+      }
     },
     {
       "id": "MA264",
@@ -4155,11 +4155,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9994536,
-        40.7270859
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7270859,
+        "longitude": -73.9994536
+      }
     },
     {
       "id": "MA265",
@@ -4174,11 +4174,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9639416,
-        40.7774949
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7774949,
+        "longitude": -73.9639416
+      }
     },
     {
       "id": "MA268",
@@ -4193,11 +4193,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9910185,
-        40.7298846
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7298846,
+        "longitude": -73.9910185
+      }
     },
     {
       "id": "MA271",
@@ -4212,11 +4212,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.973245,
-        40.765928
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.765928,
+        "longitude": -73.973245
+      }
     },
     {
       "id": "MA272",
@@ -4231,11 +4231,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9722858,
-        40.7727282
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7727282,
+        "longitude": -73.9722858
+      }
     },
     {
       "id": "MA273",
@@ -4250,11 +4250,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9677251,
-        40.774479
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.774479,
+        "longitude": -73.9677251
+      }
     },
     {
       "id": "MA274",
@@ -4269,11 +4269,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9684393,
-        40.7731439
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7731439,
+        "longitude": -73.9684393
+      }
     },
     {
       "id": "MA275",
@@ -4288,11 +4288,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9615238,
-        40.8086544
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8086544,
+        "longitude": -73.9615238
+      }
     },
     {
       "id": "MA276",
@@ -4307,11 +4307,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0029361,
-        40.7127003
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7127003,
+        "longitude": -74.0029361
+      }
     },
     {
       "id": "MA277",
@@ -4326,11 +4326,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9780253,
-        40.7628768
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7628768,
+        "longitude": -73.9780253
+      }
     },
     {
       "id": "MA278",
@@ -4345,11 +4345,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.967435,
-        40.7724831
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7724831,
+        "longitude": -73.967435
+      }
     },
     {
       "id": "MA279",
@@ -4364,11 +4364,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9687205,
-        40.7804752
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7804752,
+        "longitude": -73.9687205
+      }
     },
     {
       "id": "MA280",
@@ -4383,11 +4383,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9686451,
-        40.7804476
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7804476,
+        "longitude": -73.9686451
+      }
     },
     {
       "id": "MA281",
@@ -4402,11 +4402,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9821345,
-        40.7629651
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7629651,
+        "longitude": -73.9821345
+      }
     },
     {
       "id": "MA290",
@@ -4421,11 +4421,11 @@
       "precinct": 13,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9900756,
-        40.7354231
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7354231,
+        "longitude": -73.9900756
+      }
     },
     {
       "id": "MA291",
@@ -4440,11 +4440,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9814519,
-        40.7591163
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7591163,
+        "longitude": -73.9814519
+      }
     },
     {
       "id": "MA292",
@@ -4459,11 +4459,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9983532,
-        40.7269811
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7269811,
+        "longitude": -73.9983532
+      }
     },
     {
       "id": "MA293",
@@ -4478,11 +4478,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9958068,
-        40.750036
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.750036,
+        "longitude": -73.9958068
+      }
     },
     {
       "id": "MA296",
@@ -4497,11 +4497,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0010862,
-        40.736187
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.736187,
+        "longitude": -74.0010862
+      }
     },
     {
       "id": "MA297",
@@ -4516,11 +4516,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9771802,
-        40.7589481
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7589481,
+        "longitude": -73.9771802
+      }
     },
     {
       "id": "MA298",
@@ -4535,11 +4535,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9874097,
-        40.7538804
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7538804,
+        "longitude": -73.9874097
+      }
     },
     {
       "id": "MA299",
@@ -4554,11 +4554,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9903291,
-        40.7344122
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7344122,
+        "longitude": -73.9903291
+      }
     },
     {
       "id": "MA300",
@@ -4573,11 +4573,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9794091,
-        40.7837563
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7837563,
+        "longitude": -73.9794091
+      }
     },
     {
       "id": "MA301",
@@ -4592,11 +4592,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9838341,
-        40.7292262
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7292262,
+        "longitude": -73.9838341
+      }
     },
     {
       "id": "MA303",
@@ -4611,11 +4611,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9900004,
-        40.7222725
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7222725,
+        "longitude": -73.9900004
+      }
     },
     {
       "id": "MA304",
@@ -4630,11 +4630,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0060707,
-        40.7446001
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7446001,
+        "longitude": -74.0060707
+      }
     },
     {
       "id": "MA305",
@@ -4649,11 +4649,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9298867,
-        40.8564265
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8564265,
+        "longitude": -73.9298867
+      }
     },
     {
       "id": "MA307",
@@ -4668,11 +4668,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9857428,
-        40.7213374
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7213374,
+        "longitude": -73.9857428
+      }
     },
     {
       "id": "MA308",
@@ -4687,11 +4687,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9621121,
-        40.8126196
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8126196,
+        "longitude": -73.9621121
+      }
     },
     {
       "id": "MA309",
@@ -4706,11 +4706,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9622465,
-        40.809011
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.809011,
+        "longitude": -73.9622465
+      }
     },
     {
       "id": "MA310",
@@ -4725,11 +4725,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9604879,
-        40.8074792
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8074792,
+        "longitude": -73.9604879
+      }
     },
     {
       "id": "MA311",
@@ -4744,11 +4744,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9635685,
-        40.8074652
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8074652,
+        "longitude": -73.9635685
+      }
     },
     {
       "id": "MA312",
@@ -4763,11 +4763,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9880814,
-        40.7542354
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7542354,
+        "longitude": -73.9880814
+      }
     },
     {
       "id": "MA314",
@@ -4782,11 +4782,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9971129,
-        40.7142105
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7142105,
+        "longitude": -73.9971129
+      }
     },
     {
       "id": "MA315",
@@ -4801,11 +4801,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9813076,
-        40.7617344
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7617344,
+        "longitude": -73.9813076
+      }
     },
     {
       "id": "MA316",
@@ -4820,11 +4820,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9829247,
-        40.7596545
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7596545,
+        "longitude": -73.9829247
+      }
     },
     {
       "id": "MA317",
@@ -4839,11 +4839,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9853284,
-        40.7546734
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7546734,
+        "longitude": -73.9853284
+      }
     },
     {
       "id": "MA318",
@@ -4858,11 +4858,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9825535,
-        40.771792
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.771792,
+        "longitude": -73.9825535
+      }
     },
     {
       "id": "MA319",
@@ -4877,11 +4877,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.982462,
-        40.7720828
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7720828,
+        "longitude": -73.982462
+      }
     },
     {
       "id": "MA320",
@@ -4896,11 +4896,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9953215,
-        40.7709814
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7709814,
+        "longitude": -73.9953215
+      }
     },
     {
       "id": "MA321",
@@ -4915,11 +4915,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9546801,
-        40.8135488
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8135488,
+        "longitude": -73.9546801
+      }
     },
     {
       "id": "MA322",
@@ -4934,11 +4934,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9620013,
-        40.808926
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.808926,
+        "longitude": -73.9620013
+      }
     },
     {
       "id": "MA324",
@@ -4953,11 +4953,11 @@
       "precinct": 28,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9580124,
-        40.8036855
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8036855,
+        "longitude": -73.9580124
+      }
     },
     {
       "id": "MA325",
@@ -4972,11 +4972,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9999941,
-        40.7157691
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7157691,
+        "longitude": -73.9999941
+      }
     },
     {
       "id": "MA327",
@@ -4991,11 +4991,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9893438,
-        40.749167
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.749167,
+        "longitude": -73.9893438
+      }
     },
     {
       "id": "MA329",
@@ -5010,11 +5010,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.990224,
-        40.7283124
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7283124,
+        "longitude": -73.990224
+      }
     },
     {
       "id": "MA330",
@@ -5029,11 +5029,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9968262,
-        40.7202849
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7202849,
+        "longitude": -73.9968262
+      }
     },
     {
       "id": "MA331",
@@ -5048,11 +5048,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9958875,
-        40.7245801
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7245801,
+        "longitude": -73.9958875
+      }
     },
     {
       "id": "MA332",
@@ -5067,11 +5067,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.932043,
-        40.8613369
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8613369,
+        "longitude": -73.932043
+      }
     },
     {
       "id": "MA333",
@@ -5086,11 +5086,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9836819,
-        40.7731831
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7731831,
+        "longitude": -73.9836819
+      }
     },
     {
       "id": "MA334",
@@ -5105,11 +5105,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9855947,
-        40.7713399
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7713399,
+        "longitude": -73.9855947
+      }
     },
     {
       "id": "MA335",
@@ -5124,11 +5124,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9838482,
-        40.771141
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.771141,
+        "longitude": -73.9838482
+      }
     },
     {
       "id": "MA336",
@@ -5143,11 +5143,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9972762,
-        40.710855
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.710855,
+        "longitude": -73.9972762
+      }
     },
     {
       "id": "MA337",
@@ -5162,11 +5162,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0004289,
-        40.7187368
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7187368,
+        "longitude": -74.0004289
+      }
     },
     {
       "id": "MA339",
@@ -5181,11 +5181,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9919455,
-        40.7713068
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7713068,
+        "longitude": -73.9919455
+      }
     },
     {
       "id": "MA340",
@@ -5200,11 +5200,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9843383,
-        40.7706281
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7706281,
+        "longitude": -73.9843383
+      }
     },
     {
       "id": "MA342",
@@ -5219,11 +5219,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9816418,
-        40.7530505
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7530505,
+        "longitude": -73.9816418
+      }
     },
     {
       "id": "MA343",
@@ -5238,11 +5238,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9817494,
-        40.7528969
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7528969,
+        "longitude": -73.9817494
+      }
     },
     {
       "id": "MA352",
@@ -5257,11 +5257,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9605637,
-        40.8070368
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8070368,
+        "longitude": -73.9605637
+      }
     },
     {
       "id": "MA353",
@@ -5276,11 +5276,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9822577,
-        40.74552
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.74552,
+        "longitude": -73.9822577
+      }
     },
     {
       "id": "MA354",
@@ -5295,11 +5295,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9723903,
-        40.7707115
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7707115,
+        "longitude": -73.9723903
+      }
     },
     {
       "id": "MA355",
@@ -5314,11 +5314,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9817831,
-        40.7694168
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7694168,
+        "longitude": -73.9817831
+      }
     },
     {
       "id": "MA356",
@@ -5333,11 +5333,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9850044,
-        40.7549607
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7549607,
+        "longitude": -73.9850044
+      }
     },
     {
       "id": "MA357",
@@ -5352,11 +5352,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9725158,
-        40.7725104
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7725104,
+        "longitude": -73.9725158
+      }
     },
     {
       "id": "MA358",
@@ -5371,11 +5371,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9738182,
-        40.7740994
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7740994,
+        "longitude": -73.9738182
+      }
     },
     {
       "id": "MA359",
@@ -5390,11 +5390,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9671918,
-        40.7768328
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7768328,
+        "longitude": -73.9671918
+      }
     },
     {
       "id": "MA360",
@@ -5409,11 +5409,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.996819,
-        40.7306147
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7306147,
+        "longitude": -73.996819
+      }
     },
     {
       "id": "MA361",
@@ -5428,11 +5428,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9976134,
-        40.7303917
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7303917,
+        "longitude": -73.9976134
+      }
     },
     {
       "id": "MA362",
@@ -5447,11 +5447,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9766942,
-        40.7730089
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7730089,
+        "longitude": -73.9766942
+      }
     },
     {
       "id": "MA364",
@@ -5466,11 +5466,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9892771,
-        40.7143286
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7143286,
+        "longitude": -73.9892771
+      }
     },
     {
       "id": "MA365",
@@ -5485,11 +5485,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9949266,
-        40.7234177
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7234177,
+        "longitude": -73.9949266
+      }
     },
     {
       "id": "MA370",
@@ -5504,11 +5504,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0036137,
-        40.7129566
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7129566,
+        "longitude": -74.0036137
+      }
     },
     {
       "id": "MA371",
@@ -5523,11 +5523,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.002798,
-        40.7152666
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7152666,
+        "longitude": -74.002798
+      }
     },
     {
       "id": "MA372",
@@ -5542,11 +5542,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0010071,
-        40.7520679
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7520679,
+        "longitude": -74.0010071
+      }
     },
     {
       "id": "MA373",
@@ -5561,11 +5561,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.984391,
-        40.7702276
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7702276,
+        "longitude": -73.984391
+      }
     },
     {
       "id": "MA375",
@@ -5580,11 +5580,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9606702,
-        40.8075393
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8075393,
+        "longitude": -73.9606702
+      }
     },
     {
       "id": "MA378",
@@ -5599,11 +5599,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9744891,
-        40.7639334
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7639334,
+        "longitude": -73.9744891
+      }
     },
     {
       "id": "MA383",
@@ -5618,11 +5618,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9981626,
-        40.728649
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.728649,
+        "longitude": -73.9981626
+      }
     },
     {
       "id": "MA385",
@@ -5637,11 +5637,11 @@
       "precinct": 13,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9907301,
-        40.7360034
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7360034,
+        "longitude": -73.9907301
+      }
     },
     {
       "id": "MA386",
@@ -5656,11 +5656,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9498955,
-        40.8303033
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8303033,
+        "longitude": -73.9498955
+      }
     },
     {
       "id": "MA390",
@@ -5675,11 +5675,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9938856,
-        40.7674628
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7674628,
+        "longitude": -73.9938856
+      }
     },
     {
       "id": "MA392",
@@ -5694,11 +5694,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9627595,
-        40.8037976
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8037976,
+        "longitude": -73.9627595
+      }
     },
     {
       "id": "MA1",
@@ -5713,11 +5713,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0113536,
-        40.7033867
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7033867,
+        "longitude": -74.0113536
+      }
     },
     {
       "id": "MA2",
@@ -5732,11 +5732,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0137472,
-        40.7040265
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7040265,
+        "longitude": -74.0137472
+      }
     },
     {
       "id": "MA4",
@@ -5751,11 +5751,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0049076,
-        40.7250957
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7250957,
+        "longitude": -74.0049076
+      }
     },
     {
       "id": "MA5",
@@ -5770,11 +5770,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9977778,
-        40.725
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.725,
+        "longitude": -73.9977778
+      }
     },
     {
       "id": "MA9",
@@ -5789,11 +5789,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0091958,
-        40.7063713
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7063713,
+        "longitude": -74.0091958
+      }
     },
     {
       "id": "MA13",
@@ -5808,11 +5808,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0177051,
-        40.7057229
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7057229,
+        "longitude": -74.0177051
+      }
     },
     {
       "id": "MA15",
@@ -5827,11 +5827,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0036758,
-        40.706628
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.706628,
+        "longitude": -74.0036758
+      }
     },
     {
       "id": "MA18",
@@ -5846,11 +5846,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0081354,
-        40.7275353
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7275353,
+        "longitude": -74.0081354
+      }
     },
     {
       "id": "MA23",
@@ -5865,11 +5865,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9814793,
-        40.7491907
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7491907,
+        "longitude": -73.9814793
+      }
     },
     {
       "id": "MA29",
@@ -5884,11 +5884,11 @@
       "precinct": 32,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9439308,
-        40.7856582
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7856582,
+        "longitude": -73.9439308
+      }
     },
     {
       "id": "MA30",
@@ -5903,11 +5903,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0137633,
-        40.7079432
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7079432,
+        "longitude": -74.0137633
+      }
     },
     {
       "id": "MA41",
@@ -5922,11 +5922,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.966827,
-        40.7648187
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7648187,
+        "longitude": -73.966827
+      }
     },
     {
       "id": "MA45",
@@ -5941,11 +5941,11 @@
       "precinct": 28,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9493338,
-        40.7963422
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7963422,
+        "longitude": -73.9493338
+      }
     },
     {
       "id": "MA46",
@@ -5960,11 +5960,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9698587,
-        40.7640002
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7640002,
+        "longitude": -73.9698587
+      }
     },
     {
       "id": "MA47",
@@ -5979,11 +5979,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0030317,
-        40.7217683
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7217683,
+        "longitude": -74.0030317
+      }
     },
     {
       "id": "MA49",
@@ -5998,11 +5998,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0068809,
-        40.7231769
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7231769,
+        "longitude": -74.0068809
+      }
     },
     {
       "id": "MA50",
@@ -6017,11 +6017,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9639898,
-        40.7734755
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7734755,
+        "longitude": -73.9639898
+      }
     },
     {
       "id": "MA54",
@@ -6036,11 +6036,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0021462,
-        40.7240871
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7240871,
+        "longitude": -74.0021462
+      }
     },
     {
       "id": "MA58",
@@ -6055,11 +6055,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0098159,
-        40.7226366
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7226366,
+        "longitude": -74.0098159
+      }
     },
     {
       "id": "MA63",
@@ -6074,11 +6074,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9633859,
-        40.7733329
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7733329,
+        "longitude": -73.9633859
+      }
     },
     {
       "id": "MA69",
@@ -6093,11 +6093,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.965721,
-        40.7700521
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7700521,
+        "longitude": -73.965721
+      }
     },
     {
       "id": "MA70",
@@ -6112,11 +6112,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0049073,
-        40.7179792
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7179792,
+        "longitude": -74.0049073
+      }
     },
     {
       "id": "MA76",
@@ -6131,11 +6131,11 @@
       "precinct": 28,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9480796,
-        40.7932038
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7932038,
+        "longitude": -73.9480796
+      }
     },
     {
       "id": "MA86",
@@ -6150,11 +6150,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0036388,
-        40.7190232
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7190232,
+        "longitude": -74.0036388
+      }
     },
     {
       "id": "MA100",
@@ -6169,11 +6169,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9639987,
-        40.7740245
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7740245,
+        "longitude": -73.9639987
+      }
     },
     {
       "id": "MA103",
@@ -6188,11 +6188,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0049014,
-        40.7174539
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7174539,
+        "longitude": -74.0049014
+      }
     },
     {
       "id": "MA106",
@@ -6207,11 +6207,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9994085,
-        40.7235189
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7235189,
+        "longitude": -73.9994085
+      }
     },
     {
       "id": "MA109",
@@ -6226,11 +6226,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0032329,
-        40.7188402
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7188402,
+        "longitude": -74.0032329
+      }
     },
     {
       "id": "MA121",
@@ -6245,11 +6245,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9987925,
-        40.7258312
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7258312,
+        "longitude": -73.9987925
+      }
     },
     {
       "id": "MA123",
@@ -6264,11 +6264,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0027872,
-        40.7202528
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7202528,
+        "longitude": -74.0027872
+      }
     },
     {
       "id": "MA127",
@@ -6283,11 +6283,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0006603,
-        40.7263278
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7263278,
+        "longitude": -74.0006603
+      }
     },
     {
       "id": "MA128",
@@ -6302,11 +6302,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0007365,
-        40.7262
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7262,
+        "longitude": -74.0007365
+      }
     },
     {
       "id": "MA130",
@@ -6321,11 +6321,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0005096,
-        40.7256775
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7256775,
+        "longitude": -74.0005096
+      }
     },
     {
       "id": "MA224",
@@ -6340,11 +6340,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0014366,
-        40.7226991
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7226991,
+        "longitude": -74.0014366
+      }
     },
     {
       "id": "MA227",
@@ -6359,11 +6359,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0134462,
-        40.7055641
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7055641,
+        "longitude": -74.0134462
+      }
     },
     {
       "id": "MA231",
@@ -6378,11 +6378,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0138892,
-        40.7104974
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7104974,
+        "longitude": -74.0138892
+      }
     },
     {
       "id": "MA236",
@@ -6397,11 +6397,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.014598,
-        40.7044082
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7044082,
+        "longitude": -74.014598
+      }
     },
     {
       "id": "MA239",
@@ -6416,11 +6416,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0158334,
-        40.7021499
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7021499,
+        "longitude": -74.0158334
+      }
     },
     {
       "id": "MA240",
@@ -6435,11 +6435,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0114845,
-        40.7132396
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7132396,
+        "longitude": -74.0114845
+      }
     },
     {
       "id": "MA242",
@@ -6454,11 +6454,11 @@
       "precinct": 32,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9389456,
-        40.8011976
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8011976,
+        "longitude": -73.9389456
+      }
     },
     {
       "id": "MA244",
@@ -6473,11 +6473,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.005459,
-        40.7226058
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7226058,
+        "longitude": -74.005459
+      }
     },
     {
       "id": "MA250",
@@ -6492,11 +6492,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0103932,
-        40.7089149
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7089149,
+        "longitude": -74.0103932
+      }
     },
     {
       "id": "MA261",
@@ -6511,11 +6511,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0140533,
-        40.7104591
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7104591,
+        "longitude": -74.0140533
+      }
     },
     {
       "id": "MA262",
@@ -6530,11 +6530,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0119121,
-        40.7241835
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7241835,
+        "longitude": -74.0119121
+      }
     },
     {
       "id": "MA263",
@@ -6549,11 +6549,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0121608,
-        40.7228631
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7228631,
+        "longitude": -74.0121608
+      }
     },
     {
       "id": "MA266",
@@ -6568,11 +6568,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0109293,
-        40.7089672
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7089672,
+        "longitude": -74.0109293
+      }
     },
     {
       "id": "MA267",
@@ -6587,11 +6587,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9675854,
-        40.7506894
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7506894,
+        "longitude": -73.9675854
+      }
     },
     {
       "id": "MA269",
@@ -6606,11 +6606,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0105215,
-        40.7034838
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7034838,
+        "longitude": -74.0105215
+      }
     },
     {
       "id": "MA270",
@@ -6625,11 +6625,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0067978,
-        40.7077153
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7077153,
+        "longitude": -74.0067978
+      }
     },
     {
       "id": "MA282",
@@ -6644,11 +6644,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0145339,
-        40.7036281
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7036281,
+        "longitude": -74.0145339
+      }
     },
     {
       "id": "MA283",
@@ -6663,11 +6663,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0163913,
-        40.7030984
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7030984,
+        "longitude": -74.0163913
+      }
     },
     {
       "id": "MA284",
@@ -6682,11 +6682,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0089367,
-        40.7075343
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7075343,
+        "longitude": -74.0089367
+      }
     },
     {
       "id": "MA285",
@@ -6701,11 +6701,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0092648,
-        40.7075476
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7075476,
+        "longitude": -74.0092648
+      }
     },
     {
       "id": "MA286",
@@ -6720,11 +6720,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0107995,
-        40.7068167
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7068167,
+        "longitude": -74.0107995
+      }
     },
     {
       "id": "MA287",
@@ -6739,11 +6739,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0070508,
-        40.7163748
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7163748,
+        "longitude": -74.0070508
+      }
     },
     {
       "id": "MA288",
@@ -6758,11 +6758,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0105868,
-        40.7093141
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7093141,
+        "longitude": -74.0105868
+      }
     },
     {
       "id": "MA289",
@@ -6777,11 +6777,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0054637,
-        40.7201076
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7201076,
+        "longitude": -74.0054637
+      }
     },
     {
       "id": "MA294",
@@ -6796,11 +6796,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0179145,
-        40.7104676
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7104676,
+        "longitude": -74.0179145
+      }
     },
     {
       "id": "MA295",
@@ -6815,11 +6815,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0183056,
-        40.7088681
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7088681,
+        "longitude": -74.0183056
+      }
     },
     {
       "id": "MA302",
@@ -6834,11 +6834,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9723132,
-        40.7516982
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7516982,
+        "longitude": -73.9723132
+      }
     },
     {
       "id": "MA306",
@@ -6853,11 +6853,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.968794,
-        40.7491463
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7491463,
+        "longitude": -73.968794
+      }
     },
     {
       "id": "MA313",
@@ -6872,11 +6872,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9728127,
-        40.7432746
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7432746,
+        "longitude": -73.9728127
+      }
     },
     {
       "id": "MA323",
@@ -6891,11 +6891,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.96624,
-        40.7504131
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7504131,
+        "longitude": -73.96624
+      }
     },
     {
       "id": "MA326",
@@ -6910,11 +6910,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0163813,
-        40.7043797
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7043797,
+        "longitude": -74.0163813
+      }
     },
     {
       "id": "MA328",
@@ -6929,11 +6929,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9675707,
-        40.7508783
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7508783,
+        "longitude": -73.9675707
+      }
     },
     {
       "id": "MA338",
@@ -6948,11 +6948,11 @@
       "precinct": 32,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9427836,
-        40.8004112
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8004112,
+        "longitude": -73.9427836
+      }
     },
     {
       "id": "MA345",
@@ -6967,11 +6967,11 @@
       "precinct": 32,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9365295,
-        40.8110316
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8110316,
+        "longitude": -73.9365295
+      }
     },
     {
       "id": "MA346",
@@ -6986,11 +6986,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9657829,
-        40.7511239
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7511239,
+        "longitude": -73.9657829
+      }
     },
     {
       "id": "MA347",
@@ -7005,11 +7005,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9662893,
-        40.7503431
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7503431,
+        "longitude": -73.9662893
+      }
     },
     {
       "id": "MA348",
@@ -7024,11 +7024,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9665045,
-        40.751774
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.751774,
+        "longitude": -73.9665045
+      }
     },
     {
       "id": "MA349",
@@ -7043,11 +7043,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9668876,
-        40.7519738
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7519738,
+        "longitude": -73.9668876
+      }
     },
     {
       "id": "MA350",
@@ -7062,11 +7062,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9668182,
-        40.7521004
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7521004,
+        "longitude": -73.9668182
+      }
     },
     {
       "id": "MA351",
@@ -7081,11 +7081,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9661929,
-        40.7514321
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7514321,
+        "longitude": -73.9661929
+      }
     },
     {
       "id": "MA363",
@@ -7100,11 +7100,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9635908,
-        40.7674754
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7674754,
+        "longitude": -73.9635908
+      }
     },
     {
       "id": "MA366",
@@ -7119,11 +7119,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0139509,
-        40.7012337
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7012337,
+        "longitude": -74.0139509
+      }
     },
     {
       "id": "MA367",
@@ -7138,11 +7138,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0037455,
-        40.7255612
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7255612,
+        "longitude": -74.0037455
+      }
     },
     {
       "id": "MA368",
@@ -7157,11 +7157,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0050784,
-        40.728484
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.728484,
+        "longitude": -74.0050784
+      }
     },
     {
       "id": "MA369",
@@ -7176,11 +7176,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0063514,
-        40.7123393
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7123393,
+        "longitude": -74.0063514
+      }
     },
     {
       "id": "MA374",
@@ -7195,11 +7195,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9997541,
-        40.7259792
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7259792,
+        "longitude": -73.9997541
+      }
     },
     {
       "id": "MA376",
@@ -7214,11 +7214,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0075638,
-        40.7053799
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7053799,
+        "longitude": -74.0075638
+      }
     },
     {
       "id": "MA377",
@@ -7233,11 +7233,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0143795,
-        40.7025911
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7025911,
+        "longitude": -74.0143795
+      }
     },
     {
       "id": "MA379",
@@ -7252,11 +7252,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.972054,
-        40.7548848
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7548848,
+        "longitude": -73.972054
+      }
     },
     {
       "id": "MA380",
@@ -7271,11 +7271,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9717679,
-        40.7552716
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7552716,
+        "longitude": -73.9717679
+      }
     },
     {
       "id": "MA382",
@@ -7290,11 +7290,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9599853,
-        40.7570853
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7570853,
+        "longitude": -73.9599853
+      }
     },
     {
       "id": "MA384",
@@ -7309,11 +7309,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0146674,
-        40.7020025
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7020025,
+        "longitude": -74.0146674
+      }
     },
     {
       "id": "MA387",
@@ -7328,11 +7328,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.011803,
-        40.7175386
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7175386,
+        "longitude": -74.011803
+      }
     },
     {
       "id": "MA388",
@@ -7347,11 +7347,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0116186,
-        40.709485
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.709485,
+        "longitude": -74.0116186
+      }
     },
     {
       "id": "MA389",
@@ -7366,11 +7366,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0121369,
-        40.7076911
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7076911,
+        "longitude": -74.0121369
+      }
     },
     {
       "id": "MA391",
@@ -7385,11 +7385,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9661688,
-        40.7570087
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7570087,
+        "longitude": -73.9661688
+      }
     },
     {
       "id": "MA393",
@@ -7404,11 +7404,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9663836,
-        40.750469
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.750469,
+        "longitude": -73.9663836
+      }
     },
     {
       "id": "MA394",
@@ -7423,11 +7423,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9665525,
-        40.7510385
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7510385,
+        "longitude": -73.9665525
+      }
     },
     {
       "id": "MA395",
@@ -7442,11 +7442,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9664336,
-        40.7501364
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7501364,
+        "longitude": -73.9664336
+      }
     },
     {
       "id": "MA396",
@@ -7461,11 +7461,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9660084,
-        40.7513078
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7513078,
+        "longitude": -73.9660084
+      }
     },
     {
       "id": "MA397",
@@ -7480,11 +7480,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9662908,
-        40.7511987
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7511987,
+        "longitude": -73.9662908
+      }
     },
     {
       "id": "MA398",
@@ -7499,11 +7499,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9669962,
-        40.7518967
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7518967,
+        "longitude": -73.9669962
+      }
     }
   ]
 }
