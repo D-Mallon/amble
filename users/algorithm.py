@@ -2,14 +2,22 @@ import json
 import random
 from math import radians, sin, cos, sqrt, atan2
 
-with open('src/json-files/park_locations.json') as file1:
-    data1 = json.load(file1)
-with open('src/json-files/park_node_locations.json') as file2:
-    data2 = json.load(file2)
+node_dict = {
+    "park_locations":True,
+    "park_node_locations" : True,
+    "worship_locations": False,
+    "museum_art_locations" : False,
+    "library_locations" : True,
+    "walking_node_locations" : False,
+}
 
-merged_data = {**data1, **data2} # Merge the dictionaries
+dictnodes = {}
+for k,v in node_dict.items():
+    if v == True:
+        with open('src/json-files/'+k+'.json') as file:
+            dictnodes.update(json.load(file))
 
-merged_json = json.dumps(merged_data, indent=4) # Convert the merged dictionary to JSON format
+merged_json = json.dumps(dictnodes, indent=4) # Convert the merged dictionary to JSON format
 
 with open('src/json-files/nodes_final.json', 'w') as merged_file: #Write to a file
     merged_file.write(merged_json)
