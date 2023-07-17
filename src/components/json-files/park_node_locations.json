@@ -13,11 +13,11 @@
       "precinct": 10,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -74.0108672,
-        40.7488147
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7488147,
+        "longitude": -74.0108672
+      }
     },
     {
       "id": "PN71",
@@ -32,11 +32,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.007811,
-        40.7536939
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7536939,
+        "longitude": -74.007811
+      }
     },
     {
       "id": "PN73",
@@ -51,11 +51,11 @@
       "precinct": 10,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -74.00910689093082,
-        40.75051018621069
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.75051018621069,
+        "longitude": -74.00910689093082
+      }
     },
     {
       "id": "PN74",
@@ -70,11 +70,11 @@
       "precinct": 10,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -74.0092279,
-        40.7488903
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7488903,
+        "longitude": -74.0092279
+      }
     },
     {
       "id": "PN108",
@@ -89,11 +89,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0073168,
-        40.7487622
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7487622,
+        "longitude": -74.0073168
+      }
     },
     {
       "id": "PN110",
@@ -108,11 +108,11 @@
       "precinct": 10,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0068384,
-        40.7449293
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7449293,
+        "longitude": -74.0068384
+      }
     },
     {
       "id": "PN172",
@@ -127,11 +127,11 @@
       "precinct": 18,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -74.0021101543537,
-        40.76394216101928
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.76394216101928,
+        "longitude": -74.0021101543537
+      }
     },
     {
       "id": "PN199",
@@ -146,11 +146,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0025861,
-        40.7145531
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7145531,
+        "longitude": -74.0025861
+      }
     },
     {
       "id": "PN206",
@@ -165,11 +165,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9960302,
-        40.7701491
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7701491,
+        "longitude": -73.9960302
+      }
     },
     {
       "id": "PN237",
@@ -184,11 +184,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0001462,
-        40.7144837
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7144837,
+        "longitude": -74.0001462
+      }
     },
     {
       "id": "PN245",
@@ -203,11 +203,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9960302,
-        40.7701491
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7701491,
+        "longitude": -73.9960302
+      }
     },
     {
       "id": "PN267",
@@ -222,11 +222,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9975679,
-        40.7306881
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7306881,
+        "longitude": -73.9975679
+      }
     },
     {
       "id": "PN282",
@@ -241,11 +241,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9951491,
-        40.7702036
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7702036,
+        "longitude": -73.9951491
+      }
     },
     {
       "id": "PN283",
@@ -260,11 +260,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9951587,
-        40.768447
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.768447,
+        "longitude": -73.9951587
+      }
     },
     {
       "id": "PN315",
@@ -279,11 +279,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9960707,
-        40.7100927
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7100927,
+        "longitude": -73.9960707
+      }
     },
     {
       "id": "PN317",
@@ -298,11 +298,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9914152,
-        40.7767631
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7767631,
+        "longitude": -73.9914152
+      }
     },
     {
       "id": "PN354",
@@ -317,11 +317,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9931203,
-        40.7109073
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7109073,
+        "longitude": -73.9931203
+      }
     },
     {
       "id": "PN356",
@@ -336,11 +336,11 @@
       "precinct": 20,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.990398,
-        40.7796806
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7796806,
+        "longitude": -73.990398
+      }
     },
     {
       "id": "PN357",
@@ -355,11 +355,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.990478,
-        40.7774022
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7774022,
+        "longitude": -73.990478
+      }
     },
     {
       "id": "PN380",
@@ -374,11 +374,11 @@
       "precinct": 13,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9906027,
-        40.7360085
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7360085,
+        "longitude": -73.9906027
+      }
     },
     {
       "id": "PN387",
@@ -393,11 +393,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9905143,
-        40.7237262
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7237262,
+        "longitude": -73.9905143
+      }
     },
     {
       "id": "PN396",
@@ -412,11 +412,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9873945108137,
-        40.7825137080738
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7825137080738,
+        "longitude": -73.9873945108137
+      }
     },
     {
       "id": "PN397",
@@ -431,11 +431,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9877073,
-        40.7810467
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7810467,
+        "longitude": -73.9877073
+      }
     },
     {
       "id": "PN398",
@@ -450,11 +450,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.988254,
-        40.779314
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.779314,
+        "longitude": -73.988254
+      }
     },
     {
       "id": "PN415",
@@ -469,11 +469,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9883242,
-        40.7486508
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7486508,
+        "longitude": -73.9883242
+      }
     },
     {
       "id": "PN419",
@@ -488,11 +488,11 @@
       "precinct": 13,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9882555,
-        40.7415366
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7415366,
+        "longitude": -73.9882555
+      }
     },
     {
       "id": "PN434",
@@ -507,11 +507,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9885164,
-        40.7146491
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7146491,
+        "longitude": -73.9885164
+      }
     },
     {
       "id": "PN438",
@@ -526,11 +526,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9848928,
-        40.7859067
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7859067,
+        "longitude": -73.9848928
+      }
     },
     {
       "id": "PN439",
@@ -545,11 +545,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9858544,
-        40.784718
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.784718,
+        "longitude": -73.9858544
+      }
     },
     {
       "id": "PN440",
@@ -564,11 +564,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9860901,
-        40.7830762
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7830762,
+        "longitude": -73.9860901
+      }
     },
     {
       "id": "PN441",
@@ -583,11 +583,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9859404,
-        40.7812336
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7812336,
+        "longitude": -73.9859404
+      }
     },
     {
       "id": "PN446",
@@ -602,11 +602,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9859056,
-        40.7722856
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7722856,
+        "longitude": -73.9859056
+      }
     },
     {
       "id": "PN482",
@@ -621,11 +621,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9819376,
-        40.7891786
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7891786,
+        "longitude": -73.9819376
+      }
     },
     {
       "id": "PN483",
@@ -640,11 +640,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9831567,
-        40.7884486
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7884486,
+        "longitude": -73.9831567
+      }
     },
     {
       "id": "PN484",
@@ -659,11 +659,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9827885,
-        40.7864806
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7864806,
+        "longitude": -73.9827885
+      }
     },
     {
       "id": "PN485",
@@ -678,11 +678,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9835357,
-        40.78472
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.78472,
+        "longitude": -73.9835357
+      }
     },
     {
       "id": "PN492",
@@ -697,11 +697,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9838658,
-        40.7722068
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7722068,
+        "longitude": -73.9838658
+      }
     },
     {
       "id": "PN502",
@@ -716,11 +716,11 @@
       "precinct": 14,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9838725,
-        40.7541904
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7541904,
+        "longitude": -73.9838725
+      }
     },
     {
       "id": "PN527",
@@ -735,11 +735,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9843939,
-        40.7102649
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7102649,
+        "longitude": -73.9843939
+      }
     },
     {
       "id": "PN528",
@@ -754,11 +754,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9796244,
-        40.7924785
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7924785,
+        "longitude": -73.9796244
+      }
     },
     {
       "id": "PN529",
@@ -773,11 +773,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9802771,
-        40.7916231
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7916231,
+        "longitude": -73.9802771
+      }
     },
     {
       "id": "PN530",
@@ -792,11 +792,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9811399,
-        40.7900208
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7900208,
+        "longitude": -73.9811399
+      }
     },
     {
       "id": "PN542",
@@ -811,11 +811,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9811992,
-        40.7685112
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7685112,
+        "longitude": -73.9811992
+      }
     },
     {
       "id": "PN565",
@@ -830,11 +830,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9811601,
-        40.7272162
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7272162,
+        "longitude": -73.9811601
+      }
     },
     {
       "id": "PN566",
@@ -849,11 +849,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9812825,
-        40.7252824
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7252824,
+        "longitude": -73.9812825
+      }
     },
     {
       "id": "PN576",
@@ -868,11 +868,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9777615,
-        40.7962682
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7962682,
+        "longitude": -73.9777615
+      }
     },
     {
       "id": "PN577",
@@ -887,11 +887,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9777615,
-        40.7962682
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7962682,
+        "longitude": -73.9777615
+      }
     },
     {
       "id": "PN578",
@@ -906,11 +906,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.978674,
-        40.7936748
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7936748,
+        "longitude": -73.978674
+      }
     },
     {
       "id": "PN579",
@@ -925,11 +925,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9787594,
-        40.7918335
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7918335,
+        "longitude": -73.9787594
+      }
     },
     {
       "id": "PN591",
@@ -944,11 +944,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9788272,
-        40.7702962
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7702962,
+        "longitude": -73.9788272
+      }
     },
     {
       "id": "PN592",
@@ -963,11 +963,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9787277,
-        40.7686892
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7686892,
+        "longitude": -73.9787277
+      }
     },
     {
       "id": "PN616",
@@ -982,11 +982,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9785555,
-        40.7253735
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7253735,
+        "longitude": -73.9785555
+      }
     },
     {
       "id": "PN624",
@@ -1001,11 +1001,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9790151,
-        40.7115063
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7115063,
+        "longitude": -73.9790151
+      }
     },
     {
       "id": "PN625",
@@ -1020,11 +1020,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.975384,
-        40.7995903
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7995903,
+        "longitude": -73.975384
+      }
     },
     {
       "id": "PN626",
@@ -1039,11 +1039,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9753232,
-        40.7991842
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7991842,
+        "longitude": -73.9753232
+      }
     },
     {
       "id": "PN627",
@@ -1058,11 +1058,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9762523,
-        40.7972952
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7972952,
+        "longitude": -73.9762523
+      }
     },
     {
       "id": "PN628",
@@ -1077,11 +1077,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9764404,
-        40.7954972
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7954972,
+        "longitude": -73.9764404
+      }
     },
     {
       "id": "PN632",
@@ -1096,11 +1096,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9764218,
-        40.788413
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.788413,
+        "longitude": -73.9764218
+      }
     },
     {
       "id": "PN640",
@@ -1115,11 +1115,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9764929,
-        40.7739335
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7739335,
+        "longitude": -73.9764929
+      }
     },
     {
       "id": "PN641",
@@ -1134,11 +1134,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9765915,
-        40.7723208
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7723208,
+        "longitude": -73.9765915
+      }
     },
     {
       "id": "PN642",
@@ -1153,11 +1153,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9763202,
-        40.7704451
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7704451,
+        "longitude": -73.9763202
+      }
     },
     {
       "id": "PN643",
@@ -1172,11 +1172,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9764477,
-        40.7685991
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7685991,
+        "longitude": -73.9764477
+      }
     },
     {
       "id": "PN644",
@@ -1191,11 +1191,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9765356,
-        40.7667885
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7667885,
+        "longitude": -73.9765356
+      }
     },
     {
       "id": "PN676",
@@ -1210,11 +1210,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9729237,
-        40.8023524
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8023524,
+        "longitude": -73.9729237
+      }
     },
     {
       "id": "PN677",
@@ -1229,11 +1229,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9732457,
-        40.80052
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.80052,
+        "longitude": -73.9732457
+      }
     },
     {
       "id": "PN678",
@@ -1248,11 +1248,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9742203,
-        40.7993044
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7993044,
+        "longitude": -73.9742203
+      }
     },
     {
       "id": "PN679",
@@ -1267,11 +1267,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9743321,
-        40.7974648
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7974648,
+        "longitude": -73.9743321
+      }
     },
     {
       "id": "PN687",
@@ -1286,11 +1286,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9743119,
-        40.7827829
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7827829,
+        "longitude": -73.9743119
+      }
     },
     {
       "id": "PN688",
@@ -1305,11 +1305,11 @@
       "precinct": 20,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9746591,
-        40.7805375
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7805375,
+        "longitude": -73.9746591
+      }
     },
     {
       "id": "PN690",
@@ -1324,11 +1324,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9741251,
-        40.777596
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.777596,
+        "longitude": -73.9741251
+      }
     },
     {
       "id": "PN691",
@@ -1343,11 +1343,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9739355,
-        40.7757405
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7757405,
+        "longitude": -73.9739355
+      }
     },
     {
       "id": "PN692",
@@ -1362,11 +1362,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9741508,
-        40.7740669
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7740669,
+        "longitude": -73.9741508
+      }
     },
     {
       "id": "PN693",
@@ -1381,11 +1381,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9736684,
-        40.7724241
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7724241,
+        "longitude": -73.9736684
+      }
     },
     {
       "id": "PN694",
@@ -1400,11 +1400,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9741264,
-        40.7701555
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7701555,
+        "longitude": -73.9741264
+      }
     },
     {
       "id": "PN695",
@@ -1419,11 +1419,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9741243,
-        40.7684505
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7684505,
+        "longitude": -73.9741243
+      }
     },
     {
       "id": "PN696",
@@ -1438,11 +1438,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9740656,
-        40.7668551
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7668551,
+        "longitude": -73.9740656
+      }
     },
     {
       "id": "PN697",
@@ -1457,11 +1457,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9741128,
-        40.7650758
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7650758,
+        "longitude": -73.9741128
+      }
     },
     {
       "id": "PN721",
@@ -1476,11 +1476,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9741019,
-        40.7216231
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7216231,
+        "longitude": -73.9741019
+      }
     },
     {
       "id": "PN722",
@@ -1495,11 +1495,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9741751,
-        40.7200219
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7200219,
+        "longitude": -73.9741751
+      }
     },
     {
       "id": "PN725",
@@ -1514,11 +1514,11 @@
       "precinct": 7,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.97530545523128,
-        40.714479068735045
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.714479068735045,
+        "longitude": -73.97530545523128
+      }
     },
     {
       "id": "PN726",
@@ -1533,11 +1533,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9704277,
-        40.8048211
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8048211,
+        "longitude": -73.9704277
+      }
     },
     {
       "id": "PN727",
@@ -1552,11 +1552,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9707229,
-        40.8041402
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8041402,
+        "longitude": -73.9707229
+      }
     },
     {
       "id": "PN728",
@@ -1571,11 +1571,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9716383,
-        40.8028215
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8028215,
+        "longitude": -73.9716383
+      }
     },
     {
       "id": "PN729",
@@ -1590,11 +1590,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9718099,
-        40.8009796
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8009796,
+        "longitude": -73.9718099
+      }
     },
     {
       "id": "PN740",
@@ -1609,11 +1609,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9718242,
-        40.7812056
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7812056,
+        "longitude": -73.9718242
+      }
     },
     {
       "id": "PN741",
@@ -1628,11 +1628,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.97164,
-        40.7793388
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7793388,
+        "longitude": -73.97164
+      }
     },
     {
       "id": "PN742",
@@ -1647,11 +1647,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.971517,
-        40.7776474
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7776474,
+        "longitude": -73.971517
+      }
     },
     {
       "id": "PN743",
@@ -1666,11 +1666,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9716339,
-        40.7755882
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7755882,
+        "longitude": -73.9716339
+      }
     },
     {
       "id": "PN744",
@@ -1685,11 +1685,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9716653,
-        40.7739041
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7739041,
+        "longitude": -73.9716653
+      }
     },
     {
       "id": "PN745",
@@ -1704,11 +1704,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9718024,
-        40.7724097
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7724097,
+        "longitude": -73.9718024
+      }
     },
     {
       "id": "PN746",
@@ -1723,11 +1723,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9716091,
-        40.7703717
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7703717,
+        "longitude": -73.9716091
+      }
     },
     {
       "id": "PN747",
@@ -1742,11 +1742,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.971494,
-        40.7685493
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7685493,
+        "longitude": -73.971494
+      }
     },
     {
       "id": "PN772",
@@ -1761,11 +1761,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9723368,
-        40.7236404
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7236404,
+        "longitude": -73.9723368
+      }
     },
     {
       "id": "PN773",
@@ -1780,11 +1780,11 @@
       "precinct": 9,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9726357,
-        40.7223317
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7223317,
+        "longitude": -73.9726357
+      }
     },
     {
       "id": "PN775",
@@ -1799,11 +1799,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9674499,
-        40.808965
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.808965,
+        "longitude": -73.9674499
+      }
     },
     {
       "id": "PN776",
@@ -1818,11 +1818,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9682234,
-        40.8078608
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8078608,
+        "longitude": -73.9682234
+      }
     },
     {
       "id": "PN777",
@@ -1837,11 +1837,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9692193,
-        40.806584
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.806584,
+        "longitude": -73.9692193
+      }
     },
     {
       "id": "PN778",
@@ -1856,11 +1856,11 @@
       "precinct": 24,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9694243,
-        40.8046242
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8046242,
+        "longitude": -73.9694243
+      }
     },
     {
       "id": "PN789",
@@ -1875,11 +1875,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9694826,
-        40.7845625
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7845625,
+        "longitude": -73.9694826
+      }
     },
     {
       "id": "PN790",
@@ -1894,11 +1894,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9693484,
-        40.7830165
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7830165,
+        "longitude": -73.9693484
+      }
     },
     {
       "id": "PN791",
@@ -1913,11 +1913,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9693202,
-        40.781141
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.781141,
+        "longitude": -73.9693202
+      }
     },
     {
       "id": "PN792",
@@ -1932,11 +1932,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9693211,
-        40.7793222
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7793222,
+        "longitude": -73.9693211
+      }
     },
     {
       "id": "PN793",
@@ -1951,11 +1951,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9693357,
-        40.7775393
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7775393,
+        "longitude": -73.9693357
+      }
     },
     {
       "id": "PN794",
@@ -1970,11 +1970,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9693033,
-        40.7757037
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7757037,
+        "longitude": -73.9693033
+      }
     },
     {
       "id": "PN795",
@@ -1989,11 +1989,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9692635,
-        40.7739498
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7739498,
+        "longitude": -73.9692635
+      }
     },
     {
       "id": "PN796",
@@ -2008,11 +2008,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9693379,
-        40.7722768
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7722768,
+        "longitude": -73.9693379
+      }
     },
     {
       "id": "PN797",
@@ -2027,11 +2027,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9693586,
-        40.7703551
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7703551,
+        "longitude": -73.9693586
+      }
     },
     {
       "id": "PN812",
@@ -2046,11 +2046,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9659939,
-        40.8128892
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8128892,
+        "longitude": -73.9659939
+      }
     },
     {
       "id": "PN813",
@@ -2065,11 +2065,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.965724,
-        40.8113413
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8113413,
+        "longitude": -73.965724
+      }
     },
     {
       "id": "PN814",
@@ -2084,11 +2084,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9667303,
-        40.8098655
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8098655,
+        "longitude": -73.9667303
+      }
     },
     {
       "id": "PN815",
@@ -2103,11 +2103,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9669036,
-        40.8083071
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8083071,
+        "longitude": -73.9669036
+      }
     },
     {
       "id": "PN827",
@@ -2122,11 +2122,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9674658,
-        40.7866566
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7866566,
+        "longitude": -73.9674658
+      }
     },
     {
       "id": "PN828",
@@ -2141,11 +2141,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9669181,
-        40.7847452
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7847452,
+        "longitude": -73.9669181
+      }
     },
     {
       "id": "PN829",
@@ -2160,11 +2160,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9669822,
-        40.7827111
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7827111,
+        "longitude": -73.9669822
+      }
     },
     {
       "id": "PN830",
@@ -2179,11 +2179,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9671842,
-        40.7800392
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7800392,
+        "longitude": -73.9671842
+      }
     },
     {
       "id": "PN831",
@@ -2198,11 +2198,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9668016,
-        40.7794658
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7794658,
+        "longitude": -73.9668016
+      }
     },
     {
       "id": "PN832",
@@ -2217,11 +2217,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9668636,
-        40.7776157
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7776157,
+        "longitude": -73.9668636
+      }
     },
     {
       "id": "PN833",
@@ -2236,11 +2236,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9670045,
-        40.7758445
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7758445,
+        "longitude": -73.9670045
+      }
     },
     {
       "id": "PN834",
@@ -2255,11 +2255,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9668822,
-        40.7739031
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7739031,
+        "longitude": -73.9668822
+      }
     },
     {
       "id": "PN850",
@@ -2274,11 +2274,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9626025,
-        40.8156759
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8156759,
+        "longitude": -73.9626025
+      }
     },
     {
       "id": "PN851",
@@ -2293,11 +2293,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9632873,
-        40.8146255
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8146255,
+        "longitude": -73.9632873
+      }
     },
     {
       "id": "PN853",
@@ -2312,11 +2312,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9646317,
-        40.8114609
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8114609,
+        "longitude": -73.9646317
+      }
     },
     {
       "id": "PN865",
@@ -2331,11 +2331,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9645666,
-        40.7901906
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7901906,
+        "longitude": -73.9645666
+      }
     },
     {
       "id": "PN866",
@@ -2350,11 +2350,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9647487,
-        40.7887544
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7887544,
+        "longitude": -73.9647487
+      }
     },
     {
       "id": "PN867",
@@ -2369,11 +2369,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9639945,
-        40.7882743
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7882743,
+        "longitude": -73.9639945
+      }
     },
     {
       "id": "PN868",
@@ -2388,11 +2388,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9650877,
-        40.784142
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.784142,
+        "longitude": -73.9650877
+      }
     },
     {
       "id": "PN869",
@@ -2407,11 +2407,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9646172,
-        40.7831046
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7831046,
+        "longitude": -73.9646172
+      }
     },
     {
       "id": "PN870",
@@ -2426,11 +2426,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9647418,
-        40.7812903
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7812903,
+        "longitude": -73.9647418
+      }
     },
     {
       "id": "PN871",
@@ -2445,11 +2445,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9647859,
-        40.7794401
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7794401,
+        "longitude": -73.9647859
+      }
     },
     {
       "id": "PN872",
@@ -2464,11 +2464,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9646345,
-        40.7774806
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7774806,
+        "longitude": -73.9646345
+      }
     },
     {
       "id": "PN890",
@@ -2483,11 +2483,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9616699,
-        40.8166938
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8166938,
+        "longitude": -73.9616699
+      }
     },
     {
       "id": "PN891",
@@ -2502,11 +2502,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9621837,
-        40.8153812
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8153812,
+        "longitude": -73.9621837
+      }
     },
     {
       "id": "PN903",
@@ -2521,11 +2521,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9622947,
-        40.7937522
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7937522,
+        "longitude": -73.9622947
+      }
     },
     {
       "id": "PN904",
@@ -2540,11 +2540,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9621828,
-        40.7919758
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7919758,
+        "longitude": -73.9621828
+      }
     },
     {
       "id": "PN905",
@@ -2559,11 +2559,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9621199,
-        40.7903107
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7903107,
+        "longitude": -73.9621199
+      }
     },
     {
       "id": "PN906",
@@ -2578,11 +2578,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9619361,
-        40.7886677
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7886677,
+        "longitude": -73.9619361
+      }
     },
     {
       "id": "PN907",
@@ -2597,11 +2597,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9619361,
-        40.7886677
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7886677,
+        "longitude": -73.9619361
+      }
     },
     {
       "id": "PN908",
@@ -2616,11 +2616,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.963765,
-        40.7831868
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7831868,
+        "longitude": -73.963765
+      }
     },
     {
       "id": "PN909",
@@ -2635,11 +2635,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.962607,
-        40.7820736
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7820736,
+        "longitude": -73.962607
+      }
     },
     {
       "id": "PN910",
@@ -2654,11 +2654,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9623138,
-        40.7810702
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7810702,
+        "longitude": -73.9623138
+      }
     },
     {
       "id": "PN927",
@@ -2673,11 +2673,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.958993,
-        40.8244216
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8244216,
+        "longitude": -73.958993
+      }
     },
     {
       "id": "PN928",
@@ -2692,11 +2692,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9580238,
-        40.8233202
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8233202,
+        "longitude": -73.9580238
+      }
     },
     {
       "id": "PN938",
@@ -2711,11 +2711,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9598069,
-        40.8045748
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8045748,
+        "longitude": -73.9598069
+      }
     },
     {
       "id": "PN939",
@@ -2730,11 +2730,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9598656,
-        40.8029532
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8029532,
+        "longitude": -73.9598656
+      }
     },
     {
       "id": "PN942",
@@ -2749,11 +2749,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9598414,
-        40.7974067
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7974067,
+        "longitude": -73.9598414
+      }
     },
     {
       "id": "PN943",
@@ -2768,11 +2768,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9599296,
-        40.7958354
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7958354,
+        "longitude": -73.9599296
+      }
     },
     {
       "id": "PN944",
@@ -2787,11 +2787,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9596501,
-        40.793819
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.793819,
+        "longitude": -73.9596501
+      }
     },
     {
       "id": "PN945",
@@ -2806,11 +2806,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.959787,
-        40.7916586
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7916586,
+        "longitude": -73.959787
+      }
     },
     {
       "id": "PN946",
@@ -2825,11 +2825,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9598365,
-        40.7902237
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7902237,
+        "longitude": -73.9598365
+      }
     },
     {
       "id": "PN947",
@@ -2844,11 +2844,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9605726,
-        40.7891059
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7891059,
+        "longitude": -73.9605726
+      }
     },
     {
       "id": "PN948",
@@ -2863,11 +2863,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9588453,
-        40.785009
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.785009,
+        "longitude": -73.9588453
+      }
     },
     {
       "id": "PN949",
@@ -2882,11 +2882,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9593547,
-        40.7841158
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7841158,
+        "longitude": -73.9593547
+      }
     },
     {
       "id": "PN950",
@@ -2901,11 +2901,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9597308,
-        40.7829085
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7829085,
+        "longitude": -73.9597308
+      }
     },
     {
       "id": "PN966",
@@ -2920,11 +2920,11 @@
       "precinct": 30,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9567403,
-        40.8271621
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8271621,
+        "longitude": -73.9567403
+      }
     },
     {
       "id": "PN967",
@@ -2939,11 +2939,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.957369,
-        40.826078
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.826078,
+        "longitude": -73.957369
+      }
     },
     {
       "id": "PN968",
@@ -2958,11 +2958,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9575085,
-        40.8241011
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8241011,
+        "longitude": -73.9575085
+      }
     },
     {
       "id": "PN977",
@@ -2977,11 +2977,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9573497,
-        40.8081454
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8081454,
+        "longitude": -73.9573497
+      }
     },
     {
       "id": "PN982",
@@ -2996,11 +2996,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9574726,
-        40.7992031
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7992031,
+        "longitude": -73.9574726
+      }
     },
     {
       "id": "PN983",
@@ -3015,11 +3015,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9573804,
-        40.7975158
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7975158,
+        "longitude": -73.9573804
+      }
     },
     {
       "id": "PN984",
@@ -3034,11 +3034,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9573968,
-        40.7956576
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7956576,
+        "longitude": -73.9573968
+      }
     },
     {
       "id": "PN985",
@@ -3053,11 +3053,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.957537,
-        40.7935403
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7935403,
+        "longitude": -73.957537
+      }
     },
     {
       "id": "PN986",
@@ -3072,11 +3072,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9580494,
-        40.7920615
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7920615,
+        "longitude": -73.9580494
+      }
     },
     {
       "id": "PN987",
@@ -3091,11 +3091,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9576035,
-        40.7900468
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7900468,
+        "longitude": -73.9576035
+      }
     },
     {
       "id": "PN988",
@@ -3110,11 +3110,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9569699,
-        40.788167
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.788167,
+        "longitude": -73.9569699
+      }
     },
     {
       "id": "PN989",
@@ -3129,11 +3129,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9573923,
-        40.7863616
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7863616,
+        "longitude": -73.9573923
+      }
     },
     {
       "id": "PN1006",
@@ -3148,11 +3148,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9550217,
-        40.8273897
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8273897,
+        "longitude": -73.9550217
+      }
     },
     {
       "id": "PN1007",
@@ -3167,11 +3167,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9551501,
-        40.8263222
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8263222,
+        "longitude": -73.9551501
+      }
     },
     {
       "id": "PN1008",
@@ -3186,11 +3186,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9553126,
-        40.8242505
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8242505,
+        "longitude": -73.9553126
+      }
     },
     {
       "id": "PN1022",
@@ -3205,11 +3205,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9551588,
-        40.7991477
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7991477,
+        "longitude": -73.9551588
+      }
     },
     {
       "id": "PN1023",
@@ -3224,11 +3224,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9551634,
-        40.7976053
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7976053,
+        "longitude": -73.9551634
+      }
     },
     {
       "id": "PN1024",
@@ -3243,11 +3243,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9550964,
-        40.7954935
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7954935,
+        "longitude": -73.9550964
+      }
     },
     {
       "id": "PN1025",
@@ -3262,11 +3262,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9549439,
-        40.7940465
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7940465,
+        "longitude": -73.9549439
+      }
     },
     {
       "id": "PN1026",
@@ -3281,11 +3281,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9553029,
-        40.7920244
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7920244,
+        "longitude": -73.9553029
+      }
     },
     {
       "id": "PN1027",
@@ -3300,11 +3300,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9546517,
-        40.7899767
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7899767,
+        "longitude": -73.9546517
+      }
     },
     {
       "id": "PN1045",
@@ -3319,11 +3319,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.951638,
-        40.8305167
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8305167,
+        "longitude": -73.951638
+      }
     },
     {
       "id": "PN1046",
@@ -3338,11 +3338,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.951638,
-        40.8305167
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8305167,
+        "longitude": -73.951638
+      }
     },
     {
       "id": "PN1047",
@@ -3357,11 +3357,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9519778,
-        40.8296061
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8296061,
+        "longitude": -73.9519778
+      }
     },
     {
       "id": "PN1049",
@@ -3376,11 +3376,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9528534,
-        40.8263633
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8263633,
+        "longitude": -73.9528534
+      }
     },
     {
       "id": "PN1065",
@@ -3395,11 +3395,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9527024,
-        40.7969689
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7969689,
+        "longitude": -73.9527024
+      }
     },
     {
       "id": "PN1066",
@@ -3414,11 +3414,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9527609,
-        40.7956133
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7956133,
+        "longitude": -73.9527609
+      }
     },
     {
       "id": "PN1067",
@@ -3433,11 +3433,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9528627,
-        40.7938603
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7938603,
+        "longitude": -73.9528627
+      }
     },
     {
       "id": "PN1085",
@@ -3452,11 +3452,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9482728,
-        40.8372949
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8372949,
+        "longitude": -73.9482728
+      }
     },
     {
       "id": "PN1086",
@@ -3471,11 +3471,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.94925,
-        40.8367785
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8367785,
+        "longitude": -73.94925
+      }
     },
     {
       "id": "PN1099",
@@ -3490,11 +3490,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9505861,
-        40.813704
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.813704,
+        "longitude": -73.9505861
+      }
     },
     {
       "id": "PN1108",
@@ -3509,11 +3509,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9503721,
-        40.7969248
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7969248,
+        "longitude": -73.9503721
+      }
     },
     {
       "id": "PN1127",
@@ -3528,11 +3528,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9446423,
-        40.8498716
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8498716,
+        "longitude": -73.9446423
+      }
     },
     {
       "id": "PN1128",
@@ -3547,11 +3547,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9446423,
-        40.8498716
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8498716,
+        "longitude": -73.9446423
+      }
     },
     {
       "id": "PN1129",
@@ -3566,11 +3566,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.946346,
-        40.847217
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.847217,
+        "longitude": -73.946346
+      }
     },
     {
       "id": "PN1130",
@@ -3585,11 +3585,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9470751,
-        40.8421413
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8421413,
+        "longitude": -73.9470751
+      }
     },
     {
       "id": "PN1131",
@@ -3604,11 +3604,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9471347,
-        40.8404715
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8404715,
+        "longitude": -73.9471347
+      }
     },
     {
       "id": "PN1132",
@@ -3623,11 +3623,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9481992,
-        40.839403
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.839403,
+        "longitude": -73.9481992
+      }
     },
     {
       "id": "PN1135",
@@ -3642,11 +3642,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9475032,
-        40.8326763
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8326763,
+        "longitude": -73.9475032
+      }
     },
     {
       "id": "PN1136",
@@ -3661,11 +3661,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9480714,
-        40.832257
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.832257,
+        "longitude": -73.9480714
+      }
     },
     {
       "id": "PN1143",
@@ -3680,11 +3680,11 @@
       "precinct": 26,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9480607,
-        40.8189155
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8189155,
+        "longitude": -73.9480607
+      }
     },
     {
       "id": "PN1172",
@@ -3699,11 +3699,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9446423,
-        40.8498716
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8498716,
+        "longitude": -73.9446423
+      }
     },
     {
       "id": "PN1173",
@@ -3718,11 +3718,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9446371,
-        40.8498457
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8498457,
+        "longitude": -73.9446371
+      }
     },
     {
       "id": "PN1174",
@@ -3737,11 +3737,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.945646,
-        40.8471406
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8471406,
+        "longitude": -73.945646
+      }
     },
     {
       "id": "PN1175",
@@ -3756,11 +3756,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9452562,
-        40.8464002
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8464002,
+        "longitude": -73.9452562
+      }
     },
     {
       "id": "PN1176",
@@ -3775,11 +3775,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.946029,
-        40.8430312
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8430312,
+        "longitude": -73.946029
+      }
     },
     {
       "id": "PN1177",
@@ -3794,11 +3794,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9463013,
-        40.8426773
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8426773,
+        "longitude": -73.9463013
+      }
     },
     {
       "id": "PN1183",
@@ -3813,11 +3813,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9455579,
-        40.8314942
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8314942,
+        "longitude": -73.9455579
+      }
     },
     {
       "id": "PN1220",
@@ -3832,11 +3832,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9435417,
-        40.8507975
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8507975,
+        "longitude": -73.9435417
+      }
     },
     {
       "id": "PN1221",
@@ -3851,11 +3851,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9433981,
-        40.8496485
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8496485,
+        "longitude": -73.9433981
+      }
     },
     {
       "id": "PN1222",
@@ -3870,11 +3870,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9428885,
-        40.8478813
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8478813,
+        "longitude": -73.9428885
+      }
     },
     {
       "id": "PN1231",
@@ -3889,11 +3889,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9433848,
-        40.8314727
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8314727,
+        "longitude": -73.9433848
+      }
     },
     {
       "id": "PN1232",
@@ -3908,11 +3908,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9439653,
-        40.8306078
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8306078,
+        "longitude": -73.9439653
+      }
     },
     {
       "id": "PN1235",
@@ -3927,11 +3927,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9431092,
-        40.823838
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.823838,
+        "longitude": -73.9431092
+      }
     },
     {
       "id": "PN1271",
@@ -3946,11 +3946,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.940827,
-        40.8459176
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8459176,
+        "longitude": -73.940827
+      }
     },
     {
       "id": "PN1281",
@@ -3965,11 +3965,11 @@
       "precinct": 30,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9402269,
-        40.8281817
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8281817,
+        "longitude": -73.9402269
+      }
     },
     {
       "id": "PN1307",
@@ -3984,11 +3984,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.937339,
-        40.8585922
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8585922,
+        "longitude": -73.937339
+      }
     },
     {
       "id": "PN1308",
@@ -4003,11 +4003,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.937339,
-        40.8585922
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8585922,
+        "longitude": -73.937339
+      }
     },
     {
       "id": "PN1311",
@@ -4022,11 +4022,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9382753,
-        40.8531961
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8531961,
+        "longitude": -73.9382753
+      }
     },
     {
       "id": "PN1322",
@@ -4041,11 +4041,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9382672,
-        40.8333669
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8333669,
+        "longitude": -73.9382672
+      }
     },
     {
       "id": "PN1333",
@@ -4060,11 +4060,11 @@
       "precinct": 32,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9380969,
-        40.8137518
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8137518,
+        "longitude": -73.9380969
+      }
     },
     {
       "id": "PN1350",
@@ -4079,11 +4079,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9337179,
-        40.862256
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.862256,
+        "longitude": -73.9337179
+      }
     },
     {
       "id": "PN1351",
@@ -4098,11 +4098,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9346937,
-        40.8609891
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8609891,
+        "longitude": -73.9346937
+      }
     },
     {
       "id": "PN1352",
@@ -4117,11 +4117,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9356034,
-        40.8594747
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8594747,
+        "longitude": -73.9356034
+      }
     },
     {
       "id": "PN1365",
@@ -4136,11 +4136,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9362683,
-        40.8372637
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8372637,
+        "longitude": -73.9362683
+      }
     },
     {
       "id": "PN1366",
@@ -4155,11 +4155,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9360783,
-        40.8351118
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8351118,
+        "longitude": -73.9360783
+      }
     },
     {
       "id": "PN1393",
@@ -4174,11 +4174,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9319514,
-        40.8691465
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8691465,
+        "longitude": -73.9319514
+      }
     },
     {
       "id": "PN1394",
@@ -4193,11 +4193,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9321003,
-        40.8669508
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8669508,
+        "longitude": -73.9321003
+      }
     },
     {
       "id": "PN1395",
@@ -4212,11 +4212,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9324619,
-        40.8654505
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8654505,
+        "longitude": -73.9324619
+      }
     },
     {
       "id": "PN1396",
@@ -4231,11 +4231,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9327992,
-        40.8640834
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8640834,
+        "longitude": -73.9327992
+      }
     },
     {
       "id": "PN1397",
@@ -4250,11 +4250,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9337179,
-        40.862256
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.862256,
+        "longitude": -73.9337179
+      }
     },
     {
       "id": "PN1398",
@@ -4269,11 +4269,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.933671,
-        40.8603913
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8603913,
+        "longitude": -73.933671
+      }
     },
     {
       "id": "PN1399",
@@ -4288,11 +4288,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9336306,
-        40.8586879
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8586879,
+        "longitude": -73.9336306
+      }
     },
     {
       "id": "PN1408",
@@ -4307,11 +4307,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9341532,
-        40.8421433
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8421433,
+        "longitude": -73.9341532
+      }
     },
     {
       "id": "PN1409",
@@ -4326,11 +4326,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9327775,
-        40.8402493
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8402493,
+        "longitude": -73.9327775
+      }
     },
     {
       "id": "PN1410",
@@ -4345,11 +4345,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.933593,
-        40.8387391
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8387391,
+        "longitude": -73.933593
+      }
     },
     {
       "id": "PN1411",
@@ -4364,11 +4364,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9344425,
-        40.8372588
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8372588,
+        "longitude": -73.9344425
+      }
     },
     {
       "id": "PN1418",
@@ -4383,11 +4383,11 @@
       "precinct": 32,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9347173,
-        40.8247255
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8247255,
+        "longitude": -73.9347173
+      }
     },
     {
       "id": "PN1421",
@@ -4402,11 +4402,11 @@
       "precinct": 32,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9341286,
-        40.8190135
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8190135,
+        "longitude": -73.9341286
+      }
     },
     {
       "id": "PN1437",
@@ -4421,11 +4421,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9285546,
-        40.873951
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.873951,
+        "longitude": -73.9285546
+      }
     },
     {
       "id": "PN1438",
@@ -4440,11 +4440,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9291874,
-        40.8721315
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8721315,
+        "longitude": -73.9291874
+      }
     },
     {
       "id": "PN1441",
@@ -4459,11 +4459,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9311425,
-        40.8677241
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8677241,
+        "longitude": -73.9311425
+      }
     },
     {
       "id": "PN1442",
@@ -4478,11 +4478,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9313063,
-        40.8657738
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8657738,
+        "longitude": -73.9313063
+      }
     },
     {
       "id": "PN1443",
@@ -4497,11 +4497,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9312091,
-        40.8638721
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8638721,
+        "longitude": -73.9312091
+      }
     },
     {
       "id": "PN1444",
@@ -4516,11 +4516,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9313485,
-        40.8621428
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8621428,
+        "longitude": -73.9313485
+      }
     },
     {
       "id": "PN1445",
@@ -4535,11 +4535,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9313284,
-        40.8602816
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8602816,
+        "longitude": -73.9313284
+      }
     },
     {
       "id": "PN1453",
@@ -4554,11 +4554,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9319232,
-        40.8456491
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8456491,
+        "longitude": -73.9319232
+      }
     },
     {
       "id": "PN1454",
@@ -4573,11 +4573,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9319479,
-        40.8449684
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8449684,
+        "longitude": -73.9319479
+      }
     },
     {
       "id": "PN1455",
@@ -4592,11 +4592,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9317088,
-        40.8424465
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8424465,
+        "longitude": -73.9317088
+      }
     },
     {
       "id": "PN1456",
@@ -4611,11 +4611,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9324694,
-        40.8407936
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8407936,
+        "longitude": -73.9324694
+      }
     },
     {
       "id": "PN1457",
@@ -4630,11 +4630,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9330612,
-        40.8396902
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8396902,
+        "longitude": -73.9330612
+      }
     },
     {
       "id": "PN1466",
@@ -4649,11 +4649,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9274573,
-        40.875928
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.875928,
+        "longitude": -73.9274573
+      }
     },
     {
       "id": "PN1468",
@@ -4668,11 +4668,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9286839,
-        40.8730121
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8730121,
+        "longitude": -73.9286839
+      }
     },
     {
       "id": "PN1469",
@@ -4687,11 +4687,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9288662,
-        40.8709852
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8709852,
+        "longitude": -73.9288662
+      }
     },
     {
       "id": "PN1470",
@@ -4706,11 +4706,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9289881,
-        40.8694056
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8694056,
+        "longitude": -73.9289881
+      }
     },
     {
       "id": "PN1471",
@@ -4725,11 +4725,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9288583,
-        40.8676711
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8676711,
+        "longitude": -73.9288583
+      }
     },
     {
       "id": "PN1482",
@@ -4744,11 +4744,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9291203,
-        40.8477714
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8477714,
+        "longitude": -73.9291203
+      }
     },
     {
       "id": "PN1483",
@@ -4763,11 +4763,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9295373,
-        40.8462228
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8462228,
+        "longitude": -73.9295373
+      }
     },
     {
       "id": "PN1484",
@@ -4782,11 +4782,11 @@
       "precinct": 33,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9304869,
-        40.8453588
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8453588,
+        "longitude": -73.9304869
+      }
     },
     {
       "id": "PN1493",
@@ -4801,11 +4801,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9266084,
-        40.8766821
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8766821,
+        "longitude": -73.9266084
+      }
     },
     {
       "id": "PN1494",
@@ -4820,11 +4820,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9262642,
-        40.8746062
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8746062,
+        "longitude": -73.9262642
+      }
     },
     {
       "id": "PN1495",
@@ -4839,11 +4839,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9265773,
-        40.8730113
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8730113,
+        "longitude": -73.9265773
+      }
     },
     {
       "id": "PN1496",
@@ -4858,11 +4858,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9268283,
-        40.871451
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.871451,
+        "longitude": -73.9268283
+      }
     },
     {
       "id": "PN1497",
@@ -4877,11 +4877,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9267985,
-        40.86925
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.86925,
+        "longitude": -73.9267985
+      }
     },
     {
       "id": "PN1506",
@@ -4896,11 +4896,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9262924,
-        40.8533913
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8533913,
+        "longitude": -73.9262924
+      }
     },
     {
       "id": "PN1507",
@@ -4915,11 +4915,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9267042,
-        40.8514933
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8514933,
+        "longitude": -73.9267042
+      }
     },
     {
       "id": "PN1508",
@@ -4934,11 +4934,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9270247,
-        40.8498712
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8498712,
+        "longitude": -73.9270247
+      }
     },
     {
       "id": "PN1509",
@@ -4953,11 +4953,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9284168,
-        40.848016
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.848016,
+        "longitude": -73.9284168
+      }
     },
     {
       "id": "PN1510",
@@ -4972,11 +4972,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9243239,
-        40.8770348
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8770348,
+        "longitude": -73.9243239
+      }
     },
     {
       "id": "PN1512",
@@ -4991,11 +4991,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9243719,
-        40.8749067
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8749067,
+        "longitude": -73.9243719
+      }
     },
     {
       "id": "PN1513",
@@ -5010,11 +5010,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9244107,
-        40.8730788
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8730788,
+        "longitude": -73.9244107
+      }
     },
     {
       "id": "PN1514",
@@ -5029,11 +5029,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9240966,
-        40.8711568
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8711568,
+        "longitude": -73.9240966
+      }
     },
     {
       "id": "PN1515",
@@ -5048,11 +5048,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9244079,
-        40.8696719
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8696719,
+        "longitude": -73.9244079
+      }
     },
     {
       "id": "PN1523",
@@ -5067,11 +5067,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9243479,
-        40.8549851
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8549851,
+        "longitude": -73.9243479
+      }
     },
     {
       "id": "PN1524",
@@ -5086,11 +5086,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9245007,
-        40.853582
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.853582,
+        "longitude": -73.9245007
+      }
     },
     {
       "id": "PN1525",
@@ -5105,11 +5105,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9259545,
-        40.8515005
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8515005,
+        "longitude": -73.9259545
+      }
     },
     {
       "id": "PN1527",
@@ -5124,11 +5124,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9226429,
-        40.8764995
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8764995,
+        "longitude": -73.9226429
+      }
     },
     {
       "id": "PN1528",
@@ -5143,11 +5143,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9227174,
-        40.8742949
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8742949,
+        "longitude": -73.9227174
+      }
     },
     {
       "id": "PN1529",
@@ -5162,11 +5162,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.921846,
-        40.8727876
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8727876,
+        "longitude": -73.921846
+      }
     },
     {
       "id": "PN1530",
@@ -5181,11 +5181,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.921932,
-        40.8713011
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8713011,
+        "longitude": -73.921932
+      }
     },
     {
       "id": "PN1537",
@@ -5200,11 +5200,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.921772,
-        40.8588427
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8588427,
+        "longitude": -73.921772
+      }
     },
     {
       "id": "PN1538",
@@ -5219,11 +5219,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9221837,
-        40.8570403
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8570403,
+        "longitude": -73.9221837
+      }
     },
     {
       "id": "PN1539",
@@ -5238,11 +5238,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9227479,
-        40.8551636
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8551636,
+        "longitude": -73.9227479
+      }
     },
     {
       "id": "PN1540",
@@ -5257,11 +5257,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.92034440197365,
-        40.87510933445178
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.87510933445178,
+        "longitude": -73.92034440197365
+      }
     },
     {
       "id": "PN1541",
@@ -5276,11 +5276,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9192362,
-        40.8743157
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8743157,
+        "longitude": -73.9192362
+      }
     },
     {
       "id": "PN1542",
@@ -5295,11 +5295,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9194873,
-        40.8730461
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8730461,
+        "longitude": -73.9194873
+      }
     },
     {
       "id": "PN1543",
@@ -5314,11 +5314,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9193737,
-        40.8711263
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8711263,
+        "longitude": -73.9193737
+      }
     },
     {
       "id": "PN1544",
@@ -5333,11 +5333,11 @@
       "precinct": 34,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9194706,
-        40.8693578
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8693578,
+        "longitude": -73.9194706
+      }
     },
     {
       "id": "PN1551",
@@ -5352,11 +5352,11 @@
       "precinct": 34,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9179624,
-        40.8738975
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8738975,
+        "longitude": -73.9179624
+      }
     },
     {
       "id": "PN2",
@@ -5371,11 +5371,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0174628,
-        40.714251
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.714251,
+        "longitude": -74.0174628
+      }
     },
     {
       "id": "PN3",
@@ -5390,11 +5390,11 @@
       "precinct": 6,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -74.01788287414607,
-        40.71206220103755
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.71206220103755,
+        "longitude": -74.01788287414607
+      }
     },
     {
       "id": "PN4",
@@ -5409,11 +5409,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0181773,
-        40.7105939
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7105939,
+        "longitude": -74.0181773
+      }
     },
     {
       "id": "PN5",
@@ -5428,11 +5428,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0185766,
-        40.7090275
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7090275,
+        "longitude": -74.0185766
+      }
     },
     {
       "id": "PN7",
@@ -5447,11 +5447,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0186361,
-        40.7055856
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7055856,
+        "longitude": -74.0186361
+      }
     },
     {
       "id": "PN10",
@@ -5466,11 +5466,11 @@
       "precinct": 6,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -74.0156736,
-        40.721446
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.721446,
+        "longitude": -74.0156736
+      }
     },
     {
       "id": "PN12",
@@ -5485,11 +5485,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0166271,
-        40.7182481
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7182481,
+        "longitude": -74.0166271
+      }
     },
     {
       "id": "PN13",
@@ -5504,11 +5504,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0165951,
-        40.7163159
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7163159,
+        "longitude": -74.0165951
+      }
     },
     {
       "id": "PN15",
@@ -5523,11 +5523,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0164114,
-        40.7126835
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7126835,
+        "longitude": -74.0164114
+      }
     },
     {
       "id": "PN21",
@@ -5542,11 +5542,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0163975,
-        40.7020562
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7020562,
+        "longitude": -74.0163975
+      }
     },
     {
       "id": "PN22",
@@ -5561,11 +5561,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0156486,
-        40.7013154
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7013154,
+        "longitude": -74.0156486
+      }
     },
     {
       "id": "PN30",
@@ -5580,11 +5580,11 @@
       "precinct": 6,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -74.0142826,
-        40.7211992
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7211992,
+        "longitude": -74.0142826
+      }
     },
     {
       "id": "PN31",
@@ -5599,11 +5599,11 @@
       "precinct": 6,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -74.01455,
-        40.7202023
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7202023,
+        "longitude": -74.01455
+      }
     },
     {
       "id": "PN41",
@@ -5618,11 +5618,11 @@
       "precinct": 6,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0143352,
-        40.7019161
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7019161,
+        "longitude": -74.0143352
+      }
     },
     {
       "id": "PN100",
@@ -5637,11 +5637,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0098116,
-        40.7023087
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7023087,
+        "longitude": -74.0098116
+      }
     },
     {
       "id": "PN128",
@@ -5656,11 +5656,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0072034,
-        40.7128636
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7128636,
+        "longitude": -74.0072034
+      }
     },
     {
       "id": "PN163",
@@ -5675,11 +5675,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0049127,
-        40.7127626
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7127626,
+        "longitude": -74.0049127
+      }
     },
     {
       "id": "PN165",
@@ -5694,11 +5694,11 @@
       "precinct": 5,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -74.0048335,
-        40.7090493
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7090493,
+        "longitude": -74.0048335
+      }
     },
     {
       "id": "PN318",
@@ -5713,11 +5713,11 @@
       "precinct": 20,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9924249,
-        40.7754387
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7754387,
+        "longitude": -73.9924249
+      }
     },
     {
       "id": "PN810",
@@ -5732,11 +5732,11 @@
       "precinct": 13,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.969098,
-        40.7465568
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7465568,
+        "longitude": -73.969098
+      }
     },
     {
       "id": "PN811",
@@ -5751,11 +5751,11 @@
       "precinct": 13,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9701079,
-        40.7455587
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7455587,
+        "longitude": -73.9701079
+      }
     },
     {
       "id": "PN847",
@@ -5770,11 +5770,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9668659,
-        40.7504437
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7504437,
+        "longitude": -73.9668659
+      }
     },
     {
       "id": "PN849",
@@ -5789,11 +5789,11 @@
       "precinct": 18,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9683832,
-        40.7474218
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7474218,
+        "longitude": -73.9683832
+      }
     },
     {
       "id": "PN881",
@@ -5808,11 +5808,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.964066,
-        40.7612399
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7612399,
+        "longitude": -73.964066
+      }
     },
     {
       "id": "PN888",
@@ -5827,11 +5827,11 @@
       "precinct": 26,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.96047,
-        40.8198637
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8198637,
+        "longitude": -73.96047
+      }
     },
     {
       "id": "PN889",
@@ -5846,11 +5846,11 @@
       "precinct": 26,
       "b-score": "null",
       "c-score": "null",
-      "coordinates": [
-        -73.9615556,
-        40.8186304
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8186304,
+        "longitude": -73.9615556
+      }
     },
     {
       "id": "PN965",
@@ -5865,11 +5865,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9605183,
-        40.7564131
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7564131,
+        "longitude": -73.9605183
+      }
     },
     {
       "id": "PN1004",
@@ -5884,11 +5884,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9576747,
-        40.75962
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.75962,
+        "longitude": -73.9576747
+      }
     },
     {
       "id": "PN1117",
@@ -5903,11 +5903,11 @@
       "precinct": 22,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9502718,
-        40.7810892
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7810892,
+        "longitude": -73.9502718
+      }
     },
     {
       "id": "PN1246",
@@ -5922,11 +5922,11 @@
       "precinct": 28,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9431757,
-        40.8043164
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8043164,
+        "longitude": -73.9431757
+      }
     },
     {
       "id": "PN1247",
@@ -5941,11 +5941,11 @@
       "precinct": 28,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9433017,
-        40.8029043
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8029043,
+        "longitude": -73.9433017
+      }
     },
     {
       "id": "PN1262",
@@ -5960,11 +5960,11 @@
       "precinct": 28,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9435623,
-        40.7759496
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7759496,
+        "longitude": -73.9435623
+      }
     },
     {
       "id": "PN1263",
@@ -5979,11 +5979,11 @@
       "precinct": 28,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9439379,
-        40.7741034
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7741034,
+        "longitude": -73.9439379
+      }
     },
     {
       "id": "PN1264",
@@ -5998,11 +5998,11 @@
       "precinct": 28,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.944382,
-        40.7732161
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7732161,
+        "longitude": -73.944382
+      }
     },
     {
       "id": "PN1348",
@@ -6017,11 +6017,11 @@
       "precinct": 32,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9387368,
-        40.7866115
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.7866115,
+        "longitude": -73.9387368
+      }
     },
     {
       "id": "PN1426",
@@ -6036,11 +6036,11 @@
       "precinct": 32,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9345793,
-        40.8101608
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8101608,
+        "longitude": -73.9345793
+      }
     },
     {
       "id": "PN1428",
@@ -6055,11 +6055,11 @@
       "precinct": 32,
       "b-score": null,
       "c-score": null,
-      "coordinates": [
-        -73.9341411,
-        40.8056873
-      ],
-      "rating": 1.5
+      "rating": 1.5,
+      "location": {
+        "latitude": 40.8056873,
+        "longitude": -73.9341411
+      }
     }
   ]
 }
