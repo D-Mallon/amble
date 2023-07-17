@@ -1,0 +1,278 @@
+
+.menubar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  .menu-button-wrapper {
+      position: absolute;
+      top: 0.8rem;
+      left: 0.8rem;
+      width: 2.8rem;
+      height: 2.8rem;
+      background-color: #004d40;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+      animation-delay: 0.3s;
+      cursor: pointer;
+    
+  }
+  
+  .profile-button-wrapper {
+    position: absolute;
+    top: 0.8rem;
+    left: 7.2rem;
+    width: 2.8rem;
+      height: 2.8rem;
+      background-color: #004d40;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+      animation-delay: 0.3s;
+      cursor: pointer;
+  
+  }
+  
+  
+  .history-button-wrapper {
+    position: absolute;
+    top: 0.8rem;
+    left: 4rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: #004d40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+    cursor: pointer;
+  
+  }
+  
+  .favorite-button-wrapper {
+    position: absolute;
+    top: 0.1rem;
+    left: 9.7rem;
+    cursor: pointer;
+  
+  }
+  
+  
+  .profile-button:active {
+    filter: brightness(0.8); /* 点击时变暗 */
+  }
+  
+  /* 鼠标悬停效果 */
+  .option:hover {
+    background-color: #aef8ec;
+    filter: brightness(0.9); /* 悬停时变暗 */
+    transition: filter 1s; /* 添加过渡效果 */
+    border-radius: 2px;
+  }
+  .options-box {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 1px solid #099840;
+    padding: 9px;
+    width: 100px; /* 调整选项框的宽度 */
+    z-index: 2;  
+  }
+  
+  .option {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    outline: none; /* 移除默认的点击边框 */
+    transition: filter 0.3s; /* 添加过渡效果 */
+    border-radius: 2px;
+  }
+  .option:focus {
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+  }
+  /* .option-text{
+  
+  } */
+  
+  .menu-bar {
+    background: url(/static/images/MenuPic5.jpg) no-repeat center fixed;
+    background-size: cover;
+    position: absolute;
+    /* bottom:0; */
+    display: flex;
+    flex-direction: column;
+    /* background-color: #7affcccb; */
+    border: 1px solid #000000;
+    border-radius: 5px 5px 5px 5px; /* 上左 上右 下右 下左 */
+    padding-top: 2%;
+    padding-left: 22%;
+    padding-right: 22%;
+    padding-bottom: 2%;
+    width: 60%; /* 调整选项框的宽度 */
+    height:70%;
+    z-index: 2;
+    margin: auto;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+    margin: auto;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  /* .menu-bar {
+    position: absolute;
+    bottom:0;
+    display: flex;
+    flex-direction: column;
+    background-color: #30dc9acb;
+    border-radius: 5px 5px 0 0; 
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    width: 92%; 
+    z-index: 2;
+    margin: auto;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+  } */
+  
+  /* @keyframes slideIn {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .show {
+    opacity: 1;
+    visibility: visible;
+    animation: slideIn 0.5s ease-in-out;
+  } */
+  
+  .option-bottom-menu {
+    display: block;
+    width: 100%;
+    padding: 28px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    outline: none; /* 移除默认的点击边框 */
+    transition: filter 0.3s; /* 添加过渡效果 */
+    border-radius: 2px;
+  }
+  
+  .option-bottom-menu:focus {
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+  }
+  
+  /* 鼠标悬停效果 */
+  .option-bottom-menu:hover {
+    background-color: #aef8ec;
+    filter: brightness(0.9); /* 悬停时变暗 */
+    transition: filter 1s; /* 添加过渡效果 */
+    border-radius: 2px;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(248, 255, 253, 0.93); /* 设置蒙版的颜色和透明度 */
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+  }
+  
+  .additional-block-close-menubar {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: #004d40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+    cursor: pointer;
+  }
+  
+  .additional-block-close-menubar.hide,
+  .overlay.hide,
+  .menu-bar.hide {
+    animation: fadeOut 0.7s ease-in-out;
+    opacity: 0;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  
+  
+  
+  
+  

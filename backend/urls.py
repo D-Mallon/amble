@@ -18,4 +18,8 @@ urlpatterns = [
     path("latlondis", TemplateView.as_view(template_name="base.html")),
     path("login", TemplateView.as_view(template_name="base.html")),
     path("comms", TemplateView.as_view(template_name="base.html")),
+    path("interface", TemplateView.as_view(template_name="base.html")),
+    path("homepage", TemplateView.as_view(template_name="base.html")),
+    path("showroute", TemplateView.as_view(template_name="base.html")),
+    
 ]
