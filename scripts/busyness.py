@@ -13,9 +13,9 @@ import warnings # Stops warning from appearing
 warnings.filterwarnings('ignore')
 
 #Create File Paths
-pickle_dir = r"C:\Users\corma\COMP47360\ucdSummerProject\src\Pickle Files" # pickle files directory
-taxipath = r"C:\Users\corma\COMP47360\ucdSummerProject\src\components" #taxi zone data (name and number)
-busyscore = r"C:\Users\corma\COMP47360\ucdSummerProject\src\components" #Busyness Score data
+pickle_dir = r"src\Pickle Files" # pickle files directory
+taxipath = r"src\json-files" #taxi zone data (name and number)
+busyscore = r"src\json-files" #Busyness Score data
 
 #Open the taxi zone data file 
 with (open(os.path.join(taxipath, 'taxizones.json'), "rb")) as f:
@@ -83,7 +83,6 @@ api_key = os.environ.get("WEATHER_API_KEY") #Key for Weather API
 url = f'http://api.weatherapi.com/v1/forecast.json?key={api_key}&q=New York City&days=1&aqi=no&alerts=no'
 response = requests.get(url)
 weather_data = response.json()
-
 
 #Create Weather Variables
 temp = []
@@ -200,7 +199,7 @@ df.drop(['PULocationID_100', 'PULocationID_107',
 
 #Send dataframe as a json file
 df.reset_index(drop=True, inplace=True) #This excludes the index
-df.to_json(r"C:\Users\corma\COMP47360\ucdSummerProject\src\components\busyness.json", orient='records')
+df.to_json(r"src\json-files\busyness.json", orient='records')
 
 with open("src/components/weather.json", "w") as outfile:
         json.dump(weather_data , outfile, indent=4)
