@@ -1,0 +1,802 @@
+{
+  "data": [
+    {
+      "id": "C2",
+      "name": "Sixth Street Community Center",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 567,
+      "taxi-zone": 4,
+      "precinct": 9,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9802085,
+        40.7237397
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C3",
+      "name": "John Lovejoy Elliott Center",
+      "type": "community",
+      "address": "441 West 26th Street, 10001 Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 180,
+      "taxi-zone": 68,
+      "precinct": 10,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -74.0014911,
+        40.7495468
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C4",
+      "name": "Open Door Senior Center",
+      "type": "community",
+      "address": "168 Grand Street, 10013 Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 273,
+      "taxi-zone": 144,
+      "precinct": 5,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9981915,
+        40.7197599
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C5",
+      "name": "Chinese American Planning Council",
+      "type": "community",
+      "address": "165 Eldridge Street, 10002 Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 389,
+      "taxi-zone": 148,
+      "precinct": 5,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.991158,
+        40.720009
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C6",
+      "name": "Downtown Community Television Center",
+      "type": "community",
+      "address": "87 Lafayette Street, 10013 Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 235,
+      "taxi-zone": 231,
+      "precinct": 5,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -74.0012731,
+        40.7173727
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C9",
+      "name": "Sisters Uptown Bookstore",
+      "type": "community",
+      "address": "1942 Amsterdam Avenue, 10032 Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 1231,
+      "taxi-zone": 244,
+      "precinct": 33,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9426051,
+        40.8323961
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C10",
+      "name": "Franciscan Community Center",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 732,
+      "taxi-zone": 238,
+      "precinct": 24,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.970658,
+        40.7948899
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C11",
+      "name": "James Varick Community Center",
+      "type": "community",
+      "address": "151 West 136th Street, 10030 Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 1240,
+      "taxi-zone": 42,
+      "precinct": 32,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9420653,
+        40.8156151
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C12",
+      "name": "Lt. Joseph P. Kennedy Center",
+      "type": "community",
+      "address": "34 West 134th Street, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 1290,
+      "taxi-zone": 42,
+      "precinct": 32,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9400429,
+        40.8126493
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C13",
+      "name": "Gee How Oak Tin Association",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 275,
+      "taxi-zone": 45,
+      "precinct": 5,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9979039,
+        40.7155673
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C14",
+      "name": "Community Board Five",
+      "type": "community",
+      "address": "450 Seventh Avenue, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 372,
+      "taxi-zone": 100,
+      "precinct": 14,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.99075,
+        40.7514042
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C15",
+      "name": "Community Board 4",
+      "type": "community",
+      "address": "330 West 42nd Street, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 368,
+      "taxi-zone": 48,
+      "precinct": 14,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9915067,
+        40.7575563
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C16",
+      "name": "Manhattan Community Board 9",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 973,
+      "taxi-zone": 152,
+      "precinct": 26,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9572693,
+        40.8155438
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C17",
+      "name": "Community Board #2",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 269,
+      "taxi-zone": 114,
+      "precinct": 6,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.997996,
+        40.7278045
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C18",
+      "name": "CB1",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": "yes",
+      "opening_hours": null,
+      "grid-id": 163,
+      "taxi-zone": 45,
+      "precinct": 5,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -74.0038708,
+        40.7127141
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C20",
+      "name": "Manhattan Community Board 7",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 632,
+      "taxi-zone": 238,
+      "precinct": 24,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.976423,
+        40.7890183
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C22",
+      "name": "Manhattan Community Board 10",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 1148,
+      "taxi-zone": 41,
+      "precinct": 28,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.948904,
+        40.8094814
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C24",
+      "name": "New York City Community Board 12",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": "Mo,Tu,Fr 09:00-16:00; We 09:00-13:00; Th 09:00-18:00; Sa 10:00-14:00",
+      "grid-id": 1319,
+      "taxi-zone": 244,
+      "precinct": 33,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9396092,
+        40.8391766
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C26",
+      "name": "Moriah Senior Center",
+      "type": "community",
+      "address": "90 Bennett Avenue, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 1356,
+      "taxi-zone": 243,
+      "precinct": 34,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9355226,
+        40.8531163
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C27",
+      "name": "Alianza Dominicana Cultural Center",
+      "type": "community",
+      "address": "530 West 166th Street, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": "Mo 13:00-20:00; Tu, We, Fr 12:00-20:00; Sa 12:00-17:00",
+      "grid-id": 1319,
+      "taxi-zone": 244,
+      "precinct": 33,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9396018,
+        40.8392644
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C28",
+      "name": "Resobox",
+      "type": "community",
+      "address": "91 East 3rd Street, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": "\"Temporarily closed\"",
+      "grid-id": 428,
+      "taxi-zone": 79,
+      "precinct": 9,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9878407,
+        40.724844
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C29",
+      "name": "Good Old Lower East Side",
+      "type": "community",
+      "address": "173 Avenue B, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": "Mo-Fr 10:00-13:00,14:00-18:00",
+      "grid-id": 615,
+      "taxi-zone": 4,
+      "precinct": 9,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9793594,
+        40.7272707
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C30",
+      "name": "American Indian Community House",
+      "type": "community",
+      "address": "39 Eldridge Street, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 351,
+      "taxi-zone": 148,
+      "precinct": 5,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9934147,
+        40.7156911
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C31",
+      "name": "The Laundromat Project",
+      "type": "community",
+      "address": "127 West 127th Street, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 1195,
+      "taxi-zone": 42,
+      "precinct": 32,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9453751,
+        40.8095546
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C32",
+      "name": "Centre for Social Innovation",
+      "type": "community",
+      "address": "601 West 26th Street, 10001 Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 107,
+      "taxi-zone": 246,
+      "precinct": 10,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -74.0063215,
+        40.7513331
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C33",
+      "name": "Project Reach",
+      "type": "community",
+      "address": "39 Eldridge Street, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": "Mo-Fr 10:00-18:00",
+      "grid-id": 351,
+      "taxi-zone": 148,
+      "precinct": 5,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9934027,
+        40.7157361
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C34",
+      "name": "Wallace S Whittaker Foundation Senior Center",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 434,
+      "taxi-zone": 232,
+      "precinct": 7,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9884395,
+        40.7136681
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C36",
+      "name": "Grand St. Settlement Community Center",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 477,
+      "taxi-zone": 232,
+      "precinct": 7,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9854803,
+        40.7171594
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C38",
+      "name": "Salmagundi Club",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 302,
+      "taxi-zone": 113,
+      "precinct": 6,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9945529,
+        40.7343016
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C39",
+      "name": "Atlas Social Club",
+      "type": "community",
+      "address": "753 9th Avenue, 10019 Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 407,
+      "taxi-zone": 48,
+      "precinct": 18,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9887906,
+        40.7640349
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C40",
+      "name": null,
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 214,
+      "taxi-zone": 246,
+      "precinct": 10,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9999865,
+        40.7560788
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C41",
+      "name": "Little Free Library",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 664,
+      "taxi-zone": 224,
+      "precinct": 13,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9772239,
+        40.731262
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C42",
+      "name": "11th Street Community Library",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": "24/7",
+      "grid-id": 516,
+      "taxi-zone": 79,
+      "precinct": 9,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.982879,
+        40.7288081
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C1",
+      "name": "Romanian Cultural Center",
+      "type": "community",
+      "address": "200 East 38th Street, 10016 Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": "Mo-Fr 09:00-13:00,15:00-18:00",
+      "grid-id": 654,
+      "taxi-zone": 170,
+      "precinct": 13,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9760986,
+        40.7480382
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C7",
+      "name": "Justice Center en El Barrio",
+      "type": "community",
+      "address": "1637 Park Avenue, 10029 Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": "Mo-Su 06:30-21:30",
+      "grid-id": 1249,
+      "taxi-zone": 74,
+      "precinct": 32,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9431794,
+        40.798966
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C8",
+      "name": "James Weldon Johnson Community Center",
+      "type": "community",
+      "address": "1833 Lexington Avenue, 10029 Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 1250,
+      "taxi-zone": 74,
+      "precinct": 32,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.942441,
+        40.7967935
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C19",
+      "name": "Community Board Six Manhattan",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 846,
+      "taxi-zone": 229,
+      "precinct": 13,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9665176,
+        40.7525583
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C21",
+      "name": "Manhattan Community Board 8",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 801,
+      "taxi-zone": 237,
+      "precinct": 24,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9694446,
+        40.7629729
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C23",
+      "name": "Community Board Eleven of Manhattan",
+      "type": "community",
+      "address": "None None, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 1248,
+      "taxi-zone": 74,
+      "precinct": 32,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9428344,
+        40.8003138
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C25",
+      "name": "Lincoln East Senior Center",
+      "type": "community",
+      "address": "60 East 135th Street, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 1379,
+      "taxi-zone": 74,
+      "precinct": 32,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9353331,
+        40.8112136
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C35",
+      "name": "The Boys' Club of New York",
+      "type": "community",
+      "address": "321 East 111th Street, None Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": null,
+      "grid-id": 1344,
+      "taxi-zone": 74,
+      "precinct": 32,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -73.9387277,
+        40.7933643
+      ],
+      "rating": 1.5
+    },
+    {
+      "id": "C37",
+      "name": "Crime Victims Treatment Center",
+      "type": "community",
+      "address": "40 Exchange Place, 10005 Manhattan",
+      "internet_access": null,
+      "wheelchair_accessible": null,
+      "opening_hours": "Mo-Fr 09:00-17:00",
+      "grid-id": 98,
+      "taxi-zone": 88,
+      "precinct": 5,
+      "b-score": null,
+      "c-score": null,
+      "coordinates": [
+        -74.0102061,
+        40.7058496
+      ],
+      "rating": 1.5
+    }
+  ]
+}

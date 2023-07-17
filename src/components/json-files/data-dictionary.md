@@ -1,6 +1,6 @@
 # Data Dictionary
 
-This is the data dictionary for the master-locations.json, the polygon files, and the citibike-stations for any further references.
+This is the data dictionary for the master-locations.json (now also available as separate files), the polygon files, and the citibike-stations for any further references.
 
 ## Master Locations
 
@@ -15,6 +15,16 @@ The master-locations.json file consists of the following location types:
 | 'park_node'   | 319 | walking nodes but inside parks, lower than parks |
 | 'worship'     | 122 | places of worship of any religious affiliation   |
 
+ID prefixes = {
+    'community': 'C', 
+    'library': 'L', 
+    'museum_art': 'MA', 
+    'park': 'P', 
+    'walking_node': 'WN', 
+    'park_node': 'PN', 
+    'worship': 'W'
+}
+
 For the next feature (cafe/restaurant with Google Popular Times), not included in current (15/07) master-locations:
 | Locations     | No. | Description                                      |
 |---------------|-----|--------------------------------------------------|
@@ -25,7 +35,7 @@ For the next feature (cafe/restaurant with Google Popular Times), not included i
 
 | Column Name           | Data Type  | Description                                                                            |
 |-----------------------|------------|----------------------------------------------------------------------------------------|
-| id                    | integer    | Unique identifier for each location                                                    |
+| prefix + id           | integer    | Unique identifier for each location                                                    |
 | name                  | string     | Name of the location                                                                   |
 | type                  | string     | Category of the location (see above)                                                   |
 | address               | string     | Physical address of the location; might be None None, None Manhattan if not available  |
@@ -50,7 +60,7 @@ The polygon files contain the polygons for the grid system, the precincts, and t
 |---------------|-----|---------------------------------------------------------------------------------------------------|
 |  grid         | 1541| 200x200m grids dividing Manhattan into grid zones containing citibike stations and crime scores   |
 |  precinct     | 36  | precincts in Manhattan                                                                            |
-|  taxi-zone    | 65  | taxi zones in Manhattan                                                                           |
+|  taxi-zone    | 63  | taxi zones in Manhattan                                                                           |
 
 ### grid_polygons.json
 
