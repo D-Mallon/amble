@@ -1,34 +1,22 @@
 import json
 import random
 from math import radians, sin, cos, sqrt, atan2
-from collections import defaultdict # Allows merging of dictionaries with overwriting common keys
 
-#Function to merge dictionaries
-def merge_json(json1, json2):
-    merged_json = defaultdict(list)
-    for key, value in json1.items():
-        merged_json[key].append(value) # Add values from json1
-    for key, value in json2.items():
-        merged_json[key].append(value)  # Add values from json2
-    return merged_json
+with open('src/json-files/park_locations.json') as file1:
+    data1 = json.load(file1)
+with open('src/json-files/park_node_locations.json') as file2:
+    data2 = json.load(file2)
 
-# Load park data from JSON file
-with open("src/json-files/park_locations.json") as json_file:
-    data = json.load(json_file)
+merged_data = {**data1, **data2} # Merge the dictionaries
 
-#Toggle to decide whether to include Library data
-include_park_nodes = False 
-# Load library data from JSON file
-if include_park_nodes == True:
-    with open("src/json-files/park_node_locations.json") as json_file:
-        parknode_data = json.load(json_file)
-    merged_json = merge_json(data,parknode_data) #Would need to save this to 'data' if wanted to use in file
-    with open("src/json-files/merged.json",'w') as json_file:
-        json.dump(merged_json, json_file, indent=4)
+merged_json = json.dumps(merged_data, indent=4) # Convert the merged dictionary to JSON format
 
+with open('src/json-files/nodes_final.json', 'w') as merged_file: #Write to a file
+    merged_file.write(merged_json)
 
 # Load park data from JSON file
-with open("src/json-files/park_locations.json") as json_file:
+# with open("src/json-files/park_locations.json") as json_file:
+with open("src/json-files/nodes_final.json") as json_file: 
     data = json.load(json_file)
 
 # Extract latitude and longitude values
@@ -149,3 +137,52 @@ def magic(user_latitude, user_longitude, hour):
 # print(result)
 # conn.commit() #Commit changes in the database
 # conn.close() #Close the connection
+
+
+# from collections import defaultdict # Allows merging of dictionaries with overwriting common keys
+
+# #Function to merge dictionaries
+# def merge_json(json1, json2):
+#     merged_json = defaultdict(list)
+#     for key, value in json1.items():
+#         merged_json[key].append(value) # Add values from json1
+#     for key, value in json2.items():
+#         merged_json[key].append(value)  # Add values from json2
+#     return merged_json
+
+# # Load park data from JSON file
+# with open("src/json-files/park_locations.json") as json_file:
+#     data = json.load(json_file)
+
+# #Toggle to decide whether to include Library data
+# include_park_nodes = True
+# # Load library data from JSON file
+# if include_park_nodes == True:
+#     with open("src/json-files/park_node_locations.json") as json_file:
+#         parknode_data = json.load(json_file)
+#     merged_json = merge_json(data,parknode_data) #Would need to save this to 'data' if wanted to use in file
+    
+#     x = merged_json["data"][0][0]['location']['latitude']
+#     print(x)
+#     print(type(x))
+    
+#     with open("src/json-files/merged.json",'w') as json_file:
+#         json.dump(merged_json, json_file, indent=4)
+
+
+# def merge_json_files(file_paths):
+#     merged_contents = []
+
+#     for file_path in file_paths:
+#         with open(file_path, 'r', encoding='utf-8') as file_in:
+#             merged_contents.extend(json.load(file_in))
+
+#     with open('src/json-files/nodes_final.json', 'w', encoding='utf-8') as file_out:
+#         json.dump(merged_contents, file_out, indent=4)
+
+# paths = [
+#     'src/json-files/park_locations.json',
+#     'src/json-files/park_node_locations.json'
+# ]
+
+# merge_json_files(paths)
