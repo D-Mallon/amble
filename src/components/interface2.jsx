@@ -20,6 +20,9 @@ import FaceIcon from '@mui/icons-material/Face';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuBar from './MenuBar';
 import MapBackground from './mapbackground';
+import {Link, useNavigate} from 'react-router-dom';
+
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -34,6 +37,12 @@ const theme = createTheme({
 function Interface2() {
 //   const timeData=useContext(TimeSearchContext); 
 //   console.log(timeData.search);
+
+    const navigate_homepage=useNavigate();
+
+    const handleButtonClick_close = () =>{
+        navigate_homepage('/homepage')
+    }
 
 
   const handleOnSearchChange=(searchData)=>{
@@ -79,7 +88,7 @@ function Interface2() {
           alt="Menu button"
         /> */}
          <MenuBar/>
-         <div className='mapwrapper'>
+         <div className='mapwrapper_routeplan'>
         <MapBackground zoom={14.4}/>
         </div>
         <div className="PlanWin">
@@ -148,7 +157,7 @@ function Interface2() {
               >
                 <CloudIcon sx={{ fontSize: 24 , color: 'white'}} />
               </div>
-              <div className="additional-block-close">
+              <div className="additional-block-close" onClick={handleButtonClick_close}>
                 <CloseIcon sx={{ fontSize: 27 , color: 'white'}} />
               </div>
             </div>

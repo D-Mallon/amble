@@ -1,0 +1,14 @@
+.mapwrapper_homepage {
+    background-color: aliceblue;
+     width: 100%;
+     height: 100%;
+     margin: auto;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0; 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     opacity: 1;
+   }

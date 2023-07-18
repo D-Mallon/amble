@@ -55,6 +55,7 @@ class MyButton extends React.Component {
   }
 
   render() {
+    const {onClick}=this.props;
     return (
       <div className='mainbutton'>
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="goo">
@@ -68,7 +69,7 @@ class MyButton extends React.Component {
         </svg>
 
         <span className="button--bubble__container">
-          <a href="#campaign" className="button button--bubble">
+          <a href="#campaign" className="button button--bubble"  onClick={onClick}>
             Go for a Walk
           </a>
           <span className="button--bubble__effect-container">

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState,useContext } from 'react';
+import {Link, useNavigate} from 'react-router-dom';
 const reactLogo = "react.svg";
 const viteLogo = "vite.svg";
 
@@ -24,13 +25,20 @@ const theme = createTheme({
   });
   
   function HomePage() {
+    const navigate=useNavigate();
+
+    const handleButtonClick = () =>{
+        navigate('/interface')
+    }
+
     return (
       <>
         <MenuAppBar />
-        <div className='mapwrapper'>
+
+        <div className='mapwrapper_homepage'>
         <MapBackground/>
         </div>
-        <MyButton />
+        <MyButton onClick={handleButtonClick}/>
         {/* <MyFunctionButton/> */}
        
       </>
