@@ -1,5 +1,8 @@
 from django.core.management.base import BaseCommand
 import json
+
+# import sys
+# sys.path.append('/users')
 from users.models import Nodes
 
 # List of JSON files to import
