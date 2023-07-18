@@ -1,4 +1,4 @@
-.wrapper-function-1{
+/* .wrapper-function-1{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-  }
+  } */
   
   .wrapper-function-text{
     display: flex;
@@ -16,14 +16,15 @@
     font-size: 18px;
     font-family: sans-serif;
     text-decoration: none;
-    color: #333;
-    border: 2px solid #333;
+    color: #E3FCF7;
+    border: 1.5px solid #333;
     letter-spacing: 2px;
     text-align: center;
     position: relative;
     transition: all .35s;
     justify-content: center;
-  align-items: center;
+    align-items: center;
+    background: #00684A;
   }
   
   .wrapper-function-text span{
@@ -38,12 +39,12 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: #ff003b;
+    background: #B1FF05;
     transition: all .35s;
   }
   
   .wrapper-function-text:hover{
-    color: #fff;
+    color: #00684A;
   }
   
   .wrapper-function-text:hover:after{

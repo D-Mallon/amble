@@ -21,7 +21,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuBar from './MenuBar';
 import MapBackground from './mapbackground';
 import {Link, useNavigate} from 'react-router-dom';
-
+import MyFunctionButton from './functionbutton';
 
 const theme = createTheme({
   palette: {
@@ -142,7 +142,8 @@ function Interface2() {
             </div>
 
             <div className="gain-route">
-              <button className="gainroute-button">Gain a Route</button>
+              {/* <button className="gainroute-button">Gain a Route</button> */}
+              <MyFunctionButton/>
             </div>
           </div>
 
