@@ -1,9 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl, { Marker } from 'mapbox-gl';
-import parks from './parks.json';
+import parks from '../json-files/park_locations.json';
 import "./Map_original.css";
 import 'mapbox-gl/dist/mapbox-gl.css';
-mapboxgl.accessToken = 'pk.eyJ1IjoiZmluYmFyYWxsYW4iLCJhIjoiY2xqY3NtYWN6MjV0ODNqcXhhaTY4aGQxdSJ9.VeVQzxCCtpyP_MeT1CkjOg';
+
+const apiKey = import.meta.env.VITE_MAPBOX_API_KEY
+mapboxgl.accessToken = apiKey;
+// mapboxgl.accessToken = 'pk.eyJ1IjoiZmluYmFyYWxsYW4iLCJhIjoiY2xqY3NtYWN6MjV0ODNqcXhhaTY4aGQxdSJ9.VeVQzxCCtpyP_MeT1CkjOg';
 
 const Map = () => {
   useEffect(() => {
