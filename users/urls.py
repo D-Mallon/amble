@@ -4,7 +4,8 @@ from . import views
 
 urlpatterns = [
     path('users', views.handle_routeinpput_data),
-    path('', include('users.urls')),
+    path('users', views.user_view),
+    # path('', include('users.urls')),
 
     # re_path(r'^users/$', views.user_view),
     # re_path(r'^api/users/(?P<pk>[0-9]+)$', views.user_view),
