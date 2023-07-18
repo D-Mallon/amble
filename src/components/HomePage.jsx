@@ -34,14 +34,17 @@ const theme = createTheme({
     return (
       <>
         <MenuAppBar />
-
+    
         <div className='mapwrapper_homepage'>
-        <MapBackground/>
+          <MapBackground/>
         </div>
-        {/* <img src="/static/images/logo.png" className='Logo' alt='Logo'/> */}
-        <MyButton onClick={handleButtonClick}/>
+        <div className='flex-container'>
+          <div className='LOGO'>
+            <img src="/static/images/logo.png" className='Logo' alt='Logo'/>
+          </div>
+          <MyButton onClick={handleButtonClick}/>
+        </div>
         {/* <MyFunctionButton/> */}
-       
       </>
     );
   }
