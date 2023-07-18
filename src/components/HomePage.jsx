@@ -38,6 +38,7 @@ const theme = createTheme({
         <div className='mapwrapper_homepage'>
         <MapBackground/>
         </div>
+        {/* <img src="/static/images/logo.png" className='Logo' alt='Logo'/> */}
         <MyButton onClick={handleButtonClick}/>
         {/* <MyFunctionButton/> */}
        

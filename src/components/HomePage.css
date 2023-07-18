@@ -12,3 +12,15 @@
      align-items: center;
      opacity: 1;
    }
+
+
+   .Logo {
+    z-index:1;
+    opacity: 1;
+   }
+
+
+   .logopart {
+    z-index:1;
+    opacity: 1;
+   }
