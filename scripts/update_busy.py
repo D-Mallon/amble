@@ -22,7 +22,7 @@ def getBusy(taxizone):
             all_hours[d["Hour"]] = round(d["Busyness Predicted"],0)
     return(all_hours)    
 
-#Function to Update Nodes Busyness Scores
+#Function to Update Nodes Busyness Scores  (incorporates some of the earlier functions)
 def update_nodes(nodes):
 
     #Function fo get b-scores
@@ -48,8 +48,6 @@ def update_nodes(nodes):
     #Write the updated json file with new busyness scores
     with open(os.path.join(json_dir, nodes), 'w') as f:
         json.dump(Obj, f, indent =4)
-
-
 
 #Get path to json directory
 json_dir = r"src\json-files" 
