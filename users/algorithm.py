@@ -1,31 +1,47 @@
 import json
 import random
 from math import radians, sin, cos, sqrt, atan2
+import time
 
-node_dict = {
-    "park_locations":True,
+####### Start time - to get run time #########
+start_time = time.time()
+
+#Set up the base nodes (from Park Locations)
+with open("src/json-files/park_locations.json") as json_file:
+    basedata = json.load(json_file)
+
+#Create a new dictionary and add the base nodes to it
+data = {}
+data.update(basedata)
+
+#Decide what other nodes to include - comes from the front end preferences
+other_nodes_dict = {
     "park_node_locations" : True,
-    "worship_locations": False,
-    "museum_art_locations" : False,
+    "worship_locations": True,
+    "museum_art_locations" : True,
     "library_locations" : True,
-    "walking_node_locations" : False,
+    "walking_node_locations" : True,
+    "community_locations" : True
 }
 
-dictnodes = {}
-for k,v in node_dict.items():
+#Add the nodes
+for k,v in other_nodes_dict.items():
     if v == True:
         with open('src/json-files/'+k+'.json') as file:
-            dictnodes.update(json.load(file))
+            nodes = json.load(file)
+        # print(nodes)
+        # print(type(nodes))
+        data ={'data':data['data'] + nodes['data']}
 
-merged_json = json.dumps(dictnodes, indent=4) # Convert the merged dictionary to JSON format
-
+# #Create a json object and Write to a json file
+merged_json = json.dumps(data, indent=4) # Convert the merged dictionary to JSON format
 with open('src/json-files/nodes_final.json', 'w') as merged_file: #Write to a file
     merged_file.write(merged_json)
 
-# Load park data from JSON file
-# with open("src/json-files/park_locations.json") as json_file:
-with open("src/json-files/nodes_final.json") as json_file: 
-    data = json.load(json_file)
+####### End time - to get run time #########
+end_time = time.time()
+run_time = round((end_time - start_time),1)
+print(f'Run time to load all nodes = {run_time} seconds')
 
 # Extract latitude and longitude values
 latitudes = []
