@@ -3,8 +3,8 @@ import random
 from math import radians, sin, cos, sqrt, atan2
 import time
 
-####### Start time - to get run time #########
-start_time = time.time()
+# ####### Start time - to get run time #########
+# start_time = time.time()
 
 #Set up the base nodes (from Park Locations)
 with open("src/json-files/park_locations.json") as json_file:
@@ -16,9 +16,9 @@ data.update(basedata)
 
 #Decide what other nodes to include - comes from the front end preferences
 other_nodes_dict = {
-    "park_node_locations" : True,
-    "worship_locations": True,
-    "museum_art_locations" : True,
+    "park_node_locations" : False,
+    "worship_locations": False,
+    "museum_art_locations" : False,
     "library_locations" : True,
     "walking_node_locations" : True,
     "community_locations" : True
@@ -38,10 +38,10 @@ merged_json = json.dumps(data, indent=4) # Convert the merged dictionary to JSON
 with open('src/json-files/nodes_final.json', 'w') as merged_file: #Write to a file
     merged_file.write(merged_json)
 
-####### End time - to get run time #########
-end_time = time.time()
-run_time = round((end_time - start_time),1)
-print(f'Run time to load all nodes = {run_time} seconds')
+# ####### End time - to get run time #########
+# end_time = time.time()
+# run_time = round((end_time - start_time),1)
+# print(f'Run time to load all nodes = {run_time} seconds')
 
 # Extract latitude and longitude values
 latitudes = []
@@ -102,7 +102,7 @@ def magic(user_latitude, user_longitude, hour):
         closest_parks = [closest_parks[i] for i in sorted_indices[:7]]
 
         # Select the park with the lowest combination of "busi" values
-        selected_park = min(closest_parks, key=lambda park: park["busi"][hour])
+        selected_park = min(closest_parks, key=lambda park: park["b-score"][hour])
         # print(selected_park["busi"][hour])
 
         # Calculate distance to the selected park
@@ -120,7 +120,7 @@ def magic(user_latitude, user_longitude, hour):
 
         # Print information about the current journey
         park_name = selected_park["name"]
-        park_busi = selected_park["busi"][hour]
+        park_busi = selected_park["b-score"][hour]
         # print(f"Visiting Park: {park_name}")
         # print(f"Busyness Rating: {park_busi}")
         # print(f"Remaining Distance: {predefined_distance} km")
