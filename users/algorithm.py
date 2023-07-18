@@ -1,26 +1,47 @@
 import json
 import random
 from math import radians, sin, cos, sqrt, atan2
+import time
 
-# ########### Accessing Data from Database (using fetch) ###################################
-# import psycopg2 
+####### Start time - to get run time #########
+start_time = time.time()
 
-# #Make a connection
-# conn = psycopg2.connect(
-#    database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
-# ) 
+#Set up the base nodes (from Park Locations)
+with open("src/json-files/park_locations.json") as json_file:
+    basedata = json.load(json_file)
 
-# conn.autocommit = True #Set auto commit false
-# cursor = conn.cursor() #Create a cursor object
-# cursor.execute('''SELECT * from users_userroute''') #Retrieve data
-# result = cursor.fetchone(); #Fetch 1st row from the table
-# print(result)
-# conn.commit() #Commit changes in the database
-# conn.close() #Close the connection
+#Create a new dictionary and add the base nodes to it
+data = {}
+data.update(basedata)
 
-# Load park data from JSON file
-with open("src/components/parks.json") as json_file:
-    data = json.load(json_file)
+#Decide what other nodes to include - comes from the front end preferences
+other_nodes_dict = {
+    "park_node_locations" : True,
+    "worship_locations": True,
+    "museum_art_locations" : True,
+    "library_locations" : True,
+    "walking_node_locations" : True,
+    "community_locations" : True
+}
+
+#Add the nodes
+for k,v in other_nodes_dict.items():
+    if v == True:
+        with open('src/json-files/'+k+'.json') as file:
+            nodes = json.load(file)
+        # print(nodes)
+        # print(type(nodes))
+        data ={'data':data['data'] + nodes['data']}
+
+# #Create a json object and Write to a json file
+merged_json = json.dumps(data, indent=4) # Convert the merged dictionary to JSON format
+with open('src/json-files/nodes_final.json', 'w') as merged_file: #Write to a file
+    merged_file.write(merged_json)
+
+####### End time - to get run time #########
+end_time = time.time()
+run_time = round((end_time - start_time),1)
+print(f'Run time to load all nodes = {run_time} seconds')
 
 # Extract latitude and longitude values
 latitudes = []
@@ -122,3 +143,70 @@ def magic(user_latitude, user_longitude, hour):
 
 # Latitue: 40
 # Longitude: -74
+
+
+
+# ########### Accessing Data from Database (using fetch) ###################################
+# import psycopg2 
+
+# #Make a connection
+# conn = psycopg2.connect(
+#    database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
+# ) 
+
+# conn.autocommit = True #Set auto commit false
+# cursor = conn.cursor() #Create a cursor object
+# cursor.execute('''SELECT * from users_userroute''') #Retrieve data
+# result = cursor.fetchone(); #Fetch 1st row from the table
+# print(result)
+# conn.commit() #Commit changes in the database
+# conn.close() #Close the connection
+
+
+# from collections import defaultdict # Allows merging of dictionaries with overwriting common keys
+
+# #Function to merge dictionaries
+# def merge_json(json1, json2):
+#     merged_json = defaultdict(list)
+#     for key, value in json1.items():
+#         merged_json[key].append(value) # Add values from json1
+#     for key, value in json2.items():
+#         merged_json[key].append(value)  # Add values from json2
+#     return merged_json
+
+# # Load park data from JSON file
+# with open("src/json-files/park_locations.json") as json_file:
+#     data = json.load(json_file)
+
+# #Toggle to decide whether to include Library data
+# include_park_nodes = True
+# # Load library data from JSON file
+# if include_park_nodes == True:
+#     with open("src/json-files/park_node_locations.json") as json_file:
+#         parknode_data = json.load(json_file)
+#     merged_json = merge_json(data,parknode_data) #Would need to save this to 'data' if wanted to use in file
+    
+#     x = merged_json["data"][0][0]['location']['latitude']
+#     print(x)
+#     print(type(x))
+    
+#     with open("src/json-files/merged.json",'w') as json_file:
+#         json.dump(merged_json, json_file, indent=4)
+
+
+# def merge_json_files(file_paths):
+#     merged_contents = []
+
+#     for file_path in file_paths:
+#         with open(file_path, 'r', encoding='utf-8') as file_in:
+#             merged_contents.extend(json.load(file_in))
+
+#     with open('src/json-files/nodes_final.json', 'w', encoding='utf-8') as file_out:
+#         json.dump(merged_contents, file_out, indent=4)
+
+# paths = [
+#     'src/json-files/park_locations.json',
+#     'src/json-files/park_node_locations.json'
+# ]
+
+# merge_json_files(paths)
