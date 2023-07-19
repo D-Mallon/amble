@@ -3,8 +3,9 @@ from django.urls import path, re_path, include
 from . import views
 
 urlpatterns = [
-    path('users', views.handle_routeinpput_data),
-    path('users', views.user_view),
+        path('users', views.user_view),
+        path('users', views.handle_routeinpput_data),
+
     # path('', include('users.urls')),
 
     # re_path(r'^users/$', views.user_view),

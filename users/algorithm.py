@@ -19,7 +19,7 @@ other_nodes_dict = {
     "park_node_locations" : False,
     "worship_locations": False,
     "museum_art_locations" : False,
-    "library_locations" : True,
+    "library_locations" : False,
     "walking_node_locations" : True,
     "community_locations" : True
 }
