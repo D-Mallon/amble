@@ -9,11 +9,11 @@ function Interface({ inputValues, setInputValues }) {
   return (
     <div>
       <div className="interface-container">
-        <div className="user-input">
+        {/* <div className="user-input">
           <StartPlace inputValues={inputValues} setInputValues={setInputValues} />
-        </div>
+        </div> */}
         <div className="map-container">
-          <Map inputValues={inputValues} />
+          <Map inputValues={inputValues} setInputValues={setInputValues} />
         </div>
       </div>
     </div >
