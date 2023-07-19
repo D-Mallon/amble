@@ -25,14 +25,21 @@ const theme = createTheme({
   });
 
   const logoImages = [
-    '/static/images/logo1.png',
-    '/static/images/logo2.png',
+    
+    '/static/images/LL1.png',
+    '/static/images/LL2.png',
+    '/static/images/LL3.png',
+    '/static/images/LL3.png',
+    '/static/images/logo4.png',
     '/static/images/logo3.png',
     '/static/images/logo4.png',
-    '/static/images/logo5.png',
-    '/static/images/logo6.png',
-    '/static/images/logo7.png',
-   
+    '/static/images/LL4.png',
+    '/static/images/LL4.png',
+    '/static/images/LL5.png',
+    
+    // '/static/images/LL6.png',
+    // '/static/images/LL7.png',
+  
     // Add more logo image paths here if needed
   ];
   
@@ -47,7 +54,7 @@ const theme = createTheme({
     useEffect(() => {
       const interval = setInterval(() => {
         setLogoIndex((prevIndex) => (prevIndex + 1) % logoImages.length);
-      }, 50); // Change logo every 3 seconds (adjust this interval as needed)
+      }, 1000); // Change logo every 3 seconds (adjust this interval as needed)
   
       return () => {
         clearInterval(interval);
