@@ -41,9 +41,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
+    'users',
     'rest_framework',
     'corsheaders',
-    'users',
 ]
 
 # Disable CSRF protection
@@ -91,7 +91,7 @@ DATABASES = {
     # 'default': {
     #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
     #     'NAME': os.environ.get('DATABASE_NAME'), 
-    #     'USER': 'os.environ.get('DATABASE_USER'),
+    #     'USER': os.environ.get('DATABASE_USER'),
     #     'PASSWORD': os.environ.get('DATABASE_PASS'),
     #     'HOST': '127.0.0.1', 
     #     'PORT': '5432',
@@ -138,6 +138,3 @@ STATIC_ROOT = BASE_DIR / "static"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-
-print(os.environ.get("VITE_MAPBOX_API_KEY"))

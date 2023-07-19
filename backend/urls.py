@@ -9,7 +9,6 @@ from users import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('users.urls')),
     path('users', views.user_view),
 
     path('api/users/', views.user_view),
