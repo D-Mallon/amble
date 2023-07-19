@@ -14,7 +14,7 @@ conn = psycopg2.connect(
 )
 cursor = conn.cursor() # Create a cursor object to execute SQL queries
 
-# Execute SQL queries to select data
+# Execute some sample SQL queries to select data
 query = "SELECT * FROM users_nodes WHERE type = 'park' and name != 'Unknown Park'"
 cursor.execute(query)
 results = cursor.fetchall() # Fetch the results
@@ -27,9 +27,11 @@ results2 = cursor.fetchall() # Fetch the results
 cursor.close()
 conn.close()
 
+#Print Queries
+print('\n------------------ Query 1 ------------------------------\n')
 for r in results:
     print(r[1])
-print('\n------------------------------------------------\n')
+print('\n------------------ Query 2 ------------------------------\n')
 for r in results2:
     print(r[1])
 
