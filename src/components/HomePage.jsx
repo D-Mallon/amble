@@ -23,13 +23,37 @@ const theme = createTheme({
       },
     },
   });
+
+  const logoImages = [
+    '/static/images/logo1.png',
+    '/static/images/logo2.png',
+    '/static/images/logo3.png',
+    '/static/images/logo4.png',
+    '/static/images/logo5.png',
+    '/static/images/logo6.png',
+    '/static/images/logo7.png',
+   
+    // Add more logo image paths here if needed
+  ];
   
   function HomePage() {
     const navigate=useNavigate();
+    const [logoIndex, setLogoIndex] = useState(0);
 
     const handleButtonClick = () =>{
         navigate('/interface')
     }
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setLogoIndex((prevIndex) => (prevIndex + 1) % logoImages.length);
+      }, 50); // Change logo every 3 seconds (adjust this interval as needed)
+  
+      return () => {
+        clearInterval(interval);
+      };
+    }, []);
+
 
     return (
       <>
@@ -40,7 +64,7 @@ const theme = createTheme({
         </div>
         <div className='flex-container'>
           <div className='LOGO'>
-            <img src="/static/images/logo.png" className='Logo' alt='Logo'/>
+            <img src={logoImages[logoIndex]} className='Logo' alt='Logo'/>
           </div>
           <MyButton onClick={handleButtonClick}/>
         </div>

@@ -16,14 +16,14 @@
 .Logo {
   width: 150px;
   height: auto;
-  z-index: 100;
+  z-index: 0;
   position: relative;
   margin-right: 35px; /* 设置右侧的间距 */
   margin-bottom: 8px;
 }
 
 .LOGO {
-  z-index: 100;
+  z-index: 0;
   opacity: 1;
   
 }
