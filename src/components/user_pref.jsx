@@ -20,17 +20,18 @@ const options = [
       setSelectedOptions(selected);
     };
   
+    const selectedValues = selectedOptions.map((option) => option.value);
+
     const handleSubmit = async (e) => {
       e.preventDefault();
-  
-      const selectedValues = selectedOptions.map((option) => option.value);
-  
+      console.log(selectedValues);
+      
       // Make the POST request
       axios
-        .post('/users/preferences', { selectedOptions: selectedValues})
-        // , headers: {
-        //   'Content-Type': 'application/x-www-form-urlencoded'
-        // }
+        .post('/users/preferences', { selectedOptions: selectedValues, headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }})
+       
         .then((response) => {
           // Handle successful response
           console.log(response.data);

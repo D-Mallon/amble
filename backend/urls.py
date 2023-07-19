@@ -4,7 +4,6 @@ URL configuration for backend project.
 from django.contrib import admin
 from django.urls import path, re_path, include
 from django.views.generic.base import TemplateView 
-# from users.views import *
 from users import views
 
 urlpatterns = [

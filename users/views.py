@@ -38,8 +38,8 @@ def handle_routeinpput_data(request):
 @api_view(['GET', 'POST'])
 def preferences(request):
     if request.method == 'GET':
-        user_preferences = UserPreferences.objects.all()
-        serializer = UserPreferencesSerializer(user_preferences, many=True)
+        preferences = UserPreferences.objects.all()
+        serializer = UserPreferencesSerializer(preferences, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
