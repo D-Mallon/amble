@@ -15,7 +15,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-#Set up environmental variables
+# Set up environmental variables
 from dotenv import load_dotenv
 import os
 load_dotenv()
