@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault();
 
     axios
-    .post('/users', formData, {
+    .post('/users/registration', formData, {
       // Need this header as axios sends Form data as application/json which is not compatible with django request.POST
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
@@ -33,8 +33,8 @@ const Login = () => {
     })
     .catch((error) => {
       if (error.response.status === 400) {
-        console.log("User already exists.");
-        const errorMessage = "User already exists. Please enter a different email address.";
+        console.log("It may be that Username already exists.");
+        const errorMessage = "Check if Username already exists. Please try entering a different email address.";
         errorMessageElement.textContent = errorMessage;
       } else if (error.response) {
         console.log(error.response);

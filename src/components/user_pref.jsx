@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 import axios from 'axios';
+import "./user_pref.css";
 
 const options = [
     { value: 'park', label: 'Parks' },
     { value: 'libary', label: 'Libraries' },
     { value: 'worship', label: 'Places of Worship' },
     { value: 'community', label: 'Community Centres' },
-    { value: 'museum', label: 'Museum & Art Galleries' },
+    { value: 'museum', label: 'Museums & Art Galleries' },
     { value: 'walk', label: 'Other Walking Nodes' },
     { value: 'other_park', label: 'Other Park Nodes' },
   ];
@@ -19,30 +20,40 @@ const options = [
       setSelectedOptions(selected);
     };
   
-    const handleSubmit = (event) => {
-      event.preventDefault();
+    const handleSubmit = async (e) => {
+      e.preventDefault();
   
       const selectedValues = selectedOptions.map((option) => option.value);
   
       // Make the POST request
       axios
-        .post('/users', { selectedOptions: selectedValues })
+        .post('/users/preferences', { selectedOptions: selectedValues})
+        // , headers: {
+        //   'Content-Type': 'application/x-www-form-urlencoded'
+        // }
         .then((response) => {
           // Handle successful response
           console.log(response.data);
+          console.log("Where is the data?");
         })
+        // If error, alert console
         .catch((error) => {
-          // Handle error
-          console.error(error);
+         if (error.response) {
+            console.log(error.response);
+            console.log("server responded");
+          } else if (error.request) {
+            console.log("network error");
+          } else {
+            console.log(error);
+          }
         });
     };
   
     return (
-      <div className="preference-area">
-      <form onSubmit={handleSubmit}>
+      <div className="preferences-area">
         <h3>Select Amble Preferences</h3>
+      <form onSubmit={handleSubmit}>
         <Select
-            
             options={options}
             isMulti
             value={selectedOptions}
