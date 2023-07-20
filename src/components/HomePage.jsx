@@ -30,11 +30,11 @@ const theme = createTheme({
     '/static/images/LL2.png',
     '/static/images/LL3.png',
     '/static/images/LL3.png',
-    '/static/images/logo7.png',
+    // '/static/images/logo7.png',
     '/static/images/LL4.png',
     '/static/images/LL4.png',
     '/static/images/LL5.png',
-    '/static/images/logo2.png',
+    // '/static/images/logo2.png',
     
     // '/static/images/LL6.png',
     // '/static/images/LL7.png',

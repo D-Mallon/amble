@@ -14,8 +14,8 @@
       position: absolute;
       top: 0.8rem;
       left: 0.8rem;
-      width: 2.8rem;
-      height: 2.8rem;
+      width: 2.4rem;
+      height: 2.4rem;
       background-color: #001E2B;
       display: flex;
       justify-content: center;
@@ -31,9 +31,9 @@
   .profile-button-wrapper {
     position: absolute;
     top: 0.8rem;
-    left: 7.2rem;
-    width: 2.8rem;
-      height: 2.8rem;
+    left: 6.4rem;
+    width: 2.4rem;
+      height: 2.4rem;
       background-color: #001E2B;
       display: flex;
       justify-content: center;
@@ -50,9 +50,9 @@
   .history-button-wrapper {
     position: absolute;
     top: 0.8rem;
-    left: 4rem;
-    width: 2.8rem;
-    height: 2.8rem;
+    left: 3.6rem;
+    width: 2.4rem;
+    height: 2.4rem;
     background-color: #001E2B;
     display: flex;
     justify-content: center;
@@ -130,10 +130,10 @@
     /* background-color: #7affcccb; */
     border: 1.5px solid #000000;
     border-radius: 0px 0px 0px 0px; /* 上左 上右 下右 下左 */
-    padding-top: 2%;
+    padding-top: 0%;
     padding-left: 22%;
     padding-right: 22%;
-    padding-bottom: 2%;
+    padding-bottom: 0%;
     width: 60%; /* 调整选项框的宽度 */
     height:70%;
     z-index: 2;

@@ -1,6 +1,6 @@
 .login-area {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: #f7f4f4;
     display: flex;
     justify-content: center;
@@ -9,3 +9,47 @@
     position: relative;
     z-index: 1;
 }
+
+.first_name{
+    margin-top: 2%;
+    margin-bottom: 10%;
+    width:250px;
+    height:40px;
+    border: 1.5px solid #00684A;
+}
+
+.last_name{
+    margin-top: 2%;
+    margin-bottom: 10%;
+    width:250px;
+    height:40px;
+    border: 1.5px solid #00684A;
+}
+
+.email{
+    margin-top: 2%;
+    margin-bottom: 10%;
+    width:250px;
+    height:40px;
+    border: 1.5px solid #00684A;
+}
+
+.address{
+    margin-top: 2%;
+    margin-bottom: 10%;
+    width:250px;
+    height:40px;
+    border: 1.5px solid #00684A;
+}
+
+.password{
+    margin-top: 2%;
+    margin-bottom: 25%;
+    width:250px;
+    height:40px;
+    border: 1.5px solid #00684A;
+}
+
+.submit-container {
+    margin-top: 0px; /* 调整submit按钮与其他表单元素之间的间距 */
+  }
