@@ -119,6 +119,37 @@
   /* .option-text{
   
   } */
+
+  .Reg-menu {
+    background-color: #ffffff;
+    
+    position: absolute;
+    /* bottom:0; */
+    display: flex;
+    flex-direction: column;
+    /* background-color: #7affcccb; */
+    border: 1.5px solid #000000;
+    border-radius: 0px 0px 0px 0px; /* 上左 上右 下右 下左 */
+    padding-top: 2%;
+    padding-left: 22%;
+    padding-right: 22%;
+    padding-bottom: 2%;
+    width: 60%; /* 调整选项框的宽度 */
+    height:70%;
+    z-index: 2;
+    margin: auto;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+    margin: auto;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
   
   .menu-bar {
     background: url(/static/images/MenuPic5.jpg) no-repeat center fixed;
@@ -128,8 +159,8 @@
     display: flex;
     flex-direction: column;
     /* background-color: #7affcccb; */
-    border: 1px solid #000000;
-    border-radius: 5px 5px 5px 5px; /* 上左 上右 下右 下左 */
+    border: 1.5px solid #000000;
+    border-radius: 0px 0px 0px 0px; /* 上左 上右 下右 下左 */
     padding-top: 2%;
     padding-left: 22%;
     padding-right: 22%;
@@ -237,11 +268,115 @@
     animation: fadeIn 0.4s ease-in-out forwards;
     animation-delay: 0.2s;
   }
-  
+
+  .overlay-Reg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(248, 255, 253, 0.93); /* 设置蒙版的颜色和透明度 */
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  .additional-blocks-menubar {
+    position: absolute;
+    background-color: #dde87b;
+    width: 12.8rem;
+    top: 0;
+    right:0;
+    display: flex;
+    align-items: flex-start;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .additional-block-text-menubar{
+    width: 10rem;
+    height:2.8rem;
+    background-color: #FFEEA9;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .text_bar_2-menubar {
+    color: #354648;
+    font-size: 0.9rem;
+    font-weight: normal;
+    /* padding-left: 24px; */
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .additional-blocks-Reg {
+    position: absolute;
+    background-color: #dde87b;
+    width: 12.8rem;
+    top: 0;
+    right:0;
+    display: flex;
+    align-items: flex-start;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .additional-block-text-Reg{
+    width: 10rem;
+    height:2.8rem;
+    background-color: #FFEEA9;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .text_bar_2-Reg {
+    color: #354648;
+    font-size: 0.9rem;
+    font-weight: normal;
+    /* padding-left: 24px; */
+    justify-content: center;
+    align-items: center;
+    
+  }
+
   .additional-block-close-menubar {
     position: absolute;
-    top: 0.8rem;
-    left: 0.8rem;
+    right: 0rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: #004d40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+    cursor: pointer;
+  }
+
+  .additional-block-close-Reg-menu{
+    position: absolute;
+    right: 0rem;
     width: 2.8rem;
     height: 2.8rem;
     background-color: #004d40;
@@ -257,7 +392,15 @@
   
   .additional-block-close-menubar.hide,
   .overlay.hide,
-  .menu-bar.hide {
+  .menu-bar.hide, 
+  .additional-blocks-menubar.hide,
+  .additional-block-text-menubar.hide,
+  .additional-block-close-Reg-menu.hide,
+  .overlay-Reg.hide,
+  .Reg-menu.hide,
+  .additional-blocks-Reg.hide,
+  .additional-block-text-Reg.hide
+  {
     animation: fadeOut 0.7s ease-in-out;
     opacity: 0;
   }
