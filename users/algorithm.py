@@ -1,39 +1,64 @@
 import json
 import random
 from math import radians, sin, cos, sqrt, atan2
+import time
 
-# ########### Accessing Data from Database (using fetch) ###################################
-# import psycopg2 
+# ####### Start time - to get run time #########
+# start_time = time.time()
 
-# #Make a connection
-# conn = psycopg2.connect(
-#    database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
-# ) 
+# Set up the base nodes (from Park Locations)
+with open("src/json-files/park_locations.json") as json_file:
+    basedata = json.load(json_file)
 
-# conn.autocommit = True #Set auto commit false
-# cursor = conn.cursor() #Create a cursor object
-# cursor.execute('''SELECT * from users_userroute''') #Retrieve data
-# result = cursor.fetchone(); #Fetch 1st row from the table
-# print(result)
-# conn.commit() #Commit changes in the database
-# conn.close() #Close the connection
+# Create a new dictionary and add the base nodes to it
+data = {}
+data.update(basedata)
+
+# Decide what other nodes to include - comes from the front end preferences
+other_nodes_dict = {
+    "park_node_locations": True,
+    "worship_locations": True,
+    "museum_art_locations": True,
+    "library_locations": True,
+    "walking_node_locations": True,
+    "community_locations": True
+}
+
+# Add the nodes
+for k, v in other_nodes_dict.items():
+    if v == True:
+        with open('src/json-files/'+k+'.json') as file:
+            nodes = json.load(file)
+        # print(nodes)
+        # print(type(nodes))
+        data = {'data': data['data'] + nodes['data']}
+
+# #Create a json object and Write to a json file
+merged_json = json.dumps(data, indent=4)
+with open('src/json-files/nodes_final.json', 'w') as merged_file:
+    merged_file.write(merged_json)
 
 # Load park data from JSON file
-#with open("src/components/parks.json") as json_file:
+with open("src/components/parks.json") as json_file:
+    data = json.load(json_file)
+
+# David's original amended code below
+# Load park data from JSON file
+# with open("src/components/parks.json") as json_file:
 #    data = json.load(json_file)
 
-#David has commented out the two lines above to try resolve routing issues. Trying to make routes absolute, as opposed to relative.
+# David has commented out the two lines above to try resolve routing issues. Trying to make routes absolute, as opposed to relative.
 
-import os
-from django.conf import settings
+# import os
+# from django.conf import settings
 
-file_path = os.path.join(settings.BASE_DIR, 'src/components/parks.json')
-with open(file_path) as json_file:
-    # make sure to indent the code that uses json_file
-    data = json.load(json_file)
-    # any other code that needs to use json_file should also be indented
+# file_path = os.path.join(settings.BASE_DIR, 'src/components/parks.json')
+# with open(file_path) as json_file:
+#     # make sure to indent the code that uses json_file
+#     data = json.load(json_file)
+#     # any other code that needs to use json_file should also be indented
 
-#David additions above only.
+# David additions above only.
 
 # Extract latitude and longitude values
 latitudes = []
@@ -61,10 +86,9 @@ def calculate_distance(lat1, lon1, lat2, lon2):
 
     distance = R * c
     return distance
-    
+
 
 def magic(user_latitude, user_longitude, hour):
-
 
     print(f"Starting location: ({user_latitude}, {user_longitude})")
     print("-----------------------------------------")
@@ -90,11 +114,13 @@ def magic(user_latitude, user_longitude, hour):
                 closest_parks.append(park_data)
 
         # Sort the parks based on distance and select the 7 closest parks
-        sorted_indices = sorted(range(len(closest_distances)), key=lambda k: closest_distances[k])
+        sorted_indices = sorted(
+            range(len(closest_distances)), key=lambda k: closest_distances[k])
         closest_parks = [closest_parks[i] for i in sorted_indices[:7]]
 
         # Select the park with the lowest combination of "busi" values
-        selected_park = min(closest_parks, key=lambda park: park["busi"][hour])
+        selected_park = min(
+            closest_parks, key=lambda park: park["b-score"][hour])
         # print(selected_park["busi"][hour])
 
         # Calculate distance to the selected park
@@ -112,7 +138,7 @@ def magic(user_latitude, user_longitude, hour):
 
         # Print information about the current journey
         park_name = selected_park["name"]
-        park_busi = selected_park["busi"][hour]
+        park_busi = selected_park["b-score"][hour]
         # print(f"Visiting Park: {park_name}")
         # print(f"Busyness Rating: {park_busi}")
         # print(f"Remaining Distance: {predefined_distance} km")
@@ -127,7 +153,8 @@ def magic(user_latitude, user_longitude, hour):
     # for park in visited_parks:
     #     print(f"Latitude: {park['location']['latitude']}, Longitude: {park['location']['longitude']}")
 
-    visited_locations = [(park['location']['latitude'], park['location']['longitude']) for park in visited_parks]
+    visited_locations = [(park['location']['latitude'],
+                          park['location']['longitude']) for park in visited_parks]
     # print(visited_locations)
     return visited_locations
 
@@ -135,3 +162,20 @@ def magic(user_latitude, user_longitude, hour):
 
 # Latitue: 40
 # Longitude: -74
+
+
+# ########### Accessing Data from Database (using fetch) ###################################
+# import psycopg2
+
+# #Make a connection
+# conn = psycopg2.connect(
+#    database="namesDB", user='postgres', password='password', host='127.0.0.1', port= '5432'
+# )
+
+# conn.autocommit = True #Set auto commit false
+# cursor = conn.cursor() #Create a cursor object
+# cursor.execute('''SELECT * from users_userroute''') #Retrieve data
+# result = cursor.fetchone(); #Fetch 1st row from the table
+# print(result)
+# conn.commit() #Commit changes in the database
+# conn.close() #Close the connection

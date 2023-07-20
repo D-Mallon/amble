@@ -1,7 +1,7 @@
 // useMapInit.js
 import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
-import parks from './parks.json';
+import parks from '../json-files/park_locations.json';
 
 const useMapInit = (mapContainer, lat, lng, zoom) => {
   const map = useRef(null);

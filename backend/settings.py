@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 import environ
 
-#david added import environ above and three lines below in order to try read the passwords.
+# david added import environ above and three lines below in order to try read the passwords.
 env = environ.Env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -48,9 +48,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
+    'users',
     'rest_framework',
     'corsheaders',
-    'users',
 ]
 
 # Disable CSRF protection
@@ -94,25 +94,35 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# This was the original database that David has commented out for the purposes of setting up and testing apache.
-# DATABASES = {
-# 'default': {
-#     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#     'NAME': os.environ.get('DATABASE_NAME'),
-#     'USER': 'os.environ.get('DATABASE_USER'),
-#     'PASSWORD': os.environ.get('DATABASE_PASS'),
-#     'HOST': '127.0.0.1',
-#     'PORT': '5432',
-# }
-# }
+DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': os.environ.get('DATABASE_NAME'),
+    #     'USER': 'os.environ.get('DATABASE_USER'),
+    #     'PASSWORD': os.environ.get('DATABASE_PASS'),
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '5432',
+    # }
+}
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get('DATABASE_NAME'),
+        'USER': os.environ.get('DATABASE_USER'),
+        'PASSWORD': os.environ.get('DATABASE_PASS'),
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
+# version below was the one David used when setting up working branch on apache
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -170,4 +180,5 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-print(os.environ.get("VITE_MAPBOX_API_KEY"))
+# the below was not commented out in david's working apache code
+# print(os.environ.get("VITE_MAPBOX_API_KEY"))

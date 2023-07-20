@@ -6,7 +6,11 @@ import Interface from "./components/Interface";
 import Login from "./components/login";
 import Comms from "./components/Comms.jsx";
 import RouteInputs from "./components/latlondis";
+import UserPreferences from "./components/user_pref";
 
+import HomePage from './components/HomePage';
+import Interface2 from './components/interface2';
+import ShowRoute from './components/ShowRoute';
 // If a route can not be displayed this function is invoked from Route path
 function MatchAllRoute() {
   return <h2>The requested page does not exist</h2>;
@@ -29,7 +33,13 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/comms" element={<Comms />} />
           <Route path="/latlondis" element={<RouteInputs />} />
+          <Route path="/user_pref" element={<UserPreferences />} />
           <Route path="*" element={<MatchAllRoute />} />
+
+          <Route path="/interface" element={<Interface2 />} />
+          <Route path="/showroute" element={<ShowRoute />} />
+          <Route path="/homepage" element={<HomePage />} />
+        
         </Routes>
       </Router >
     </div >
