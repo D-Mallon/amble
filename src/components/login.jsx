@@ -11,6 +11,8 @@ const Login = () => {
     password: '',
   });
 
+  const errorMessageElement = document.getElementById("error-message");
+
   const handleChange = (e) => {
     setFormData({
       ...formData, [e.target.name]: e.target.value,});
@@ -20,7 +22,7 @@ const Login = () => {
     e.preventDefault();
 
     axios
-    .post('/users', formData, {
+    .post('/users/registration', formData, {
       // Need this header as axios sends Form data as application/json which is not compatible with django request.POST
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
@@ -30,7 +32,11 @@ const Login = () => {
       console.log(response);
     })
     .catch((error) => {
-      if (error.response) {
+      if (error.response.status === 400) {
+        console.log("It may be that Username already exists.");
+        const errorMessage = "Check if Username already exists. Please try entering a different email address.";
+        errorMessageElement.textContent = errorMessage;
+      } else if (error.response) {
         console.log(error.response);
         console.log("server responded");
       } else if (error.request) {
@@ -94,7 +100,7 @@ const Login = () => {
                     onChange={handleChange}
                     ></input>
             </div>
-        
+            <div id="error-message"></div>
       <button type="submit" className='submit-button'>Submit</button>
     </form>
     </div>

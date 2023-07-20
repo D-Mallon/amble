@@ -23,16 +23,24 @@ query2 = "SELECT * FROM public.users_nodes WHERE wheelchair_accessible = 'yes' a
 cursor.execute(query2)
 results2 = cursor.fetchall() # Fetch the results
 
+query3 = "SELECT * FROM public.users_userpref"
+cursor.execute(query3)
+results3 = cursor.fetchall() # Fetch the results
+
+
 # Close the cursor and database connection
 cursor.close()
 conn.close()
 
 #Print Queries
-print('\n------------------ Query 1 ------------------------------\n')
-for r in results:
-    print(r[1])
+# print('\n------------------ Query 1 ------------------------------\n')
+# for r in results:
+#     print(r[1])
 print('\n------------------ Query 2 ------------------------------\n')
 for r in results2:
+    print(r[1])
+print('\n------------------ Query 3 ------------------------------\n')
+for r in results3:
     print(r[1])
 
 # from users.models import Nodes

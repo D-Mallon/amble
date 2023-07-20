@@ -1,0 +1,11 @@
+.preferences-area {
+    width: 100vw;
+    height: 100vh;
+    background: #f7f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
