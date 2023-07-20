@@ -7,6 +7,7 @@ import Login from "./components/login";
 import Comms from "./components/Comms.jsx";
 import RouteInputs from "./components/latlondis";
 import UserPreferences from "./components/user_pref";
+import LoginCheck from "./components/loginCheck";
 
 import HomePage from './components/HomePage';
 import Interface2 from './components/interface2';
@@ -34,6 +35,7 @@ function App() {
           <Route path="/comms" element={<Comms />} />
           <Route path="/latlondis" element={<RouteInputs />} />
           <Route path="/user_pref" element={<UserPreferences />} />
+          <Route path="/loginCheck" element={<LoginCheck />} />
           <Route path="*" element={<MatchAllRoute />} />
 
           <Route path="/interface" element={<Interface2 />} />

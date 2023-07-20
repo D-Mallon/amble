@@ -4,16 +4,16 @@ import axios from 'axios';
 import "./user_pref.css";
 
 const options = [
-    { value: 'park', label: 'Parks' },
-    { value: 'libary', label: 'Libraries' },
+    // { value: 'park', label: 'Parks' },
+    { value: 'library', label: 'Libraries' },
     { value: 'worship', label: 'Places of Worship' },
     { value: 'community', label: 'Community Centres' },
     { value: 'museum', label: 'Museums & Art Galleries' },
-    { value: 'walk', label: 'Other Walking Nodes' },
-    { value: 'other_park', label: 'Other Park Nodes' },
+    { value: 'walking_node', label: 'Other Walking Nodes' },
+    { value: 'park_node', label: 'Other Park Nodes' },
   ];
 
-  const UserPreference = () => {
+  const UserPreferences = () => {
     const [selectedOptions, setSelectedOptions] = useState([]);
   
     const handleSelectChange = (selected) => {
@@ -24,24 +24,26 @@ const options = [
 
     const handleSubmit = async (e) => {
       e.preventDefault();
-      console.log(selectedValues);
-      
+      console.log('Selected Values:',selectedValues);
+      console.log('Selected Options:',selectedOptions);
+      // 
       // Make the POST request
       axios
-        .post('/users/preferences', { selectedOptions: selectedValues, headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }})
+        .post('/users/preferences', { selectedOptions: selectedValues}) //, headers: {'Content-Type': 'application/x-www-form-urlencoded'}
        
         .then((response) => {
           // Handle successful response
-          console.log(response.data);
+          console.log('Data:',response.data);
           console.log("Where is the data?");
         })
         // If error, alert console
         .catch((error) => {
          if (error.response) {
             console.log(error.response);
-            console.log("server responded");
+            console.log("Status code:", error.response.status);
+            console.log("Error Message", error.message);
+            console.log("Response Data:", error.response.data);
+
           } else if (error.request) {
             console.log("network error");
           } else {
@@ -56,7 +58,7 @@ const options = [
       <form onSubmit={handleSubmit}>
         <Select
             options={options}
-            isMulti
+            isMulti='true'
             value={selectedOptions}
             onChange={handleSelectChange}
         />
@@ -66,4 +68,4 @@ const options = [
     );
   };
 
-  export default UserPreference;
+  export default UserPreferences;

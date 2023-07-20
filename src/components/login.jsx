@@ -34,7 +34,7 @@ const Login = () => {
     .catch((error) => {
       if (error.response.status === 400) {
         console.log("It may be that Username already exists.");
-        const errorMessage = "Check if Username already exists. Please try entering a different email address.";
+        const errorMessage = "Email address may already exist! Please try entering a different email.";
         errorMessageElement.textContent = errorMessage;
       } else if (error.response) {
         console.log(error.response);
@@ -102,6 +102,7 @@ const Login = () => {
             </div>
             <div id="error-message"></div>
       <button type="submit" className='submit-button'>Submit</button>
+          
     </form>
     </div>
   );

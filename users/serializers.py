@@ -10,8 +10,8 @@ class UserSerializer(serializers.ModelSerializer):
 class UserPreferencesSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserPref
-        fields = ('park','library','worship','community','museum','walking_node','park_node')
-        #fields = ('__all__')
+        fields = ('library','worship','community','museum','walking_node','park_node')
+        # fields = ('__all__')
 
 class UserRouteSerializer(serializers.ModelSerializer):
     class Meta:

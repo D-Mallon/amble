@@ -32,10 +32,10 @@ results3 = cursor.fetchall() # Fetch the results
 cursor.close()
 conn.close()
 
-#Print Queries
-# print('\n------------------ Query 1 ------------------------------\n')
-# for r in results:
-#     print(r[1])
+# Print Queries
+print('\n------------------ Query 1 ------------------------------\n')
+for r in results:
+    print(r[1])
 print('\n------------------ Query 2 ------------------------------\n')
 for r in results2:
     print(r[1])

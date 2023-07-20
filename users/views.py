@@ -5,6 +5,7 @@ from .models import User, UserPref, UserRoute
 from .serializers import UserSerializer, UserPreferencesSerializer, UserRouteSerializer
 from django.http import JsonResponse, HttpResponse, HttpResponseBadRequest
 from .algorithm import *
+from django.contrib.auth import authenticate
 
 #Function to view user registration data
 @api_view(['GET', 'POST'])
@@ -42,11 +43,30 @@ def preferences(request):
         return Response(serializer.data)
 
     elif request.method == 'POST':
+        # return Response(status=status.HTTP_201_CREATED)
         data = UserPref.objects.all()
         serializer = UserPreferencesSerializer(data=request.data)
+        # return Response(status=status.HTTP_201_CREATED)
         if serializer.is_valid():
+            # return Response(status=status.HTTP_201_CREATED)
             serializer.save()
             return Response(status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     return HttpResponseBadRequest('Unsupported request method.')
+
+def logincheck(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        usercheck = authenticate(request, email=email, password=password)
+
+        if usercheck is not None:
+            # Login successful
+            return JsonResponse({'message': 'Login successful'})
+        else:
+            # Login failed
+            return JsonResponse({'error': 'Invalid email or password'}, status=401)
+
+    # Return a 405 Method Not Allowed response for non-POST requests
+    return JsonResponse({'error': 'Method not allowed'}, status=405)
