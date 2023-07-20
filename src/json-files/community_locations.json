@@ -4,7 +4,7 @@
       "id": "C2",
       "name": "Sixth Street Community Center",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -17,7 +17,8 @@
       "location": {
         "latitude": 40.7237397,
         "longitude": -73.9802085
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C3",
@@ -36,7 +37,8 @@
       "location": {
         "latitude": 40.7495468,
         "longitude": -74.0014911
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C4",
@@ -55,7 +57,8 @@
       "location": {
         "latitude": 40.7197599,
         "longitude": -73.9981915
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C5",
@@ -74,7 +77,8 @@
       "location": {
         "latitude": 40.720009,
         "longitude": -73.991158
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C6",
@@ -93,7 +97,8 @@
       "location": {
         "latitude": 40.7173727,
         "longitude": -74.0012731
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C9",
@@ -112,13 +117,14 @@
       "location": {
         "latitude": 40.8323961,
         "longitude": -73.9426051
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C10",
       "name": "Franciscan Community Center",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -131,7 +137,8 @@
       "location": {
         "latitude": 40.7948899,
         "longitude": -73.970658
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C11",
@@ -150,13 +157,14 @@
       "location": {
         "latitude": 40.8156151,
         "longitude": -73.9420653
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C12",
       "name": "Lt. Joseph P. Kennedy Center",
       "type": "community",
-      "address": "34 West 134th Street, None Manhattan",
+      "address": "34 West 134th Street, Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -169,13 +177,14 @@
       "location": {
         "latitude": 40.8126493,
         "longitude": -73.9400429
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C13",
       "name": "Gee How Oak Tin Association",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -188,13 +197,14 @@
       "location": {
         "latitude": 40.7155673,
         "longitude": -73.9979039
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C14",
       "name": "Community Board Five",
       "type": "community",
-      "address": "450 Seventh Avenue, None Manhattan",
+      "address": "450 Seventh Avenue, Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -207,13 +217,14 @@
       "location": {
         "latitude": 40.7514042,
         "longitude": -73.99075
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C15",
       "name": "Community Board 4",
       "type": "community",
-      "address": "330 West 42nd Street, None Manhattan",
+      "address": "330 West 42nd Street, Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -226,13 +237,14 @@
       "location": {
         "latitude": 40.7575563,
         "longitude": -73.9915067
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C16",
       "name": "Manhattan Community Board 9",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -245,13 +257,14 @@
       "location": {
         "latitude": 40.8155438,
         "longitude": -73.9572693
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C17",
       "name": "Community Board #2",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -264,13 +277,14 @@
       "location": {
         "latitude": 40.7278045,
         "longitude": -73.997996
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C18",
       "name": "CB1",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": "yes",
       "opening_hours": null,
@@ -283,13 +297,14 @@
       "location": {
         "latitude": 40.7127141,
         "longitude": -74.0038708
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C20",
       "name": "Manhattan Community Board 7",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -302,13 +317,14 @@
       "location": {
         "latitude": 40.7890183,
         "longitude": -73.976423
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C22",
       "name": "Manhattan Community Board 10",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -321,13 +337,14 @@
       "location": {
         "latitude": 40.8094814,
         "longitude": -73.948904
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C24",
       "name": "New York City Community Board 12",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": "Mo,Tu,Fr 09:00-16:00; We 09:00-13:00; Th 09:00-18:00; Sa 10:00-14:00",
@@ -340,13 +357,14 @@
       "location": {
         "latitude": 40.8391766,
         "longitude": -73.9396092
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C26",
       "name": "Moriah Senior Center",
       "type": "community",
-      "address": "90 Bennett Avenue, None Manhattan",
+      "address": "90 Bennett Avenue, Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -359,13 +377,14 @@
       "location": {
         "latitude": 40.8531163,
         "longitude": -73.9355226
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C27",
       "name": "Alianza Dominicana Cultural Center",
       "type": "community",
-      "address": "530 West 166th Street, None Manhattan",
+      "address": "530 West 166th Street, Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": "Mo 13:00-20:00; Tu, We, Fr 12:00-20:00; Sa 12:00-17:00",
@@ -378,13 +397,14 @@
       "location": {
         "latitude": 40.8392644,
         "longitude": -73.9396018
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C28",
       "name": "Resobox",
       "type": "community",
-      "address": "91 East 3rd Street, None Manhattan",
+      "address": "91 East 3rd Street, Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": "\"Temporarily closed\"",
@@ -397,13 +417,14 @@
       "location": {
         "latitude": 40.724844,
         "longitude": -73.9878407
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C29",
       "name": "Good Old Lower East Side",
       "type": "community",
-      "address": "173 Avenue B, None Manhattan",
+      "address": "173 Avenue B, Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": "Mo-Fr 10:00-13:00,14:00-18:00",
@@ -416,13 +437,14 @@
       "location": {
         "latitude": 40.7272707,
         "longitude": -73.9793594
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C30",
       "name": "American Indian Community House",
       "type": "community",
-      "address": "39 Eldridge Street, None Manhattan",
+      "address": "39 Eldridge Street, Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -435,13 +457,14 @@
       "location": {
         "latitude": 40.7156911,
         "longitude": -73.9934147
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C31",
       "name": "The Laundromat Project",
       "type": "community",
-      "address": "127 West 127th Street, None Manhattan",
+      "address": "127 West 127th Street, Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -454,7 +477,8 @@
       "location": {
         "latitude": 40.8095546,
         "longitude": -73.9453751
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C32",
@@ -473,13 +497,14 @@
       "location": {
         "latitude": 40.7513331,
         "longitude": -74.0063215
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C33",
       "name": "Project Reach",
       "type": "community",
-      "address": "39 Eldridge Street, None Manhattan",
+      "address": "39 Eldridge Street, Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": "Mo-Fr 10:00-18:00",
@@ -492,13 +517,14 @@
       "location": {
         "latitude": 40.7157361,
         "longitude": -73.9934027
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C34",
       "name": "Wallace S Whittaker Foundation Senior Center",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -511,13 +537,14 @@
       "location": {
         "latitude": 40.7136681,
         "longitude": -73.9884395
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C36",
       "name": "Grand St. Settlement Community Center",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -530,13 +557,14 @@
       "location": {
         "latitude": 40.7171594,
         "longitude": -73.9854803
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C38",
       "name": "Salmagundi Club",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -549,7 +577,8 @@
       "location": {
         "latitude": 40.7343016,
         "longitude": -73.9945529
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C39",
@@ -568,13 +597,14 @@
       "location": {
         "latitude": 40.7640349,
         "longitude": -73.9887906
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C40",
       "name": null,
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -587,13 +617,14 @@
       "location": {
         "latitude": 40.7560788,
         "longitude": -73.9999865
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C41",
       "name": "Little Free Library",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -606,13 +637,14 @@
       "location": {
         "latitude": 40.731262,
         "longitude": -73.9772239
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C42",
       "name": "11th Street Community Library",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": "24/7",
@@ -625,7 +657,8 @@
       "location": {
         "latitude": 40.7288081,
         "longitude": -73.982879
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C1",
@@ -644,7 +677,8 @@
       "location": {
         "latitude": 40.7480382,
         "longitude": -73.9760986
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C7",
@@ -663,7 +697,8 @@
       "location": {
         "latitude": 40.798966,
         "longitude": -73.9431794
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C8",
@@ -682,13 +717,14 @@
       "location": {
         "latitude": 40.7967935,
         "longitude": -73.942441
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C19",
       "name": "Community Board Six Manhattan",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -701,13 +737,14 @@
       "location": {
         "latitude": 40.7525583,
         "longitude": -73.9665176
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C21",
       "name": "Manhattan Community Board 8",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -720,13 +757,14 @@
       "location": {
         "latitude": 40.7629729,
         "longitude": -73.9694446
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C23",
       "name": "Community Board Eleven of Manhattan",
       "type": "community",
-      "address": "None None, None Manhattan",
+      "address": "Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -739,13 +777,14 @@
       "location": {
         "latitude": 40.8003138,
         "longitude": -73.9428344
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C25",
       "name": "Lincoln East Senior Center",
       "type": "community",
-      "address": "60 East 135th Street, None Manhattan",
+      "address": "60 East 135th Street, Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -758,13 +797,14 @@
       "location": {
         "latitude": 40.8112136,
         "longitude": -73.9353331
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C35",
       "name": "The Boys' Club of New York",
       "type": "community",
-      "address": "321 East 111th Street, None Manhattan",
+      "address": "321 East 111th Street, Manhattan",
       "internet_access": null,
       "wheelchair_accessible": null,
       "opening_hours": null,
@@ -777,7 +817,8 @@
       "location": {
         "latitude": 40.7933643,
         "longitude": -73.9387277
-      }
+      },
+      "last_updated": null
     },
     {
       "id": "C37",
@@ -796,7 +837,8 @@
       "location": {
         "latitude": 40.7058496,
         "longitude": -74.0102061
-      }
+      },
+      "last_updated": null
     }
   ]
 }
