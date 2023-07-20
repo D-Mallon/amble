@@ -21,6 +21,15 @@
   margin-right: 35px; /* 设置右侧的间距 */
   margin-bottom: 8px;
 }
+.hometext {
+  width: 500px;
+  height: auto;
+  z-index: 0;
+  position: relative;
+  margin-right: 250px; /* 设置右侧的间距 */
+  margin-bottom: 8px;
+  text-align: left;
+}
 
 .LOGO {
   z-index: 0;

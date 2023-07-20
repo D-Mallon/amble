@@ -30,12 +30,11 @@ const theme = createTheme({
     '/static/images/LL2.png',
     '/static/images/LL3.png',
     '/static/images/LL3.png',
-    '/static/images/logo4.png',
-    '/static/images/logo3.png',
-    '/static/images/logo4.png',
+    '/static/images/logo7.png',
     '/static/images/LL4.png',
     '/static/images/LL4.png',
     '/static/images/LL5.png',
+    '/static/images/logo2.png',
     
     // '/static/images/LL6.png',
     // '/static/images/LL7.png',
@@ -54,7 +53,7 @@ const theme = createTheme({
     useEffect(() => {
       const interval = setInterval(() => {
         setLogoIndex((prevIndex) => (prevIndex + 1) % logoImages.length);
-      }, 1000); // Change logo every 3 seconds (adjust this interval as needed)
+      }, 80); // Change logo every 3 seconds (adjust this interval as needed)
   
       return () => {
         clearInterval(interval);
@@ -67,9 +66,15 @@ const theme = createTheme({
         <MenuAppBar />
     
         <div className='mapwrapper_homepage'>
-          <MapBackground/>
+          <MapBackground zoom={12.8}/>
         </div>
-        <div className='flex-container'>
+        <div className='flex-container' >
+          <span className='hometext'> 
+          <span style={{ fontSize: '28px' ,fontWeight: 550}}>amble - the peaceful way</span>
+          <br></br>
+          <span style={{ fontSize: '16px' }}>The purpose of our application is to generate walking routes for users to guide them though the quiet corners of Manhattan. The route generating algorthm takes forecast conditions into our machine learning model to determine busyiness based on taxizone, citibike and subway data and pair this infomation with crimes statistics for areas of Manhattan to ensure users can enjoy a quiet, peaceful and safe journey!
+          </span>
+          </span>
           <div className='LOGO'>
             <img src={logoImages[logoIndex]} className='Logo' alt='Logo'/>
           </div>
