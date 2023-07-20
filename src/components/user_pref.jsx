@@ -13,7 +13,7 @@ const options = [
     { value: 'other_park', label: 'Other Park Nodes' },
   ];
 
-  const UserPreferences = () => {
+  const UserPreference = () => {
     const [selectedOptions, setSelectedOptions] = useState([]);
   
     const handleSelectChange = (selected) => {
@@ -66,4 +66,4 @@ const options = [
     );
   };
 
-  export default UserPreferences;
+  export default UserPreference;

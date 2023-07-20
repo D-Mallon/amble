@@ -1,10 +1,9 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
-from .models import User, UserPreferences #, UserRoute
-from .serializers import UserSerializer, UserPreferencesSerializer #, UserRouteSerializer
+from .models import User, UserPref, UserRoute
+from .serializers import UserSerializer, UserPreferencesSerializer, UserRouteSerializer
 from django.http import JsonResponse, HttpResponse, HttpResponseBadRequest
-
 from .algorithm import *
 
 #Function to view user registration data
@@ -38,12 +37,12 @@ def handle_routeinpput_data(request):
 @api_view(['GET', 'POST'])
 def preferences(request):
     if request.method == 'GET':
-        preferences = UserPreferences.objects.all()
+        preferences = UserPref.objects.all()
         serializer = UserPreferencesSerializer(preferences, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        data = UserPreferences.objects.all()
+        data = UserPref.objects.all()
         serializer = UserPreferencesSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()

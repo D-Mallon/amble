@@ -11,8 +11,8 @@ urlpatterns = [
     path('users/preferences', views.preferences),
     path('users/registration', views.registration),
     
-    path('api/users/', views.registration),
-    re_path(r'^api/users/(?P<pk>[0-9]+)$', views.registration),
+    # path('api/users/', views.registration),
+    # re_path(r'^api/users/(?P<pk>[0-9]+)$', views.registration),
     path("user_pref", TemplateView.as_view(template_name="base.html")),
     path("", TemplateView.as_view(template_name="base.html")),
     path("latlondis", TemplateView.as_view(template_name="base.html")),

@@ -9,21 +9,21 @@ class User(models.Model):
     password = models.CharField("Password",default="missing",max_length=30)
     registrationDate = models.DateField("Registration Date", auto_now_add=True)
 
-class UserPreferences(models.Model):
+class UserPref(models.Model):
     park = models.CharField("Parks", max_length=30)
-    library = models.CharField("Libraries", max_length=30)
-    worship = models.CharField("Places of Worship", max_length=30)
-    community = models.CharField("Community Centres", max_length=30)
-    museum = models.CharField("Museums & Art Galleries", max_length=30)
-    walking_node = models.CharField("Other Walking Nodes", max_length=30)
-    park_node = models.CharField("Other Park Nodes", max_length=30)
+    library = models.CharField("Libraries", max_length=30, null=True)
+    worship = models.CharField("Places of Worship", max_length=30, null=True)
+    community = models.CharField("Community Centres", max_length=30, null=True)
+    museum = models.CharField("Museums & Art Galleries", max_length=30, null=True)
+    walking_node = models.CharField("Other Walking Nodes", max_length=30, null=True)
+    park_node = models.CharField("Other Park Nodes", max_length=30, null=True)
     
-# class UserRoute(models.Model):
-#     # email  =  models.ForeignKey(User, null=True, on_delete=models.CASCADE)
-#     latitude = models.CharField("Latitude", max_length=30)
-#     longitude = models.CharField("Longitude", max_length=30)
-#     distance = models.CharField("Distance",max_length=30)
-#     hour = models.IntegerField("Hour")
+class UserRoute(models.Model):
+    # email  =  models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+    latitude = models.CharField("Latitude", max_length=30)
+    longitude = models.CharField("Longitude", max_length=30)
+    distance = models.CharField("Distance",max_length=30)
+    hour = models.IntegerField("Hour")
     
 class Nodes(models.Model):
     id_str = models.CharField(max_length=50)

@@ -16,10 +16,10 @@ data.update(basedata)
 
 #Decide what other nodes to include - comes from the front end preferences
 other_nodes_dict = {
-    "park_node_locations" : False,
-    "worship_locations": False,
-    "museum_art_locations" : False,
-    "library_locations" : False,
+    "park_node_locations" : True,
+    "worship_locations": True,
+    "museum_art_locations" : True,
+    "library_locations" : True,
     "walking_node_locations" : True,
     "community_locations" : True
 }
