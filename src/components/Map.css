@@ -58,8 +58,10 @@ body, html {
 }
 
 h2 {
-  color: black;
+  color: white;
   text-align: left;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .map-container {
@@ -70,11 +72,13 @@ h2 {
 }
 
 .user-input {
+  color: white; 
   position: absolute;
-  top: 15px;
+  top: 10px;
   left: 15px;
-  width: 400px;
-  background: #99ddff;
+  width: 380px;
+  /* background: #99ddff; */
+  background: rgba(0,0,0,0.8);
   padding: 10px;
   border-radius: 10px;
   z-index: 1;
