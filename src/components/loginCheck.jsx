@@ -14,7 +14,7 @@ const LoginCheck = () => {
 
     // Make the POST request to the logincheck endpoint
     axios.post('users/logincheck', { username, password })
-    console.log(username,password)
+    // console.log(username,password)
       // .then((response) => {
       //   // Handle successful login
       //   console.log('Login successful:', response.data.message);
