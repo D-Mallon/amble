@@ -4,7 +4,7 @@
             "id": "W2",
             "name": "South Baptist Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -42,13 +42,14 @@
             "location": {
                 "latitude": 40.7358333,
                 "longitude": -74.0025
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W3",
             "name": "People's Home Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -86,13 +87,14 @@
             "location": {
                 "latitude": 40.7277027,
                 "longitude": -73.9802859
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W4",
             "name": "Lutheran Church In America",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -130,7 +132,8 @@
             "location": {
                 "latitude": 40.7494444,
                 "longitude": -73.9819444
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W5",
@@ -174,13 +177,14 @@
             "location": {
                 "latitude": 40.7603904,
                 "longitude": -73.9941408
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W6",
             "name": "Broadway Presbyterian Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -218,13 +222,14 @@
             "location": {
                 "latitude": 40.8070507,
                 "longitude": -73.9651467
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W7",
             "name": "Sung Tak Buddhist Temple",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -262,13 +267,14 @@
             "location": {
                 "latitude": 40.7135573,
                 "longitude": -73.9922768
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W8",
             "name": "Seventh Day Adventist Church of Union Square",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -306,13 +312,14 @@
             "location": {
                 "latitude": 40.7194182,
                 "longitude": -73.9921269
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W9",
             "name": "First Warsaw Congregation",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -350,13 +357,14 @@
             "location": {
                 "latitude": 40.7205556,
                 "longitude": -73.9908334
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W10",
             "name": "Generoso Pope Catholic Center at New York University",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -394,13 +402,14 @@
             "location": {
                 "latitude": 40.7299234,
                 "longitude": -73.9981687
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W11",
             "name": "Salvation Army Centennial Memorial Temple",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -438,13 +447,14 @@
             "location": {
                 "latitude": 40.7375,
                 "longitude": -73.9986111
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W12",
             "name": "New York Buddhist Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -482,13 +492,14 @@
             "location": {
                 "latitude": 40.8016539,
                 "longitude": -73.9701238
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W13",
             "name": "New York Society for Ethical Culture Hall",
             "type": "worship",
-            "address": "2 West 64th Street, None Manhattan",
+            "address": "2 West 64th Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -526,13 +537,14 @@
             "location": {
                 "latitude": 40.7710808,
                 "longitude": -73.9800976
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W17",
             "name": "Corpus Christi Church",
             "type": "worship",
-            "address": "529 West 121st Street, None Manhattan",
+            "address": "529 West 121st Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -570,7 +582,8 @@
             "location": {
                 "latitude": 40.8111111,
                 "longitude": -73.9608333
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W18",
@@ -614,13 +627,14 @@
             "location": {
                 "latitude": 40.8149431,
                 "longitude": -73.9562415
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W19",
             "name": "Templo Biblico",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -658,13 +672,14 @@
             "location": {
                 "latitude": 40.8144671,
                 "longitude": -73.9558499
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W20",
             "name": "Our Lady of Lourdes Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -702,7 +717,8 @@
             "location": {
                 "latitude": 40.8233332,
                 "longitude": -73.9483334
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W21",
@@ -746,13 +762,14 @@
             "location": {
                 "latitude": 40.8275043,
                 "longitude": -73.9447851
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W22",
             "name": "City Tabernacle",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -790,13 +807,14 @@
             "location": {
                 "latitude": 40.8292382,
                 "longitude": -73.9478046
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W23",
             "name": "Saint John's Baptist Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -834,13 +852,14 @@
             "location": {
                 "latitude": 40.8288889,
                 "longitude": -73.9433333
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W24",
             "name": "Mount Nebo Baptist Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -878,13 +897,14 @@
             "location": {
                 "latitude": 40.8019444,
                 "longitude": -73.9530556
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W25",
             "name": "Memorial Canaan Baptist Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -922,7 +942,8 @@
             "location": {
                 "latitude": 40.8024294,
                 "longitude": -73.9520812
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W26",
@@ -966,13 +987,14 @@
             "location": {
                 "latitude": 40.8031995,
                 "longitude": -73.9531159
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W27",
             "name": "Morningside Avenue Presbyterian Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1010,13 +1032,14 @@
             "location": {
                 "latitude": 40.8091666,
                 "longitude": -73.9552779
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W28",
             "name": "Greater Metropolitan Baptist Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1054,13 +1077,14 @@
             "location": {
                 "latitude": 40.8075,
                 "longitude": -73.9483333
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W29",
             "name": "Mount Morris Ascension Presbyterian Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1098,13 +1122,14 @@
             "location": {
                 "latitude": 40.805,
                 "longitude": -73.9458333
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W30",
             "name": "Commandment Keepers Ethiopian Hebrew Congregation",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1142,13 +1167,14 @@
             "location": {
                 "latitude": 40.8061111,
                 "longitude": -73.945
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W33",
             "name": "Saint Ambrose Episcopal Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1186,13 +1212,14 @@
             "location": {
                 "latitude": 40.8101817,
                 "longitude": -73.9406493
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W34",
             "name": "Baptist House of Prayer",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1230,13 +1257,14 @@
             "location": {
                 "latitude": 40.8080151,
                 "longitude": -73.9447421
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W35",
             "name": "Union Congregational Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1274,7 +1302,8 @@
             "location": {
                 "latitude": 40.8154954,
                 "longitude": -73.9392632
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W36",
@@ -1318,13 +1347,14 @@
             "location": {
                 "latitude": 40.8186111,
                 "longitude": -73.9469444
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W37",
             "name": "Saint Charles Borromeo Roman Catholic Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1362,13 +1392,14 @@
             "location": {
                 "latitude": 40.8197222,
                 "longitude": -73.9419444
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W42",
             "name": "Chakrasambara Buddhist Center",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1406,7 +1437,8 @@
             "location": {
                 "latitude": 40.7472222,
                 "longitude": -73.9966667
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W43",
@@ -1450,13 +1482,14 @@
             "location": {
                 "latitude": 40.716059,
                 "longitude": -73.9980944
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W44",
             "name": "Heavenly Grace Buddhist Temple",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1494,13 +1527,14 @@
             "location": {
                 "latitude": 40.7175988,
                 "longitude": -73.9989902
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W45",
             "name": "Calvary Christian Fellowship",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1538,13 +1572,14 @@
             "location": {
                 "latitude": 40.8038889,
                 "longitude": -73.955
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W46",
             "name": "Broadway Temple-Washington Heights United Methodist Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1582,13 +1617,14 @@
             "location": {
                 "latitude": 40.8452778,
                 "longitude": -73.9391667
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W47",
             "name": "First Spanish Presbyterian Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1626,7 +1662,8 @@
             "location": {
                 "latitude": 40.842486,
                 "longitude": -73.9366477
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W48",
@@ -1670,7 +1707,8 @@
             "location": {
                 "latitude": 40.8527521,
                 "longitude": -73.9315475
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W49",
@@ -1714,13 +1752,14 @@
             "location": {
                 "latitude": 40.8525,
                 "longitude": -73.9305557
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W50",
             "name": null,
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1758,13 +1797,14 @@
             "location": {
                 "latitude": 40.8666667,
                 "longitude": -73.9272222
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W51",
             "name": "Inwood Jewish Center",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1802,13 +1842,14 @@
             "location": {
                 "latitude": 40.8594443,
                 "longitude": -73.9280557
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W52",
             "name": "Kingdom Hall of Jehovah's Witnesses",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1846,13 +1887,14 @@
             "location": {
                 "latitude": 40.8613787,
                 "longitude": -73.9264226
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W53",
             "name": "Mount Sinai Jewish Center",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1890,13 +1932,14 @@
             "location": {
                 "latitude": 40.8545347,
                 "longitude": -73.934201
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W54",
             "name": "Our Lady Queen of Martyrs Roman Catholic Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1934,13 +1977,14 @@
             "location": {
                 "latitude": 40.8637712,
                 "longitude": -73.9280369
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W55",
             "name": "Roman Catholic Church of Saint Elizabeth",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1978,13 +2022,14 @@
             "location": {
                 "latitude": 40.853611,
                 "longitude": -73.9327779
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W56",
             "name": "Temple of the Covenant",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -2022,7 +2067,8 @@
             "location": {
                 "latitude": 40.8486111,
                 "longitude": -73.935
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W57",
@@ -2066,13 +2112,14 @@
             "location": {
                 "latitude": 40.7625429,
                 "longitude": -73.9843249
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W59",
             "name": "Bais Medrash Machzikei Torah",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -2110,13 +2157,14 @@
             "location": {
                 "latitude": 40.8514509,
                 "longitude": -73.9402571
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W61",
             "name": "Iglesia de Cristo",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -2154,13 +2202,14 @@
             "location": {
                 "latitude": 40.7256627,
                 "longitude": -73.9895775
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W62",
             "name": "East Side Church of Christ",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -2198,7 +2247,8 @@
             "location": {
                 "latitude": 40.7256479,
                 "longitude": -73.9895423
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W63",
@@ -2242,13 +2292,14 @@
             "location": {
                 "latitude": 40.7191959,
                 "longitude": -73.9988005
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W64",
             "name": "Grace Faith Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -2286,7 +2337,8 @@
             "location": {
                 "latitude": 40.7167323,
                 "longitude": -73.9947435
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W65",
@@ -2330,7 +2382,8 @@
             "location": {
                 "latitude": 40.823677,
                 "longitude": -73.9489925
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W66",
@@ -2374,7 +2427,8 @@
             "location": {
                 "latitude": 40.8046477,
                 "longitude": -73.9642281
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W72",
@@ -2418,7 +2472,8 @@
             "location": {
                 "latitude": 40.8004621,
                 "longitude": -73.9603464
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W73",
@@ -2462,7 +2517,8 @@
             "location": {
                 "latitude": 40.7985819,
                 "longitude": -73.9518644
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W74",
@@ -2506,7 +2562,8 @@
             "location": {
                 "latitude": 40.8025977,
                 "longitude": -73.9514547
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W75",
@@ -2550,7 +2607,8 @@
             "location": {
                 "latitude": 40.8170549,
                 "longitude": -73.9463663
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W76",
@@ -2594,7 +2652,8 @@
             "location": {
                 "latitude": 40.7244764,
                 "longitude": -73.9904429
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W77",
@@ -2638,7 +2697,8 @@
             "location": {
                 "latitude": 40.7237334,
                 "longitude": -73.9883523
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W79",
@@ -2682,7 +2742,8 @@
             "location": {
                 "latitude": 40.8144246,
                 "longitude": -73.9563224
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W80",
@@ -2726,7 +2787,8 @@
             "location": {
                 "latitude": 40.7281679,
                 "longitude": -73.9870075
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W81",
@@ -2770,7 +2832,8 @@
             "location": {
                 "latitude": 40.8152071,
                 "longitude": -73.9410594
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W83",
@@ -2814,7 +2877,8 @@
             "location": {
                 "latitude": 40.7458905,
                 "longitude": -73.9879269
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W84",
@@ -2858,13 +2922,14 @@
             "location": {
                 "latitude": 40.71614,
                 "longitude": -73.9953678
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W85",
             "name": "sathya sai",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -2902,13 +2967,14 @@
             "location": {
                 "latitude": 40.7544032,
                 "longitude": -73.9817025
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W86",
             "name": "Inner Enlightenment Spiritist Society",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -2946,13 +3012,14 @@
             "location": {
                 "latitude": 40.7542996,
                 "longitude": -73.9811656
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W87",
             "name": "Spiritist Group of New York",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -2990,7 +3057,8 @@
             "location": {
                 "latitude": 40.7659287,
                 "longitude": -73.9839157
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W88",
@@ -3034,7 +3102,8 @@
             "location": {
                 "latitude": 40.7187636,
                 "longitude": -73.9903134
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W89",
@@ -3078,13 +3147,14 @@
             "location": {
                 "latitude": 40.8242021,
                 "longitude": -73.9468298
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W90",
             "name": "Mount Covery Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "limited",
             "opening_hours": null,
@@ -3122,13 +3192,14 @@
             "location": {
                 "latitude": 40.8204621,
                 "longitude": -73.9420747
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W95",
             "name": "The First Chinese Baptist Church",
             "type": "worship",
-            "address": "21 Pell Street, None Manhattan",
+            "address": "21 Pell Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -3166,13 +3237,14 @@
             "location": {
                 "latitude": 40.7148059,
                 "longitude": -73.9982055
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W97",
             "name": "Islamic Center at NYU",
             "type": "worship",
-            "address": "238 Thompson Street, None Manhattan",
+            "address": "238 Thompson Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": "Mo-Sa 08:00-00:00; Su 12:00-22:00",
@@ -3210,13 +3282,14 @@
             "location": {
                 "latitude": 40.7300708,
                 "longitude": -73.9980317
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W98",
             "name": "Chabad of Upper West Side",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -3254,13 +3327,14 @@
             "location": {
                 "latitude": 40.7943415,
                 "longitude": -73.9694123
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W99",
             "name": "Chabad of Midtown Manhattan",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -3298,13 +3372,14 @@
             "location": {
                 "latitude": 40.753786,
                 "longitude": -73.9803397
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W101",
             "name": "Antioch Baptist Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -3342,7 +3417,8 @@
             "location": {
                 "latitude": 40.8141314,
                 "longitude": -73.9566231
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W102",
@@ -3386,13 +3462,14 @@
             "location": {
                 "latitude": 40.7996454,
                 "longitude": -73.962036
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W103",
             "name": "Templo Cristiano \"Bethel\"",
             "type": "worship",
-            "address": "7 Central Park North, None Manhattan",
+            "address": "7 Central Park North, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -3430,7 +3507,8 @@
             "location": {
                 "latitude": 40.7972887,
                 "longitude": -73.9498454
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W104",
@@ -3474,7 +3552,8 @@
             "location": {
                 "latitude": 40.7117141,
                 "longitude": -73.9950171
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W105",
@@ -3518,7 +3597,8 @@
             "location": {
                 "latitude": 40.7198348,
                 "longitude": -73.9909644
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W106",
@@ -3562,7 +3642,8 @@
             "location": {
                 "latitude": 40.7200219,
                 "longitude": -73.9908464
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W107",
@@ -3606,7 +3687,8 @@
             "location": {
                 "latitude": 40.7140684,
                 "longitude": -73.9933306
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W110",
@@ -3650,13 +3732,14 @@
             "location": {
                 "latitude": 40.7440194,
                 "longitude": -73.9899833
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W112",
             "name": "Bok Yee Buddhist Temple",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -3694,13 +3777,14 @@
             "location": {
                 "latitude": 40.7148389,
                 "longitude": -73.9929326
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W113",
             "name": "Fa Wang Temple",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -3738,13 +3822,14 @@
             "location": {
                 "latitude": 40.7184658,
                 "longitude": -74.0002718
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W114",
             "name": "Resurrection Roman Catholic Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -3782,7 +3867,8 @@
             "location": {
                 "latitude": 40.8259739,
                 "longitude": -73.9379105
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W116",
@@ -3826,7 +3912,8 @@
             "location": {
                 "latitude": 40.7190886,
                 "longitude": -73.9822887
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W117",
@@ -3870,7 +3957,8 @@
             "location": {
                 "latitude": 40.8006571,
                 "longitude": -73.946913
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W118",
@@ -3914,7 +4002,8 @@
             "location": {
                 "latitude": 40.7455842,
                 "longitude": -73.9843236
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W120",
@@ -3958,13 +4047,14 @@
             "location": {
                 "latitude": 40.7185277,
                 "longitude": -73.9912164
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W122",
             "name": "Iglesia Universal del Reino de Dios",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -4002,13 +4092,14 @@
             "location": {
                 "latitude": 40.7256331,
                 "longitude": -73.9895071
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W1",
             "name": "Congregation Shaare Zedek",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -4046,13 +4137,14 @@
             "location": {
                 "latitude": 40.718158,
                 "longitude": -74.0037507
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W14",
             "name": "Bethany Memorial Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -4090,13 +4182,14 @@
             "location": {
                 "latitude": 40.7661468,
                 "longitude": -73.9584319
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W15",
             "name": "Central Gospel Chapel",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -4134,13 +4227,14 @@
             "location": {
                 "latitude": 40.7708333,
                 "longitude": -73.9616667
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W16",
             "name": "Saint Stephen of Hungary Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -4178,7 +4272,8 @@
             "location": {
                 "latitude": 40.7738019,
                 "longitude": -73.9505415
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W31",
@@ -4222,7 +4317,8 @@
             "location": {
                 "latitude": 40.8063786,
                 "longitude": -73.9397545
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W32",
@@ -4266,13 +4362,14 @@
             "location": {
                 "latitude": 40.8078384,
                 "longitude": -73.9409554
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W38",
             "name": "Assemblea De Iglesia Pentecostal De Jesucristo",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -4310,13 +4407,14 @@
             "location": {
                 "latitude": 40.7986052,
                 "longitude": -73.9383405
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W39",
             "name": "Iglesia Luterana Sion",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -4354,13 +4452,14 @@
             "location": {
                 "latitude": 40.7997455,
                 "longitude": -73.9377744
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W40",
             "name": "Chambers Memorial Baptist Church",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -4398,13 +4497,14 @@
             "location": {
                 "latitude": 40.8022222,
                 "longitude": -73.9358333
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W41",
             "name": "Iglesia Adventista Del Septimo Dia",
             "type": "worship",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -4442,7 +4542,8 @@
             "location": {
                 "latitude": 40.8019972,
                 "longitude": -73.9353152
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W58",
@@ -4486,13 +4587,14 @@
             "location": {
                 "latitude": 40.7888319,
                 "longitude": -73.9489724
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W60",
             "name": "Bethel Gospel Assembly",
             "type": "worship",
-            "address": "1485 5th Avenue, None Manhattan",
+            "address": "1485 5th Avenue, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Su 08:00-10:00,11:00-13:00",
@@ -4530,7 +4632,8 @@
             "location": {
                 "latitude": 40.8026303,
                 "longitude": -73.9446473
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W67",
@@ -4574,7 +4677,8 @@
             "location": {
                 "latitude": 40.799722,
                 "longitude": -73.9448563
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W68",
@@ -4618,7 +4722,8 @@
             "location": {
                 "latitude": 40.7997456,
                 "longitude": -73.9419255
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W69",
@@ -4662,7 +4767,8 @@
             "location": {
                 "latitude": 40.7655101,
                 "longitude": -73.9676069
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W70",
@@ -4706,7 +4812,8 @@
             "location": {
                 "latitude": 40.7848291,
                 "longitude": -73.9542105
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W71",
@@ -4750,7 +4857,8 @@
             "location": {
                 "latitude": 40.7879262,
                 "longitude": -73.9475533
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W78",
@@ -4794,7 +4902,8 @@
             "location": {
                 "latitude": 40.7708919,
                 "longitude": -73.952767
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W82",
@@ -4838,7 +4947,8 @@
             "location": {
                 "latitude": 40.708192,
                 "longitude": -74.0050705
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W91",
@@ -4882,7 +4992,8 @@
             "location": {
                 "latitude": 40.7978663,
                 "longitude": -73.9416262
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W92",
@@ -4926,13 +5037,14 @@
             "location": {
                 "latitude": 40.8060747,
                 "longitude": -73.9390764
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W93",
             "name": "La Sinagoga",
             "type": "worship",
-            "address": "115 East 125th Street, None Manhattan",
+            "address": "115 East 125th Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -4970,13 +5082,14 @@
             "location": {
                 "latitude": 40.8048196,
                 "longitude": -73.9380019
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W94",
             "name": "Church of Scientology",
             "type": "worship",
-            "address": "220 East 125th Street, None Manhattan",
+            "address": "220 East 125th Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -5014,7 +5127,8 @@
             "location": {
                 "latitude": 40.8031437,
                 "longitude": -73.9349597
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W96",
@@ -5058,13 +5172,14 @@
             "location": {
                 "latitude": 40.7741678,
                 "longitude": -73.9607524
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W100",
             "name": "Tribeca Synagogue",
             "type": "worship",
-            "address": "49 White Street, None Manhattan",
+            "address": "49 White Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -5102,13 +5217,14 @@
             "location": {
                 "latitude": 40.7183969,
                 "longitude": -74.0041959
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W108",
             "name": "All Saints Church Episcopal",
             "type": "worship",
-            "address": "230 East 60th Street, None Manhattan",
+            "address": "230 East 60th Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -5146,13 +5262,14 @@
             "location": {
                 "latitude": 40.7615494,
                 "longitude": -73.9649497
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W109",
             "name": "Ling Jiou Mountain Buddhist Society",
             "type": "worship",
-            "address": "219 East 60th Street, None Manhattan",
+            "address": "219 East 60th Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -5190,13 +5307,14 @@
             "location": {
                 "latitude": 40.7618758,
                 "longitude": -73.9651244
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W111",
             "name": "Manhattan Sikh Center",
             "type": "worship",
-            "address": "216 East 53rd Street, None Manhattan",
+            "address": "216 East 53rd Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -5234,7 +5352,8 @@
             "location": {
                 "latitude": 40.7572802,
                 "longitude": -73.968693
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W115",
@@ -5278,7 +5397,8 @@
             "location": {
                 "latitude": 40.7661591,
                 "longitude": -73.9614182
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W119",
@@ -5322,13 +5442,14 @@
             "location": {
                 "latitude": 40.707599,
                 "longitude": -74.0075935
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "W121",
             "name": "Segunda Iglesia Cristiana Valle de Cedron",
             "type": "worship",
-            "address": "1713 Lexington Qvenue, None Manhattan",
+            "address": "1713 Lexington Qvenue, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -5366,7 +5487,8 @@
             "location": {
                 "latitude": 40.7929986,
                 "longitude": -73.9455603
-            }
+            },
+            "last_updated": null
         }
     ]
 }

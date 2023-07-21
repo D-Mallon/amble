@@ -4,7 +4,7 @@
             "id": "L1",
             "name": "Mercantile Library Building",
             "type": "library",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -42,13 +42,14 @@
             "location": {
                 "latitude": 40.73,
                 "longitude": -73.9922222
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L2",
             "name": "Rabbi Edward E. Klein Memorial Library",
             "type": "library",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -86,7 +87,8 @@
             "location": {
                 "latitude": 40.7738889,
                 "longitude": -73.9788889
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L3",
@@ -130,7 +132,8 @@
             "location": {
                 "latitude": 40.8265379,
                 "longitude": -73.9358448
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L4",
@@ -174,7 +177,8 @@
             "location": {
                 "latitude": 40.7197787,
                 "longitude": -73.9793368
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L5",
@@ -218,7 +222,8 @@
             "location": {
                 "latitude": 40.7958865,
                 "longitude": -73.9675111
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L6",
@@ -262,13 +267,14 @@
             "location": {
                 "latitude": 40.8509707,
                 "longitude": -73.9291892
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L7",
             "name": "Newman Library and Technology Center",
             "type": "library",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -306,7 +312,8 @@
             "location": {
                 "latitude": 40.7405695,
                 "longitude": -73.9836119
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L9",
@@ -350,7 +357,8 @@
             "location": {
                 "latitude": 40.7619839,
                 "longitude": -73.9691028
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L10",
@@ -394,7 +402,8 @@
             "location": {
                 "latitude": 40.7240774,
                 "longitude": -73.9955137
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L11",
@@ -438,7 +447,8 @@
             "location": {
                 "latitude": 40.7405048,
                 "longitude": -73.9933185
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L13",
@@ -482,7 +492,8 @@
             "location": {
                 "latitude": 40.8061636,
                 "longitude": -73.9649712
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L16",
@@ -526,7 +537,8 @@
             "location": {
                 "latitude": 40.7480891,
                 "longitude": -73.9828998
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L17",
@@ -570,7 +582,8 @@
             "location": {
                 "latitude": 40.7732287,
                 "longitude": -73.9847509
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L18",
@@ -614,7 +627,8 @@
             "location": {
                 "latitude": 40.7519454,
                 "longitude": -73.9817758
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L19",
@@ -658,7 +672,8 @@
             "location": {
                 "latitude": 40.774257,
                 "longitude": -73.984582
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L21",
@@ -702,7 +717,8 @@
             "location": {
                 "latitude": 40.7608384,
                 "longitude": -73.9771415
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L24",
@@ -746,7 +762,8 @@
             "location": {
                 "latitude": 40.8060846,
                 "longitude": -73.9650119
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L25",
@@ -790,7 +807,8 @@
             "location": {
                 "latitude": 40.8477877,
                 "longitude": -73.9339131
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L26",
@@ -834,7 +852,8 @@
             "location": {
                 "latitude": 40.7711658,
                 "longitude": -73.9845162
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L28",
@@ -878,7 +897,8 @@
             "location": {
                 "latitude": 40.718223,
                 "longitude": -73.9891238
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L29",
@@ -922,7 +942,8 @@
             "location": {
                 "latitude": 40.7696586,
                 "longitude": -73.982456
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L30",
@@ -966,7 +987,8 @@
             "location": {
                 "latitude": 40.7717374,
                 "longitude": -73.9855103
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L8",
@@ -1010,7 +1032,8 @@
             "location": {
                 "latitude": 40.7537872,
                 "longitude": -73.9733504
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L12",
@@ -1054,7 +1077,8 @@
             "location": {
                 "latitude": 40.7157749,
                 "longitude": -74.0156954
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L14",
@@ -1098,13 +1122,14 @@
             "location": {
                 "latitude": 40.7134916,
                 "longitude": -74.0079247
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L20",
             "name": "Foundation Center",
             "type": "library",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1142,13 +1167,14 @@
             "location": {
                 "latitude": 40.7038078,
                 "longitude": -74.0080991
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L22",
             "name": "Cooperman Library",
             "type": "library",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1186,13 +1212,14 @@
             "location": {
                 "latitude": 40.7675254,
                 "longitude": -73.9640647
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L23",
             "name": "Zabar Art Library",
             "type": "library",
-            "address": "695 Park Avenue, None Manhattan",
+            "address": "695 Park Avenue, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1230,13 +1257,14 @@
             "location": {
                 "latitude": 40.7686374,
                 "longitude": -73.9649416
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "L27",
             "name": "National Archives of New York City",
             "type": "library",
-            "address": "1 Bowling Green, None Manhattan",
+            "address": "1 Bowling Green, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1274,7 +1302,8 @@
             "location": {
                 "latitude": 40.7044171,
                 "longitude": -74.0139072
-            }
+            },
+            "last_updated": null
         }
     ]
 }

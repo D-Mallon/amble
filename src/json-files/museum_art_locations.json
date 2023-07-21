@@ -4,7 +4,7 @@
             "id": "MA3",
             "name": "Yeshiva University Museum",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -42,13 +42,14 @@
             "location": {
                 "latitude": 40.737978,
                 "longitude": -73.9938312
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA6",
             "name": "Lower East Side Tenement Museum",
             "type": "museum_art",
-            "address": "103 Orchard Street, None Manhattan",
+            "address": "103 Orchard Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Mo-Su 10:00-18:00",
@@ -86,7 +87,8 @@
             "location": {
                 "latitude": 40.7187837,
                 "longitude": -73.9900266
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA7",
@@ -130,7 +132,8 @@
             "location": {
                 "latitude": 40.7557394,
                 "longitude": -73.9837251
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA8",
@@ -174,7 +177,8 @@
             "location": {
                 "latitude": 40.8673822,
                 "longitude": -73.9228859
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA10",
@@ -218,13 +222,14 @@
             "location": {
                 "latitude": 40.7400959,
                 "longitude": -73.9977377
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA11",
             "name": "100 Gates Project",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -262,7 +267,8 @@
             "location": {
                 "latitude": 40.7165969,
                 "longitude": -73.9908729
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA12",
@@ -306,7 +312,8 @@
             "location": {
                 "latitude": 40.7392696,
                 "longitude": -73.986775
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA14",
@@ -350,13 +357,14 @@
             "location": {
                 "latitude": 40.7137437,
                 "longitude": -74.005072
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA16",
             "name": "The Houdini Museum of New York",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -394,13 +402,14 @@
             "location": {
                 "latitude": 40.7502679,
                 "longitude": -73.9906463
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA17",
             "name": "American Folk Art Museum",
             "type": "museum_art",
-            "address": "2 Lincoln Square, None Manhattan",
+            "address": "2 Lincoln Square, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": null,
@@ -438,13 +447,14 @@
             "location": {
                 "latitude": 40.7732296,
                 "longitude": -73.9815958
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA19",
             "name": "The Museum at FIT",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Tu-Fr 12:00-20:00; Sa 10:00-17:00",
@@ -482,7 +492,8 @@
             "location": {
                 "latitude": 40.7466544,
                 "longitude": -73.9941473
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA20",
@@ -526,7 +537,8 @@
             "location": {
                 "latitude": 40.7440374,
                 "longitude": -73.9873576
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA21",
@@ -570,13 +582,14 @@
             "location": {
                 "latitude": 40.7432428,
                 "longitude": -73.9873437
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA22",
             "name": "Italian American Museum",
             "type": "museum_art",
-            "address": "155 Mulberry Street, None Manhattan",
+            "address": "155 Mulberry Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -614,13 +627,14 @@
             "location": {
                 "latitude": 40.7192537,
                 "longitude": -73.9974606
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA24",
             "name": "Gagosian",
             "type": "museum_art",
-            "address": "555 West 24th Street, None Manhattan",
+            "address": "555 West 24th Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Tu-Sa 10:00-18:00",
@@ -658,7 +672,8 @@
             "location": {
                 "latitude": 40.7494423,
                 "longitude": -74.0059445
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA25",
@@ -702,7 +717,8 @@
             "location": {
                 "latitude": 40.8648684,
                 "longitude": -73.9319228
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA26",
@@ -746,13 +762,14 @@
             "location": {
                 "latitude": 40.7194172,
                 "longitude": -73.9990481
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA27",
             "name": "ICP International Center of Photography Museum",
             "type": "museum_art",
-            "address": "None None, 10012 Manhattan",
+            "address": "10012 Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Tu-We, Fr-Su 10:00-18:00; Th 09:00-21:00",
@@ -790,7 +807,8 @@
             "location": {
                 "latitude": 40.7230882,
                 "longitude": -73.9933858
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA28",
@@ -834,13 +852,14 @@
             "location": {
                 "latitude": 40.7813974,
                 "longitude": -73.9733215
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA31",
             "name": "Ground Zero Museum Workshop",
             "type": "museum_art",
-            "address": "None None, 10014 Manhattan",
+            "address": "10014 Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "We-Su 11:00-15:00",
@@ -878,7 +897,8 @@
             "location": {
                 "latitude": 40.74121,
                 "longitude": -74.0067195
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA32",
@@ -922,7 +942,8 @@
             "location": {
                 "latitude": 40.8304543,
                 "longitude": -73.941171
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA33",
@@ -966,7 +987,8 @@
             "location": {
                 "latitude": 40.8084179,
                 "longitude": -73.947616
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA34",
@@ -1010,13 +1032,14 @@
             "location": {
                 "latitude": 40.7284684,
                 "longitude": -73.99882
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA35",
             "name": "Museum of the American Gangster",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Tu-Su 13:00-18:00; Mo 13:00-19:00",
@@ -1054,7 +1077,8 @@
             "location": {
                 "latitude": 40.7276111,
                 "longitude": -73.9858672
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA36",
@@ -1098,13 +1122,14 @@
             "location": {
                 "latitude": 40.7173656,
                 "longitude": -74.0028203
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA37",
             "name": "Center for Architecture",
             "type": "museum_art",
-            "address": "546 LaGuardia Place, None Manhattan",
+            "address": "546 LaGuardia Place, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "limited",
             "opening_hours": null,
@@ -1142,13 +1167,14 @@
             "location": {
                 "latitude": 40.72873,
                 "longitude": -73.9985805
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA38",
             "name": "Museum of Illusions",
             "type": "museum_art",
-            "address": "77 8th Avenue, None Manhattan",
+            "address": "77 8th Avenue, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1186,13 +1212,14 @@
             "location": {
                 "latitude": 40.7396591,
                 "longitude": -74.0028554
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA39",
             "name": "Museum of Reclaimed Urban Space",
             "type": "museum_art",
-            "address": "155 Avenue C, None Manhattan",
+            "address": "155 Avenue C, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "no",
             "opening_hours": "Tu,Th-Su 11:00-19:00",
@@ -1230,13 +1257,14 @@
             "location": {
                 "latitude": 40.7257313,
                 "longitude": -73.9778791
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA40",
             "name": "The AKC Museum of the Dog",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1274,13 +1302,14 @@
             "location": {
                 "latitude": 40.7506893,
                 "longitude": -73.9776714
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA42",
             "name": "Museum of Ice Cream",
             "type": "museum_art",
-            "address": "558 Broadway, None Manhattan",
+            "address": "558 Broadway, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Mo, We, Th, Su 10:00-19:00; Fr, Sa 10:00-20:30",
@@ -1318,7 +1347,8 @@
             "location": {
                 "latitude": 40.7238654,
                 "longitude": -73.9979055
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA43",
@@ -1362,7 +1392,8 @@
             "location": {
                 "latitude": 40.8099499,
                 "longitude": -73.9430899
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA44",
@@ -1406,7 +1437,8 @@
             "location": {
                 "latitude": 40.8393577,
                 "longitude": -73.9406753
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA48",
@@ -1450,13 +1482,14 @@
             "location": {
                 "latitude": 40.7786086,
                 "longitude": -73.9781357
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA51",
             "name": "Richard Gilder Center for Science, Education, and Innovation",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Mo-Su 10:00-17:30; Nov 23: off; Dec 25: off",
@@ -1494,13 +1527,14 @@
             "location": {
                 "latitude": 40.7815797,
                 "longitude": -73.9746411
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA52",
             "name": "Rose Center for Earth and Space",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1538,7 +1572,8 @@
             "location": {
                 "latitude": 40.7816493,
                 "longitude": -73.9731563
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA53",
@@ -1582,7 +1617,8 @@
             "location": {
                 "latitude": 40.7470923,
                 "longitude": -74.0064354
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA55",
@@ -1626,7 +1662,8 @@
             "location": {
                 "latitude": 40.7219487,
                 "longitude": -73.990434
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA56",
@@ -1670,7 +1707,8 @@
             "location": {
                 "latitude": 40.720719,
                 "longitude": -73.9892808
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA57",
@@ -1714,7 +1752,8 @@
             "location": {
                 "latitude": 40.7181761,
                 "longitude": -74.0020133
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA59",
@@ -1758,7 +1797,8 @@
             "location": {
                 "latitude": 40.7185164,
                 "longitude": -73.9904291
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA60",
@@ -1802,7 +1842,8 @@
             "location": {
                 "latitude": 40.7306017,
                 "longitude": -73.9833365
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA61",
@@ -1846,7 +1887,8 @@
             "location": {
                 "latitude": 40.7187633,
                 "longitude": -73.9831736
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA62",
@@ -1890,13 +1932,14 @@
             "location": {
                 "latitude": 40.7184451,
                 "longitude": -73.9826995
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA64",
             "name": "Salmagundi Club",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -1934,7 +1977,8 @@
             "location": {
                 "latitude": 40.7343016,
                 "longitude": -73.9945529
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA65",
@@ -1978,13 +2022,14 @@
             "location": {
                 "latitude": 40.7489761,
                 "longitude": -74.004588
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA66",
             "name": "Voltz Clarke Gallery",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Mo-Fr 10:00-18:00; Sa 12:00-17:00||Su \"by appointment\"",
@@ -2022,7 +2067,8 @@
             "location": {
                 "latitude": 40.7220357,
                 "longitude": -73.9920403
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA67",
@@ -2066,7 +2112,8 @@
             "location": {
                 "latitude": 40.7209311,
                 "longitude": -73.984974
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA68",
@@ -2110,7 +2157,8 @@
             "location": {
                 "latitude": 40.7208065,
                 "longitude": -73.9852723
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA71",
@@ -2154,13 +2202,14 @@
             "location": {
                 "latitude": 40.7233254,
                 "longitude": -73.9931761
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA72",
             "name": "Broadway Mall Gallery",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -2198,13 +2247,14 @@
             "location": {
                 "latitude": 40.7949144,
                 "longitude": -73.9715855
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA73",
             "name": "Asian Arts",
             "type": "museum_art",
-            "address": "579 West 215th Street, None Manhattan",
+            "address": "579 West 215th Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -2242,7 +2292,8 @@
             "location": {
                 "latitude": 40.8719113,
                 "longitude": -73.9188055
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA74",
@@ -2286,7 +2337,8 @@
             "location": {
                 "latitude": 40.8172422,
                 "longitude": -73.9586445
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA75",
@@ -2330,7 +2382,8 @@
             "location": {
                 "latitude": 40.7269555,
                 "longitude": -73.9926816
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA77",
@@ -2374,13 +2427,14 @@
             "location": {
                 "latitude": 40.7257629,
                 "longitude": -73.9937321
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA78",
             "name": "Theresa Byrnes",
             "type": "museum_art",
-            "address": "616 East 9th Street, None Manhattan",
+            "address": "616 East 9th Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Tu 13:30-17:00; Th 14:00-18:00; Fr 14:00-19:00; Sa 13:00-19:00; Su 14:00-17:00",
@@ -2418,7 +2472,8 @@
             "location": {
                 "latitude": 40.7258135,
                 "longitude": -73.9795215
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA79",
@@ -2462,7 +2517,8 @@
             "location": {
                 "latitude": 40.7117446,
                 "longitude": -73.9961249
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA80",
@@ -2506,7 +2562,8 @@
             "location": {
                 "latitude": 40.7117466,
                 "longitude": -73.9956636
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA81",
@@ -2550,7 +2607,8 @@
             "location": {
                 "latitude": 40.713402,
                 "longitude": -73.9912954
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA82",
@@ -2594,7 +2652,8 @@
             "location": {
                 "latitude": 40.7196295,
                 "longitude": -73.9887194
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA83",
@@ -2638,7 +2697,8 @@
             "location": {
                 "latitude": 40.7196517,
                 "longitude": -73.9892959
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA84",
@@ -2682,13 +2742,14 @@
             "location": {
                 "latitude": 40.7200826,
                 "longitude": -73.990232
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA85",
             "name": "James Fuentes LLC",
             "type": "museum_art",
-            "address": "55 Delancey Street, None Manhattan",
+            "address": "55 Delancey Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": "We-Su 10:00-18:00",
@@ -2726,13 +2787,14 @@
             "location": {
                 "latitude": 40.7191881,
                 "longitude": -73.9911739
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA87",
             "name": "Reena Spauldings Fine Art",
             "type": "museum_art",
-            "address": "165 East Broadway, None Manhattan",
+            "address": "165 East Broadway, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Th-Su 12:00-18:00",
@@ -2770,7 +2832,8 @@
             "location": {
                 "latitude": 40.7139131,
                 "longitude": -73.9899544
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA88",
@@ -2814,13 +2877,14 @@
             "location": {
                 "latitude": 40.748353,
                 "longitude": -74.0052494
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA89",
             "name": "186f Kepler",
             "type": "museum_art",
-            "address": "171 Canal Street, None Manhattan",
+            "address": "171 Canal Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -2858,7 +2922,8 @@
             "location": {
                 "latitude": 40.7167838,
                 "longitude": -73.9971521
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA90",
@@ -2902,13 +2967,14 @@
             "location": {
                 "latitude": 40.7137046,
                 "longitude": -73.9879511
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA91",
             "name": "Chinatown Soup",
             "type": "museum_art",
-            "address": "16B Orchard Street, None Manhattan",
+            "address": "16B Orchard Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Mo-Sa 12:00-19:00",
@@ -2946,7 +3012,8 @@
             "location": {
                 "latitude": 40.7151986,
                 "longitude": -73.9916176
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA92",
@@ -2990,13 +3057,14 @@
             "location": {
                 "latitude": 40.7154412,
                 "longitude": -73.991419
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA93",
             "name": "Empirical Nonsense",
             "type": "museum_art",
-            "address": "87 Rivington Street, None Manhattan",
+            "address": "87 Rivington Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "We-Sa 12:00-18:00",
@@ -3034,13 +3102,14 @@
             "location": {
                 "latitude": 40.7201441,
                 "longitude": -73.9889614
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA94",
             "name": "Karma Gallery",
             "type": "museum_art",
-            "address": "188 East 2nd Street, None Manhattan",
+            "address": "188 East 2nd Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Tu-Sa 10:00-18:00",
@@ -3078,7 +3147,8 @@
             "location": {
                 "latitude": 40.7224564,
                 "longitude": -73.9841125
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA95",
@@ -3122,13 +3192,14 @@
             "location": {
                 "latitude": 40.8188292,
                 "longitude": -73.9446254
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA96",
             "name": "Sixth Street Haunted House",
             "type": "museum_art",
-            "address": "516 East 6th Street, None Manhattan",
+            "address": "516 East 6th Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Sa,Su 14:00-19:00",
@@ -3166,7 +3237,8 @@
             "location": {
                 "latitude": 40.7249615,
                 "longitude": -73.9830825
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA97",
@@ -3210,7 +3282,8 @@
             "location": {
                 "latitude": 40.745807,
                 "longitude": -74.0070327
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA98",
@@ -3254,13 +3327,14 @@
             "location": {
                 "latitude": 40.7265986,
                 "longitude": -73.992545
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA99",
             "name": "Derek Eller Gallery",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Sep-Jun: We-Su 11:00-18:00 \"Tu by appointment\"; Jul-Aug: Mo-Fr 11:00-18:00",
@@ -3298,7 +3372,8 @@
             "location": {
                 "latitude": 40.7188203,
                 "longitude": -73.992177
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA101",
@@ -3342,7 +3417,8 @@
             "location": {
                 "latitude": 40.771366,
                 "longitude": -73.9902725
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA102",
@@ -3386,7 +3462,8 @@
             "location": {
                 "latitude": 40.7576183,
                 "longitude": -73.9755331
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA104",
@@ -3430,7 +3507,8 @@
             "location": {
                 "latitude": 40.7475429,
                 "longitude": -74.0075391
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA105",
@@ -3474,13 +3552,14 @@
             "location": {
                 "latitude": 40.7251309,
                 "longitude": -73.9919779
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA107",
             "name": "Martos Gallery",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -3518,7 +3597,8 @@
             "location": {
                 "latitude": 40.7170446,
                 "longitude": -73.9968271
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA108",
@@ -3562,7 +3642,8 @@
             "location": {
                 "latitude": 40.7200219,
                 "longitude": -73.9847106
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA110",
@@ -3606,7 +3687,8 @@
             "location": {
                 "latitude": 40.7158321,
                 "longitude": -73.9912916
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA111",
@@ -3650,13 +3732,14 @@
             "location": {
                 "latitude": 40.7495759,
                 "longitude": -74.0049685
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA112",
             "name": "The 4th Street Photo Gallery",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Tu-Th 14:00-20:00; Fr-Sa 15:00-22:00; Su 14:00-20:00",
@@ -3694,7 +3777,8 @@
             "location": {
                 "latitude": 40.7267758,
                 "longitude": -73.9905701
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA113",
@@ -3738,13 +3822,14 @@
             "location": {
                 "latitude": 40.7218041,
                 "longitude": -73.9937691
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA114",
             "name": "The Hole",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "We-Su 12:00-19:00",
@@ -3782,13 +3867,14 @@
             "location": {
                 "latitude": 40.7250551,
                 "longitude": -73.9925494
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA115",
             "name": "Holographic Studios",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Mo-Fr 14:00-18:00",
@@ -3826,7 +3912,8 @@
             "location": {
                 "latitude": 40.7399127,
                 "longitude": -73.9800915
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA116",
@@ -3870,7 +3957,8 @@
             "location": {
                 "latitude": 40.7188556,
                 "longitude": -73.9914924
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA117",
@@ -3914,7 +4002,8 @@
             "location": {
                 "latitude": 40.7208764,
                 "longitude": -73.9850036
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA118",
@@ -3958,13 +4047,14 @@
             "location": {
                 "latitude": 40.7208132,
                 "longitude": -73.9850348
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA119",
             "name": "Fortnight Institute",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -4002,7 +4092,8 @@
             "location": {
                 "latitude": 40.7259794,
                 "longitude": -73.9905535
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA120",
@@ -4046,7 +4137,8 @@
             "location": {
                 "latitude": 40.7244007,
                 "longitude": -73.9845324
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA122",
@@ -4090,13 +4182,14 @@
             "location": {
                 "latitude": 40.7464281,
                 "longitude": -74.0054994
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA124",
             "name": "Pop International Galleries",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Mo-Sa 11:00-18:00",
@@ -4134,13 +4227,14 @@
             "location": {
                 "latitude": 40.7208659,
                 "longitude": -73.9935566
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA125",
             "name": "SFA Gallery",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -4178,13 +4272,14 @@
             "location": {
                 "latitude": 40.7194437,
                 "longitude": -73.9933697
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA126",
             "name": "Fountain Gallery",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -4222,13 +4317,14 @@
             "location": {
                 "latitude": 40.7622461,
                 "longitude": -73.989593
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA129",
             "name": "Moshava Art",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -4266,7 +4362,8 @@
             "location": {
                 "latitude": 40.7332901,
                 "longitude": -73.9984234
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA131",
@@ -4310,7 +4407,8 @@
             "location": {
                 "latitude": 40.7501321,
                 "longitude": -74.0044964
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA132",
@@ -4354,7 +4452,8 @@
             "location": {
                 "latitude": 40.7500174,
                 "longitude": -74.0041806
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA133",
@@ -4398,7 +4497,8 @@
             "location": {
                 "latitude": 40.7500805,
                 "longitude": -74.0043727
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA134",
@@ -4442,7 +4542,8 @@
             "location": {
                 "latitude": 40.7499492,
                 "longitude": -74.0040157
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA135",
@@ -4486,7 +4587,8 @@
             "location": {
                 "latitude": 40.7499804,
                 "longitude": -74.0042111
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA136",
@@ -4530,7 +4632,8 @@
             "location": {
                 "latitude": 40.7498115,
                 "longitude": -74.0037006
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA137",
@@ -4574,7 +4677,8 @@
             "location": {
                 "latitude": 40.7497696,
                 "longitude": -74.0035852
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA138",
@@ -4618,7 +4722,8 @@
             "location": {
                 "latitude": 40.7498665,
                 "longitude": -74.005004
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA139",
@@ -4662,7 +4767,8 @@
             "location": {
                 "latitude": 40.7499342,
                 "longitude": -74.0051872
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA140",
@@ -4706,7 +4812,8 @@
             "location": {
                 "latitude": 40.7500313,
                 "longitude": -74.0054024
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA141",
@@ -4750,13 +4857,14 @@
             "location": {
                 "latitude": 40.749778,
                 "longitude": -74.0055421
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA142",
             "name": "532 Gallery Thomas Jaeckel",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Tu-sa 12:00-18:00",
@@ -4794,7 +4902,8 @@
             "location": {
                 "latitude": 40.7495009,
                 "longitude": -74.0047674
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA143",
@@ -4838,7 +4947,8 @@
             "location": {
                 "latitude": 40.7494518,
                 "longitude": -74.0048244
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA144",
@@ -4882,7 +4992,8 @@
             "location": {
                 "latitude": 40.7492373,
                 "longitude": -74.0042332
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA145",
@@ -4926,7 +5037,8 @@
             "location": {
                 "latitude": 40.7485527,
                 "longitude": -74.0038323
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA146",
@@ -4970,7 +5082,8 @@
             "location": {
                 "latitude": 40.7486434,
                 "longitude": -74.0040119
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA147",
@@ -5014,7 +5127,8 @@
             "location": {
                 "latitude": 40.7487557,
                 "longitude": -74.0043141
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA148",
@@ -5058,7 +5172,8 @@
             "location": {
                 "latitude": 40.7491116,
                 "longitude": -74.0050793
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA149",
@@ -5102,7 +5217,8 @@
             "location": {
                 "latitude": 40.749162,
                 "longitude": -74.0052774
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA150",
@@ -5146,7 +5262,8 @@
             "location": {
                 "latitude": 40.7492207,
                 "longitude": -74.0061341
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA151",
@@ -5190,7 +5307,8 @@
             "location": {
                 "latitude": 40.7490119,
                 "longitude": -74.0055599
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA152",
@@ -5234,7 +5352,8 @@
             "location": {
                 "latitude": 40.7489832,
                 "longitude": -74.0054342
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA153",
@@ -5278,7 +5397,8 @@
             "location": {
                 "latitude": 40.7489431,
                 "longitude": -74.0053524
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA154",
@@ -5322,7 +5442,8 @@
             "location": {
                 "latitude": 40.7489086,
                 "longitude": -74.0052508
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA155",
@@ -5366,7 +5487,8 @@
             "location": {
                 "latitude": 40.748787,
                 "longitude": -74.0049963
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA156",
@@ -5410,7 +5532,8 @@
             "location": {
                 "latitude": 40.7487261,
                 "longitude": -74.0048372
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA157",
@@ -5454,7 +5577,8 @@
             "location": {
                 "latitude": 40.7487583,
                 "longitude": -74.0048993
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA158",
@@ -5498,7 +5622,8 @@
             "location": {
                 "latitude": 40.7485502,
                 "longitude": -74.0044742
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA159",
@@ -5542,7 +5667,8 @@
             "location": {
                 "latitude": 40.7484842,
                 "longitude": -74.0055651
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA160",
@@ -5586,7 +5712,8 @@
             "location": {
                 "latitude": 40.7485387,
                 "longitude": -74.0056655
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA161",
@@ -5630,7 +5757,8 @@
             "location": {
                 "latitude": 40.7488232,
                 "longitude": -74.006396
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA162",
@@ -5674,7 +5802,8 @@
             "location": {
                 "latitude": 40.7478552,
                 "longitude": -74.0049853
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA163",
@@ -5718,7 +5847,8 @@
             "location": {
                 "latitude": 40.75193,
                 "longitude": -74.0022364
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA164",
@@ -5762,7 +5892,8 @@
             "location": {
                 "latitude": 40.7521088,
                 "longitude": -74.0026522
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA165",
@@ -5806,7 +5937,8 @@
             "location": {
                 "latitude": 40.7516496,
                 "longitude": -74.0041354
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA166",
@@ -5850,7 +5982,8 @@
             "location": {
                 "latitude": 40.7516054,
                 "longitude": -74.0041652
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA167",
@@ -5894,7 +6027,8 @@
             "location": {
                 "latitude": 40.7512794,
                 "longitude": -74.0045116
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA168",
@@ -5938,7 +6072,8 @@
             "location": {
                 "latitude": 40.7512504,
                 "longitude": -74.0044236
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA169",
@@ -5982,7 +6117,8 @@
             "location": {
                 "latitude": 40.7513197,
                 "longitude": -74.0044835
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA170",
@@ -6026,7 +6162,8 @@
             "location": {
                 "latitude": 40.7513549,
                 "longitude": -74.004452
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA171",
@@ -6070,7 +6207,8 @@
             "location": {
                 "latitude": 40.7512854,
                 "longitude": -74.0043977
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA172",
@@ -6114,7 +6252,8 @@
             "location": {
                 "latitude": 40.7507088,
                 "longitude": -74.0031538
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA173",
@@ -6158,7 +6297,8 @@
             "location": {
                 "latitude": 40.750597,
                 "longitude": -74.0029311
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA174",
@@ -6202,7 +6342,8 @@
             "location": {
                 "latitude": 40.7505056,
                 "longitude": -74.0027621
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA175",
@@ -6246,7 +6387,8 @@
             "location": {
                 "latitude": 40.7505158,
                 "longitude": -74.0027353
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA176",
@@ -6290,7 +6432,8 @@
             "location": {
                 "latitude": 40.7501683,
                 "longitude": -74.0026414
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA177",
@@ -6334,7 +6477,8 @@
             "location": {
                 "latitude": 40.7505666,
                 "longitude": -74.0034944
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA178",
@@ -6378,7 +6522,8 @@
             "location": {
                 "latitude": 40.7474277,
                 "longitude": -74.0053206
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA179",
@@ -6422,7 +6567,8 @@
             "location": {
                 "latitude": 40.7509297,
                 "longitude": -74.0024163
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA180",
@@ -6466,7 +6612,8 @@
             "location": {
                 "latitude": 40.7501702,
                 "longitude": -74.0037157
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA181",
@@ -6510,7 +6657,8 @@
             "location": {
                 "latitude": 40.7500552,
                 "longitude": -74.0035864
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA182",
@@ -6554,7 +6702,8 @@
             "location": {
                 "latitude": 40.7501299,
                 "longitude": -74.0037594
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA183",
@@ -6598,7 +6747,8 @@
             "location": {
                 "latitude": 40.7501029,
                 "longitude": -74.0035148
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA184",
@@ -6642,7 +6792,8 @@
             "location": {
                 "latitude": 40.7501197,
                 "longitude": -74.0035878
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA185",
@@ -6686,7 +6837,8 @@
             "location": {
                 "latitude": 40.7499597,
                 "longitude": -74.0041571
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA186",
@@ -6730,7 +6882,8 @@
             "location": {
                 "latitude": 40.7499417,
                 "longitude": -74.0042354
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA187",
@@ -6774,7 +6927,8 @@
             "location": {
                 "latitude": 40.7499777,
                 "longitude": -74.0041101
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA188",
@@ -6818,7 +6972,8 @@
             "location": {
                 "latitude": 40.7497344,
                 "longitude": -74.0036085
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA189",
@@ -6862,7 +7017,8 @@
             "location": {
                 "latitude": 40.749941,
                 "longitude": -74.0041149
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA190",
@@ -6906,7 +7062,8 @@
             "location": {
                 "latitude": 40.7497859,
                 "longitude": -74.0036422
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA191",
@@ -6950,7 +7107,8 @@
             "location": {
                 "latitude": 40.7497076,
                 "longitude": -74.0036348
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA192",
@@ -6994,7 +7152,8 @@
             "location": {
                 "latitude": 40.7496717,
                 "longitude": -74.0036627
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA193",
@@ -7038,7 +7197,8 @@
             "location": {
                 "latitude": 40.7487598,
                 "longitude": -74.0036923
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA194",
@@ -7082,7 +7242,8 @@
             "location": {
                 "latitude": 40.7475857,
                 "longitude": -74.0057016
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA195",
@@ -7126,7 +7287,8 @@
             "location": {
                 "latitude": 40.7477676,
                 "longitude": -74.006149
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA196",
@@ -7170,7 +7332,8 @@
             "location": {
                 "latitude": 40.7478387,
                 "longitude": -74.0063018
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA197",
@@ -7214,7 +7377,8 @@
             "location": {
                 "latitude": 40.7477523,
                 "longitude": -74.0066657
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA198",
@@ -7258,7 +7422,8 @@
             "location": {
                 "latitude": 40.7476243,
                 "longitude": -74.0063743
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA199",
@@ -7302,7 +7467,8 @@
             "location": {
                 "latitude": 40.7474851,
                 "longitude": -74.0060323
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA200",
@@ -7346,7 +7512,8 @@
             "location": {
                 "latitude": 40.7474526,
                 "longitude": -74.0059397
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA201",
@@ -7390,7 +7557,8 @@
             "location": {
                 "latitude": 40.7467918,
                 "longitude": -74.0057122
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA202",
@@ -7434,7 +7602,8 @@
             "location": {
                 "latitude": 40.7470553,
                 "longitude": -74.0063448
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA203",
@@ -7478,7 +7647,8 @@
             "location": {
                 "latitude": 40.7469617,
                 "longitude": -74.006111
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA204",
@@ -7522,7 +7692,8 @@
             "location": {
                 "latitude": 40.7470364,
                 "longitude": -74.0062914
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA205",
@@ -7566,7 +7737,8 @@
             "location": {
                 "latitude": 40.746867,
                 "longitude": -74.0076175
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA206",
@@ -7610,7 +7782,8 @@
             "location": {
                 "latitude": 40.7462737,
                 "longitude": -74.0054234
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA207",
@@ -7654,7 +7827,8 @@
             "location": {
                 "latitude": 40.7462423,
                 "longitude": -74.0054891
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA208",
@@ -7698,7 +7872,8 @@
             "location": {
                 "latitude": 40.7460607,
                 "longitude": -74.0057581
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA209",
@@ -7742,7 +7917,8 @@
             "location": {
                 "latitude": 40.7462478,
                 "longitude": -74.0062412
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA210",
@@ -7786,7 +7962,8 @@
             "location": {
                 "latitude": 40.7462709,
                 "longitude": -74.006296
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA211",
@@ -7830,7 +8007,8 @@
             "location": {
                 "latitude": 40.7465171,
                 "longitude": -74.0068656
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA212",
@@ -7874,7 +8052,8 @@
             "location": {
                 "latitude": 40.7465678,
                 "longitude": -74.0068303
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA213",
@@ -7918,7 +8097,8 @@
             "location": {
                 "latitude": 40.7465429,
                 "longitude": -74.0068474
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA214",
@@ -7962,7 +8142,8 @@
             "location": {
                 "latitude": 40.7465936,
                 "longitude": -74.0068108
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA215",
@@ -8006,7 +8187,8 @@
             "location": {
                 "latitude": 40.7466379,
                 "longitude": -74.0071808
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA216",
@@ -8050,7 +8232,8 @@
             "location": {
                 "latitude": 40.7462706,
                 "longitude": -74.0069444
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA217",
@@ -8094,7 +8277,8 @@
             "location": {
                 "latitude": 40.7462173,
                 "longitude": -74.0067977
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA218",
@@ -8138,7 +8322,8 @@
             "location": {
                 "latitude": 40.7439372,
                 "longitude": -74.0061805
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA219",
@@ -8182,7 +8367,8 @@
             "location": {
                 "latitude": 40.7455769,
                 "longitude": -74.0070663
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA220",
@@ -8226,13 +8412,14 @@
             "location": {
                 "latitude": 40.7461924,
                 "longitude": -74.0077206
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA221",
             "name": "Pratt Manhattan Gallery",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Mo-Sa 11:00-18:00",
@@ -8270,7 +8457,8 @@
             "location": {
                 "latitude": 40.7380759,
                 "longitude": -73.9989918
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA222",
@@ -8314,7 +8502,8 @@
             "location": {
                 "latitude": 40.7385275,
                 "longitude": -73.9932713
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA223",
@@ -8358,13 +8547,14 @@
             "location": {
                 "latitude": 40.742528,
                 "longitude": -73.9991606
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA225",
             "name": "Richard Morris Hunt",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -8402,13 +8592,14 @@
             "location": {
                 "latitude": 40.7714555,
                 "longitude": -73.9679875
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA226",
             "name": "Joan of Arc Memorial",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -8446,13 +8637,14 @@
             "location": {
                 "latitude": 40.7941111,
                 "longitude": -73.9764799
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA228",
             "name": "Sir Walter Scott",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -8490,13 +8682,14 @@
             "location": {
                 "latitude": 40.7701407,
                 "longitude": -73.9723395
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA229",
             "name": "Robert Burns",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -8534,13 +8727,14 @@
             "location": {
                 "latitude": 40.770193,
                 "longitude": -73.9725659
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA230",
             "name": "Christopher Columbus",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -8578,13 +8772,14 @@
             "location": {
                 "latitude": 40.7699059,
                 "longitude": -73.9727725
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA232",
             "name": "William Shakespeare",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -8622,13 +8817,14 @@
             "location": {
                 "latitude": 40.7697989,
                 "longitude": -73.9723702
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA233",
             "name": "Indian Hunter",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -8666,13 +8862,14 @@
             "location": {
                 "latitude": 40.7703769,
                 "longitude": -73.9731523
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA234",
             "name": "Fitz-Greene Halleck",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -8710,13 +8907,14 @@
             "location": {
                 "latitude": 40.7706639,
                 "longitude": -73.9721367
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA235",
             "name": "Alice in Wonderland",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -8754,13 +8952,14 @@
             "location": {
                 "latitude": 40.7750382,
                 "longitude": -73.9665337
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA237",
             "name": "Triumph of the Human Spirit",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": null,
@@ -8798,13 +8997,14 @@
             "location": {
                 "latitude": 40.7144385,
                 "longitude": -74.0028881
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA238",
             "name": "Prometheus",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -8842,13 +9042,14 @@
             "location": {
                 "latitude": 40.7587051,
                 "longitude": -73.9785783
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA241",
             "name": "3000 A.D. Diffusion Piece",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -8886,13 +9087,14 @@
             "location": {
                 "latitude": 40.8471692,
                 "longitude": -73.9420363
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA243",
             "name": "George M. Cohan",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -8930,13 +9132,14 @@
             "location": {
                 "latitude": 40.7587593,
                 "longitude": -73.9851462
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA245",
             "name": "Francis P. Duffy",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -8974,13 +9177,14 @@
             "location": {
                 "latitude": 40.7590569,
                 "longitude": -73.9849891
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA246",
             "name": "Alexander Hamilton",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9018,13 +9222,14 @@
             "location": {
                 "latitude": 40.781033,
                 "longitude": -73.964572
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA247",
             "name": "Balto",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9062,13 +9267,14 @@
             "location": {
                 "latitude": 40.7699607,
                 "longitude": -73.9710098
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA248",
             "name": "7th Regiment Memorial",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9106,7 +9312,8 @@
             "location": {
                 "latitude": 40.7737621,
                 "longitude": -73.9764403
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA249",
@@ -9150,13 +9357,14 @@
             "location": {
                 "latitude": 40.8005515,
                 "longitude": -73.9676966
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA251",
             "name": "Alexander von Humboldt",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9194,13 +9402,14 @@
             "location": {
                 "latitude": 40.7794692,
                 "longitude": -73.9732913
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA252",
             "name": "Albert Bertel Thorvaldsen",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9238,13 +9447,14 @@
             "location": {
                 "latitude": 40.7886205,
                 "longitude": -73.9559997
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA253",
             "name": "Daniel Webster",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9282,13 +9492,14 @@
             "location": {
                 "latitude": 40.7747533,
                 "longitude": -73.974118
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA254",
             "name": "Johann Christoph Friedrich Von Schiller",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9326,13 +9537,14 @@
             "location": {
                 "latitude": 40.7731728,
                 "longitude": -73.9717355
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA255",
             "name": "John Purroy Mitchel",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9370,13 +9582,14 @@
             "location": {
                 "latitude": 40.7843754,
                 "longitude": -73.9592113
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA256",
             "name": "Jos\u00e9 Mart\u00ed",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9414,13 +9627,14 @@
             "location": {
                 "latitude": 40.7660454,
                 "longitude": -73.9760662
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA257",
             "name": "Jos\u00e9 de San Mart\u00edn",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9458,13 +9672,14 @@
             "location": {
                 "latitude": 40.7660429,
                 "longitude": -73.9766301
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA258",
             "name": "King Jagiello Monument",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9502,13 +9717,14 @@
             "location": {
                 "latitude": 40.7789243,
                 "longitude": -73.9666796
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA259",
             "name": "Ludwig van Beethoven",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9546,13 +9762,14 @@
             "location": {
                 "latitude": 40.7728773,
                 "longitude": -73.9718893
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA260",
             "name": "Sim\u00f3n Bol\u00edvar",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9590,13 +9807,14 @@
             "location": {
                 "latitude": 40.7657085,
                 "longitude": -73.975779
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA264",
             "name": "Time Landscape",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9634,13 +9852,14 @@
             "location": {
                 "latitude": 40.7270859,
                 "longitude": -73.9994536
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA265",
             "name": "Group of Bears",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9678,13 +9897,14 @@
             "location": {
                 "latitude": 40.7774949,
                 "longitude": -73.9639416
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA268",
             "name": "Alamo",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9722,13 +9942,14 @@
             "location": {
                 "latitude": 40.7298846,
                 "longitude": -73.9910185
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA271",
             "name": "Thomas Moore",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9766,13 +9987,14 @@
             "location": {
                 "latitude": 40.765928,
                 "longitude": -73.973245
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA272",
             "name": "Victor Herbert",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9810,13 +10032,14 @@
             "location": {
                 "latitude": 40.7727282,
                 "longitude": -73.9722858
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA273",
             "name": "Hans Christian Andersen",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9854,13 +10077,14 @@
             "location": {
                 "latitude": 40.774479,
                 "longitude": -73.9677251
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA274",
             "name": "The Pilgrim",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9898,13 +10122,14 @@
             "location": {
                 "latitude": 40.7731439,
                 "longitude": -73.9684393
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA275",
             "name": "Curl",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9942,13 +10167,14 @@
             "location": {
                 "latitude": 40.8086544,
                 "longitude": -73.9615238
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA276",
             "name": "5 in 1, 1973-74",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -9986,13 +10212,14 @@
             "location": {
                 "latitude": 40.7127003,
                 "longitude": -74.0029361
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA277",
             "name": "Listen",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10030,13 +10257,14 @@
             "location": {
                 "latitude": 40.7628768,
                 "longitude": -73.9780253
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA278",
             "name": "Samuel F. B. Morse",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10074,13 +10302,14 @@
             "location": {
                 "latitude": 40.7724831,
                 "longitude": -73.967435
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA279",
             "name": "Romeo and Juliet",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10118,13 +10347,14 @@
             "location": {
                 "latitude": 40.7804752,
                 "longitude": -73.9687205
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA280",
             "name": "The Tempest",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10162,13 +10392,14 @@
             "location": {
                 "latitude": 40.7804476,
                 "longitude": -73.9686451
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA281",
             "name": "Hope",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10206,13 +10437,14 @@
             "location": {
                 "latitude": 40.7629651,
                 "longitude": -73.9821345
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA290",
             "name": "Old Union Square",
             "type": "museum_art",
-            "address": "None Union Square East, None Manhattan",
+            "address": "Union Square East, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10250,13 +10482,14 @@
             "location": {
                 "latitude": 40.7354231,
                 "longitude": -73.9900756
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA291",
             "name": "McGraw-Hill Sun Triangle",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10294,13 +10527,14 @@
             "location": {
                 "latitude": 40.7591163,
                 "longitude": -73.9814519
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA292",
             "name": "Bust of Sylvette",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10338,13 +10572,14 @@
             "location": {
                 "latitude": 40.7269811,
                 "longitude": -73.9983532
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA293",
             "name": "SLA 307",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10382,13 +10617,14 @@
             "location": {
                 "latitude": 40.750036,
                 "longitude": -73.9958068
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA296",
             "name": "Tiles for America",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10426,13 +10662,14 @@
             "location": {
                 "latitude": 40.736187,
                 "longitude": -74.0010862
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA297",
             "name": "ATLAS",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10470,13 +10707,14 @@
             "location": {
                 "latitude": 40.7589481,
                 "longitude": -73.9771802
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA298",
             "name": "Golda Meir",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": null,
@@ -10514,13 +10752,14 @@
             "location": {
                 "latitude": 40.7538804,
                 "longitude": -73.9874097
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA299",
             "name": "Metronome",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10558,13 +10797,14 @@
             "location": {
                 "latitude": 40.7344122,
                 "longitude": -73.9903291
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA300",
             "name": "Hammer Boy",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10602,13 +10842,14 @@
             "location": {
                 "latitude": 40.7837563,
                 "longitude": -73.9794091
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA301",
             "name": "Michael Jackson Mural",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10646,13 +10887,14 @@
             "location": {
                 "latitude": 40.7292262,
                 "longitude": -73.9838341
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA303",
             "name": "Stop Guns",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10690,13 +10932,14 @@
             "location": {
                 "latitude": 40.7222725,
                 "longitude": -73.9900004
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA304",
             "name": "Gandhi and Mother Teresa",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10734,13 +10977,14 @@
             "location": {
                 "latitude": 40.7446001,
                 "longitude": -74.0060707
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA305",
             "name": "Sidewalk Flowers",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10778,7 +11022,8 @@
             "location": {
                 "latitude": 40.8564265,
                 "longitude": -73.9298867
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA307",
@@ -10822,13 +11067,14 @@
             "location": {
                 "latitude": 40.7213374,
                 "longitude": -73.9857428
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA308",
             "name": "General Daniel Butterfield",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10866,13 +11112,14 @@
             "location": {
                 "latitude": 40.8126196,
                 "longitude": -73.9621121
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA309",
             "name": "Reclining Woman",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10910,13 +11157,14 @@
             "location": {
                 "latitude": 40.809011,
                 "longitude": -73.9622465
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA310",
             "name": "Three-Way Piece, No. 1: Points",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10954,13 +11202,14 @@
             "location": {
                 "latitude": 40.8074792,
                 "longitude": -73.9604879
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA311",
             "name": "Thomas Jefferson",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -10998,13 +11247,14 @@
             "location": {
                 "latitude": 40.8074652,
                 "longitude": -73.9635685
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA312",
             "name": "The Garment Worker",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11042,13 +11292,14 @@
             "location": {
                 "latitude": 40.7542354,
                 "longitude": -73.9880814
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA314",
             "name": "Confucious",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11086,13 +11337,14 @@
             "location": {
                 "latitude": 40.7142105,
                 "longitude": -73.9971129
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA315",
             "name": "Young Elephant (1985)",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": null,
@@ -11130,13 +11382,14 @@
             "location": {
                 "latitude": 40.7617344,
                 "longitude": -73.9813076
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA316",
             "name": "Paparazzi Dogman and Rabbitwoman",
             "type": "museum_art",
-            "address": "None 6th Avenue, None Manhattan",
+            "address": "6th Avenue, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11174,13 +11427,14 @@
             "location": {
                 "latitude": 40.7596545,
                 "longitude": -73.9829247
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA317",
             "name": "The Guardians: Superhero",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11218,13 +11472,14 @@
             "location": {
                 "latitude": 40.7546734,
                 "longitude": -73.9853284
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA318",
             "name": "Dante Alighieri",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11262,13 +11517,14 @@
             "location": {
                 "latitude": 40.771792,
                 "longitude": -73.9825535
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA319",
             "name": "Time Sculpture",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11306,13 +11562,14 @@
             "location": {
                 "latitude": 40.7720828,
                 "longitude": -73.982462
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA320",
             "name": "Private Passage",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11350,13 +11607,14 @@
             "location": {
                 "latitude": 40.7709814,
                 "longitude": -73.9953215
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA321",
             "name": "CY GAVIN",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11394,13 +11652,14 @@
             "location": {
                 "latitude": 40.8135488,
                 "longitude": -73.9546801
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA322",
             "name": "Scholars' Lion",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11438,13 +11697,14 @@
             "location": {
                 "latitude": 40.808926,
                 "longitude": -73.9620013
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA324",
             "name": "Lafayette and Washington",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11482,13 +11742,14 @@
             "location": {
                 "latitude": 40.8036855,
                 "longitude": -73.9580124
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA325",
             "name": "Sen Yat-sen",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11526,13 +11787,14 @@
             "location": {
                 "latitude": 40.7157691,
                 "longitude": -73.9999941
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA327",
             "name": "Zerospace",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11570,13 +11832,14 @@
             "location": {
                 "latitude": 40.749167,
                 "longitude": -73.9893438
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA329",
             "name": "Penn Station Eagle",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11614,13 +11877,14 @@
             "location": {
                 "latitude": 40.7283124,
                 "longitude": -73.990224
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA330",
             "name": "Audrey Hepburn",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11658,13 +11922,14 @@
             "location": {
                 "latitude": 40.7202849,
                 "longitude": -73.9968262
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA331",
             "name": "The Pop Shop",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11702,13 +11967,14 @@
             "location": {
                 "latitude": 40.7245801,
                 "longitude": -73.9958875
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA332",
             "name": "Columnade",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11746,13 +12012,14 @@
             "location": {
                 "latitude": 40.8613369,
                 "longitude": -73.932043
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA333",
             "name": "Reclining Figure",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11790,13 +12057,14 @@
             "location": {
                 "latitude": 40.7731831,
                 "longitude": -73.9836819
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA334",
             "name": "Peter the Fisherman",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11834,13 +12102,14 @@
             "location": {
                 "latitude": 40.7713399,
                 "longitude": -73.9855947
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA335",
             "name": "Moses",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11878,13 +12147,14 @@
             "location": {
                 "latitude": 40.771141,
                 "longitude": -73.9838482
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA336",
             "name": "Alfred E Smith",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11922,13 +12192,14 @@
             "location": {
                 "latitude": 40.710855,
                 "longitude": -73.9972762
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA337",
             "name": "Lorca-El Ni\u00f1o de las Pinturas",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -11966,13 +12237,14 @@
             "location": {
                 "latitude": 40.7187368,
                 "longitude": -74.0004289
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA339",
             "name": "Swinging Jenny",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12010,13 +12282,14 @@
             "location": {
                 "latitude": 40.7713068,
                 "longitude": -73.9919455
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA340",
             "name": "Ram",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12054,13 +12327,14 @@
             "location": {
                 "latitude": 40.7706281,
                 "longitude": -73.9843383
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA342",
             "name": "Fortitude",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12098,13 +12372,14 @@
             "location": {
                 "latitude": 40.7530505,
                 "longitude": -73.9816418
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA343",
             "name": "Patience",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12142,13 +12417,14 @@
             "location": {
                 "latitude": 40.7528969,
                 "longitude": -73.9817494
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA352",
             "name": "Bellerophon Taming Pegasus",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12186,13 +12462,14 @@
             "location": {
                 "latitude": 40.8070368,
                 "longitude": -73.9605637
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA353",
             "name": "Triad",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12230,13 +12507,14 @@
             "location": {
                 "latitude": 40.74552,
                 "longitude": -73.9822577
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA354",
             "name": "Women's Rights Pioneers Monument",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12274,13 +12552,14 @@
             "location": {
                 "latitude": 40.7707115,
                 "longitude": -73.9723903
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA355",
             "name": "The Duo",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12318,13 +12597,14 @@
             "location": {
                 "latitude": 40.7694168,
                 "longitude": -73.9817831
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA356",
             "name": "The Guardians: Hero",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12362,13 +12642,14 @@
             "location": {
                 "latitude": 40.7549607,
                 "longitude": -73.9850044
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA357",
             "name": "Eagles and Prey",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12406,13 +12687,14 @@
             "location": {
                 "latitude": 40.7725104,
                 "longitude": -73.9725158
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA358",
             "name": "The Falconer",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12450,13 +12732,14 @@
             "location": {
                 "latitude": 40.7740994,
                 "longitude": -73.9738182
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA359",
             "name": "Still Hunt",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12494,13 +12777,14 @@
             "location": {
                 "latitude": 40.7768328,
                 "longitude": -73.9671918
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA360",
             "name": "Giuseppe Garibaldi",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12538,13 +12822,14 @@
             "location": {
                 "latitude": 40.7306147,
                 "longitude": -73.996819
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA361",
             "name": "Margaret Loeb Kempner",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12582,13 +12867,14 @@
             "location": {
                 "latitude": 40.7303917,
                 "longitude": -73.9976134
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA362",
             "name": "Giuseppe Mazzini",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12626,13 +12912,14 @@
             "location": {
                 "latitude": 40.7730089,
                 "longitude": -73.9766942
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA364",
             "name": "\u201cTogo\u201d",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12670,13 +12957,14 @@
             "location": {
                 "latitude": 40.7143286,
                 "longitude": -73.9892771
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA365",
             "name": "Bust and monument to Archbishop John J. Hughes",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12714,13 +13002,14 @@
             "location": {
                 "latitude": 40.7234177,
                 "longitude": -73.9949266
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA370",
             "name": "Civic Fame",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12758,13 +13047,14 @@
             "location": {
                 "latitude": 40.7129566,
                 "longitude": -74.0036137
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA371",
             "name": "Abraham De Peyster",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12802,13 +13092,14 @@
             "location": {
                 "latitude": 40.7152666,
                 "longitude": -74.002798
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA372",
             "name": "The Plinth",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12846,13 +13137,14 @@
             "location": {
                 "latitude": 40.7520679,
                 "longitude": -74.0010071
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA373",
             "name": "St. Ignatius",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12890,13 +13182,14 @@
             "location": {
                 "latitude": 40.7702276,
                 "longitude": -73.984391
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA375",
             "name": "Tightrope Walker",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12934,13 +13227,14 @@
             "location": {
                 "latitude": 40.8075393,
                 "longitude": -73.9606702
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA378",
             "name": "Joan Miro's Moonbird",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -12978,13 +13272,14 @@
             "location": {
                 "latitude": 40.7639334,
                 "longitude": -73.9744891
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA383",
             "name": "Fiorello H. LaGuardia",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -13022,13 +13317,14 @@
             "location": {
                 "latitude": 40.728649,
                 "longitude": -73.9981626
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA385",
             "name": "Union Square Drinking Fountain",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -13066,13 +13362,14 @@
             "location": {
                 "latitude": 40.7360034,
                 "longitude": -73.9907301
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA386",
             "name": "Invisible Man: A Memorial to Ralph Ellison",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -13110,13 +13407,14 @@
             "location": {
                 "latitude": 40.8303033,
                 "longitude": -73.9498955
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA390",
             "name": "Clinton War Memorial (Doughboy)",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -13154,13 +13452,14 @@
             "location": {
                 "latitude": 40.7674628,
                 "longitude": -73.9938856
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA392",
             "name": "Homeless Jesus",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -13198,7 +13497,8 @@
             "location": {
                 "latitude": 40.8037976,
                 "longitude": -73.9627595
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA1",
@@ -13242,13 +13542,14 @@
             "location": {
                 "latitude": 40.7033867,
                 "longitude": -74.0113536
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA2",
             "name": "National Museum of the American Indian",
             "type": "museum_art",
-            "address": "None None, 10004 Manhattan",
+            "address": "10004 Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": "Mo-Su 10:00-17:00",
@@ -13286,13 +13587,14 @@
             "location": {
                 "latitude": 40.7040265,
                 "longitude": -74.0137472
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA4",
             "name": "Dahesh Museum of Art",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -13330,13 +13632,14 @@
             "location": {
                 "latitude": 40.7250957,
                 "longitude": -74.0049076
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA5",
             "name": "Museum of African Art",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -13374,13 +13677,14 @@
             "location": {
                 "latitude": 40.725,
                 "longitude": -73.9977778
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA9",
             "name": "Museum of American Finance",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Tu-Sa 10:00-16:00",
@@ -13418,7 +13722,8 @@
             "location": {
                 "latitude": 40.7063713,
                 "longitude": -74.0091958
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA13",
@@ -13462,7 +13767,8 @@
             "location": {
                 "latitude": 40.7057229,
                 "longitude": -74.0177051
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA15",
@@ -13506,13 +13812,14 @@
             "location": {
                 "latitude": 40.706628,
                 "longitude": -74.0036758
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA18",
             "name": "Children's Museum of the Arts",
             "type": "museum_art",
-            "address": "103 Charlton Street, None Manhattan",
+            "address": "103 Charlton Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -13550,7 +13857,8 @@
             "location": {
                 "latitude": 40.7275353,
                 "longitude": -74.0081354
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA23",
@@ -13594,13 +13902,14 @@
             "location": {
                 "latitude": 40.7491907,
                 "longitude": -73.9814793
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA29",
             "name": "Garbage museum",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -13638,7 +13947,8 @@
             "location": {
                 "latitude": 40.7856582,
                 "longitude": -73.9439308
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA30",
@@ -13682,7 +13992,8 @@
             "location": {
                 "latitude": 40.7079432,
                 "longitude": -74.0137633
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA41",
@@ -13726,7 +14037,8 @@
             "location": {
                 "latitude": 40.7648187,
                 "longitude": -73.966827
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA45",
@@ -13770,13 +14082,14 @@
             "location": {
                 "latitude": 40.7963422,
                 "longitude": -73.9493338
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA46",
             "name": "Grolier Club",
             "type": "museum_art",
-            "address": "47 East 60th Street, None Manhattan",
+            "address": "47 East 60th Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -13814,7 +14127,8 @@
             "location": {
                 "latitude": 40.7640002,
                 "longitude": -73.9698587
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA47",
@@ -13858,7 +14172,8 @@
             "location": {
                 "latitude": 40.7217683,
                 "longitude": -74.0030317
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA49",
@@ -13902,7 +14217,8 @@
             "location": {
                 "latitude": 40.7231769,
                 "longitude": -74.0068809
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA50",
@@ -13946,7 +14262,8 @@
             "location": {
                 "latitude": 40.7734755,
                 "longitude": -73.9639898
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA54",
@@ -13990,7 +14307,8 @@
             "location": {
                 "latitude": 40.7240871,
                 "longitude": -74.0021462
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA58",
@@ -14034,7 +14352,8 @@
             "location": {
                 "latitude": 40.7226366,
                 "longitude": -74.0098159
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA63",
@@ -14078,7 +14397,8 @@
             "location": {
                 "latitude": 40.7733329,
                 "longitude": -73.9633859
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA69",
@@ -14122,13 +14442,14 @@
             "location": {
                 "latitude": 40.7700521,
                 "longitude": -73.965721
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA70",
             "name": "The Print Room",
             "type": "museum_art",
-            "address": "89 Franklin Street, None Manhattan",
+            "address": "89 Franklin Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -14166,13 +14487,14 @@
             "location": {
                 "latitude": 40.7179792,
                 "longitude": -74.0049073
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA76",
             "name": "Graffiti Hall of Fame",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -14210,13 +14532,14 @@
             "location": {
                 "latitude": 40.7932038,
                 "longitude": -73.9480796
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA86",
             "name": "Alexander and Bonin",
             "type": "museum_art",
-            "address": "47 Walker Street, None Manhattan",
+            "address": "47 Walker Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -14254,13 +14577,14 @@
             "location": {
                 "latitude": 40.7190232,
                 "longitude": -74.0036388
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA100",
             "name": null,
             "type": "museum_art",
-            "address": "958 Madison Avenue, None Manhattan",
+            "address": "958 Madison Avenue, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -14298,13 +14622,14 @@
             "location": {
                 "latitude": 40.7740245,
                 "longitude": -73.9639987
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA103",
             "name": "81 Leonard Gallery",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Mo-Sa 12:00-18:00",
@@ -14342,7 +14667,8 @@
             "location": {
                 "latitude": 40.7174539,
                 "longitude": -74.0049014
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA106",
@@ -14386,7 +14712,8 @@
             "location": {
                 "latitude": 40.7235189,
                 "longitude": -73.9994085
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA109",
@@ -14430,13 +14757,14 @@
             "location": {
                 "latitude": 40.7188402,
                 "longitude": -74.0032329
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA121",
             "name": "Pomegranate Gallery",
             "type": "museum_art",
-            "address": "137 Greene Street, None Manhattan",
+            "address": "137 Greene Street, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -14474,13 +14802,14 @@
             "location": {
                 "latitude": 40.7258312,
                 "longitude": -73.9987925
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA123",
             "name": "Guild Gallery",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -14518,13 +14847,14 @@
             "location": {
                 "latitude": 40.7202528,
                 "longitude": -74.0027872
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA127",
             "name": "Georges Berg\u00e8s Gallery",
             "type": "museum_art",
-            "address": "462 West Broadway, None Manhattan",
+            "address": "462 West Broadway, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -14562,13 +14892,14 @@
             "location": {
                 "latitude": 40.7263278,
                 "longitude": -74.0006603
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA128",
             "name": "DTR Modern Galleries",
             "type": "museum_art",
-            "address": "456 West Broadway, None Manhattan",
+            "address": "456 West Broadway, Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -14606,7 +14937,8 @@
             "location": {
                 "latitude": 40.7262,
                 "longitude": -74.0007365
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA130",
@@ -14650,13 +14982,14 @@
             "location": {
                 "latitude": 40.7256775,
                 "longitude": -74.0005096
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA224",
             "name": "Eden Gallery",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": "Mo-Su 09:00-21:00",
@@ -14694,13 +15027,14 @@
             "location": {
                 "latitude": 40.7226991,
                 "longitude": -74.0014366
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA227",
             "name": "Charging Bull",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "limited",
             "opening_hours": null,
@@ -14738,13 +15072,14 @@
             "location": {
                 "latitude": 40.7055641,
                 "longitude": -74.0134462
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA231",
             "name": "The Sphere",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": null,
@@ -14782,13 +15117,14 @@
             "location": {
                 "latitude": 40.7104974,
                 "longitude": -74.0138892
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA236",
             "name": "Netherland Monument",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": null,
@@ -14826,13 +15162,14 @@
             "location": {
                 "latitude": 40.7044082,
                 "longitude": -74.014598
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA239",
             "name": "Eagle",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -14870,13 +15207,14 @@
             "location": {
                 "latitude": 40.7021499,
                 "longitude": -74.0158334
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA240",
             "name": "Jasper\u2019s Split Star",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": null,
@@ -14914,13 +15252,14 @@
             "location": {
                 "latitude": 40.7132396,
                 "longitude": -74.0114845
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA242",
             "name": "Growth",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -14958,13 +15297,14 @@
             "location": {
                 "latitude": 40.8011976,
                 "longitude": -73.9389456
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA244",
             "name": "Juan Pablo Duarte",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15002,13 +15342,14 @@
             "location": {
                 "latitude": 40.7226058,
                 "longitude": -74.005459
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA250",
             "name": "Red Cube",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": null,
@@ -15046,13 +15387,14 @@
             "location": {
                 "latitude": 40.7089149,
                 "longitude": -74.0103932
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA261",
             "name": "America's Response Monument",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15090,13 +15432,14 @@
             "location": {
                 "latitude": 40.7104591,
                 "longitude": -74.0140533
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA262",
             "name": "Twister",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15134,13 +15477,14 @@
             "location": {
                 "latitude": 40.7241835,
                 "longitude": -74.0119121
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA263",
             "name": "Offshoot",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15178,13 +15522,14 @@
             "location": {
                 "latitude": 40.7228631,
                 "longitude": -74.0121608
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA266",
             "name": "Joie de Vivre",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": null,
@@ -15222,13 +15567,14 @@
             "location": {
                 "latitude": 40.7089672,
                 "longitude": -74.0109293
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA267",
             "name": "Non-Violence",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15266,13 +15612,14 @@
             "location": {
                 "latitude": 40.7506894,
                 "longitude": -73.9675854
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA269",
             "name": "Coenties Ship",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15310,13 +15657,14 @@
             "location": {
                 "latitude": 40.7034838,
                 "longitude": -74.0105215
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA270",
             "name": "Two",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15354,13 +15702,14 @@
             "location": {
                 "latitude": 40.7077153,
                 "longitude": -74.0067978
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA282",
             "name": "John Ericsson",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": null,
@@ -15398,13 +15747,14 @@
             "location": {
                 "latitude": 40.7036281,
                 "longitude": -74.0145339
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA283",
             "name": "The Immigrants",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15442,13 +15792,14 @@
             "location": {
                 "latitude": 40.7030984,
                 "longitude": -74.0163913
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA284",
             "name": "Group of Four Trees",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15486,13 +15837,14 @@
             "location": {
                 "latitude": 40.7075343,
                 "longitude": -74.0089367
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA285",
             "name": "Sunken Garden",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": null,
@@ -15530,13 +15882,14 @@
             "location": {
                 "latitude": 40.7075476,
                 "longitude": -74.0092648
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA286",
             "name": "Fearless Girl",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": null,
@@ -15574,13 +15927,14 @@
             "location": {
                 "latitude": 40.7068167,
                 "longitude": -74.0107995
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA287",
             "name": "Marine and Maritime Art",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15618,13 +15972,14 @@
             "location": {
                 "latitude": 40.7163748,
                 "longitude": -74.0070508
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA288",
             "name": "Double Check",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": "yes",
             "opening_hours": null,
@@ -15662,13 +16017,14 @@
             "location": {
                 "latitude": 40.7093141,
                 "longitude": -74.0105868
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA289",
             "name": "We Are the World",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15706,13 +16062,14 @@
             "location": {
                 "latitude": 40.7201076,
                 "longitude": -74.0054637
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA294",
             "name": "The Upper Room",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15750,13 +16107,14 @@
             "location": {
                 "latitude": 40.7104676,
                 "longitude": -74.0179145
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA295",
             "name": "Sitting Stance",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15794,13 +16152,14 @@
             "location": {
                 "latitude": 40.7088681,
                 "longitude": -74.0183056
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA302",
             "name": "Roy Lichtenstein",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15838,13 +16197,14 @@
             "location": {
                 "latitude": 40.7516982,
                 "longitude": -73.9723132
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA306",
             "name": "Single Form",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15882,13 +16242,14 @@
             "location": {
                 "latitude": 40.7491463,
                 "longitude": -73.968794
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA313",
             "name": "Spot",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15926,13 +16287,14 @@
             "location": {
                 "latitude": 40.7432746,
                 "longitude": -73.9728127
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA323",
             "name": "Let Us Beat Swords Into Ploughshares",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -15970,13 +16332,14 @@
             "location": {
                 "latitude": 40.7504131,
                 "longitude": -73.96624
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA326",
             "name": "Giovanni Da Verrazzano",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16014,13 +16377,14 @@
             "location": {
                 "latitude": 40.7043797,
                 "longitude": -74.0163813
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA328",
             "name": "Sphere Within Sphere",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16058,13 +16422,14 @@
             "location": {
                 "latitude": 40.7508783,
                 "longitude": -73.9675707
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA338",
             "name": "La Luz Que Sale De La Obscuridad",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16102,13 +16467,14 @@
             "location": {
                 "latitude": 40.8004112,
                 "longitude": -73.9427836
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA345",
             "name": "Lincoln Holding a Child",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16146,13 +16512,14 @@
             "location": {
                 "latitude": 40.8110316,
                 "longitude": -73.9365295
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA346",
             "name": "Roots and Ties for Peace",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16190,13 +16557,14 @@
             "location": {
                 "latitude": 40.7511239,
                 "longitude": -73.9657829
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA347",
             "name": "Treasure Tripod Dedicated to the 21st Century",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16234,13 +16602,14 @@
             "location": {
                 "latitude": 40.7503431,
                 "longitude": -73.9662893
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA348",
             "name": "Mother and Child",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16278,13 +16647,14 @@
             "location": {
                 "latitude": 40.751774,
                 "longitude": -73.9665045
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA349",
             "name": "Der Aufsteigende",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16322,13 +16692,14 @@
             "location": {
                 "latitude": 40.7519738,
                 "longitude": -73.9668876
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA350",
             "name": "The Sleeping Elephant",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16366,13 +16737,14 @@
             "location": {
                 "latitude": 40.7521004,
                 "longitude": -73.9668182
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA351",
             "name": "Arrival",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16410,13 +16782,14 @@
             "location": {
                 "latitude": 40.7514321,
                 "longitude": -73.9661929
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA363",
             "name": "Mother Italy",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16454,13 +16827,14 @@
             "location": {
                 "latitude": 40.7674754,
                 "longitude": -73.9635908
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA366",
             "name": "Coast Guard Memorial",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16498,13 +16872,14 @@
             "location": {
                 "latitude": 40.7012337,
                 "longitude": -74.0139509
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA367",
             "name": "New York Subway Stations",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16542,13 +16917,14 @@
             "location": {
                 "latitude": 40.7255612,
                 "longitude": -74.0037455
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA368",
             "name": "Game Inside the Game",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16586,13 +16962,14 @@
             "location": {
                 "latitude": 40.728484,
                 "longitude": -74.0050784
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA369",
             "name": "Nathan Hale",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16630,7 +17007,8 @@
             "location": {
                 "latitude": 40.7123393,
                 "longitude": -74.0063514
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA374",
@@ -16674,13 +17052,14 @@
             "location": {
                 "latitude": 40.7259792,
                 "longitude": -73.9997541
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA376",
             "name": "The Wall Street",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16718,13 +17097,14 @@
             "location": {
                 "latitude": 40.7053799,
                 "longitude": -74.0075638
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA377",
             "name": "John Wolfe Ambrose",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16762,13 +17142,14 @@
             "location": {
                 "latitude": 40.7025911,
                 "longitude": -74.0143795
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA379",
             "name": "Einstein on a Bicycle",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16806,13 +17187,14 @@
             "location": {
                 "latitude": 40.7548848,
                 "longitude": -73.972054
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA380",
             "name": "The Braves of 9/11",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16850,13 +17232,14 @@
             "location": {
                 "latitude": 40.7552716,
                 "longitude": -73.9717679
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA382",
             "name": "Porcellino",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16894,13 +17277,14 @@
             "location": {
                 "latitude": 40.7570853,
                 "longitude": -73.9599853
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA384",
             "name": "Porkchop, the bulldog bootlegger",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16938,13 +17322,14 @@
             "location": {
                 "latitude": 40.7020025,
                 "longitude": -74.0146674
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA387",
             "name": "Icarus",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -16982,13 +17367,14 @@
             "location": {
                 "latitude": 40.7175386,
                 "longitude": -74.011803
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA388",
             "name": "Rose III",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -17026,13 +17412,14 @@
             "location": {
                 "latitude": 40.709485,
                 "longitude": -74.0116186
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA389",
             "name": "John Watts",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -17070,13 +17457,14 @@
             "location": {
                 "latitude": 40.7076911,
                 "longitude": -74.0121369
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA391",
             "name": "Accord",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -17114,13 +17502,14 @@
             "location": {
                 "latitude": 40.7570087,
                 "longitude": -73.9661688
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA393",
             "name": "Title Reaching for the Skies",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -17158,13 +17547,14 @@
             "location": {
                 "latitude": 40.750469,
                 "longitude": -73.9663836
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA394",
             "name": "Peace Monument",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -17202,13 +17592,14 @@
             "location": {
                 "latitude": 40.7510385,
                 "longitude": -73.9665525
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA395",
             "name": "Kusikawsay",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -17246,13 +17637,14 @@
             "location": {
                 "latitude": 40.7501364,
                 "longitude": -73.9664336
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA396",
             "name": "Consciousness",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -17290,13 +17682,14 @@
             "location": {
                 "latitude": 40.7513078,
                 "longitude": -73.9660084
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA397",
             "name": "Replica of Commemorative Stone in Honour of the Victims of Extreme Poverty",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -17334,13 +17727,14 @@
             "location": {
                 "latitude": 40.7511987,
                 "longitude": -73.9662908
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "MA398",
             "name": "G\u00f6beklitepe Limestone Stele",
             "type": "museum_art",
-            "address": "None None, None Manhattan",
+            "address": "Manhattan",
             "internet_access": null,
             "wheelchair_accessible": null,
             "opening_hours": null,
@@ -17378,7 +17772,8 @@
             "location": {
                 "latitude": 40.7518967,
                 "longitude": -73.9669962
-            }
+            },
+            "last_updated": null
         }
     ]
 }

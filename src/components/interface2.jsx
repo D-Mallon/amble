@@ -52,7 +52,29 @@ function Interface2() {
 
 
   const [isWeatherVisible, setIsWeatherVisible] = useState(false);
+  const toggleWeather = () => {
+    if (!isWeatherVisible) {
+      setIsWeatherVisible(true);
+    } else {
+      exitWeather();
+      setTimeout(() => {
+        setIsWeatherVisible(false);
+      }, 1000);
+    }
+  };
 
+  const exitWeather = () => {
+    // 其他逻辑
+    hideElements_weather();
+  };
+
+  const hideElements_weather = () => {
+    document.querySelector(".popup-overlay").classList.add("hide");
+    document.querySelector(".additional-blocks-weather").classList.add("hide");
+    document.querySelector(".additional-block-close-weather").classList.add("hide");
+    document.querySelector(".w_current").classList.add("hide");
+    document.querySelector(".overlay-weatherwin").classList.add("hide");
+  };
 
   const [currentWeather,setCurrentWeather]=useState(null);
   const [forecast,setForecast]=useState(null);
@@ -91,27 +113,30 @@ function Interface2() {
          <div className='mapwrapper_routeplan'>
         <MapBackground zoom={14.4}/>
         </div>
-        <div className="PlanWin">
-        
-          {isWeatherVisible && (
+        {isWeatherVisible && (
+            <>
             <div className="popup-overlay">
-              <div className="additional-blocks">
+              <div className="additional-blocks-weather">
               <div className="additional-block-text-preplan-weatherwin">
                 <span className="text_bar_2-preplan-weatherwin">Weather Information</span>
               </div>
-              <div className="additional-block-close" onClick={() => setIsWeatherVisible(!isWeatherVisible)}>
+              <div className="additional-block-close-weather" onClick={toggleWeather}>
                 <CloseIcon sx={{ fontSize: 27 , color: 'white' }} />
               </div>
-              
             </div>
+
             <div className="w_current">
             {currentWeather && <Current_w data={currentWeather}/>}
+            {forecast && <Forecast data={forecast}/>}
             </div>
-            <div className="w_forecast">
-           {forecast && <Forecast data={forecast}/>}
-           </div>
             </div>
+            </>
           )}
+        {isWeatherVisible && (<div className="overlay-weatherwin"></div> )}
+
+        <div className="PlanWin">
+        
+      
 
           <div className="PlanSet">
             <div className="green-bar">
@@ -154,7 +179,7 @@ function Interface2() {
               </div>
               <div
                 className="additional-block-weather"
-                onClick={() => setIsWeatherVisible(!isWeatherVisible)}
+                onClick={toggleWeather}
               >
                 <CloudIcon sx={{ fontSize: 24 , color: 'white'}} />
               </div>

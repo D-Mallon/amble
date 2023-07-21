@@ -128,7 +128,7 @@ def magic(user_latitude, user_longitude, hour):
     print("-----------------------------------------")
 
     # Define the predefined distance to be covered
-    predefined_distance = 5  # Adjust this value as needed
+    predefined_distance = 2  # Adjust this value as needed
 
     visited_parks = []  # List to store visited parks
 

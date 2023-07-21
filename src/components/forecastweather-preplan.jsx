@@ -7,11 +7,14 @@ import {
   import "./forecastweather-preplan.css"
   
   const Forecast = ({ data }) => {
+
     return (
       <>
         <label className="title">Future Three Days</label>
+        <div style={{ overflow: "auto" }}>
         <Accordion allowZeroExpanded>
-          {data.list.splice(0, 23).map((item, idx) => (
+          {data.list.slice(0, 24).map((item, idx) => (
+            // console.log(item),
             <AccordionItem key={idx}>
               <AccordionItemHeading>
                 <AccordionItemButton>
@@ -65,6 +68,7 @@ import {
             </AccordionItem>
           ))}
         </Accordion>
+        </div>
       </>
     );
   };

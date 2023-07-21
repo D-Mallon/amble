@@ -42,7 +42,8 @@
             "location": {
                 "latitude": 40.7488147,
                 "longitude": -74.0108672
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN71",
@@ -86,7 +87,8 @@
             "location": {
                 "latitude": 40.7536939,
                 "longitude": -74.007811
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN73",
@@ -130,7 +132,8 @@
             "location": {
                 "latitude": 40.75051018621069,
                 "longitude": -74.00910689093082
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN74",
@@ -174,7 +177,8 @@
             "location": {
                 "latitude": 40.7488903,
                 "longitude": -74.0092279
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN108",
@@ -218,7 +222,8 @@
             "location": {
                 "latitude": 40.7487622,
                 "longitude": -74.0073168
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN110",
@@ -262,7 +267,8 @@
             "location": {
                 "latitude": 40.7449293,
                 "longitude": -74.0068384
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN172",
@@ -306,7 +312,8 @@
             "location": {
                 "latitude": 40.76394216101928,
                 "longitude": -74.0021101543537
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN199",
@@ -350,7 +357,8 @@
             "location": {
                 "latitude": 40.7145531,
                 "longitude": -74.0025861
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN206",
@@ -394,7 +402,8 @@
             "location": {
                 "latitude": 40.7701491,
                 "longitude": -73.9960302
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN237",
@@ -438,7 +447,8 @@
             "location": {
                 "latitude": 40.7144837,
                 "longitude": -74.0001462
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN245",
@@ -482,7 +492,8 @@
             "location": {
                 "latitude": 40.7701491,
                 "longitude": -73.9960302
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN267",
@@ -526,7 +537,8 @@
             "location": {
                 "latitude": 40.7306881,
                 "longitude": -73.9975679
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN282",
@@ -570,7 +582,8 @@
             "location": {
                 "latitude": 40.7702036,
                 "longitude": -73.9951491
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN283",
@@ -614,7 +627,8 @@
             "location": {
                 "latitude": 40.768447,
                 "longitude": -73.9951587
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN315",
@@ -658,7 +672,8 @@
             "location": {
                 "latitude": 40.7100927,
                 "longitude": -73.9960707
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN317",
@@ -702,7 +717,8 @@
             "location": {
                 "latitude": 40.7767631,
                 "longitude": -73.9914152
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN354",
@@ -746,7 +762,8 @@
             "location": {
                 "latitude": 40.7109073,
                 "longitude": -73.9931203
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN356",
@@ -790,7 +807,8 @@
             "location": {
                 "latitude": 40.7796806,
                 "longitude": -73.990398
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN357",
@@ -834,7 +852,8 @@
             "location": {
                 "latitude": 40.7774022,
                 "longitude": -73.990478
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN380",
@@ -878,7 +897,8 @@
             "location": {
                 "latitude": 40.7360085,
                 "longitude": -73.9906027
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN387",
@@ -922,7 +942,8 @@
             "location": {
                 "latitude": 40.7237262,
                 "longitude": -73.9905143
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN396",
@@ -966,7 +987,8 @@
             "location": {
                 "latitude": 40.7825137080738,
                 "longitude": -73.9873945108137
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN397",
@@ -1010,7 +1032,8 @@
             "location": {
                 "latitude": 40.7810467,
                 "longitude": -73.9877073
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN398",
@@ -1054,7 +1077,8 @@
             "location": {
                 "latitude": 40.779314,
                 "longitude": -73.988254
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN415",
@@ -1098,7 +1122,8 @@
             "location": {
                 "latitude": 40.7486508,
                 "longitude": -73.9883242
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN419",
@@ -1142,7 +1167,8 @@
             "location": {
                 "latitude": 40.7415366,
                 "longitude": -73.9882555
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN434",
@@ -1186,7 +1212,8 @@
             "location": {
                 "latitude": 40.7146491,
                 "longitude": -73.9885164
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN438",
@@ -1230,7 +1257,8 @@
             "location": {
                 "latitude": 40.7859067,
                 "longitude": -73.9848928
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN439",
@@ -1274,7 +1302,8 @@
             "location": {
                 "latitude": 40.784718,
                 "longitude": -73.9858544
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN440",
@@ -1318,7 +1347,8 @@
             "location": {
                 "latitude": 40.7830762,
                 "longitude": -73.9860901
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN441",
@@ -1362,7 +1392,8 @@
             "location": {
                 "latitude": 40.7812336,
                 "longitude": -73.9859404
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN446",
@@ -1406,7 +1437,8 @@
             "location": {
                 "latitude": 40.7722856,
                 "longitude": -73.9859056
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN482",
@@ -1450,7 +1482,8 @@
             "location": {
                 "latitude": 40.7891786,
                 "longitude": -73.9819376
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN483",
@@ -1494,7 +1527,8 @@
             "location": {
                 "latitude": 40.7884486,
                 "longitude": -73.9831567
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN484",
@@ -1538,7 +1572,8 @@
             "location": {
                 "latitude": 40.7864806,
                 "longitude": -73.9827885
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN485",
@@ -1582,7 +1617,8 @@
             "location": {
                 "latitude": 40.78472,
                 "longitude": -73.9835357
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN492",
@@ -1626,7 +1662,8 @@
             "location": {
                 "latitude": 40.7722068,
                 "longitude": -73.9838658
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN502",
@@ -1670,7 +1707,8 @@
             "location": {
                 "latitude": 40.7541904,
                 "longitude": -73.9838725
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN527",
@@ -1714,7 +1752,8 @@
             "location": {
                 "latitude": 40.7102649,
                 "longitude": -73.9843939
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN528",
@@ -1758,7 +1797,8 @@
             "location": {
                 "latitude": 40.7924785,
                 "longitude": -73.9796244
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN529",
@@ -1802,7 +1842,8 @@
             "location": {
                 "latitude": 40.7916231,
                 "longitude": -73.9802771
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN530",
@@ -1846,7 +1887,8 @@
             "location": {
                 "latitude": 40.7900208,
                 "longitude": -73.9811399
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN542",
@@ -1890,7 +1932,8 @@
             "location": {
                 "latitude": 40.7685112,
                 "longitude": -73.9811992
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN565",
@@ -1934,7 +1977,8 @@
             "location": {
                 "latitude": 40.7272162,
                 "longitude": -73.9811601
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN566",
@@ -1978,7 +2022,8 @@
             "location": {
                 "latitude": 40.7252824,
                 "longitude": -73.9812825
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN576",
@@ -2022,7 +2067,8 @@
             "location": {
                 "latitude": 40.7962682,
                 "longitude": -73.9777615
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN577",
@@ -2066,7 +2112,8 @@
             "location": {
                 "latitude": 40.7962682,
                 "longitude": -73.9777615
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN578",
@@ -2110,7 +2157,8 @@
             "location": {
                 "latitude": 40.7936748,
                 "longitude": -73.978674
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN579",
@@ -2154,7 +2202,8 @@
             "location": {
                 "latitude": 40.7918335,
                 "longitude": -73.9787594
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN591",
@@ -2198,7 +2247,8 @@
             "location": {
                 "latitude": 40.7702962,
                 "longitude": -73.9788272
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN592",
@@ -2242,7 +2292,8 @@
             "location": {
                 "latitude": 40.7686892,
                 "longitude": -73.9787277
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN616",
@@ -2286,7 +2337,8 @@
             "location": {
                 "latitude": 40.7253735,
                 "longitude": -73.9785555
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN624",
@@ -2330,7 +2382,8 @@
             "location": {
                 "latitude": 40.7115063,
                 "longitude": -73.9790151
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN625",
@@ -2374,7 +2427,8 @@
             "location": {
                 "latitude": 40.7995903,
                 "longitude": -73.975384
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN626",
@@ -2418,7 +2472,8 @@
             "location": {
                 "latitude": 40.7991842,
                 "longitude": -73.9753232
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN627",
@@ -2462,7 +2517,8 @@
             "location": {
                 "latitude": 40.7972952,
                 "longitude": -73.9762523
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN628",
@@ -2506,7 +2562,8 @@
             "location": {
                 "latitude": 40.7954972,
                 "longitude": -73.9764404
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN632",
@@ -2550,7 +2607,8 @@
             "location": {
                 "latitude": 40.788413,
                 "longitude": -73.9764218
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN640",
@@ -2594,7 +2652,8 @@
             "location": {
                 "latitude": 40.7739335,
                 "longitude": -73.9764929
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN641",
@@ -2638,7 +2697,8 @@
             "location": {
                 "latitude": 40.7723208,
                 "longitude": -73.9765915
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN642",
@@ -2682,7 +2742,8 @@
             "location": {
                 "latitude": 40.7704451,
                 "longitude": -73.9763202
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN643",
@@ -2726,7 +2787,8 @@
             "location": {
                 "latitude": 40.7685991,
                 "longitude": -73.9764477
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN644",
@@ -2770,7 +2832,8 @@
             "location": {
                 "latitude": 40.7667885,
                 "longitude": -73.9765356
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN676",
@@ -2814,7 +2877,8 @@
             "location": {
                 "latitude": 40.8023524,
                 "longitude": -73.9729237
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN677",
@@ -2858,7 +2922,8 @@
             "location": {
                 "latitude": 40.80052,
                 "longitude": -73.9732457
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN678",
@@ -2902,7 +2967,8 @@
             "location": {
                 "latitude": 40.7993044,
                 "longitude": -73.9742203
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN679",
@@ -2946,7 +3012,8 @@
             "location": {
                 "latitude": 40.7974648,
                 "longitude": -73.9743321
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN687",
@@ -2990,7 +3057,8 @@
             "location": {
                 "latitude": 40.7827829,
                 "longitude": -73.9743119
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN688",
@@ -3034,7 +3102,8 @@
             "location": {
                 "latitude": 40.7805375,
                 "longitude": -73.9746591
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN690",
@@ -3078,7 +3147,8 @@
             "location": {
                 "latitude": 40.777596,
                 "longitude": -73.9741251
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN691",
@@ -3122,7 +3192,8 @@
             "location": {
                 "latitude": 40.7757405,
                 "longitude": -73.9739355
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN692",
@@ -3166,7 +3237,8 @@
             "location": {
                 "latitude": 40.7740669,
                 "longitude": -73.9741508
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN693",
@@ -3210,7 +3282,8 @@
             "location": {
                 "latitude": 40.7724241,
                 "longitude": -73.9736684
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN694",
@@ -3254,7 +3327,8 @@
             "location": {
                 "latitude": 40.7701555,
                 "longitude": -73.9741264
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN695",
@@ -3298,7 +3372,8 @@
             "location": {
                 "latitude": 40.7684505,
                 "longitude": -73.9741243
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN696",
@@ -3342,7 +3417,8 @@
             "location": {
                 "latitude": 40.7668551,
                 "longitude": -73.9740656
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN697",
@@ -3386,7 +3462,8 @@
             "location": {
                 "latitude": 40.7650758,
                 "longitude": -73.9741128
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN721",
@@ -3430,7 +3507,8 @@
             "location": {
                 "latitude": 40.7216231,
                 "longitude": -73.9741019
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN722",
@@ -3474,7 +3552,8 @@
             "location": {
                 "latitude": 40.7200219,
                 "longitude": -73.9741751
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN725",
@@ -3518,7 +3597,8 @@
             "location": {
                 "latitude": 40.714479068735045,
                 "longitude": -73.97530545523128
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN726",
@@ -3562,7 +3642,8 @@
             "location": {
                 "latitude": 40.8048211,
                 "longitude": -73.9704277
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN727",
@@ -3606,7 +3687,8 @@
             "location": {
                 "latitude": 40.8041402,
                 "longitude": -73.9707229
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN728",
@@ -3650,7 +3732,8 @@
             "location": {
                 "latitude": 40.8028215,
                 "longitude": -73.9716383
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN729",
@@ -3694,7 +3777,8 @@
             "location": {
                 "latitude": 40.8009796,
                 "longitude": -73.9718099
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN740",
@@ -3738,7 +3822,8 @@
             "location": {
                 "latitude": 40.7812056,
                 "longitude": -73.9718242
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN741",
@@ -3782,7 +3867,8 @@
             "location": {
                 "latitude": 40.7793388,
                 "longitude": -73.97164
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN742",
@@ -3826,7 +3912,8 @@
             "location": {
                 "latitude": 40.7776474,
                 "longitude": -73.971517
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN743",
@@ -3870,7 +3957,8 @@
             "location": {
                 "latitude": 40.7755882,
                 "longitude": -73.9716339
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN744",
@@ -3914,7 +4002,8 @@
             "location": {
                 "latitude": 40.7739041,
                 "longitude": -73.9716653
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN745",
@@ -3958,7 +4047,8 @@
             "location": {
                 "latitude": 40.7724097,
                 "longitude": -73.9718024
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN746",
@@ -4002,7 +4092,8 @@
             "location": {
                 "latitude": 40.7703717,
                 "longitude": -73.9716091
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN747",
@@ -4046,7 +4137,8 @@
             "location": {
                 "latitude": 40.7685493,
                 "longitude": -73.971494
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN772",
@@ -4090,7 +4182,8 @@
             "location": {
                 "latitude": 40.7236404,
                 "longitude": -73.9723368
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN773",
@@ -4134,7 +4227,8 @@
             "location": {
                 "latitude": 40.7223317,
                 "longitude": -73.9726357
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN775",
@@ -4178,7 +4272,8 @@
             "location": {
                 "latitude": 40.808965,
                 "longitude": -73.9674499
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN776",
@@ -4222,7 +4317,8 @@
             "location": {
                 "latitude": 40.8078608,
                 "longitude": -73.9682234
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN777",
@@ -4266,7 +4362,8 @@
             "location": {
                 "latitude": 40.806584,
                 "longitude": -73.9692193
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN778",
@@ -4310,7 +4407,8 @@
             "location": {
                 "latitude": 40.8046242,
                 "longitude": -73.9694243
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN789",
@@ -4354,7 +4452,8 @@
             "location": {
                 "latitude": 40.7845625,
                 "longitude": -73.9694826
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN790",
@@ -4398,7 +4497,8 @@
             "location": {
                 "latitude": 40.7830165,
                 "longitude": -73.9693484
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN791",
@@ -4442,7 +4542,8 @@
             "location": {
                 "latitude": 40.781141,
                 "longitude": -73.9693202
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN792",
@@ -4486,7 +4587,8 @@
             "location": {
                 "latitude": 40.7793222,
                 "longitude": -73.9693211
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN793",
@@ -4530,7 +4632,8 @@
             "location": {
                 "latitude": 40.7775393,
                 "longitude": -73.9693357
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN794",
@@ -4574,7 +4677,8 @@
             "location": {
                 "latitude": 40.7757037,
                 "longitude": -73.9693033
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN795",
@@ -4618,7 +4722,8 @@
             "location": {
                 "latitude": 40.7739498,
                 "longitude": -73.9692635
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN796",
@@ -4662,7 +4767,8 @@
             "location": {
                 "latitude": 40.7722768,
                 "longitude": -73.9693379
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN797",
@@ -4706,7 +4812,8 @@
             "location": {
                 "latitude": 40.7703551,
                 "longitude": -73.9693586
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN812",
@@ -4750,7 +4857,8 @@
             "location": {
                 "latitude": 40.8128892,
                 "longitude": -73.9659939
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN813",
@@ -4794,7 +4902,8 @@
             "location": {
                 "latitude": 40.8113413,
                 "longitude": -73.965724
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN814",
@@ -4838,7 +4947,8 @@
             "location": {
                 "latitude": 40.8098655,
                 "longitude": -73.9667303
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN815",
@@ -4882,7 +4992,8 @@
             "location": {
                 "latitude": 40.8083071,
                 "longitude": -73.9669036
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN827",
@@ -4926,7 +5037,8 @@
             "location": {
                 "latitude": 40.7866566,
                 "longitude": -73.9674658
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN828",
@@ -4970,7 +5082,8 @@
             "location": {
                 "latitude": 40.7847452,
                 "longitude": -73.9669181
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN829",
@@ -5014,7 +5127,8 @@
             "location": {
                 "latitude": 40.7827111,
                 "longitude": -73.9669822
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN830",
@@ -5058,7 +5172,8 @@
             "location": {
                 "latitude": 40.7800392,
                 "longitude": -73.9671842
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN831",
@@ -5102,7 +5217,8 @@
             "location": {
                 "latitude": 40.7794658,
                 "longitude": -73.9668016
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN832",
@@ -5146,7 +5262,8 @@
             "location": {
                 "latitude": 40.7776157,
                 "longitude": -73.9668636
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN833",
@@ -5190,7 +5307,8 @@
             "location": {
                 "latitude": 40.7758445,
                 "longitude": -73.9670045
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN834",
@@ -5234,7 +5352,8 @@
             "location": {
                 "latitude": 40.7739031,
                 "longitude": -73.9668822
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN850",
@@ -5278,7 +5397,8 @@
             "location": {
                 "latitude": 40.8156759,
                 "longitude": -73.9626025
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN851",
@@ -5322,7 +5442,8 @@
             "location": {
                 "latitude": 40.8146255,
                 "longitude": -73.9632873
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN853",
@@ -5366,7 +5487,8 @@
             "location": {
                 "latitude": 40.8114609,
                 "longitude": -73.9646317
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN865",
@@ -5410,7 +5532,8 @@
             "location": {
                 "latitude": 40.7901906,
                 "longitude": -73.9645666
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN866",
@@ -5454,7 +5577,8 @@
             "location": {
                 "latitude": 40.7887544,
                 "longitude": -73.9647487
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN867",
@@ -5498,7 +5622,8 @@
             "location": {
                 "latitude": 40.7882743,
                 "longitude": -73.9639945
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN868",
@@ -5542,7 +5667,8 @@
             "location": {
                 "latitude": 40.784142,
                 "longitude": -73.9650877
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN869",
@@ -5586,7 +5712,8 @@
             "location": {
                 "latitude": 40.7831046,
                 "longitude": -73.9646172
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN870",
@@ -5630,7 +5757,8 @@
             "location": {
                 "latitude": 40.7812903,
                 "longitude": -73.9647418
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN871",
@@ -5674,7 +5802,8 @@
             "location": {
                 "latitude": 40.7794401,
                 "longitude": -73.9647859
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN872",
@@ -5718,7 +5847,8 @@
             "location": {
                 "latitude": 40.7774806,
                 "longitude": -73.9646345
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN890",
@@ -5762,7 +5892,8 @@
             "location": {
                 "latitude": 40.8166938,
                 "longitude": -73.9616699
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN891",
@@ -5806,7 +5937,8 @@
             "location": {
                 "latitude": 40.8153812,
                 "longitude": -73.9621837
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN903",
@@ -5850,7 +5982,8 @@
             "location": {
                 "latitude": 40.7937522,
                 "longitude": -73.9622947
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN904",
@@ -5894,7 +6027,8 @@
             "location": {
                 "latitude": 40.7919758,
                 "longitude": -73.9621828
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN905",
@@ -5938,7 +6072,8 @@
             "location": {
                 "latitude": 40.7903107,
                 "longitude": -73.9621199
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN906",
@@ -5982,7 +6117,8 @@
             "location": {
                 "latitude": 40.7886677,
                 "longitude": -73.9619361
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN907",
@@ -6026,7 +6162,8 @@
             "location": {
                 "latitude": 40.7886677,
                 "longitude": -73.9619361
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN908",
@@ -6070,7 +6207,8 @@
             "location": {
                 "latitude": 40.7831868,
                 "longitude": -73.963765
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN909",
@@ -6114,7 +6252,8 @@
             "location": {
                 "latitude": 40.7820736,
                 "longitude": -73.962607
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN910",
@@ -6158,7 +6297,8 @@
             "location": {
                 "latitude": 40.7810702,
                 "longitude": -73.9623138
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN927",
@@ -6202,7 +6342,8 @@
             "location": {
                 "latitude": 40.8244216,
                 "longitude": -73.958993
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN928",
@@ -6246,7 +6387,8 @@
             "location": {
                 "latitude": 40.8233202,
                 "longitude": -73.9580238
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN938",
@@ -6290,7 +6432,8 @@
             "location": {
                 "latitude": 40.8045748,
                 "longitude": -73.9598069
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN939",
@@ -6334,7 +6477,8 @@
             "location": {
                 "latitude": 40.8029532,
                 "longitude": -73.9598656
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN942",
@@ -6378,7 +6522,8 @@
             "location": {
                 "latitude": 40.7974067,
                 "longitude": -73.9598414
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN943",
@@ -6422,7 +6567,8 @@
             "location": {
                 "latitude": 40.7958354,
                 "longitude": -73.9599296
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN944",
@@ -6466,7 +6612,8 @@
             "location": {
                 "latitude": 40.793819,
                 "longitude": -73.9596501
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN945",
@@ -6510,7 +6657,8 @@
             "location": {
                 "latitude": 40.7916586,
                 "longitude": -73.959787
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN946",
@@ -6554,7 +6702,8 @@
             "location": {
                 "latitude": 40.7902237,
                 "longitude": -73.9598365
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN947",
@@ -6598,7 +6747,8 @@
             "location": {
                 "latitude": 40.7891059,
                 "longitude": -73.9605726
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN948",
@@ -6642,7 +6792,8 @@
             "location": {
                 "latitude": 40.785009,
                 "longitude": -73.9588453
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN949",
@@ -6686,7 +6837,8 @@
             "location": {
                 "latitude": 40.7841158,
                 "longitude": -73.9593547
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN950",
@@ -6730,7 +6882,8 @@
             "location": {
                 "latitude": 40.7829085,
                 "longitude": -73.9597308
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN966",
@@ -6774,7 +6927,8 @@
             "location": {
                 "latitude": 40.8271621,
                 "longitude": -73.9567403
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN967",
@@ -6818,7 +6972,8 @@
             "location": {
                 "latitude": 40.826078,
                 "longitude": -73.957369
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN968",
@@ -6862,7 +7017,8 @@
             "location": {
                 "latitude": 40.8241011,
                 "longitude": -73.9575085
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN977",
@@ -6906,7 +7062,8 @@
             "location": {
                 "latitude": 40.8081454,
                 "longitude": -73.9573497
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN982",
@@ -6950,7 +7107,8 @@
             "location": {
                 "latitude": 40.7992031,
                 "longitude": -73.9574726
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN983",
@@ -6994,7 +7152,8 @@
             "location": {
                 "latitude": 40.7975158,
                 "longitude": -73.9573804
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN984",
@@ -7038,7 +7197,8 @@
             "location": {
                 "latitude": 40.7956576,
                 "longitude": -73.9573968
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN985",
@@ -7082,7 +7242,8 @@
             "location": {
                 "latitude": 40.7935403,
                 "longitude": -73.957537
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN986",
@@ -7126,7 +7287,8 @@
             "location": {
                 "latitude": 40.7920615,
                 "longitude": -73.9580494
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN987",
@@ -7170,7 +7332,8 @@
             "location": {
                 "latitude": 40.7900468,
                 "longitude": -73.9576035
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN988",
@@ -7214,7 +7377,8 @@
             "location": {
                 "latitude": 40.788167,
                 "longitude": -73.9569699
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN989",
@@ -7258,7 +7422,8 @@
             "location": {
                 "latitude": 40.7863616,
                 "longitude": -73.9573923
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1006",
@@ -7302,7 +7467,8 @@
             "location": {
                 "latitude": 40.8273897,
                 "longitude": -73.9550217
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1007",
@@ -7346,7 +7512,8 @@
             "location": {
                 "latitude": 40.8263222,
                 "longitude": -73.9551501
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1008",
@@ -7390,7 +7557,8 @@
             "location": {
                 "latitude": 40.8242505,
                 "longitude": -73.9553126
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1022",
@@ -7434,7 +7602,8 @@
             "location": {
                 "latitude": 40.7991477,
                 "longitude": -73.9551588
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1023",
@@ -7478,7 +7647,8 @@
             "location": {
                 "latitude": 40.7976053,
                 "longitude": -73.9551634
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1024",
@@ -7522,7 +7692,8 @@
             "location": {
                 "latitude": 40.7954935,
                 "longitude": -73.9550964
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1025",
@@ -7566,7 +7737,8 @@
             "location": {
                 "latitude": 40.7940465,
                 "longitude": -73.9549439
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1026",
@@ -7610,7 +7782,8 @@
             "location": {
                 "latitude": 40.7920244,
                 "longitude": -73.9553029
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1027",
@@ -7654,7 +7827,8 @@
             "location": {
                 "latitude": 40.7899767,
                 "longitude": -73.9546517
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1045",
@@ -7698,7 +7872,8 @@
             "location": {
                 "latitude": 40.8305167,
                 "longitude": -73.951638
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1046",
@@ -7742,7 +7917,8 @@
             "location": {
                 "latitude": 40.8305167,
                 "longitude": -73.951638
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1047",
@@ -7786,7 +7962,8 @@
             "location": {
                 "latitude": 40.8296061,
                 "longitude": -73.9519778
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1049",
@@ -7830,7 +8007,8 @@
             "location": {
                 "latitude": 40.8263633,
                 "longitude": -73.9528534
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1065",
@@ -7874,7 +8052,8 @@
             "location": {
                 "latitude": 40.7969689,
                 "longitude": -73.9527024
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1066",
@@ -7918,7 +8097,8 @@
             "location": {
                 "latitude": 40.7956133,
                 "longitude": -73.9527609
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1067",
@@ -7962,7 +8142,8 @@
             "location": {
                 "latitude": 40.7938603,
                 "longitude": -73.9528627
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1085",
@@ -8006,7 +8187,8 @@
             "location": {
                 "latitude": 40.8372949,
                 "longitude": -73.9482728
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1086",
@@ -8050,7 +8232,8 @@
             "location": {
                 "latitude": 40.8367785,
                 "longitude": -73.94925
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1099",
@@ -8094,7 +8277,8 @@
             "location": {
                 "latitude": 40.813704,
                 "longitude": -73.9505861
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1108",
@@ -8138,7 +8322,8 @@
             "location": {
                 "latitude": 40.7969248,
                 "longitude": -73.9503721
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1127",
@@ -8182,7 +8367,8 @@
             "location": {
                 "latitude": 40.8498716,
                 "longitude": -73.9446423
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1128",
@@ -8226,7 +8412,8 @@
             "location": {
                 "latitude": 40.8498716,
                 "longitude": -73.9446423
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1129",
@@ -8270,7 +8457,8 @@
             "location": {
                 "latitude": 40.847217,
                 "longitude": -73.946346
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1130",
@@ -8314,7 +8502,8 @@
             "location": {
                 "latitude": 40.8421413,
                 "longitude": -73.9470751
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1131",
@@ -8358,7 +8547,8 @@
             "location": {
                 "latitude": 40.8404715,
                 "longitude": -73.9471347
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1132",
@@ -8402,7 +8592,8 @@
             "location": {
                 "latitude": 40.839403,
                 "longitude": -73.9481992
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1135",
@@ -8446,7 +8637,8 @@
             "location": {
                 "latitude": 40.8326763,
                 "longitude": -73.9475032
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1136",
@@ -8490,7 +8682,8 @@
             "location": {
                 "latitude": 40.832257,
                 "longitude": -73.9480714
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1143",
@@ -8534,7 +8727,8 @@
             "location": {
                 "latitude": 40.8189155,
                 "longitude": -73.9480607
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1172",
@@ -8578,7 +8772,8 @@
             "location": {
                 "latitude": 40.8498716,
                 "longitude": -73.9446423
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1173",
@@ -8622,7 +8817,8 @@
             "location": {
                 "latitude": 40.8498457,
                 "longitude": -73.9446371
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1174",
@@ -8666,7 +8862,8 @@
             "location": {
                 "latitude": 40.8471406,
                 "longitude": -73.945646
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1175",
@@ -8710,7 +8907,8 @@
             "location": {
                 "latitude": 40.8464002,
                 "longitude": -73.9452562
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1176",
@@ -8754,7 +8952,8 @@
             "location": {
                 "latitude": 40.8430312,
                 "longitude": -73.946029
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1177",
@@ -8798,7 +8997,8 @@
             "location": {
                 "latitude": 40.8426773,
                 "longitude": -73.9463013
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1183",
@@ -8842,7 +9042,8 @@
             "location": {
                 "latitude": 40.8314942,
                 "longitude": -73.9455579
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1220",
@@ -8886,7 +9087,8 @@
             "location": {
                 "latitude": 40.8507975,
                 "longitude": -73.9435417
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1221",
@@ -8930,7 +9132,8 @@
             "location": {
                 "latitude": 40.8496485,
                 "longitude": -73.9433981
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1222",
@@ -8974,7 +9177,8 @@
             "location": {
                 "latitude": 40.8478813,
                 "longitude": -73.9428885
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1231",
@@ -9018,7 +9222,8 @@
             "location": {
                 "latitude": 40.8314727,
                 "longitude": -73.9433848
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1232",
@@ -9062,7 +9267,8 @@
             "location": {
                 "latitude": 40.8306078,
                 "longitude": -73.9439653
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1235",
@@ -9106,7 +9312,8 @@
             "location": {
                 "latitude": 40.823838,
                 "longitude": -73.9431092
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1271",
@@ -9150,7 +9357,8 @@
             "location": {
                 "latitude": 40.8459176,
                 "longitude": -73.940827
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1281",
@@ -9194,7 +9402,8 @@
             "location": {
                 "latitude": 40.8281817,
                 "longitude": -73.9402269
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1307",
@@ -9238,7 +9447,8 @@
             "location": {
                 "latitude": 40.8585922,
                 "longitude": -73.937339
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1308",
@@ -9282,7 +9492,8 @@
             "location": {
                 "latitude": 40.8585922,
                 "longitude": -73.937339
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1311",
@@ -9326,7 +9537,8 @@
             "location": {
                 "latitude": 40.8531961,
                 "longitude": -73.9382753
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1322",
@@ -9370,7 +9582,8 @@
             "location": {
                 "latitude": 40.8333669,
                 "longitude": -73.9382672
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1333",
@@ -9414,7 +9627,8 @@
             "location": {
                 "latitude": 40.8137518,
                 "longitude": -73.9380969
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1350",
@@ -9458,7 +9672,8 @@
             "location": {
                 "latitude": 40.862256,
                 "longitude": -73.9337179
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1351",
@@ -9502,7 +9717,8 @@
             "location": {
                 "latitude": 40.8609891,
                 "longitude": -73.9346937
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1352",
@@ -9546,7 +9762,8 @@
             "location": {
                 "latitude": 40.8594747,
                 "longitude": -73.9356034
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1365",
@@ -9590,7 +9807,8 @@
             "location": {
                 "latitude": 40.8372637,
                 "longitude": -73.9362683
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1366",
@@ -9634,7 +9852,8 @@
             "location": {
                 "latitude": 40.8351118,
                 "longitude": -73.9360783
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1393",
@@ -9678,7 +9897,8 @@
             "location": {
                 "latitude": 40.8691465,
                 "longitude": -73.9319514
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1394",
@@ -9722,7 +9942,8 @@
             "location": {
                 "latitude": 40.8669508,
                 "longitude": -73.9321003
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1395",
@@ -9766,7 +9987,8 @@
             "location": {
                 "latitude": 40.8654505,
                 "longitude": -73.9324619
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1396",
@@ -9810,7 +10032,8 @@
             "location": {
                 "latitude": 40.8640834,
                 "longitude": -73.9327992
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1397",
@@ -9854,7 +10077,8 @@
             "location": {
                 "latitude": 40.862256,
                 "longitude": -73.9337179
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1398",
@@ -9898,7 +10122,8 @@
             "location": {
                 "latitude": 40.8603913,
                 "longitude": -73.933671
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1399",
@@ -9942,7 +10167,8 @@
             "location": {
                 "latitude": 40.8586879,
                 "longitude": -73.9336306
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1408",
@@ -9986,7 +10212,8 @@
             "location": {
                 "latitude": 40.8421433,
                 "longitude": -73.9341532
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1409",
@@ -10030,7 +10257,8 @@
             "location": {
                 "latitude": 40.8402493,
                 "longitude": -73.9327775
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1410",
@@ -10074,7 +10302,8 @@
             "location": {
                 "latitude": 40.8387391,
                 "longitude": -73.933593
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1411",
@@ -10118,7 +10347,8 @@
             "location": {
                 "latitude": 40.8372588,
                 "longitude": -73.9344425
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1418",
@@ -10162,7 +10392,8 @@
             "location": {
                 "latitude": 40.8247255,
                 "longitude": -73.9347173
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1421",
@@ -10206,7 +10437,8 @@
             "location": {
                 "latitude": 40.8190135,
                 "longitude": -73.9341286
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1437",
@@ -10250,7 +10482,8 @@
             "location": {
                 "latitude": 40.873951,
                 "longitude": -73.9285546
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1438",
@@ -10294,7 +10527,8 @@
             "location": {
                 "latitude": 40.8721315,
                 "longitude": -73.9291874
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1441",
@@ -10338,7 +10572,8 @@
             "location": {
                 "latitude": 40.8677241,
                 "longitude": -73.9311425
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1442",
@@ -10382,7 +10617,8 @@
             "location": {
                 "latitude": 40.8657738,
                 "longitude": -73.9313063
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1443",
@@ -10426,7 +10662,8 @@
             "location": {
                 "latitude": 40.8638721,
                 "longitude": -73.9312091
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1444",
@@ -10470,7 +10707,8 @@
             "location": {
                 "latitude": 40.8621428,
                 "longitude": -73.9313485
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1445",
@@ -10514,7 +10752,8 @@
             "location": {
                 "latitude": 40.8602816,
                 "longitude": -73.9313284
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1453",
@@ -10558,7 +10797,8 @@
             "location": {
                 "latitude": 40.8456491,
                 "longitude": -73.9319232
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1454",
@@ -10602,7 +10842,8 @@
             "location": {
                 "latitude": 40.8449684,
                 "longitude": -73.9319479
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1455",
@@ -10646,7 +10887,8 @@
             "location": {
                 "latitude": 40.8424465,
                 "longitude": -73.9317088
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1456",
@@ -10690,7 +10932,8 @@
             "location": {
                 "latitude": 40.8407936,
                 "longitude": -73.9324694
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1457",
@@ -10734,7 +10977,8 @@
             "location": {
                 "latitude": 40.8396902,
                 "longitude": -73.9330612
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1466",
@@ -10778,7 +11022,8 @@
             "location": {
                 "latitude": 40.875928,
                 "longitude": -73.9274573
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1468",
@@ -10822,7 +11067,8 @@
             "location": {
                 "latitude": 40.8730121,
                 "longitude": -73.9286839
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1469",
@@ -10866,7 +11112,8 @@
             "location": {
                 "latitude": 40.8709852,
                 "longitude": -73.9288662
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1470",
@@ -10910,7 +11157,8 @@
             "location": {
                 "latitude": 40.8694056,
                 "longitude": -73.9289881
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1471",
@@ -10954,7 +11202,8 @@
             "location": {
                 "latitude": 40.8676711,
                 "longitude": -73.9288583
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1482",
@@ -10998,7 +11247,8 @@
             "location": {
                 "latitude": 40.8477714,
                 "longitude": -73.9291203
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1483",
@@ -11042,7 +11292,8 @@
             "location": {
                 "latitude": 40.8462228,
                 "longitude": -73.9295373
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1484",
@@ -11086,7 +11337,8 @@
             "location": {
                 "latitude": 40.8453588,
                 "longitude": -73.9304869
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1493",
@@ -11130,7 +11382,8 @@
             "location": {
                 "latitude": 40.8766821,
                 "longitude": -73.9266084
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1494",
@@ -11174,7 +11427,8 @@
             "location": {
                 "latitude": 40.8746062,
                 "longitude": -73.9262642
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1495",
@@ -11218,7 +11472,8 @@
             "location": {
                 "latitude": 40.8730113,
                 "longitude": -73.9265773
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1496",
@@ -11262,7 +11517,8 @@
             "location": {
                 "latitude": 40.871451,
                 "longitude": -73.9268283
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1497",
@@ -11306,7 +11562,8 @@
             "location": {
                 "latitude": 40.86925,
                 "longitude": -73.9267985
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1506",
@@ -11350,7 +11607,8 @@
             "location": {
                 "latitude": 40.8533913,
                 "longitude": -73.9262924
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1507",
@@ -11394,7 +11652,8 @@
             "location": {
                 "latitude": 40.8514933,
                 "longitude": -73.9267042
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1508",
@@ -11438,7 +11697,8 @@
             "location": {
                 "latitude": 40.8498712,
                 "longitude": -73.9270247
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1509",
@@ -11482,7 +11742,8 @@
             "location": {
                 "latitude": 40.848016,
                 "longitude": -73.9284168
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1510",
@@ -11526,7 +11787,8 @@
             "location": {
                 "latitude": 40.8770348,
                 "longitude": -73.9243239
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1512",
@@ -11570,7 +11832,8 @@
             "location": {
                 "latitude": 40.8749067,
                 "longitude": -73.9243719
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1513",
@@ -11614,7 +11877,8 @@
             "location": {
                 "latitude": 40.8730788,
                 "longitude": -73.9244107
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1514",
@@ -11658,7 +11922,8 @@
             "location": {
                 "latitude": 40.8711568,
                 "longitude": -73.9240966
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1515",
@@ -11702,7 +11967,8 @@
             "location": {
                 "latitude": 40.8696719,
                 "longitude": -73.9244079
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1523",
@@ -11746,7 +12012,8 @@
             "location": {
                 "latitude": 40.8549851,
                 "longitude": -73.9243479
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1524",
@@ -11790,7 +12057,8 @@
             "location": {
                 "latitude": 40.853582,
                 "longitude": -73.9245007
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1525",
@@ -11834,7 +12102,8 @@
             "location": {
                 "latitude": 40.8515005,
                 "longitude": -73.9259545
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1527",
@@ -11878,7 +12147,8 @@
             "location": {
                 "latitude": 40.8764995,
                 "longitude": -73.9226429
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1528",
@@ -11922,7 +12192,8 @@
             "location": {
                 "latitude": 40.8742949,
                 "longitude": -73.9227174
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1529",
@@ -11966,7 +12237,8 @@
             "location": {
                 "latitude": 40.8727876,
                 "longitude": -73.921846
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1530",
@@ -12010,7 +12282,8 @@
             "location": {
                 "latitude": 40.8713011,
                 "longitude": -73.921932
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1537",
@@ -12054,7 +12327,8 @@
             "location": {
                 "latitude": 40.8588427,
                 "longitude": -73.921772
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1538",
@@ -12098,7 +12372,8 @@
             "location": {
                 "latitude": 40.8570403,
                 "longitude": -73.9221837
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1539",
@@ -12142,7 +12417,8 @@
             "location": {
                 "latitude": 40.8551636,
                 "longitude": -73.9227479
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1540",
@@ -12186,7 +12462,8 @@
             "location": {
                 "latitude": 40.87510933445178,
                 "longitude": -73.92034440197365
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1541",
@@ -12230,7 +12507,8 @@
             "location": {
                 "latitude": 40.8743157,
                 "longitude": -73.9192362
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1542",
@@ -12274,7 +12552,8 @@
             "location": {
                 "latitude": 40.8730461,
                 "longitude": -73.9194873
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1543",
@@ -12318,7 +12597,8 @@
             "location": {
                 "latitude": 40.8711263,
                 "longitude": -73.9193737
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1544",
@@ -12362,7 +12642,8 @@
             "location": {
                 "latitude": 40.8693578,
                 "longitude": -73.9194706
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1551",
@@ -12406,7 +12687,8 @@
             "location": {
                 "latitude": 40.8738975,
                 "longitude": -73.9179624
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN2",
@@ -12450,7 +12732,8 @@
             "location": {
                 "latitude": 40.714251,
                 "longitude": -74.0174628
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN3",
@@ -12494,7 +12777,8 @@
             "location": {
                 "latitude": 40.71206220103755,
                 "longitude": -74.01788287414607
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN4",
@@ -12538,7 +12822,8 @@
             "location": {
                 "latitude": 40.7105939,
                 "longitude": -74.0181773
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN5",
@@ -12582,7 +12867,8 @@
             "location": {
                 "latitude": 40.7090275,
                 "longitude": -74.0185766
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN7",
@@ -12626,7 +12912,8 @@
             "location": {
                 "latitude": 40.7055856,
                 "longitude": -74.0186361
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN10",
@@ -12670,7 +12957,8 @@
             "location": {
                 "latitude": 40.721446,
                 "longitude": -74.0156736
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN12",
@@ -12714,7 +13002,8 @@
             "location": {
                 "latitude": 40.7182481,
                 "longitude": -74.0166271
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN13",
@@ -12758,7 +13047,8 @@
             "location": {
                 "latitude": 40.7163159,
                 "longitude": -74.0165951
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN15",
@@ -12802,7 +13092,8 @@
             "location": {
                 "latitude": 40.7126835,
                 "longitude": -74.0164114
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN21",
@@ -12846,7 +13137,8 @@
             "location": {
                 "latitude": 40.7020562,
                 "longitude": -74.0163975
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN22",
@@ -12890,7 +13182,8 @@
             "location": {
                 "latitude": 40.7013154,
                 "longitude": -74.0156486
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN30",
@@ -12934,7 +13227,8 @@
             "location": {
                 "latitude": 40.7211992,
                 "longitude": -74.0142826
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN31",
@@ -12978,7 +13272,8 @@
             "location": {
                 "latitude": 40.7202023,
                 "longitude": -74.01455
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN41",
@@ -13022,7 +13317,8 @@
             "location": {
                 "latitude": 40.7019161,
                 "longitude": -74.0143352
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN100",
@@ -13066,7 +13362,8 @@
             "location": {
                 "latitude": 40.7023087,
                 "longitude": -74.0098116
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN128",
@@ -13110,7 +13407,8 @@
             "location": {
                 "latitude": 40.7128636,
                 "longitude": -74.0072034
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN163",
@@ -13154,7 +13452,8 @@
             "location": {
                 "latitude": 40.7127626,
                 "longitude": -74.0049127
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN165",
@@ -13198,7 +13497,8 @@
             "location": {
                 "latitude": 40.7090493,
                 "longitude": -74.0048335
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN318",
@@ -13242,7 +13542,8 @@
             "location": {
                 "latitude": 40.7754387,
                 "longitude": -73.9924249
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN810",
@@ -13286,7 +13587,8 @@
             "location": {
                 "latitude": 40.7465568,
                 "longitude": -73.969098
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN811",
@@ -13330,7 +13632,8 @@
             "location": {
                 "latitude": 40.7455587,
                 "longitude": -73.9701079
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN847",
@@ -13374,7 +13677,8 @@
             "location": {
                 "latitude": 40.7504437,
                 "longitude": -73.9668659
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN849",
@@ -13418,7 +13722,8 @@
             "location": {
                 "latitude": 40.7474218,
                 "longitude": -73.9683832
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN881",
@@ -13462,7 +13767,8 @@
             "location": {
                 "latitude": 40.7612399,
                 "longitude": -73.964066
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN888",
@@ -13506,7 +13812,8 @@
             "location": {
                 "latitude": 40.8198637,
                 "longitude": -73.96047
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN889",
@@ -13550,7 +13857,8 @@
             "location": {
                 "latitude": 40.8186304,
                 "longitude": -73.9615556
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN965",
@@ -13594,7 +13902,8 @@
             "location": {
                 "latitude": 40.7564131,
                 "longitude": -73.9605183
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1004",
@@ -13638,7 +13947,8 @@
             "location": {
                 "latitude": 40.75962,
                 "longitude": -73.9576747
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1117",
@@ -13682,7 +13992,8 @@
             "location": {
                 "latitude": 40.7810892,
                 "longitude": -73.9502718
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1246",
@@ -13726,7 +14037,8 @@
             "location": {
                 "latitude": 40.8043164,
                 "longitude": -73.9431757
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1247",
@@ -13770,7 +14082,8 @@
             "location": {
                 "latitude": 40.8029043,
                 "longitude": -73.9433017
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1262",
@@ -13814,7 +14127,8 @@
             "location": {
                 "latitude": 40.7759496,
                 "longitude": -73.9435623
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1263",
@@ -13858,7 +14172,8 @@
             "location": {
                 "latitude": 40.7741034,
                 "longitude": -73.9439379
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1264",
@@ -13902,7 +14217,8 @@
             "location": {
                 "latitude": 40.7732161,
                 "longitude": -73.944382
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1348",
@@ -13946,7 +14262,8 @@
             "location": {
                 "latitude": 40.7866115,
                 "longitude": -73.9387368
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1426",
@@ -13990,7 +14307,8 @@
             "location": {
                 "latitude": 40.8101608,
                 "longitude": -73.9345793
-            }
+            },
+            "last_updated": null
         },
         {
             "id": "PN1428",
@@ -14034,7 +14352,8 @@
             "location": {
                 "latitude": 40.8056873,
                 "longitude": -73.9341411
-            }
+            },
+            "last_updated": null
         }
     ]
 }

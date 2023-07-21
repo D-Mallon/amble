@@ -14,7 +14,7 @@ const StartPlace = ({ inputValues, setInputValues }) => {
 
     console.log("handleInputSubmit", inputValues);
 
-    axios.post('/users', inputValues, {
+    axios.post('/users/handle_routeinpput_data', inputValues, {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },

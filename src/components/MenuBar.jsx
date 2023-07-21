@@ -7,6 +7,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import StarRoundedIcon from "@mui/icons-material/StarRounded";
 import StyleRoundedIcon from "@mui/icons-material/StyleRounded";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
+import Login from './login.jsx';
 
 export default function MenuBar() {
   const [isOptionsVisible, setOptionsVisible] = useState(false);
@@ -95,14 +96,14 @@ export default function MenuBar() {
       <div className="menu-button-wrapper">
         <WidgetsRoundedIcon
           className="menu-button"
-          sx={{ fontSize: 28, color: "white" }}
+          sx={{ fontSize: 24, color: "white" }}
           onClick={toggleMenu}
         />
       </div>
       <div className="profile-button-wrapper">
         <PersonRoundedIcon
           className={`profile-button ${isOptionsVisible ? "active" : ""}`}
-          sx={{ fontSize: 31, color: "white" }}
+          sx={{ fontSize: 25, color: "white" }}
           onClick={toggleOptions}
           ref={profileButtonRef}
         />
@@ -123,7 +124,7 @@ export default function MenuBar() {
       <div className="history-button-wrapper">
         <StyleRoundedIcon
           className="history-button"
-          sx={{ fontSize: 30, color: "white" }}
+          sx={{ fontSize: 25, color: "white" }}
         />
       </div>
       {/* <div className="favorite-button-wrapper"><StarRoundedIcon  className='history-button'
@@ -157,7 +158,7 @@ export default function MenuBar() {
           <div className={`Reg-menu ${isRegVisible ? "show" : ""}`}>
             <div className="additional-blocks-Reg">
               <div className="additional-block-text-Reg">
-                <span className="text_bar_2-Reg">Choose Position</span>
+                <span className="text_bar_2-Reg">Sign Up</span>
               </div>
               <div className="additional-block-close-Reg-menu">
                 <CloseIcon
@@ -166,6 +167,7 @@ export default function MenuBar() {
                 />
               </div>
             </div>
+            <Login/>
           </div>
 
           <div className="overlay-Reg"></div>
