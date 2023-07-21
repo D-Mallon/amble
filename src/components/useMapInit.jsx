@@ -40,7 +40,7 @@ const useMapInit = (mapContainer, lat, lng, zoom, inputValues) => {
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [-73.445, 40.73],
+      center: [lng, lat],
       zoom: zoom,
     });
 

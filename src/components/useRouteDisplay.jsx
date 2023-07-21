@@ -88,7 +88,7 @@ const useRouteDisplay = (map, inputValues) => {
 
       if (!bounds.isEmpty()) {
         console.log('Bounds:', bounds.toArray()); // Log the bounds
-        map.fitBounds(bounds, { padding: 320 });
+        map.fitBounds(bounds, { margin: 100 });
       } else {
         console.error('No valid coordinates to fit bounds');
       }

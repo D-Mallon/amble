@@ -34,11 +34,10 @@ function App() {
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/interface" element={<Interface inputValues={inputValues} setInputValues={setInputValues} />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/comms" element={<Comms />} />
           <Route path="/latlondis" element={<RouteInputs />} />
           <Route path="/user_pref" element={<UserPreferences />} />
           <Route path="*" element={<MatchAllRoute />} />
-          {/* <Route path="/interface" element={<Interface2 />} /> */}
+          <Route path="/interface-two" element={<Interface2 />} />
           <Route path="/showroute" element={<ShowRoute />} />
           <Route path="/homepage" element={<HomePage />} />
         

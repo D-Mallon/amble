@@ -33,8 +33,8 @@ mapboxgl.accessToken = apiKey;
 
 const Map = ({ inputValues, setInputValues }) => {
   const mapContainer = useRef(null);
-  const [lat, setLat] = useState(40.7305960501626);
-  const [lng, setLng] = useState(-73.9923989040398);
+  const [lat, setLat] = useState(40.73);
+  const [lng, setLng] = useState(-73.445);
   const [zoom, setZoom] = useState(12.4);
   const [beginLocationPressed, setBeginLocationPressed] = useState(false);
   const [endLocationPressed, setEndLocationPressed] = useState(false);
