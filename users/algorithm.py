@@ -2,30 +2,13 @@ import json
 import random
 from math import radians, sin, cos, sqrt, atan2
 import time
-import os
-from django.conf import settings
 
 # ####### Start time - to get run time #########
 # start_time = time.time()
 
 # Set up the base nodes (from Park Locations)
-#with open("src/json-files/park_locations.json") as json_file:
-#    basedata = json.load(json_file)
-
-#David's addition below to try correct above path, making it absolute
-#trial one
-#json_file_path = os.path.join(settings.BASE_DIR, 'src', 'json-files', 'park_locations.json')
-
-#with open(json_file_path) as json_file:
-#    basedata = json.load(json_file)
-
-def get_json_file_path(filename):
-    return os.path.join(settings.BASE_DIR, 'src', 'json-files', filename)
-
-# Set up the base nodes (from Park Locations)
-with open(get_json_file_path('park_locations.json')) as json_file:
+with open("src/json-files/park_locations.json") as json_file:
     basedata = json.load(json_file)
-#david's additions end 
 
 # Create a new dictionary and add the base nodes to it
 data = {}
@@ -41,58 +24,24 @@ other_nodes_dict = {
     "community_locations": True
 }
 
-#david is commenting this out to try below approach
-# Add the nodes
-#for k, v in other_nodes_dict.items():
-#    if v == True:
-#        with open('src/json-files/'+k+'.json') as file:
-#            nodes = json.load(file)
-        # print(nodes)
-        # print(type(nodes))
-#        data = {'data': data['data'] + nodes['data']}
-
-# #Create a json object and Write to a json file
-#merged_json = json.dumps(data, indent=4)
-#with open('src/json-files/nodes_final.json', 'w') as merged_file:
-#    merged_file.write(merged_json)
-
-# Load park data from JSON file
-#with open("src/components/parks.json") as json_file:
-#    data = json.load(json_file)
-
 # Add the nodes
 for k, v in other_nodes_dict.items():
     if v == True:
-        with open(get_json_file_path(f'{k}.json')) as file:
+        with open('src/json-files/'+k+'.json') as file:
             nodes = json.load(file)
+        # print(nodes)
+        # print(type(nodes))
         data = {'data': data['data'] + nodes['data']}
 
 # #Create a json object and Write to a json file
 merged_json = json.dumps(data, indent=4)
-with open(get_json_file_path('nodes_final.json'), 'w') as merged_file:
+with open('src/json-files/nodes_final.json', 'w') as merged_file:
     merged_file.write(merged_json)
 
-# Load park data from JSON file
-with open(settings.BASE_DIR / 'src' / 'json-files' / 'parks.json') as json_file:
-    data = json.load(json_file)
-
-# David's original amended code below
-# Load park data from JSON file
-# with open("src/components/parks.json") as json_file:
-#    data = json.load(json_file)
-
-# David has commented out the two lines above to try resolve routing issues. Trying to make routes absolute, as opposed to relative.
-
-# import os
-# from django.conf import settings
-
-# file_path = os.path.join(settings.BASE_DIR, 'src/components/parks.json')
-# with open(file_path) as json_file:
-#     # make sure to indent the code that uses json_file
-#     data = json.load(json_file)
-#     # any other code that needs to use json_file should also be indented
-
-# David additions above only.
+# ####### End time - to get run time #########
+# end_time = time.time()
+# run_time = round((end_time - start_time),1)
+# print(f'Run time to load all nodes = {run_time} seconds')
 
 # Extract latitude and longitude values
 latitudes = []
