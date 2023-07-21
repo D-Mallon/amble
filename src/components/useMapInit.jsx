@@ -6,18 +6,34 @@ const useMapInit = (mapContainer, lat, lng, zoom, inputValues) => {
   const map = useRef(null);
   const [markers, setMarkers] = useState([]);
 
-  const markerRef = useRef(); // We use a ref to keep track of the marker
+  const startMarkerRef = useRef(); // We use a ref to keep track of the start marker
+  const endMarkerRef = useRef(); // We use a ref to keep track of the end marker
 
+  // Track the start location and add a marker on change
   useEffect(() => {
     if (!map.current) return; // If map is not defined, return
-    if (markerRef.current) markerRef.current.remove(); // If a marker already exists, remove it
+    if (startMarkerRef.current) startMarkerRef.current.remove(); // If a start marker already exists, remove it
 
-    // Create a new marker and add it to the map
-    markerRef.current = new mapboxgl.Marker()
+    // Create a new start marker and add it to the map
+    startMarkerRef.current = new mapboxgl.Marker()
       .setLngLat([inputValues.longitude, inputValues.latitude])
       .addTo(map.current);
-  }, [map, inputValues]); // This useEffect runs whenever map or inputValues changes
 
+    console.log('Placing start marker at:', [inputValues.longitude, inputValues.latitude]);
+  }, [map, inputValues.latitude, inputValues.longitude]); // This useEffect runs whenever map or start location changes
+
+  // Track the end location and add a marker on change
+  useEffect(() => {
+    if (!map.current) return; // If map is not defined, return
+    if (endMarkerRef.current) endMarkerRef.current.remove(); // If an end marker already exists, remove it
+
+    // Create a new end marker and add it to the map
+    endMarkerRef.current = new mapboxgl.Marker()
+      .setLngLat([inputValues.endLongitude, inputValues.endLatitude])
+      .addTo(map.current);
+
+    console.log('Placing end marker at:', [inputValues.endLongitude, inputValues.endLatitude]);
+  }, [map, inputValues.endLatitude, inputValues.endLongitude]); // This useEffect runs whenever map or end location changes
 
   useEffect(() => {
     if (map.current) return; // initialize map only once

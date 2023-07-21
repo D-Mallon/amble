@@ -3,6 +3,7 @@ import mapboxgl from 'mapbox-gl';
 import './Map.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import DateTimePicker from 'react-datetime-picker';
+import axios from 'axios';
 
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
@@ -41,7 +42,7 @@ const Map = ({ inputValues, setInputValues }) => {
   const [sliderValue, setSliderValue] = useState(1);
   const [sliderUnit, setSliderUnit] = useState('km');
   const [showBeginField, setShowBeginField] = useState(false);
-  const [showFinishField, setShowFinishField] = useState(false);
+  const [showEndField, setShowEndField] = useState(false);
   const [initialTime, setInitialTime] = useState(() => {
     const now = new Date();
     if (now.getMinutes() !== 0) {
@@ -50,21 +51,24 @@ const Map = ({ inputValues, setInputValues }) => {
     return now;
   });
   const [time, setTime] = useState(initialTime);
-  const [showDistanceInput, setShowDistanceInput] = useState(true); //change to false
-  const [showBeginLocationInput, setShowBeginLocationInput] = useState(true); //change to false
-  const [showEndLocationInput, setShowEndLocationInput] = useState(false);
+  const [showDistanceInput, setShowDistanceInput] = useState(false); //change to false
+  const [showBeginLocationInput, setShowBeginLocationInput] = useState(false); //change to false
+  const [showEndLocationInput, setShowEndLocationInput] = useState(false); //change to false
+  const [showGoButton, setShowGoButton] = useState(false);
   const [nowSelected, setNowSelected] = useState(false);
   const [laterSelected, setLaterSelected] = useState(false);
   const [homeSelected, setHomeSelected] = useState(false);
   const [searchSelected, setSearchSelected] = useState(false);
   const [addressSelected, setAddressSelected] = useState(false);
+  const [endHomeSelected, setEndHomeSelected] = useState(false);
+  const [endSearchSelected, setEndSearchSelected] = useState(false);
+  const [endAddressSelected, setEndAddressSelected] = useState(false);
 
 
   const { map, markers } = useMapInit(mapContainer, lat, lng, zoom, inputValues);
-  const { route, displayRoute } = useRouteDisplay(map.current, inputValues);
-  const { beginLocation, setBeginLocation } = useGeocoding(map.current, beginLocationPressed, setBeginLocationPressed,
-    inputValues, setInputValues, showEndLocationInput, setShowEndLocationInput);
-  const { endLocation, setEndLocation } = useGeocoding(map.current, endLocationPressed, setEndLocationPressed);
+  const { route, displayRoute } = useRouteDisplay(map.current, inputValues, setInputValues);
+  const { location, setLocation } = useGeocoding(map.current, beginLocationPressed, setBeginLocationPressed, endLocationPressed, setEndLocationPressed,
+    inputValues, setInputValues, showEndLocationInput, setShowEndLocationInput, setShowGoButton);
   const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } = usePlaceNameChange('', setInputValues);
 
   const handleNowButtonClick = () => {
@@ -114,6 +118,36 @@ const Map = ({ inputValues, setInputValues }) => {
     const time = new Date(inputValues.time);
     time.setHours(hours, minutes);
     setInputValues(prevValues => ({ ...prevValues, time }));
+  };
+  
+  const handleInputSubmit = async (e) => {   
+    e.preventDefault();
+    
+    console.log("handleInputSubmit", inputValues);
+  
+    try {
+      const response = await axios.post('/users', inputValues, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      });
+  
+      console.log("errorless:", response.data);
+      const waypoints = response.data["waypoints"];
+      console.log("waypoints:", waypoints);
+      setInputValues({ ...inputValues, ["waypoints"]: waypoints});
+      console.log("handleInputSubmit", inputValues);
+
+    } catch (error) {
+      if (error.response) {
+        console.log(error.response);
+        console.log("server responded with error");
+      } else if (error.request) {
+        console.log("network error");
+      } else {
+        console.log(error);
+      }
+    }
   };
 
   return (
@@ -228,7 +262,7 @@ const Map = ({ inputValues, setInputValues }) => {
                 </Button>
 
                 <Button onClick={() => {
-                  setBeginLocationPressed(!beginLocationPressed)
+                  setBeginLocationPressed(!beginLocationPressed);
                   setShowBeginField(false)
                   setHomeSelected(false);
                   setSearchSelected(true);
@@ -273,7 +307,7 @@ const Map = ({ inputValues, setInputValues }) => {
                     handlePlaceSelect(newValue);
                   }
                 }}
-                renderInput={(params) => <TextField {...params} label="Type Address" variant="outlined"
+                renderInput={(params) => <TextField {...params} label="Type Address" variant="outlined" size="small"
                   sx={{
                     '& .MuiOutlinedInput-root': {
                       '& fieldset': {
@@ -293,6 +327,12 @@ const Map = ({ inputValues, setInputValues }) => {
                       },
                     },
                     '& .MuiInputBase-root': {
+                      color: 'white',
+                    },
+                    '& .MuiAutocomplete-clearIndicator': {
+                      color: 'white',
+                    },
+                    '& .MuiAutocomplete-popupIndicator': {
                       color: 'white',
                     }
                   }}
@@ -315,44 +355,111 @@ const Map = ({ inputValues, setInputValues }) => {
           <div>
             <p>Where would you like to go?</p>
             <div style={{ display: 'flex', gap: '10px' }}>
-              <Button onClick={() => {
-                setInputValues(prevValues => ({ ...prevValues, latitude: 40.7505, longitude: -73.9934 }));
-                console.log("These were the inputValues:", inputValues);
-                setShowFinishField(false);
-              }}>
-                Home
-              </Button>
-              <Button onClick={() => setEndLocationPressed(!endLocationPressed)}>
-                {endLocationPressed ? 'Selecting location...' : 'Select location'}
-              </Button>
-              <Button onClick={() => setShowFinishField(true)}>
-                Type address
-              </Button>
+              <Stack spacing={1} direction="row" justifyContent="center" paddingBottom="15px">
+
+                <Button onClick={() => {
+                  setInputValues(prevValues => ({ ...prevValues, endLatitude: 40.711667, endLongitude: -74.0125 }));
+                  setEndHomeSelected(true);
+                  setEndSearchSelected(false);
+                  setEndAddressSelected(false);
+                  setShowGoButton(true);
+                  setShowEndField(false)
+                }}
+                  startIcon={<HomeIcon />}
+                  variant={endHomeSelected ? "contained" : "outlined"}
+                  style={endHomeSelected ?
+                    {} :
+                    { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
+                  }>
+                  Home
+                </Button>
+
+                <Button onClick={() => {
+                  setEndLocationPressed(!endLocationPressed);
+                  setEndHomeSelected(false);
+                  setEndSearchSelected(true);
+                  setEndAddressSelected(false);
+                  setShowEndField(false)
+                }}
+                  startIcon={endLocationPressed ? <LocationSearchingIcon /> : <MapIcon />}
+                  variant={endSearchSelected ? "contained" : "outlined"}
+                  style={endSearchSelected ?
+                    {} :
+                    { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
+                  }>
+                  {endLocationPressed ? 'Click' : 'Map'}
+                </Button>
+
+                <Button onClick={() => {
+                  setEndHomeSelected(false);
+                  setEndSearchSelected(false);
+                  setEndAddressSelected(true);
+                  setShowEndField(true)
+                }}
+                  startIcon={<SearchIcon />}
+                  variant={endAddressSelected ? "contained" : "outlined"}
+                  style={endAddressSelected ?
+                    {} :
+                    { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
+                  }>
+                  Search
+                </Button>
+
+              </Stack>
             </div>
-            {showFinishField && (
+            {showEndField && (
               <Autocomplete
                 id="address-input"
                 options={suggestions}
                 getOptionLabel={(option) => option.label}
                 isOptionEqualToValue={() => true === true}
-                style={{ width: 300 }}
+                style={{ width: 300, paddingBottom: "15px", color: 'white' }}
                 onInputChange={handlePlaceNameChange}
                 onChange={(event, newValue) => {
                   if (newValue) {
                     handlePlaceSelect(newValue);
                   }
                 }}
-                renderInput={(params) => <TextField {...params} label="Type Address" variant="outlined" />}
+                renderInput={(params) => <TextField {...params} label="Type Address" variant="outlined" size="small"
+                  sx={{
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        borderColor: 'white',
+                      },
+                      '&:hover fieldset': {
+                        borderColor: 'white',
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: 'white',
+                      },
+                    },
+                    '& .MuiFormLabel-root': {
+                      color: 'white',
+                      '&.Mui-focused': {
+                        color: 'white',
+                      },
+                    },
+                    '& .MuiInputBase-root': {
+                      color: 'white',
+                    },
+                    '& .MuiAutocomplete-clearIndicator': {
+                      color: 'white',
+                    },
+                    '& .MuiAutocomplete-popupIndicator': {
+                      color: 'white',
+                    }
+                  }}
+                />}
               />
             )}
-            <Button type="submit" onClick={() => { displayRoute() }}>Go!</Button>
           </div>
         )}
 
-
-
-
-
+        {showGoButton && (
+          <Stack spacing={1} direction="row" justifyContent="center" paddingBottom="15px">
+            <Button variant="contained" type="submit" size="large" onClick={handleInputSubmit}>Go!</Button>
+          </Stack>
+        )}
 
         <Button variant='outlined' onClick={() => console.log("These were the inputValues:", inputValues)}>Tell me baby...</Button>
       </div>
