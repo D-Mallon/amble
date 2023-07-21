@@ -2,14 +2,15 @@
 import { useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 
-const useGeocoding = (map, buttonPressed, setButtonPressed) => {
+const useGeocoding = (map, startButtonPressed, setStartButtonPressed, endButtonPressed, setEndButtonPressed, inputValues, setInputValues, showEndLocationInput, setShowEndLocationInput, setShowGoButton) => {
   const [location, setLocation] = useState({ lat: null, lng: null, address: '' });
 
   useEffect(() => {
     if (map) {
-      map.on('click', (e) => {
-        if (buttonPressed) {
-          setButtonPressed(false);
+      const onClick = (e) => {
+        if (startButtonPressed || endButtonPressed) {
+          setStartButtonPressed(false);
+          setEndButtonPressed(false);
           fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${e.lngLat.lng},${e.lngLat.lat}.json?access_token=${mapboxgl.accessToken}`)
             .then(response => response.json())
             .then(data => {
@@ -19,14 +20,34 @@ const useGeocoding = (map, buttonPressed, setButtonPressed) => {
                 lng: e.lngLat.lng,
                 address: address
               });
+              if (startButtonPressed) {
+                setInputValues(prevValues => ({
+                  ...prevValues,
+                  latitude: e.lngLat.lat,
+                  longitude: e.lngLat.lng
+                }));
+              } else if (endButtonPressed) {
+                setInputValues(prevValues => ({
+                  ...prevValues,
+                  endLatitude: e.lngLat.lat,
+                  endLongitude: e.lngLat.lng
+                }));
+              }
+              setShowEndLocationInput(true);
+              setShowGoButton(true);
             })
             .catch(error => console.error('Error:', error));
-  
-          console.log('Selected location:', e.lngLat.lat, e.lngLat.lng);
         }
-      });
+      };
+  
+      map.on('click', onClick);
+  
+      // Cleanup function
+      return () => {
+        map.off('click', onClick);
+      };
     }
-  }, [map, buttonPressed]); // Adding map to dependency array
+  }, [map, startButtonPressed, endButtonPressed]);  
 
   return { location, setLocation };
 };

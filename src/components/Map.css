@@ -9,12 +9,7 @@
   height: 20px;
 }
 
-.map-container {
-  width: 90rem;
-  height: 65rem;
-}
-
-.sidebar {
+/* .sidebar {
   background-color: rgba(35, 55, 75, 0.9);
   color: #fff;
   padding: 6px 12px;
@@ -25,7 +20,7 @@
   left: 0;
   margin: 12px;
   border-radius: 4px;
-}
+} */
 
 .marker {
   background-color: #449e48;
@@ -52,4 +47,42 @@
 .popup-content {
   color: #000; /* Set the text color to black */
   padding: 15px; /* Padding */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  color: black;
+}
+
+h2 {
+  color: white;
+  text-align: left;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.user-input {
+  color: white; 
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 380px;
+  /* background: #99ddff; */
+  background: rgba(0,0,0,0.8);
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }

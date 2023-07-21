@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import "./Comms.css";
 
 const StartPlace = ({ inputValues, setInputValues }) => {
 

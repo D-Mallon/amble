@@ -5,6 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   publicDir: './public',
+  optimizeDeps: {
+    exclude: []
+  },
   // build: {
   //   // generate manifest.json in outDir
   //   manifest: true,

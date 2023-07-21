@@ -17,13 +17,15 @@ function MatchAllRoute() {
 }
 
 function App() {
-
   const [inputValues, setInputValues] = useState({
     "latitude": 40.74218481889335,
     "longitude": -73.98786664009094,
+    "endLatitude": 40.72540497175606,
+    "endLongitude": -74.01052594184875,
     "hour": 0,
     waypoints: [],
   });
+
 
   return (
     <div>
