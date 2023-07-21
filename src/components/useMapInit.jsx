@@ -39,8 +39,8 @@ const useMapInit = (mapContainer, lat, lng, zoom, inputValues) => {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/light-v11',
-      center: [lng, lat],
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-73.445, 40.73],
       zoom: zoom,
     });
 

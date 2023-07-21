@@ -31,13 +31,6 @@ const useRouteDisplay = (map, inputValues) => {
       const response = await fetch(callAPI);
       const data = await response.json();
 
-      console.log(data);
-
-      if (!data.routes[0] || !data.routes[0].geometry) {
-        console.error('Invalid data:', data);
-        return;
-      }
-
       // Retrieve the route coordinates from the API response
       const routeCoordinates = data.routes[0].geometry.coordinates;
 

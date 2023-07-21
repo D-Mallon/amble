@@ -33,8 +33,8 @@ mapboxgl.accessToken = apiKey;
 
 const Map = ({ inputValues, setInputValues }) => {
   const mapContainer = useRef(null);
-  const [lat, setLat] = useState(40.727872);
-  const [lng, setLng] = useState(-73.993157);
+  const [lat, setLat] = useState(40.7305960501626);
+  const [lng, setLng] = useState(-73.9923989040398);
   const [zoom, setZoom] = useState(12.4);
   const [beginLocationPressed, setBeginLocationPressed] = useState(false);
   const [endLocationPressed, setEndLocationPressed] = useState(false);
@@ -126,7 +126,7 @@ const Map = ({ inputValues, setInputValues }) => {
     console.log("handleInputSubmit", inputValues);
   
     try {
-      const response = await axios.post('/users', inputValues, {
+      const response = await axios.post('/users/handle_routeinpput_data', inputValues, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
