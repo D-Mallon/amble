@@ -1,11 +1,23 @@
-// useMapInit.js
 import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import parks from './parks.json';
 
-const useMapInit = (mapContainer, lat, lng, zoom) => {
+const useMapInit = (mapContainer, lat, lng, zoom, inputValues) => {
   const map = useRef(null);
   const [markers, setMarkers] = useState([]);
+
+  const markerRef = useRef(); // We use a ref to keep track of the marker
+
+  useEffect(() => {
+    if (!map.current) return; // If map is not defined, return
+    if (markerRef.current) markerRef.current.remove(); // If a marker already exists, remove it
+
+    // Create a new marker and add it to the map
+    markerRef.current = new mapboxgl.Marker()
+      .setLngLat([inputValues.longitude, inputValues.latitude])
+      .addTo(map.current);
+  }, [map, inputValues]); // This useEffect runs whenever map or inputValues changes
+
 
   useEffect(() => {
     if (map.current) return; // initialize map only once

@@ -12,6 +12,11 @@ import Autocomplete from '@mui/material/Autocomplete';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
+import HomeIcon from '@mui/icons-material/Home';
+import MapIcon from '@mui/icons-material/Map';
+import SearchIcon from '@mui/icons-material/Search';
+import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
+
 import 'react-datetime-picker/dist/DateTimePicker.css';
 import 'react-calendar/dist/Calendar.css';
 import 'react-clock/dist/Clock.css';
@@ -45,15 +50,20 @@ const Map = ({ inputValues, setInputValues }) => {
     return now;
   });
   const [time, setTime] = useState(initialTime);
-  const [showDistanceInput, setShowDistanceInput] = useState(false);
-  const [showBeginLocationInput, setShowBeginLocationInput] = useState(false);
+  const [showDistanceInput, setShowDistanceInput] = useState(true); //change to false
+  const [showBeginLocationInput, setShowBeginLocationInput] = useState(true); //change to false
   const [showEndLocationInput, setShowEndLocationInput] = useState(false);
   const [nowSelected, setNowSelected] = useState(false);
   const [laterSelected, setLaterSelected] = useState(false);
+  const [homeSelected, setHomeSelected] = useState(false);
+  const [searchSelected, setSearchSelected] = useState(false);
+  const [addressSelected, setAddressSelected] = useState(false);
 
-  const { map, markers } = useMapInit(mapContainer, lat, lng, zoom);
+
+  const { map, markers } = useMapInit(mapContainer, lat, lng, zoom, inputValues);
   const { route, displayRoute } = useRouteDisplay(map.current, inputValues);
-  const { beginLocation, setBeginLocation } = useGeocoding(map.current, beginLocationPressed, setBeginLocationPressed);
+  const { beginLocation, setBeginLocation } = useGeocoding(map.current, beginLocationPressed, setBeginLocationPressed,
+    inputValues, setInputValues, showEndLocationInput, setShowEndLocationInput);
   const { endLocation, setEndLocation } = useGeocoding(map.current, endLocationPressed, setEndLocationPressed);
   const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } = usePlaceNameChange('', setInputValues);
 
@@ -117,8 +127,8 @@ const Map = ({ inputValues, setInputValues }) => {
             <Button className='now-button'
               variant={nowSelected ? "contained" : "outlined"}
               style={nowSelected ?
-                { } :
-                { backgroundColor : 'transparent', borderColor : 'white' , color : 'white', boxShadow: 'none' }
+                {} :
+                { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
               }
               onClick={handleNowButtonClick}
             >
@@ -127,8 +137,8 @@ const Map = ({ inputValues, setInputValues }) => {
             <Button
               variant={laterSelected ? "contained" : "outlined"}
               style={laterSelected ?
-                { } :
-                { backgroundColor : 'transparent', borderColor : 'white' , color : 'white', boxShadow: 'none' }
+                {} :
+                { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
               }
               onClick={handleLaterButtonClick}
             >
@@ -198,19 +208,57 @@ const Map = ({ inputValues, setInputValues }) => {
           <div>
             <p>Where would you like to begin?</p>
             <div style={{ display: 'flex', gap: '10px' }}>
-              <Button onClick={() => {
-                setInputValues(prevValues => ({ ...prevValues, latitude: 40.7505, longitude: -73.9934 }));
-                console.log("These were the inputValues:", inputValues);
-                setShowBeginField(false);
-              }}>
-                Home
-              </Button>
-              <Button onClick={() => setBeginLocationPressed(!beginLocationPressed)}>
-                {beginLocationPressed ? 'Selecting location...' : 'Select location'}
-              </Button>
-              <Button onClick={() => setShowBeginField(true)}>
-                Type address
-              </Button>
+              <Stack spacing={1} direction="row" justifyContent="center" paddingBottom="15px">
+
+                <Button onClick={() => {
+                  setInputValues(prevValues => ({ ...prevValues, latitude: 40.7505, longitude: -73.9934 }));
+                  setShowBeginField(false);
+                  setHomeSelected(true);
+                  setSearchSelected(false);
+                  setAddressSelected(false);
+                  setShowEndLocationInput(true);
+                }}
+                  startIcon={<HomeIcon />}
+                  variant={homeSelected ? "contained" : "outlined"}
+                  style={homeSelected ?
+                    {} :
+                    { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
+                  }>
+                  Home
+                </Button>
+
+                <Button onClick={() => {
+                  setBeginLocationPressed(!beginLocationPressed)
+                  setShowBeginField(false)
+                  setHomeSelected(false);
+                  setSearchSelected(true);
+                  setAddressSelected(false);
+                }}
+                  startIcon={beginLocationPressed ? <LocationSearchingIcon /> : <MapIcon />}
+                  variant={searchSelected ? "contained" : "outlined"}
+                  style={searchSelected ?
+                    {} :
+                    { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
+                  }>
+                  {beginLocationPressed ? 'Click' : 'Map'}
+                </Button>
+
+                <Button onClick={() => {
+                  setShowBeginField(true)
+                  setHomeSelected(false);
+                  setSearchSelected(false);
+                  setAddressSelected(true);
+                }}
+                  startIcon={<SearchIcon />}
+                  variant={addressSelected ? "contained" : "outlined"}
+                  style={addressSelected ?
+                    {} :
+                    { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
+                  }>
+                  Search
+                </Button>
+
+              </Stack>
             </div>
             {showBeginField && (
               <Autocomplete
@@ -218,14 +266,37 @@ const Map = ({ inputValues, setInputValues }) => {
                 options={suggestions}
                 getOptionLabel={(option) => option.label}
                 isOptionEqualToValue={() => true === true}
-                style={{ width: 300 }}
+                style={{ width: 300, paddingBottom: "15px", color: 'white' }}
                 onInputChange={handlePlaceNameChange}
                 onChange={(event, newValue) => {
                   if (newValue) {
                     handlePlaceSelect(newValue);
                   }
                 }}
-                renderInput={(params) => <TextField {...params} label="Type Address" variant="outlined" />}
+                renderInput={(params) => <TextField {...params} label="Type Address" variant="outlined"
+                  sx={{
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        borderColor: 'white',
+                      },
+                      '&:hover fieldset': {
+                        borderColor: 'white',
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: 'white',
+                      },
+                    },
+                    '& .MuiFormLabel-root': {
+                      color: 'white',
+                      '&.Mui-focused': {
+                        color: 'white',
+                      },
+                    },
+                    '& .MuiInputBase-root': {
+                      color: 'white',
+                    }
+                  }}
+                />}
               />
             )}
           </div>

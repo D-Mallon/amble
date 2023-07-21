@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 
-const useGeocoding = (map, buttonPressed, setButtonPressed) => {
+const useGeocoding = (map, buttonPressed, setButtonPressed, inputValues, setInputValues, showEndLocationInput, setShowEndLocationInput) => {
   const [location, setLocation] = useState({ lat: null, lng: null, address: '' });
 
   useEffect(() => {
@@ -21,8 +21,12 @@ const useGeocoding = (map, buttonPressed, setButtonPressed) => {
               });
             })
             .catch(error => console.error('Error:', error));
-  
-          console.log('Selected location:', e.lngLat.lat, e.lngLat.lng);
+          setInputValues(prevValues => ({
+            ...prevValues,
+            latitude: e.lngLat.lat,
+            longitude: e.lngLat.lng
+          }));
+          setShowEndLocationInput(true);
         }
       });
     }
