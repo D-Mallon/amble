@@ -50,7 +50,8 @@ const Login = () => {
 
   return (
     <div >
-      {/* <h3>Registration Form</h3> */}
+      <div className="login-area">
+      <h3>Registration Form</h3>
     <form onSubmit={handleSubmit}>
             <div>
             <label htmlFor="first_name">First Name:</label>
@@ -109,6 +110,7 @@ const Login = () => {
             <div id="error-message"></div>
       <div className="submit-container"><MyFunctionButton_signup type="submit" className='submit-button'/></div>
     </form>
+    </div>
     </div>
   );
 };

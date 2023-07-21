@@ -35,6 +35,7 @@ for k,v in other_nodes_dict.items():
     if v == True:
         f = k+'.json'
         file_path = BASE_DIR /'src'/'json-files'/f
+        print(file_path)
         with open(file_path) as file:
             #'src/json-files/'+k+'.json'
             nodes = json.load(file)
