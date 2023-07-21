@@ -24,7 +24,7 @@ const useRouteDisplay = (map, inputValues) => {
       const callAPI = `https://api.mapbox.com/directions/v5/mapbox/walking/` +
         `${inputValues["longitude"]},` +
         `${inputValues["latitude"]};` +
-        `${waypointsString},` +
+        `${waypointsString};` +
         `${inputValues["endLongitude"]},` +
         `${inputValues["endLatitude"]}` +
         `?geometries=geojson&access_token=${mapboxgl.accessToken}`
