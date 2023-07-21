@@ -3,6 +3,7 @@ import random
 import json
 import datetime
 import time
+from django.conf import settings
 
 ################# Getting Taxi Zone Location ##########################
 from shapely.geometry import Point, Polygon
@@ -166,7 +167,12 @@ if response.status_code == 200:
     json_data = {"data": filtered_data}
 
     # Export the dictionary as a JSON file
-    with open("src/components/parks.json", "w") as outfile:
+#original below before david edited for pathing issues
+#    with open("src/components/parks.json", "w") as outfile:
+#        json.dump(json_data , outfile, indent=4)
+#        print("Exported park data to parks.json")
+
+    with open(settings.BASE_DIR / 'src' / 'json-files' / 'parks.json', "w") as outfile:
         json.dump(json_data , outfile, indent=4)
         print("Exported park data to parks.json")
 
