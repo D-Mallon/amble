@@ -10,7 +10,7 @@ import AcUnitIcon from '@mui/icons-material/AcUnit';
 import { createTheme,ThemeProvider  } from '@mui/material/styles';
 import { WEATHER_API_KEY,WEATHER_API_URL } from './api';
 import Weatherinform from './weather-inform';
-// import TimeSearchContext from './components/timesearch_context';
+// import TimeSearchContext from './timesearch_context';
 import MenuBar from './MenuBar';
 import MapBackground from './mapbackground';
 
@@ -60,7 +60,7 @@ function ShowRoute() {
     <ThemeProvider theme={theme}>
       <div>
       <MenuBar/>
-      <div className='mapwrapper'>
+      <div className='mapwrapper_showroute'>
         <MapBackground zoom={15.5}/>
         </div>
         <div className="PlanWin">
