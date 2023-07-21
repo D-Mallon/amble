@@ -21,6 +21,8 @@ const useRouteDisplay = (map, inputValues) => {
       const response = await fetch(callAPI);
       const data = await response.json();
 
+      console.log(data);
+
       // Retrieve the route coordinates from the API response
       const routeCoordinates = data.routes[0].geometry.coordinates;
 
