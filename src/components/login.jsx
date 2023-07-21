@@ -34,7 +34,7 @@ const Login = () => {
     .catch((error) => {
       if (error.response.status === 400) {
         console.log("It may be that Username already exists.");
-        const errorMessage = "Email address may already exist! Please try entering a different email.";
+        const errorMessage = "Username already exist! Please try entering a different email.";
         errorMessageElement.textContent = errorMessage;
       } else if (error.response) {
         console.log(error.response);
@@ -71,11 +71,11 @@ const Login = () => {
                 ></input>
             </div>
             <div>
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="username">Email (will be your username):</label>
                 <input
                     type="text"
-                    name="email"
-                    id="email"
+                    name="username"
+                    id="username"
                     // value={formData.email}
                     onChange={handleChange}
                     ></input>

@@ -3,25 +3,27 @@ import axios from 'axios';
 import "./login.css";
 
 const LoginCheck = () => {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
   const handleLogin = (e) => {
+    console.log(username,password)
     e.preventDefault();
     setError('');
 
-    // Make the POST request to the login API endpoint
-    axios.post('users/logincheck', { email, password })
-      .then((response) => {
-        // Handle successful login
-        console.log('Login successful:', response.data.message);
-      })
-      .catch((error) => {
-        // Handle login error
-        setError('Invalid email or password');
-        console.log('Error:', error.response.data.error);
-      });
+    // Make the POST request to the logincheck endpoint
+    axios.post('users/logincheck', { username, password })
+    console.log(username,password)
+      // .then((response) => {
+      //   // Handle successful login
+      //   console.log('Login successful:', response.data.message);
+      // })
+      // .catch((error) => {
+      //   // Handle login error
+      //   setError('Invalid email or password');
+      //   console.log('Error:', error.response.data.error);
+      // });
   };
 
   return (
@@ -30,8 +32,8 @@ const LoginCheck = () => {
 
       <form onSubmit={handleLogin}>
         <div>
-          <label>Email:</label>
-          <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <label>Username (Email):</label>
+          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </div>
         <div>
           <label>Password:</label>

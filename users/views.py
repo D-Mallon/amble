@@ -5,9 +5,10 @@ from .models import User, UserPref, UserRoute
 from .serializers import UserSerializer, UserPreferencesSerializer, UserRouteSerializer
 from django.http import JsonResponse, HttpResponse, HttpResponseBadRequest
 from .algorithm import *
-from django.contrib.auth import authenticate, login, get_user_model
-from .custom_auth_backend import CustomModelBackend 
-from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
+# from .custom_auth_backend import CustomModelBackend 
+# from django.shortcuts import render, redirect
+# from django.contrib.auth.models import User
 
 #Function to view user registration data
 @api_view(['GET', 'POST'])
@@ -19,6 +20,7 @@ def registration(request):
 
     elif request.method == 'POST':
         data = User.objects.all()
+        print(data)
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -58,19 +60,45 @@ def preferences(request):
     return HttpResponseBadRequest('Unsupported request method.')
 
 def logincheck(request):
+    print('Gets to Function')
     if request.method == 'POST':
-        email = request.POST.get('email')
+        username = request.POST.get('username')
+        print(f'Username from FE = {username}')
         password = request.POST.get('password')
-        user = CustomModelBackend().authenticate(request, email=email, password=password)
+        print(f'Password from FE = {password}')
+        
+        login_data = {"username": username,"password":password}
+        print(login_data)
+        return JsonResponse(login_data)
 
-        if user is not None:
-            if user.check_password(password):
-            # Login successful
-                login(request, user)
-                return JsonResponse({'message': 'Login successful'})
-        else:
-            # Login failed
-            return JsonResponse({'error': 'Invalid email or password'}, status=401)
+    #     usernametest='1@gmail.com'
+    #     passwordtest='xxxx'
+    #     user = authenticate(request, username=usernametest, password=passwordtest)
+    #     print(f'user = {user}')
+    #     if user is not None:
+    #         print('user is NOT none')
+    #         if user.check_password(password):
+    #             print('user is not none')
+    #         # Login successful
+    #             login(request, user)
+    #             return JsonResponse({'message': 'Login successful'})
+    #     else:
+    #         print('user is none')
+    #         # Login failed
+    #         return JsonResponse({'error': 'Invalid email or password'}, status=401)
 
-    # Return a 405 Method Not Allowed response for non-POST requests
-    return JsonResponse({'error': 'Method not allowed'}, status=405)
+    # # Return a 405 Method Not Allowed response for non-POST requests
+    # return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+    #     if user is not None:
+    #         # If the user is authenticated, log them in using the login function
+    #         login(request, user)
+    #         # Redirect to a success page or render a success template
+    #         return redirect('success_page')
+    #     else:
+    #         # If the user is not authenticated, return an error message
+    #         # Render the login page with an error message
+    #         return render(request, 'login.html', {'error_message': 'Invalid credentials'})
+    # else:
+    #     # If the request method is not POST, render the login page
+    #     return render(request, 'login.html')

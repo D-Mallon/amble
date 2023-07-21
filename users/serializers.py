@@ -4,7 +4,7 @@ from .models import User, UserPref, UserRoute
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('first_name','last_name', 'email', 'address', 'password', 'registrationDate')
+        fields = ('first_name','last_name', 'username', 'address', 'password', 'registrationDate')
         #fields = ('__all__')
 
 class UserPreferencesSerializer(serializers.ModelSerializer):

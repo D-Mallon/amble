@@ -11,6 +11,7 @@ urlpatterns = [
     path('users/preferences', views.preferences),
     path('users/registration', views.registration),
     path('users/logincheck', views.logincheck),
+    path('users/ handle_routeinpput_data', views.handle_routeinpput_data),
     
     # path('api/users/', views.registration),
     # re_path(r'^api/users/(?P<pk>[0-9]+)$', views.registration),
