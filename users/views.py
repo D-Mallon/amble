@@ -5,7 +5,9 @@ from .models import User, UserPref, UserRoute
 from .serializers import UserSerializer, UserPreferencesSerializer, UserRouteSerializer
 from django.http import JsonResponse, HttpResponse, HttpResponseBadRequest
 from .algorithm import *
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login, get_user_model
+from .custom_auth_backend import CustomModelBackend 
+from django.contrib.auth.models import User
 
 #Function to view user registration data
 @api_view(['GET', 'POST'])
@@ -59,11 +61,13 @@ def logincheck(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
-        usercheck = authenticate(request, email=email, password=password)
+        user = CustomModelBackend().authenticate(request, email=email, password=password)
 
-        if usercheck is not None:
+        if user is not None:
+            if user.check_password(password):
             # Login successful
-            return JsonResponse({'message': 'Login successful'})
+                login(request, user)
+                return JsonResponse({'message': 'Login successful'})
         else:
             # Login failed
             return JsonResponse({'error': 'Invalid email or password'}, status=401)

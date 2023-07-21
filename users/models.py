@@ -4,7 +4,7 @@ from django.contrib.postgres.fields import JSONField
 class User(models.Model):
     first_name = models.CharField("First Name", max_length=30)
     last_name = models.CharField("Last Name", max_length=30)
-    email = models.EmailField(default='missing', max_length=50,primary_key=True)
+    email = models.EmailField("Email", max_length=50,primary_key=True) #default='missing'
     address = models.CharField("Address", max_length=100)
     password = models.CharField("Password",default="missing",max_length=30)
     registrationDate = models.DateField("Registration Date", auto_now_add=True)
