@@ -5,12 +5,12 @@ import "./user_pref.css";
 
 const options = [
     // { value: 'park', label: 'Parks' },
-    { value: 'library', label: 'Libraries' },
-    { value: 'worship', label: 'Places of Worship' },
-    { value: 'community', label: 'Community Centres' },
-    { value: 'museum', label: 'Museums & Art Galleries' },
-    { value: 'walking_node', label: 'Other Walking Nodes' },
-    { value: 'park_node', label: 'Other Park Nodes' },
+    { value: 'library_locations', label: 'Libraries' },
+    { value: 'worship_locations', label: 'Places of Worship' },
+    { value: 'community_locations', label: 'Community Centres' },
+    { value: 'museum_art_locations', label: 'Museums & Art Galleries' },
+    { value: 'walking_node_locations', label: 'Other Walking Nodes' },
+    { value: 'park_node_locations', label: 'Other Park Nodes' },
   ];
 
   const UserPreferences = () => {
@@ -34,7 +34,7 @@ const options = [
         .then((response) => {
           // Handle successful response
           console.log('Data:',response.data);
-          console.log("Where is the data?");
+          // console.log("Where is the data?");
         })
         // If error, alert console
         .catch((error) => {

@@ -14,15 +14,13 @@ with open("src/json-files/park_locations.json") as json_file:
 data = {}
 data.update(basedata)
 
-#Decide what other nodes to include - comes from the front end preferences
-other_nodes_dict = {
-    "park_node_locations" : True,
-    "worship_locations": True,
-    "museum_art_locations" : True,
-    "library_locations" : True,
-    "walking_node_locations" : True,
-    "community_locations" : True
-}
+#Check what other nodes have been selected in preferences
+other_nodes_dict = {}
+with open("src/json-files/preferences.json") as json_file:
+    prefdata = json.load(json_file)
+t = True
+for x in prefdata["data_from_frontend"]["selectedOptions"]:
+    other_nodes_dict.update({x:t})
 
 #Add the nodes
 for k,v in other_nodes_dict.items():

@@ -5,6 +5,7 @@ from .models import User, UserPref, UserRoute
 from .serializers import UserSerializer, UserPreferencesSerializer, UserRouteSerializer
 from django.http import JsonResponse, HttpResponse, HttpResponseBadRequest
 from .algorithm import *
+import json
 
 # from django.contrib.auth import authenticate, login, get_user_model
 # from .custom_auth_backend import CustomModelBackend 
@@ -36,32 +37,23 @@ def handle_routeinpput_data(request):
         hour = request.POST.get("hour")
         response_data = {"waypoints": magic(float(latitude), float(longitude), str(hour))}
         return JsonResponse(response_data)
-    
+
 #Function to view user preferences data
 @api_view(['GET', 'POST'])
 def preferences(request):
-    if request.method == 'GET':
-        preferences = UserPref.objects.all()
-        serializer = UserPreferencesSerializer(preferences, many=True)
-        return Response(serializer.data)
+    if request.method == 'POST':
+        prefdata = json.loads(request.body)
+        print(f'Data from the frontend = {prefdata} and its type = {type(prefdata)}')
+        response_data = {'data_from_frontend': prefdata}
 
-    elif request.method == 'POST':
-        data = request.POST
-        response_data = {'Preferences': data}
+        with open("src/json-files/preferences.json", "w") as outfile:
+            json.dump(response_data , outfile, indent=4)
+
         return JsonResponse(response_data)
+        # return response_data
     else:
         return JsonResponse({'Error': 'Invalid Request'})
-        # return Response(status=status.HTTP_201_CREATED)
-    #     data = UserPref.objects.all()
-    #     serializer = UserPreferencesSerializer(data=request.data)
-    #     # return Response(status=status.HTTP_201_CREATED)
-    #     if serializer.is_valid():
-    #         # return Response(status=status.HTTP_201_CREATED)
-    #         serializer.save()
-    #         return Response(status=status.HTTP_201_CREATED)
-    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-    # return HttpResponseBadRequest('Unsupported request method.')
 
 def logincheck(request):
     if request.method == 'POST':
