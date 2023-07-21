@@ -162,8 +162,8 @@
     border: 1.5px solid #000000;
     border-radius: 0px 0px 0px 0px; /* 上左 上右 下右 下左 */
     padding-top: 2%;
-    padding-left: 22%;
-    padding-right: 22%;
+    padding-left: 23%;
+    padding-right: 23%;
     padding-bottom: 2%;
     width: 60%; /* 调整选项框的宽度 */
     height:70%;
@@ -232,7 +232,10 @@
   .option-bottom-menu {
     display: block;
     width: 100%;
-    padding: 28px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border: none;
     background-color: transparent;
     text-align: center;
@@ -250,7 +253,7 @@
   
   /* 鼠标悬停效果 */
   .option-bottom-menu:hover {
-    background-color: #aef8ec;
+    background-color: #ffeea9;
     filter: brightness(0.9); /* 悬停时变暗 */
     transition: filter 1s; /* 添加过渡效果 */
     border-radius: 2px;
@@ -299,7 +302,7 @@
   .additional-block-text-menubar{
     width: 10rem;
     height:2.8rem;
-    background-color: #FFEEA9;
+    background-color: #e3fcf7;
     left:0;
     display: flex;
     justify-content: center;
@@ -337,7 +340,7 @@
   .additional-block-text-Reg{
     width: 10rem;
     height:2.8rem;
-    background-color: #FFEEA9;
+    background-color: #e3fcf7;
     left:0;
     display: flex;
     justify-content: center;
