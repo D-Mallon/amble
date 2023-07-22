@@ -3,11 +3,17 @@ import random
 from math import radians, sin, cos, sqrt, atan2
 import time
 
+#Create File Path
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 # ####### Start time - to get run time #########
 # start_time = time.time()
 
 #Set up the base nodes (from Park Locations)
-with open("src/json-files/park_locations.json") as json_file:
+file_path = BASE_DIR /'src'/'json-files'/'park_locations.json'
+#"src/json-files/park_locations.json")
+with open(file_path) as json_file:
     basedata = json.load(json_file)
 
 #Create a new dictionary and add the base nodes to it
@@ -27,15 +33,20 @@ other_nodes_dict = {
 #Add the nodes
 for k,v in other_nodes_dict.items():
     if v == True:
-        with open('src/json-files/'+k+'.json') as file:
+        f = k+'.json'
+        file_path = BASE_DIR /'src'/'json-files'/f
+        print(file_path)
+        with open(file_path) as file:
+            #'src/json-files/'+k+'.json'
             nodes = json.load(file)
         # print(nodes)
         # print(type(nodes))
         data ={'data':data['data'] + nodes['data']}
 
 # #Create a json object and Write to a json file
-merged_json = json.dumps(data, indent=4) 
-with open('src/json-files/nodes_final.json', 'w') as merged_file: 
+merged_json = json.dumps(data, indent=4)
+file_path = BASE_DIR /'src'/'json-files'/'nodes_final.json' 
+with open(file_path, 'w') as merged_file: 
     merged_file.write(merged_json)
 
 # ####### End time - to get run time #########

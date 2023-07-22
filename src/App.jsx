@@ -21,13 +21,15 @@ function MatchAllRoute() {
 }
 
 function App() {
-
   const [inputValues, setInputValues] = useState({
     "latitude": 40.74218481889335,
     "longitude": -73.98786664009094,
+    "endLatitude": 40.72540497175606,
+    "endLongitude": -74.01052594184875,
     "hour": 0,
     waypoints: [],
   });
+
 
   return (
     <div>
@@ -35,12 +37,12 @@ function App() {
         <AuthContextProvider>
 
         <Routes>
-          <Route exact path="/" element={<Interface inputValues={inputValues} setInputValues={setInputValues} />} />
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/interface" element={<Interface inputValues={inputValues} setInputValues={setInputValues} />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/comms" element={<Comms />} />
           <Route path="/latlondis" element={<RouteInputs />} />
           <Route path="*" element={<MatchAllRoute />} />
-          <Route path="/interface" element={<Interface2 />} />
+          <Route path="/interface-two" element={<Interface2 />} />
           <Route path="/showroute" element={<ShowRoute />} />
           <Route path="/homepage" element={<HomePage />} />
           <Route path="/signin" element={<Signin />} />
