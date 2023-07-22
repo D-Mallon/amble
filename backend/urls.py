@@ -24,5 +24,8 @@ urlpatterns = [
     path("interface", TemplateView.as_view(template_name="base.html")),
     path("homepage", TemplateView.as_view(template_name="base.html")),
     path("showroute", TemplateView.as_view(template_name="base.html")),
+    path("account", TemplateView.as_view(template_name="base.html")),
+    path("signin", TemplateView.as_view(template_name="base.html")),
+    path("signup", TemplateView.as_view(template_name="base.html"))
     
 ]
