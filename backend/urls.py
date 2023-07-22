@@ -13,10 +13,8 @@ urlpatterns = [
     path('users/logincheck', views.logincheck),
     path('users/handle_routeinpput_data', views.handle_routeinpput_data),
     
-    # path('api/users/', views.registration),
-    # re_path(r'^api/users/(?P<pk>[0-9]+)$', views.registration),
     path("loginCheck", TemplateView.as_view(template_name="base.html")),
-    path("user_pref", TemplateView.as_view(template_name="base.html")),
+    path("userpref", TemplateView.as_view(template_name="base.html")),
     path("", TemplateView.as_view(template_name="base.html")),
     path("latlondis", TemplateView.as_view(template_name="base.html")),
     path("login", TemplateView.as_view(template_name="base.html")),

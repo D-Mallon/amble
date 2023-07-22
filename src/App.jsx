@@ -6,7 +6,7 @@ import Interface from "./components/Interface";
 import Login from "./components/login";
 import Comms from "./components/Comms.jsx";
 import RouteInputs from "./components/latlondis";
-import UserPreferences from "./components/user_pref";
+import UserPreferences from "./components/userpref";
 import LoginCheck from "./components/loginCheck";
 
 import HomePage from './components/HomePage';
@@ -34,7 +34,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/comms" element={<Comms />} />
           <Route path="/latlondis" element={<RouteInputs />} />
-          <Route path="/user_pref" element={<UserPreferences />} />
+          <Route path="/userpref" element={<UserPreferences />} />
           <Route path="/loginCheck" element={<LoginCheck />} />
           <Route path="*" element={<MatchAllRoute />} />
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 import axios from 'axios';
-import "./user_pref.css";
+import "./userpref.css";
 
 const options = [
     // { value: 'park', label: 'Parks' },
