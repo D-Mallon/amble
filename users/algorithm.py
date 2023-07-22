@@ -3,11 +3,16 @@ import random
 from math import radians, sin, cos, sqrt, atan2
 import time
 
+#Create File Path
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 # ####### Start time - to get run time #########
 # start_time = time.time()
 
 #Set up the base nodes (from Park Locations)
-with open("src/json-files/park_locations.json") as json_file:
+file_path_par = BASE_DIR /'src'/'json-files'/'park_locations.json'
+with open(file_path_par) as json_file:
     basedata = json.load(json_file)
 
 #Create a new dictionary and add the base nodes to it
@@ -16,7 +21,8 @@ data.update(basedata)
 
 #Check what other nodes have been selected in preferences
 other_nodes_dict = {}
-with open("src/json-files/preferences.json") as json_file:
+file_path_pre = BASE_DIR /'src'/'json-files'/'preferences.json'
+with open(file_path_pre) as json_file:
     prefdata = json.load(json_file)
 t = True
 for x in prefdata["data_from_frontend"]["selectedOptions"]:
@@ -26,7 +32,9 @@ for x in prefdata["data_from_frontend"]["selectedOptions"]:
 #Add the nodes
 for k,v in other_nodes_dict.items():
     if v == True:
-        with open('src/json-files/'+k+'.json') as file:
+        f = k+'.json'
+        file_path_oth = BASE_DIR /'src'/'json-files'/f
+        with open(file_path_oth) as file:
             nodes = json.load(file)
         # print(nodes)
         # print(type(nodes))
@@ -34,7 +42,8 @@ for k,v in other_nodes_dict.items():
 
 # #Create a json object and Write to a json file
 merged_json = json.dumps(data, indent=4) 
-with open('src/json-files/nodes_final.json', 'w') as merged_file: 
+file_path_mer = BASE_DIR /'src'/'json-files'/'nodes_final.json'
+with open(file_path_mer, 'w') as merged_file: 
     merged_file.write(merged_json)
 
 # ####### End time - to get run time #########
@@ -49,7 +58,6 @@ longitudes = []
 for park_data in data["data"]:
     latitudes.append(park_data["location"]["latitude"])
     longitudes.append(park_data["location"]["longitude"])
-
 
 # Function to calculate the distance between two coordinates using the haversine formula
 def calculate_distance(lat1, lon1, lat2, lon2):
@@ -69,9 +77,7 @@ def calculate_distance(lat1, lon1, lat2, lon2):
     distance = R * c
     return distance
     
-
 def magic(user_latitude, user_longitude, hour):
-
 
     print(f"Starting location: ({user_latitude}, {user_longitude})")
     print("-----------------------------------------")
