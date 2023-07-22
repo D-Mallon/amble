@@ -1,9 +1,7 @@
 {
     "data_from_frontend": {
         "selectedOptions": [
-            "worship_locations",
-            "walking_node_locations",
-            "park_node_locations"
+            "worship_locations"
         ]
     }
 }

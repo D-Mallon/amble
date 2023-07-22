@@ -43,15 +43,6 @@ print('\n------------------ Query 3 ------------------------------\n')
 for r in results3:
     print(r[1])
 
-# from users.models import Nodes
-
-# # Retrieve selected records from the model
-# filtered_data = Nodes.objects.filter(type='walking_nodes')
-
-# for item in filtered_data:
-#     print(item)
-
-
 
 
 
