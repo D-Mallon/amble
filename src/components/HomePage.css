@@ -41,6 +41,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1.5px solid #000; 
+  /* border: 1.5px solid #000;  */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the flex-container using the translate method */
 
+}
+
+
+.homepagecontainer{
+  text-align: center;
+  justify-content: center;
+  /* height: 100vh;  */
+  width:100%;
 }
