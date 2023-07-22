@@ -20,33 +20,63 @@ with open(file_path) as json_file:
 data = {}
 data.update(basedata)
 
-#Decide what other nodes to include - comes from the front end preferences
-other_nodes_dict = {
-    "park_node_locations" : True,
-    "worship_locations": True,
-    "museum_art_locations" : True,
-    "library_locations" : True,
-    "walking_node_locations" : True,
-    "community_locations" : True
-}
+# THIS IS OLDER CODE - PREFERENCES HARDCODED IN
+# #Decide what other nodes to include - comes from the front end preferences
+# other_nodes_dict = {
+#     "park_node_locations" : True,
+#     "worship_locations": True,
+#     "museum_art_locations" : True,
+#     "library_locations" : True,
+#     "walking_node_locations" : True,
+#     "community_locations" : True
+# }
+
+# #Add the nodes
+# for k,v in other_nodes_dict.items():
+#     if v == True:
+#         f = k+'.json'
+#         file_path = BASE_DIR /'src'/'json-files'/f
+#         print(file_path)
+#         with open(file_path) as file:
+#             #'src/json-files/'+k+'.json'
+#             nodes = json.load(file)
+#         # print(nodes)
+#         # print(type(nodes))
+#         data ={'data':data['data'] + nodes['data']}
+
+# # #Create a json object and Write to a json file
+# merged_json = json.dumps(data, indent=4)
+# file_path = BASE_DIR /'src'/'json-files'/'nodes_final.json' 
+# with open(file_path, 'w') as merged_file: 
+#     merged_file.write(merged_json)
+
+
+#IMPORTANT TAKES DATA FROM PREFERENCE FUNCTION ON FE
+# Check what other nodes have been selected in preferences
+other_nodes_dict = {}
+file_path_pre = BASE_DIR /'src'/'json-files'/'preferences.json'
+with open(file_path_pre) as json_file:
+    prefdata = json.load(json_file)
+t = True
+for x in prefdata["data_from_frontend"]["selectedOptions"]:
+    other_nodes_dict.update({x:t})
+    print(other_nodes_dict)
 
 #Add the nodes
 for k,v in other_nodes_dict.items():
     if v == True:
         f = k+'.json'
-        file_path = BASE_DIR /'src'/'json-files'/f
-        print(file_path)
-        with open(file_path) as file:
-            #'src/json-files/'+k+'.json'
+        file_path_oth = BASE_DIR /'src'/'json-files'/f
+        with open(file_path_oth) as file:
             nodes = json.load(file)
         # print(nodes)
         # print(type(nodes))
         data ={'data':data['data'] + nodes['data']}
 
 # #Create a json object and Write to a json file
-merged_json = json.dumps(data, indent=4)
-file_path = BASE_DIR /'src'/'json-files'/'nodes_final.json' 
-with open(file_path, 'w') as merged_file: 
+merged_json = json.dumps(data, indent=4) 
+file_path_mer = BASE_DIR /'src'/'json-files'/'nodes_final.json'
+with open(file_path_mer, 'w') as merged_file: 
     merged_file.write(merged_json)
 
 # ####### End time - to get run time #########
