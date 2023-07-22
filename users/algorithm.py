@@ -21,6 +21,7 @@ with open("src/json-files/preferences.json") as json_file:
 t = True
 for x in prefdata["data_from_frontend"]["selectedOptions"]:
     other_nodes_dict.update({x:t})
+    print(other_nodes_dict)
 
 #Add the nodes
 for k,v in other_nodes_dict.items():
