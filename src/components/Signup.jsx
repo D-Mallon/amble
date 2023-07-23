@@ -12,8 +12,8 @@ const Signup = () => {
     const [password, setPassword]=useState('')
     const [error, setError]=useState('')
 
-    // const [name, setName] = useState(''); // 新增name字段用于昵称
-    // const [address, setAddress] = useState(''); // 新增address字段用于住址
+    const [name, setName] = useState(''); // 新增name字段用于昵称
+    const [address, setAddress] = useState(''); // 新增address字段用于住址
 
     const {createUser}=UserAuth();
     const navigate=useNavigate();
@@ -22,8 +22,8 @@ const Signup = () => {
         e.preventDefault()
         setError('')
         try{
-            // await createUser(email,password,name,address)
-            await createUser(email,password)
+            await createUser(email,password,name,address)
+            // await createUser(email,password)
             navigate('/account')
         }catch(e){
             setError(e.message)
@@ -52,7 +52,7 @@ const Signup = () => {
           />
         </div>
 
-        {/* <div className="name-container">
+        <div className="name-container">
           <label>User Name</label>
           <input
             onChange={(e) => setName(e.target.value)}
@@ -68,7 +68,7 @@ const Signup = () => {
             type="text"
             className="address"
           />
-        </div> */}
+        </div>
 
         <div className="password-container">
           <label>Password</label>

@@ -42,7 +42,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/latlondis" element={<RouteInputs />} />
           <Route path="*" element={<MatchAllRoute />} />
-          <Route path="/interface-two" element={<Interface2 />} />
+          <Route path="/interface-two" element={<Interface2  inputValues={inputValues} setInputValues={setInputValues} />} />
           <Route path="/showroute" element={<ShowRoute />} />
           <Route path="/homepage" element={<HomePage />} />
           <Route path="/signin" element={<Signin />} />

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState,useContext } from 'react';
-import Map from "./Map_original";
+// import Map from "./Map_original";
 import "./interface2.css";
 // import StartPlace from "./components/start_place";
 import StartTime from './start_time';
@@ -22,6 +22,7 @@ import MenuBar from './MenuBar';
 import MapBackground from './mapbackground';
 import {Link, useNavigate} from 'react-router-dom';
 import MyFunctionButton from './functionbutton';
+import Map from "./Map";
 
 const theme = createTheme({
   palette: {
@@ -34,7 +35,7 @@ const theme = createTheme({
   },
 });
 
-function Interface2() {
+function Interface2({ inputValues, setInputValues }) {
 //   const timeData=useContext(TimeSearchContext); 
 //   console.log(timeData.search);
 
@@ -136,41 +137,6 @@ function Interface2() {
 
         <div className="PlanWin">
         
-      
-
-          <div className="PlanSet">
-            <div className="green-bar">
-              <span className="text_bar">Walking Setting</span>
-            </div>
-
-            <div className="start-place">
-              <span className="text_bar_3">Start Place:</span>
-              {/* <StartPlace />  */}
-            </div>
-
-            <div className="start-time">
-              <span className="text_bar_3">Start Time:</span>
-              {/* <StartTime onSearchTimeChange={handleOnSearchChange} /> */}
-              <StartTime />
-              {/* 有一个叫 onSearchTimeChange 的属性，属性中有一个叫handleOnSearchChange的方程*/}
-            </div>
-
-            <div className="walk-duration">
-              <span className="text_bar_3">Distance:</span>
-              <span className="spacer1">&nbsp;</span>
-              <Distance />
-            </div>
-
-            <div className="preference">
-              <span className="text_bar_3">Preference:</span>
-              <Preference />
-            </div>
-
-            <div className="gain-route">
-              {/* <button className="gainroute-button">Gain a Route</button> */}
-              <MyFunctionButton/>
-            </div>
-          </div>
 
           <div className="PlanMap">
             <div className="additional-blocks">
@@ -187,7 +153,8 @@ function Interface2() {
                 <CloseIcon sx={{ fontSize: 27 , color: 'white'}} />
               </div>
             </div>
-            <Map />
+            {/* <Map /> */}
+            <Map inputValues={inputValues} setInputValues={setInputValues} />
           </div>
         </div>
       </div>

@@ -153,16 +153,18 @@ const Map = ({ inputValues, setInputValues }) => {
   return (
     <div>
       <div className="user-input">
-        <h2>My Journey Planner</h2>
-
+      <div className='titlebox'>
+      <span className="text_bar-mapfunction">My Journey Planner</span>
+        </div>
         <div className='when-input'>
           <p>When would you like to leave?</p>
           <Stack spacing={2} direction="row" justifyContent="center" paddingBottom="15px">
             <Button className='now-button'
+            sx={{ width: "100px", height: "2.5rem" }}
               variant={nowSelected ? "contained" : "outlined"}
               style={nowSelected ?
-                {} :
-                { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
+                { borderRadius: 0} :
+                { backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none' , borderRadius: 0 }
               }
               onClick={handleNowButtonClick}
             >
@@ -170,9 +172,10 @@ const Map = ({ inputValues, setInputValues }) => {
             </Button>
             <Button
               variant={laterSelected ? "contained" : "outlined"}
+              sx={{ width: "100px", height: "2.5rem" }}
               style={laterSelected ?
-                {} :
-                { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
+                {borderRadius: 0} :
+                { borderRadius: 0,backgroundColor: 'transparent', borderColor:'black', color: 'black', boxShadow: 'none' }
               }
               onClick={handleLaterButtonClick}
             >
@@ -181,6 +184,7 @@ const Map = ({ inputValues, setInputValues }) => {
           </Stack>
           {showTimeInput && (
             <DateTimePicker
+            // sx={{ width: "100px", height: "2.5rem" }}
               value={time}
               onChange={(value) => {
                 if (value) {
@@ -200,7 +204,7 @@ const Map = ({ inputValues, setInputValues }) => {
             <p>How long would like to go for?</p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
               <Slider
-                style={{ width: '120px' }}
+                style={{ width: '150px' }}
                 value={sliderValue}
                 min={sliderUnit === 'km' ? 1 : 10}
                 max={sliderUnit === 'km' ? 10 : 100}
@@ -210,10 +214,11 @@ const Map = ({ inputValues, setInputValues }) => {
                 onChangeCommitted={() => { setShowBeginLocationInput(true) }}
               />
               <Button
+              sx={{ width: "100px", height: "2.5rem" }}
                 variant='outlined'
                 style={nowSelected ?
-                  { borderColor: 'white', color: 'white' } :
-                  { borderColor: 'white', color: 'white' }
+                  { borderColor:'black', color: 'black' ,borderRadius: 0} :
+                  { borderColor:'black', color: 'black' ,borderRadius: 0}
                 }
                 onClick={() => {
                   if (sliderUnit === 'km') {
@@ -252,11 +257,12 @@ const Map = ({ inputValues, setInputValues }) => {
                   setAddressSelected(false);
                   setShowEndLocationInput(true);
                 }}
+                sx={{ width: "110px", height: "2.5rem" }}
                   startIcon={<HomeIcon />}
                   variant={homeSelected ? "contained" : "outlined"}
                   style={homeSelected ?
-                    {} :
-                    { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
+                    {borderRadius: 0} :
+                    {borderRadius: 0, backgroundColor: 'transparent', borderColor:'black', color: 'black', boxShadow: 'none' }
                   }>
                   Home
                 </Button>
@@ -268,11 +274,12 @@ const Map = ({ inputValues, setInputValues }) => {
                   setSearchSelected(true);
                   setAddressSelected(false);
                 }}
+                sx={{ width: "110px", height: "2.5rem" }}
                   startIcon={beginLocationPressed ? <LocationSearchingIcon /> : <MapIcon />}
                   variant={searchSelected ? "contained" : "outlined"}
                   style={searchSelected ?
-                    {} :
-                    { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
+                    {borderRadius: 0} :
+                    {borderRadius: 0, backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none' }
                   }>
                   {beginLocationPressed ? 'Click' : 'Map'}
                 </Button>
@@ -283,11 +290,12 @@ const Map = ({ inputValues, setInputValues }) => {
                   setSearchSelected(false);
                   setAddressSelected(true);
                 }}
+                sx={{ width: "110px", height: "2.5rem" }}
                   startIcon={<SearchIcon />}
                   variant={addressSelected ? "contained" : "outlined"}
                   style={addressSelected ?
-                    {} :
-                    { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
+                    {borderRadius: 0} :
+                    {borderRadius: 0, backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none' }
                   }>
                   Search
                 </Button>
@@ -300,7 +308,7 @@ const Map = ({ inputValues, setInputValues }) => {
                 options={suggestions}
                 getOptionLabel={(option) => option.label}
                 isOptionEqualToValue={() => true === true}
-                style={{ width: 300, paddingBottom: "15px", color: 'white' }}
+                style={{ borderRadius: 0,width: 350, paddingBottom: "15px", color: 'black', borderRadius: 0  }}
                 onInputChange={handlePlaceNameChange}
                 onChange={(event, newValue) => {
                   if (newValue) {
@@ -311,29 +319,29 @@ const Map = ({ inputValues, setInputValues }) => {
                   sx={{
                     '& .MuiOutlinedInput-root': {
                       '& fieldset': {
-                        borderColor: 'white',
+                        borderColor: 'black',
                       },
                       '&:hover fieldset': {
-                        borderColor: 'white',
+                        borderColor: 'black',
                       },
                       '&.Mui-focused fieldset': {
-                        borderColor: 'white',
+                        borderColor: 'black',
                       },
                     },
                     '& .MuiFormLabel-root': {
-                      color: 'white',
+                      color: 'black',
                       '&.Mui-focused': {
-                        color: 'white',
+                        color:'black',
                       },
                     },
                     '& .MuiInputBase-root': {
-                      color: 'white',
+                      color: 'black',
                     },
                     '& .MuiAutocomplete-clearIndicator': {
-                      color: 'white',
+                      color: 'black',
                     },
                     '& .MuiAutocomplete-popupIndicator': {
-                      color: 'white',
+                      color: 'black',
                     }
                   }}
                 />}
@@ -366,10 +374,11 @@ const Map = ({ inputValues, setInputValues }) => {
                   setShowEndField(false)
                 }}
                   startIcon={<HomeIcon />}
+                  sx={{ width: "110px", height: "2.5rem" }}
                   variant={endHomeSelected ? "contained" : "outlined"}
                   style={endHomeSelected ?
-                    {} :
-                    { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
+                    {borderRadius: 0} :
+                    { borderRadius: 0,backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none' }
                   }>
                   Home
                 </Button>
@@ -381,11 +390,12 @@ const Map = ({ inputValues, setInputValues }) => {
                   setEndAddressSelected(false);
                   setShowEndField(false)
                 }}
+                sx={{ width: "110px", height: "2.5rem" }}
                   startIcon={endLocationPressed ? <LocationSearchingIcon /> : <MapIcon />}
                   variant={endSearchSelected ? "contained" : "outlined"}
                   style={endSearchSelected ?
-                    {} :
-                    { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
+                    {borderRadius: 0} :
+                    {borderRadius: 0, backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none' }
                   }>
                   {endLocationPressed ? 'Click' : 'Map'}
                 </Button>
@@ -396,11 +406,12 @@ const Map = ({ inputValues, setInputValues }) => {
                   setEndAddressSelected(true);
                   setShowEndField(true)
                 }}
+                sx={{ width: "110px", height: "2.5rem" }}
                   startIcon={<SearchIcon />}
                   variant={endAddressSelected ? "contained" : "outlined"}
                   style={endAddressSelected ?
-                    {} :
-                    { backgroundColor: 'transparent', borderColor: 'white', color: 'white', boxShadow: 'none' }
+                    {borderRadius: 0} :
+                    {borderRadius: 0, backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none', borderRadius: 0  }
                   }>
                   Search
                 </Button>
@@ -413,7 +424,7 @@ const Map = ({ inputValues, setInputValues }) => {
                 options={suggestions}
                 getOptionLabel={(option) => option.label}
                 isOptionEqualToValue={() => true === true}
-                style={{ width: 300, paddingBottom: "15px", color: 'white' }}
+                style={{ width: 350, paddingBottom: "15px", color: 'black' , borderRadius: 0 }}  
                 onInputChange={handlePlaceNameChange}
                 onChange={(event, newValue) => {
                   if (newValue) {
@@ -424,29 +435,29 @@ const Map = ({ inputValues, setInputValues }) => {
                   sx={{
                     '& .MuiOutlinedInput-root': {
                       '& fieldset': {
-                        borderColor: 'white',
+                        borderColor: 'black',
                       },
                       '&:hover fieldset': {
-                        borderColor: 'white',
+                        borderColor: 'black',
                       },
                       '&.Mui-focused fieldset': {
-                        borderColor: 'white',
+                        borderColor: 'black',
                       },
                     },
                     '& .MuiFormLabel-root': {
-                      color: 'white',
+                      color: 'black',
                       '&.Mui-focused': {
-                        color: 'white',
+                        color: 'black',
                       },
                     },
                     '& .MuiInputBase-root': {
-                      color: 'white',
+                      color: 'black',
                     },
                     '& .MuiAutocomplete-clearIndicator': {
-                      color: 'white',
+                      color: 'black',
                     },
                     '& .MuiAutocomplete-popupIndicator': {
-                      color: 'white',
+                      color: 'black',
                     }
                   }}
                 />}
@@ -457,11 +468,11 @@ const Map = ({ inputValues, setInputValues }) => {
 
         {showGoButton && (
           <Stack spacing={1} direction="row" justifyContent="center" paddingBottom="15px">
-            <Button variant="contained" type="submit" size="large" onClick={handleInputSubmit}>Go!</Button>
+            <Button   sx={{ width: "200px", height: "2.5rem" }}  variant="contained" type="submit" size="large" style={{ borderRadius: 0 }} onClick={handleInputSubmit}>GO</Button>
           </Stack>
         )}
 
-        <Button variant='outlined' onClick={() => console.log("These were the inputValues:", inputValues)}>Tell me baby...</Button>
+        <Button  sx={{ width: "200px", height: "2.5rem" }} style={{ borderRadius: 0 }} variant='outlined' onClick={() => console.log("These were the inputValues:", inputValues)}>Tell me baby...</Button>
       </div>
       <div ref={mapContainer} className="map-container" />
     </div>
