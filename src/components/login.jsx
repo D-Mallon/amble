@@ -54,65 +54,66 @@ const Login = () => {
   return (
     <div>
       {/* <h3>Registration Form</h3> */}
-    <form onSubmit={handleSubmit}>
-            <div>
-            <label htmlFor="first_name">First Name:</label>
-            <input
-                type="text"
-                name="first_name"
-                className='first_name'
-                id="first_name"
-                // value={formData.first_name}
-                onChange={handleChange}
-                ></input>
-            </div>
-            <div>
-            <label htmlFor="last_name">Last Name:</label>
-            <input
-                type="text"
-                name="last_name"
-                className='last_name'
-                // value={formData.last_name}
-                onChange={handleChange}
-                ></input>
-            </div>
-            <div>
-                <label htmlFor="email">Email:</label>
-                <input
-                    type="text"
-                    name="email"
-                    className='email'
-                    id="email"
-                    // value={formData.email}
-                    onChange={handleChange}
-                    ></input>
-            </div>
-            <div>
-                <label htmlFor="address">Address:</label>
-                <input
-                    type="text"
-                    name="address"
-                    className='address'
-                    id="address"
-                    // value={formData.address}
-                    onChange={handleChange}
-                    ></input>
-            </div>
-            <div>
-                <label htmlFor="password">Password:</label>
-                <input
-                    type="text"
-                    name="password"
-                    className='password'
-                    id="password"
-                    // value={formData.password}
-                    onChange={handleChange}
-                    ></input>
-            </div>
-            <div id="error-message"></div>
-      <div className="submit-container"><MyFunctionButton_signup type="submit" className='submit-button'/></div>
-    </form>
-    </div>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="first_name">First Name:</label>
+          <input
+            type="text"
+            name="first_name"
+            className="first_name"
+            id="first_name"
+            // value={formData.first_name}
+            onChange={handleChange}
+          ></input>
+        </div>
+        <div>
+          <label htmlFor="last_name">Last Name:</label>
+          <input
+            type="text"
+            name="last_name"
+            className="last_name"
+            // value={formData.last_name}
+            onChange={handleChange}
+          ></input>
+        </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="text"
+            name="email"
+            className="email"
+            id="email"
+            // value={formData.email}
+            onChange={handleChange}
+          ></input>
+        </div>
+        <div>
+          <label htmlFor="address">Address:</label>
+          <input
+            type="text"
+            name="address"
+            className="address"
+            id="address"
+            // value={formData.address}
+            onChange={handleChange}
+          ></input>
+        </div>
+        <div>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="text"
+            name="password"
+            className="password"
+            id="password"
+            // value={formData.password}
+            onChange={handleChange}
+          ></input>
+        </div>
+        <div id="error-message"></div>
+        <div className="submit-container">
+          <MyFunctionButton_signup type="submit" className="submit-button" />
+        </div>
+      </form>
     </div>
   );
 };
