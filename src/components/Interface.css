@@ -1,157 +1,34 @@
-#root {
-  /* max-width: 1280px; */
-  margin: 0 auto;
-  /* padding: 2rem; */
-  text-align: center;
-}
-
-.logo {
-  height: 4em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-body {
-  /* background: url(/static/images/newyork.jpg) no-repeat center fixed; */
-  background-size: cover;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.6);
-  z-index: 0;
-}
-
-.menu-button {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.4rem;
-  width: 2.6rem;
-  height: 2.6rem;
-}
-
-.PlanWin {
-  /* width: 80rem;
-  height: 50rem; */
-  width: 95rem;
-  height: 52rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.PlanSet {
-  width: 35%;
-  height: 100%;
-  background-color: #ffffff;
-  position: relative;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  flex-direction: column;
-}
-
-/* .Map {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;
-  } */
-
-.PlanMap {
-  width: 65%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.green-bar {
-  background-color: #004d40;
-  height: 2.8rem;
+.map-container {
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  z-index: 1; /* will be below .user-input */
+}
+
+.user-input {
+  width: 400px;
+  height: auto;
+  margin: 1rem;
+  padding: 20px;
   display: flex;
-  justify-content: left;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.text_bar {
-  color: #ffffff;
-  font-size: 1.2rem;
-  font-weight: normal;
-  /* padding-left: 24px; */
-  margin-left: 24px;
-  font-family: "Comic Sans MS", cursive;
-}
-
-.text_bar_2 {
-  color: #354648;
-  font-size: 0.9rem;
-  font-weight: normal;
-  /* padding-left: 24px; */
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: darkgrey;
+  z-index: 2; /* will be on top of .map-container */
 }
 
-.spacer1 {
-  width: 15px; /* 设置空格宽度 */
-  display: inline-block; /* 将元素作为行内块级元素显示 */
-}
+/* .interface-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+} */
 
-.text_bar_3 {
-  color: #040404;
-  font-size: 1.2rem;
-  font-weight: normal;
-  /* padding-left: 24px; */
-  margin-left: 34px;
-  margin-right: 55px;
-  font-family: "Comic Sans MS", cursive;
-}
-
-.start-place,
+/* .start-place,
 .start-time,
 .walk-duration,
 .preference {
@@ -170,6 +47,7 @@ body::before {
   background-color: #ffffff;
   height: 3rem;
   margin-bottom: 60px;
+
 }
 
 .walk-duration {
@@ -178,49 +56,13 @@ body::before {
   margin-bottom: 60px;
 }
 
-.preference {
-  background-color: #ffffff;
-  height: 3rem;
-  margin-bottom: 180px;
-}
-
-.gainroute-button {
+.go-button {
   background-color: #004d40;
-  color: #cbdac5;
+  color: #CBDAC5;
   border: none;
   border-radius: 0;
   padding: 15px 30px;
   cursor: pointer;
-}
-
-.additional-blocks {
-  position: absolute;
-  background-color: #dde87b;
-  top: 0;
-  right: 0;
-  display: flex;
-  align-items: flex-start;
-  z-index: 2;
-}
-
-.additional-block-text {
-  width: 10rem;
-  height: 2.8rem;
-  background-color: rgb(236, 236, 236);
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.additional-block-close {
-  width: 2.8rem;
-  height: 2.8rem;
-  background-color: #004d40;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .close-button {
@@ -229,30 +71,33 @@ body::before {
   width: 85%;
   height: 85%;
   object-fit: contain;
-}
+} */
 
 /* Styling for login area */
-.login-area {
+/* .login-area {
   background-color: #ffffff;
   height: 20rem;
   height: 20rem;
   margin-bottom: 180px;
 }
+
 .submit-button {
   background-color: #004d40;
-  color: #cbdac5;
+  color: #CBDAC5;
   border: none;
   border-radius: 0;
   padding: 15px 30px;
   cursor: pointer;
   margin-top: 2rem;
 }
+
 label {
   margin-bottom: 0.4rem;
   display: block;
 }
+
 input,
 textarea {
   padding: 0.4rem;
   width: 30%;
-}
+} */

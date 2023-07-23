@@ -1,0 +1,82 @@
+.wrapper-function-signup{
+    position: fixed;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+  }
+  
+  .wrapper-function-text-signup {
+    display: flex;
+    width: 120px;
+    height: 50px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #E3FCF7;
+    border: 1.5px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    justify-content: center;
+    align-items: center;
+    background: #00684A;
+  }
+  
+  .wrapper-function-text-signup span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .wrapper-function-text-signup:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #B1FF05;
+    transition: all .35s;
+  }
+  
+  .wrapper-function-text-signup:hover{
+    color: #00684A;
+  }
+  
+  .wrapper-function-text-signup:hover:after{
+    width: 100%;
+  }
+
+
+  /* Signup.css */
+
+.Signup-container {
+  /* Center the form horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Assuming you want the form to take the full viewport height */
+
+  /* Add some spacing between each input field and its label */
+  gap: 20px;
+}
+
+/* Apply common styles to the labels */
+.Signup-container label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Style the input fields */
+.Signup-container input {
+  width: 300px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+

@@ -16,13 +16,18 @@ urlpatterns = [
     # path('api/users/', views.registration),
     # re_path(r'^api/users/(?P<pk>[0-9]+)$', views.registration),
     path("loginCheck", TemplateView.as_view(template_name="base.html")),
-    path("user_pref", TemplateView.as_view(template_name="base.html")),
+    path("userpref", TemplateView.as_view(template_name="base.html")),
+    # path("userpref", TemplateView.as_view(template_name="base.html")),
     path("", TemplateView.as_view(template_name="base.html")),
     path("latlondis", TemplateView.as_view(template_name="base.html")),
     path("login", TemplateView.as_view(template_name="base.html")),
     path("comms", TemplateView.as_view(template_name="base.html")),
     path("interface", TemplateView.as_view(template_name="base.html")),
+    path("interface-two", TemplateView.as_view(template_name="base.html")),
     path("homepage", TemplateView.as_view(template_name="base.html")),
     path("showroute", TemplateView.as_view(template_name="base.html")),
+    path("account", TemplateView.as_view(template_name="base.html")),
+    path("signin", TemplateView.as_view(template_name="base.html")),
+    path("signup", TemplateView.as_view(template_name="base.html"))
     
 ]

@@ -47,7 +47,7 @@ const theme = createTheme({
     const [logoIndex, setLogoIndex] = useState(0);
 
     const handleButtonClick = () =>{
-        navigate('/interface')
+        navigate('/interface-two')
     }
 
     useEffect(() => {
@@ -63,7 +63,9 @@ const theme = createTheme({
 
     return (
       <>
-        <MenuAppBar />
+      <MenuAppBar />
+      <div className='homepagecontainer'>
+        
     
         <div className='mapwrapper_homepage'>
           <MapBackground zoom={12.8}/>
@@ -81,6 +83,7 @@ const theme = createTheme({
           <MyButton onClick={handleButtonClick}/>
         </div>
         {/* <MyFunctionButton/> */}
+      </div>
       </>
     );
   }

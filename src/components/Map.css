@@ -9,12 +9,7 @@
   height: 20px;
 }
 
-.map-container {
-  width: 90rem;
-  height: 65rem;
-}
-
-.sidebar {
+/* .sidebar {
   background-color: rgba(35, 55, 75, 0.9);
   color: #fff;
   padding: 6px 12px;
@@ -25,14 +20,14 @@
   left: 0;
   margin: 12px;
   border-radius: 4px;
-}
+} */
 
 .marker {
   background-color: #449e48;
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 0px solid #fff;
   cursor: pointer;
 }
 
@@ -52,4 +47,66 @@
 .popup-content {
   color: #000; /* Set the text color to black */
   padding: 15px; /* Padding */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  color: black;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  text-align: left;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.user-input {
+  color: rgb(0, 0, 0); 
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 380px;
+  /* background: #99ddff; */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 0px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* border: 1px solid #000; */
+}
+
+.titlebox {
+  background-color: #004d40;
+  height: 2.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px; 
+  
+}
+
+.text_bar-mapfunction {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: normal;
+  /* padding-left: 24px; */
+  margin-left: 24px;
+  font-family: "Comic Sans MS", cursive;
 }
