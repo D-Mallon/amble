@@ -64,8 +64,6 @@ function App() {
         </Routes>
 
         </AuthContextProvider>
-
-        </AuthContextProvider>
       </Router >
     </div >
   );
