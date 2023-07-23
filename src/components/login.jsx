@@ -35,7 +35,7 @@ const Login = () => {
     .catch((error) => {
       if (error.response.status === 400) {
         console.log("It may be that Username already exists.");
-        const errorMessage = "Check if Username already exists. Please try entering a different email address.";
+        const errorMessage = "Username already exist! Please try entering a different email.";
         errorMessageElement.textContent = errorMessage;
       } else if (error.response) {
         console.log(error.response);
@@ -49,7 +49,7 @@ const Login = () => {
   };
 
   return (
-    <div >
+    <div>
       <div className="login-area">
       <h3>Registration Form</h3>
     <form onSubmit={handleSubmit}>
@@ -75,12 +75,11 @@ const Login = () => {
                 ></input>
             </div>
             <div>
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="username">Email (will be your username):</label>
                 <input
                     type="text"
-                    name="email"
-                    className='email'
-                    id="email"
+                    name="username"
+                    id="username"
                     // value={formData.email}
                     onChange={handleChange}
                     ></input>
@@ -108,7 +107,8 @@ const Login = () => {
                     ></input>
             </div>
             <div id="error-message"></div>
-      <div className="submit-container"><MyFunctionButton_signup type="submit" className='submit-button'/></div>
+      <button type="submit" className='submit-button'>Submit</button>
+          
     </form>
     </div>
     </div>

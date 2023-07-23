@@ -15,6 +15,11 @@ import Signup from './components/Signup';
 import Account from './components/Account';
 import { AuthContextProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
+import Signin from './components/Signin';
+import Signup from './components/Signup';
+import Account from './components/Account';
+import { AuthContextProvider } from './context/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
 // If a route can not be displayed this function is invoked from Route path
 function MatchAllRoute() {
   return <h2>The requested page does not exist</h2>;
@@ -26,9 +31,12 @@ function App() {
     "longitude": -73.98786664009094,
     "endLatitude": 40.72540497175606,
     "endLongitude": -74.01052594184875,
+    "endLatitude": 40.72540497175606,
+    "endLongitude": -74.01052594184875,
     "hour": 0,
     waypoints: [],
   });
+
 
 
   return (
@@ -37,6 +45,8 @@ function App() {
         <AuthContextProvider>
 
         <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/interface" element={<Interface inputValues={inputValues} setInputValues={setInputValues} />} />
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/interface" element={<Interface inputValues={inputValues} setInputValues={setInputValues} />} />
           <Route path="/login" element={<Login />} />
@@ -48,7 +58,12 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/account" element={ <ProtectedRoute><Account /></ProtectedRoute>} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/account" element={ <ProtectedRoute><Account /></ProtectedRoute>} />
         </Routes>
+
+        </AuthContextProvider>
 
         </AuthContextProvider>
       </Router >

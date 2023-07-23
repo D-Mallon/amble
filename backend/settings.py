@@ -24,7 +24,6 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'dp@4@6kdg6!7anyzq+tqoy!zo445+br*!ut6!55z62=b(na4d&'
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -65,6 +64,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "backend.urls"
+
+# AUTHENTICATION_BACKENDS = [
+#     'users.backends.EmailBackend',
+#     'django.contrib.auth.backends.ModelBackend',]
+
+# AUTH_USER_MODEL = 'users.User' 
 
 TEMPLATES = [
     {

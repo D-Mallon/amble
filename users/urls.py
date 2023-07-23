@@ -5,5 +5,6 @@ from . import views
 urlpatterns = [
         path('users/preferences', views.preferences),
         path('users/registration', views.registration),
+        path('users/logincheck', views.logincheck),
         path('users/handle_routeinpput_data', views.handle_routeinpput_data),
 ]

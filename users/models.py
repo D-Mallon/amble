@@ -4,19 +4,19 @@ from django.contrib.postgres.fields import JSONField
 class User(models.Model):
     first_name = models.CharField("First Name", max_length=30)
     last_name = models.CharField("Last Name", max_length=30)
-    email = models.EmailField(default='missing', max_length=50,primary_key=True)
+    username = models.EmailField("Username", max_length=50,primary_key=True) #Called username rather than email
     address = models.CharField("Address", max_length=100)
     password = models.CharField("Password",default="missing",max_length=30)
     registrationDate = models.DateField("Registration Date", auto_now_add=True)
 
 class UserPref(models.Model):
-    park = models.CharField("Parks", max_length=30)
-    library = models.CharField("Libraries", max_length=30, null=True)
-    worship = models.CharField("Places of Worship", max_length=30, null=True)
-    community = models.CharField("Community Centres", max_length=30, null=True)
-    museum = models.CharField("Museums & Art Galleries", max_length=30, null=True)
-    walking_node = models.CharField("Other Walking Nodes", max_length=30, null=True)
-    park_node = models.CharField("Other Park Nodes", max_length=30, null=True)
+    park = models.CharField("Parks", max_length=300, null=True)
+    library = models.CharField("Libraries", max_length=300, null=True)
+    worship = models.CharField("Places of Worship", max_length=300, null=True)
+    community = models.CharField("Community Centres", max_length=300, null=True)
+    museum = models.CharField("Museums & Art Galleries", max_length=300, null=True)
+    walking_node = models.CharField("Other Walking Nodes", max_length=300, null=True)
+    park_node = models.CharField("Other Park Nodes", max_length=300, null=True)
     
 class UserRoute(models.Model):
     # email  =  models.ForeignKey(User, null=True, on_delete=models.CASCADE)

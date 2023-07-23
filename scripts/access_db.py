@@ -32,25 +32,16 @@ results3 = cursor.fetchall() # Fetch the results
 cursor.close()
 conn.close()
 
-#Print Queries
-# print('\n------------------ Query 1 ------------------------------\n')
-# for r in results:
-#     print(r[1])
+# Print Queries
+print('\n------------------ Query 1 ------------------------------\n')
+for r in results:
+    print(r[1])
 print('\n------------------ Query 2 ------------------------------\n')
 for r in results2:
     print(r[1])
 print('\n------------------ Query 3 ------------------------------\n')
 for r in results3:
     print(r[1])
-
-# from users.models import Nodes
-
-# # Retrieve selected records from the model
-# filtered_data = Nodes.objects.filter(type='walking_nodes')
-
-# for item in filtered_data:
-#     print(item)
-
 
 
 
