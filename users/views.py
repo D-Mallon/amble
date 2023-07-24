@@ -55,9 +55,12 @@ def preferences(request):
     
 def logincheck(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        response_data = {"username": username, "password":password}
+        checkdata = json.loads(request.body)
+        username = checkdata['username']
+        print(f'This is the checkdata {checkdata}')
+        password = checkdata['password']
+        response_data = {"checks": checklogin(username,password)}
+        print(f'In views.logincheck the data is username = {username} and password = {password}')
         return JsonResponse(response_data)
 
 #         if user is not None:

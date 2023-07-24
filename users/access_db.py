@@ -49,23 +49,23 @@ print('\n------------------ Query 4 ------------------------------\n')
 for r in results4:
     print(f'Password = {r[3]} : Username = {r[5]}')
 
-username = '1@gmail.com'
-password = 'xxxx'
+# username = '1@gmail.com'
+# password = 'xxxx'
 
 def checklogin (username,password):
     check = False
     for r in results4:
-        if r[3] == password and r[5] == username:
+        if r[3] == str(password) and r[5] == str(username):
             check = True
-            print(check)
+            print(f'There is a match so {check}')
             return check
-    print(check)    
+    print(f'This is from access_db = {check}')   
     return check
 
-username = '6@gmail.com'
-password = 'xxxx'
+# username = '2@gmail.com'
+# password = 'xxxx'
 
-checklogin(username,password)
+# checklogin(username,password)
 
 
 
