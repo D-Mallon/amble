@@ -43,32 +43,30 @@ def handle_routeinpput_data(request):
 def preferences(request):
     if request.method == 'POST':
         prefdata = json.loads(request.body)
-        print(f'Data from the frontend = {prefdata} and its type = {type(prefdata)}')
+        # print(f'Data from the frontend = {prefdata} and its type = {type(prefdata)}')
         response_data = {'data_from_frontend': prefdata}
-
         with open("src/json-files/preferences.json", "w") as outfile:
             json.dump(response_data , outfile, indent=4)
-
         return JsonResponse(response_data)
         # return response_data
     else:
         return JsonResponse({'Error': 'Invalid Request'})
     
-
 def logincheck(request):
     if request.method == 'POST':
-        email = request.POST.get('email')
+        username = request.POST.get('username')
         password = request.POST.get('password')
-        user = CustomModelBackend().authenticate(request, email=email, password=password)
+        response_data = {"username": username, "password":password}
+        return JsonResponse(response_data)
 
-        if user is not None:
-            if user.check_password(password):
-            # Login successful
-                login(request, user)
-                return JsonResponse({'message': 'Login successful'})
-        else:
-            # Login failed
-            return JsonResponse({'error': 'Invalid email or password'}, status=401)
+#         if user is not None:
+#             if user.check_password(password):
+#             # Login successful
+#                 login(request, user)
+#                 return JsonResponse({'message': 'Login successful'})
+#         else:
+#             # Login failed
+#             return JsonResponse({'error': 'Invalid email or password'}, status=401)
 
-    # Return a 405 Method Not Allowed response for non-POST requests
-    return JsonResponse({'error': 'Method not allowed'}, status=405)
+#     # Return a 405 Method Not Allowed response for non-POST requests
+#     return JsonResponse({'error': 'Method not allowed'}, status=405)
