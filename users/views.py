@@ -5,6 +5,7 @@ from .models import User, UserPref, UserRoute
 from .serializers import UserSerializer, UserPreferencesSerializer, UserRouteSerializer
 from django.http import JsonResponse, HttpResponse, HttpResponseBadRequest
 from .algorithm import *
+from .access_db import *
 import json
 
 # from django.contrib.auth import authenticate, login, get_user_model
