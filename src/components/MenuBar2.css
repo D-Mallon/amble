@@ -1,0 +1,48 @@
+/* MenuBar2.css */
+.menubar2 {
+    background-color: #014e3d;
+    display: flex;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 5rem;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .Logo-amble {
+    width: 160px;
+    height: auto;
+    z-index: 0;
+    position: relative;
+    margin-bottom: 8px;
+  }
+
+  .logo-wrapper {
+    color: #e3fcf7;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 1rem; /* Set the distance from the left edge */
+    margin-top: 0.8rem;
+  }
+  
+  .menu-items {
+    display: flex;
+    gap: 30px;
+    margin-right: 2rem; /* Set the distance from the right edge */
+  }
+  
+  .menu-item {
+    font-weight: normal;
+    color: #e3fcf7;
+    font-size: 19px;
+    cursor: pointer;
+  }
+  
+  .menu-item:hover {
+    color: #b1ff05; /* Change to your desired hover color */
+  }
+  

@@ -12,6 +12,9 @@ import time # To measue run time
 import warnings # Stops warning from appearing
 warnings.filterwarnings('ignore')
 
+#Start run time for getting busyness scores
+start_time = time.time()
+
 #Create File Paths
 pickle_dir = r"src\Pickle Files" # pickle files directory
 taxipath = r"src\json-files" #taxi zone data (name and number)
@@ -204,10 +207,10 @@ df.to_json(r"src\json-files\busyness.json", orient='records')
 with open("src/components/weather.json", "w") as outfile:
         json.dump(weather_data , outfile, indent=4)
         print("Exported weather data to weather.json")
-# ####### End time - to get run time #########
-# end_time = time.time()
-# run_time = round((end_time - start_time),1)
-# print(f'Run time to produce busyness scores for 1 day = {run_time} seconds')
+####### End time - to get run time #########
+end_time = time.time()
+run_time = round((end_time - start_time),1)
+print(f'Run time to produce busyness scores for 1 day = {run_time} seconds')
 
 # Print some output
 # print(df.head(30))

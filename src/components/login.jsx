@@ -38,7 +38,7 @@ const Login = () => {
         if (error.response.status === 400) {
           console.log("It may be that Username already exists.");
           const errorMessage =
-            "Check if Username already exists. Please try entering a different email address.";
+            "Username already exist! Please try entering a different email.";
           errorMessageElement.textContent = errorMessage;
         } else if (error.response) {
           console.log(error.response);
@@ -53,67 +53,68 @@ const Login = () => {
 
   return (
     <div>
-      {/* <h3>Registration Form</h3> */}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="first_name">First Name:</label>
-          <input
-            type="text"
-            name="first_name"
-            className="first_name"
-            id="first_name"
-            // value={formData.first_name}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label htmlFor="last_name">Last Name:</label>
-          <input
-            type="text"
-            name="last_name"
-            className="last_name"
-            // value={formData.last_name}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="text"
-            name="email"
-            className="email"
-            id="email"
-            // value={formData.email}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label htmlFor="address">Address:</label>
-          <input
-            type="text"
-            name="address"
-            className="address"
-            id="address"
-            // value={formData.address}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="text"
-            name="password"
-            className="password"
-            id="password"
-            // value={formData.password}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div id="error-message"></div>
-        <div className="submit-container">
-          <MyFunctionButton_signup type="submit" className="submit-button" />
-        </div>
-      </form>
+      <div className="login-area">
+        <h3>Registration Form</h3>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="first_name">First Name:</label>
+            <input
+              type="text"
+              name="first_name"
+              className="first_name"
+              id="first_name"
+              // value={formData.first_name}
+              onChange={handleChange}
+            ></input>
+          </div>
+          <div>
+            <label htmlFor="last_name">Last Name:</label>
+            <input
+              type="text"
+              name="last_name"
+              className="last_name"
+              // value={formData.last_name}
+              onChange={handleChange}
+            ></input>
+          </div>
+          <div>
+            <label htmlFor="username">Email (will be your username):</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              // value={formData.email}
+              onChange={handleChange}
+            ></input>
+          </div>
+          <div>
+            <label htmlFor="address">Address:</label>
+            <input
+              type="text"
+              name="address"
+              className="address"
+              id="address"
+              // value={formData.address}
+              onChange={handleChange}
+            ></input>
+          </div>
+          <div>
+            <label htmlFor="password">Password:</label>
+            <input
+              type="text"
+              name="password"
+              className="password"
+              id="password"
+              // value={formData.password}
+              onChange={handleChange}
+            ></input>
+          </div>
+          <div id="error-message"></div>
+          <button type="submit" className="submit-button">
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

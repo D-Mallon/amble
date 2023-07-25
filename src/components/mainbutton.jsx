@@ -70,7 +70,7 @@ class MyButton extends React.Component {
 
         <span className="button--bubble__container">
           <a href="#campaign" className="button button--bubble"  onClick={onClick}>
-            Planning!
+            Create an amble now!
           </a>
           <span className="button--bubble__effect-container">
             <span className="circle top-left"></span>

@@ -1,0 +1,91 @@
+/* HomePage2.css */
+
+
+.homepage-pics-container {
+    background-image: url('/static/images/newyork.jpg'); /* 设置背景图片路径 */
+    background-size: cover; /* 按比例缩放背景图，保持其完全覆盖容器 */
+    background-position: center; /* 调整背景图的位置为居中 */
+    /* position: relative; */
+    width: 100%;
+    height: 100vh; /* 设置高度为视口的100% */
+    display: flex;
+}
+  
+
+  .menubar-area{
+    display: flex;
+    justify-content: center; /* 在主轴上居中 */
+    align-items: center; /* 在交叉轴上居中 */
+    position: relative;
+    width: 100%;
+    height: 5rem;
+  }
+ 
+  .left-color-block {
+    background-color: rgb(1, 78, 61,0.9); 
+    width: 30%; /* 设置色块宽度 */
+    height: 70%; /* 与homepage-pics-container高度相同 */
+    position: relative;
+    left: 5.5%; /* 将色块靠左 */
+    top:9%;
+    overflow: hidden;
+    
+
+  }
+  .hometext-title {
+    color: #e3fcf7;
+    width: 77%;
+    height: auto;
+    z-index: 0;
+    position:absolute;
+    margin-left: -38%; /* 设置右侧的间距 */
+    margin-top: 10%;
+    text-align: left;
+  }
+  
+  /* 颜色：#014e3d #00ed64 #e3fcf7 #001E2B #FFC010 #FFEEA9 #FFE212 #B1FF05 #00684A*/
+
+  .home-button-container{
+    width: 100%;
+    height: 100%;
+    top:32%; 
+    left:0%; 
+    display: block;
+    position: relative;
+  }
+
+
+  .mapwrapper_landingpage {
+    background-color: #FFEEA9;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    right: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  }
+
+ /* .endbar{
+    background-color: #014e3d;
+    display: flex; */
+    /* position: absolute; */
+    /* bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+    height: 15rem;
+    width: 100%;
+    z-index: 1;
+ } */
+
+ /* .landing-page-container {
+   
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  } */
+  

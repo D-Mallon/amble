@@ -7,28 +7,30 @@ import time
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Create File Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 # ####### Start time - to get run time #########
 # start_time = time.time()
 
-#Set up the base nodes (from Park Locations)
-file_path = BASE_DIR /'src'/'json-files'/'park_locations.json'
-#"src/json-files/park_locations.json")
-with open(file_path) as json_file:
+# Set up the base nodes (from Park Locations)
+file_path_par = BASE_DIR / 'src'/'json-files'/'park_locations.json'
+with open(file_path_par) as json_file:
     basedata = json.load(json_file)
 
 # Create a new dictionary and add the base nodes to it
 data = {}
 data.update(basedata)
 
-# Decide what other nodes to include - comes from the front end preferences
-other_nodes_dict = {
-    "park_node_locations": True,
-    "worship_locations": True,
-    "museum_art_locations": True,
-    "library_locations": True,
-    "walking_node_locations": True,
-    "community_locations": True
-}
+# Check what other nodes have been selected in preferences
+other_nodes_dict = {}
+file_path_pre = BASE_DIR / 'src'/'json-files'/'preferences.json'
+with open(file_path_pre) as json_file:
+    prefdata = json.load(json_file)
+t = True
+for x in prefdata["data_from_frontend"]["selectedOptions"]:
+    other_nodes_dict.update({x: t})
+    print(other_nodes_dict)
 
 # Add the nodes
 for k, v in other_nodes_dict.items():
@@ -42,9 +44,9 @@ for k, v in other_nodes_dict.items():
         data = {'data': data['data'] + nodes['data']}
 
 # #Create a json object and Write to a json file
-merged_json = json.dumps(data, indent=4) 
-file_path_mer = BASE_DIR /'src'/'json-files'/'nodes_final.json'
-with open(file_path_mer, 'w') as merged_file: 
+merged_json = json.dumps(data, indent=4)
+file_path_mer = BASE_DIR / 'src'/'json-files'/'nodes_final.json'
+with open(file_path_mer, 'w') as merged_file:
     merged_file.write(merged_json)
 
 # ####### End time - to get run time #########
@@ -60,8 +62,9 @@ for park_data in data["data"]:
     latitudes.append(park_data["location"]["latitude"])
     longitudes.append(park_data["location"]["longitude"])
 
-
 # Function to calculate the distance between two coordinates using the haversine formula
+
+
 def calculate_distance(lat1, lon1, lat2, lon2):
     R = 6371  # Radius of the Earth in kilometers
 
