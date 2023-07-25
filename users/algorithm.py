@@ -30,7 +30,7 @@ with open(file_path_pre) as json_file:
 t = True
 for x in prefdata["data_from_frontend"]["selectedOptions"]:
     other_nodes_dict.update({x: t})
-    print(other_nodes_dict)
+    # print(other_nodes_dict)
 
 # Add the nodes
 for k, v in other_nodes_dict.items():
