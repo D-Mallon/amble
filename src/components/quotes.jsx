@@ -19,13 +19,13 @@ function Resources() {
       });
   };
   return (
-    <div className="Quotebox">
+    // <div className="Quotebox">
          <div className="quote">
             <h2>{quote}</h2>
             <small>-{author}-</small>
-         </div><br />
+         {/* </div>   <br /> */}
          <button className="btn" onClick={GetNewQuote}>Generate New Quote</button>
-    </div>
+        </div>
   );
 }
 

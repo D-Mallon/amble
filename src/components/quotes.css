@@ -8,7 +8,7 @@
     flex-direction: column;
 } */
 .quote {
-    background: url(./assets/bg.jpg);
+    /* background: url(./assets/bg.jpg); */
     background-size: cover;
     width: 450px;
     height: 320px;
