@@ -7,7 +7,7 @@ import Login from "./components/login";
 import LoginCheck from "./components/loginCheck";
 import UserPreferences from "./components/userpref";
 import Comms from "./components/Comms.jsx";
-import Quotes from './components/quotes';
+// import Quotes from './components/quotes';
 import Resources from './components/resources';
 
 import HomePage from './components/HomePage';
@@ -57,7 +57,7 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/landingpage" element={<LandingPage />} />
-          <Route path="/quotes" element={<Quotes />} />
+          {/* <Route path="/quotes" element={<Quotes />} /> */}
           <Route path="/resources" element={<Resources />} />
           <Route path="/account" element={ <ProtectedRoute><Account /></ProtectedRoute>} />
         </Routes>
