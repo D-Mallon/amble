@@ -7,6 +7,9 @@ from django.http import JsonResponse, HttpResponse, HttpResponseBadRequest
 from .algorithm import *
 from .access_db import *
 import json
+#Create File Path
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # from django.contrib.auth import authenticate, login, get_user_model
 # from .custom_auth_backend import CustomModelBackend 
@@ -46,7 +49,8 @@ def preferences(request):
         prefdata = json.loads(request.body)
         # print(f'Data from the frontend = {prefdata} and its type = {type(prefdata)}')
         response_data = {'data_from_frontend': prefdata}
-        with open("src/json-files/preferences.json", "w") as outfile:
+        file_path_pre = BASE_DIR /'src'/'json-files'/'preferences.json'
+        with open(file_path_pre, "w") as outfile:
             json.dump(response_data , outfile, indent=4)
         return JsonResponse(response_data)
         # return response_data
