@@ -27,27 +27,26 @@ const theme = createTheme({
       <div className='menubar-area'>
       <MenuBar2 />
       </div>
-      <div className='homepage-pics-container'>
+      <div className='resources-pics-container'>
       <div className='left-color-block'>
       <span className='hometext-title'> 
           <span style={{ fontSize: '36px' ,fontWeight: 500}}>amble  <br></br>- the peaceful way</span>
           <br></br>
           <br></br>
           <br></br>
-          <span style={{ fontSize: '16px' }}>The purpose of our application is to generate walking routes for users to guide them though the quiet corners of Manhattan. 
-          <br></br>
-          <br></br>
-          The route generating algorthm takes forecast conditions into our machine learning model to determine busyiness based on taxizone, citibike and subway data and pair this infomation with crimes statistics for areas of Manhattan to ensure users can enjoy a quiet, peaceful and safe journey!
           </span>
-          </span>
+
+
+
           <div  className='home-button-container'>
           <MyButton/>
           </div>
       </div>
       </div>
-      <div className='mapwrapper_landingpage'>
-          <MapBackground  zoom={11}/>
-        </div>
+      {/* <div className='mapwrapper_landingpage'>
+          <MapBackground  zoom={12
+          }/>
+        </div> */}
 
         <div className='endbar'></div>
         </div>
