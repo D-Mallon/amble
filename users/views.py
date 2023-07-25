@@ -8,10 +8,6 @@ from .algorithm import *
 from .access_db import *
 import json
 
-# from django.contrib.auth import authenticate, login, get_user_model
-# from .custom_auth_backend import CustomModelBackend 
-# from django.contrib.auth.models import User
-
 #Function to view user registration data
 @api_view(['GET', 'POST'])
 def registration(request):
@@ -49,28 +45,16 @@ def preferences(request):
         with open("src/json-files/preferences.json", "w") as outfile:
             json.dump(response_data , outfile, indent=4)
         return JsonResponse(response_data)
-        # return response_data
     else:
         return JsonResponse({'Error': 'Invalid Request'})
-    
+
+#Function to check user login data versus what is stored in database    
 def logincheck(request):
     if request.method == 'POST':
         checkdata = json.loads(request.body)
         username = checkdata['username']
-        print(f'This is the checkdata {checkdata}')
+        # print(f'This is the checkdata {checkdata}')
         password = checkdata['password']
         response_data = {"checks": checklogin(username,password)}
-        print(f'In views.logincheck the data is username = {username} and password = {password}')
+        # print(f'In views.logincheck the data is username = {username} and password = {password}')
         return JsonResponse(response_data)
-
-#         if user is not None:
-#             if user.check_password(password):
-#             # Login successful
-#                 login(request, user)
-#                 return JsonResponse({'message': 'Login successful'})
-#         else:
-#             # Login failed
-#             return JsonResponse({'error': 'Invalid email or password'}, status=401)
-
-#     # Return a 405 Method Not Allowed response for non-POST requests
-#     return JsonResponse({'error': 'Method not allowed'}, status=405)
