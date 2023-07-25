@@ -4,7 +4,7 @@ import "./App.css";
 
 import Interface from "./components/Interface";
 import Login from "./components/login";
-import LoginCheck from "./components/logincheck";
+import LoginCheck from "./components/loginCheck";
 import UserPreferences from "./components/userpref";
 import Comms from "./components/Comms.jsx";
 
