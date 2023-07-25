@@ -16,7 +16,6 @@ urlpatterns = [
     path("loginCheck", TemplateView.as_view(template_name="base.html")),
     path("userpref", TemplateView.as_view(template_name="base.html")),
     path("", TemplateView.as_view(template_name="base.html")),
-    path("latlondis", TemplateView.as_view(template_name="base.html")),
     path("login", TemplateView.as_view(template_name="base.html")),
     path("comms", TemplateView.as_view(template_name="base.html")),
     path("interface", TemplateView.as_view(template_name="base.html")),

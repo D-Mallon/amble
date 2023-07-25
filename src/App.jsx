@@ -4,9 +4,9 @@ import "./App.css";
 
 import Interface from "./components/Interface";
 import Login from "./components/login";
+import LoginCheck from "./components/logincheck";
 import UserPreferences from "./components/userpref";
 import Comms from "./components/Comms.jsx";
-import RouteInputs from "./components/latlondis";
 
 import HomePage from './components/HomePage';
 import Interface2 from './components/interface2';
@@ -46,7 +46,7 @@ function App() {
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/interface" element={<Interface inputValues={inputValues} setInputValues={setInputValues} />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/latlondis" element={<RouteInputs />} />
+          <Route path="/logincheck" element={<LoginCheck />} />
           <Route path="/userpref" element={<UserPreferences />} />
           <Route path="*" element={<MatchAllRoute />} />
           <Route path="/interface-two" element={<Interface2  inputValues={inputValues} setInputValues={setInputValues} />} />
