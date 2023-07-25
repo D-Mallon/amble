@@ -11,6 +11,7 @@ urlpatterns = [
     path('users/preferences', views.preferences),
     path('users/registration', views.registration),
     path('users/logincheck', views.logincheck),
+    path('users/getquote', views.getquote),
     path('users/handle_routeinpput_data', views.handle_routeinpput_data),
     
     path("loginCheck", TemplateView.as_view(template_name="base.html")),

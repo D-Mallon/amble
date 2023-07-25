@@ -4,7 +4,7 @@ import axios from 'axios';
 // import quotationsData from'./quotations.json';
 // const apiKey = import.meta.env.VITE_QUOTE_API_KEY
 
-function Resources() {
+function Quotes() {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
 
@@ -25,7 +25,7 @@ function Resources() {
     //   .catch((error) => {
     //     console.error('Error fetching data:', error);
     //   });
-        axios.get('./quotations.json')
+        axios.get('users/getquote')
         .then((response) => {
         const quotationsData = response.data;
         const quoteAuthors = Object.keys(quotationsData);
@@ -59,4 +59,4 @@ function Resources() {
   );
 }
 
-export default Resources;
+export default Quotes;

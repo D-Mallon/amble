@@ -62,3 +62,10 @@ def logincheck(request):
         response_data = {"checks": checklogin(username,password)}
         # print(f'In views.logincheck the data is username = {username} and password = {password}')
         return JsonResponse(response_data)
+    
+#Function to get quotation data to the front end
+def getquote(request):
+    file_path_quote = BASE_DIR /'src'/'json-files'/'quotations.json'
+    with open(file_path_quote, "r") as file:
+        quotations_data = json.load(file)
+    return JsonResponse(quotations_data)
