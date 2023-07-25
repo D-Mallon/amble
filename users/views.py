@@ -67,5 +67,5 @@ def logincheck(request):
 def getquote(request):
     file_path_quote = BASE_DIR /'src'/'json-files'/'quotations.json'
     with open(file_path_quote, "r") as file:
-        quotations_data = json.load(file)
-    return JsonResponse(quotations_data)
+        response_data = json.load(file)
+    return JsonResponse(response_data)

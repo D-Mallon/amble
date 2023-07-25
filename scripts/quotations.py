@@ -11,11 +11,15 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 API_KEY = os.environ.get("THEY_SAID_SO_API")
+# BASE_URL = "http://quotes.rest/qod.json"
 
 quotedata = {}
-for i in range(25): 
+for i in range(50): 
+    # category = 'inspire'
     # Get Quotation
+    # url = f"{BASE_URL}?qod_category={category}&api_key={API_KEY}"
     url = f"http://quotes.rest/quote/random.json?api_key={API_KEY}"
+    # url = f"http://quotes.rest/inspiration?api_key={API_KEY}"
     response = requests.get(url)
 
     if response.status_code == 200:

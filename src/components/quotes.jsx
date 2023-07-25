@@ -13,18 +13,6 @@ function Quotes() {
     }, []);
 
   let GetNewQuote = () => {
-    // axios.get("http://quotes.rest/quote/random.json?api_key={apiKey}")
-    // axios.get("http://api.quotable.io/random")
-    // const response = axios.get('quotations.json')
-    // .then((response) => {
-    //     const quote = response.data;
-    //     console.log(quote);
-    //     // setQuote(quote.content);
-    //     // setAuthor(quote.author);
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error fetching data:', error);
-    //   });
         axios.get('users/getquote')
         .then((response) => {
         const quotationsData = response.data;
@@ -41,15 +29,7 @@ function Quotes() {
     });
 };
   return (
-    // <div className="Quotebox">
-        //  <div className="quote">
-        //     <h2>{quote}</h2>
-        //     <small>-{author}-</small>
-        //  {/* </div>   <br /> */}
-        //  <button className="btn" onClick={GetNewQuote}>Generate New Quote</button>
-        // </div>
-        <div>
-        {/* <h3>An amble reflection:</h3> */}
+        <div className ="quotebox">
         <div className="quote">
           <h2>{quote}</h2>
           <small>- {author}</small>
