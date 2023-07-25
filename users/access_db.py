@@ -27,9 +27,9 @@ cursor = conn.cursor() # Create a cursor object to execute SQL queries
 # cursor.execute(query3)
 # results3 = cursor.fetchall() # Fetch the results
 
-query4 = "SELECT * FROM public.users_user"
-cursor.execute(query4)
-results4 = cursor.fetchall() # Fetch the results
+#query4 = "SELECT * FROM public.users_user"
+#cursor.execute(query4)
+#results4 = cursor.fetchall() # Fetch the results
 
 # Close the cursor and database connection
 cursor.close()
@@ -45,9 +45,9 @@ conn.close()
 # print('\n------------------ Query 3 ------------------------------\n')
 # for r in results3:
 #     print(r[1])
-print('\n------------------ Query 4 ------------------------------\n')
-for r in results4:
-    print(f'Password = {r[3]} : Username = {r[5]}')
+#print('\n------------------ Query 4 ------------------------------\n')
+#for r in results4:
+#    print(f'Password = {r[3]} : Username = {r[5]}')
 
 # username = '1@gmail.com'
 # password = 'xxxx'
