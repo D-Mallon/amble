@@ -31,7 +31,7 @@ with open(file_path_pre) as json_file:
 t = True
 for x in prefdata["data_from_frontend"]["selectedOptions"]:
     other_nodes_dict.update({x:t})
-    print(other_nodes_dict)
+    # print(other_nodes_dict)
 
 #Add the nodes
 for k,v in other_nodes_dict.items():
@@ -43,7 +43,7 @@ for k,v in other_nodes_dict.items():
         # print(nodes)
         # print(type(nodes))
         data ={'data':data['data'] + nodes['data']}
-
+        
 # #Create a json object and Write to a json file
 merged_json = json.dumps(data, indent=4) 
 file_path_mer = BASE_DIR /'src'/'json-files'/'nodes_final.json'

@@ -19,6 +19,11 @@ const LoginCheck = () => {
         // Check with database if the username and password match up
         const check = response.data["checks"];
         console.log('Do the username and password match up =',response.data["checks"]);
+        if (response.data["checks"][0] == true){
+        console.log ('Hi',response.data["checks"][1],'and welcome back!')
+      } else {
+        console.log ('Username and password do not match.  Please try again')
+      }
       })
       .catch((error) => {
         // Handle login error
