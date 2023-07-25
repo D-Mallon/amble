@@ -8,6 +8,7 @@ import LoginCheck from "./components/loginCheck";
 import UserPreferences from "./components/userpref";
 import ChatBox from "./components/ChatBox";
 import Comms from "./components/Comms.jsx";
+// import ResourcePage from './components/resources';
 
 import HomePage from './components/HomePage';
 import Interface2 from './components/interface2';
@@ -28,8 +29,8 @@ function App() {
   const [inputValues, setInputValues] = useState({
     "latitude": 40.74218481889335,
     "longitude": -73.98786664009094,
-    "endLatitude": 40.72540497175606,
-    "endLongitude": -74.01052594184875,
+    // "endLatitude": 40.72540497175606,
+    // "endLongitude": -74.01052594184875,
     "endLatitude": 40.72540497175606,
     "endLongitude": -74.01052594184875,
     "hour": 0,
@@ -57,6 +58,7 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/landingpage" element={<LandingPage />} />
+          {/* <Route path="/resources" element={<ResourcePage />} /> */}
           <Route path="/account" element={ <ProtectedRoute><Account /></ProtectedRoute>} />
         </Routes>
 

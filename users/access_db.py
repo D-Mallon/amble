@@ -49,23 +49,18 @@ conn.close()
 #for r in results4:
 #    print(f'Password = {r[3]} : Username = {r[5]}')
 
-# username = '1@gmail.com'
-# password = 'xxxx'
-
 def checklogin (username,password):
     check = False
     for r in results4:
+        print(r[3],r[5])
         if r[3] == str(password) and r[5] == str(username):
             check = True
-            print(f'There is a match so {check}')
-            return check
-    print(f'This is from access_db = {check}')   
+            firstname = r[0]
+            print(f'Hi {firstname}!  Welcome back.')
+            print(f'There is a match so = {check}')
+            return check,firstname
+    print(f'There is NO match so = {check}')   
     return check
-
-# username = '2@gmail.com'
-# password = 'xxxx'
-
-# checklogin(username,password)
 
 
 
