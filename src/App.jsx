@@ -7,7 +7,7 @@ import Login from "./components/login";
 import LoginCheck from "./components/loginCheck";
 import UserPreferences from "./components/userpref";
 import Comms from "./components/Comms.jsx";
-// import ResourcePage from './components/resources';
+import Resources from './components/resources';
 
 import HomePage from './components/HomePage';
 import Interface2 from './components/interface2';

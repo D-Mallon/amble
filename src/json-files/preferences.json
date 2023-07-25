@@ -1,12 +1,5 @@
 {
     "data_from_frontend": {
-        "selectedOptions": [
-            "library_locations",
-            "park_node_locations",
-            "worship_locations",
-            "community_locations",
-            "museum_art_locations",
-            "walking_node_locations"
-        ]
+        "selectedOptions": []
     }
 }

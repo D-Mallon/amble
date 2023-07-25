@@ -21,7 +21,7 @@ const theme = createTheme({
   
 
 
-  function LandingPage() {
+  function Resources() {
     return (
       <div className='landing-page-container'>
       <div className='menubar-area'>
@@ -53,4 +53,4 @@ const theme = createTheme({
         </div>
     );
   }
-  export default ResourcePage;
+  export default Resources;
