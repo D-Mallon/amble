@@ -7,7 +7,8 @@ import Login from "./components/login";
 import LoginCheck from "./components/loginCheck";
 import UserPreferences from "./components/userpref";
 import Comms from "./components/Comms.jsx";
-// import ResourcePage from './components/resources';
+// import Quotes from './components/quotes';
+import Resources from './components/resources';
 
 import HomePage from './components/HomePage';
 import Interface2 from './components/interface2';
@@ -47,7 +48,7 @@ function App() {
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/interface" element={<Interface inputValues={inputValues} setInputValues={setInputValues} />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/logincheck" element={<LoginCheck />} />
+          <Route path="/loginCheck" element={<LoginCheck />} />
           <Route path="/userpref" element={<UserPreferences />} />
           <Route path="*" element={<MatchAllRoute />} />
           <Route path="/interface-two" element={<Interface2  inputValues={inputValues} setInputValues={setInputValues} />} />
@@ -56,7 +57,8 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/landingpage" element={<LandingPage />} />
-          {/* <Route path="/resources" element={<ResourcePage />} /> */}
+          {/* <Route path="/quotes" element={<Quotes />} /> */}
+          <Route path="/resources" element={<Resources />} />
           <Route path="/account" element={ <ProtectedRoute><Account /></ProtectedRoute>} />
         </Routes>
 

@@ -7,10 +7,6 @@ import time
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-#Create File Path
-from pathlib import Path
-BASE_DIR = Path(__file__).resolve().parent.parent
-
 # ####### Start time - to get run time #########
 # start_time = time.time()
 
