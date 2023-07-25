@@ -12,7 +12,9 @@ urlpatterns = [
     path('users/registration', views.registration),
     path('users/logincheck', views.logincheck),
     path('users/handle_routeinpput_data', views.handle_routeinpput_data),
+    path('users/chatbox', views.chatbox_options),
     
+    path("ChatBox", TemplateView.as_view(template_name="base.html")),
     path("loginCheck", TemplateView.as_view(template_name="base.html")),
     path("userpref", TemplateView.as_view(template_name="base.html")),
     path("", TemplateView.as_view(template_name="base.html")),

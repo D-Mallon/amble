@@ -6,6 +6,7 @@ import Interface from "./components/Interface";
 import Login from "./components/login";
 import LoginCheck from "./components/loginCheck";
 import UserPreferences from "./components/userpref";
+import ChatBox from "./components/ChatBox";
 import Comms from "./components/Comms.jsx";
 
 import HomePage from './components/HomePage';
@@ -50,6 +51,7 @@ function App() {
           <Route path="/userpref" element={<UserPreferences />} />
           <Route path="*" element={<MatchAllRoute />} />
           <Route path="/interface-two" element={<Interface2  inputValues={inputValues} setInputValues={setInputValues} />} />
+          <Route path="/chatbox" element={<ChatBox  inputValues={inputValues} setInputValues={setInputValues} />} />
           <Route path="/showroute" element={<ShowRoute />} />
           <Route path="/homepage" element={<HomePage />} />
           <Route path="/signin" element={<Signin />} />

@@ -6,6 +6,7 @@ from .serializers import UserSerializer, UserPreferencesSerializer, UserRouteSer
 from django.http import JsonResponse, HttpResponse, HttpResponseBadRequest
 from .algorithm import *
 from .access_db import *
+from .chatbox import *
 import json
 
 # from django.contrib.auth import authenticate, login, get_user_model
@@ -74,3 +75,19 @@ def logincheck(request):
 
 #     # Return a 405 Method Not Allowed response for non-POST requests
 #     return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+#Function to view user preferences data
+@api_view(['GET','POST'])
+def chatbox_options(request):
+    if request.method == 'POST':
+        waypoints = request.data.get('waypoints')
+        user_choice = request.data.get('user_choice')
+        trip_time = request.data.get('trip_time')
+        ai_call = request.data.get('ai_call')
+        location_choice = request.data.get('location_choice')
+        
+        data = option_handler(user_choice, waypoints, trip_time, ai_call, location_choice)
+
+        return JsonResponse({'data': data})
+    elif request.method == 'GET':
+        return Response({"message": "GET request received."}, status=200)
