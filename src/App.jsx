@@ -16,6 +16,7 @@ import Signup from './components/Signup';
 import Account from './components/Account';
 import { AuthContextProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
+import LandingPage from './components/HomePage2';
 
 // If a route can not be displayed this function is invoked from Route path
 function MatchAllRoute() {
@@ -53,6 +54,7 @@ function App() {
           <Route path="/homepage" element={<HomePage />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/landingpage" element={<LandingPage />} />
           <Route path="/account" element={ <ProtectedRoute><Account /></ProtectedRoute>} />
         </Routes>
 

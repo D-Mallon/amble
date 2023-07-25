@@ -20,7 +20,7 @@ const MapBackground = ({ zoom }) => {
     };
   }, [zoom]);
 
-  return <div id="map" style={{ width: '100%', height: '100%' }} />;
+  return <div id="map" style={{ width: '90%', height: '80%' }} />;
 };
 
 export default MapBackground;
