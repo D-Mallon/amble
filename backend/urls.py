@@ -22,4 +22,5 @@ urlpatterns = [
     path("homepage", TemplateView.as_view(template_name="base.html")),
     path("showroute", TemplateView.as_view(template_name="base.html")),
     path("landingpage", TemplateView.as_view(template_name="base.html")),
+    path("resources", TemplateView.as_view(template_name="base.html")),
 ]
