@@ -57,7 +57,11 @@ const ChatGPT = () => {
           </div>}
         </div>
       </div>
+      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+        Powered by ChatGPT
         <div className='endbar'></div>
+        
+      </div>
     </div>
   );
 };
