@@ -51,3 +51,42 @@ form button {
     padding: 10px;
     border-radius: 5px;
 }
+
+.icon {
+    width: 20px; /* adjust this to the size you want */
+    height: auto; /* maintains aspect ratio */
+}
+
+.acorn,
+.user {
+    float: right;
+}
+
+.squirrel {
+    float: left;
+}
+
+.message-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Amble.clickable:hover {
+    cursor: hand;
+    background-color: #493b3b; /* your desired hover color */
+}
+
+.System.clickable:hover {
+    cursor: hand;
+    background-color: #10c25a; /* your desired hover color */
+}
+
+.Amble.clickable .icon:hover {
+    transform: scale(1.2); /* increases size to 120% on hover */
+}
+
+.AmbleTyping {
+    font-style: italic;
+    text-align: left;
+}

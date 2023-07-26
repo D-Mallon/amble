@@ -1,7 +1,12 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import { ArrayContext } from "../context/ArrayContext";
 import axios from 'axios';
+import Typist from 'react-typist';
 import './ChatBox.css';
+
+import userIcon from '../../public/chat_user.png';
+import acornIcon from '../../public/chat_acorn.png';
+import squirrelIcon from '../../public/chat_squirrel.png';
 
 function ChatBox() {
     //const {inputValues, setInputValues} = useContext(AuthContext)
@@ -23,9 +28,7 @@ function ChatBox() {
       ];
     
     const initialOptions = ['1', '2', '3', '4', '5'];
-    console.log("initialOptions:", initialOptions);
     const [allOptions, setAllOptions] = useState(initialOptions);
-    console.log("allOptions:", allOptions);
     // Filter the base options to include only those that are still in allOptions.
     const filteredOptions = baseOptions.filter(baseOption => allOptions.includes(baseOption.value));
     let menuMessage = [
@@ -44,8 +47,6 @@ function ChatBox() {
           value: `${option.value}`
         }))
       ];
-      console.log("filteredOptions", filteredOptions);
-      console.log("menuMessage", menuMessage);
     const [messages, setMessages] = useState(menuMessage);
 
     const backMessage = '\nBack to options.'
@@ -56,30 +57,53 @@ function ChatBox() {
     const [poiInfo, setPoiInfo] = useState(false);
     const [mentalHealthInfo, setMentalHealthInfo] = useState(false);
 
+    const [isTyping, setIsTyping] = useState(false);
+    const messagesEndRef = useRef(null);
+
+    useEffect(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, [messages]);
+
     // This function will be called when an option is selected.
     const selectOption = (selectedOption) => {
         // Remove the selected option from the list of options.
         const newOptions = allOptions.filter(option => option !== selectedOption);
         setAllOptions(newOptions);
-
+    
         // Update the menu messages.
         const filteredOptions = baseOptions.filter(baseOption => newOptions.includes(baseOption.value));
-        const newMenuMessage = [
-            {
-            sender: 'Amble',
-            text: "How else can I make your walk even better?",
-            type: "text",
-            stage: "menu",
-            value: null
-            },
-            ...filteredOptions.map(option => ({
-            sender: 'Amble',
-            text: `\n \t ${option.value}: ${option.text}`,
-            type: "clickable",
-            stage: "menu",
-            value: `${option.value}`
-            }))
-        ];
+    
+        let newMenuMessage;
+    
+        // Check if there are any more options left
+        if (filteredOptions.length === 0) {
+            newMenuMessage = [
+                {
+                    sender: 'Amble',
+                    text: "You've explored all the options. You can chat more with the Amble assistant on your next walk!",
+                    type: "text",
+                    stage: "standard",
+                    value: null
+                }
+            ];
+        } else {
+            newMenuMessage = [
+                {
+                    sender: 'Amble',
+                    text: "How else can I make your walk even better?",
+                    type: "text",
+                    stage: "menu",
+                    value: null
+                },
+                ...filteredOptions.map(option => ({
+                    sender: 'Amble',
+                    text: `\n \t ${option.value}: ${option.text}`,
+                    type: "clickable",
+                    stage: "menu",
+                    value: `${option.value}`
+                }))
+            ];
+        }
         setMessages(newMenuMessage);
     }
 
@@ -161,11 +185,13 @@ function ChatBox() {
                 answerPrompt = `\n${value}! Let's go for a coffee.`
                 addMessageToState(answerPrompt, 'Me', "text", "option 1", false, null);
                 setCafeOption(true);
+                setIsTyping(true);
                 handleOption(value, globalArray, tempTime, false, null); //backend call for suggestions
             } else if (value === "2") {
                 answerPrompt = `\n${value}! Let's go for a meal.`
                 addMessageToState(answerPrompt, 'Me', "text", "option 2", false, null);
                 setRestaurantOption(true);
+                setIsTyping(true);
                 handleOption(value, globalArray, tempTime, false, null); //backend call for suggestions
             } else if (value === "3") {
                 answerPrompt = `\n${value}! I want to find out more.`
@@ -285,7 +311,7 @@ function ChatBox() {
                 const suggestionsArray = data[3];
             
                 addMessageToState(newMessage, 'Amble', "clickable", `option ${option}`, true);
-
+                setIsTyping(false);
                 // Update the state only after processing the data
                 setLocationFound(locationFound);
                 setAvailableChoices(availableChoices);
@@ -344,30 +370,46 @@ function ChatBox() {
                             );
                         } else if (message.sender === 'Me') {
                             return (
-                                <div key={index} className="Me">
-                                    <p>{message.text}</p>
+                                <div className="Me">
+                                    <img src={userIcon} className="icon user" alt="user" />
+                                    <div className="message-container">
+                                        <p>{message.text}</p>
+                                    </div>
                                 </div>
                             );
                         } else if (message.sender === "Amble") {
                             if (message.type === "clickable") {
                                 return (
-                                    <div key={index} className="Amble" onClick={() => sendMessage(null, message.value)}>
-                                        <p>{message.text}</p>
+                                    <div className="Amble" onClick={() => sendMessage(null, message.value)}>
+                                        <img src={acornIcon} className="icon acorn" alt="acorn" />
+                                        <div className="message-container">
+                                            <p>{message.text}</p>
+                                        </div>
                                     </div>
                                 );
                             } else {
                                 return (
-                                    <div key={index} className="Amble">
-                                        <p>{message.text}</p>
+                                    <div className="Amble">
+                                        <img src={squirrelIcon} className="icon squirrel" alt="squirrel" />
+                                        <div className="message-container">
+                                            <p>{message.text}</p>
+                                        </div>
                                     </div>
                                 );
                             }
                         }
                     })}
+                    {isTyping && (
+                        <Typist className="AmbleTyping">
+                            Amble is typing...
+                        </Typist>
+                    )}
                 </div>
+            <div ref={messagesEndRef} />
             </div>
         </ArrayContext.Provider>
     );
+    
     
 }
 
