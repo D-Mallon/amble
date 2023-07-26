@@ -77,7 +77,7 @@ def calculate_distance(lat1, lon1, lat2, lon2):
     distance = R * c
     return distance
     
-def magic(user_latitude, user_longitude, hour, dist):
+def magic(user_latitude, user_longitude, hour, dist, endLatitude, endLongitude):
 
     print(f"Starting location: ({user_latitude}, {user_longitude})")
     print("-----------------------------------------")
