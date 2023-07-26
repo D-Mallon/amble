@@ -62,7 +62,7 @@ const theme = createTheme({
           <small>- {author}</small>
         </div>
         <div className="btn-container">
-        <button className="btn" onClick={GetNewQuote}>Get a New Quote</button>
+        <button className="btn" onClick={GetNewQuote}>Get a new thought</button>
         </div>
       </div>
 
