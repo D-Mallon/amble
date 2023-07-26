@@ -77,13 +77,16 @@ def calculate_distance(lat1, lon1, lat2, lon2):
     distance = R * c
     return distance
     
-def magic(user_latitude, user_longitude, hour):
+def magic(user_latitude, user_longitude, hour, dist):
 
     print(f"Starting location: ({user_latitude}, {user_longitude})")
     print("-----------------------------------------")
 
     # Define the predefined distance to be covered
-    predefined_distance = 2  # Adjust this value as needed
+    if dist > 10:
+        dist = dist/10
+
+    predefined_distance = dist  # Adjust this value as needed
 
     visited_parks = []  # List to store visited parks
 

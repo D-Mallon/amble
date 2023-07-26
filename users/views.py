@@ -35,7 +35,8 @@ def handle_routeinpput_data(request):
         latitude = request.POST.get("latitude")
         longitude = request.POST.get("longitude")
         hour = request.POST.get("hour")
-        response_data = {"waypoints": magic(float(latitude), float(longitude), str(hour))}
+        dist = request.POST.get("distance")
+        response_data = {"waypoints": magic(float(latitude), float(longitude), str(hour), float(dist))}
         return JsonResponse(response_data)
 
 #Function to view user preferences data
