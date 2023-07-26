@@ -37,8 +37,6 @@ function App() {
     waypoints: [],
   });
 
-
-
   return (
     <div>
       <Router>
