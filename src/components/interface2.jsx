@@ -42,7 +42,7 @@ function Interface2({ inputValues, setInputValues }) {
     const navigate_homepage=useNavigate();
 
     const handleButtonClick_close = () =>{
-        navigate_homepage('/homepage')
+        navigate_homepage('/landingpage')
     }
 
 
@@ -153,7 +153,7 @@ function Interface2({ inputValues, setInputValues }) {
                 <CloseIcon sx={{ fontSize: 27 , color: 'white'}} />
               </div>
             </div>
-            {/* <Map /> */}
+        
             <Map inputValues={inputValues} setInputValues={setInputValues} />
           </div>
         </div>
