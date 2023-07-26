@@ -42,11 +42,12 @@ const lon = -73.9934;
 const node = 'Yeshiva University Museum';
 const dist = 7;
 const address = '415 East Houston Street, 10002 Manhattan';
+const date = 'July 26';
 
-  // Define options using an array
+  // Define options
   const options = [
     { value: '', label: 'Select a Resource' },
-    { value: 'Tell me one thing good that happened on July 26', label: '1. Tell me something good that happened on this date' },
+    { value: `Tell me one thing good that happened on ${date}`, label: '1. Tell me something good that happened on this date' },
     { value: `Give me a short paragraph on ${node}`, label: '2. Give me a short paragraph on an interesting place on my amble' },
     { value: `Suggest some mindfulness classes around ${address} `, label: '3. Suggest some mindfulness classes I might find around my amble' },
     { value: `On average how many calories will I burn on a ${dist} mile walk?`, label: '4. On average how many calories will I burn on a this walk?' },
@@ -58,8 +59,6 @@ const address = '415 East Houston Street, 10002 Manhattan';
       <div className='menubar-area'>
       <MenuBar2 />
       </div>
-
-        <div className='landing-page-container'>
           <select value={userInput} onChange={handleChange}>
            
             {options.map((option) => (
@@ -71,12 +70,10 @@ const address = '415 East Houston Street, 10002 Manhattan';
           </div>
           {response && <div>{response}
           </div>}
-          {/* <div style={{ textAlign: 'center', marginTop: '20px' }}>
+          <div style={{ textAlign: 'center', marginTop: '20px' }}>
           Powered by ChatGPT
-          </div> */}
-
-        </div>
-        {/* <div className='endbar'></div> */}
+          </div>
+        <div className='endbar'></div>
     </div>
   );
 };
