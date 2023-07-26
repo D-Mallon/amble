@@ -37,31 +37,46 @@ const ChatGPT = () => {
     },
   });
 
+const lat = 40.7505;
+const lon = -73.9934;
+const node = 'Yeshiva University Museum';
+const dist = 7;
+const address = '415 East Houston Street, 10002 Manhattan';
+
+  // Define options using an array
+  const options = [
+    { value: '', label: 'Select a Resource' },
+    { value: 'Tell me one thing good that happened on July 26', label: '1. Tell me something good that happened on this date' },
+    { value: `Give me a short paragraph on ${node}`, label: '2. Give me a short paragraph on an interesting place on my amble' },
+    { value: `Suggest some mindfulness classes around ${address} `, label: '3. Suggest some mindfulness classes I might find around my amble' },
+    { value: `On average how many calories will I burn on a ${dist} mile walk?`, label: '4. On average how many calories will I burn on a this walk?' },
+    { value: `What point of interest is found around longitude ${lon} and latitude ${lat}?`, label: '5. Is there anything interesting to see on my amble ?' }
+  ];
+
   return (
     <div className='landing-page-container'>
       <div className='menubar-area'>
       <MenuBar2 />
       </div>
-        <div className='resources-pics-container'>
-          <div>
+
+        <div className='landing-page-container'>
           <select value={userInput} onChange={handleChange}>
-            <option value="">Select a Resource</option>
-            <option value="Tell me one fact that will cheer up my day">1. Tell me one fact that will cheer up my day</option>
-            <option value="Give me a short paragraph on the Yeshiva University Museum">2. Give me a short paragraph on the Yeshiva University Museum</option>
-            <option value="Suggest some mindfulness classes around 415 East Houston Street, 10002 Manhattan">3. Suggest some mindfulness classes around 415 East Houston Street, 10002 Manhattan</option>
-            <option value="On average how many calorifies will I burn on a 5 mile walk?">4. On average how many calorifies will I burn on a 5 mile walk?</option>
-            <option value="Is there anything interesting at longitude -73.9934 and latitude 40.7505?">5. Is there anything interesting at longitude -73.9934 and latitude 40.7505?</option>
+           
+            {options.map((option) => (
+              <option key={option.value} value={option.value}>{option.label}</option>
+            ))}
           </select>
+          <div>
           <button className='submit-button' onClick={handleSubmit}>Submit</button>
+          </div>
           {response && <div>{response}
           </div>}
+          {/* <div style={{ textAlign: 'center', marginTop: '20px' }}>
+          Powered by ChatGPT
+          </div> */}
+
         </div>
-      </div>
-      <div style={{ textAlign: 'center', marginTop: '20px' }}>
-        Powered by ChatGPT
-        <div className='endbar'></div>
-        
-      </div>
+        {/* <div className='endbar'></div> */}
     </div>
   );
 };

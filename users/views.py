@@ -99,8 +99,8 @@ def chatgpt(request):
             {"role": "system", "content": system_message},
             {"role": "user", "content": user_input}
         ],
-        temperature=0.5,
-        max_tokens=150
+        temperature=1,
+        max_tokens=50
         )
         # Extract the response text from the API response
             api_response = response['choices'][0]['message']['content']
