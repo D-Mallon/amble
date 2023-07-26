@@ -18,7 +18,7 @@ import WidgetsRoundedIcon from '@mui/icons-material/WidgetsRounded';
 import WidgetsIcon from '@mui/icons-material/Widgets';
 import FaceIcon from '@mui/icons-material/Face';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import MenuBar from './MenuBar';
+import MenuBar2 from './MenuBar2';
 import MapBackground from './mapbackground';
 import {Link, useNavigate} from 'react-router-dom';
 import MyFunctionButton from './functionbutton';
@@ -42,7 +42,7 @@ function Interface2({ inputValues, setInputValues }) {
     const navigate_homepage=useNavigate();
 
     const handleButtonClick_close = () =>{
-        navigate_homepage('/homepage')
+        navigate_homepage('/landingpage')
     }
 
 
@@ -110,9 +110,15 @@ function Interface2({ inputValues, setInputValues }) {
           className="menu-button"
           alt="Menu button"
         /> */}
-         <MenuBar/>
+          <div className="menubar-area-interface">
+        <MenuBar2 />
+      </div>
          <div className='mapwrapper_routeplan'>
-        <MapBackground zoom={14.4}/>
+         <img
+              src="/static/images/newyork.jpg"
+              alt="pics"
+              className="pic-in-rightbox"
+            ></img>
         </div>
         {isWeatherVisible && (
             <>
@@ -153,7 +159,7 @@ function Interface2({ inputValues, setInputValues }) {
                 <CloseIcon sx={{ fontSize: 27 , color: 'white'}} />
               </div>
             </div>
-            {/* <Map /> */}
+        
             <Map inputValues={inputValues} setInputValues={setInputValues} />
           </div>
         </div>

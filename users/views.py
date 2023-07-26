@@ -5,7 +5,7 @@ from .models import User, UserPref, UserRoute
 from .serializers import UserSerializer, UserPreferencesSerializer, UserRouteSerializer
 from django.http import JsonResponse, HttpResponse, HttpResponseBadRequest
 from .algorithm import *
-from .access_db import *
+# from .access_db import *
 import json
 #Create File Path
 from pathlib import Path
