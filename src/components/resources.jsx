@@ -3,7 +3,7 @@ import {Link, useNavigate} from 'react-router-dom';
 
 import { createTheme,ThemeProvider  } from '@mui/material/styles';
 import MenuBar2 from './MenuBar2';
-import './HomePage2.css';
+import './resources.css';
 import MyButton from './mainbutton';
 import MyFunctionButton from './functionbutton';
 import MapBackground from './mapbackground';
