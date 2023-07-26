@@ -7,6 +7,14 @@ from django.http import JsonResponse, HttpResponse, HttpResponseBadRequest
 from .algorithm import *
 from .access_db import *
 import json
+import requests
+
+# Set up environmental variables
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+
 #Create File Path
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -69,3 +77,32 @@ def getquote(request):
     with open(file_path_quote, "r") as file:
         response_data = json.load(file)
     return JsonResponse(response_data)
+
+#Function to get ChatGPT resposnse
+def chatbot_api_view(request):
+    # Set up environmental variables
+    API_KEY = os.environ.get("CHAT_GPT_API_KEY")
+    if request.method == 'POST':
+        user_input = request.POST.get('input')
+
+        # Make API request to the Chatbot API using requests library
+        chatbot_api_url = 'https://api.example.com/chatbot'
+        api_key = 'API_KEY'
+        headers = {
+            'Authorization': f'Bearer {api_key}',
+        }
+        data = {
+            'message': user_input,
+        }
+
+        try:
+            response = requests.post(chatbot_api_url, headers=headers, data=data)
+            response_data = response.json()
+            chatbot_response = response_data.get('response', 'Chatbot failed to respond')
+            return JsonResponse({'response': chatbot_response})
+        except requests.exceptions.RequestException as e:
+            # Handle API request errors
+            return JsonResponse({'error': 'Error making API request'})
+
+    # Handle invalid HTTP methods (GET, PUT, DELETE, etc.)
+    return JsonResponse({'error': 'Invalid request method'})

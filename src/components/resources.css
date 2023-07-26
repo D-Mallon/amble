@@ -85,6 +85,7 @@ html {
   /* Extra CSS for the Resources Page */
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
   .mapwrapper_landingpage {
+    
     background-color: #ffffff;
     width: 100%;
     height: 1000px;
@@ -165,6 +166,8 @@ html {
   }
   
     .resources-pics-container {
+      /* background-image: url('/static/images/newyork.jpg'); */
+      /* opacity: .2; */
       background-color: rgb(237, 240, 237);
       background-size: cover; /* 按比例缩放背景图，保持其完全覆盖容器 */
       background-position: center; /* 调整背景图的位置为居中 */
