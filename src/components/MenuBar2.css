@@ -92,7 +92,7 @@
     filter: brightness(0.9); /* 悬停时变暗 */
     transition: filter 1s; /* 添加过渡效果 */
     border-radius: 0px;
-    color: #014e3d;
+
   }
 
   .option-text-menubar2{

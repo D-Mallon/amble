@@ -50,3 +50,22 @@
   .wrapper-function-text-signin:hover:after{
     width: 100%;
   }
+
+  .additional-block-close-loginCheck{
+    top:0;
+    right:0;
+    width: 3.2rem;
+    height: 3.2rem;
+    background-color: #004d40;
+    
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+
+  .additional-block-close-loginCheck:hover{
+    background-color: #ffc010;
+  }
+

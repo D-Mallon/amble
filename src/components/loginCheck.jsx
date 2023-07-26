@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import "./loginCheck.css";
 import {Link, useNavigate} from 'react-router-dom';
-
+import CloseIcon from '@mui/icons-material/Close';
 
 const LoginCheck = () => {
+  const navigate = useNavigate();
+  const togglehomepage = () => {
+    navigate("/landingpage");
+  };
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -36,6 +41,9 @@ const LoginCheck = () => {
 
   return (
     <div className="login-area">
+      <div className="additional-block-close-loginCheck" onClick={togglehomepage}>
+                <CloseIcon sx={{ fontSize: 35 , color: 'white' }} />
+              </div>
        <div>
       <h1 className='signin-text1'>Sign in to your account</h1>
       <p className='signin-text2'>

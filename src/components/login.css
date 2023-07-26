@@ -15,7 +15,7 @@
     margin-bottom: 10%;
     width:250px;
     height:40px;
-    border: 1.5px solid #00684A;
+    border: 1.5px solid #014e3d;
 }
 
 .last_name{
@@ -23,7 +23,7 @@
     margin-bottom: 10%;
     width:250px;
     height:40px;
-    border: 1.5px solid #00684A;
+    border: 1.5px solid #014e3d;
 }
 
 .email{
@@ -31,7 +31,7 @@
     margin-bottom: 10%;
     width:250px;
     height:40px;
-    border: 1.5px solid #00684A;
+    border: 1.5px solid #014e3d;
 }
 
 .address{
@@ -39,7 +39,7 @@
     margin-bottom: 10%;
     width:250px;
     height:40px;
-    border: 1.5px solid #00684A;
+    border: 1.5px solid #014e3d;
 }
 
 .password{
@@ -47,7 +47,7 @@
     margin-bottom: 25%;
     width:250px;
     height:40px;
-    border: 1.5px solid #00684A;
+    border: 1.5px solid #014e3d;
 }
 
 .submit-container {
@@ -66,15 +66,7 @@
     z-index: 1;
 }
 
-.submit-button {
-    background-color: #004d40;
-    color: #CBDAC5;
-    border: none;
-    border-radius: 0;
-    padding: 15px 30px;
-    cursor: pointer;
-    margin-top: 2rem;
-  }
+
 
 
   .wrapper-function-login{
@@ -158,6 +150,45 @@
   font-size: 16px;
 }
 
+.additional-block-close-login{
+    top:0;
+    right:0;
+    width: 3.2rem;
+    height: 3.2rem;
+    background-color: #004d40;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .additional-block-close-login:hover{
+    background-color: #ffc010;
+  }
 
 
 
+.firstnamebox{
+    display: flex;
+    flex-direction: column;
+}
+
+.lastnamebox{
+    display: flex;
+    flex-direction: column;
+}
+
+.emailbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.addressbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.passwordbox{
+    display: flex;
+    flex-direction: column;
+}

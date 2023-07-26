@@ -34,60 +34,46 @@ export default function MenuBar2() {
   const profileButtonRef = useRef(null);
   const [isRegVisible, setRegVisible] = useState(false);
 
-  const hideElements_Signin = () => {
-    document
-      .querySelector(".additional-block-close-Reg-menu")
-      .classList.add("hide");
-    document.querySelector(".overlay-Reg").classList.add("hide");
-    document.querySelector(".Reg-menu").classList.add("hide");
-    document.querySelector(".additional-blocks-Reg").classList.add("hide");
-    document.querySelector(".additional-block-text-Reg").classList.add("hide");
-  };
+  // const hideElements_Signin = () => {
+  //   document
+  //     .querySelector(".additional-block-close-Reg-menu")
+  //     .classList.add("hide");
+  //   document.querySelector(".overlay-Reg").classList.add("hide");
+  //   document.querySelector(".Reg-menu").classList.add("hide");
+  //   document.querySelector(".additional-blocks-Reg").classList.add("hide");
+  //   document.querySelector(".additional-block-text-Reg").classList.add("hide");
+  // };
 
-  const hideElements_Reg = () => {
-    document
-      .querySelector(".additional-block-close-Reg-menu")
-      .classList.add("hide");
-    document.querySelector(".overlay-Reg").classList.add("hide");
-    document.querySelector(".Reg-menu").classList.add("hide");
-    document.querySelector(".additional-blocks-Reg").classList.add("hide");
-    document.querySelector(".additional-block-text-Reg").classList.add("hide");
-  };
+  // const hideElements_Reg = () => {
+  //   document
+  //     .querySelector(".additional-block-close-Reg-menu")
+  //     .classList.add("hide");
+  //   document.querySelector(".overlay-Reg").classList.add("hide");
+  //   document.querySelector(".Reg-menu").classList.add("hide");
+  //   document.querySelector(".additional-blocks-Reg").classList.add("hide");
+  //   document.querySelector(".additional-block-text-Reg").classList.add("hide");
+  // };
 
-  const exitReg = () => {
-    // 其他逻辑
-    hideElements_Reg();
-  };
+  // const exitReg = () => {
+  //   // 其他逻辑
+  //   hideElements_Reg();
+  // };
 
-  const exitSignin = () => {
-    // 其他逻辑
-    hideElements_Signin();
-  };
+  // const exitSignin = () => {
+  //   // 其他逻辑
+  //   hideElements_Signin();
+  // };
 
   const toggleOptions = () => {
     setOptionsVisible(!isOptionsVisible);
   };
 
   const toggleReg = () => {
-    if (!isRegVisible) {
-      setRegVisible(true);
-    } else {
-      exitReg();
-      setTimeout(() => {
-        setRegVisible(false);
-      }, 1000);
-    }
+    navigate("/login");
   };
 
   const toggleSignin = () => {
-    if (!isSigninVisible) {
-      setSigninVisible(true);
-    } else {
-      exitSignin();
-      setTimeout(() => {
-        setSigninVisible(false);
-      }, 1000);
-    }
+    navigate("/loginCheck");
   };
 
   const handleClickOutside = (event) => {
@@ -165,26 +151,7 @@ export default function MenuBar2() {
             </div>
           )}
         </div>
-        {isRegVisible && (
-          <>
-            <div className={`Reg-menu ${isRegVisible ? "show" : ""}`}>
-              <div className="additional-blocks-Reg">
-                <div className="additional-block-text-Reg">
-                  <span className="text_bar_2-Reg">Sign Up</span>
-                </div>
-                <div className="additional-block-close-Reg-menu">
-                  <CloseIcon
-                    sx={{ fontSize: 27, color: "white" }}
-                    onClick={toggleReg}
-                  />
-                </div>
-              </div>
-              <Login />
-            </div>
-
-            <div className="overlay-Reg"></div>
-          </>
-        )}
+      
       </div>
     </ThemeProvider>
   );

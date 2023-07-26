@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "./login.css";
-
+import CloseIcon from '@mui/icons-material/Close';
 import {Link, useNavigate} from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const togglehomepage = () => {
+    navigate("/landingpage");
+  };
+
   const [formData, setFormData] = useState({
     first_name: '',
     last_name: '',
@@ -53,6 +59,10 @@ const Login = () => {
   return (
     <div>
       <div className="login-area">
+        <div className="additional-block-close-login" onClick={togglehomepage}>
+                <CloseIcon sx={{ fontSize: 35 , color: 'white' }} />
+              </div>
+       
 
       <div>
         <h1 className="signup-text1">Sign up for a free account</h1>
@@ -64,7 +74,7 @@ const Login = () => {
         </p> 
         </div>
     <form onSubmit={handleSubmit}>
-            <div>
+            <div className='firstnamebox'>
             <label htmlFor="first_name">First Name:</label>
             <input
                 type="text"
@@ -75,8 +85,8 @@ const Login = () => {
                 onChange={handleChange}
                 ></input>
             </div>
-            <div>
-            <label htmlFor="last_name">Last Name:</label>
+            <div className='lastnamebox'>
+            <label  htmlFor="last_name">Last Name:</label >
             <input
                 type="text"
                 name="last_name"
@@ -85,8 +95,8 @@ const Login = () => {
                 onChange={handleChange}
                 ></input>
             </div>
-            <div>
-                <label htmlFor="username">Email (will be your username):</label>
+            <div className='usernamebox'>
+                <label  htmlFor="username">Email (will be your username):</label >
                 <input
                     type="text"
                     name="username"
@@ -95,7 +105,7 @@ const Login = () => {
                     onChange={handleChange}
                     ></input>
             </div>
-            <div>
+            <div className='addressbox'>
                 <label htmlFor="address">Address:</label>
                 <input
                     type="text"
@@ -106,7 +116,7 @@ const Login = () => {
                     onChange={handleChange}
                     ></input>
             </div>
-            <div>
+            <div className='passwordbox'>
                 <label htmlFor="password">Password:</label>
                 <input
                     type="text"
