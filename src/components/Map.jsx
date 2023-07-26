@@ -123,6 +123,12 @@ const Map = () => {
     time.setHours(hours, minutes);
     setInputValues(prevValues => ({ ...prevValues, time }));
   };
+
+  const handleSliderChange = (event) => {
+    const newDistance = event.target.value;
+    setInputValues(prevValues => ({...prevValues, distance: newDistance}));
+    console.log("handleSliderChange", inputValues);
+  };
   
   const handleInputSubmit = async (e) => {   
     e.preventDefault();
@@ -161,7 +167,7 @@ const Map = () => {
       <span className="text_bar-mapfunction">My Journey Planner</span>
         </div>
         <div className='when-input'>
-          <p>When would you like to leave?</p>
+          <p>future issue</p>
           <Stack spacing={2} direction="row" justifyContent="center" paddingBottom="15px">
             <Button className='now-button'
             sx={{ width: "100px", height: "2.5rem" }}
@@ -179,7 +185,7 @@ const Map = () => {
               sx={{ width: "100px", height: "2.5rem" }}
               style={laterSelected ?
                 {borderRadius: 0} :
-                { borderRadius: 0,backgroundColor: 'transparent', borderColor:'black', color: 'black', boxShadow: 'none' }
+                { borderRadius: 0, backgroundColor: 'transparent', borderColor:'black', color: 'black', boxShadow: 'none' }
               }
               onClick={handleLaterButtonClick}
             >
@@ -214,7 +220,7 @@ const Map = () => {
                 max={sliderUnit === 'km' ? 10 : 100}
                 step={sliderUnit === 'km' ? 0.5 : 5}
                 valueLabelDisplay="auto"
-                onChange={(event, newValue) => setSliderValue(newValue)}
+                onChange={(event, newValue) => {setSliderValue(newValue), handleSliderChange(event)}}
                 onChangeCommitted={() => { setShowBeginLocationInput(true) }}
               />
               <Button
@@ -238,6 +244,7 @@ const Map = () => {
                     setSliderValue(newValue);
                     setSliderUnit('km');
                   }
+                  handleSliderChange({target: {value: sliderValue}});
                 }}
               >
                 {sliderUnit === 'km' ? `${sliderValue} km` : `${sliderValue} mins`}
@@ -312,7 +319,7 @@ const Map = () => {
                 options={suggestions}
                 getOptionLabel={(option) => option.label}
                 isOptionEqualToValue={() => true === true}
-                style={{ borderRadius: 0,width: 350, paddingBottom: "15px", color: 'black', borderRadius: 0  }}
+                style={{ width: 350, paddingBottom: "15px", color: 'black', borderRadius: 0  }}
                 onInputChange={handlePlaceNameChange}
                 onChange={(event, newValue) => {
                   if (newValue) {
@@ -415,7 +422,7 @@ const Map = () => {
                   variant={endAddressSelected ? "contained" : "outlined"}
                   style={endAddressSelected ?
                     {borderRadius: 0} :
-                    {borderRadius: 0, backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none', borderRadius: 0  }
+                    {backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none', borderRadius: 0  }
                   }>
                   Search
                 </Button>

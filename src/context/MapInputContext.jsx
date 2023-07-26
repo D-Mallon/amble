@@ -17,6 +17,7 @@ export const MapInputProvider = ({ children }) => {
       "endLatitude": 40.72540497175606,
       "endLongitude": -74.01052594184875,
       "hour": 0,
+      "distance": 0,
       waypoints: [],
     };
   });
