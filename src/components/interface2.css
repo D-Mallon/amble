@@ -301,6 +301,7 @@
     align-items: center;
     animation: fadeIn 0.4s ease-in-out forwards;
     animation-delay: 0.2s;
+    cursor: pointer;
   }
   
   .additional-block-close {
@@ -311,6 +312,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
   
   .additional-block-weather {
@@ -321,6 +323,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
   
   .close-button {
@@ -406,7 +409,3 @@
       opacity: 0;
     }
   }
-  
-  
-  
-  

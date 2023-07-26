@@ -34,12 +34,11 @@ function App() {
           <MapInputProvider>
             <Routes>
               <Route exact path="/" element={<LandingPage />} />
-              <Route exact path="/interface" element={<Interface />} />
+              <Route exact path="/map" element={<Interface2 />} />
               <Route path="/login" element={<Login />} />
               <Route path="/loginCheck" element={<LoginCheck />} />
               <Route path="/userpref" element={<UserPreferences />} />
               <Route path="*" element={<MatchAllRoute />} />
-              <Route path="/interface-two" element={<Interface2 />} />
               <Route path="/showroute" element={<ShowRoute />} />
               <Route path="/homepage" element={<HomePage />} />
               <Route path="/signin" element={<Signin />} />

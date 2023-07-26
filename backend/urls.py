@@ -19,11 +19,10 @@ urlpatterns = [
     path("", TemplateView.as_view(template_name="base.html")),
     path("login", TemplateView.as_view(template_name="base.html")),
     path("comms", TemplateView.as_view(template_name="base.html")),
-    path("interface", TemplateView.as_view(template_name="base.html")),
     path("homepage", TemplateView.as_view(template_name="base.html")),
     path("showroute", TemplateView.as_view(template_name="base.html")),
     path("landingpage", TemplateView.as_view(template_name="base.html")),
     path("resources", TemplateView.as_view(template_name="base.html")),
     path("quotes", TemplateView.as_view(template_name="base.html")),
-    path("interface-two", TemplateView.as_view(template_name="base.html")),
+    path("map", TemplateView.as_view(template_name="base.html")),
 ]
