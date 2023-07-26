@@ -4,6 +4,7 @@ import './Map.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import DateTimePicker from 'react-datetime-picker';
 import axios from 'axios';
+import { useMapInput } from '../context/MapInputContext';
 
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
@@ -31,7 +32,10 @@ import usePlaceNameChange from './usePlaceNameChange';
 const apiKey = import.meta.env.VITE_MAPBOX_API_KEY
 mapboxgl.accessToken = apiKey;
 
-const Map = ({ inputValues, setInputValues }) => {
+const Map = () => {
+
+  const { inputValues, setInputValues } = useMapInput();
+
   const mapContainer = useRef(null);
   const [lat, setLat] = useState(40.73);
   const [lng, setLng] = useState(-73.445);
@@ -119,6 +123,12 @@ const Map = ({ inputValues, setInputValues }) => {
     time.setHours(hours, minutes);
     setInputValues(prevValues => ({ ...prevValues, time }));
   };
+
+  const handleSliderChange = (event) => {
+    const newDistance = event.target.value;
+    setInputValues(prevValues => ({...prevValues, distance: newDistance}));
+    console.log("handleSliderChange", inputValues);
+  };
   
   const handleInputSubmit = async (e) => {   
     e.preventDefault();
@@ -157,7 +167,7 @@ const Map = ({ inputValues, setInputValues }) => {
       <span className="text_bar-mapfunction">My Journey Planner</span>
         </div>
         <div className='when-input'>
-          <p>When would you like to leave?</p>
+          <p>future issue</p>
           <Stack spacing={2} direction="row" justifyContent="center" paddingBottom="15px">
             <Button className='now-button'
             sx={{ width: "100px", height: "2.5rem" }}
@@ -175,7 +185,7 @@ const Map = ({ inputValues, setInputValues }) => {
               sx={{ width: "100px", height: "2.5rem" }}
               style={laterSelected ?
                 {borderRadius: 0} :
-                { borderRadius: 0,backgroundColor: 'transparent', borderColor:'black', color: 'black', boxShadow: 'none' }
+                { borderRadius: 0, backgroundColor: 'transparent', borderColor:'black', color: 'black', boxShadow: 'none' }
               }
               onClick={handleLaterButtonClick}
             >
@@ -210,7 +220,7 @@ const Map = ({ inputValues, setInputValues }) => {
                 max={sliderUnit === 'km' ? 10 : 100}
                 step={sliderUnit === 'km' ? 0.5 : 5}
                 valueLabelDisplay="auto"
-                onChange={(event, newValue) => setSliderValue(newValue)}
+                onChange={(event, newValue) => {setSliderValue(newValue), handleSliderChange(event)}}
                 onChangeCommitted={() => { setShowBeginLocationInput(true) }}
               />
               <Button
@@ -234,6 +244,7 @@ const Map = ({ inputValues, setInputValues }) => {
                     setSliderValue(newValue);
                     setSliderUnit('km');
                   }
+                  handleSliderChange({target: {value: sliderValue}});
                 }}
               >
                 {sliderUnit === 'km' ? `${sliderValue} km` : `${sliderValue} mins`}
@@ -308,7 +319,7 @@ const Map = ({ inputValues, setInputValues }) => {
                 options={suggestions}
                 getOptionLabel={(option) => option.label}
                 isOptionEqualToValue={() => true === true}
-                style={{ borderRadius: 0,width: 350, paddingBottom: "15px", color: 'black', borderRadius: 0  }}
+                style={{ width: 350, paddingBottom: "15px", color: 'black', borderRadius: 0  }}
                 onInputChange={handlePlaceNameChange}
                 onChange={(event, newValue) => {
                   if (newValue) {
@@ -411,7 +422,7 @@ const Map = ({ inputValues, setInputValues }) => {
                   variant={endAddressSelected ? "contained" : "outlined"}
                   style={endAddressSelected ?
                     {borderRadius: 0} :
-                    {borderRadius: 0, backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none', borderRadius: 0  }
+                    {backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none', borderRadius: 0  }
                   }>
                   Search
                 </Button>

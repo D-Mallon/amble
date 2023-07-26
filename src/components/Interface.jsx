@@ -4,8 +4,7 @@ import "./Interface.css";
 import Map from "./Map";
 import StartPlace from "./start_place";
 
-function Interface({ inputValues, setInputValues }) {
-
+function Interface() {
   return (
     <div>
       <div className="interface-container">
@@ -13,7 +12,7 @@ function Interface({ inputValues, setInputValues }) {
           <StartPlace inputValues={inputValues} setInputValues={setInputValues} />
         </div> */}
         <div className="map-container">
-          <Map inputValues={inputValues} setInputValues={setInputValues} />
+          <Map />
         </div>
       </div>
     </div >

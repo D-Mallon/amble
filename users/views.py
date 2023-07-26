@@ -36,7 +36,10 @@ def handle_routeinpput_data(request):
         latitude = request.POST.get("latitude")
         longitude = request.POST.get("longitude")
         hour = request.POST.get("hour")
-        response_data = {"waypoints": magic(float(latitude), float(longitude), str(hour))}
+        dist = request.POST.get("distance")
+        endLatitude = request.POST.get("endLatitude")
+        endLongitude = request.POST.get("endLongitude")
+        response_data = {"waypoints": magic(float(latitude), float(longitude), str(hour), float(dist), float(endLatitude), float(endLongitude))}
         return JsonResponse(response_data)
 
 #Function to view user preferences data
@@ -79,3 +82,10 @@ def chatbox_options(request):
         return JsonResponse({'data': data})
     elif request.method == 'GET':
         return Response({"message": "GET request received."}, status=200)
+    
+#Function to get quotation data to the front end
+def getquote(request):
+    file_path_quote = BASE_DIR /'src'/'json-files'/'quotations.json'
+    with open(file_path_quote, "r") as file:
+        response_data = json.load(file)
+    return JsonResponse(response_data)

@@ -3,10 +3,38 @@ import {Link, useNavigate} from 'react-router-dom';
 
 import { createTheme,ThemeProvider  } from '@mui/material/styles';
 import MenuBar2 from './MenuBar2';
-import './HomePage2.css';
+import './resources.css';
 import MyButton from './mainbutton';
 import MyFunctionButton from './functionbutton';
 import MapBackground from './mapbackground';
+
+// import './quotes.css';
+import axios from 'axios';
+
+function Resources() {
+  const [quote, setQuote] = useState("");
+  const [author, setAuthor] = useState("");
+
+  useEffect(() => {
+    GetNewQuote();
+    }, []);
+
+  let GetNewQuote = () => {
+        axios.get('users/getquote')
+        .then((response) => {
+        const quotationsData = response.data;
+        const quoteAuthors = Object.keys(quotationsData);
+        // console.log(quoteAuthors)
+        const randomIndex = Math.floor(Math.random() * quoteAuthors.length);
+        const randomAuthor = quoteAuthors[randomIndex];
+        const randomQuote = quotationsData[randomAuthor];
+        setQuote(randomQuote);
+        setAuthor(randomAuthor);
+        })
+        .catch((error) => {
+        console.error('Error fetching data:', error);
+    });
+};
 
 const theme = createTheme({
     palette: {
@@ -19,38 +47,32 @@ const theme = createTheme({
     },
   });
   
-
-
-  function LandingPage() {
     return (
       <div className='landing-page-container'>
+      
       <div className='menubar-area'>
       <MenuBar2 />
       </div>
-      <div className='homepage-pics-container'>
-      <div className='left-color-block'>
-      <span className='hometext-title'> 
-          <span style={{ fontSize: '36px' ,fontWeight: 500}}>amble  <br></br>- the peaceful way</span>
-          <br></br>
-          <br></br>
-          <br></br>
-          <span style={{ fontSize: '16px' }}>The purpose of our application is to generate walking routes for users to guide them though the quiet corners of Manhattan. 
-          <br></br>
-          <br></br>
-          The route generating algorthm takes forecast conditions into our machine learning model to determine busyiness based on taxizone, citibike and subway data and pair this infomation with crimes statistics for areas of Manhattan to ensure users can enjoy a quiet, peaceful and safe journey!
-          </span>
-          </span>
-          <div  className='home-button-container'>
-          <MyButton/>
-          </div>
-      </div>
-      </div>
-      <div className='mapwrapper_landingpage'>
-          <MapBackground  zoom={11}/>
+      
+      <div className='resources-pics-container'>
+      
+        <div className ="quotebox">
+        <div className="quote">
+          <h2>{quote}</h2>
+          <small>- {author}</small>
         </div>
+        <div className="btn-container">
+        <button className="btn" onClick={GetNewQuote}>Get a new thought</button>
+        </div>
+      </div>
 
+          {/* <div  className='home-button-container'>
+          <MyButton/>
+          </div> */}
+      </div>
+   
         <div className='endbar'></div>
         </div>
     );
   }
-  export default ResourcePage;
+  export default Resources;

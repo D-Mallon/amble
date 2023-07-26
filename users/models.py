@@ -13,7 +13,7 @@ class UserPref(models.Model):
     park = models.CharField("Parks", max_length=300, null=True)
     library = models.CharField("Libraries", max_length=300, null=True)
     worship = models.CharField("Places of Worship", max_length=300, null=True)
-    community = models.CharField("Community Centres", max_length=300, null=True)
+    community = models.CharField("Community Centres", max_length=200, null=True)
     museum = models.CharField("Museums & Art Galleries", max_length=300, null=True)
     walking_node = models.CharField("Other Walking Nodes", max_length=300, null=True)
     park_node = models.CharField("Other Park Nodes", max_length=300, null=True)

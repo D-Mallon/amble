@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { MapInputProvider } from './context/MapInputContext';
 import { ArrayProvider } from "./context/ArrayProvider";
 import "./App.css";
 
@@ -9,7 +10,8 @@ import LoginCheck from "./components/loginCheck";
 import UserPreferences from "./components/userpref";
 import ChatBox from "./components/ChatBox";
 import Comms from "./components/Comms.jsx";
-// import ResourcePage from './components/resources';
+// import Quotes from './components/quotes';
+import Resources from './components/resources';
 
 import HomePage from './components/HomePage';
 import Interface2 from './components/interface2';
@@ -27,43 +29,30 @@ function MatchAllRoute() {
 }
 
 function App() {
-  const [inputValues, setInputValues] = useState({
-    "latitude": 40.74218481889335,
-    "longitude": -73.98786664009094,
-    // "endLatitude": 40.72540497175606,
-    // "endLongitude": -74.01052594184875,
-    "endLatitude": 40.72540497175606,
-    "endLongitude": -74.01052594184875,
-    "hour": 0,
-    waypoints: [],
-  });
-
-
-
   return (
     <div>
       <Router>
         <ArrayProvider> 
         <AuthContextProvider>
-
-        <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/interface" element={<Interface inputValues={inputValues} setInputValues={setInputValues} />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/logincheck" element={<LoginCheck />} />
-          <Route path="/userpref" element={<UserPreferences />} />
-          <Route path="*" element={<MatchAllRoute />} />
-          <Route path="/interface-two" element={<Interface2  inputValues={inputValues} setInputValues={setInputValues} />} />
-          <Route path="/chatbox" element={<ChatBox  inputValues={inputValues} setInputValues={setInputValues} />} />
-          <Route path="/showroute" element={<ShowRoute />} />
-          <Route path="/homepage" element={<HomePage />} />
-          <Route path="/signin" element={<Signin />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/landingpage" element={<LandingPage />} />
-          {/* <Route path="/resources" element={<ResourcePage />} /> */}
-          <Route path="/account" element={ <ProtectedRoute><Account /></ProtectedRoute>} />
-        </Routes>
-
+          <MapInputProvider>
+            <Routes>
+              <Route exact path="/" element={<LandingPage />} />
+              <Route exact path="/map" element={<Interface2 />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/loginCheck" element={<LoginCheck />} />
+              <Route path="/userpref" element={<UserPreferences />} />
+              <Route path="*" element={<MatchAllRoute />} />
+              <Route path="/chatbox" element={<ChatBox  />} />
+            	<Route path="/showroute" element={<ShowRoute />} />
+              <Route path="/homepage" element={<HomePage />} />
+              <Route path="/signin" element={<Signin />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/homepage" element={<HomePage />} />
+              {/* <Route path="/quotes" element={<Quotes />} /> */}
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
+            </Routes>
+          </MapInputProvider>
         </AuthContextProvider> 
         </ArrayProvider>
       </Router >

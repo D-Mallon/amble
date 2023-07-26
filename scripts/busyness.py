@@ -16,7 +16,7 @@ warnings.filterwarnings('ignore')
 start_time = time.time()
 
 #Create File Paths
-pickle_dir = r"src\Pickle Files" # pickle files directory
+pickle_dir = r"src\pickle_files" # pickle files directory
 taxipath = r"src\json-files" #taxi zone data (name and number)
 busyscore = r"src\json-files" #Busyness Score data
 

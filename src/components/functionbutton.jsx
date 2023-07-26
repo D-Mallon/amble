@@ -3,15 +3,15 @@ import './functionbutton.css'
 
 
 
-function MyFunctionButton() {
+function MyFunctionButton_home() {
 
     return(
       <>
     <div className="wrapper-function-1">
-    <a className="wrapper-function-text" href="#"><span>Gain a Route</span></a>
+    <a className="wrapper-function-text" ><span>↓</span></a>
     </div>
 </>
     );
   }
 
-  export default MyFunctionButton;
+  export default MyFunctionButton_home;
