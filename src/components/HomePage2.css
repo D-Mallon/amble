@@ -67,6 +67,23 @@ html {
   position: relative;
 }
 
+
+  .mapwrapper_landingpage {
+    background-color: #FFEEA9;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    right: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  }
+/* Extra CSS for the Resources Page */
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
 .mapwrapper_landingpage {
   background-color: #ffffff;
   width: 100%;
@@ -147,27 +164,64 @@ html {
     
 }
 
+  .resources-pics-container {
+    background-color: rgb(237, 240, 237);
+    background-size: cover; /* 按比例缩放背景图，保持其完全覆盖容器 */
+    background-position: center; /* 调整背景图的位置为居中 */
+    /* position: relative; */
+    width: 100%;
+    height: 100vh; /* 设置高度为视口的100% */
+    display: flex;
+  }
 
-.endbar {
-  background-color: #014e3d;
-  display: flex;
-  position: relative;
-  /* bottom: 0; */
-  align-items: center;
-  justify-content: space-between;
-  height: 15rem;
-  width: 100%;
-  z-index: 1;
-}
+  /* .Quotebox {
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      align-items: center;
+      flex-direction: column;
+  } */
+  .quote {
+      /* background: url(./assets/bg.jpg); */
+      background-size: cover;
+      width: 1000px;
+      height: 300px;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  .quote h2 {
+      font-size: 1.5em;
+      font-family: 'Lobster', cursive;
+      justify-content: center;
+      align-items: center;
+  }
+  .quote small {
+      font-size: 1.5em;
+      font-family: 'Dancing Script', cursive;
+  }
+  .btn {
+    display: flex;
+    border: 2px solid #008CBA;
+    background: transparent;
+    padding: 10px 15px;
+    color: #008CBA;
+    font-size: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    outline: none;
+    transition: background 1s, color 1s;
+  }
 
-.landing-page-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.guidebutton{
-  display: flex;
-  position: absolute;
-  right: 1%;
-  bottom: 10%;
-}
+  .btn-container {
+    display: grid;
+    justify-content: center; /* Center the button both horizontally and vertically */
+  }
+  .btn:hover{
+    background: #008CBA;
+    color: #fff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
