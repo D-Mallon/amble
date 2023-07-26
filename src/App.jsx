@@ -8,7 +8,7 @@ import Login from "./components/login";
 import LoginCheck from "./components/loginCheck";
 import UserPreferences from "./components/userpref";
 import Comms from "./components/Comms.jsx";
-// import Quotes from './components/quotes';
+import ChatGPT from './components/chatgpt';
 import Resources from './components/resources';
 
 import HomePage from './components/HomePage';
