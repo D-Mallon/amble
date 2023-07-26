@@ -1,4 +1,4 @@
-.wrapper-function-logout{
+.wrapper-function-signin{
     position: fixed;
     /* top: 50%; */
     left: 50%;
@@ -8,12 +8,12 @@
     position: fixed;
   }
   
-  .wrapper-function-text-logout {
+  .wrapper-function-text-signin {
     display: flex;
-    width: 120px;
+    width: 220px;
     height: 50px;
     line-height: 40px;
-    font-size: 18px;
+    font-size: 16px;
     font-family: sans-serif;
     text-decoration: none;
     color: #E3FCF7;
@@ -24,29 +24,29 @@
     transition: all .35s;
     justify-content: center;
     align-items: center;
-    background: #00684A;
+    background: #014e3d;
   }
   
-  .wrapper-function-text-logout span{
+  .wrapper-function-text-signin span{
     position: relative;
     z-index: 2;
   }
   
-  .wrapper-function-text-logout:after{
+  .wrapper-function-text-signin:after{
     position: absolute;
     content: "";
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background: #B1FF05;
+    background: #ffe212;
     transition: all .35s;
   }
   
-  .wrapper-function-text-logout:hover{
-    color: #00684A;
+  .wrapper-function-text-signin:hover{
+    color: #014e3d;
   }
   
-  .wrapper-function-text-logout:hover:after{
+  .wrapper-function-text-signin:hover:after{
     width: 100%;
   }

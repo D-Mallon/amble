@@ -1,75 +1,191 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./MenuBar2.css";
-import {Link, useNavigate} from 'react-router-dom';
-import { createTheme,ThemeProvider  } from '@mui/material/styles';
+import { Link, useNavigate } from "react-router-dom";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import WidgetsRoundedIcon from "@mui/icons-material/WidgetsRounded";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CloseIcon from "@mui/icons-material/Close";
 import StarRoundedIcon from "@mui/icons-material/StarRounded";
 import StyleRoundedIcon from "@mui/icons-material/StyleRounded";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
-import Login from './login.jsx';
+import Login from "./login.jsx";
 
 const theme = createTheme({
-    palette: {
-      primary: {
-        main: '#004d40',
-      },
-      secondary: {
-        main: '#004d40',
-      },
+  palette: {
+    primary: {
+      main: "#004d40",
     },
-  });
+    secondary: {
+      main: "#004d40",
+    },
+  },
+});
 
-  const logoImages = [
-    
-    '/static/images/LO1.png',
-    // '/static/images/LO2.png',
-    // '/static/images/LO3.png',
-    // '/static/images/LO4.png',
-    // '/static/images/LO5.png',
-    // '/static/images/LO6.png',
-    // '/static/images/LO7.png',
-    // '/static/images/LO8.png',
-   
-    // Add more logo image paths here if needed
-  ];
-  
+const logoImages = [
+  "/static/images/LO1.png",
+
+  // Add more logo image paths here if needed
+];
 
 export default function MenuBar2() {
-    const navigate=useNavigate();
-    const [logoIndex, setLogoIndex] = useState(0);
+  const [isOptionsVisible, setOptionsVisible] = useState(false);
+  const [isSigninVisible, setSigninVisible] = useState(false);
+  const optionsRef = useRef(null);
+  const profileButtonRef = useRef(null);
+  const [isRegVisible, setRegVisible] = useState(false);
 
-    const handleButtonClick = () =>{
-        navigate('/interface-two')
+  const hideElements_Signin = () => {
+    document
+      .querySelector(".additional-block-close-Reg-menu")
+      .classList.add("hide");
+    document.querySelector(".overlay-Reg").classList.add("hide");
+    document.querySelector(".Reg-menu").classList.add("hide");
+    document.querySelector(".additional-blocks-Reg").classList.add("hide");
+    document.querySelector(".additional-block-text-Reg").classList.add("hide");
+  };
+
+  const hideElements_Reg = () => {
+    document
+      .querySelector(".additional-block-close-Reg-menu")
+      .classList.add("hide");
+    document.querySelector(".overlay-Reg").classList.add("hide");
+    document.querySelector(".Reg-menu").classList.add("hide");
+    document.querySelector(".additional-blocks-Reg").classList.add("hide");
+    document.querySelector(".additional-block-text-Reg").classList.add("hide");
+  };
+
+  const exitReg = () => {
+    // 其他逻辑
+    hideElements_Reg();
+  };
+
+  const exitSignin = () => {
+    // 其他逻辑
+    hideElements_Signin();
+  };
+
+  const toggleOptions = () => {
+    setOptionsVisible(!isOptionsVisible);
+  };
+
+  const toggleReg = () => {
+    if (!isRegVisible) {
+      setRegVisible(true);
+    } else {
+      exitReg();
+      setTimeout(() => {
+        setRegVisible(false);
+      }, 1000);
     }
+  };
 
-    const handleButtonClick2 = () =>{
-      navigate('/landingpage')
-  }
+  const toggleSignin = () => {
+    if (!isSigninVisible) {
+      setSigninVisible(true);
+    } else {
+      exitSignin();
+      setTimeout(() => {
+        setSigninVisible(false);
+      }, 1000);
+    }
+  };
 
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setLogoIndex((prevIndex) => (prevIndex + 1) % logoImages.length);
-      }, 10000); // Change logo every 3 seconds (adjust this interval as needed)
-  
-      return () => {
-        clearInterval(interval);
-      };
-    }, []);
-    return (
-        <ThemeProvider theme={theme}>
-        <div className="menubar2">
-          <div className="logo-wrapper">
-            <img src={logoImages[logoIndex]} className='Logo-amble' alt='Logo' onClick={handleButtonClick2}/>
-          </div>
-          <div className="menu-items">
-            <div className="menu-item" onClick={handleButtonClick}>Create an amble</div>
-            <div className="menu-item">Resources</div>
-            <div className="menu-item">Login/Register</div>
-          </div>
-        </div>
-        </ThemeProvider>
-      );
+  const handleClickOutside = (event) => {
+    if (
+      optionsRef.current &&
+      !optionsRef.current.contains(event.target) &&
+      !profileButtonRef.current.contains(event.target)
+    ) {
+      setOptionsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-  
+  }, []);
+
+  const navigate = useNavigate();
+  const [logoIndex, setLogoIndex] = useState(0);
+
+  const handleButtonClick = () => {
+    navigate("/interface-two");
+  };
+
+  const handleButtonClick2 = () => {
+    navigate("/landingpage");
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLogoIndex((prevIndex) => (prevIndex + 1) % logoImages.length);
+    }, 10000); // Change logo every 3 seconds (adjust this interval as needed)
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+  return (
+    <ThemeProvider theme={theme}>
+      <div className="menubar2">
+        <div className="logo-wrapper">
+          <img
+            src={logoImages[logoIndex]}
+            className="Logo-amble"
+            alt="Logo"
+            onClick={handleButtonClick2}
+          />
+        </div>
+        <div className="menu-items">
+          <div className="menu-item" onClick={handleButtonClick}>
+            Create an amble
+          </div>
+          <div className="menu-item">Resources</div>
+          <div
+            className="menu-item"
+            onClick={toggleOptions}
+            ref={profileButtonRef}
+          >
+            Login/Register
+          </div>
+          {isOptionsVisible && (
+            <div className="options-box-menubar2" ref={optionsRef}>
+              <button className="option-menubar2"onClick={toggleReg}>
+                {" "}
+                <span className="option-text-menubar2" >
+                  Sign Up
+                </span>
+              </button>
+              <button className="option-menubar2"onClick={toggleSignin}>
+                <span className="option-text-menubar2" >
+                  Sign In</span>
+              </button>
+            </div>
+          )}
+        </div>
+        {isRegVisible && (
+          <>
+            <div className={`Reg-menu ${isRegVisible ? "show" : ""}`}>
+              <div className="additional-blocks-Reg">
+                <div className="additional-block-text-Reg">
+                  <span className="text_bar_2-Reg">Sign Up</span>
+                </div>
+                <div className="additional-block-close-Reg-menu">
+                  <CloseIcon
+                    sx={{ fontSize: 27, color: "white" }}
+                    onClick={toggleReg}
+                  />
+                </div>
+              </div>
+              <Login />
+            </div>
+
+            <div className="overlay-Reg"></div>
+          </>
+        )}
+      </div>
+    </ThemeProvider>
+  );
+}

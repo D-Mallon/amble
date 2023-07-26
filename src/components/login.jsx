@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "./login.css";
-import MyFunctionButton_signup from "./functionbutton-signup.jsx"
+
+import {Link, useNavigate} from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -51,7 +53,16 @@ const Login = () => {
   return (
     <div>
       <div className="login-area">
-      <h3>Registration Form</h3>
+
+      <div>
+        <h1 className="signup-text1">Sign up for a free account</h1>
+        <p className="signup-text2">
+          Already have an account yet?{" "}
+          <Link to="/loginCheck" className="signup-text3">
+            Sign in.
+          </Link>
+        </p> 
+        </div>
     <form onSubmit={handleSubmit}>
             <div>
             <label htmlFor="first_name">First Name:</label>
@@ -107,7 +118,9 @@ const Login = () => {
                     ></input>
             </div>
             <div id="error-message"></div>
-      <button type="submit" className='submit-button'>Submit</button>
+            <div className="wrapper-function-login">
+    <a className="wrapper-function-text-login" href="#" type="submit" onClick={handleSubmit}><span>Sign Up</span></a>
+    </div>
           
     </form>
     </div>

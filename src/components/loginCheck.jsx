@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import "./login.css";
+import "./loginCheck.css";
+import {Link, useNavigate} from 'react-router-dom';
+
 
 const LoginCheck = () => {
   const [username, setUsername] = useState('');
@@ -34,7 +36,12 @@ const LoginCheck = () => {
 
   return (
     <div className="login-area">
-      <h3>Login</h3>
+       <div>
+      <h1 className='signin-text1'>Sign in to your account</h1>
+      <p className='signin-text2'>
+          Don't have an account yet? <Link to='/login' className='signin-text3'>Sign up.</Link>
+      </p>
+    </div>
 
       <form onSubmit={handleLogin}>
         <div>
@@ -45,7 +52,9 @@ const LoginCheck = () => {
           <label>Password:</label>
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        <button type="submit" className='submit-button'>Login</button>
+        <div className="wrapper-function-signin">
+    <a className="wrapper-function-text-signin" onClick={handleLogin} href="#" type="submit"><span>Sign In</span></a>
+    </div>
         {error && <p>{error}</p>}
 
       </form>
