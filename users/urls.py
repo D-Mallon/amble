@@ -8,4 +8,5 @@ urlpatterns = [
         path('users/logincheck', views.logincheck),
         path('users/handle_routeinpput_data', views.handle_routeinpput_data),
         path('users/getquote', views.getquote),
+        path('users/chatbot_view', views.chatbot_view),
 ]

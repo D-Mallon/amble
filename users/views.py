@@ -79,10 +79,10 @@ def getquote(request):
     return JsonResponse(response_data)
 
 #Function to get ChatGPT resposnse
-def chatbot_api_view(request):
-    # Set up environmental variables
-    API_KEY = os.environ.get("CHAT_GPT_API_KEY")
+def chatbot_view(request):
+    API_KEY = os.environ.get("CHAT_GPT_API_KEY") # Set up environmental variable
     if request.method == 'POST':
+        data = request.POST
         user_input = request.POST.get('input')
 
         # Make API request to the Chatbot API using requests library

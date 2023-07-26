@@ -5,12 +5,7 @@ import os
 load_dotenv()
 
 openai.api_key = os.environ.get("CHAT_GPT_API_KEY") # Set up environmental variable
-# OPENAI_API_KEY = os.getenv("CHAT_GPT_API_KEY")
-# openai.api_key = "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"
 chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
-
-# Replace 'YOUR_API_KEY' with your actual API key
-# openai.api_key = 'YOUR_API_KEY'
 
 def chat_with_gpt3(prompt):
     try:

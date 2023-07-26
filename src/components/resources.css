@@ -229,3 +229,12 @@ html {
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
   
+    .submit-button {
+      background-color: #004d40;
+      color: #CBDAC5;
+      border: none;
+      border-radius: 0;
+      padding: 15px 30px;
+      cursor: pointer;
+      margin-top: 2rem;
+    }
