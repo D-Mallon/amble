@@ -21,8 +21,8 @@ def define_search_area(waypoint, radius=100):
     Returns both variables in that order.
     """
     m_in_degrees = 0.000898  # approximately 100 meters in degrees
-    lat = waypoint["latitude"]
-    lng = waypoint["longitude"]
+    lat = waypoint["location"]["latitude"]
+    lng = waypoint["location"]["longitude"]
     
     # Calculate bounding box coordinates of 200x200m box
     bound_lower = (lat - (m_in_degrees * 2), lng - (m_in_degrees * 2))

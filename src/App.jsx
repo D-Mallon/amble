@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate} from 'react-router-dom';
+import { ArrayProvider } from "./context/ArrayProvider";
 import "./App.css";
 
 import Interface from "./components/Interface";
@@ -42,6 +43,7 @@ function App() {
   return (
     <div>
       <Router>
+        <ArrayProvider> 
         <AuthContextProvider>
 
         <Routes>
@@ -62,7 +64,8 @@ function App() {
           <Route path="/account" element={ <ProtectedRoute><Account /></ProtectedRoute>} />
         </Routes>
 
-        </AuthContextProvider>
+        </AuthContextProvider> 
+        </ArrayProvider>
       </Router >
     </div >
   );

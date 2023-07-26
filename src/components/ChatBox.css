@@ -43,3 +43,11 @@ form button {
     padding: 10px;
     border-radius: 5px;
 }
+
+.System {
+    align-self: flex-end;
+    background-color: rgb(0, 146, 92);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}

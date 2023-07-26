@@ -66,7 +66,7 @@ def logincheck(request):
 
 #Function to view user preferences data
 @api_view(['GET','POST'])
-def chatbox_options(request):
+def chatbox_options(request): 
     if request.method == 'POST':
         waypoints = request.data.get('waypoints')
         user_choice = request.data.get('user_choice')
