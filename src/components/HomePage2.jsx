@@ -60,7 +60,7 @@ function LandingPage() {
       </div>
       <div className="mapwrapper_landingpage"  id="mapwrapper_landingpage">
         <div className="leftbox">
-          <MapBackground zoom={11.5} />
+          <MapBackground zoom={12.0} />
         </div>
 
         <div className="rightbox">
