@@ -13,7 +13,7 @@ urlpatterns = [
     path('users/logincheck', views.logincheck),
     path('users/getquote', views.getquote),
     path('users/handle_routeinpput_data', views.handle_routeinpput_data),
-    path('users/chatbot_view', views.chatbot_view),
+    path('users/chatgpt', views.chatgpt),
     
     path("loginCheck", TemplateView.as_view(template_name="base.html")),
     path("userpref", TemplateView.as_view(template_name="base.html")),

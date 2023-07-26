@@ -45,21 +45,21 @@ conn.close()
 # print('\n------------------ Query 3 ------------------------------\n')
 # for r in results3:
 #     print(r[1])
-print('\n------------------ Query 4 ------------------------------\n')
-for r in results4:
-    print(f'Password = {r[3]} : Username = {r[5]}')
+# print('\n------------------ Query 4 ------------------------------\n')
+# for r in results4:
+#     print(f'Password = {r[3]} : Username = {r[5]}')
 
 def checklogin (username,password):
     check = False
     for r in results4:
-        print(r[3],r[5])
+        # print(r[3],r[5])
         if r[3] == str(password) and r[5] == str(username):
             check = True
             firstname = r[0]
-            print(f'Hi {firstname}!  Welcome back.')
-            print(f'There is a match so = {check}')
+            # print(f'Hi {firstname}!  Welcome back.')
+            # print(f'There is a match so = {check}')
             return check,firstname
-    print(f'There is NO match so = {check}')   
+    # print(f'There is NO match so = {check}')   
     return check,results4
 
 

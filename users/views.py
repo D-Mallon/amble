@@ -8,6 +8,7 @@ from .algorithm import *
 from .access_db import *
 import json
 import requests
+import openai
 
 # Set up environmental variables
 from dotenv import load_dotenv
@@ -78,31 +79,33 @@ def getquote(request):
         response_data = json.load(file)
     return JsonResponse(response_data)
 
-#Function to get ChatGPT resposnse
-def chatbot_view(request):
-    API_KEY = os.environ.get("CHAT_GPT_API_KEY") # Set up environmental variable
+#Function to get ChatGPT response
+def chatgpt(request):
+    openai.api_key = os.environ.get("CHAT_GPT_API_KEY") # Set up environmental variable
     if request.method == 'POST':
-        data = request.POST
-        user_input = request.POST.get('input')
+        data = json.loads(request.body)
+        user_input = data.get('input','')
 
-        # Make API request to the Chatbot API using requests library
-        chatbot_api_url = 'https://api.example.com/chatbot'
-        api_key = 'API_KEY'
-        headers = {
-            'Authorization': f'Bearer {api_key}',
-        }
-        data = {
-            'message': user_input,
-        }
-
+ # Send the user input to the ChatGPT API
+        system_message = "You are an assistant that knows a lot about various topics. Please provide a detailed answer to the following question."
         try:
-            response = requests.post(chatbot_api_url, headers=headers, data=data)
-            response_data = response.json()
-            chatbot_response = response_data.get('response', 'Chatbot failed to respond')
-            return JsonResponse({'response': chatbot_response})
-        except requests.exceptions.RequestException as e:
-            # Handle API request errors
-            return JsonResponse({'error': 'Error making API request'})
+            response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+            {"role": "system", "content": system_message},
+            {"role": "user", "content": user_input}
+        ],
+        temperature=0.5,
+        max_tokens=50
+        )
+        # Extract the response text from the API response
+            api_response = response['choices'][0]['message']['content']
+        except Exception as e:
+            # Handle exceptions, log the error, or provide a default response if an error occurs
+            api_response = "Sorry, there was an error processing your request."
 
-    # Handle invalid HTTP methods (GET, PUT, DELETE, etc.)
+        response_data = {
+            'message': api_response
+        }
+        return JsonResponse(response_data)
     return JsonResponse({'error': 'Invalid request method'})
