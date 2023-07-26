@@ -4,6 +4,7 @@ import './Map.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import DateTimePicker from 'react-datetime-picker';
 import axios from 'axios';
+import { useMapInput } from '../context/MapInputContext';
 
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
@@ -31,7 +32,10 @@ import usePlaceNameChange from './usePlaceNameChange';
 const apiKey = import.meta.env.VITE_MAPBOX_API_KEY
 mapboxgl.accessToken = apiKey;
 
-const Map = ({ inputValues, setInputValues }) => {
+const Map = () => {
+
+  const { inputValues, setInputValues } = useMapInput();
+
   const mapContainer = useRef(null);
   const [lat, setLat] = useState(40.73);
   const [lng, setLng] = useState(-73.445);

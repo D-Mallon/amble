@@ -35,7 +35,7 @@ const theme = createTheme({
   },
 });
 
-function Interface2({ inputValues, setInputValues }) {
+function Interface2() {
 //   const timeData=useContext(TimeSearchContext); 
 //   console.log(timeData.search);
 
@@ -160,7 +160,7 @@ function Interface2({ inputValues, setInputValues }) {
               </div>
             </div>
         
-            <Map inputValues={inputValues} setInputValues={setInputValues} />
+            <Map />
           </div>
         </div>
       </div>
