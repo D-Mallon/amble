@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, useNavigate} from 'react-router-dom';
-import MyFunctionButton_signup from './functionbutton-signup';
-import './Signup.css';
+
+// import './Signup.css';
 import { async } from '@firebase/util';
 import { UserAuth } from '../context/AuthContext';
 import { useState } from 'react';

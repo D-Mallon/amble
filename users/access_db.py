@@ -36,15 +36,7 @@
 # conn.close()
 
 # # Print Queries
-# # print('\n------------------ Query 1 ------------------------------\n')
-# # for r in results:
-# #     print(r[1])
-# # print('\n------------------ Query 2 ------------------------------\n')
-# # for r in results2:
-# #     print(r[1])
-# # print('\n------------------ Query 3 ------------------------------\n')
-# # for r in results3:
-# #     print(r[1])
+
 # print('\n------------------ Query 4 ------------------------------\n')
 # for r in results4:
 #     print(f'Password = {r[3]} : Username = {r[5]}')

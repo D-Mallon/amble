@@ -116,7 +116,7 @@ export default function MenuBar() {
               </span>
             </button>
             <button className="option">
-              <span className="option-text">Log In</span>
+              <span className="option-text">Sign In</span>
             </button>
           </div>
         )}

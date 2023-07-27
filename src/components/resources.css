@@ -85,6 +85,7 @@ html {
   /* Extra CSS for the Resources Page */
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
   .mapwrapper_landingpage {
+    
     background-color: #ffffff;
     width: 100%;
     height: 1000px;
@@ -165,6 +166,8 @@ html {
   }
   
     .resources-pics-container {
+      /* background-image: url('/static/images/newyork.jpg'); */
+      /* opacity: .2; */
       background-color: rgb(237, 240, 237);
       background-size: cover; /* 按比例缩放背景图，保持其完全覆盖容器 */
       background-position: center; /* 调整背景图的位置为居中 */
@@ -226,3 +229,12 @@ html {
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
   
+    .submit-button {
+      background-color: #004d40;
+      color: #CBDAC5;
+      border: none;
+      border-radius: 0;
+      padding: 15px 30px;
+      cursor: pointer;
+      margin-top: 2rem;
+    }

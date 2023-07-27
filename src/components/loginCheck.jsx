@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import "./login.css";
+import "./loginCheck.css";
+import {Link, useNavigate} from 'react-router-dom';
+import CloseIcon from '@mui/icons-material/Close';
 
 const LoginCheck = () => {
+  const navigate = useNavigate();
+  const togglehomepage = () => {
+    navigate("/landingpage");
+  };
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -33,19 +40,29 @@ const LoginCheck = () => {
   };
 
   return (
-    <div className="login-area">
-      <h3>Login</h3>
+    <div className="login-area-signin">
+      <div className="additional-block-close-loginCheck" onClick={togglehomepage}>
+                <CloseIcon sx={{ fontSize: 35 , color: 'white' }} />
+              </div>
+       <div>
+      <h1 className='signin-text1'>Sign in to your account</h1>
+      <p className='signin-text2'>
+          Don't have an account yet? <Link to='/login' className='signin-text3'>Sign up.</Link>
+      </p>
+    </div>
 
       <form onSubmit={handleLogin}>
-        <div>
-          <label>Username (Email):</label>
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <div className='usernamebox-signin'>
+          <label >Username (Email):</label>
+          <input className='username-signin' type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </div>
-        <div>
+        <div className='passwordbox-signin'>
           <label>Password:</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input className='password-signin' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        <button type="submit" className='submit-button'>Login</button>
+        <div className="wrapper-function-signin">
+    <a className="wrapper-function-text-signin" onClick={handleLogin} href="#" type="submit"><span>Sign In</span></a>
+    </div>
         {error && <p>{error}</p>}
 
       </form>
