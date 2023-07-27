@@ -3,11 +3,12 @@ import axios from 'axios';
 import "./loginCheck.css";
 import {Link, useNavigate} from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
+import Box from "@mui/material/Box";
 
 const LoginCheck = () => {
   const navigate = useNavigate();
   const togglehomepage = () => {
-    navigate("/landingpage");
+    navigate("/");
   };
 
   const [username, setUsername] = useState('');

@@ -1,15 +1,40 @@
+
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import "./login.css";
 import CloseIcon from '@mui/icons-material/Close';
 import {Link, useNavigate} from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
+import { Alert, AlertTitle } from '@mui/material';
+import Box from "@mui/material/Box";
+
+
 
 const Login = () => {
   const navigate = useNavigate();
 
+  const [errorVisible, seterrorVisible] = useState(false);
+  const [passVisible, setpassVisible] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+ const handleClose_error = () => {
+    seterrorVisible(false);
+  };
+
+  const handleClose_pass = () => {
+    setpassVisible(false);
+  };
+
+   // Automatically close the alert after 3000 milliseconds (3 seconds)
+   setTimeout(handleClose_error, 5000);
+
+    // Automatically close the alert after 3000 milliseconds (3 seconds)
+  setTimeout(handleClose_pass, 5000);
+
+
   const togglehomepage = () => {
-    navigate("/landingpage");
+    navigate("/");
   };
 
   const [formData, setFormData] = useState({
@@ -43,15 +68,20 @@ const Login = () => {
     .catch((error) => {
       if (error.response.status === 400) {
         console.log("It may be that Username already exists.");
-        const errorMessage = "Username already exist! Please try entering a different email.";
-        errorMessageElement.textContent = errorMessage;
+        setErrorMessage("Username already exists! Please try entering a different email.");
+        // const errorMessage = "Username already exist! Please try entering a different email.";
+        seterrorVisible(true);
+        // errorMessageElement.textContent = errorMessage;
       } else if (error.response) {
         console.log(error.response);
         console.log("server responded");
+        seterrorVisible(true);
       } else if (error.request) {
         console.log("network error");
+        seterrorVisible(true);
       } else {
         console.log(error);
+        seterrorVisible(true);
       }
     });
   };
@@ -65,6 +95,12 @@ const Login = () => {
        
 
       <div>
+      {/* <div id="error-message"></div> */}
+
+      {errorVisible && (
+          <Alert severity="error" onClose={handleClose_error}>{errorMessage}</Alert>
+      )}
+
         <h1 className="signup-text1">Sign up for a free account</h1>
         <p className="signup-text2">
           Already have an account yet?{" "}
@@ -130,7 +166,7 @@ const Login = () => {
                     onChange={handleChange}
                     ></input>
             </div>
-            <div id="error-message"></div>
+           
             <div className="wrapper-function-login">
     <a className="wrapper-function-text-login" href="#" type="submit" onClick={handleSubmit}><span>Sign Up</span></a>
     </div>

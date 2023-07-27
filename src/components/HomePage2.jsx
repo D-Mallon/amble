@@ -7,6 +7,7 @@ import "./HomePage2.css";
 import MyButton from "./mainbutton";
 import MyFunctionButton_home from "./functionbutton";
 import MapBackground from "./mapbackground";
+import Box from "@mui/material/Box";
 
 
 

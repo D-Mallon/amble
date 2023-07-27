@@ -12,6 +12,7 @@ import './HomePage.css';
 import MyButton from './mainbutton';
 import MyFunctionButton from './functionbutton';
 import MapBackground from './mapbackground';
+import Box from "@mui/material/Box";
 
 const theme = createTheme({
     palette: {

@@ -3,6 +3,7 @@ import mapboxgl, { Marker } from 'mapbox-gl';
 import parks from '../json-files/park_locations.json';
 import "./Map_original.css";
 import 'mapbox-gl/dist/mapbox-gl.css';
+import Box from "@mui/material/Box";
 
 const apiKey = import.meta.env.VITE_MAPBOX_API_KEY
 mapboxgl.accessToken = apiKey;

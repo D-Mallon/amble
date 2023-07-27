@@ -6,7 +6,6 @@ import DateTimePicker from 'react-datetime-picker';
 import axios from 'axios';
 import { useMapInput } from '../context/MapInputContext';
 
-import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -27,6 +26,7 @@ import useRouteDisplay from './useRouteDisplay';
 import useGeocoding from './useGeocoding';
 import useMapInit from './useMapInit';
 import usePlaceNameChange from './usePlaceNameChange';
+import Box from "@mui/material/Box";
 
 
 const apiKey = import.meta.env.VITE_MAPBOX_API_KEY
