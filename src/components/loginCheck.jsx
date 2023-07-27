@@ -52,19 +52,20 @@ const LoginCheck = () => {
       </p>
     </div>
 
-      <form onSubmit={handleLogin}>
+      <form className='form-signin'onSubmit={handleLogin}>
         <div className='usernamebox-signin'>
-          <label >Username (Email):</label>
+          <span className='emaillabel-signin' >Username (Email):</span>
           <input className='username-signin' type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </div>
         <div className='passwordbox-signin'>
-          <label>Password:</label>
+          <span  className='passwordlabel-signin'>Password:</span>
           <input className='password-signin' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
+
         <div className="wrapper-function-signin">
     <a className="wrapper-function-text-signin" onClick={handleLogin} href="#" type="submit"><span>Sign In</span></a>
     </div>
-        {error && <p>{error}</p>}
+        {/* {error && <p>{error}</p>} */}
 
       </form>
     </div>

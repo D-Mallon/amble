@@ -1,11 +1,7 @@
 .wrapper-function-signin{
-    position: fixed;
-    /* top: 50%; */
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     justify-content: center;
     align-items: center;
-    position: fixed;
   }
   
   .wrapper-function-text-signin {
@@ -78,6 +74,7 @@
   }
 
 
+
   .login-area-signin{
     position: absolute;
     top: 50%;
@@ -95,43 +92,57 @@
 
   .passwordbox-signin{
     display: flex;
+    
     flex-direction: column;
-    font-size: 16px;
-    color:#014e3d;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Add this to occupy full width */
    
 }
 
 .usernamebox-signin{
-    display: flex;
+  display: flex;
     flex-direction: column;
-    font-size: 16px;
-    color:#014e3d;
-    
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Add this to occupy full width */
 }
 
+.emaillabel-signin{
+  font-size: 16px;
+    color:#014e3d;
+}
+
+.passwordlabel-signin{
+  font-size: 16px;
+  color:#014e3d;
+}
 .username-signin{
     margin-top: 2%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     width:250px;
     height:40px;
-    border: 1.5px solid #014e3d;
+    padding-left: 6%;
+  padding-right: 6%;
+  border: 1.5px solid #014e3d;
 }
 
 .password-signin{
     margin-top: 2%;
-    margin-bottom: 25%;
+    margin-bottom: 5%;
     width:250px;
     height:40px;
-    border: 1.5px solid #014e3d;
+    padding-left: 6%;
+  padding-right: 6%;
+  border: 1.5px solid #014e3d;
 }
 
-/* Adjust input field size */
-.usernamebox-signin input,
-.passwordbox-signin input {
-  width: 300px; /* Set the desired width */
-  height: 40px; /* Set the desired height */
-  font-size: 16px;
-  padding-left: 6%;
-  padding-right: 6%;
+.form-signin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
 }
