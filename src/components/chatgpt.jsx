@@ -70,10 +70,11 @@ const date = 'July 26';
           </div>
           {response && <div>{response}
           </div>}
+          <div className='endbar'></div>
           <div style={{ textAlign: 'center', marginTop: '20px' }}>
           Powered by ChatGPT
           </div>
-        <div className='endbar'></div>
+        
     </div>
   );
 };
