@@ -40,40 +40,50 @@ const ChatGPT = () => {
 const lat = 40.7505;
 const lon = -73.9934;
 const node = 'Yeshiva University Museum';
-const dist = 7;
+const dist = 10;
 const address = '415 East Houston Street, 10002 Manhattan';
-const date = 'July 26';
+const date = 'July 27';
 
   // Define options
   const options = [
-    { value: '', label: 'Select a Resource' },
+    { value: '', label: 'Select a Resource:' },
     { value: `Tell me one thing good that happened on ${date}`, label: '1. Tell me something good that happened on this date' },
-    { value: `Give me a short paragraph on ${node}`, label: '2. Give me a short paragraph on an interesting place on my amble' },
-    { value: `Suggest some mindfulness classes around ${address} `, label: '3. Suggest some mindfulness classes I might find around my amble' },
-    { value: `On average how many calories will I burn on a ${dist} mile walk?`, label: '4. On average how many calories will I burn on a this walk?' },
+    { value: `Give me a short paragraph on ${node}`, label: '2. What is an interesting place I might visit as I amble' },
+    { value: `Suggest some mindfulness classes around ${address} `, label: '3. Suggest some mindfulness classes on my route' },
+    { value: `On average how many calories will I burn on a ${dist} mile walk?`, label: '4. On average how many calories will I burn?' },
     { value: `What point of interest is found around longitude ${lon} and latitude ${lat}?`, label: '5. Is there anything interesting to see on my amble ?' }
   ];
 
   return (
     <div className='landing-page-container'>
+      
       <div className='menubar-area'>
       <MenuBar2 />
       </div>
+        <div>
           <select value={userInput} onChange={handleChange}>
-           
             {options.map((option) => (
               <option key={option.value} value={option.value}>{option.label}</option>
             ))}
           </select>
-          <div>
+        </div>
+          
+        <div>
           <button className='submit-button' onClick={handleSubmit}>Submit</button>
-          </div>
+        </div>
+          <br></br>
+          <br></br>
+        <div>
           {response && <div>{response}
           </div>}
-          <div className='endbar'></div>
-          <div style={{ textAlign: 'center', marginTop: '20px' }}>
-          Powered by ChatGPT
-          </div>
+        </div>
+        <br></br>
+        <br></br>
+        <div className='endbar'></div>
+          
+        <div style={{ textAlign: 'center', marginTop: '20px' }}>
+          Quotes from 'They Said So' : Resources powered by ChatGPT
+        </div>
         
     </div>
   );
