@@ -3,6 +3,7 @@ import "./Interface.css";
 
 import Map from "./Map";
 import StartPlace from "./start_place";
+import Box from "@mui/material/Box";
 
 function Interface() {
   return (

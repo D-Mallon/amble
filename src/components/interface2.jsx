@@ -23,6 +23,7 @@ import MapBackground from './mapbackground';
 import {Link, useNavigate} from 'react-router-dom';
 import MyFunctionButton from './functionbutton';
 import Map from "./Map";
+import Box from "@mui/material/Box";
 
 const theme = createTheme({
   palette: {

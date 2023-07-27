@@ -13,6 +13,7 @@ import Weatherinform from './weather-inform';
 // import TimeSearchContext from './timesearch_context';
 import MenuBar from './MenuBar';
 import MapBackground from './mapbackground';
+import Box from "@mui/material/Box";
 
 const theme = createTheme({
   palette: {

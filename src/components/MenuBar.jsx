@@ -8,6 +8,7 @@ import StarRoundedIcon from "@mui/icons-material/StarRounded";
 import StyleRoundedIcon from "@mui/icons-material/StyleRounded";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import Login from './login.jsx';
+import Box from "@mui/material/Box";
 
 export default function MenuBar() {
   const [isOptionsVisible, setOptionsVisible] = useState(false);
