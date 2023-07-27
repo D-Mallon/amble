@@ -88,7 +88,11 @@ def magic(user_latitude, user_longitude, hour):
     #     dist = dist/10
     # predefined_distance = dist  # Adjust this value as needed
     predefined_distance = 5
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> dev_cl_260723
     visited_parks = []  # List to store visited parks
 
     while predefined_distance > 0:
