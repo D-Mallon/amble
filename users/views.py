@@ -44,7 +44,7 @@ def handle_routeinpput_data(request):
         latitude = request.POST.get("latitude")
         longitude = request.POST.get("longitude")
         hour = request.POST.get("hour")
-        dist = request.POST.get("distance")
+        # dist = request.POST.get("distance")
         # endLatitude = request.POST.get("endLatitude")
         # endLongitude = request.POST.get("endLongitude")
         response_data = {"waypoints": magic(float(latitude), float(longitude), str(hour))}
