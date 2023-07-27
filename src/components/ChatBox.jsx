@@ -4,9 +4,9 @@ import axios from 'axios';
 import Typist from 'react-typist';
 import './ChatBox.css';
 
-import userIcon from '../../public/chat_user.png';
-import acornIcon from '../../public/chat_acorn.png';
-import squirrelIcon from '../../public/chat_squirrel.png';
+import userIcon from '../../public/images/chat_user.png';
+import acornIcon from '../../public/images/chat_acorn.png';
+import squirrelIcon from '../../public/images/chat_squirrel.png';
 
 function ChatBox() {
     //const {inputValues, setInputValues} = useContext(AuthContext)
