@@ -54,11 +54,11 @@ const LoginCheck = () => {
 
       <form className='form-signin'onSubmit={handleLogin}>
         <div className='usernamebox-signin'>
-          <span className='emaillabel-signin' >Username (Email):</span>
+          <label className='emaillabel-signin' >Username (Email):</label>
           <input className='username-signin' type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </div>
         <div className='passwordbox-signin'>
-          <span  className='passwordlabel-signin'>Password:</span>
+          <label  className='passwordlabel-signin'>Password:</label>
           <input className='password-signin' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
 

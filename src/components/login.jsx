@@ -109,9 +109,9 @@ const Login = () => {
           </Link>
         </p> 
         </div>
-    <form onSubmit={handleSubmit}>
+    <form className="form-signup" onSubmit={handleSubmit}>
             <div className='firstnamebox-signup'>
-            <label htmlFor="first_name">First Name:</label>
+            <label className="first_namelabel-signup" htmlFor="first_name-signup">First Name:</label>
             <input
                 type="text"
                 name="first_name-signup"
@@ -122,7 +122,7 @@ const Login = () => {
                 ></input>
             </div>
             <div className='lastnamebox-signup'>
-            <label  htmlFor="last_name-signup">Last Name:</label >
+            <label className="last_namelabel-signup" htmlFor="last_name-signup">Last Name:</label >
             <input
                 type="text"
                 name="last_name-signup"
@@ -133,7 +133,7 @@ const Login = () => {
             </div>
            
             <div className='usernamebox-signup'>
-                <label htmlFor="username-signup">Email (will be your username):</label>
+                <label className="usernamelabel-signup" htmlFor="username-signup">Email (will be your username):</label>
                 <input
                     type="text"
                     name="username-signup"
@@ -145,7 +145,7 @@ const Login = () => {
             </div>
 
             <div className='addressbox-signup'>
-                <label htmlFor="address-signup">Address:</label>
+                <label className="addresslabel-signup" htmlFor="address-signup">Address:</label>
                 <input
                     type="text"
                     name="address-signup"
@@ -156,7 +156,7 @@ const Login = () => {
                     ></input>
             </div>
             <div className='passwordbox-signup'>
-                <label htmlFor="password-signup">Password:</label>
+                <label className="passwordlabel-signup" htmlFor="password-signup">Password:</label>
                 <input
                     type="text"
                     name="password-signup"
