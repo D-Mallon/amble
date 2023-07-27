@@ -40,7 +40,7 @@ const LoginCheck = () => {
   };
 
   return (
-    <div className="login-area">
+    <div className="login-area-signin">
       <div className="additional-block-close-loginCheck" onClick={togglehomepage}>
                 <CloseIcon sx={{ fontSize: 35 , color: 'white' }} />
               </div>
@@ -52,13 +52,13 @@ const LoginCheck = () => {
     </div>
 
       <form onSubmit={handleLogin}>
-        <div>
-          <label>Username (Email):</label>
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <div className='usernamebox-signin'>
+          <label >Username (Email):</label>
+          <input className='username-signin' type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </div>
-        <div>
+        <div className='passwordbox-signin'>
           <label>Password:</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input className='password-signin' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
         <div className="wrapper-function-signin">
     <a className="wrapper-function-text-signin" onClick={handleLogin} href="#" type="submit"><span>Sign In</span></a>

@@ -57,8 +57,8 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <div className="login-area">
+    <div >
+      <div className="login-area-signup">
         <div className="additional-block-close-login" onClick={togglehomepage}>
                 <CloseIcon sx={{ fontSize: 35 , color: 'white' }} />
               </div>
@@ -74,55 +74,58 @@ const Login = () => {
         </p> 
         </div>
     <form onSubmit={handleSubmit}>
-            <div className='firstnamebox'>
+            <div className='firstnamebox-signup'>
             <label htmlFor="first_name">First Name:</label>
             <input
                 type="text"
-                name="first_name"
-                className='first_name'
-                id="first_name"
+                name="first_name-signup"
+                className='first_name-signup'
+                id="first_name-signup"
                 // value={formData.first_name}
                 onChange={handleChange}
                 ></input>
             </div>
-            <div className='lastnamebox'>
-            <label  htmlFor="last_name">Last Name:</label >
+            <div className='lastnamebox-signup'>
+            <label  htmlFor="last_name-signup">Last Name:</label >
             <input
                 type="text"
-                name="last_name"
-                className='last_name'
+                name="last_name-signup"
+                className='last_name-signup'
                 // value={formData.last_name}
                 onChange={handleChange}
                 ></input>
             </div>
-            <div className='usernamebox'>
-                <label  htmlFor="username">Email (will be your username):</label >
+           
+            <div className='usernamebox-signup'>
+                <label htmlFor="username-signup">Email (will be your username):</label>
                 <input
                     type="text"
-                    name="username"
-                    id="username"
+                    name="username-signup"
+                    className='username-signup'
+                    id="username-signup"
                     // value={formData.email}
                     onChange={handleChange}
                     ></input>
             </div>
-            <div className='addressbox'>
-                <label htmlFor="address">Address:</label>
+
+            <div className='addressbox-signup'>
+                <label htmlFor="address-signup">Address:</label>
                 <input
                     type="text"
-                    name="address"
-                    className='address'
-                    id="address"
+                    name="address-signup"
+                    className='address-signup'
+                    id="address-signup"
                     // value={formData.address}
                     onChange={handleChange}
                     ></input>
             </div>
-            <div className='passwordbox'>
-                <label htmlFor="password">Password:</label>
+            <div className='passwordbox-signup'>
+                <label htmlFor="password-signup">Password:</label>
                 <input
                     type="text"
-                    name="password"
-                    className='password'
-                    id="password"
+                    name="password-signup"
+                    className='password-signup'
+                    id="password-signup"
                     // value={formData.password}
                     onChange={handleChange}
                     ></input>
