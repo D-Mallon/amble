@@ -24,7 +24,10 @@ const theme = createTheme({
 
 function LandingPage() {
   const { temp1, temp2 } = useGreetingData();
-  const greeting = 'Hey ' + temp1 + temp2;
+  const greeting = temp1 +' ' +temp2+'!';
+
+  
+  const greeting2 = temp1 +' ' +temp2;
 
   return (
     <div className="landing-page-container">
@@ -34,9 +37,12 @@ function LandingPage() {
       <div className="homepage-pics-container">
         <div className="left-color-block">
           <span className="hometext-title">
-            <span style={{ fontSize: "36px", fontWeight: 500 }}>
+            {(!temp1)&&(!temp2)&&<span style={{ fontSize: "36px", fontWeight: 500 }}>
               amble <br></br>- the peaceful way
-            </span>
+            </span>}
+            {temp1&&temp2&&<span style={{ fontSize: "36px", fontWeight: 500 }}>
+              Welcome back our everlasting friend,<br></br>{greeting2}!
+            </span>}
             <br></br>
             <br></br>
             <br></br>
@@ -70,7 +76,8 @@ function LandingPage() {
         <div className="rightbox">
           <div className="rightbox-in-1">
             <span className="hometext-address">
-              <span style={{ fontSize: "45px", fontWeight: 500 }}>{greeting}</span>
+            <span style={{ fontSize: "42px", fontWeight: 500 }}>Hey, </span>
+             {temp1&&temp2&&<span style={{ fontSize: "38px", fontWeight: 500 }}>{greeting}</span>} 
               <br></br>
               <br></br>
               <span style={{ fontSize: "17px" }}>
