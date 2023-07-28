@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import axios from "axios";
 import "./loginCheck.css";
 import { Link, useNavigate  } from "react-router-dom";
@@ -7,9 +7,13 @@ import { Alert, AlertTitle } from "@mui/material";
 import Box from "@mui/material/Box";
 import { useGreetingData } from "./GreetingDataContext";
 
+
+
 const LoginCheck = () => {
   let errorTimer;
   let passTimer;
+
+  const { setTemp1, setTemp2 } = useGreetingData();
 
   const navigate = useNavigate();
   const togglehomepage = () => {
@@ -23,8 +27,6 @@ const LoginCheck = () => {
 
   const [value1, setvalue1] = useState("");
   const [value2, setvalue2] = useState("");
-
-  const { setGreetingData } = useGreetingData();
 
   const handleClose_error = () => {
     seterrorVisible(false);
@@ -76,22 +78,20 @@ const temp2=response.data["checks"][2];
 
 console.log(temp1)
           console.log(temp2)
+          setTemp1(temp1);
+          setTemp2(temp2);
 
-
-          setvalue1(temp1);
-          setvalue2(temp2 );
+          // setvalue1(temp1);
+          // setvalue2(temp2 );
+          
 
           // const value1=response.data["checks"][1];
           // const value2=response.data["checks"][2];
 
-          console.log(value1)
-          console.log(value2)
+          // console.log(value1)
+          // console.log(value2)
 
-          // useEffect(() => {
-          //   if (value1 && value2) {
-          //     setGreetingData({ value1, value2 });
-          //   }
-          // }, [value1, value2, setGreetingData]);
+        
 
           setpassMessage(text_pass);
           setpassVisible(true);
@@ -118,25 +118,10 @@ console.log(temp1)
        
       });
 
-      useEffect(() => {
-        if (value1 && value2) {
-          setGreetingData({ value1, value2 });
-        }
-      }, [value1, value2, setGreetingData]);
-
-      setGreetingData({ value1, value2 });
-      console.log(value1)
-      console.log(value2)
+    
   };
 
-  // useEffect(() => {
-  //   if (value1 && value2 && typeof setGreetingData === "function") {
-  //     setGreetingData({ value1, value2 });
-  //   }
-  // }, [value1, value2, setGreetingData]);
-
-   
-  // setGreetingData({ value1: 'ni', value2: 'hao' });
+ 
     
  
 
