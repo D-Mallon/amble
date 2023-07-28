@@ -131,26 +131,26 @@ const Login = () => {
           <div className="firstnamebox-signup">
             <label
               className="first_namelabel-signup"
-              htmlFor="first_name-signup"
+              htmlFor="first_name"
             >
               First Name:
             </label>
             <input
               type="text"
-              name="first_name-signup"
+              name="first_name"
               className="first_name-signup"
-              id="first_name-signup"
+              id="first_name"
               // value={formData.first_name}
               onChange={handleChange}
             ></input>
           </div>
           <div className="lastnamebox-signup">
-            <label className="last_namelabel-signup" htmlFor="last_name-signup">
+            <label className="last_namelabel-signup" htmlFor="last_name">
               Last Name:
             </label>
             <input
               type="text"
-              name="last_name-signup"
+              name="last_name"
               className="last_name-signup"
               // value={formData.last_name}
               onChange={handleChange}
@@ -158,41 +158,41 @@ const Login = () => {
           </div>
 
           <div className="usernamebox-signup">
-            <label className="usernamelabel-signup" htmlFor="username-signup">
+            <label className="usernamelabel-signup" htmlFor="username">
               Email (will be your username):
             </label>
             <input
               type="text"
-              name="username-signup"
+              name="username"
               className="username-signup"
-              id="username-signup"
+              id="username"
               // value={formData.email}
               onChange={handleChange}
             ></input>
           </div>
 
           <div className="addressbox-signup">
-            <label className="addresslabel-signup" htmlFor="address-signup">
+            <label className="addresslabel-signup" htmlFor="address">
               Address:
             </label>
             <input
               type="text"
-              name="address-signup"
+              name="address"
               className="address-signup"
-              id="address-signup"
+              id="address"
               // value={formData.address}
               onChange={handleChange}
             ></input>
           </div>
           <div className="passwordbox-signup">
-            <label className="passwordlabel-signup" htmlFor="password-signup">
+            <label className="passwordlabel-signup" htmlFor="password">
               Password:
             </label>
             <input
               type="text"
-              name="password-signup"
+              name="password"
               className="password-signup"
-              id="password-signup"
+              id="password"
               // value={formData.password}
               onChange={handleChange}
             ></input>
