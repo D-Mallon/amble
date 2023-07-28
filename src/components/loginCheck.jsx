@@ -71,9 +71,27 @@ const LoginCheck = () => {
             response.data["checks"][2] +
             " and welcome back!";
 
-          setvalue1(response.data["checks"][1] );
-          setvalue2(response.data["checks"][2] );
-            
+const temp1=response.data["checks"][1];
+const temp2=response.data["checks"][2];
+
+console.log(temp1)
+          console.log(temp2)
+
+
+          setvalue1(temp1);
+          setvalue2(temp2 );
+
+          // const value1=response.data["checks"][1];
+          // const value2=response.data["checks"][2];
+
+          console.log(value1)
+          console.log(value2)
+
+          // useEffect(() => {
+          //   if (value1 && value2) {
+          //     setGreetingData({ value1, value2 });
+          //   }
+          // }, [value1, value2, setGreetingData]);
 
           setpassMessage(text_pass);
           setpassVisible(true);
@@ -99,13 +117,28 @@ const LoginCheck = () => {
         console.log("Error:", error.response.data.error);
        
       });
+
+      useEffect(() => {
+        if (value1 && value2) {
+          setGreetingData({ value1, value2 });
+        }
+      }, [value1, value2, setGreetingData]);
+
+      setGreetingData({ value1, value2 });
+      console.log(value1)
+      console.log(value2)
   };
 
-  useEffect(() => {
-    if (value1 && value2) {
-      setGreetingData({ value1, value2 });
-    }
-  }, [value1, value2]);
+  // useEffect(() => {
+  //   if (value1 && value2 && typeof setGreetingData === "function") {
+  //     setGreetingData({ value1, value2 });
+  //   }
+  // }, [value1, value2, setGreetingData]);
+
+   
+  // setGreetingData({ value1: 'ni', value2: 'hao' });
+    
+ 
 
   return (
     <div className="login-area-signin">
