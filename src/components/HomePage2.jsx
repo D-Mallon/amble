@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation} from "react-router-dom";
 // import StartPlace from "./components/start_place";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import MenuBar2 from "./MenuBar2";
@@ -8,7 +8,7 @@ import MyButton from "./mainbutton";
 import MyFunctionButton_home from "./functionbutton";
 import MapBackground from "./mapbackground";
 import Box from "@mui/material/Box";
-
+import { useGreetingData } from './GreetingDataContext';
 
 
 const theme = createTheme({
@@ -23,6 +23,13 @@ const theme = createTheme({
 });
 
 function LandingPage() {
+  const { data } = useGreetingData();
+  const value1 = data.value1;
+  const value2 = data.value2;
+
+  // 使用 value1 和 value2 来组成句子
+  const greeting = 'Hey ' + value1 + value2;
+
   return (
     <div className="landing-page-container">
       <div className="menubar-area">
@@ -67,7 +74,7 @@ function LandingPage() {
         <div className="rightbox">
           <div className="rightbox-in-1">
             <span className="hometext-address">
-              <span style={{ fontSize: "45px", fontWeight: 500 }}>Hey!</span>
+              <span style={{ fontSize: "45px", fontWeight: 500 }}>{greeting}</span>
               <br></br>
               <br></br>
               <span style={{ fontSize: "17px" }}>

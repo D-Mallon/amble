@@ -14,7 +14,7 @@ import ChatBox from "./components/ChatBox";
 import Comms from "./components/Comms.jsx";
 import ChatGPT from './components/chatgpt';
 import Resources from './components/resources';
-
+import {GreetingDataProvider } from './components/GreetingDataContext';
 import HomePage from './components/HomePage';
 import Interface2 from './components/interface2';
 import ShowRoute from './components/ShowRoute';
@@ -37,6 +37,7 @@ function App() {
         <ArrayProvider> 
         <AuthContextProvider>
           <MapInputProvider>
+            <GreetingDataProvider>
             <Routes>
               <Route exact path="/" element={<LandingPage />} />
               <Route exact path="/map" element={<Interface2 />} />
@@ -54,6 +55,7 @@ function App() {
               <Route path="/resources" element={<Resources />} />
               <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
             </Routes>
+            </GreetingDataProvider>
           </MapInputProvider>
         </AuthContextProvider> 
         </ArrayProvider>
