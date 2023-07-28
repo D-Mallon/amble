@@ -129,7 +129,7 @@ export default function MenuBar2() {
           <div className="menu-item" onClick={handleButtonClick}>
             Create an amble
           </div>
-          <div className="menu-item">Resources</div>
+          <div className="menu-item">For you</div>
           <div
             className="menu-item"
             onClick={toggleOptions}
