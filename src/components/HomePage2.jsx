@@ -23,12 +23,8 @@ const theme = createTheme({
 });
 
 function LandingPage() {
-  const { data } = useGreetingData();
-  const value1 = data.value1;
-  const value2 = data.value2;
-
-  // 使用 value1 和 value2 来组成句子
-  const greeting = 'Hey ' + value1 + value2;
+  const { temp1, temp2 } = useGreetingData();
+  const greeting = 'Hey ' + temp1 + temp2;
 
   return (
     <div className="landing-page-container">
