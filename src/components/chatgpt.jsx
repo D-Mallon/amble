@@ -41,52 +41,50 @@ const ChatGPT = () => {
 const lat = 40.7505;
 const lon = -73.9934;
 const node = 'Yeshiva University Museum';
-const dist = 10;
+const dist = 7;
 const address = '415 East Houston Street, 10002 Manhattan';
-const date = 'July 27';
+const currentDate = new Date();
+const dates = { month: 'long', day: 'numeric' };
+const formattedDate = currentDate.toLocaleString(undefined, dates);
 
   // Define options
   const options = [
-    { value: '', label: 'Select a Resource:' },
-    { value: `Tell me one thing good that happened on ${date}`, label: '1. Tell me something good that happened on this date' },
-    { value: `Give me a short paragraph on ${node}`, label: '2. What is an interesting place I might visit as I amble' },
+    { value: '', label: 'Interesting stuff about your amble' },
+    { value: `Tell me one thing good that happened on ${formattedDate}`, label: '1. Tell me something good that happened on this date' },
+    { value: `Give me a short paragraph on ${node}`, label: '2. Where is an interesting place I might visit as I amble' },
     { value: `Suggest some mindfulness classes around ${address} `, label: '3. Suggest some mindfulness classes on my route' },
     { value: `On average how many calories will I burn on a ${dist} mile walk?`, label: '4. On average how many calories will I burn?' },
-    { value: `What point of interest is found around longitude ${lon} and latitude ${lat}?`, label: '5. Is there anything interesting to see on my amble ?' }
+    { value: `What point of interest is found around longitude ${lon} and latitude ${lat}?`, label: '5. What else is interesting as I amble?' },
+    { value: `Who was born on ${formattedDate}?`, label: '6. Who was born on this day?' }
   ];
 
   return (
-    <div className='landing-page-container'>
-      
-      <div className='menubar-area'>
-      <MenuBar2 />
-      </div>
-        <div>
-          <select value={userInput} onChange={handleChange}>
+    <div className="landing-page-container">
+      <div>
+        <select value={userInput} onChange={handleChange}>
             {options.map((option) => (
-              <option key={option.value} value={option.value}>{option.label}</option>
+            <option key={option.value} value={option.value} >{option.label}</option>
             ))}
-          </select>
-        </div>
+        </select>
+      </div>
           
-        <div>
-          <button className='submit-button' onClick={handleSubmit}>Submit</button>
-        </div>
+      <div className="btn-container">
+        <button className='btn' onClick={handleSubmit}>Choose something</button>
+      </div>
           <br></br>
           <br></br>
-        <div>
-          {response && <div>{response}
+      <div className="response-container">
+        {response && <div>{response}
           </div>}
-        </div>
+      </div>
+       
+      <div className="attribution-text">
+          Get a reflection from 'They Said So' : Chose something powered by ChatGPT
+      </div>
         <br></br>
-        <br></br>
-        <div className='endbar'></div>
-          
-        <div style={{ textAlign: 'center', marginTop: '20px' }}>
-          Quotes from 'They Said So' : Resources powered by ChatGPT
-        </div>
-        
-    </div>
+      <div className='endbar'></div>
+    </div>    
+   
   );
 };
 

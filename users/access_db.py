@@ -18,7 +18,14 @@ cursor = conn.cursor() # Create a cursor object to execute SQL queries
 # query = "SELECT * FROM users_nodes WHERE type = 'park' and name != 'Unknown Park'"
 # cursor.execute(query)
 # results = cursor.fetchall() # Fetch the results
+# # Execute some sample SQL queries to select data
+# query = "SELECT * FROM users_nodes WHERE type = 'park' and name != 'Unknown Park'"
+# cursor.execute(query)
+# results = cursor.fetchall() # Fetch the results
 
+# query2 = "SELECT * FROM public.users_nodes WHERE wheelchair_accessible = 'yes' and type = 'library'"
+# cursor.execute(query2)
+# results2 = cursor.fetchall() # Fetch the results
 # query2 = "SELECT * FROM public.users_nodes WHERE wheelchair_accessible = 'yes' and type = 'library'"
 # cursor.execute(query2)
 # results2 = cursor.fetchall() # Fetch the results
@@ -26,7 +33,13 @@ cursor = conn.cursor() # Create a cursor object to execute SQL queries
 # query3 = "SELECT * FROM public.users_userpref"
 # cursor.execute(query3)
 # results3 = cursor.fetchall() # Fetch the results
+# query3 = "SELECT * FROM public.users_userpref"
+# cursor.execute(query3)
+# results3 = cursor.fetchall() # Fetch the results
 
+query4 = "SELECT * FROM public.users_user"
+cursor.execute(query4)
+results4 = cursor.fetchall() # Fetch the results
 query4 = "SELECT * FROM public.users_user"
 cursor.execute(query4)
 results4 = cursor.fetchall() # Fetch the results
@@ -34,7 +47,11 @@ results4 = cursor.fetchall() # Fetch the results
 # Close the cursor and database connection
 cursor.close()
 conn.close()
+# Close the cursor and database connection
+cursor.close()
+conn.close()
 
+# Print Queries
 # Print Queries
 
 print('\n------------------ Query 4 ------------------------------\n')

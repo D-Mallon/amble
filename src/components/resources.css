@@ -1,4 +1,4 @@
-/* HomePage2.css */
+/* resources.css */
 html {
     scroll-behavior: smooth;
   }
@@ -16,7 +16,6 @@ html {
     /* 设置高度为视口的100% */
     display: flex;
   }
-  
   
   .menubar-area {
     display: flex;
@@ -40,8 +39,6 @@ html {
     /* 将色块靠左 */
     top: 9%;
     overflow: hidden;
-  
-  
   }
   
   .hometext-title {
@@ -67,8 +64,7 @@ html {
     position: relative;
   }
   
-  
-    .mapwrapper_landingpage {
+  .mapwrapper_landingpage {
       background-color: #FFEEA9;
       width: 100%;
       height: 100%;
@@ -82,10 +78,8 @@ html {
       align-items: center;
       opacity: 1;
     }
-  /* Extra CSS for the Resources Page */
-    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
+  
   .mapwrapper_landingpage {
-    
     background-color: #ffffff;
     width: 100%;
     height: 1000px;
@@ -102,18 +96,15 @@ html {
   
   .rightbox {
     left: 0%;
-  
     height: 97.5%;
     width: 27%;
     /* 调整leftbox的宽度，确保加上rightbox的宽度不超过100% */
     display: flex;
     position: relative;
     flex-direction: column;
-  
   }
   
   .hometext-address {
-  
     color: #e3fcf7;
     width: 77%;
     height: auto;
@@ -148,46 +139,49 @@ html {
     /* background-image: url('/static/images/newyork7.jpg'); */
   }
   
-  .pic-in-rightbox {
+  /* .pic-in-rightbox {
     width: 100%;
     height: 100%;
   }
-  
-  .leftbox {
+   */
+  /* .leftbox {
     justify-content: center;
     align-items: center;
     right: 0;
     height: 100%;
-    width: 73%;
+    width: 73%; */
     /* 调整rightbox的宽度，确保加上leftbox的宽度不超过100% */
-    display: flex;
+    /* display: flex;
     position: relative;
-      
-  }
-  
-    .resources-pics-container {
+  } */
+
+  /* Extra CSS for the Resources Page */
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
+
+.landing-page-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      /* font-family: Arial, sans-serif; */
+    }
+.resources-pics-container {
       /* background-image: url('/static/images/newyork.jpg'); */
       /* opacity: .2; */
       background-color: rgb(237, 240, 237);
-      background-size: cover; /* 按比例缩放背景图，保持其完全覆盖容器 */
-      background-position: center; /* 调整背景图的位置为居中 */
+      background-size: cover; 
+      background-position: center; 
       /* position: relative; */
       width: 100%;
-      height: 100vh; /* 设置高度为视口的100% */
+      height: 100vh;
       display: flex;
     }
   
-    /* .Quotebox {
-        display: flex;
-        justify-content: center;
-        min-height: 100vh;
-        align-items: center;
-        flex-direction: column;
-    } */
+    /* CSS for Quote */
     .quote {
         /* background: url(./assets/bg.jpg); */
-        background-size: cover;
-        width: 1000px;
+        /* background-size: cover; */
+        width: 1000px; 
         height: 300px;
         border-radius: 10px;
         padding: 10px;
@@ -206,7 +200,7 @@ html {
         font-size: 1.5em;
         font-family: 'Dancing Script', cursive;
     }
-    .btn {
+    /* .btn {
       display: flex;
       border: 2px solid #008CBA;
       background: transparent;
@@ -217,24 +211,61 @@ html {
       cursor: pointer;
       outline: none;
       transition: background 1s, color 1s;
+    } */
+.btn {
+    background-color: #004d40;
+    color: #CBDAC5;
+    border: none;
+    border-radius: 0;
+    padding: 15px 30px;
+    cursor: pointer;
+    margin-top: 2rem;
     }
-  
-    .btn-container {
+.btn-container {
       display: grid;
       justify-content: center; /* Center the button both horizontally and vertically */
     }
-    .btn:hover{
+.btn:hover{
       background: #008CBA;
       color: #fff;
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
-  
-    .submit-button {
-      background-color: #004d40;
-      color: #CBDAC5;
-      border: none;
-      border-radius: 0;
-      padding: 15px 30px;
-      cursor: pointer;
-      margin-top: 2rem;
+
+    /* .landing-page-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    } */
+    
+    select {
+      width: 500px;
+      height: 50px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
+
+    /* Style for response display */
+.response-container {
+  margin-top: 20px;
+  width: 750px;
+  padding: 10px;
+  border: 2px solid #004d40;
+  border-radius: 5px;
+  align-items: center;
+  text-align: center;
+}
+
+/* Style for attribution text */
+.attribution-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+.endbar {
+  height: 30px;
+}
