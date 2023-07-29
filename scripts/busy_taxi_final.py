@@ -252,17 +252,15 @@ df.drop(['PULocationID_100', 'PULocationID_107',
     'PULocationID_88', 'PULocationID_90'] ,axis=1, inplace = True)
 
 # Should be left with column for hour, busyness score, timestamp and taxi zone id
-# print(df.head(30))
-# print(f'Day of the Week and Timestamp = {create_ts(0,list_hols)}')
 
 #Send dataframe as a json file
 df.reset_index(drop=True, inplace=True) #This excludes the index
 df.to_json(r"src\json-files\busy_taxi_final.json", orient='records')
+df.to_csv(r"src\json-files\busy_taxi_final.csv", index=False)
 
 # weather_file = "weather.json"
 # with open(os.join(weatherdata,weather_file), "w") as outfile:
 #     json.dump(outfile, indent=4)
-#         print("Exported weather data to weather.json")
 
 ####### End time - to get run time #########
 end_time = time.time()
