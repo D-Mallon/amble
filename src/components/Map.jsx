@@ -27,12 +27,15 @@ import useGeocoding from './useGeocoding';
 import useMapInit from './useMapInit';
 import usePlaceNameChange from './usePlaceNameChange';
 import Box from "@mui/material/Box";
+import CloseIcon from '@mui/icons-material/Close';
 
 
 const apiKey = import.meta.env.VITE_MAPBOX_API_KEY
 mapboxgl.accessToken = apiKey;
 
 const Map = () => {
+  const normalImagePath ='/static/images/chatamble3.png';
+  const hoverImagePath = '/static/images/chatamble2.png';
 
   const { inputValues, setInputValues } = useMapInput();
 
@@ -168,374 +171,570 @@ const Map = () => {
   //Below is route presentation part!!
   const [plansetwin, setplansetwin] = useState(true);
   const [chatalien, setchatalien] = useState(false);
+  const [chatbox, setchatbox] = useState(false);
   const [routedetail, setroutedetail] = useState(false);
   const [ratingwin, setratingwin] = useState(false);
+
+
+
+  const togglechatbox = () => {
+    setchatbox(true);
+    setchatalien(false);
+  };
+
+  const closechatbox = () => {
+    setchatbox(false);
+    setchatalien(true);
+  };
+  
 
   return (
     <div>
       {plansetwin && (
-      <>
-      <div className="user-input">
-      <div className='titlebox'>
-      <span className="text_bar-mapfunction">My Journey Planner</span>
-        </div>
-        <div className='when-input'>
-          <p>When?</p>
-          <Stack spacing={2} direction="row" justifyContent="center" paddingBottom="15px">
-            <Button className='now-button'
-            sx={{ width: "100px", height: "2.5rem" }}
-              variant={nowSelected ? "contained" : "outlined"}
-              style={nowSelected ?
-                { borderRadius: 0} :
-                { backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none' , borderRadius: 0 }
-              }
-              onClick={handleNowButtonClick}
-            >
-              Now
-            </Button>
-            <Button
-              variant={laterSelected ? "contained" : "outlined"}
-              sx={{ width: "100px", height: "2.5rem" }}
-              style={laterSelected ?
-                {borderRadius: 0} :
-                { borderRadius: 0, backgroundColor: 'transparent', borderColor:'black', color: 'black', boxShadow: 'none' }
-              }
-              onClick={handleLaterButtonClick}
-            >
-              Later
-            </Button>
-          </Stack>
-          {showTimeInput && (
-            <DateTimePicker
-            // sx={{ width: "100px", height: "2.5rem" }}
-              value={time}
-              onChange={(value) => {
-                if (value) {
-                  setTime(value);
-                  setInputValues(prevValues => ({ ...prevValues, hour: value.getHours() }));
-                } else {
-                  setTime(initialTime);
-                }
-              }}
-            />
-          )}
-        </div>
-
-
-        {showDistanceInput && (
-          <div>
-            <p>How long would like to go for?</p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-              <Slider
-                style={{ width: '150px' }}
-                value={sliderValue}
-                min={sliderUnit === 'km' ? 1 : 10}
-                max={sliderUnit === 'km' ? 10 : 100}
-                step={sliderUnit === 'km' ? 0.5 : 5}
-                valueLabelDisplay="auto"
-                onChange={(event, newValue) => {setSliderValue(newValue), handleSliderChange(event)}}
-                onChangeCommitted={() => { setShowBeginLocationInput(true) }}
-              />
-              <Button
-              sx={{ width: "100px", height: "2.5rem" }}
-                variant='outlined'
-                style={nowSelected ?
-                  { borderColor:'black', color: 'black' ,borderRadius: 0} :
-                  { borderColor:'black', color: 'black' ,borderRadius: 0}
-                }
-                onClick={() => {
-                  if (sliderUnit === 'km') {
-                    // Scale the slider value from the km range to the min range
-                    const position = (sliderValue - 1) / (10 - 1);
-                    const newValue = position * (100 - 10) + 10;
-                    setSliderValue(newValue);
-                    setSliderUnit('min');
-                  } else {
-                    // Scale the slider value from the min range to the km range
-                    const position = (sliderValue - 10) / (100 - 10);
-                    const newValue = position * (10 - 1) + 1;
-                    setSliderValue(newValue);
-                    setSliderUnit('km');
-                  }
-                  handleSliderChange({target: {value: sliderValue}});
-                }}
+        <>
+          <div className="user-input">
+            <div className="titlebox">
+              <span className="text_bar-mapfunction">My Journey Planner</span>
+            </div>
+            <div className="when-input">
+              <p>When?</p>
+              <Stack
+                spacing={2}
+                direction="row"
+                justifyContent="center"
+                paddingBottom="15px"
               >
-                {sliderUnit === 'km' ? `${sliderValue} km` : `${sliderValue} mins`}
-              </Button>
-            </div>
-          </div>
-        )}
-
-
-        {showBeginLocationInput && (
-          <div>
-            <p>Where would you like to begin?</p>
-            <div style={{ display: 'flex', gap: '10px' }}>
-              <Stack spacing={1} direction="row" justifyContent="center" paddingBottom="15px">
-
-                <Button onClick={() => {
-                  setInputValues(prevValues => ({ ...prevValues, latitude: 40.7505, longitude: -73.9934 }));
-                  setShowBeginField(false);
-                  setHomeSelected(true);
-                  setSearchSelected(false);
-                  setAddressSelected(false);
-                  setShowEndLocationInput(true);
-                }}
-                sx={{ width: "110px", height: "2.5rem" }}
-                  startIcon={<HomeIcon />}
-                  variant={homeSelected ? "contained" : "outlined"}
-                  style={homeSelected ?
-                    {borderRadius: 0} :
-                    {borderRadius: 0, backgroundColor: 'transparent', borderColor:'black', color: 'black', boxShadow: 'none' }
-                  }>
-                  Home
-                </Button>
-
-                <Button onClick={() => {
-                  setBeginLocationPressed(!beginLocationPressed);
-                  setShowBeginField(false)
-                  setHomeSelected(false);
-                  setSearchSelected(true);
-                  setAddressSelected(false);
-                }}
-                sx={{ width: "110px", height: "2.5rem" }}
-                  startIcon={beginLocationPressed ? <LocationSearchingIcon /> : <MapIcon />}
-                  variant={searchSelected ? "contained" : "outlined"}
-                  style={searchSelected ?
-                    {borderRadius: 0} :
-                    {borderRadius: 0, backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none' }
-                  }>
-                  {beginLocationPressed ? 'Click' : 'Map'}
-                </Button>
-
-                <Button onClick={() => {
-                  setShowBeginField(true)
-                  setHomeSelected(false);
-                  setSearchSelected(false);
-                  setAddressSelected(true);
-                }}
-                sx={{ width: "110px", height: "2.5rem" }}
-                  startIcon={<SearchIcon />}
-                  variant={addressSelected ? "contained" : "outlined"}
-                  style={addressSelected ?
-                    {borderRadius: 0} :
-                    {borderRadius: 0, backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none' }
-                  }>
-                  Search
-                </Button>
-
-              </Stack>
-            </div>
-            {showBeginField && (
-              <Autocomplete
-                id="address-input"
-                options={suggestions}
-                getOptionLabel={(option) => option.label}
-                isOptionEqualToValue={() => true === true}
-                style={{ width: 350, paddingBottom: "15px", color: 'black', borderRadius: 0  }}
-                onInputChange={handlePlaceNameChange}
-                onChange={(event, newValue) => {
-                  if (newValue) {
-                    handlePlaceSelect(newValue);
+                <Button
+                  className="now-button"
+                  sx={{ width: "100px", height: "2.5rem" }}
+                  variant={nowSelected ? "contained" : "outlined"}
+                  style={
+                    nowSelected
+                      ? { borderRadius: 0 }
+                      : {
+                          backgroundColor: "transparent",
+                          borderColor: "black",
+                          color: "black",
+                          boxShadow: "none",
+                          borderRadius: 0,
+                        }
                   }
-                }}
-                renderInput={(params) => <TextField {...params} label="Type Address" variant="outlined" size="small"
-                  sx={{
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        borderColor: 'black',
-                      },
-                      '&:hover fieldset': {
-                        borderColor: 'black',
-                      },
-                      '&.Mui-focused fieldset': {
-                        borderColor: 'black',
-                      },
-                    },
-                    '& .MuiFormLabel-root': {
-                      color: 'black',
-                      '&.Mui-focused': {
-                        color:'black',
-                      },
-                    },
-                    '& .MuiInputBase-root': {
-                      color: 'black',
-                    },
-                    '& .MuiAutocomplete-clearIndicator': {
-                      color: 'black',
-                    },
-                    '& .MuiAutocomplete-popupIndicator': {
-                      color: 'black',
+                  onClick={handleNowButtonClick}
+                >
+                  Now
+                </Button>
+                <Button
+                  variant={laterSelected ? "contained" : "outlined"}
+                  sx={{ width: "100px", height: "2.5rem" }}
+                  style={
+                    laterSelected
+                      ? { borderRadius: 0 }
+                      : {
+                          borderRadius: 0,
+                          backgroundColor: "transparent",
+                          borderColor: "black",
+                          color: "black",
+                          boxShadow: "none",
+                        }
+                  }
+                  onClick={handleLaterButtonClick}
+                >
+                  Later
+                </Button>
+              </Stack>
+              {showTimeInput && (
+                <DateTimePicker
+                  // sx={{ width: "100px", height: "2.5rem" }}
+                  value={time}
+                  onChange={(value) => {
+                    if (value) {
+                      setTime(value);
+                      setInputValues((prevValues) => ({
+                        ...prevValues,
+                        hour: value.getHours(),
+                      }));
+                    } else {
+                      setTime(initialTime);
                     }
                   }}
-                />}
-              />
-            )}
-          </div>
-        )}
-
-
-
-
-
-
-
-
-
-
-        {showEndLocationInput && (
-          <div>
-            <p>Where would you like to go?</p>
-            <div style={{ display: 'flex', gap: '10px' }}>
-              <Stack spacing={1} direction="row" justifyContent="center" paddingBottom="15px">
-
-                <Button onClick={() => {
-                  setInputValues(prevValues => ({ ...prevValues, endLatitude: 40.711667, endLongitude: -74.0125 }));
-                  setEndHomeSelected(true);
-                  setEndSearchSelected(false);
-                  setEndAddressSelected(false);
-                  setShowGoButton(true);
-                  setShowEndField(false)
-                }}
-                  startIcon={<HomeIcon />}
-                  sx={{ width: "110px", height: "2.5rem" }}
-                  variant={endHomeSelected ? "contained" : "outlined"}
-                  style={endHomeSelected ?
-                    {borderRadius: 0} :
-                    { borderRadius: 0,backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none' }
-                  }>
-                  Home
-                </Button>
-
-                <Button onClick={() => {
-                  setEndLocationPressed(!endLocationPressed);
-                  setEndHomeSelected(false);
-                  setEndSearchSelected(true);
-                  setEndAddressSelected(false);
-                  setShowEndField(false)
-                }}
-                sx={{ width: "110px", height: "2.5rem" }}
-                  startIcon={endLocationPressed ? <LocationSearchingIcon /> : <MapIcon />}
-                  variant={endSearchSelected ? "contained" : "outlined"}
-                  style={endSearchSelected ?
-                    {borderRadius: 0} :
-                    {borderRadius: 0, backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none' }
-                  }>
-                  {endLocationPressed ? 'Click' : 'Map'}
-                </Button>
-
-                <Button onClick={() => {
-                  setEndHomeSelected(false);
-                  setEndSearchSelected(false);
-                  setEndAddressSelected(true);
-                  setShowEndField(true)
-                }}
-                sx={{ width: "110px", height: "2.5rem" }}
-                  startIcon={<SearchIcon />}
-                  variant={endAddressSelected ? "contained" : "outlined"}
-                  style={endAddressSelected ?
-                    {borderRadius: 0} :
-                    {backgroundColor: 'transparent', borderColor: 'black', color: 'black', boxShadow: 'none', borderRadius: 0  }
-                  }>
-                  Search
-                </Button>
-
-              </Stack>
+                />
+              )}
             </div>
-            {showEndField && (
-              <Autocomplete
-                id="address-input"
-                options={suggestions}
-                getOptionLabel={(option) => option.label}
-                isOptionEqualToValue={() => true === true}
-                style={{ width: 350, paddingBottom: "15px", color: 'black' , borderRadius: 0 }}  
-                onInputChange={handlePlaceNameChange}
-                onChange={(event, newValue) => {
-                  if (newValue) {
-                    handlePlaceSelect(newValue);
-                  }
-                }}
-                renderInput={(params) => <TextField {...params} label="Type Address" variant="outlined" size="small"
-                  sx={{
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        borderColor: 'black',
-                      },
-                      '&:hover fieldset': {
-                        borderColor: 'black',
-                      },
-                      '&.Mui-focused fieldset': {
-                        borderColor: 'black',
-                      },
-                    },
-                    '& .MuiFormLabel-root': {
-                      color: 'black',
-                      '&.Mui-focused': {
-                        color: 'black',
-                      },
-                    },
-                    '& .MuiInputBase-root': {
-                      color: 'black',
-                    },
-                    '& .MuiAutocomplete-clearIndicator': {
-                      color: 'black',
-                    },
-                    '& .MuiAutocomplete-popupIndicator': {
-                      color: 'black',
+
+            {showDistanceInput && (
+              <div>
+                <p>How long would like to go for?</p>
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                >
+                  <Slider
+                    style={{ width: "150px" }}
+                    value={sliderValue}
+                    min={sliderUnit === "km" ? 1 : 10}
+                    max={sliderUnit === "km" ? 10 : 100}
+                    step={sliderUnit === "km" ? 0.5 : 5}
+                    valueLabelDisplay="auto"
+                    onChange={(event, newValue) => {
+                      setSliderValue(newValue), handleSliderChange(event);
+                    }}
+                    onChangeCommitted={() => {
+                      setShowBeginLocationInput(true);
+                    }}
+                  />
+                  <Button
+                    sx={{ width: "100px", height: "2.5rem" }}
+                    variant="outlined"
+                    style={
+                      nowSelected
+                        ? {
+                            borderColor: "black",
+                            color: "black",
+                            borderRadius: 0,
+                          }
+                        : {
+                            borderColor: "black",
+                            color: "black",
+                            borderRadius: 0,
+                          }
                     }
-                  }}
-                />}
-              />
+                    onClick={() => {
+                      if (sliderUnit === "km") {
+                        // Scale the slider value from the km range to the min range
+                        const position = (sliderValue - 1) / (10 - 1);
+                        const newValue = position * (100 - 10) + 10;
+                        setSliderValue(newValue);
+                        setSliderUnit("min");
+                      } else {
+                        // Scale the slider value from the min range to the km range
+                        const position = (sliderValue - 10) / (100 - 10);
+                        const newValue = position * (10 - 1) + 1;
+                        setSliderValue(newValue);
+                        setSliderUnit("km");
+                      }
+                      handleSliderChange({ target: { value: sliderValue } });
+                    }}
+                  >
+                    {sliderUnit === "km"
+                      ? `${sliderValue} km`
+                      : `${sliderValue} mins`}
+                  </Button>
+                </div>
+              </div>
+            )}
+
+            {showBeginLocationInput && (
+              <div>
+                <p>Where would you like to begin?</p>
+                <div style={{ display: "flex", gap: "10px" }}>
+                  <Stack
+                    spacing={1}
+                    direction="row"
+                    justifyContent="center"
+                    paddingBottom="15px"
+                  >
+                    <Button
+                      onClick={() => {
+                        setInputValues((prevValues) => ({
+                          ...prevValues,
+                          latitude: 40.7505,
+                          longitude: -73.9934,
+                        }));
+                        setShowBeginField(false);
+                        setHomeSelected(true);
+                        setSearchSelected(false);
+                        setAddressSelected(false);
+                        setShowEndLocationInput(true);
+                      }}
+                      sx={{ width: "110px", height: "2.5rem" }}
+                      startIcon={<HomeIcon />}
+                      variant={homeSelected ? "contained" : "outlined"}
+                      style={
+                        homeSelected
+                          ? { borderRadius: 0 }
+                          : {
+                              borderRadius: 0,
+                              backgroundColor: "transparent",
+                              borderColor: "black",
+                              color: "black",
+                              boxShadow: "none",
+                            }
+                      }
+                    >
+                      Home
+                    </Button>
+
+                    <Button
+                      onClick={() => {
+                        setBeginLocationPressed(!beginLocationPressed);
+                        setShowBeginField(false);
+                        setHomeSelected(false);
+                        setSearchSelected(true);
+                        setAddressSelected(false);
+                      }}
+                      sx={{ width: "110px", height: "2.5rem" }}
+                      startIcon={
+                        beginLocationPressed ? (
+                          <LocationSearchingIcon />
+                        ) : (
+                          <MapIcon />
+                        )
+                      }
+                      variant={searchSelected ? "contained" : "outlined"}
+                      style={
+                        searchSelected
+                          ? { borderRadius: 0 }
+                          : {
+                              borderRadius: 0,
+                              backgroundColor: "transparent",
+                              borderColor: "black",
+                              color: "black",
+                              boxShadow: "none",
+                            }
+                      }
+                    >
+                      {beginLocationPressed ? "Click" : "Map"}
+                    </Button>
+
+                    <Button
+                      onClick={() => {
+                        setShowBeginField(true);
+                        setHomeSelected(false);
+                        setSearchSelected(false);
+                        setAddressSelected(true);
+                      }}
+                      sx={{ width: "110px", height: "2.5rem" }}
+                      startIcon={<SearchIcon />}
+                      variant={addressSelected ? "contained" : "outlined"}
+                      style={
+                        addressSelected
+                          ? { borderRadius: 0 }
+                          : {
+                              borderRadius: 0,
+                              backgroundColor: "transparent",
+                              borderColor: "black",
+                              color: "black",
+                              boxShadow: "none",
+                            }
+                      }
+                    >
+                      Search
+                    </Button>
+                  </Stack>
+                </div>
+                {showBeginField && (
+                  <Autocomplete
+                    id="address-input"
+                    options={suggestions}
+                    getOptionLabel={(option) => option.label}
+                    isOptionEqualToValue={() => true === true}
+                    style={{
+                      width: 350,
+                      paddingBottom: "15px",
+                      color: "black",
+                      borderRadius: 0,
+                    }}
+                    onInputChange={handlePlaceNameChange}
+                    onChange={(event, newValue) => {
+                      if (newValue) {
+                        handlePlaceSelect(newValue);
+                      }
+                    }}
+                    renderInput={(params) => (
+                      <TextField
+                        {...params}
+                        label="Type Address"
+                        variant="outlined"
+                        size="small"
+                        sx={{
+                          "& .MuiOutlinedInput-root": {
+                            "& fieldset": {
+                              borderColor: "black",
+                            },
+                            "&:hover fieldset": {
+                              borderColor: "black",
+                            },
+                            "&.Mui-focused fieldset": {
+                              borderColor: "black",
+                            },
+                          },
+                          "& .MuiFormLabel-root": {
+                            color: "black",
+                            "&.Mui-focused": {
+                              color: "black",
+                            },
+                          },
+                          "& .MuiInputBase-root": {
+                            color: "black",
+                          },
+                          "& .MuiAutocomplete-clearIndicator": {
+                            color: "black",
+                          },
+                          "& .MuiAutocomplete-popupIndicator": {
+                            color: "black",
+                          },
+                        }}
+                      />
+                    )}
+                  />
+                )}
+              </div>
+            )}
+
+            {showEndLocationInput && (
+              <div>
+                <p>Where would you like to go?</p>
+                <div style={{ display: "flex", gap: "10px" }}>
+                  <Stack
+                    spacing={1}
+                    direction="row"
+                    justifyContent="center"
+                    paddingBottom="15px"
+                  >
+                    <Button
+                      onClick={() => {
+                        setInputValues((prevValues) => ({
+                          ...prevValues,
+                          endLatitude: 40.711667,
+                          endLongitude: -74.0125,
+                        }));
+                        setEndHomeSelected(true);
+                        setEndSearchSelected(false);
+                        setEndAddressSelected(false);
+                        setShowGoButton(true);
+                        setShowEndField(false);
+                      }}
+                      startIcon={<HomeIcon />}
+                      sx={{ width: "110px", height: "2.5rem" }}
+                      variant={endHomeSelected ? "contained" : "outlined"}
+                      style={
+                        endHomeSelected
+                          ? { borderRadius: 0 }
+                          : {
+                              borderRadius: 0,
+                              backgroundColor: "transparent",
+                              borderColor: "black",
+                              color: "black",
+                              boxShadow: "none",
+                            }
+                      }
+                    >
+                      Home
+                    </Button>
+
+                    <Button
+                      onClick={() => {
+                        setEndLocationPressed(!endLocationPressed);
+                        setEndHomeSelected(false);
+                        setEndSearchSelected(true);
+                        setEndAddressSelected(false);
+                        setShowEndField(false);
+                      }}
+                      sx={{ width: "110px", height: "2.5rem" }}
+                      startIcon={
+                        endLocationPressed ? (
+                          <LocationSearchingIcon />
+                        ) : (
+                          <MapIcon />
+                        )
+                      }
+                      variant={endSearchSelected ? "contained" : "outlined"}
+                      style={
+                        endSearchSelected
+                          ? { borderRadius: 0 }
+                          : {
+                              borderRadius: 0,
+                              backgroundColor: "transparent",
+                              borderColor: "black",
+                              color: "black",
+                              boxShadow: "none",
+                            }
+                      }
+                    >
+                      {endLocationPressed ? "Click" : "Map"}
+                    </Button>
+
+                    <Button
+                      onClick={() => {
+                        setEndHomeSelected(false);
+                        setEndSearchSelected(false);
+                        setEndAddressSelected(true);
+                        setShowEndField(true);
+                      }}
+                      sx={{ width: "110px", height: "2.5rem" }}
+                      startIcon={<SearchIcon />}
+                      variant={endAddressSelected ? "contained" : "outlined"}
+                      style={
+                        endAddressSelected
+                          ? { borderRadius: 0 }
+                          : {
+                              backgroundColor: "transparent",
+                              borderColor: "black",
+                              color: "black",
+                              boxShadow: "none",
+                              borderRadius: 0,
+                            }
+                      }
+                    >
+                      Search
+                    </Button>
+                  </Stack>
+                </div>
+                {showEndField && (
+                  <Autocomplete
+                    id="address-input"
+                    options={suggestions}
+                    getOptionLabel={(option) => option.label}
+                    isOptionEqualToValue={() => true === true}
+                    style={{
+                      width: 350,
+                      paddingBottom: "15px",
+                      color: "black",
+                      borderRadius: 0,
+                    }}
+                    onInputChange={handlePlaceNameChange}
+                    onChange={(event, newValue) => {
+                      if (newValue) {
+                        handlePlaceSelect(newValue);
+                      }
+                    }}
+                    renderInput={(params) => (
+                      <TextField
+                        {...params}
+                        label="Type Address"
+                        variant="outlined"
+                        size="small"
+                        sx={{
+                          "& .MuiOutlinedInput-root": {
+                            "& fieldset": {
+                              borderColor: "black",
+                            },
+                            "&:hover fieldset": {
+                              borderColor: "black",
+                            },
+                            "&.Mui-focused fieldset": {
+                              borderColor: "black",
+                            },
+                          },
+                          "& .MuiFormLabel-root": {
+                            color: "black",
+                            "&.Mui-focused": {
+                              color: "black",
+                            },
+                          },
+                          "& .MuiInputBase-root": {
+                            color: "black",
+                          },
+                          "& .MuiAutocomplete-clearIndicator": {
+                            color: "black",
+                          },
+                          "& .MuiAutocomplete-popupIndicator": {
+                            color: "black",
+                          },
+                        }}
+                      />
+                    )}
+                  />
+                )}
+              </div>
+            )}
+
+            {showGoButton && (
+              // <Stack spacing={1} direction="row" justifyContent="center" paddingBottom="15px">
+              //   <Button   sx={{ width: "200px", height: "2.5rem" }}  variant="contained" type="submit" size="large" style={{ borderRadius: 0 }} onClick={handleInputSubmit}>GO</Button>
+              // </Stack>
+
+              <div className="plansetting">
+                <a
+                  className="plansetting-text"
+                  type="submit"
+                  onClick={handleInputSubmit}
+                >
+                  <span>Let's Go!</span>
+                </a>
+              </div>
+            )}
+
+            {/* <Button  sx={{ width: "200px", height: "2.5rem" }} style={{ borderRadius: 0 }} variant='outlined' onClick={() => console.log("These were the inputValues:", inputValues)}>Tell me baby...</Button> */}
+            {!showGoButton && (
+              <span className="detail-text">
+                Dear user, please tell me more...
+              </span>
             )}
           </div>
-        )}
-
-        {showGoButton && (
-          // <Stack spacing={1} direction="row" justifyContent="center" paddingBottom="15px">
-          //   <Button   sx={{ width: "200px", height: "2.5rem" }}  variant="contained" type="submit" size="large" style={{ borderRadius: 0 }} onClick={handleInputSubmit}>GO</Button>
-          // </Stack>
-
-          <div className="plansetting">
-          <a className="plansetting-text" type="submit" onClick={handleInputSubmit} ><span>Let's Go!</span></a>
-          </div>
-        )}
-
-        {/* <Button  sx={{ width: "200px", height: "2.5rem" }} style={{ borderRadius: 0 }} variant='outlined' onClick={() => console.log("These were the inputValues:", inputValues)}>Tell me baby...</Button> */}
-        {(!showGoButton) && ( <span className='detail-text'>Dear user, please tell me more...</span>)}
-      </div>
-      
-      
-      </>
+        </>
       )}
 
       {/* Routeshowing win part */}
-      {routedetail&&(<div className="detailbox">
-      <div className='detail-titlebox'>
-      <span className="text_bar-mapfunction-detail">My Walk Detail</span>
-        </div>
-        <p>Distance and Duration</p>
-
-        <p>Preference</p>
-
-        <p>Quietness Score</p>
-
-        <div className="directionbox">
-      <div className='directionbox-titlebox'>
-      <span className="text_bar-mapfunction-detail-2">Direction Helper</span>
-
-{/* direction information */}
-        </div>
-        </div>
-
-        <div className="finishdetail">
-          <a className="finishdetail-text" type="submit"  ><span>Finish My Walk!</span></a>
+      {routedetail && (
+        <div className="detailbox">
+          <div className="detail-titlebox">
+            <span className="text_bar-mapfunction-detail">My Walk Detail</span>
           </div>
-          
-      </div>)}
+          <p>Distance and Duration</p>
+
+          <p>Preference</p>
+
+          <p>Quietness Score</p>
+
+          <div className="directionbox">
+            <div className="directionbox-titlebox">
+              <span className="text_bar-mapfunction-detail-2">
+                Direction Helper
+              </span>
+
+              {/* direction information */}
+            </div>
+          </div>
+
+          <div className="finishdetail">
+            <a className="finishdetail-text" type="submit">
+              <span>Finish My Walk!</span>
+            </a>
+          </div>
+        </div>
+      )}
+
+      {chatalien && (
+        <>
+          <img
+            src={normalImagePath}
+            alt="Normal Image"
+            className="alien-robot"
+            onMouseEnter={(e) =>
+              e.currentTarget.setAttribute("src", hoverImagePath)
+            }
+            onMouseLeave={(e) =>
+              e.currentTarget.setAttribute("src", normalImagePath)
+            }
+            onClick={togglechatbox}
+          />
+        </>
+      )}
+
+      {chatbox && (
+        <>
+         
+          <div className="alienchatbox">
+          <img
+            src="/static/images/chatamble1.png"
+            alt="Image"
+            className="chat-robot-two"
+          />
+            <div className="chat-titlebox">
+              <div
+                className="additional-block-close-chatbox"
+                onClick={closechatbox}
+              >
+                <CloseIcon sx={{ fontSize: 27, color: "white" }} />
+              </div>
+              <span className="text_bar-mapfunction-chat">Chat with Amble</span>
+            </div>
+          </div>
+        </>
+      )}
 
       <div ref={mapContainer} className="map-container" />
     </div>
-    
   );
 };
 
