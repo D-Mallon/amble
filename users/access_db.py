@@ -54,9 +54,9 @@ conn.close()
 # Print Queries
 # Print Queries
 
-print('\n------------------ Query 4 ------------------------------\n')
-for r in results4:
-    print(f'Password = {r[3]} : Username = {r[5]}')
+# print('\n------------------ Query 4 ------------------------------\n')
+# for r in results4:
+#     print(f'Password = {r[3]} : Username = {r[5]}')
 
 def checklogin (username,password):
     check = False
