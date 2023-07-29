@@ -2,6 +2,7 @@ import json
 from os import path
 import os
 import time
+import datetime
 
 ####### Start time - to get run time #########
 start_time = time.time()
@@ -19,7 +20,7 @@ def getBusy(taxizone):
     all_hours = {}
     for d in busyObj:
         if d["Taxi Zone ID"] == taxizone:
-            all_hours[d["Hour"]] = round(d["Busyness Predicted"],0)
+            all_hours[d["Hour"]] = round(d["Busyness Predicted"],4)
     return(all_hours)    
 
 #Function to Update Nodes Busyness Scores  (incorporates some of the earlier functions)
@@ -30,7 +31,7 @@ def update_nodes(nodes):
         all_hours = {}
         for d in busyObj:
             if d["Taxi Zone ID"] == taxizone:
-                all_hours[d["Hour"]] = round(d["Busyness Predicted"],0)
+                all_hours[d["Hour"]] = round(d["Busyness Predicted"],4)
         return(all_hours)
 
     #Get the node file
@@ -43,17 +44,35 @@ def update_nodes(nodes):
     for n in Obj["data"]:
         taxizone = str(n["taxi-zone"])
         n["b-score"] = (getBusy(taxizone))
+        n["last_updated"] = create_ts()
     # print(Obj["data"])
 
     #Write the updated json file with new busyness scores
     with open(os.path.join(json_dir, nodes), 'w') as f:
         json.dump(Obj, f, indent =4)
 
+def create_ts(): 
+    import pytz #Allows you to get time in different time
+    nyc_zone = pytz.timezone("America/New_York") 
+    nyc_time = datetime.datetime.now(nyc_zone)
+    year = nyc_time.year
+    month = nyc_time.month
+    day = nyc_time.day
+    hour= nyc_time.hour
+
+    #Create Date and Time variables for use in the Pickle File
+    xdate = datetime.datetime(year, month, day, hour) #Produces datetime object
+    dow = xdate.weekday() #Produces Day of the Week
+    # print(f'Day of the week = {dow}')
+    timestamp = datetime.datetime.timestamp(xdate) #Produces Timestamp Object.
+
+    return(timestamp)
+
 #Get path to json directory
 json_dir = r"src\json-files" 
 
 #json busyness file
-busy = 'busyness.json'
+busy = 'busy_taxi_final.json'
 
 #json location files
 park = 'park_locations.json'
