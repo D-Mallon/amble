@@ -283,18 +283,19 @@ h2 {
   /* top: 26px;
   left: 30px; */
   width: 92%;
-  /* background: #99ddff; */
-  background: rgba(255, 255, 255, 0.9);
+  background:#ffffff;
   padding: 10px;
   border-radius: 0px;
   z-index: 1;
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* border: 1px solid #000; */
   padding-top: 45px;
-  /* height:90%; */
+  height:90px;
   align-items: center;
+  border-width: 0px 1.5px 1.5px 1.5px;
+border-style: solid;
+border-color: #ffeea9;
 }
 
 

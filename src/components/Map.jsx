@@ -523,6 +523,7 @@ const Map = () => {
       <div className='directionbox-titlebox'>
       <span className="text_bar-mapfunction-detail-2">Direction Helper</span>
 
+{/* direction information */}
         </div>
         </div>
 
