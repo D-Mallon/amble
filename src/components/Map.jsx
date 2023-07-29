@@ -180,7 +180,7 @@ const Map = () => {
       <span className="text_bar-mapfunction">My Journey Planner</span>
         </div>
         <div className='when-input'>
-          <p>future issue</p>
+          <p>When?</p>
           <Stack spacing={2} direction="row" justifyContent="center" paddingBottom="15px">
             <Button className='now-button'
             sx={{ width: "100px", height: "2.5rem" }}
@@ -501,13 +501,37 @@ const Map = () => {
         )}
 
         {/* <Button  sx={{ width: "200px", height: "2.5rem" }} style={{ borderRadius: 0 }} variant='outlined' onClick={() => console.log("These were the inputValues:", inputValues)}>Tell me baby...</Button> */}
-        {(!showGoButton) && ( <span className='detail-text'>Please tell me more...</span>)}
+        {(!showGoButton) && ( <span className='detail-text'>Dear user, please tell me more...</span>)}
       </div>
       
       
       </>
       )}
-      
+
+      {/* Routeshowing win part */}
+      {routedetail&&(<div className="detailbox">
+      <div className='detail-titlebox'>
+      <span className="text_bar-mapfunction-detail">My Walk Detail</span>
+        </div>
+        <p>Distance and Duration</p>
+
+        <p>Preference</p>
+
+        <p>Quietness Score</p>
+
+        <div className="directionbox">
+      <div className='directionbox-titlebox'>
+      <span className="text_bar-mapfunction-detail-2">Direction Helper</span>
+
+        </div>
+        </div>
+
+        <div className="finishdetail">
+          <a className="finishdetail-text" type="submit"  ><span>Finish My Walk!</span></a>
+          </div>
+          
+      </div>)}
+
       <div ref={mapContainer} className="map-container" />
     </div>
     
