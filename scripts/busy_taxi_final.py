@@ -84,9 +84,10 @@ def getMonth(x,month): # Month_4 = 4 (April)
     else:
         return False
 
+
+
 #Get weather data
 load_dotenv()
-
 api_key = os.environ.get("WEATHER_API_KEY") #Key for Weather API
 url = f'http://api.weatherapi.com/v1/forecast.json?key={api_key}&q=New York City&days=1&aqi=no&alerts=no'
 response = requests.get(url)
@@ -112,7 +113,8 @@ for i in range(24):
     percip.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]["precip_in"]))
 
 #See is date is a US Holiday
-
+cal = USFederalHolidayCalendar()
+holidays = cal.holidays(start='2021-12-31', end='2022-12-31').to_pydatetime()
 
 #Create dataframe for every taxi Zone and for every hour
 for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zone name
@@ -163,8 +165,8 @@ for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zo
         #Reset for the next hour
         new_row = {} 
 
-print(df.head(30))
-print(df.tail(30))
+# print(df.head(30))
+# print(df.tail(30))
 # # #Open the Pickle File
 # pickle_file = "Taxi.pkl"
 # busy_model = pickle.load(open(os.path.join(pickle_dir, pickle_file), 'rb'))
