@@ -5,9 +5,10 @@ import datetime
 import numpy as np
 import pandas as pd
 import requests
+
 from dotenv import load_dotenv #To allow secret key for Weather API
-import os
 import time # To measue run time
+from pandas.tseries.holiday import USFederalHolidayCalendar
 
 import warnings # Stops warning from appearing
 warnings.filterwarnings('ignore')
@@ -55,7 +56,7 @@ columns_names = ['Hour', 'Timestamp', 'Snow', 'Humidity', 'Temperature', 'Precip
        'Month_1', 'Month_2', 'Month_3', 'Month_4', 'Month_5', 'Month_6',
        'Month_7', 'Month_8', 'Month_9', 'Month_10', 'Month_11', 'Month_12']
 
-print(len(columns_names))
+# print(len(columns_names))
 #Create an empty dataframe
 df = pd.DataFrame(columns=columns_names)
 
@@ -66,82 +67,106 @@ def create_ts(hour):
     nyc_time = datetime.datetime.now(nyc_zone)
     year = nyc_time.year
     month = nyc_time.month
+    # print(f'month = {month}')
     day = nyc_time.day
 
     #Create Date and Time variables for use in the Pickle File
     xdate = datetime.datetime(year, month, day, hour) #Produces datetime object
     dow = xdate.weekday() #Produces Day of the Week
+    # print(f'Day of the week = {dow}')
     timestamp = datetime.datetime.timestamp(xdate) #Produces Timestamp Object.  Will be updated with hour data later
-    return(dow,timestamp)
+    return(month,timestamp,dow)
 
-#Function to Update the day variables that comes from User Input
-def getDay(x,dow): # In this case, day of the week (dow) = 4 (Friday)
-    if x == dow:
+#Function to Update the month variables that comes from User Input
+def getMonth(x,month): # Month_4 = 4 (April)
+    if x == month:
         return True
     else:
         return False
 
-# #Get weather data
-# load_dotenv()
+#Get weather data
+load_dotenv()
 
-# api_key = os.environ.get("WEATHER_API_KEY") #Key for Weather API
-# url = f'http://api.weatherapi.com/v1/forecast.json?key={api_key}&q=New York City&days=1&aqi=no&alerts=no'
-# response = requests.get(url)
-# weather_data = response.json()
+api_key = os.environ.get("WEATHER_API_KEY") #Key for Weather API
+url = f'http://api.weatherapi.com/v1/forecast.json?key={api_key}&q=New York City&days=1&aqi=no&alerts=no'
+response = requests.get(url)
+weather_data = response.json()
 
-# #Create Weather Variables
-# temp = []
-# hum = []
-# wind = []
-# percip = []
+#Create Weather Variables
+temp = []
+hum = []
+percip = []
 
-# #Weather variables from Weather API
-# for i in range(24):
-#     temp.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]['temp_f']))
-#     hum.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]["humidity"]))
-#     wind.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]['wind_mph']))
-#     percip.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]["precip_in"]))
+#Create values for snow.  Same value for each hour as Weather API only produces a daily item for snow
+snow = False
+snow_predict = float(weather_data['forecast']['forecastday'][0]['day']['totalsnow_cm'])
+if snow_predict != 0:
+    snow = [True] * 24
+else:
+    snow = [False] * 24
 
-# #Create dataframe for every taxi Zone and for every hour
-# for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zone name
-#     #Create Dictionaries to capture the data for different columns
-#     new_row1 = {} #Taxi zone data - whether the input is True or False
-#     new_row = {}  # All other data
+#Create other Weather variables from Weather API
+for i in range(24):
+    temp.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]['temp_f']))
+    hum.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]["humidity"]))
+    percip.append(float(weather_data['forecast']['forecastday'][0]['hour'][i]["precip_in"]))
 
-#     #Create values for the taxi zone columns (64 of them)
-#     for column in df.columns[1:]:
-#         if column[:13] == 'PULocationID_': # If column is a taxi zone column
-#             if column[13:] == k: #If column ending matches the taxi zone number
-#                 new_row1.update({column:True}) #Make that entry True
-#             else:
-#                 new_row1.update({column:False}) #Else make that entry False
+#See is date is a US Holiday
+
+
+#Create dataframe for every taxi Zone and for every hour
+for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zone name
+    #Create Dictionaries to capture the data for different columns
+    new_row1 = {} #Taxi zone data - whether the input is True or False
+    new_row = {}  # All other data
+
+    #Create values for the taxi zone columns (64 of them)
+    for column in df.columns[1:]:
+        if column[:13] == 'PULocationID_': # If column is a taxi zone column
+            if column[13:] == k: #If column ending matches the taxi zone number
+                new_row1.update({column:True}) #Make that entry True
+            else:
+                new_row1.update({column:False}) #Else make that entry False
     
-#     #Create values for all other variables 
-#     for i in range(24): #For each hour (in a 24 hour period) add values to a new row
-#         new_row.update({'Hour':i})
-#         new_row.update({'Temperature':temp[i]})
-#         new_row.update({'Humidity':hum[i]})
-#         new_row.update({'Wind Speed':wind[i]})
-#         new_row.update({'Precipitation':percip[i]})
+    #For each hour (in a 24 hour period) add values to a new row
+    for i in range(24): 
+        new_row.update({'Hour':i})
 
-#         result = create_ts(i) #create timestamp based on the hour value (i)
-#         new_row.update({'TImestamp':result[1]})
+        #Create values for weather variables 
+        new_row.update({'Temperature':temp[i]})
+        new_row.update({'Humidity':hum[i]})
+        new_row.update({'Snow':snow[i]})
+        new_row.update({'Precipitation':percip[i]})
 
-#         dow = result[0] #update day of week based on timestamp.  Then update values in day columns
-#         new_row.update({'Day_Monday':getDay(0,dow)})
-#         new_row.update({'Day_Tuesday':getDay(1,dow)})
-#         new_row.update({'Day_Wednesday':getDay(2,dow)})
-#         new_row.update({'Day_Thursday':getDay(3,dow)})
-#         new_row.update({'Day_Friday':getDay(4,dow)})
-#         new_row.update({'Day_Saturday':getDay(5,dow)})
-#         new_row.update({'Day_Sunday':getDay(6,dow)})
+        #create timestamp based on the hour value (i)
+        timestamp = create_ts(i) 
+        new_row.update({'Timestamp':timestamp[1]})  
 
-#         new_dict = {**new_row, **new_row1} #Merge the two dictionaries
-#         df = pd.concat([df, pd.DataFrame([new_dict])], ignore_index=True) #Add the merged row to dataframe
-#         new_row = {} #Reset for the next hour
+        #Update Day_weekday and Day_weekend.
+        dow = timestamp[2]
+        if dow == 5 or dow == 6:
+            new_row.update({'Day_weekday':False})
+            new_row.update({'Day_weekend':True})
+        else:
+            new_row.update({'Day_weekday':True})
+            new_row.update({'Day_weekend':False})
 
-# #Open the Pickle File
-# pickle_file = "2017_model.pkl"
+        #Update dummy values for each month based on timestamp. 
+        mon = timestamp[0]  
+        for i in range(1,13):
+            new_row.update({'Month_'+str(i):getMonth(i,mon)})
+
+        #Merge the two dictionaries      
+        new_dict = {**new_row, **new_row1} 
+        df = pd.concat([df, pd.DataFrame([new_dict])], ignore_index=True) #Add the merged row to dataframe
+    
+        #Reset for the next hour
+        new_row = {} 
+
+print(df.head(30))
+print(df.tail(30))
+# # #Open the Pickle File
+# pickle_file = "Taxi.pkl"
 # busy_model = pickle.load(open(os.path.join(pickle_dir, pickle_file), 'rb'))
 
 # #Make the predictions
@@ -151,7 +176,7 @@ def getDay(x,dow): # In this case, day of the week (dow) = 4 (Friday)
 # df['Busyness Predicted'] = busyness_predictions
 
 # #Drop Certain Columns
-# df.drop(['Temperature', 'Humidity', 'Wind Speed', 'Precipitation',
+# df.drop(['Temperature', 'Humidity', 'Snow', 'Precipitation',
 #         'Day_Friday', 'Day_Monday', 'Day_Saturday',
 #     'Day_Sunday', 'Day_Thursday', 'Day_Tuesday', 'Day_Wednesday'], axis=1, inplace = True)
 
