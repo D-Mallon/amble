@@ -148,6 +148,11 @@ const Map = () => {
       setInputValues({ ...inputValues, ["waypoints"]: waypoints});
       console.log("handleInputSubmit", inputValues);
 
+      //changewindow
+      setplansetwin(false);
+      setchatalien (true);
+      setroutedetail(true);
+
     } catch (error) {
       if (error.response) {
         console.log(error.response);
@@ -160,8 +165,16 @@ const Map = () => {
     }
   };
 
+  //Below is route presentation part!!
+  const [plansetwin, setplansetwin] = useState(true);
+  const [chatalien, setchatalien] = useState(false);
+  const [routedetail, setroutedetail] = useState(false);
+  const [ratingwin, setratingwin] = useState(false);
+
   return (
     <div>
+      {plansetwin && (
+      <>
       <div className="user-input">
       <div className='titlebox'>
       <span className="text_bar-mapfunction">My Journey Planner</span>
@@ -478,15 +491,26 @@ const Map = () => {
         )}
 
         {showGoButton && (
-          <Stack spacing={1} direction="row" justifyContent="center" paddingBottom="15px">
-            <Button   sx={{ width: "200px", height: "2.5rem" }}  variant="contained" type="submit" size="large" style={{ borderRadius: 0 }} onClick={handleInputSubmit}>GO</Button>
-          </Stack>
+          // <Stack spacing={1} direction="row" justifyContent="center" paddingBottom="15px">
+          //   <Button   sx={{ width: "200px", height: "2.5rem" }}  variant="contained" type="submit" size="large" style={{ borderRadius: 0 }} onClick={handleInputSubmit}>GO</Button>
+          // </Stack>
+
+          <div className="plansetting">
+          <a className="plansetting-text" type="submit" onClick={handleInputSubmit} ><span>Let's Go!</span></a>
+          </div>
         )}
 
-        <Button  sx={{ width: "200px", height: "2.5rem" }} style={{ borderRadius: 0 }} variant='outlined' onClick={() => console.log("These were the inputValues:", inputValues)}>Tell me baby...</Button>
+        {/* <Button  sx={{ width: "200px", height: "2.5rem" }} style={{ borderRadius: 0 }} variant='outlined' onClick={() => console.log("These were the inputValues:", inputValues)}>Tell me baby...</Button> */}
+        {(!showGoButton) && ( <span className='detail-text'>Please tell me more...</span>)}
       </div>
+      
+      
+      </>
+      )}
+      
       <div ref={mapContainer} className="map-container" />
     </div>
+    
   );
 };
 
