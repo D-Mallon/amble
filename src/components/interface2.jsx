@@ -147,9 +147,9 @@ function Interface2() {
 
           <div className="PlanMap">
             <div className="additional-blocks">
-              {/* <div className="additional-block-text-preplan">
-                <span className="text_bar_2-preplan">Choose Position</span>
-              </div> */}
+              <div className="additional-block-text-preplan">
+                <span className="text_bar_2-preplan">During the planning process</span>
+              </div>
               <div
                 className="additional-block-weather"
                 onClick={toggleWeather}

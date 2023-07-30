@@ -1,41 +1,55 @@
-import React, { useRef, useEffect, useState } from 'react';
-import mapboxgl from 'mapbox-gl';
-import './Map.css';
-import 'mapbox-gl/dist/mapbox-gl.css';
-import DateTimePicker from 'react-datetime-picker';
-import axios from 'axios';
-import { useMapInput } from '../context/MapInputContext';
+import React, { useRef, useEffect, useState } from "react";
+import mapboxgl from "mapbox-gl";
+import "./Map.css";
+import "mapbox-gl/dist/mapbox-gl.css";
+import DateTimePicker from "react-datetime-picker";
+import axios from "axios";
+import { useMapInput } from "../context/MapInputContext";
 
-import Slider from '@mui/material/Slider';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
+import Slider from "@mui/material/Slider";
+import TextField from "@mui/material/TextField";
+import Autocomplete from "@mui/material/Autocomplete";
 
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 
-import HomeIcon from '@mui/icons-material/Home';
-import MapIcon from '@mui/icons-material/Map';
-import SearchIcon from '@mui/icons-material/Search';
-import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
+import HomeIcon from "@mui/icons-material/Home";
+import MapIcon from "@mui/icons-material/Map";
+import SearchIcon from "@mui/icons-material/Search";
+import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
+import { Link, useNavigate } from "react-router-dom";
+import "react-datetime-picker/dist/DateTimePicker.css";
+import "react-calendar/dist/Calendar.css";
+import "react-clock/dist/Clock.css";
 
-import 'react-datetime-picker/dist/DateTimePicker.css';
-import 'react-calendar/dist/Calendar.css';
-import 'react-clock/dist/Clock.css';
-
-import useRouteDisplay from './useRouteDisplay';
-import useGeocoding from './useGeocoding';
-import useMapInit from './useMapInit';
-import usePlaceNameChange from './usePlaceNameChange';
+import useRouteDisplay from "./useRouteDisplay";
+import useGeocoding from "./useGeocoding";
+import useMapInit from "./useMapInit";
+import usePlaceNameChange from "./usePlaceNameChange";
 import Box from "@mui/material/Box";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 
+import { styled } from "@mui/material/styles";
+import Rating from "@mui/material/Rating";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
-const apiKey = import.meta.env.VITE_MAPBOX_API_KEY
+const apiKey = import.meta.env.VITE_MAPBOX_API_KEY;
 mapboxgl.accessToken = apiKey;
 
 const Map = () => {
-  const normalImagePath ='/static/images/chatamble3.png';
-  const hoverImagePath = '/static/images/chatamble2.png';
+  const StyledRating = styled(Rating)({
+    "& .MuiRating-iconFilled": {
+      color: "#ff6d75",
+    },
+    "& .MuiRating-iconHover": {
+      color: "#ff3d47",
+    },
+  });
+
+  const navigate = useNavigate();
+  const normalImagePath = "/static/images/chatamble3.png";
+  const hoverImagePath = "/static/images/chatamble2.png";
 
   const { inputValues, setInputValues } = useMapInput();
 
@@ -47,7 +61,7 @@ const Map = () => {
   const [endLocationPressed, setEndLocationPressed] = useState(false);
   const [showTimeInput, setShowTimeInput] = useState(false);
   const [sliderValue, setSliderValue] = useState(1);
-  const [sliderUnit, setSliderUnit] = useState('km');
+  const [sliderUnit, setSliderUnit] = useState("km");
   const [showBeginField, setShowBeginField] = useState(false);
   const [showEndField, setShowEndField] = useState(false);
   const [initialTime, setInitialTime] = useState(() => {
@@ -71,19 +85,39 @@ const Map = () => {
   const [endSearchSelected, setEndSearchSelected] = useState(false);
   const [endAddressSelected, setEndAddressSelected] = useState(false);
 
-
-  const { map, markers } = useMapInit(mapContainer, lat, lng, zoom, inputValues);
-  const { route, displayRoute } = useRouteDisplay(map.current, inputValues, setInputValues);
-  const { location, setLocation } = useGeocoding(map.current, beginLocationPressed, setBeginLocationPressed, endLocationPressed, setEndLocationPressed,
-    inputValues, setInputValues, showEndLocationInput, setShowEndLocationInput, setShowGoButton);
-  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } = usePlaceNameChange('', setInputValues);
+  const { map, markers } = useMapInit(
+    mapContainer,
+    lat,
+    lng,
+    zoom,
+    inputValues
+  );
+  const { route, displayRoute } = useRouteDisplay(
+    map.current,
+    inputValues,
+    setInputValues
+  );
+  const { location, setLocation } = useGeocoding(
+    map.current,
+    beginLocationPressed,
+    setBeginLocationPressed,
+    endLocationPressed,
+    setEndLocationPressed,
+    inputValues,
+    setInputValues,
+    showEndLocationInput,
+    setShowEndLocationInput,
+    setShowGoButton
+  );
+  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } =
+    usePlaceNameChange("", setInputValues);
 
   const handleNowButtonClick = () => {
     setNowSelected(true);
     setLaterSelected(false);
     const now = new Date();
     const currentHour = now.getHours();
-    setInputValues(prevValues => ({ ...prevValues, hour: currentHour }));
+    setInputValues((prevValues) => ({ ...prevValues, hour: currentHour }));
 
     // Round the current time to the nearest minute
     const roundedMinutes = Math.round(now.getMinutes());
@@ -109,7 +143,7 @@ const Map = () => {
     }
     now.setHours(currentHour, 0, 0, 0);
 
-    setInputValues(prevValues => ({ ...prevValues, hour: currentHour }));
+    setInputValues((prevValues) => ({ ...prevValues, hour: currentHour }));
 
     // Set the time state to the rounded time
     setTime(now);
@@ -121,41 +155,44 @@ const Map = () => {
   };
 
   const handleTimeChange = (value) => {
-    const [hours, minutes] = value.split(':');
+    const [hours, minutes] = value.split(":");
     const time = new Date(inputValues.time);
     time.setHours(hours, minutes);
-    setInputValues(prevValues => ({ ...prevValues, time }));
+    setInputValues((prevValues) => ({ ...prevValues, time }));
   };
 
   const handleSliderChange = (event) => {
     const newDistance = event.target.value;
-    setInputValues(prevValues => ({...prevValues, distance: newDistance}));
+    setInputValues((prevValues) => ({ ...prevValues, distance: newDistance }));
     console.log("handleSliderChange", inputValues);
   };
-  
-  const handleInputSubmit = async (e) => {   
+
+  const handleInputSubmit = async (e) => {
     e.preventDefault();
-    
+
     console.log("handleInputSubmit", inputValues);
-  
+
     try {
-      const response = await axios.post('/users/handle_routeinpput_data', inputValues, {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-      });
-  
+      const response = await axios.post(
+        "/users/handle_routeinpput_data",
+        inputValues,
+        {
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        }
+      );
+
       console.log("errorless:", response.data);
       const waypoints = response.data["waypoints"];
       console.log("waypoints:", waypoints);
-      setInputValues({ ...inputValues, ["waypoints"]: waypoints});
+      setInputValues({ ...inputValues, ["waypoints"]: waypoints });
       console.log("handleInputSubmit", inputValues);
 
       //changewindow
       setplansetwin(false);
-      setchatalien (true);
+      setchatalien(true);
       setroutedetail(true);
-
     } catch (error) {
       if (error.response) {
         console.log(error.response);
@@ -174,8 +211,11 @@ const Map = () => {
   const [chatbox, setchatbox] = useState(false);
   const [routedetail, setroutedetail] = useState(false);
   const [ratingwin, setratingwin] = useState(false);
+  const [cathover, setcatHover] = useState(false);
 
-
+  const backtodetailwin = () => {
+    setratingwin(false);
+  };
 
   const togglechatbox = () => {
     setchatbox(true);
@@ -186,7 +226,29 @@ const Map = () => {
     setchatbox(false);
     setchatalien(true);
   };
-  
+
+  const catcloseHover = () => {
+    setcatHover(true);
+  };
+
+  const catcloseMouseLeave = () => {
+    setcatHover(false);
+  };
+
+  const backtoplanwin = () => {
+    setplansetwin(true);
+    setchatalien(false);
+    setroutedetail(false);
+    setchatbox(false);
+  };
+
+  const toggleratewin = () => {
+    setratingwin(true);
+  };
+
+  const handleButtonClick_close = () => {
+    navigate("/");
+  };
 
   return (
     <div>
@@ -666,32 +728,52 @@ const Map = () => {
 
       {/* Routeshowing win part */}
       {routedetail && (
-        <div className="detailbox">
-          <div className="detail-titlebox">
-            <span className="text_bar-mapfunction-detail">My Walk Detail</span>
+        <>
+          <div className="additional-block-text-detailtitle">
+            <span className="text_bar_2-detailtitle">
+              Route Plan Presentation
+            </span>
           </div>
-          <p>Distance and Duration</p>
+          <div
+            className="additional-block-datail-button"
+            onClick={backtoplanwin}
+          >
+            <span className="text_bar_2-detail">Change Journey Plan</span>
+          </div>
 
-          <p>Preference</p>
-
-          <p>Quietness Score</p>
-
-          <div className="directionbox">
-            <div className="directionbox-titlebox">
-              <span className="text_bar-mapfunction-detail-2">
-                Direction Helper
+          <div className="detailbox">
+            <div className="detail-titlebox">
+              <span className="text_bar-mapfunction-detail">
+                My Walk Detail
               </span>
+            </div>
+            <p>Distance and Duration</p>
 
-              {/* direction information */}
+            <p>Preference</p>
+
+            <p>Quietness Score</p>
+
+            <div className="directionbox">
+              <div className="directionbox-titlebox">
+                <span className="text_bar-mapfunction-detail-2">
+                  Direction Helper
+                </span>
+
+                {/* direction information */}
+              </div>
+            </div>
+
+            <div className="finishdetail">
+              <a
+                className="finishdetail-text"
+                type="submit"
+                onClick={toggleratewin}
+              >
+                <span>Finish My Walk!</span>
+              </a>
             </div>
           </div>
-
-          <div className="finishdetail">
-            <a className="finishdetail-text" type="submit">
-              <span>Finish My Walk!</span>
-            </a>
-          </div>
-        </div>
+        </>
       )}
 
       {chatalien && (
@@ -713,17 +795,26 @@ const Map = () => {
 
       {chatbox && (
         <>
-         
-          <div className="alienchatbox">
-          <img
-            src="/static/images/chatamble1.png"
-            alt="Image"
-            className="chat-robot-two"
-          />
+          <div className="alienchatbox" id="chatbox">
+            {cathover ? (
+              <img
+                src="/static/images/chatamble0.png"
+                alt="Image"
+                className="chat-robot-two"
+              />
+            ) : (
+              <img
+                src="/static/images/chatamble1.png"
+                alt="Image"
+                className="chat-robot-two"
+              />
+            )}
             <div className="chat-titlebox">
               <div
                 className="additional-block-close-chatbox"
                 onClick={closechatbox}
+                onMouseEnter={catcloseHover}
+                onMouseLeave={catcloseMouseLeave}
               >
                 <CloseIcon sx={{ fontSize: 27, color: "white" }} />
               </div>
@@ -731,6 +822,169 @@ const Map = () => {
             </div>
           </div>
         </>
+      )}
+
+      {ratingwin && (
+        <div className="ratewin">
+          {/* <div className='white-board'></div> */}
+          <img
+            src="/static/images/MenuPic5.jpg"
+            alt="pics"
+            className="ratewin-background"
+          ></img>
+          <div className="additional-blocks-ratewin">
+            <div className="additional-block-text-ratewin">
+              <span className="text_bar_2-ratewin">Rate My Walk</span>
+            </div>
+
+            <div
+              className="additional-block-rate-button"
+              onClick={backtodetailwin}
+            >
+              <span className="text_bar_2-detail">
+                See My Walk Detail Again!
+              </span>
+            </div>
+
+            <div
+              className="additional-block-close-ratewin"
+              onClick={handleButtonClick_close}
+            >
+              <CloseIcon sx={{ fontSize: 27, color: "white" }} />
+            </div>
+          </div>
+
+          <div className="General-rate-inform">
+            <div className="stop-text">
+              <span>Journey Gernal Review </span>
+            </div>
+            <Box
+              sx={{
+                "& > legend": { mt: 2 },
+              }}
+            >
+              <div className="quite-rate">
+                <div>Quietness Review: </div>
+                {/* <Rating
+              name="customized-10"
+              defaultValue={2}
+              max={10}
+              precision={0.5}
+              size="large"
+              sx={{
+                fontSize: "2.2rem"
+            }}
+            /> */}
+                <StyledRating
+                  name="customized-color"
+                  defaultValue={2}
+                  getLabelText={(value) =>
+                    `${value} Heart${value !== 1 ? "s" : ""}`
+                  }
+                  precision={0.5}
+                  max={10}
+                  icon={
+                    <FavoriteIcon
+                      fontSize="large"
+                      sx={{
+                        fontSize: "2.2rem",
+                      }}
+                    />
+                  }
+                  emptyIcon={
+                    <FavoriteBorderIcon
+                      fontSize="large"
+                      sx={{
+                        fontSize: "2.2rem",
+                      }}
+                    />
+                  }
+                />
+              </div>
+              <div className="like-rate">
+                <span>Favorite Review: </span>
+                <StyledRating
+                  name="customized-color"
+                  defaultValue={2}
+                  getLabelText={(value) =>
+                    `${value} Heart${value !== 1 ? "s" : ""}`
+                  }
+                  precision={0.5}
+                  max={10}
+                  icon={
+                    <FavoriteIcon
+                      fontSize="large"
+                      sx={{
+                        fontSize: "2.2rem",
+                      }}
+                    />
+                  }
+                  emptyIcon={
+                    <FavoriteBorderIcon
+                      fontSize="large"
+                      sx={{
+                        fontSize: "2.2rem",
+                      }}
+                    />
+                  }
+                />
+              </div>
+            </Box>
+            <div className="stop-text">
+              <span>Do you like your stop? </span>
+            </div>
+            <div className="each-stop-inform">
+              <div className="stop1">
+                <span>PLACE ONE</span>
+                <div className="stand-icon"></div>
+                <Slider
+                  aria-label="love-degree"
+                  defaultValue={30}
+                  valueLabelDisplay="auto"
+                  step={10}
+                  marks
+                  min={0}
+                  max={100}
+                />
+              </div>
+              <div className="stop2">
+                <span>PLACE TWO</span>
+                <div className="stand-icon"></div>
+                <Slider
+                  aria-label="love-degree"
+                  defaultValue={30}
+                  valueLabelDisplay="auto"
+                  step={10}
+                  marks
+                  min={0}
+                  max={100}
+                />
+              </div>
+              <div className="stop3">
+                <span>PLACE THREE</span>
+                <div className="stand-icon"></div>
+                <Slider
+                  aria-label="love-degree"
+                  defaultValue={30}
+                  valueLabelDisplay="auto"
+                  step={10}
+                  marks
+                  min={0}
+                  max={100}
+                />
+              </div>
+            </div>
+            <div className="finishrate">
+              <a
+                className="finishrate-text"
+                type="submit"
+                onClick={handleButtonClick_close}
+              >
+                <span>Submit My Review</span>
+              </a>
+            </div>
+          </div>
+        </div>
       )}
 
       <div ref={mapContainer} className="map-container" />
