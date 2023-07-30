@@ -38,6 +38,7 @@
     "react-map-gl": "^7.0.25",
     "react-router-dom": "^6.14.1",
     "react-select": "^5.7.4",
+    "react-typist": "^2.0.5",
     "sass": "^1.64.0",
     "styled-components": "^5.3.11"
   },
