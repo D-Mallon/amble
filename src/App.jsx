@@ -3,7 +3,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import { MapInputProvider } from './context/MapInputContext';
-import { ArrayProvider } from "./context/ArrayProvider";
+import { ArrayProvider } from "./context/ArrayContext";
 import "./App.css";
 
 import Interface from "./components/Interface";

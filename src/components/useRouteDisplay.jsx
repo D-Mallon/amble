@@ -1,9 +1,54 @@
 // useRouteDisplay.js
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import mapboxgl from 'mapbox-gl';
+import { ArrayContext, useWaypointsArray } from '../context/ArrayContext';
+
+// might be substituted with all_nodes.json after Cormac's approval
+import community_locations from '../json-files/community_locations.json';
+import library_locations from '../json-files/library_locations.json';
+import museum_art_locations from '../json-files/museum_art_locations.json';
+import park_locations from '../json-files/park_locations.json';
+import park_node_locations from '../json-files/park_node_locations.json';
+import walking_node_locations from '../json-files/walking_node_locations.json';
+import worship_locations from '../json-files/worship_locations.json';
+
+const parseWaypoints = (ways) => {
+  return ways.split(";").map((way) => {
+    const [longitude, latitude] = way.split(",").map(Number);
+    return { latitude, longitude };
+  });
+};
+
+const matchWaypointsWithData = (waypoints, jsonData) => {
+  return waypoints.map((waypoint) => {
+    return jsonData.find(
+      (data) =>
+        data.location.latitude === waypoint.latitude &&
+        data.location.longitude === waypoint.longitude
+    );
+  });
+};
+
+const handleWaypoints = (waypointsString, setGlobalArrayValue) => {
+  const waypoints = parseWaypoints(waypointsString);
+  const jsonData = [
+        ...community_locations.data,
+        ...library_locations.data,
+        ...museum_art_locations.data,
+        ...park_locations.data,
+        ...park_node_locations.data,
+        ...walking_node_locations.data,
+        ...worship_locations.data,
+  ];
+  const arrayTemp = matchWaypointsWithData(waypoints, jsonData);
+  setGlobalArrayValue(arrayTemp);
+};
+
+
 
 const useRouteDisplay = (map, inputValues) => {
 
+  const { globalArray, setGlobalArrayValue } = useWaypointsArray();
   const [route, setRoute] = useState([]);
 
   const displayRoute = async () => {
@@ -16,6 +61,10 @@ const useRouteDisplay = (map, inputValues) => {
         waypointsString = inputValues.waypoints
           .map((waypoint) => `${waypoint[1]},${waypoint[0]}`)
           .join(";");
+      }
+
+      if (waypointsString) {
+        handleWaypoints(waypointsString, setGlobalArrayValue);
       }
 
       console.log(inputValues.waypoints)
@@ -103,6 +152,7 @@ const useRouteDisplay = (map, inputValues) => {
     displayRoute();
   }, [inputValues.waypoints]);
 
+  console.log("globalArray:", globalArray);
   return { route, displayRoute };
 };
 

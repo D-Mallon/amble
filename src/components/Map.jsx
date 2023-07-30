@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, useContext } from 'react';
 import mapboxgl from 'mapbox-gl';
 import './Map.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -27,6 +27,7 @@ import useGeocoding from './useGeocoding';
 import useMapInit from './useMapInit';
 import usePlaceNameChange from './usePlaceNameChange';
 import Box from "@mui/material/Box";
+import { ArrayContext, useWaypointsArray } from "../context/ArrayContext";
 
 
 const apiKey = import.meta.env.VITE_MAPBOX_API_KEY
@@ -35,6 +36,7 @@ mapboxgl.accessToken = apiKey;
 const Map = () => {
 
   const { inputValues, setInputValues } = useMapInput();
+  const { globalArray, setGlobalArrayValue } = useWaypointsArray();
 
   const mapContainer = useRef(null);
   const [lat, setLat] = useState(40.73);
@@ -70,7 +72,7 @@ const Map = () => {
 
 
   const { map, markers } = useMapInit(mapContainer, lat, lng, zoom, inputValues);
-  const { route, displayRoute } = useRouteDisplay(map.current, inputValues, setInputValues);
+  const { route, displayRoute } = useRouteDisplay(map.current, inputValues, setInputValues, setGlobalArrayValue);
   const { location, setLocation } = useGeocoding(map.current, beginLocationPressed, setBeginLocationPressed, endLocationPressed, setEndLocationPressed,
     inputValues, setInputValues, showEndLocationInput, setShowEndLocationInput, setShowGoButton);
   const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } = usePlaceNameChange('', setInputValues);
