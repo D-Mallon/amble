@@ -1,0 +1,92 @@
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 60vw;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    margin: 10px;
+}
+
+form input {
+    flex: 1;
+    padding: 5px;
+}
+
+form button {
+    width: 80px;
+    margin-left: 10px;
+}
+
+.Amble {
+    align-self: flex-start;
+    background-color: #ddd;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.Me {
+    align-self: flex-end;
+    background-color: #aaf;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.System {
+    align-self: flex-end;
+    background-color: rgb(0, 146, 92);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.icon {
+    width: 20px; /* adjust this to the size you want */
+    height: auto; /* maintains aspect ratio */
+}
+
+.acorn,
+.user {
+    float: right;
+}
+
+.squirrel {
+    float: left;
+}
+
+.message-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Amble.clickable:hover {
+    cursor: hand;
+    background-color: #493b3b; /* your desired hover color */
+}
+
+.System.clickable:hover {
+    cursor: hand;
+    background-color: #10c25a; /* your desired hover color */
+}
+
+.Amble.clickable .icon:hover {
+    transform: scale(1.2); /* increases size to 120% on hover */
+}
+
+.AmbleTyping {
+    font-style: italic;
+    text-align: left;
+}

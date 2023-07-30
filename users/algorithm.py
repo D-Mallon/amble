@@ -79,15 +79,19 @@ def calculate_distance(lat1, lon1, lat2, lon2):
     distance = R * c
     return distance
 
+# def magic(user_latitude, user_longitude, hour, dist, endLatitude, endLongitude):
+
 
 def magic(user_latitude, user_longitude, hour):
-
     print(f"Starting location: ({user_latitude}, {user_longitude})")
     print("-----------------------------------------")
 
     # Define the predefined distance to be covered
-    predefined_distance = 2  # Adjust this value as needed
+    # if dist > 10:
+    #     dist = dist/10
 
+    # predefined_distance = dist  # Adjust this value as needed
+    predefined_distance = 2
     visited_parks = []  # List to store visited parks
 
     while predefined_distance > 0:
@@ -109,6 +113,10 @@ def magic(user_latitude, user_longitude, hour):
         sorted_indices = sorted(
             range(len(closest_distances)), key=lambda k: closest_distances[k])
         closest_parks = [closest_parks[i] for i in sorted_indices[:7]]
+
+        # Probably need something here to get the busyness scores for the taxis and for the bikes
+        # Then apply some weightings to the two - say 75% taxi and 25% bike
+        # This produces a single b-score which goes to the line of code below
 
         # Select the park with the lowest combination of "busi" values
         selected_park = min(

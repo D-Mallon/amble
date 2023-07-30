@@ -18,11 +18,12 @@ import WidgetsRoundedIcon from '@mui/icons-material/WidgetsRounded';
 import WidgetsIcon from '@mui/icons-material/Widgets';
 import FaceIcon from '@mui/icons-material/Face';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import MenuBar from './MenuBar';
+import MenuBar2 from './MenuBar2';
 import MapBackground from './mapbackground';
 import {Link, useNavigate} from 'react-router-dom';
 import MyFunctionButton from './functionbutton';
 import Map from "./Map";
+import Box from "@mui/material/Box";
 
 const theme = createTheme({
   palette: {
@@ -35,14 +36,14 @@ const theme = createTheme({
   },
 });
 
-function Interface2({ inputValues, setInputValues }) {
+function Interface2() {
 //   const timeData=useContext(TimeSearchContext); 
 //   console.log(timeData.search);
 
     const navigate_homepage=useNavigate();
 
     const handleButtonClick_close = () =>{
-        navigate_homepage('/homepage')
+        navigate_homepage('/')
     }
 
 
@@ -110,9 +111,15 @@ function Interface2({ inputValues, setInputValues }) {
           className="menu-button"
           alt="Menu button"
         /> */}
-         <MenuBar/>
+          <div className="menubar-area-interface">
+        <MenuBar2 />
+      </div>
          <div className='mapwrapper_routeplan'>
-        <MapBackground zoom={14.4}/>
+         <img
+              src="/static/images/newyork.jpg"
+              alt="pics"
+              className="pic-in-rightbox"
+            ></img>
         </div>
         {isWeatherVisible && (
             <>
@@ -141,7 +148,7 @@ function Interface2({ inputValues, setInputValues }) {
           <div className="PlanMap">
             <div className="additional-blocks">
               <div className="additional-block-text-preplan">
-                <span className="text_bar_2-preplan">Choose Position</span>
+                <span className="text_bar_2-preplan">During the planning process</span>
               </div>
               <div
                 className="additional-block-weather"
@@ -153,8 +160,8 @@ function Interface2({ inputValues, setInputValues }) {
                 <CloseIcon sx={{ fontSize: 27 , color: 'white'}} />
               </div>
             </div>
-            {/* <Map /> */}
-            <Map inputValues={inputValues} setInputValues={setInputValues} />
+        
+            <Map />
           </div>
         </div>
       </div>

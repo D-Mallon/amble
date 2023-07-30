@@ -12,6 +12,7 @@ import './HomePage.css';
 import MyButton from './mainbutton';
 import MyFunctionButton from './functionbutton';
 import MapBackground from './mapbackground';
+import Box from "@mui/material/Box";
 
 const theme = createTheme({
     palette: {
@@ -26,18 +27,7 @@ const theme = createTheme({
 
   const logoImages = [
     
-    '/static/images/LL1.png',
-    '/static/images/LL2.png',
-    '/static/images/LL3.png',
-    '/static/images/LL3.png',
-    // '/static/images/logo7.png',
-    '/static/images/LL4.png',
-    '/static/images/LL4.png',
-    '/static/images/LL5.png',
-    // '/static/images/logo2.png',
-    
-    // '/static/images/LL6.png',
-    // '/static/images/LL7.png',
+   
   
     // Add more logo image paths here if needed
   ];

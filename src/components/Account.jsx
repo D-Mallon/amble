@@ -1,6 +1,5 @@
 import React from 'react'
 import './Account.css'
-import MyFunctionButton_logout from './functionbutton-logout'
 import { UserAuth } from '../context/AuthContext'
 import { async } from '@firebase/util'
 import {Link, useNavigate} from 'react-router-dom';

@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# David server tasks
+cronjob_tracker.txt
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

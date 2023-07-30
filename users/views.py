@@ -6,7 +6,17 @@ from .serializers import UserSerializer, UserPreferencesSerializer, UserRouteSer
 from django.http import JsonResponse, HttpResponse, HttpResponseBadRequest
 from .algorithm import *
 from .access_db import *
+from .chatbox import *
 import json
+import requests
+import openai
+
+# Set up environmental variables
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+
 #Create File Path
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,7 +45,11 @@ def handle_routeinpput_data(request):
         latitude = request.POST.get("latitude")
         longitude = request.POST.get("longitude")
         hour = request.POST.get("hour")
+        # dist = request.POST.get("distance")
+        # endLatitude = request.POST.get("endLatitude")
+        # endLongitude = request.POST.get("endLongitude")
         response_data = {"waypoints": magic(float(latitude), float(longitude), str(hour))}
+        # response_data = {"waypoints": magic(float(latitude), float(longitude), str(hour), float(dist), float(endLatitude), float(endLongitude))}
         return JsonResponse(response_data)
 
 #Function to view user preferences data
@@ -62,6 +76,22 @@ def logincheck(request):
         response_data = {"checks": checklogin(username,password)}
         # print(f'In views.logincheck the data is username = {username} and password = {password}')
         return JsonResponse(response_data)
+
+#Function to view user preferences data
+@api_view(['GET','POST'])
+def chatbox_options(request): 
+    if request.method == 'POST':
+        waypoints = request.data.get('waypoints')
+        user_choice = request.data.get('user_choice')
+        trip_time = request.data.get('trip_time')
+        ai_call = request.data.get('ai_call')
+        location_choice = request.data.get('location_choice')
+        
+        data = option_handler(user_choice, waypoints, trip_time, ai_call, location_choice)
+
+        return JsonResponse({'data': data})
+    elif request.method == 'GET':
+        return Response({"message": "GET request received."}, status=200)
     
 #Function to get quotation data to the front end
 def getquote(request):
@@ -69,3 +99,33 @@ def getquote(request):
     with open(file_path_quote, "r") as file:
         response_data = json.load(file)
     return JsonResponse(response_data)
+
+#Function to get ChatGPT response
+def chatgpt(request):
+    openai.api_key = os.environ.get("CHAT_GPT_API_KEY") # Set up environmental variable
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        user_input = data.get('input','')
+ # Send the user input to the ChatGPT API
+        system_message = "You are an assistant that knows a lot about various topics. Please provide a detailed answer to the following question."
+        try:
+            response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+            {"role": "system", "content": system_message},
+            {"role": "user", "content": user_input}
+        ],
+        temperature=1,
+        max_tokens=150
+        )
+        # Extract the response text from the API response
+            api_response = response['choices'][0]['message']['content']
+        except Exception as e:
+            # Handle exceptions, log the error, or provide a default response if an error occurs
+            api_response = "Sorry, there was an error processing your request."
+
+        response_data = {
+            'message': api_response
+        }
+        return JsonResponse(response_data)
+    return JsonResponse({'error': 'Invalid request method'})

@@ -69,7 +69,7 @@ class MyButton extends React.Component {
         </svg>
 
         <span className="button--bubble__container">
-          <a href="#campaign" className="button button--bubble"  onClick={onClick}>
+          <a href="/map" className="button button--bubble"  onClick={onClick}>
             Create an amble now!
           </a>
           <span className="button--bubble__effect-container">

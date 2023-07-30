@@ -5,6 +5,7 @@ import {
     AccordionItemPanel,
   } from "react-accessible-accordion";
   import "./forecastweather-preplan.css"
+  import Box from "@mui/material/Box";
   
   const Forecast = ({ data }) => {
 

@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 API_KEY = os.environ.get("THEY_SAID_SO_API")
 
 quotedata = {}
-for i in range(50): 
+for i in range(250): 
     url = f"http://quotes.rest/quote/random.json?api_key={API_KEY}"
     response = requests.get(url)
 
