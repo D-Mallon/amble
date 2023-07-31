@@ -15,14 +15,22 @@ file_path_par = BASE_DIR /'src'/'json-files'/'park_locations.json'
 with open(file_path_par) as json_file:
     basedata = json.load(json_file)
 
-#Create a json file with all nodes
-file_path_all = BASE_DIR /'src'/'json-files'/'allnodes.json'
-with open(file_path_all) as json_file:
-    alldata = json.load(json_file)
+# #Create a json file with all nodes
+# file_path_all = BASE_DIR /'src'/'json-files'/'allnodes.json'
+# with open(file_path_all) as json_file:
+#     alldata = json.load(json_file)
 
 #Create a new dictionary and add the base nodes to it
 data = {}
 data.update(basedata)
+
+#Add the other park nodes
+file_path_oth_park = BASE_DIR /'src'/'json-files'/'park_node_locations.json'
+with open(file_path_oth_park) as file:
+    nodes = json.load(file)
+# print(nodes)
+# print(type(nodes))
+data ={'data':data['data'] + nodes['data']}
 
 #Check what other nodes have been selected in preferences
 other_nodes_dict = {}
