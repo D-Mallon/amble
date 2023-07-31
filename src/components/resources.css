@@ -183,8 +183,8 @@ html {
         background-size: cover;
         /* opacity: .1; */
         background-image: url('/static/images/thoughts.png');
-        width: 400px; 
-        height: 400px;
+        width: 450px; 
+        height: 450px;
         border-radius: 10px;
         padding: 10px;
         display: flex;
@@ -242,8 +242,8 @@ html {
   margin-top: 20px;
   width: 750px;
   padding: 20px;
-  border: 2px solid #004d40;
-  border-radius: 5px;
+  border: 3px solid #004d40;
+  border-radius: 10px;
   align-items: center;
   text-align: center;
 }
@@ -260,11 +260,15 @@ html {
   height: 20px;
 }
 
-.imageresource-container {
-  width: 150px;
-  height: 150px;
+.imageresources-container {
+  width: 450px;
+  height: 450px;
   padding: 10px;
-  background-image: url('/static/images/information.png');
+  align-items: center;
+  background-image: url('/static/images/info_yellow.svg');
   background-size: cover;
   background-position: center; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

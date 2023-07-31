@@ -62,7 +62,7 @@ const formattedDate = currentDate.toLocaleString(undefined, dates);
   return (
     <div className="landing-page-container">
       <div>
-      <div className="imageresource-container">
+      <div className="imageresources-container">
             </div>
 
 
@@ -72,16 +72,18 @@ const formattedDate = currentDate.toLocaleString(undefined, dates);
             ))}
         </select>
       </div>
+
+      <div className="response-container">
+        {response && <div>{response}
+          </div>}
+      </div>
           
       <div className="btn-container">
         <button className='btn' onClick={handleSubmit}>Choose something</button>
       </div>
           <br></br>
           <br></br>
-      <div className="response-container">
-        {response && <div>{response}
-          </div>}
-      </div>
+      
        
       <div className="attribution-text">
           Get a reflection from 'They Said So' : Chose something powered by ChatGPT
