@@ -5,7 +5,7 @@
             "community_locations",
             "museum_art_locations",
             "worship_locations",
-            "walking_node_locations",
+            "walking_node_locations"
         ]
     }
 }
