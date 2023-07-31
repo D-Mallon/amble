@@ -70,8 +70,10 @@ const LoginCheck = () => {
           const text_pass =
             "Sign in successfully! Hi " +
             response.data["checks"][1] +
-            response.data["checks"][2] +
-            " and welcome back!";
+            " of " +
+            // response.data["checks"][2] +
+            response.data["checks"][3] +
+            ". Welcome back!";
 
 const temp1=response.data["checks"][1];
 const temp2=response.data["checks"][2];

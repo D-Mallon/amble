@@ -66,8 +66,9 @@ def checklogin (username,password):
             check = True
             firstname = r[0]
             lastname=r[1]
+            address = r[2]
             print(f'Hi {firstname}!  Welcome back.')
             print(f'There is a match so = {check}')
-            return check,firstname,lastname
+            return check,firstname,lastname, address
     print(f'There is NO match so = {check}')   
     return check,results4
