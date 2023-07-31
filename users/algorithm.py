@@ -15,6 +15,11 @@ file_path_par = BASE_DIR /'src'/'json-files'/'park_locations.json'
 with open(file_path_par) as json_file:
     basedata = json.load(json_file)
 
+#Create a json file with all nodes
+file_path_all = BASE_DIR /'src'/'json-files'/'allnodes.json'
+with open(file_path_all) as json_file:
+    alldata = json.load(json_file)
+
 #Create a new dictionary and add the base nodes to it
 data = {}
 data.update(basedata)
