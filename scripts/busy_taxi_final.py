@@ -16,6 +16,16 @@ warnings.filterwarnings('ignore')
 #Start run time for getting busyness scores
 start_time = time.time()
 
+#Create File Path
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+file_path_pickle = BASE_DIR /'src'/'pickle_files'/'Taxi.pkl'
+file_path_taxi = BASE_DIR /'src'/'json-files'/'taxizones.json'
+file_path_busy_json = BASE_DIR /'src'/'json-files'/'busy_taxi_final.json'
+file_path_busy_csv = BASE_DIR /'src'/'json-files'/'busy_taxi_final.csv'
+file_path_weather = BASE_DIR /'src'/'json-files'/'????.json'
+
 #Create File Paths
 pickle_dir = r"src\pickle_files" # pickle files directory
 taxipath = r"src\json-files" #taxi zone data (name and number)
@@ -23,7 +33,7 @@ busyscore = r"src\json-files" #Busyness Score data
 weatherdata = r"src\json-files" #Weather data
 
 #Open the taxi zone data file 
-with (open(os.path.join(taxipath, 'taxizones.json'), "rb")) as f:
+with (open(file_path_taxi , "rb")) as f:
     taxi_data = json.load(f)
 #Get rid of unwanted taxi zones
 del taxi_data["103"]
@@ -189,7 +199,7 @@ for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zo
 
 #Open the Pickle File
 pickle_file = "Taxi.pkl"
-busy_model = pickle.load(open(os.path.join(pickle_dir, pickle_file), 'rb'))
+busy_model = pickle.load(open(file_path_pickle, 'rb'))
 
 #Make the predictions
 busyness_predictions = busy_model.predict(df) # Make the predictions
@@ -255,8 +265,8 @@ df.drop(['PULocationID_100', 'PULocationID_107',
 
 #Send dataframe as a json file
 df.reset_index(drop=True, inplace=True) #This excludes the index
-df.to_json(r"src\json-files\busy_taxi_final.json", orient='records')
-df.to_csv(r"src\json-files\busy_taxi_final.csv", index=False)
+df.to_json(file_path_busy_json, orient='records')
+df.to_csv(file_path_busy_csv, index=False)
 
 # weather_file = "weather.json"
 # with open(os.join(weatherdata,weather_file), "w") as outfile:
