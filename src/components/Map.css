@@ -564,7 +564,7 @@ border-color: #ffeea9;
       position: absolute;
       display: flex;
       flex-direction: column;
-      padding-top: 8.5%;
+      padding-top: 5%;
       padding-left: 15%;
       padding-right: 15%;
     }
@@ -574,7 +574,7 @@ border-color: #ffeea9;
       display: flex;
       font-weight: normal;
       font-size: 18px;
-      margin-bottom: 35px;
+      margin-bottom: 10px;
       justify-content: space-between; /* 左右两端对齐 */
       align-items: center; /* 垂直居中对齐 */
     }
@@ -584,90 +584,63 @@ border-color: #ffeea9;
       display: flex;
       font-weight: normal;
       font-size: 18px;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
       justify-content: space-between; /* 左右两端对齐 */
       align-items: center; /* 垂直居中对齐 */
     }
 
     .stop-text{
-font-weight: bold;
+      font-weight: bold;
       font-size: 22px;
       text-align: left; /* 将文字左对齐 */
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .each-stop-inform{
-     
      display: flex;
-     position: relative;
-     align-items: center;
-      display: flex;
       /* justify-content: center; */
-      padding-top:1%;
+     padding-top:1%;
+     width: 100%;
+     overflow: auto;
+     max-height: 90vh;
+     flex-flow: row wrap;
+     align-items: normal;
     }
 
-    .stop1{
+    .stop-info{
       background-color: rgb(227, 252, 247,0.8);
-      width:15rem;
-      height:18rem;
-      display: flex;
-      position: relative;
-      z-index: 100;
-      margin-right: 1rem;
-      flex-direction: column;
+      width: 15rem;
+      height: 15rem;
+      flex: 1 1 calc(25% - 4rem);
+      margin: 3px;
       padding-left: 3%;
       padding-right: 3%;
       padding-top: 2%;
-
-      align-items: center;
-    }
-
-    .stop2{
-      background-color: rgb(227, 252, 247,0.8);
-      width:15rem;
-      height:18rem;
-      display: flex;
       position: relative;
+      display: inline-block;
       z-index: 100;
-      margin-right: 1rem;
-      flex-direction: column;
-      padding-left: 3%;
-      padding-right: 3%;
-      padding-top: 2%;
- 
-      align-items: center;
     }
 
-    .stop3{
-      background-color: rgb(227, 252, 247,0.8);
-      width:15rem;
-      height:18rem;
-      display: flex;
-      position: relative;
-      z-index: 100;
-      margin-right: 1rem;
-      flex-direction: column;
-      padding-left: 3%;
-      padding-right: 3%;
-      padding-top: 2%;
-
-      align-items: center;
-    }
+    .stop-info span.park-name {
+      display: inline-block;
+      max-width: 160px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }    
 
     .stand-icon{
-width: 10rem;
-height: 10rem;
-background-color: #014e3d;
-margin-top: 20px;
-margin-bottom: 20px;
+      width: 8rem;
+      height: 8rem;
+      background-color: #014e3d;
+      margin: auto;
     }
-
 
     .finishrate {
       position: relative;
       justify-content: center;
       align-items: center;
-      margin-top: 50px;
+      margin-top: -300px;
       cursor: pointer;
       margin-bottom: 30px;
       display: flex;

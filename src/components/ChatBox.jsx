@@ -346,12 +346,11 @@ function ChatBox() {
 
     return (
             <div className="ChatBox">
-                <h2>Chat with Amble</h2>
                 <div className="messages">
                     {messages.map((message, index) => {
                         if (message.sender === 'System') {
                             return (
-                                <div key={index} className="System" onClick={() => selectOption(message.value)}>
+                                <div key={index} className="System-clickable" onClick={() => selectOption(message.value)}>
                                     <p>{message.text}</p>
                                 </div>
                             );
@@ -367,7 +366,7 @@ function ChatBox() {
                         } else if (message.sender === "Amble") {
                             if (message.type === "clickable") {
                                 return (
-                                    <div className="Amble" onClick={() => sendMessage(null, message.value)}>
+                                    <div className="Amble-clickable" onClick={() => sendMessage(null, message.value)}>
                                         
                                         <div className="message-container">
                                             <p>{message.text}</p>
@@ -391,8 +390,8 @@ function ChatBox() {
                             Amble is typing...
                         </Typist>
                     )}
+                    <div ref={messagesEndRef} />
                 </div>
-            <div ref={messagesEndRef} />
             </div>
     );
 }

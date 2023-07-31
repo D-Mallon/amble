@@ -28,12 +28,16 @@ import useMapInit from "./useMapInit";
 import usePlaceNameChange from "./usePlaceNameChange";
 import Box from "@mui/material/Box";
 import CloseIcon from "@mui/icons-material/Close";
+
 import { ArrayContext, useWaypointsArray } from "../context/ArrayContext";
+import ChatBox from './ChatBox';
 
 import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { getIconByType } from './ratingFunctions';
+import { StandaloneSearchBox } from "@react-google-maps/api";
 
 const apiKey = import.meta.env.VITE_MAPBOX_API_KEY;
 mapboxgl.accessToken = apiKey;
@@ -802,10 +806,12 @@ const Map = () => {
               </div>
               <span className="text_bar-mapfunction-chat">Chat with Amble</span>
             </div>
+            <ChatBox /> {/* Render the ChatBox Component here */}
           </div>
         </>
       )}
 
+      {/* Ratings Popup for Waypoints*/}
       {ratingwin && (
         <div className="ratewin">
           {/* <div className='white-board'></div> */}
@@ -835,28 +841,17 @@ const Map = () => {
               <CloseIcon sx={{ fontSize: 27, color: "white" }} />
             </div>
           </div>
-
           <div className="General-rate-inform">
             <div className="stop-text">
-              <span>Journey Gernal Review </span>
+              <span>Rate Your Walk</span>
             </div>
             <Box
               sx={{
                 "& > legend": { mt: 2 },
               }}
             >
-              <div className="quite-rate">
-                <div>Quietness Review: </div>
-                {/* <Rating
-              name="customized-10"
-              defaultValue={2}
-              max={10}
-              precision={0.5}
-              size="large"
-              sx={{
-                fontSize: "2.2rem"
-            }}
-            /> */}
+              {/*<div className="quite-rate">
+                <div>Quietness: </div>
                 <StyledRating
                   name="customized-color"
                   defaultValue={2}
@@ -882,9 +877,9 @@ const Map = () => {
                     />
                   }
                 />
-              </div>
+              </div>*/}
               <div className="like-rate">
-                <span>Favorite Review: </span>
+                
                 <StyledRating
                   name="customized-color"
                   defaultValue={2}
@@ -913,49 +908,27 @@ const Map = () => {
               </div>
             </Box>
             <div className="stop-text">
-              <span>Do you like your stop? </span>
+              <span>How much did you like your stops? </span>
             </div>
             <div className="each-stop-inform">
-              <div className="stop1">
-                <span>PLACE ONE</span>
-                <div className="stand-icon"></div>
-                <Slider
-                  aria-label="love-degree"
-                  defaultValue={30}
-                  valueLabelDisplay="auto"
-                  step={10}
-                  marks
-                  min={0}
-                  max={100}
-                />
-              </div>
-              <div className="stop2">
-                <span>PLACE TWO</span>
-                <div className="stand-icon"></div>
-                <Slider
-                  aria-label="love-degree"
-                  defaultValue={30}
-                  valueLabelDisplay="auto"
-                  step={10}
-                  marks
-                  min={0}
-                  max={100}
-                />
-              </div>
-              <div className="stop3">
-                <span>PLACE THREE</span>
-                <div className="stand-icon"></div>
-                <Slider
-                  aria-label="love-degree"
-                  defaultValue={30}
-                  valueLabelDisplay="auto"
-                  step={10}
-                  marks
-                  min={0}
-                  max={100}
-                />
-              </div>
+            {globalArray
+              .filter(
+                (item) => item.type !== "walking_node" && item.type !== "park_node"
+              )
+              .map((stop, index) => (
+                <div className="stop-info" key={stop.id}>
+                  <div className="stand-icon">
+                  <img src={getIconByType(stop.type)} alt={`${stop.type} icon`} />
+                    </div> {/*stand-icon*/}
+                  <span>{`PLACE ${index + 1}`}</span><br/>
+                  <span className="park-name">{stop.name}</span>
+                  <Slider aria-label="love-degree" defaultValue={50} valueLabelDisplay="auto"
+                    step={10} marks min={0} max={100}/>
+                </div>
+              ))};
             </div>
+            </div>
+
             <div className="finishrate">
               <a
                 className="finishrate-text"
@@ -966,7 +939,7 @@ const Map = () => {
               </a>
             </div>
           </div>
-        </div>
+        
       )}
 
       <div ref={mapContainer} className="map-container" />
