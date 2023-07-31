@@ -1,5 +1,7 @@
 {
     "data_from_frontend": {
-        "selectedOptions": []
+        "selectedOptions": [
+            "walking_node_locations"
+        ]
     }
 }
