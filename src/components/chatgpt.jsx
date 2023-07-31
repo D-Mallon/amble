@@ -50,7 +50,7 @@ const formattedDate = currentDate.toLocaleString(undefined, dates);
 
   // Define options
   const options = [
-    { value: '', label: 'Interesting stuff about your amble' },
+    { value: '', label: 'Some interesting stuff about your amble' },
     { value: `Tell me one thing good that happened on ${formattedDate}`, label: '1. Tell me something good that happened on this date' },
     { value: `Give me a short paragraph on ${node}`, label: '2. Where is an interesting place I might visit as I amble' },
     { value: `Suggest some mindfulness classes around ${address} `, label: '3. Suggest some mindfulness classes on my route' },
@@ -62,6 +62,10 @@ const formattedDate = currentDate.toLocaleString(undefined, dates);
   return (
     <div className="landing-page-container">
       <div>
+      <div className="imageresource-container">
+            </div>
+
+
         <select value={userInput} onChange={handleChange}>
             {options.map((option) => (
             <option key={option.value} value={option.value} >{option.label}</option>

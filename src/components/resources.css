@@ -180,24 +180,23 @@ html {
   
     /* CSS for Quote */
     .quote {
-        /* background: url(./assets/bg.jpg); */
         background-size: cover;
         /* opacity: .1; */
         background-image: url('/static/images/thoughts.png');
-        width: 500px; 
-        height: 500px;
+        width: 400px; 
+        height: 400px;
         border-radius: 10px;
         padding: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        font-weight:bolder;
+        /* font-weight:bolder; */
         
     }
     .quote h2 {
         font-size: 1.5em;
-        opacity: 1;
+        opacity: .8;
         font-family: 'Lobster', cursive;
         justify-content: center;
         align-items: center;
@@ -206,6 +205,7 @@ html {
     .quote small {
         font-size: 1.5em;
         font-family: 'Dancing Script', cursive;
+        font-weight:bolder;
     }
   
 .btn {
@@ -216,6 +216,7 @@ html {
     padding: 15px 30px;
     cursor: pointer;
     margin-top: 1rem;
+    border-radius: 10px;
     }
 .btn-container {
       display: grid;
@@ -259,10 +260,11 @@ html {
   height: 20px;
 }
 
-.imagequote-container {
+.imageresource-container {
   width: 150px;
   height: 150px;
   padding: 10px;
-  background-image: url('/static/images/thoughts.png');
+  background-image: url('/static/images/information.png');
   background-size: cover;
+  background-position: center; 
 }
