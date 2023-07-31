@@ -181,38 +181,33 @@ html {
     /* CSS for Quote */
     .quote {
         /* background: url(./assets/bg.jpg); */
-        /* background-size: cover; */
-        width: 1000px; 
-        height: 300px;
+        background-size: cover;
+        /* opacity: .1; */
+        background-image: url('/static/images/thoughts.png');
+        width: 500px; 
+        height: 500px;
         border-radius: 10px;
         padding: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        font-weight:bolder;
+        
     }
     .quote h2 {
         font-size: 1.5em;
+        opacity: 1;
         font-family: 'Lobster', cursive;
         justify-content: center;
         align-items: center;
+        font-weight:bolder;
     }
     .quote small {
         font-size: 1.5em;
         font-family: 'Dancing Script', cursive;
     }
-    /* .btn {
-      display: flex;
-      border: 2px solid #008CBA;
-      background: transparent;
-      padding: 10px 15px;
-      color: #008CBA;
-      font-size: 20px;
-      border-radius: 15px;
-      cursor: pointer;
-      outline: none;
-      transition: background 1s, color 1s;
-    } */
+  
 .btn {
     background-color: #004d40;
     color: #CBDAC5;
@@ -224,20 +219,13 @@ html {
     }
 .btn-container {
       display: grid;
-      justify-content: center; /* Center the button both horizontally and vertically */
+      justify-content: center;
     }
 .btn:hover{
       background: #008CBA;
       color: #fff;
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
-
-    /* .landing-page-container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      font-family: Arial, sans-serif;
-    } */
     
     select {
       width: 500px;
@@ -252,7 +240,7 @@ html {
 .response-container {
   margin-top: 20px;
   width: 750px;
-  padding: 10px;
+  padding: 20px;
   border: 2px solid #004d40;
   border-radius: 5px;
   align-items: center;
@@ -268,26 +256,13 @@ html {
 }
 
 .endbar {
-  height: 30px;
+  height: 20px;
 }
 
 .imagequote-container {
   width: 150px;
   height: 150px;
-  padding: 20px;
+  padding: 10px;
   background-image: url('/static/images/thoughts.png');
   background-size: cover;
-}
-.homepage-pics-container {
-  background-image: url('/static/images/thought2.jpg');
-  /* 设置背景图片路径 */
-  background-size: cover;
-  /* 按比例缩放背景图，保持其完全覆盖容器 */
-  background-position: center;
-  /* 调整背景图的位置为居中 */
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  /* 设置高度为视口的100% */
-  display: flex;
 }

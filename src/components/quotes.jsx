@@ -49,8 +49,8 @@ const theme = createTheme({
         </div>
         <br></br>
         <br></br>
-        <div className="imagequote-container">
-            </div>
+        {/* <div className="imagequote-container">
+            </div> */}
       
             <div className="quote">
               <h2>{quote}</h2>
@@ -60,8 +60,6 @@ const theme = createTheme({
             <div className="btn-container">
               <button className="btn" onClick={GetNewQuote}>Get a reflection</button>
             </div>
-            <br></br>
-            <br></br>
             <br></br>
           </div>
     );
