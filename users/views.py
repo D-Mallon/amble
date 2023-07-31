@@ -77,16 +77,17 @@ def logincheck(request):
         # print(f'In views.logincheck the data is username = {username} and password = {password}')
         return JsonResponse(response_data)
 
-#Function to view user preferences data
-@api_view(['GET','POST'])
-def chatbox_options(request): 
+#Function for chatbox functionalities
+@api_view(['GET', 'POST'])
+def chatbox_options(request):
     if request.method == 'POST':
-        waypoints = request.data.get('waypoints')
-        user_choice = request.data.get('user_choice')
-        trip_time = request.data.get('trip_time')
-        ai_call = request.data.get('ai_call')
-        location_choice = request.data.get('location_choice')
-        
+        request_data = json.loads(request.body)
+        waypoints = request_data.get('waypoints')
+        user_choice = request_data.get('user_choice')
+        trip_time = request_data.get('trip_time')
+        ai_call = request_data.get('ai_call')
+        location_choice = request_data.get('location_choice')
+
         data = option_handler(user_choice, waypoints, trip_time, ai_call, location_choice)
 
         return JsonResponse({'data': data})

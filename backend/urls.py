@@ -16,7 +16,7 @@ urlpatterns = [
     path('users/chatbox', views.chatbox_options),
     path('users/chatgpt', views.chatgpt),
     
-    path("ChatBox", TemplateView.as_view(template_name="base.html")),
+    path("chatbox", TemplateView.as_view(template_name="base.html")),
     path("loginCheck", TemplateView.as_view(template_name="base.html")),
     path("userpref", TemplateView.as_view(template_name="base.html")),
     path("", TemplateView.as_view(template_name="base.html")),

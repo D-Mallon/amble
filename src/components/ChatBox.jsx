@@ -1,17 +1,26 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
-import { ArrayContext } from "../context/ArrayContext";
+import { ArrayContext, useWaypointsArray } from "../context/ArrayContext";
+import { MapInputContext, useMapInput } from "../context/MapInputContext";
 import axios from 'axios';
 import Typist from 'react-typist';
 import './ChatBox.css';
 
-import userIcon from '../../public/images/chat_user.png';
-import acornIcon from '../../public/images/chat_acorn.png';
-import squirrelIcon from '../../public/images/chat_squirrel.png';
+//import userIcon from '../../public/images/chat_user.png';
+//import acornIcon from '../../public/images/chat_acorn.png';
+//import squirrelIcon from '../../public/images/chat_squirrel.png';
 
 function ChatBox() {
-    //const {inputValues, setInputValues} = useContext(AuthContext)
-    const [tempTime, setTempTime] = useState(["Monday", 15]);
-    const {globalArray, setGlobalArrayValue, getGlobalArrayItem, addToGlobalArray} = useContext(ArrayContext);
+    const { globalArray, setGlobalArrayValue, getGlobalArrayItem, addToGlobalArray } = useContext(ArrayContext);
+    console.log("globalArray:", globalArray);
+    const { inputValues, useMapInput } = useContext(MapInputContext);
+    const { latitude, longitude, hour } = inputValues;
+    const currentDay = new Date();
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][currentDay.getDay()];
+    
+    // uses selected time now
+    const [tempTime, setTempTime] = useState([weekday, hour]);
+    console.log("time:", tempTime);
+
     const [message, setMessage] = useState("");
     const [newMessage, setNewMessage] = useState("");
     const [suggestionsArray, setSuggestionsArray] = useState([]);
@@ -107,37 +116,11 @@ function ChatBox() {
         setMessages(newMenuMessage);
     }
 
-    useEffect(() => {
-        function replaceNoneWithNull(text) {
-          // Replace None with "null", and replace single quote wrapped keys with double quote wrapped ones
-          let replacedText = text.replace(/None/g, "null").replace(/'([^']+)':/g, '"$1":');
-          // Removing trailing comma
-          replacedText = replacedText.replace(/,(\s*})/g, '$1');
-          return replacedText;
-        }
-      
-        //temporary setGlobalArray for testing purposes
-        let tempArray = `[{"id": "L3","name": "Macomb's Bridge Branch","type": "library","address": "2650 Adam Clayton Powell Jr. Boulevard, 10039 Manhattan","internet_access": None,
-        "wheelchair_accessible": None,"opening_hours": None,"grid-id": 1371,"taxi-zone": 42,"precinct": 32,"b-score": None,"c-score": 0.5270044010715652,"rating": 1.5,"location": {"latitude": 40.8265379,"longitude": -73.9358448},"last_updated": None},
-    {"id": "MA7","name": "International Center of Photography","type": "museum_art","address": "1133 6th Avenue, 10036 Manhattan","internet_access": None,"wheelchair_accessible": None,
-        "opening_hours": None,"grid-id": 501,"taxi-zone": 230,"precinct": 14,"b-score": None,"c-score": 1.0,"rating": 1.5,"location": {"latitude": 40.7557394,"longitude": -73.9837251},"last_updated": None},
-    {"id": "P22899286","name": "Madison Square Park","type": "park","address": None,"internet_access": None,"wheelchair_accessible": None,"opening_hours": "06:00-23:00",
-        "grid-id": 419,"taxi-zone": 234,"precinct": 13,"b-score": None,"c-score": 0.6499952162265595,"rating": 1.5,"location": {"latitude": 40.7421868,"longitude": -73.987872},"last_updated": None},
-    {"id": "WN23","name": None,"type": "walking_node","address": None,"internet_access": None,"wheelchair_accessible": None,"opening_hours": None,"grid-id": 82,"taxi-zone": 158,
-        "precinct": 6,"b-score": None,"c-score": 0.5094001148105626,"rating": 1.5,"location": {"latitude": 40.7342479,"longitude": -74.01191},"last_updated": None},
-    {"id": "WN24","name": None,"type": "walking_node","address": None,"internet_access": None,"wheelchair_accessible": None,"opening_hours": None,"grid-id": 52,
-        "taxi-zone": 158,"precinct": 6,"b-score": None,"c-score": 0.5094001148105626,"rating": 1.5,"location": {"latitude": 40.7333014,"longitude": -74.0132614},}]`;
-        
-        let correctedArray = replaceNoneWithNull(tempArray);
-        let parsedArray = JSON.parse(correctedArray);
-        setGlobalArrayValue(parsedArray);
-      }, []);  // Note the empty dependency array
-
-
     // Helper function for message splitting
     const addMessageToState = (message, sender, type = 'text', stage = 'menu', skip_first = false, value = null) => {
         // Split the message into separate lines
         const messageLines = message.split('\n');
+        console.log("messageLines:", messageLines);
         // Filter out empty lines and map each line to a message object
         const newMessages = messageLines
             .filter(line => line.trim() !== '')
@@ -290,64 +273,70 @@ function ChatBox() {
         setMessage(""); 
     }
 
-    const handleOption = (option, waypoints, time, ai_call=false, location_choice=null) => {
+    const handleOption = (option, waypoints, trip_time, ai_call=false, location_choice=null) => {
         axios({
             method: 'post',
             url: '/users/chatbox',
             data: {
                 user_choice: option,
                 waypoints: waypoints, 
-                time: time, 
+                trip_time: trip_time, 
                 ai_call: ai_call,
                 location_choice: location_choice,
             }
         })
         .then(response => {
-            const data = response.data.data;
-            if (option === "1" || option === "2") {
-                const newMessage = data[0];
-                const locationFound = data[1];
-                const availableChoices = data[2];
-                const suggestionsArray = data[3];
+            console.log("response", response);
+            if (response && response.data !== null) {
+                const data = response.data.data;
+                console.log("response.data", response.data);
+                if (option === "1" || option === "2") {
+                    const newMessage = data[0];
+                    const locationFound = data[1];
+                    const availableChoices = data[2];
+                    const suggestionsArray = data[3];
+                
+                    addMessageToState(newMessage, 'Amble', "clickable", `option ${option}`, true);
+                    setIsTyping(false);
+                    // Update the state only after processing the data
+                    setLocationFound(locationFound);
+                    setAvailableChoices(availableChoices);
+                    setSuggestionsArray(suggestionsArray);
             
-                addMessageToState(newMessage, 'Amble', "clickable", `option ${option}`, true);
-                setIsTyping(false);
-                // Update the state only after processing the data
-                setLocationFound(locationFound);
-                setAvailableChoices(availableChoices);
-                setSuggestionsArray(suggestionsArray);
-          
-            } else if (option == "3") {
-                const newMessage = data;
-                addMessageToState(newMessage, 'Amble', 'text', 'option 3');
-                addMessageToState(backMessage, 'System', 'clickable', 'option 3', false, "3");
-            } else if (option === "4") {
-                let newMessage = data[0];
-                const waypoint_sample = data[2][0];
-                addMessageToState(newMessage, 'Amble', 'text', 'option 4');
+                } else if (option == "3") {
+                    const newMessage = data;
+                    addMessageToState(newMessage, 'Amble', 'text', 'option 3');
+                    addMessageToState(backMessage, 'System', 'clickable', 'option 3', false, "3");
+                } else if (option === "4") {
+                    let newMessage = data[0];
+                    const waypoint_sample = data[2][0];
+                    addMessageToState(newMessage, 'Amble', 'text', 'option 4');
 
-                waypoint_sample.forEach((waypoint) => {
-                    // find the index of this waypoint in your global waypoints array
-                    const waypointIndex = globalArray.findIndex(globalWaypoint => globalWaypoint.id === waypoint.id);
-                    if (waypointIndex !== -1) {
-                        if (waypoint["name"] != null) {
-                            newMessage = `\n It is located close to your stop number ${waypointIndex + 1}, ${waypoint["name"]}.`;
-                        } else {
-                            newMessage = `\n It is located close to your stop number ${waypointIndex + 1}.`;
+                    waypoint_sample.forEach((waypoint) => {
+                        // find the index of this waypoint in your global waypoints array
+                        const waypointIndex = globalArray.findIndex(globalWaypoint => globalWaypoint.id === waypoint.id);
+                        if (waypointIndex !== -1) {
+                            if (waypoint["name"] != null) {
+                                newMessage = `\n It is located close to your stop number ${waypointIndex + 1}, ${waypoint["name"]}.`;
+                            } else {
+                                newMessage = `\n It is located close to your stop number ${waypointIndex + 1}.`;
+                            }
+                            addMessageToState(newMessage, 'Amble', 'text', 'option 4');
                         }
-                        addMessageToState(newMessage, 'Amble', 'text', 'option 4');
-                    }
-                newMessage = "\n Enjoy your walk and a little exploration!"
-                addMessageToState(newMessage, 'Amble', 'text', 'option 4', false, null);
-                addMessageToState(backMessage, 'System', 'clickable', 'option 4', false, "4");
-                });
-            } else if (option === "5") {
-                const adviceMessage = data;
-                addMessageToState(adviceMessage, 'Amble');
-                const addMessage = "\n Every little step on your walk is a great step for your mental health! \n Enjoy your walk!"
-                addMessageToState(addMessage, 'Amble', 'text', 'option 5', false, null);
-                addMessageToState(backMessage, 'System', 'clickable', 'option 4', false, "5");
-                setMentalHealthInfo(false); // Reset state
+                    newMessage = "\n Enjoy your walk and a little exploration!"
+                    addMessageToState(newMessage, 'Amble', 'text', 'option 4', false, null);
+                    addMessageToState(backMessage, 'System', 'clickable', 'option 4', false, "4");
+                    });
+                } else if (option === "5") {
+                    const adviceMessage = data;
+                    addMessageToState(adviceMessage, 'Amble');
+                    const addMessage = "\n Every little step on your walk is a great step for your mental health! \n Enjoy your walk!"
+                    addMessageToState(addMessage, 'Amble', 'text', 'option 5', false, null);
+                    addMessageToState(backMessage, 'System', 'clickable', 'option 4', false, "5");
+                    setMentalHealthInfo(false); // Reset state
+                }
+            } else {
+                console.error("Data is null:", response);
             }
         })
         .catch((error) => {
@@ -355,23 +344,20 @@ function ChatBox() {
         });
     }
 
-
     return (
-        <ArrayContext.Provider>
             <div className="ChatBox">
-                <h2>Chat with Amble</h2>
                 <div className="messages">
                     {messages.map((message, index) => {
                         if (message.sender === 'System') {
                             return (
-                                <div key={index} className="System" onClick={() => selectOption(message.value)}>
+                                <div key={index} className="System-clickable" onClick={() => selectOption(message.value)}>
                                     <p>{message.text}</p>
                                 </div>
                             );
                         } else if (message.sender === 'Me') {
                             return (
                                 <div className="Me">
-                                    <img src={userIcon} className="icon user" alt="user" />
+                                    
                                     <div className="message-container">
                                         <p>{message.text}</p>
                                     </div>
@@ -380,8 +366,8 @@ function ChatBox() {
                         } else if (message.sender === "Amble") {
                             if (message.type === "clickable") {
                                 return (
-                                    <div className="Amble" onClick={() => sendMessage(null, message.value)}>
-                                        <img src={acornIcon} className="icon acorn" alt="acorn" />
+                                    <div className="Amble-clickable" onClick={() => sendMessage(null, message.value)}>
+                                        
                                         <div className="message-container">
                                             <p>{message.text}</p>
                                         </div>
@@ -390,7 +376,7 @@ function ChatBox() {
                             } else {
                                 return (
                                     <div className="Amble">
-                                        <img src={squirrelIcon} className="icon squirrel" alt="squirrel" />
+                                        
                                         <div className="message-container">
                                             <p>{message.text}</p>
                                         </div>
@@ -404,13 +390,10 @@ function ChatBox() {
                             Amble is typing...
                         </Typist>
                     )}
+                    <div ref={messagesEndRef} />
                 </div>
-            <div ref={messagesEndRef} />
             </div>
-        </ArrayContext.Provider>
     );
-    
-    
 }
 
 export default ChatBox;

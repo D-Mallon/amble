@@ -7,14 +7,6 @@ MAPS_APIKEY = os.environ.get('MAPS_APIKEY')
 
 import populartimes
 
-def get_day_and_hour(search_time=["Monday", 15]):
-    """ 
-    Placeholder for the actual function to retrieve frontend input data.
-    Returns "day_of_week" as a string like 'Monday' and "hour" as an integer between 0 and 23 
-    in a list [day_of_week, hour].
-    """
-    return search_time
-
 def define_search_area(waypoint, radius=100):
     """ 
     Defines the bounding box for the search area with bound_lower and bound_upper.
@@ -30,7 +22,7 @@ def define_search_area(waypoint, radius=100):
 
     return bound_lower, bound_upper
 
-def get_least_busy_locations(api_key, waypoints, place_type, search_time=["Monday", 15]):
+def get_least_busy_locations(api_key, waypoints, place_type, search_time):
     """ 
     Supply with these values: MAPS_APIKEY, waypoints list [{"name": "", "latitude": 40, "longitude": -73}, ...],
     place_type as "cafe" or "restaurant", search_time as list of "weekday", hour ["Monday", 15].
@@ -38,7 +30,7 @@ def get_least_busy_locations(api_key, waypoints, place_type, search_time=["Monda
     Returns a list containing up to three suggested locations based on the lowest popularity (quietest).
     """
     
-    radius = 100  # in meters
+    radius = 200  # in meters
     suggestions = []
 
     for waypoint in waypoints:
@@ -52,19 +44,22 @@ def get_least_busy_locations(api_key, waypoints, place_type, search_time=["Monda
         for place in places:
             # get the day of the week and hour for the search time from frontend input
             # day_of_week, hour = get_day_and_hour(search_time)
-            picked_time = get_day_and_hour()
 
             # check if populartimes data is available for the place
-            if "populartimes" in place:
+            if "populartimes" in place and place["populartimes"] is not None:
                 # get the popular times data for the day of the week
-                day_data = next((item for item in place["populartimes"] if item["name"] == picked_time[0]), None)
+
+                day_data = next((item for item in place["populartimes"] if item["name"] == search_time[0]), None)
 
                 if day_data is not None:
                     # get the popular times data for the hour
-                    hour_popularity = day_data["data"][picked_time[1]]
+                    hour_popularity = day_data["data"][search_time[1]]
 
                     # add the place and its popularity to the suggestions
                     suggestions.append((place, hour_popularity, waypoint))
+            
+            else:
+                break
 
     # sort the suggestions by popularity (ascending) and take the top 3
     suggestions = sorted(suggestions, key=lambda x: x[1])[:3]
@@ -73,4 +68,5 @@ def get_least_busy_locations(api_key, waypoints, place_type, search_time=["Monda
     while len(suggestions) < 3:
         suggestions.append(None)
 
+    print("suggestions:", suggestions)
     return suggestions
