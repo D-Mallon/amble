@@ -5,6 +5,7 @@ import datetime
 import numpy as np
 import pandas as pd
 import requests
+from pathlib import Path
 
 from dotenv import load_dotenv #To allow secret key for Weather API
 import time # To measue run time
@@ -17,14 +18,16 @@ warnings.filterwarnings('ignore')
 start_time = time.time()
 
 #Create File Paths
-pickle_dir = r"src\pickle_files" # pickle files directory
-taxipath = r"src\json-files" #taxi zone data (name and number)
-busyscore = r"src\json-files" #Busyness Score data
-weatherdata = r"src\json-files" #Weather data
+src_dir = Path("src") # source directory
+pickle_dir = src_dir / "pickle_files" # pickle files directory
+taxipath = src_dir / "json-files" #taxi zone data (name and number)
+busyscore = src_dir / "json-files" #Busyness Score data
+weatherdata = src_dir / "json-files" #Weather data
 
 #Open the taxi zone data file 
-with (open(os.path.join(taxipath, 'taxizones.json'), "rb")) as f:
+with (taxipath / 'taxizones.json').open("rb") as f:
     taxi_data = json.load(f)
+
 #Get rid of unwanted taxi zones
 del taxi_data["103"]
 del taxi_data["153"]
@@ -189,7 +192,8 @@ for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zo
 
 #Open the Pickle File
 pickle_file = "Taxi.pkl"
-busy_model = pickle.load(open(os.path.join(pickle_dir, pickle_file), 'rb'))
+with (pickle_dir / pickle_file).open('rb') as f:
+    busy_model = pickle.load(f)
 
 #Make the predictions
 busyness_predictions = busy_model.predict(df) # Make the predictions

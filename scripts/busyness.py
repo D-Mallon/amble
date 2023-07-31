@@ -8,22 +8,27 @@ import requests
 from dotenv import load_dotenv #To allow secret key for Weather API
 import os
 import time # To measue run time
+from pathlib import Path
 
 import warnings # Stops warning from appearing
 warnings.filterwarnings('ignore')
 
-#Start run time for getting busyness scores
+# Start run time for getting busyness scores
 start_time = time.time()
 
-#Create File Paths
-pickle_dir = r"src\pickle_files" # pickle files directory
-taxipath = r"src\json-files" #taxi zone data (name and number)
-busyscore = r"src\json-files" #Busyness Score data
+# Get the BASE_DIR
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-#Open the taxi zone data file 
-with (open(os.path.join(taxipath, 'taxizones.json'), "rb")) as f:
+# Set directories
+pickle_dir = BASE_DIR / 'src' / 'pickle_files' # pickle files directory
+taxipath = BASE_DIR / 'src' / 'json-files' #taxi zone data (name and number)
+busyscore = BASE_DIR / 'src' / 'json-files' #Busyness Score data
+
+# Open the taxi zone data file
+with (taxipath / 'taxizones.json').open("rb") as f:
     taxi_data = json.load(f)
-#Get rid of unwanted taxi zones
+
+# Get rid of unwanted taxi zones
 del taxi_data["103"]
 del taxi_data["153"]
 del taxi_data["194"]
@@ -202,11 +207,12 @@ df.drop(['PULocationID_100', 'PULocationID_107',
 
 #Send dataframe as a json file
 df.reset_index(drop=True, inplace=True) #This excludes the index
-df.to_json(r"src\json-files\busyness.json", orient='records')
+df.to_json(os.path.join(base_dir, "src/json-files/busyness.json"), orient='records')
 
-with open("src/components/weather.json", "w") as outfile:
-        json.dump(weather_data , outfile, indent=4)
-        print("Exported weather data to weather.json")
+with open(os.path.join(base_dir, "src/components/weather.json"), "w") as outfile:
+    json.dump(weather_data , outfile, indent=4)
+    print("Exported weather data to weather.json")
+
 ####### End time - to get run time #########
 end_time = time.time()
 run_time = round((end_time - start_time),1)

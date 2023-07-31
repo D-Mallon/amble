@@ -3,19 +3,24 @@ from os import path
 import os
 import time
 import datetime
+from pathlib import Path
+
+#Get the BASE_DIR
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 ####### Start time - to get run time #########
 start_time = time.time()
 
 #Function to open Json file
 def openJson(dir,file):
-    if path.isfile(os.path.join(dir, file)) is False:
+    file_path = BASE_DIR / dir / file
+    if not file_path.is_file():
         raise Exception(f"{file} File not found")
     
-    with open(os.path.join(dir, file)) as f:
+    with open(file_path) as f:
         return(json.load(f))
     
-#Function fo get b-scores
+#Function to get b-scores
 def getBusy(taxizone):
     all_hours = {}
     for d in busyObj:
@@ -25,8 +30,7 @@ def getBusy(taxizone):
 
 #Function to Update Nodes Busyness Scores  (incorporates some of the earlier functions)
 def update_nodes(nodes):
-
-    #Function fo get b-scores
+    #Function to get b-scores
     def getBusy(taxizone):
         all_hours = {}
         for d in busyObj:
@@ -35,9 +39,11 @@ def update_nodes(nodes):
         return(all_hours)
 
     #Get the node file
-    if path.isfile(os.path.join(json_dir, nodes)) is False:
+    file_path = BASE_DIR / json_dir / nodes
+    if not file_path.is_file():
         raise Exception(f"{nodes} File not found")
-    with open(os.path.join(json_dir, nodes)) as f:
+    
+    with open(file_path) as f:
         Obj = json.load(f)
 
     #Update the b-score
@@ -48,7 +54,7 @@ def update_nodes(nodes):
     # print(Obj["data"])
 
     #Write the updated json file with new busyness scores
-    with open(os.path.join(json_dir, nodes), 'w') as f:
+    with open(file_path, 'w') as f:
         json.dump(Obj, f, indent =4)
 
 def create_ts(): 
@@ -68,8 +74,8 @@ def create_ts():
 
     return(timestamp)
 
-#Get path to json directory
-json_dir = r"src\json-files" 
+#Set path to json directory
+json_dir = "src/json-files" 
 
 #json busyness file
 busy = 'busy_taxi_final.json'
@@ -85,11 +91,6 @@ walking_node = 'walking_node_locations.json'
 
 #Create path to busyness json file and open it
 busyObj = openJson(json_dir,busy)
-if path.isfile(os.path.join(json_dir, busy)) is False:
-    raise Exception(f"{busy} File not found")
-
-with open(os.path.join(json_dir, busy)) as f:
-    busyObj = json.load(f)
 
 #Update the Nodes
 update_nodes(park)
