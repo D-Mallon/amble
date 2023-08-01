@@ -81,7 +81,7 @@ const formattedDate = currentDate.toLocaleString(undefined, dates);
 
   // Define options
   const options = [
-    { value: '', label: 'Some interesting stuff about your amble'},
+    { value: '', label: 'Choose some other interesting stuff about your amble'},
     { value: `Tell me one thing good that happened on ${formattedDate}`, label: '1. Tell me something good that happened on this date' },
     { value: `Give me a short paragraph on ${name[1]} in Manhattan`, label: '2. Where is an interesting place I might visit as I amble' },
     { value: `Suggest some mindfulness classes around ${address[0]} `, label: '3. Suggest some mindfulness classes on my route' },
@@ -92,9 +92,10 @@ const formattedDate = currentDate.toLocaleString(undefined, dates);
 
   return (
     <div className="landing-page-container">
-      <div>
-      <div className="imageresources-container">
-            </div>
+      
+      
+        <div className="imageresources-container">
+        </div>
 
 
         <select value={userInput} onChange={handleChange}>
@@ -102,10 +103,10 @@ const formattedDate = currentDate.toLocaleString(undefined, dates);
             <option key={option.value} value={option.value} >{option.label}</option>
             ))}
         </select>
-      </div>
+     
 
       <div className="btn-container">
-        <button className='btn' onClick={handleSubmit}>Choose something</button>
+        <button className='btn' onClick={handleSubmit}>Something Interesting</button>
       </div>
 
       <div className="response-container">
@@ -118,7 +119,7 @@ const formattedDate = currentDate.toLocaleString(undefined, dates);
       
        
       <div className="attribution-text">
-          Get a reflection from 'They Said So' : Chose something powered by ChatGPT
+          Get a reflection from 'They Said So' : Something Interesting powered by ChatGPT : Number of trees from savingnature.com
       </div>
         <br></br>
       <div className='endbar'></div>

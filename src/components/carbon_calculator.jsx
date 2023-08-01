@@ -14,7 +14,7 @@ import { ArrayContext, useWaypointsArray } from '../context/ArrayContext';
 const Carbon = () => {
     const [value, setValue] = useState(0);
 
-    const dist = 5;
+    const dist = 3.5;
     const co2_per_mile = 0.77;
     const total_co2 = (dist * co2_per_mile).toFixed(2);
     const co2_per_tree_per_year = 22;
@@ -25,17 +25,16 @@ const Carbon = () => {
 
 return (
     <div className="landing-page-container">
+        <div className="imagecarbon-container">
+            </div>
 
-        <div className="menubar-area">
-          <MenuBar2 />
-        </div>
-        
         <div>
-            <h3>See how many new trees your walking is equivalent to!</h3>
-            <button onClick={() => alert('If you did this walk 3 times a week for a year that is a Carbon Savings equivalent to planting '+ num_trees + ' trees')}>Number of Trees</button>
+            <h3>See how many new trees your amble is equivalent to!</h3>
+            <div className="btn-container">
+                <button className='btn' onClick={() => alert('If you did this walk 3 times a week for a year that is a Carbon Savings equivalent to planting '+ num_trees + ' trees')}>Number of trees</button>
+            </div>
         </div>
 
-        <div className='endbar'></div>
     </div>
     ); 
 

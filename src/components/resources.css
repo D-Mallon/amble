@@ -261,11 +261,24 @@ html {
 }
 
 .imageresources-container {
-  width: 500px;
-  height: 500px;
+  width: 250px;
+  height: 250px;
   padding: 10px;
   align-items: center;
   background-image: url('/static/images/information.png');
+  background-size: cover;
+  background-position: center; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imagecarbon-container {
+  width: 250px;
+  height: 250px;
+  padding: 10px;
+  align-items: center;
+  background-image: url('/static/images/tree4.png');
   background-size: cover;
   background-position: center; 
   justify-content: center;

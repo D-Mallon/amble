@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState,useContext } from 'react';
 
 import Quotes from './quotes';
 import ChatGPT from './chatgpt';
+import Carbon from './carbon_calculator';
 import './resources.css';
 
 import {Link, useNavigate} from 'react-router-dom';
@@ -16,6 +17,7 @@ const Resources = () => {
     return (
       <div>
         <Quotes />
+        <Carbon />
         <ChatGPT />
       </div>
     );
