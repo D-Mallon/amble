@@ -95,7 +95,7 @@ const Map = () => {
 
 
   const { map, markers } = useMapInit(mapContainer, lat, lng, zoom, inputValues);
-  const { route, displayRoute } = useRouteDisplay(map.current, inputValues, setInputValues, setGlobalArrayValue);
+  const { route, displayRoute, directiondata } = useRouteDisplay(map.current, inputValues, setInputValues, setGlobalArrayValue);
   const { location, setLocation } = useGeocoding(map.current, beginLocationPressed, setBeginLocationPressed, endLocationPressed, setEndLocationPressed,
     inputValues, setInputValues, showEndLocationInput, setShowEndLocationInput, setShowGoButton);
   const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } = usePlaceNameChange("", setInputValues);
@@ -746,9 +746,19 @@ const Map = () => {
                 <span className="text_bar-mapfunction-detail-2">
                   Direction Helper
                 </span>
-
-                {/* direction information */}
+    
               </div>
+              <div className="directiondetail">
+              <ul className="directionswords">
+  {directiondata.map((step, index) => (
+    <span key={index}>
+      <span className="bold-step">{`Step ${index + 1}: `}&nbsp;&nbsp;</span>
+      {`${step.action ? step.action : 'Proceed'}${step.road ? ` on ${step.road}` : ''}${step.distance ? ` for ${step.distance.toFixed(2)} meters` : ''}${step.isKeyNode ? ' (Arrived at Key Node)' : ''}`}
+      <br />
+    </span>
+  ))}
+</ul>
+</div>
             </div>
 
             <div className="finishdetail">
