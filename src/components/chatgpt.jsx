@@ -4,17 +4,20 @@ import {Link, useNavigate} from 'react-router-dom';
 import { createTheme,ThemeProvider  } from '@mui/material/styles';
 import MenuBar2 from './MenuBar2';
 import './resources.css';
+// import { globalArray } from './useRouteDisplay.jsx';
 import MyButton from './mainbutton';
 import MyFunctionButton from './functionbutton';
 import MapBackground from './mapbackground';
 import Box from "@mui/material/Box";
-// import { globalArray } from './useRouteDisplay';
+import { ArrayContext, useWaypointsArray } from '../context/ArrayContext';
 
 import axios from 'axios';
 
 const ChatGPT = () => {
     const [userInput, setUserInput] = useState('');
     const [response, setResponse] = useState('');
+    const { globalArray, setGlobalArrayValue } = useWaypointsArray();
+    console.log(globalArray)
   
     const handleChange = (event) => {
       setUserInput(event.target.value);
@@ -38,12 +41,22 @@ const ChatGPT = () => {
       secondary: {main: '#004d40',},
     },
   });
-
+// const routeArray = globalArray;
+// console.log(routeArray)
 const lat = 40.7505;
 const lon = -73.9934;
+
 const node = 'Yeshiva University Museum';
+
 const dist = 7;
+const co2_per_mile = 0.77
+const total_co2 = (dist * co2_per_mile).toFixed(2);
+
+const co2_per_tree_per_year = 22
+const tree_per_mile = co2_per_tree_per_year / co2_per_mile
+
 const address = '415 East Houston Street, 10002 Manhattan';
+
 const currentDate = new Date();
 const dates = { month: 'long', day: 'numeric' };
 const formattedDate = currentDate.toLocaleString(undefined, dates);
@@ -52,6 +65,7 @@ const formattedDate = currentDate.toLocaleString(undefined, dates);
   const options = [
     { value: '', label: 'Some interesting stuff about your amble' },
     { value: `Tell me one thing good that happened on ${formattedDate}`, label: '1. Tell me something good that happened on this date' },
+    // { value: `Without printing out all the factors, how much co2 is created by a petrol car driving ${dist} miles in a city?`, label: '4. How much carbon will I save on this walk?' },
     { value: `Give me a short paragraph on ${node}`, label: '2. Where is an interesting place I might visit as I amble' },
     { value: `Suggest some mindfulness classes around ${address} `, label: '3. Suggest some mindfulness classes on my route' },
     { value: `On average how many calories will I burn on a ${dist} mile walk?`, label: '4. On average how many calories will I burn?' },
@@ -73,14 +87,15 @@ const formattedDate = currentDate.toLocaleString(undefined, dates);
         </select>
       </div>
 
+      <div className="btn-container">
+        <button className='btn' onClick={handleSubmit}>Choose something</button>
+      </div>
+
       <div className="response-container">
         {response && <div>{response}
           </div>}
       </div>
-          
-      <div className="btn-container">
-        <button className='btn' onClick={handleSubmit}>Choose something</button>
-      </div>
+      
           <br></br>
           <br></br>
       
