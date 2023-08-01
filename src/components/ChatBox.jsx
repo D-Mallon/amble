@@ -390,7 +390,7 @@ function ChatBox() {
                             Amble is typing...
                         </Typist>
                     )}
-                    <div ref={messagesEndRef} />
+                   
                 </div>
             </div>
     );
