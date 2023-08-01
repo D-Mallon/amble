@@ -221,7 +221,7 @@ function ChatBox() {
                     item => item.name === closest_waypoint.name); 
                 addToGlobalArray(new_format, index_of_closest_waypoint + 1);   
                 }
-            } 
+            }
         } else if (restaurantOption) {
             // Handle user response for restaurant choice (2)
             const choice = value.toLowerCase().replace('restaurant', '').trim();
@@ -291,18 +291,31 @@ function ChatBox() {
                 const data = response.data.data;
                 console.log("response.data", response.data);
                 if (option === "1" || option === "2") {
-                    const newMessage = data[0];
+                    let newMessage = data[0];
                     const locationFound = data[1];
                     const availableChoices = data[2];
                     const suggestionsArray = data[3];
                 
-                    addMessageToState(newMessage, 'Amble', "clickable", `option ${option}`, true);
-                    setIsTyping(false);
-                    // Update the state only after processing the data
-                    setLocationFound(locationFound);
-                    setAvailableChoices(availableChoices);
-                    setSuggestionsArray(suggestionsArray);
-            
+                    if (locationFound == true) { // If locations were found
+                        addMessageToState(newMessage, 'Amble', "clickable", `option ${option}`, true);
+                        setIsTyping(false);
+                        setLocationFound(locationFound);
+                        setAvailableChoices(availableChoices);
+                        setSuggestionsArray(suggestionsArray);
+                      } else { // If no locations were found
+                        newMessage = response.data.data;
+                        console.log("newMessage:", newMessage);
+                        addMessageToState(newMessage, 'Amble', "text", `option ${option}`, false);
+                        setIsTyping(false);
+                        let addMessage = 'Back to options.';
+                        if (option === "1") {
+                            addMessageToState(addMessage, 'System', 'clickable', `option ${option}`, false, "1");
+                            setCafeOption(false);
+                        } else {
+                            addMessageToState(addMessage, 'System', 'clickable', `option ${option}`, false, "2");
+                            setRestaurantOption(false);
+                        }
+                    }
                 } else if (option == "3") {
                     const newMessage = data;
                     addMessageToState(newMessage, 'Amble', 'text', 'option 3');
@@ -348,52 +361,53 @@ function ChatBox() {
             <div className="ChatBox">
                 <div className="messages">
                     {messages.map((message, index) => {
-                        if (message.sender === 'System') {
-                            return (
-                                <div key={index} className="System-clickable" onClick={() => selectOption(message.value)}>
-                                    <p>{message.text}</p>
-                                </div>
-                            );
-                        } else if (message.sender === 'Me') {
-                            return (
-                                <div className="Me">
-                                    
-                                    <div className="message-container">
+                            if (message.sender === 'System') {
+                                return (
+                                    <div key={index} className="System-clickable" onClick={() => selectOption(message.value)}>
                                         <p>{message.text}</p>
                                     </div>
-                                </div>
-                            );
-                        } else if (message.sender === "Amble") {
-                            if (message.type === "clickable") {
+                                );
+                            } else if (message.sender === 'Me') {
                                 return (
-                                    <div className="Amble-clickable" onClick={() => sendMessage(null, message.value)}>
+                                    <div className="Me">
                                         
                                         <div className="message-container">
                                             <p>{message.text}</p>
                                         </div>
                                     </div>
                                 );
-                            } else {
-                                return (
-                                    <div className="Amble">
-                                        
-                                        <div className="message-container">
-                                            <p>{message.text}</p>
+                            } else if (message.sender === "Amble") {
+                                if (message.type === "clickable") {
+                                    return (
+                                        <div className="Amble-clickable" onClick={() => sendMessage(null, message.value)}>
+                                            
+                                            <div className="message-container">
+                                                <p>{message.text}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                );
+                                    );
+                                } else {
+                                    return (
+                                        <div className="Amble">
+                                            
+                                            <div className="message-container">
+                                                <p>{message.text}</p>
+                                            </div>
+                                        </div>
+                                    );
+                                }
                             }
-                        }
-                    })}
+                        })
+                    } 
                     {isTyping && (
                         <Typist className="AmbleTyping">
                             Amble is typing...
                         </Typist>
                     )}
-                    <div ref={messagesEndRef} />
                 </div>
             </div>
     );
+
 }
 
 export default ChatBox;

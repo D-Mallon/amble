@@ -559,7 +559,7 @@ border-color: #ffeea9;
 
     .General-rate-inform{
       width: 100%;
-      height: 30rem;
+      height: 33rem;
       z-index: 300;
       position: absolute;
       display: flex;
@@ -568,7 +568,7 @@ border-color: #ffeea9;
       padding-left: 15%;
       padding-right: 15%;
     }
-
+  
     .like-rate{
       position: relative;
       display: flex;
@@ -578,63 +578,54 @@ border-color: #ffeea9;
       justify-content: space-between; /* 左右两端对齐 */
       align-items: center; /* 垂直居中对齐 */
     }
-
-    .quite-rate{
-      position: relative;
-      display: flex;
-      font-weight: normal;
-      font-size: 18px;
-      margin-bottom: 10px;
-      justify-content: space-between; /* 左右两端对齐 */
-      align-items: center; /* 垂直居中对齐 */
-    }
-
+  
     .stop-text{
       font-weight: bold;
       font-size: 22px;
       text-align: left; /* 将文字左对齐 */
       margin-bottom: 10px;
+      text-shadow: 2px 2px 8px white;
     }
 
     .each-stop-inform{
-     display: flex;
-      /* justify-content: center; */
-     padding-top:1%;
-     width: 100%;
-     overflow: auto;
-     max-height: 90vh;
-     flex-flow: row wrap;
-     align-items: normal;
-    }
-
-    .stop-info{
-      background-color: rgb(227, 252, 247,0.8);
-      width: 15rem;
-      height: 15rem;
-      flex: 1 1 calc(25% - 4rem);
-      margin: 3px;
-      padding-left: 3%;
-      padding-right: 3%;
-      padding-top: 2%;
-      position: relative;
-      display: inline-block;
-      z-index: 100;
-    }
-
-    .stop-info span.park-name {
-      display: inline-block;
-      max-width: 160px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }    
-
-    .stand-icon{
-      width: 8rem;
-      height: 8rem;
-      background-color: #014e3d;
-      margin: auto;
-    }
+      display: flex;
+       /* justify-content: center; */
+      padding-top:1%;
+      width: 100%;
+      overflow: auto;
+      max-height: 90vh;
+      flex-flow: row wrap;
+      align-items: normal;
+     }
+   
+     .stop-info{
+       background-color: rgb(227, 252, 247,0.8);
+       width: 15rem;
+       height: 15rem;
+       flex: 1 1 calc(25% - 4rem);
+       margin: 3px;
+       padding-left: 3%;
+       padding-right: 3%;
+       padding-top: 2%;
+       position: relative;
+       display: inline-block;
+       z-index: 100;
+     }
+   
+     .stop-info span.park-name {
+       display: inline-block;
+       max-width: 160px;
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+     }    
+   
+     .stand-icon{
+       width: 8rem;
+       height: 8rem;
+       background-color: #014e3d;
+       margin: auto;
+     }
 
     .finishrate {
       position: relative;

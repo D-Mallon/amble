@@ -31,12 +31,12 @@ import CloseIcon from "@mui/icons-material/Close";
 
 import { ArrayContext, useWaypointsArray } from "../context/ArrayContext";
 import ChatBox from './ChatBox';
+import Ratings from './Ratings';
 
 import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import { getIconByType } from './ratingFunctions';
 import { StandaloneSearchBox } from "@react-google-maps/api";
 
 const apiKey = import.meta.env.VITE_MAPBOX_API_KEY;
@@ -907,26 +907,10 @@ const Map = () => {
                 />
               </div>
             </Box>
-            <div className="stop-text">
-              <span>How much did you like your stops? </span>
-            </div>
-            <div className="each-stop-inform">
-            {globalArray
-              .filter(
-                (item) => item.type !== "walking_node" && item.type !== "park_node"
-              )
-              .map((stop, index) => (
-                <div className="stop-info" key={stop.id}>
-                  <div className="stand-icon">
-                  <img src={getIconByType(stop.type)} alt={`${stop.type} icon`} />
-                    </div> {/*stand-icon*/}
-                  <span>{`PLACE ${index + 1}`}</span><br/>
-                  <span className="park-name">{stop.name}</span>
-                  <Slider aria-label="love-degree" defaultValue={50} valueLabelDisplay="auto"
-                    step={10} marks min={0} max={100}/>
-                </div>
-              ))};
-            </div>
+              <div className="stop-text">
+                <span>How much did you like your stops? </span>
+              </div>
+            <Ratings /> {/* Includes the Ratings component here */}
             </div>
 
             <div className="finishrate">
