@@ -44,14 +44,12 @@ const theme = createTheme({
   
     return (
       <div className="landing-page-container">
-      
         <div className="menubar-area">
           <MenuBar2 />
         </div>
+        <br></br>
+        <br></br>
       
-        {/* <div className='resources-pics-container'> */}
-          <div>
-
             <div className="quote">
               <h2>{quote}</h2>
               <small>- {author}</small>
@@ -61,12 +59,7 @@ const theme = createTheme({
               <button className="btn" onClick={GetNewQuote}>Get a reflection</button>
             </div>
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
           </div>
-        {/* </div> */}
-      </div>
     );
   }
   export default Quotes;
