@@ -806,7 +806,10 @@ const Map = () => {
               </div>
               <span className="text_bar-mapfunction-chat">Chat with Amble</span>
             </div>
-            <ChatBox /> {/* Render the ChatBox Component here */}
+            {/* <div className="chatbox-content"> */}
+            <ChatBox />
+            
+             {/* </div> */}
           </div>
         </>
       )}
