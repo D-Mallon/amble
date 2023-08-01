@@ -183,8 +183,8 @@ html {
         background-size: cover;
         /* opacity: .1; */
         background-image: url('/static/images/thoughts.png');
-        width: 450px; 
-        height: 450px;
+        width: 500px; 
+        height: 500px;
         border-radius: 10px;
         padding: 10px;
         display: flex;
@@ -261,11 +261,11 @@ html {
 }
 
 .imageresources-container {
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
   padding: 10px;
   align-items: center;
-  background-image: url('/static/images/info_yellow.svg');
+  background-image: url('/static/images/information.png');
   background-size: cover;
   background-position: center; 
   justify-content: center;
