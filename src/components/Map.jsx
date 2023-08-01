@@ -5,7 +5,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import DateTimePicker from "react-datetime-picker";
 import axios from "axios";
 import { useMapInput } from "../context/MapInputContext";
-
+import routedirection from "./routedirection";
 import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -58,7 +58,9 @@ const Map = () => {
 
   const { inputValues, setInputValues } = useMapInput();
   const { globalArray, setGlobalArrayValue } = useWaypointsArray();
+  console.log(globalArray)
 
+  
   const mapContainer = useRef(null);
   const [lat, setLat] = useState(40.73);
   const [lng, setLng] = useState(-73.445);
