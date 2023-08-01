@@ -49,8 +49,6 @@ const theme = createTheme({
         </div>
         <br></br>
         <br></br>
-        {/* <div className="imagequote-container">
-            </div> */}
       
             <div className="quote">
               <h2>{quote}</h2>
