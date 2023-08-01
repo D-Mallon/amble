@@ -98,11 +98,11 @@ export default function MenuBar2() {
   const [logoIndex, setLogoIndex] = useState(0);
 
   const handleButtonClick = () => {
-    navigate("/interface-two");
+    navigate("/map");
   };
 
   const handleButtonClick2 = () => {
-    navigate("/landingpage");
+    navigate("/");
   };
 
   useEffect(() => {

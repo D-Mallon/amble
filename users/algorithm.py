@@ -19,6 +19,12 @@ with open(file_path_par) as json_file:
 data = {}
 data.update(basedata)
 
+#Add other park nodes
+file_path_oth_park = BASE_DIR /'src'/'json-files'/'park_node_locations.json'
+with open(file_path_oth_park) as file:
+    other_park = json.load(file)
+data ={'data':data['data'] + other_park['data']}
+
 #Check what other nodes have been selected in preferences
 other_nodes_dict = {}
 file_path_pre = BASE_DIR /'src'/'json-files'/'preferences.json'

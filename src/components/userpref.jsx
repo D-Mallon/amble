@@ -10,7 +10,7 @@ const options = [
     { value: 'community_locations', label: 'Community Centres' },
     { value: 'museum_art_locations', label: 'Museums & Art Galleries' },
     { value: 'walking_node_locations', label: 'Other Walking Nodes' },
-    { value: 'park_node_locations', label: 'Other Park Nodes' },
+    // { value: 'park_node_locations', label: 'Other Park Nodes' },
   ];
 
   const UserPreferences = () => {
