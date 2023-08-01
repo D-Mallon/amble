@@ -65,14 +65,14 @@ const LoginCheck = () => {
         if (response.data["checks"][0] == true) {
           
     
-
+          const  address = response.data["checks"][3]
           console.log("Hi", response.data["checks"][1], "and welcome back!");
           const text_pass =
-            "Sign in successfully! Hi " +
+            "Sign in successful!  Hi " +
             response.data["checks"][1] +
-            " of " +
+            // " of " +
             // response.data["checks"][2] +
-            response.data["checks"][3] +
+            // response.data["checks"][3] +
             ". Welcome back!";
 
 const temp1=response.data["checks"][1];
@@ -119,13 +119,7 @@ console.log(temp1)
         console.log("Error:", error.response.data.error);
        
       });
-
-    
   };
-
- 
-    
- 
 
   return (
     <div className="login-area-signin">
