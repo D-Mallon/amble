@@ -18,7 +18,38 @@ const ChatGPT = () => {
     const [response, setResponse] = useState('');
     const { globalArray, setGlobalArrayValue } = useWaypointsArray();
     console.log(globalArray)
-  
+
+    // Create a list with the data from the amble
+    const name = [];
+    const type = [];
+    const address = []; 
+    const coord = [];
+    for (let item in globalArray){
+      // console.log(item + ':', globalArray[item]['name']);
+      const tempitem_name = globalArray[item]['name'];
+      if (tempitem_name !== null && tempitem_name !== 'Unknown Park') {
+        name.push(globalArray[item]['name']);
+    }
+    const tempitem_type = globalArray[item]['type'];
+      if (tempitem_type !== null) {
+        type.push(globalArray[item]['type']);
+    }
+    const tempitem_address = globalArray[item]['address'];
+      if (tempitem_address !== null && tempitem_address !== 'null' ) {
+        address.push(globalArray[item]['address']);
+    }
+    const tempitem_coord = globalArray[item]['location'];
+    if (tempitem_coord !== null && tempitem_coord !== 'null' ) {
+      const lat = tempitem_coord['latitude']
+      const lon = tempitem_coord['longitude']
+      coord.push({'latitude': lat, 'longitude':lon});
+  }
+  }
+  console.log(name);
+  console.log(type);
+  console.log(address);
+  console.log(coord);
+    
     const handleChange = (event) => {
       setUserInput(event.target.value);
     };
@@ -41,21 +72,8 @@ const ChatGPT = () => {
       secondary: {main: '#004d40',},
     },
   });
-// const routeArray = globalArray;
-// console.log(routeArray)
-const lat = 40.7505;
-const lon = -73.9934;
-
-const node = 'Yeshiva University Museum';
 
 const dist = 7;
-const co2_per_mile = 0.77
-const total_co2 = (dist * co2_per_mile).toFixed(2);
-
-const co2_per_tree_per_year = 22
-const tree_per_mile = co2_per_tree_per_year / co2_per_mile
-
-const address = '415 East Houston Street, 10002 Manhattan';
 
 const currentDate = new Date();
 const dates = { month: 'long', day: 'numeric' };
@@ -63,13 +81,12 @@ const formattedDate = currentDate.toLocaleString(undefined, dates);
 
   // Define options
   const options = [
-    { value: '', label: 'Some interesting stuff about your amble' },
+    { value: '', label: 'Some interesting stuff about your amble'},
     { value: `Tell me one thing good that happened on ${formattedDate}`, label: '1. Tell me something good that happened on this date' },
-    // { value: `Without printing out all the factors, how much co2 is created by a petrol car driving ${dist} miles in a city?`, label: '4. How much carbon will I save on this walk?' },
-    { value: `Give me a short paragraph on ${node}`, label: '2. Where is an interesting place I might visit as I amble' },
-    { value: `Suggest some mindfulness classes around ${address} `, label: '3. Suggest some mindfulness classes on my route' },
+    { value: `Give me a short paragraph on ${name[1]} in Manhattan`, label: '2. Where is an interesting place I might visit as I amble' },
+    { value: `Suggest some mindfulness classes around ${address[0]} `, label: '3. Suggest some mindfulness classes on my route' },
     { value: `On average how many calories will I burn on a ${dist} mile walk?`, label: '4. On average how many calories will I burn?' },
-    { value: `What point of interest is found around longitude ${lon} and latitude ${lat}?`, label: '5. What else is interesting as I amble?' },
+    { value: `What point of interest is found around longitude ${coord[0]['longitude']} and latitude ${coord[0]['latitude']}?`, label: '5. What else is interesting as I amble?' },
     { value: `Who was born on ${formattedDate}?`, label: '6. Who was born on this day?' }
   ];
 

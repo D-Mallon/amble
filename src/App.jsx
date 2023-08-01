@@ -12,7 +12,7 @@ import LoginCheck from "./components/loginCheck";
 import UserPreferences from "./components/userpref";
 import ChatBox from "./components/ChatBox";
 import Comms from "./components/Comms.jsx";
-// import ChatGPT from './components/chatgpt';
+import Carbon from './components/carbon_calculator';
 import Quotes from './components/quotes';
 import Resources from './components/resources';
 import {GreetingDataProvider } from './components/GreetingDataContext';
@@ -53,7 +53,7 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/homepage" element={<HomePage />} />
               <Route path="/resources" element={<Resources />} />
-              {/* <Route path="/chatgpt" element={<ChatGPT />} /> */}
+              <Route path="/carbon_calculator" element={<Carbon />} />
               <Route path="/quotes" element={<Quotes />} />
               <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
             </Routes>
