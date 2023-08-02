@@ -15,7 +15,7 @@ import Comms from "./components/Comms.jsx";
 import Carbon from './components/carbon_calculator';
 import Quotes from './components/quotes';
 import Resources from './components/resources';
-import {GreetingDataProvider } from './components/GreetingDataContext';
+import { GreetingDataProvider } from './components/GreetingDataContext';
 import HomePage from './components/HomePage';
 import Interface2 from './components/interface2';
 import ShowRoute from './components/ShowRoute';
@@ -26,6 +26,8 @@ import { AuthContextProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import LandingPage from './components/HomePage2';
 import Box from "@mui/material/Box";
+import Favicon from "react-favicon";
+
 // If a route can not be displayed this function is invoked from Route path
 function MatchAllRoute() {
   return <h2>The requested page does not exist</h2>;
@@ -35,31 +37,32 @@ function App() {
   return (
     <div>
       <Router>
-        <ArrayProvider> 
-        <AuthContextProvider>
-          <MapInputProvider>
-            <GreetingDataProvider>
-            <Routes>
-              <Route exact path="/" element={<LandingPage />} />
-              <Route exact path="/map" element={<Interface2 />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/loginCheck" element={<LoginCheck />} />
-              <Route path="/userpref" element={<UserPreferences />} />
-              <Route path="*" element={<MatchAllRoute />} />
-              <Route path="/chatbox" element={<ChatBox  />} />
-            	<Route path="/showroute" element={<ShowRoute />} />
-              <Route path="/homepage" element={<HomePage />} />
-              <Route path="/signin" element={<Signin />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/homepage" element={<HomePage />} />
-              <Route path="/resources" element={<Resources />} />
-              <Route path="/carbon_calculator" element={<Carbon />} />
-              <Route path="/quotes" element={<Quotes />} />
-              <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
-            </Routes>
-            </GreetingDataProvider>
-          </MapInputProvider>
-        </AuthContextProvider> 
+        <ArrayProvider>
+          <AuthContextProvider>
+            <MapInputProvider>
+              <GreetingDataProvider>
+              <Favicon url="https://upload.wikimedia.org/wikipedia/commons/9/9d/Threads_%28app%29_logo.svg" />
+                <Routes>
+                  <Route exact path="/" element={<LandingPage />} />
+                  <Route exact path="/map" element={<Interface2 />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/loginCheck" element={<LoginCheck />} />
+                  <Route path="/userpref" element={<UserPreferences />} />
+                  <Route path="*" element={<MatchAllRoute />} />
+                  <Route path="/chatbox" element={<ChatBox />} />
+                  <Route path="/showroute" element={<ShowRoute />} />
+                  <Route path="/homepage" element={<HomePage />} />
+                  <Route path="/signin" element={<Signin />} />
+                  <Route path="/signup" element={<Signup />} />
+                  <Route path="/homepage" element={<HomePage />} />
+                  <Route path="/resources" element={<Resources />} />
+                  {/* <Route path="/chatgpt" element={<ChatGPT />} />
+              <Route path="/quotes" element={<Quotes />} /> */}
+                  <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
+                </Routes>
+              </GreetingDataProvider>
+            </MapInputProvider>
+          </AuthContextProvider>
         </ArrayProvider>
       </Router >
     </div >
