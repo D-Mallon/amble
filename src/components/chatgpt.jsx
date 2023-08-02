@@ -118,11 +118,10 @@ const formattedDate = currentDate.toLocaleString(undefined, dates);
           <br></br>
       
        
-      <div className="attribution-text">
+      {/* <div className="attribution-text">
           Get a reflection from 'They Said So' : Something Interesting powered by ChatGPT : Number of trees from savingnature.com
-      </div>
-        <br></br>
-      <div className='endbar'></div>
+      </div> */}
+  
     </div>    
    
   );

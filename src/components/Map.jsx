@@ -865,34 +865,7 @@ const Map = () => {
                 "& > legend": { mt: 2 },
               }}
             >
-              {/*<div className="quite-rate">
-                <div>Quietness: </div>
-                <StyledRating
-                  name="customized-color"
-                  defaultValue={2}
-                  getLabelText={(value) =>
-                    `${value} Heart${value !== 1 ? "s" : ""}`
-                  }
-                  precision={0.5}
-                  max={10}
-                  icon={
-                    <FavoriteIcon
-                      fontSize="large"
-                      sx={{
-                        fontSize: "2.2rem",
-                      }}
-                    />
-                  }
-                  emptyIcon={
-                    <FavoriteBorderIcon
-                      fontSize="large"
-                      sx={{
-                        fontSize: "2.2rem",
-                      }}
-                    />
-                  }
-                />
-              </div>*/}
+             
               <div className="like-rate">
                 
                 <StyledRating

@@ -44,9 +44,6 @@ const theme = createTheme({
   
     return (
       <div className="landing-page-container">
-        <div className="menubar-area">
-          <MenuBar2 />
-        </div>
         <br></br>
         <br></br>
       

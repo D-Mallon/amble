@@ -16,6 +16,9 @@ import Box from "@mui/material/Box";
 const Resources = () => {
     return (
       <div>
+          <div className="menubar-area">
+          <MenuBar2 />
+        </div>
         <Quotes />
         <Carbon />
         <ChatGPT />
