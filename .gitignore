@@ -140,6 +140,7 @@ psd
 thumb
 sketch
 
+django-env
 django-env/
 
 backend/__pycache__
