@@ -71,17 +71,41 @@ const useRouteDisplay = (map, inputValues) => {
       console.log("ways:", waypointsString);
 
       const callAPI = `https://api.mapbox.com/directions/v5/mapbox/walking/` +
-        `${inputValues["longitude"]},` +
-        `${inputValues["latitude"]};` +
-        `${waypointsString};` +
-        `${inputValues["endLongitude"]},` +
-        `${inputValues["endLatitude"]}` +
-        `?geometries=geojson&access_token=${mapboxgl.accessToken}`
+      `${inputValues["longitude"]},` +
+      `${inputValues["latitude"]};` +
+      `${waypointsString};` +
+      `${inputValues["endLongitude"]},` +
+      `${inputValues["endLatitude"]}` +
+      `?geometries=geojson&steps=true&voice_instructions=true&access_token=${mapboxgl.accessToken}`;    
       const response = await fetch(callAPI);
       const data = await response.json();
 
       // Retrieve the route coordinates from the API response
       const routeCoordinates = data.routes[0].geometry.coordinates;
+
+      const directions = data.routes[0].legs.flatMap(leg =>
+        leg.steps.map(step => {
+          let action;
+          if (step.maneuver.modifier && step.maneuver.type) {
+            action = `${step.maneuver.modifier} ${step.maneuver.type}`;
+          }
+          return {
+            action,
+            road: step.name,
+            distance: step.distance
+          };
+        })
+      );
+  
+      console.log("Please follow my instruction and trust it:", directions);
+
+      directions.forEach((step, index) => {
+        const action = step.action ? step.action : 'Proceed';
+        const road = step.road ? ` on ${step.road}` : '';
+        const distance = step.distance ? ` for ${step.distance.toFixed(2)} meters` : '';
+        console.log(`Step ${index + 1}: ${action}${road}${distance}`);
+      });
+      
 
       // Check that routeCoordinates is an array of valid numbers
       if (!Array.isArray(routeCoordinates) ||
