@@ -5,7 +5,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import DateTimePicker from "react-datetime-picker";
 import axios from "axios";
 import { useMapInput } from "../context/MapInputContext";
-
+import routedirection from "./routedirection";
 import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -58,9 +58,10 @@ const Map = () => {
 
   const { inputValues, setInputValues } = useMapInput();
   const { globalArray, setGlobalArrayValue } = useWaypointsArray();
-  const [ walkRating, setWalkRating] = useState(2); // State for general walk rating
-  const [ waypointRatings, setWaypointRatings] = useState({}); // State for individual waypoint ratings
-
+  const [ walkRating, setWalkRating] = useState(2); 
+  const [ waypointRatings, setWaypointRatings] = useState({}); 
+  console.log(globalArray)
+  
   const mapContainer = useRef(null);
   const [lat, setLat] = useState(40.73);
   const [lng, setLng] = useState(-73.445);
@@ -95,7 +96,7 @@ const Map = () => {
 
 
   const { map, markers } = useMapInit(mapContainer, lat, lng, zoom, inputValues);
-  const { route, displayRoute } = useRouteDisplay(map.current, inputValues, setInputValues, setGlobalArrayValue);
+  const { route, displayRoute, directiondata } = useRouteDisplay(map.current, inputValues, setInputValues, setGlobalArrayValue);
   const { location, setLocation } = useGeocoding(map.current, beginLocationPressed, setBeginLocationPressed, endLocationPressed, setEndLocationPressed,
     inputValues, setInputValues, showEndLocationInput, setShowEndLocationInput, setShowGoButton);
   const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } = usePlaceNameChange("", setInputValues);
@@ -766,7 +767,7 @@ const Map = () => {
           <div className="detailbox">
             <div className="detail-titlebox">
               <span className="text_bar-mapfunction-detail">
-                My Walk Detail
+                My Walk Details
               </span>
             </div>
             <p>Distance and Duration</p>
@@ -780,9 +781,19 @@ const Map = () => {
                 <span className="text_bar-mapfunction-detail-2">
                   Direction Helper
                 </span>
-
-                {/* direction information */}
+    
               </div>
+              <div className="directiondetail">
+              <ul className="directionswords">
+  {directiondata.map((step, index) => (
+    <span key={index}>
+      <span className="bold-step">{`Step ${index + 1}: `}&nbsp;&nbsp;</span>
+      {`${step.action ? step.action : 'Proceed'}${step.road ? ` on ${step.road}` : ''}${step.distance ? ` for ${step.distance.toFixed(2)} meters` : ''}${step.isKeyNode ? ' (Arrived at Key Node)' : ''}`}
+      <br />
+    </span>
+  ))}
+</ul>
+</div>
             </div>
 
             <div className="finishdetail">
