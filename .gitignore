@@ -152,3 +152,5 @@ backend/__pycache__/urls.cpython-39.pyc
 
 #Pickle
 src/pickle_files
+
+*.pyc
