@@ -58,6 +58,8 @@ const Map = () => {
 
   const { inputValues, setInputValues } = useMapInput();
   const { globalArray, setGlobalArrayValue } = useWaypointsArray();
+  const [ walkRating, setWalkRating] = useState(2); // State for general walk rating
+  const [ waypointRatings, setWaypointRatings] = useState({}); // State for individual waypoint ratings
 
   const mapContainer = useRef(null);
   const [lat, setLat] = useState(40.73);
@@ -234,6 +236,40 @@ const Map = () => {
 
   const handleButtonClick_close = () => {
     navigate("/");
+  };
+
+  const handleRatingsCalc = () => {
+    console.log('Submitted General Walk Rating:', walkRating);
+    console.log('Submitted Waypoint Ratings:', waypointRatings);
+
+    // score mapping - edge scores have negative and positive bonuses
+    // Define mappings using arrays of tuples and convert them to objects
+    const walkRatingModifiers = Object.fromEntries([[1, -0.15], [2, -0.1], [3, -0.05], [4, 0.0], [5, 0.05], [6, 0.1], [7, 0.15], [8, 0.2], [9, 0.25], [10, 0.4]]);
+    const ratingModifierMapping = Object.fromEntries([[-5, -0.6], [-4, -0.4], [-3, -0.3], [-2, -0.2], [-1, -0.1], [0, 0], [1, 0.1], [2, 0.2], [3, 0.3], [4, 0.4], [5, 0.6]]);
+
+    const updatedGlobalArray = globalArray.map((node) => {
+      // Apply the walkRating modifier to all nodes
+      let rating = node.rating + walkRatingModifiers[walkRating];
+      // Find the corresponding waypoint in waypointRatings and apply the rating_modifier if exists
+      const waypoint = waypointRatings.find((w) => w.id === node.id);
+        if (waypoint) {
+          rating += ratingModifierMapping[waypoint.rating_modifier];
+        }
+      // Clamp the rating between 0 and 5
+      rating = Math.max(0, Math.min(5, rating));
+      return { ...node, rating }; // Update the node with the new rating
+    });
+
+    // Update globalArray
+    setGlobalArrayValue(updatedGlobalArray);
+    console.log("new globalArray state:", globalArray);
+    // Update main JSON file 
+  
+  };
+    
+  const handleSubmit = () => {
+    handleButtonClick_close(); // Function to close the popup
+    handleRatingsCalc(); // Function to process ratings
   };
 
   return (
@@ -824,9 +860,9 @@ const Map = () => {
             className="ratewin-background"
           ></img>
           <div className="additional-blocks-ratewin">
-            <div className="additional-block-text-ratewin">
-              <span className="text_bar_2-ratewin">Rate My Walk</span>
-            </div>
+            {/*<div className="additional-block-text-ratewin">
+              <span className="text_bar_2-ratewin">Rate Your Walk</span>
+              </div>*/}
 
             <div
               className="additional-block-rate-button"
@@ -844,90 +880,40 @@ const Map = () => {
               <CloseIcon sx={{ fontSize: 27, color: "white" }} />
             </div>
           </div>
-          <div className="General-rate-inform">
-            <div className="stop-text">
-              <span>Rate Your Walk</span>
-            </div>
-            <Box
-              sx={{
-                "& > legend": { mt: 2 },
-              }}
-            >
-              {/*<div className="quite-rate">
-                <div>Quietness: </div>
-                <StyledRating
-                  name="customized-color"
-                  defaultValue={2}
-                  getLabelText={(value) =>
-                    `${value} Heart${value !== 1 ? "s" : ""}`
-                  }
-                  precision={0.5}
-                  max={10}
-                  icon={
-                    <FavoriteIcon
-                      fontSize="large"
-                      sx={{
-                        fontSize: "2.2rem",
-                      }}
+                    <div className="General-rate-inform">
+                <div className="stop-text">
+                  <span>Rate Your Walk</span>
+                </div>
+                <Box
+                  sx={{
+                    "& > legend": { mt: 2 },
+                  }}
+                >
+                  <div className="like-rate">
+                    <StyledRating
+                      name="customized-color"
+                      defaultValue={walkRating}
+                      onChange={(event, newValue) => setWalkRating(newValue)}
+                      getLabelText={(value) => `${value} Heart${value !== 1 ? "s" : ""}`}
+                      precision={0.5}
+                      max={10}
+                      icon={<FavoriteIcon fontSize="large" sx={{ fontSize: "2.2rem" }} />}
+                      emptyIcon={<FavoriteBorderIcon fontSize="large" sx={{ fontSize: "2.2rem" }} />}
                     />
-                  }
-                  emptyIcon={
-                    <FavoriteBorderIcon
-                      fontSize="large"
-                      sx={{
-                        fontSize: "2.2rem",
-                      }}
-                    />
-                  }
-                />
-              </div>*/}
-              <div className="like-rate">
-                
-                <StyledRating
-                  name="customized-color"
-                  defaultValue={2}
-                  getLabelText={(value) =>
-                    `${value} Heart${value !== 1 ? "s" : ""}`
-                  }
-                  precision={0.5}
-                  max={10}
-                  icon={
-                    <FavoriteIcon
-                      fontSize="large"
-                      sx={{
-                        fontSize: "2.2rem",
-                      }}
-                    />
-                  }
-                  emptyIcon={
-                    <FavoriteBorderIcon
-                      fontSize="large"
-                      sx={{
-                        fontSize: "2.2rem",
-                      }}
-                    />
-                  }
-                />
+                  </div>
+                </Box>
+                <div className="stop-text">
+                  <span>How much did you like your stops? </span>
+                </div>
+                <Ratings setWaypointRatings={setWaypointRatings} /> {/* Includes the Ratings component here */}
               </div>
-            </Box>
-              <div className="stop-text">
-                <span>How much did you like your stops? </span>
+              <div className="finishrate">
+                <a className="finishrate-text" type="submit" onClick={handleSubmit}>
+                  <span>Submit My Review</span>
+                </a>
               </div>
-            <Ratings /> {/* Includes the Ratings component here */}
             </div>
-
-            <div className="finishrate">
-              <a
-                className="finishrate-text"
-                type="submit"
-                onClick={handleButtonClick_close}
-              >
-                <span>Submit My Review</span>
-              </a>
-            </div>
-          </div>
-        
-      )}
+          )}
 
       <div ref={mapContainer} className="map-container" />
     </div>
