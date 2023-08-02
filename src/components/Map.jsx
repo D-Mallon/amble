@@ -260,12 +260,12 @@ const Map = () => {
                     nowSelected
                       ? { borderRadius: 0 }
                       : {
-                          backgroundColor: "transparent",
-                          borderColor: "black",
-                          color: "black",
-                          boxShadow: "none",
-                          borderRadius: 0,
-                        }
+                        backgroundColor: "transparent",
+                        borderColor: "black",
+                        color: "black",
+                        boxShadow: "none",
+                        borderRadius: 0,
+                      }
                   }
                   onClick={handleNowButtonClick}
                 >
@@ -278,12 +278,12 @@ const Map = () => {
                     laterSelected
                       ? { borderRadius: 0 }
                       : {
-                          borderRadius: 0,
-                          backgroundColor: "transparent",
-                          borderColor: "black",
-                          color: "black",
-                          boxShadow: "none",
-                        }
+                        borderRadius: 0,
+                        backgroundColor: "transparent",
+                        borderColor: "black",
+                        color: "black",
+                        boxShadow: "none",
+                      }
                   }
                   onClick={handleLaterButtonClick}
                 >
@@ -335,15 +335,15 @@ const Map = () => {
                     style={
                       nowSelected
                         ? {
-                            borderColor: "black",
-                            color: "black",
-                            borderRadius: 0,
-                          }
+                          borderColor: "black",
+                          color: "black",
+                          borderRadius: 0,
+                        }
                         : {
-                            borderColor: "black",
-                            color: "black",
-                            borderRadius: 0,
-                          }
+                          borderColor: "black",
+                          color: "black",
+                          borderRadius: 0,
+                        }
                     }
                     onClick={() => {
                       if (sliderUnit === "km") {
@@ -400,12 +400,12 @@ const Map = () => {
                         homeSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       Home
@@ -432,12 +432,12 @@ const Map = () => {
                         searchSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       {beginLocationPressed ? "Click" : "Map"}
@@ -457,12 +457,12 @@ const Map = () => {
                         addressSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       Search
@@ -558,12 +558,12 @@ const Map = () => {
                         endHomeSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       Home
@@ -590,12 +590,12 @@ const Map = () => {
                         endSearchSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       {endLocationPressed ? "Click" : "Map"}
@@ -615,12 +615,12 @@ const Map = () => {
                         endAddressSelected
                           ? { borderRadius: 0 }
                           : {
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                              borderRadius: 0,
-                            }
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                            borderRadius: 0,
+                          }
                       }
                     >
                       Search
@@ -808,8 +808,8 @@ const Map = () => {
             </div>
             {/* <div className="chatbox-content"> */}
             <ChatBox />
-            
-             {/* </div> */}
+
+            {/* </div> */}
           </div>
         </>
       )}
@@ -882,7 +882,7 @@ const Map = () => {
                 />
               </div>*/}
               <div className="like-rate">
-                
+
                 <StyledRating
                   name="customized-color"
                   defaultValue={2}
@@ -914,35 +914,35 @@ const Map = () => {
               <span>How much did you like your stops? </span>
             </div>
             <div className="each-stop-inform">
-            {globalArray
-              .filter(
-                (item) => item.type !== "walking_node" && item.type !== "park_node"
-              )
-              .map((stop, index) => (
-                <div className="stop-info" key={stop.id}>
-                  <div className="stand-icon">
-                  <img src={getIconByType(stop.type)} alt={`${stop.type} icon`} />
+              {globalArray
+                .filter(
+                  (item) => item.type !== "walking_node" && item.type !== "park_node"
+                )
+                .map((stop, index) => (
+                  <div className="stop-info" key={stop.id}>
+                    <div className="stand-icon">
+                      <img src={getIconByType(stop.type)} alt={`${stop.type} icon`} />
                     </div> {/*stand-icon*/}
-                  <span>{`PLACE ${index + 1}`}</span><br/>
-                  <span className="park-name">{stop.name}</span>
-                  <Slider aria-label="love-degree" defaultValue={50} valueLabelDisplay="auto"
-                    step={10} marks min={0} max={100}/>
-                </div>
-              ))};
-            </div>
-            </div>
-
-            <div className="finishrate">
-              <a
-                className="finishrate-text"
-                type="submit"
-                onClick={handleButtonClick_close}
-              >
-                <span>Submit My Review</span>
-              </a>
+                    <span>{`PLACE ${index + 1}`}</span><br />
+                    <span className="park-name">{stop.name}</span>
+                    <Slider aria-label="love-degree" defaultValue={50} valueLabelDisplay="auto"
+                      step={10} marks min={0} max={100} />
+                  </div>
+                ))};
             </div>
           </div>
-        
+
+          <div className="finishrate">
+            <a
+              className="finishrate-text"
+              type="submit"
+              onClick={handleButtonClick_close}
+            >
+              <span>Submit My Review</span>
+            </a>
+          </div>
+        </div>
+
       )}
 
       <div ref={mapContainer} className="map-container" />

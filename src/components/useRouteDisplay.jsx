@@ -32,13 +32,13 @@ const matchWaypointsWithData = (waypoints, jsonData) => {
 const handleWaypoints = (waypointsString, setGlobalArrayValue) => {
   const waypoints = parseWaypoints(waypointsString);
   const jsonData = [
-        ...community_locations.data,
-        ...library_locations.data,
-        ...museum_art_locations.data,
-        ...park_locations.data,
-        ...park_node_locations.data,
-        ...walking_node_locations.data,
-        ...worship_locations.data,
+    ...community_locations.data,
+    ...library_locations.data,
+    ...museum_art_locations.data,
+    ...park_locations.data,
+    ...park_node_locations.data,
+    ...walking_node_locations.data,
+    ...worship_locations.data,
   ];
   const arrayTemp = matchWaypointsWithData(waypoints, jsonData);
   setGlobalArrayValue(arrayTemp);
@@ -71,12 +71,12 @@ const useRouteDisplay = (map, inputValues) => {
       console.log("ways:", waypointsString);
 
       const callAPI = `https://api.mapbox.com/directions/v5/mapbox/walking/` +
-      `${inputValues["longitude"]},` +
-      `${inputValues["latitude"]};` +
-      `${waypointsString};` +
-      `${inputValues["endLongitude"]},` +
-      `${inputValues["endLatitude"]}` +
-      `?geometries=geojson&steps=true&voice_instructions=true&access_token=${mapboxgl.accessToken}&exclude=ferry`; 
+        `${inputValues["longitude"]},` +
+        `${inputValues["latitude"]};` +
+        `${waypointsString};` +
+        `${inputValues["endLongitude"]},` +
+        `${inputValues["endLatitude"]}` +
+        `?geometries=geojson&steps=true&voice_instructions=true&access_token=${mapboxgl.accessToken}&exclude=ferry`;
       const response = await fetch(callAPI);
       const data = await response.json();
 
@@ -96,7 +96,7 @@ const useRouteDisplay = (map, inputValues) => {
           };
         })
       );
-        
+
       // console.log("Please follow my instruction and trust it:", directions);
 
       directions.forEach((step, index) => {
@@ -105,7 +105,7 @@ const useRouteDisplay = (map, inputValues) => {
         const distance = step.distance ? ` for ${step.distance.toFixed(2)} meters` : '';
         // console.log(`Step ${index + 1}: ${action}${road}${distance}`);
       });
-      
+
 
       // Check that routeCoordinates is an array of valid numbers
       if (!Array.isArray(routeCoordinates) ||
@@ -135,6 +135,7 @@ const useRouteDisplay = (map, inputValues) => {
         type: 'geojson',
         data: routeGeoJSON,
       });
+
       map.addLayer({
         id: 'route',
         type: 'line',
@@ -148,7 +149,6 @@ const useRouteDisplay = (map, inputValues) => {
           'line-width': 4,
         },
       });
-
       setRoute(routeCoordinates);
     } catch (error) {
       console.error('Error:', error);
