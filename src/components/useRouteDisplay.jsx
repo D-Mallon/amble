@@ -96,14 +96,14 @@ const useRouteDisplay = (map, inputValues) => {
           };
         })
       );
-  
-      console.log("Please follow my instruction and trust it:", directions);
+        
+      // console.log("Please follow my instruction and trust it:", directions);
 
       directions.forEach((step, index) => {
         const action = step.action ? step.action : 'Proceed';
         const road = step.road ? ` on ${step.road}` : '';
         const distance = step.distance ? ` for ${step.distance.toFixed(2)} meters` : '';
-        console.log(`Step ${index + 1}: ${action}${road}${distance}`);
+        // console.log(`Step ${index + 1}: ${action}${road}${distance}`);
       });
       
 
@@ -148,23 +148,6 @@ const useRouteDisplay = (map, inputValues) => {
           'line-width': 4,
         },
       });
-
-      // Fit the map to display the route
-      const bounds = new mapboxgl.LngLatBounds();
-      routeCoordinates.forEach((coord) => {
-        if (Array.isArray(coord) && coord.length === 2 && !isNaN(coord[0]) && !isNaN(coord[1])) {
-          bounds.extend(coord);
-        } else {
-          console.error('Invalid coordinate:', coord);
-        }
-      });
-
-      if (!bounds.isEmpty()) {
-        console.log('Bounds:', bounds.toArray()); // Log the bounds
-        map.fitBounds(bounds, { margin: 100 });
-      } else {
-        console.error('No valid coordinates to fit bounds');
-      }
 
       setRoute(routeCoordinates);
     } catch (error) {

@@ -40,21 +40,21 @@ const Map = () => {
     });
   }, []);
 
-  useEffect(() => {
-    if (!map.current) return; // wait for map to initialize
-    map.current.on('move', () => {
-      setLng(map.current.getCenter().lng.toFixed(4));
-      setLat(map.current.getCenter().lat.toFixed(4));
-      setZoom(map.current.getZoom().toFixed(2));
-    });
-  });
+  // useEffect(() => {
+  //   if (!map.current) return; // wait for map to initialize
+  //   map.current.on('move', () => {
+  //     setLng(map.current.getCenter().lng.toFixed(4));
+  //     setLat(map.current.getCenter().lat.toFixed(4));
+  //     setZoom(map.current.getZoom().toFixed(2));
+  //   });
+  // });
 
-  const mapContainer = useRef(null);
-  const map = useRef(null);
-  const [lat, setLat] = useState(40.727872);
-  const [lng, setLng] = useState(-73.993157);
-  const [zoom, setZoom] = useState(12.4);
-  const [markers, setMarkers] = useState([]);
+  // const mapContainer = useRef(null);
+  // const map = useRef(null);
+  // const [lat, setLat] = useState(40.727872);
+  // const [lng, setLng] = useState(-73.993157);
+  // const [zoom, setZoom] = useState(12.4);
+  // const [markers, setMarkers] = useState([]);
 
   return (
     <div>
