@@ -76,7 +76,7 @@ const useRouteDisplay = (map, inputValues) => {
       `${waypointsString};` +
       `${inputValues["endLongitude"]},` +
       `${inputValues["endLatitude"]}` +
-      `?geometries=geojson&steps=true&voice_instructions=true&access_token=${mapboxgl.accessToken}&exclude=ferry`;    
+      `?geometries=geojson&steps=true&voice_instructions=true&access_token=${mapboxgl.accessToken}&exclude=ferry`; 
       const response = await fetch(callAPI);
       const data = await response.json();
 
