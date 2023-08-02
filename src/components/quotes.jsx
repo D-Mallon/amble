@@ -3,7 +3,7 @@ import {Link, useNavigate} from 'react-router-dom';
 
 import { createTheme,ThemeProvider  } from '@mui/material/styles';
 import MenuBar2 from './MenuBar2';
-import './resources.css';
+import './quotes.css';
 import MyButton from './mainbutton';
 import MyFunctionButton from './functionbutton';
 import MapBackground from './mapbackground';
@@ -52,9 +52,18 @@ const theme = createTheme({
               <small>- {author}</small>
             </div>
 
-            <div className="btn-container">
-              <button className="btn" onClick={GetNewQuote}>Get a reflection</button>
-            </div>
+           
+
+            <div className="wrapper-function-quote" >
+          <a
+            className="wrapper-function-text-quote"
+            onClick={GetNewQuote}
+            href="#"
+            type="submit"
+          >
+            <span>Get a reflection</span>
+          </a>
+        </div>
             <br></br>
           </div>
     );

@@ -3,7 +3,7 @@ import {Link, useNavigate} from 'react-router-dom';
 
 import { createTheme,ThemeProvider  } from '@mui/material/styles';
 import MenuBar2 from './MenuBar2';
-import './resources.css';
+import './chatgpt.css';
 // import { globalArray } from './useRouteDisplay.jsx';
 import MyButton from './mainbutton';
 import MyFunctionButton from './functionbutton';
@@ -105,9 +105,18 @@ const formattedDate = currentDate.toLocaleString(undefined, dates);
         </select>
      
 
-      <div className="btn-container">
-        <button className='btn' onClick={handleSubmit}>Something Interesting</button>
-      </div>
+    
+
+      <div className="wrapper-function-gpt" >
+          <a
+            className="wrapper-function-text-gpt"
+            onClick={handleSubmit}
+            href="#"
+            type="submit"
+          >
+            <span>Something Interesting</span>
+          </a>
+        </div>
 
       <div className="response-container">
         {response && <div>{response}
@@ -118,9 +127,7 @@ const formattedDate = currentDate.toLocaleString(undefined, dates);
           <br></br>
       
        
-      {/* <div className="attribution-text">
-          Get a reflection from 'They Said So' : Something Interesting powered by ChatGPT : Number of trees from savingnature.com
-      </div> */}
+     
   
     </div>    
    

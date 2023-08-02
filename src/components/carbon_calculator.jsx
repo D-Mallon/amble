@@ -3,7 +3,7 @@ import {Link, useNavigate} from 'react-router-dom';
 
 import { createTheme,ThemeProvider  } from '@mui/material/styles';
 import MenuBar2 from './MenuBar2';
-import './resources.css';
+import './carbon_calculator.css';
 // import { globalArray } from './useRouteDisplay.jsx';
 import MyButton from './mainbutton';
 import MyFunctionButton from './functionbutton';
@@ -30,9 +30,21 @@ return (
 
         <div>
             <h3>See how many new trees your amble is equivalent to!</h3>
-            <div className="btn-container">
-                <button className='btn' onClick={() => alert('If you did this walk 3 times a week for a year that is a Carbon Savings equivalent to planting '+ num_trees + ' trees')}>Number of trees</button>
-            </div>
+           
+
+            
+            <div className="wrapper-function-tree" >
+          <a
+            className="wrapper-function-text-tree"
+            onClick={() => alert('If you did this walk 3 times a week for a year that is a Carbon Savings equivalent to planting '+ num_trees + ' trees')}
+            href="#"
+            type="submit"
+          >
+            <span>Number of trees</span>
+          </a>
+        </div>
+
+
         </div>
 
     </div>
