@@ -3,6 +3,7 @@ from os import path
 import os
 import time
 import datetime
+import statistics
 
 ####### Start time - to get run time #########
 start_time = time.time()
@@ -11,25 +12,53 @@ start_time = time.time()
 def openJson(dir,file):
     if path.isfile(os.path.join(dir, file)) is False:
         raise Exception(f"{file} File not found")
-    
     with open(os.path.join(dir, file)) as f:
         return(json.load(f))
     
-#Function fo get b-scores
-def getBusy(taxizone):
-    all_hours = {}
-    for d in busyObj:
-        if d["Taxi Zone ID"] == taxizone:
-            all_hours[d["Hour"]] = round(d["Busyness Predicted"],4)
-    return(all_hours)    
+#Function to get b-scores
+# def getBusy(taxizone):
+#     all_hours = {}
+#     for d in new_busyObj:
+#         if d["Taxi Zone ID"] == taxizone:
+#             all_hours[d["Hour"]] = round(d["Busyness Predicted"],4)
+#     return(all_hours)   
 
-#Function to Update Nodes Busyness Scores  (incorporates some of the earlier functions)
-def update_nodes(nodes):
+#Create some time elements
+def create_ts(): 
+    import pytz #Allows you to get time in different time
+    nyc_zone = pytz.timezone("America/New_York") 
+    nyc_time = datetime.datetime.now(nyc_zone)
+    year = nyc_time.year
+    month = nyc_time.month
+    day = nyc_time.day
+    hour= nyc_time.hour
+    xdate = datetime.datetime(year, month, day, hour) #Produces datetime object
+    dow = xdate.weekday() #Produces Day of the Week
+    timestamp = datetime.datetime.timestamp(xdate) #Produces Timestamp Object.
+    return(timestamp)
 
-    #Function fo get b-scores
+#Function to get c-scores
+def getCrime(busyObj_crime):
+    crime_score = {}
+    crime_score[202] = 0.5
+    for d in busyObj_crime['data']:
+        crime_score[d["taxi-zone"]] = d["c-score"]
+
+    # list_crime_scores = list(crime_score.values())
+    # mean_crime = statistics.mean(list_crime_scores)
+    # median_crime = statistics.median(list_crime_scores)
+    # range_crime = max(list_crime_scores)-min(list_crime_scores)
+    # std_crime = statistics.stdev(list_crime_scores)
+    return(crime_score)   
+
+#Function to Update Nodes Busyness Scores (incorporates other functions)
+def update_nodes(nodes,new_busyObj):
+   
+    #Function for get b-scores
     def getBusy(taxizone):
         all_hours = {}
-        for d in busyObj:
+        for d in new_busyObj:
+            # print(f'Taxizone in new_busyObj = {d["Taxi Zone ID"]}')
             if d["Taxi Zone ID"] == taxizone:
                 all_hours[d["Hour"]] = round(d["Busyness Predicted"],4)
         return(all_hours)
@@ -40,39 +69,28 @@ def update_nodes(nodes):
     with open(os.path.join(json_dir, nodes)) as f:
         Obj = json.load(f)
 
-    #Update the b-score
+    #Update the b-score and timestamp
     for n in Obj["data"]:
         taxizone = str(n["taxi-zone"])
+        # print(f'Taxizone type = {type(taxizone)}')
         n["b-score"] = (getBusy(taxizone))
         n["last_updated"] = create_ts()
-    # print(Obj["data"])
 
     #Write the updated json file with new busyness scores
     with open(os.path.join(json_dir, nodes), 'w') as f:
         json.dump(Obj, f, indent =4)
 
-def create_ts(): 
-    import pytz #Allows you to get time in different time
-    nyc_zone = pytz.timezone("America/New_York") 
-    nyc_time = datetime.datetime.now(nyc_zone)
-    year = nyc_time.year
-    month = nyc_time.month
-    day = nyc_time.day
-    hour= nyc_time.hour
-
-    #Create Date and Time variables for use in the Pickle File
-    xdate = datetime.datetime(year, month, day, hour) #Produces datetime object
-    dow = xdate.weekday() #Produces Day of the Week
-    # print(f'Day of the week = {dow}')
-    timestamp = datetime.datetime.timestamp(xdate) #Produces Timestamp Object.
-
-    return(timestamp)
-
 #Get path to json directory
 json_dir = r"src\json-files" 
 
-#json busyness file
-busy = 'busy_taxi_final.json'
+#json busyness files
+busy_taxi = 'busy_taxi_final.json'
+busy_bike = 'busy_bike_final.json'
+
+#Open all nodes json file for crime score
+crime = 'all_nodes.json'
+busyObj_crime = openJson(json_dir,crime)
+getCrime(busyObj_crime)
 
 #json location files
 park = 'park_locations.json'
@@ -82,60 +100,63 @@ community = 'community_locations.json'
 museum = 'museum_art_locations.json'
 worship = 'worship_locations.json'
 walking_node = 'walking_node_locations.json'
+all_nodes = 'all_nodes.json'
 
-#Create path to busyness json file and open it
-busyObj = openJson(json_dir,busy)
-if path.isfile(os.path.join(json_dir, busy)) is False:
-    raise Exception(f"{busy} File not found")
+#Open taxi busyness json file
+busyObj_taxi = openJson(json_dir,busy_taxi)
 
-with open(os.path.join(json_dir, busy)) as f:
-    busyObj = json.load(f)
+#Open bike busyness json file
+busyObj_bike = openJson(json_dir,busy_bike)
+
+ #Weightings for Busyness
+taxi_weight = 0.64
+bike_weight = 0.36
+# crime_weight = 0.10
+
+for Obj in busyObj_taxi:
+    #For missing bike data
+    if Obj['Taxi Zone ID'] == '128' or Obj['Taxi Zone ID'] == '202':
+        weighted_Obj = Obj['Busyness Predicted'] * 1.0
+    else:
+        weighted_Obj = Obj['Busyness Predicted'] * 0.64
+
+#Change bike heading to taxi heading
+for Obj in busyObj_bike:
+    if 'start_timestamp' in Obj:
+        Obj['Timestamp'] = Obj.pop('start_timestamp')
+    weighted_Obj = Obj['Busyness Predicted'] * 0.36
+
+#Create dummy rows for missing bike data
+bike_202 = {'Timestamp':create_ts(),'Busyness Predicted': 0, 'Taxi Zone ID': '202'}
+bike_128 = {'Timestamp':create_ts(),'Busyness Predicted': 0, 'Taxi Zone ID': '128'}
+for i in range(24):
+    bike_202['Hour'] = i
+    bike_128['Hour'] = i
+    busyObj_bike.append(bike_202)
+    busyObj_bike.append(bike_128)
+
+#Build inputs for new combined bike and taxi data
+new_busyObj = []
+key_to_add = 'Busyness Predicted'
+for dict1, dict2 in zip(busyObj_taxi, busyObj_bike):
+    # Add the values for each key and create a new dictionary
+    new_dict = dict1.copy()
+    new_dict[key_to_add] = dict1[key_to_add] + dict2[key_to_add]
+    new_busyObj.append(new_dict)
+
+# print(new_busyObj)
 
 #Update the Nodes
-update_nodes(park)
-update_nodes(library)
-update_nodes(parknode)
-update_nodes(community)
-update_nodes(museum)
-update_nodes(worship)
-update_nodes(walking_node)
+update_nodes(park,new_busyObj)
+update_nodes(library,new_busyObj)
+update_nodes(parknode,new_busyObj)
+update_nodes(community,new_busyObj)
+update_nodes(museum,new_busyObj)
+update_nodes(worship,new_busyObj)
+update_nodes(walking_node,new_busyObj)
+update_nodes(all_nodes,new_busyObj)
 
-# #Create paths to json files and open them
-# busyObj = openJson(json_dir,file_busy)
-
-# parkObj = openJson(json_dir,file_park)
-# libraryObj = openJson(json_dir,file_library)
-# parkNodeObj = openJson(json_dir,file_parknode)
-
-# #################### Update Busyness Scores ##################################
-# # Update park data with latest busyness scores
-# for park in parkObj["data"]:
-#     taxizone = str(park["taxi-zone"])
-#     park["b-score"] = (getBusy(taxizone))
-
-# #Save the updated parks json file
-# with open(os.path.join(json_dir, file_park), 'w') as f:
-#     json.dump(parkObj, f, indent =4)
-
-# # Update park node data with latest busyness scores
-# for parknode in parkNodeObj["data"]:
-#     taxizone = str(parknode["taxi-zone"])
-#     parknode["b-score"] = (getBusy(taxizone))
-
-# #Save the updated park node json file
-# with open(os.path.join(json_dir, file_parknode), 'w') as f:
-#     json.dump(parkNodeObj, f, indent =4)
-
-# # Update library data with latest busyness scores
-# for library in libraryObj["data"]:
-#     taxizone = str(library["taxi-zone"])
-#     library["b-score"] = (getBusy(taxizone))
-
-# #Save the updated library json file
-# with open(os.path.join(json_dir, file_library), 'w') as f:
-#     json.dump(libraryObj, f, indent =4)
-
-####### End time - to get run time #########
-end_time = time.time()
-run_time = round((end_time - start_time),1)
-print(f'Run time to populate busyness scores for all 24 hours = {run_time} seconds')
+# ####### End time - to get run time #########
+# end_time = time.time()
+# run_time = round((end_time - start_time),1)
+# print(f'Run time to populate busyness scores for all 24 hours = {run_time} seconds')
