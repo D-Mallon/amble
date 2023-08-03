@@ -5,6 +5,7 @@ import datetime
 import numpy as np
 import pandas as pd
 import requests
+import xgboost as xgb
 
 from dotenv import load_dotenv #To allow secret key for Weather API
 import time # To measue run time
@@ -20,17 +21,17 @@ start_time = time.time()
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-file_path_pickle = BASE_DIR /'src'/'pickle_files'/'Taxi.pkl'
+file_path_pickle = BASE_DIR /'src'/'pickle_files'/'XGB_Taxi.pkl'
 file_path_taxi = BASE_DIR /'src'/'json-files'/'taxizones.json'
 file_path_busy_json = BASE_DIR /'src'/'json-files'/'busy_taxi_final.json'
 file_path_busy_csv = BASE_DIR /'src'/'json-files'/'busy_taxi_final.csv'
-file_path_weather = BASE_DIR /'src'/'json-files'/'????.json'
+file_path_weather = BASE_DIR /'src'/'json-files'/'weather.json'
 
-#Create File Paths
-pickle_dir = r"src\pickle_files" # pickle files directory
-taxipath = r"src\json-files" #taxi zone data (name and number)
-busyscore = r"src\json-files" #Busyness Score data
-weatherdata = r"src\json-files" #Weather data
+# #Create File Paths
+# pickle_dir = r"src\pickle_files" # pickle files directory
+# taxipath = r"src\json-files" #taxi zone data (name and number)
+# busyscore = r"src\json-files" #Busyness Score data
+# weatherdata = r"src\json-files" #Weather data
 
 #Open the taxi zone data file 
 with (open(file_path_taxi , "rb")) as f:
@@ -70,6 +71,20 @@ columns_names = ['Hour', 'Timestamp', 'Snow', 'Humidity', 'Temperature', 'Precip
 #Create an empty dataframe
 df = pd.DataFrame(columns=columns_names)
 
+non_boolean_columns = []
+for column in df.columns:
+    try:
+        df[column] = df[column].astype(bool)
+    except ValueError:
+        non_boolean_columns.append(column)
+
+
+df['Hour'] = df['Hour'].astype(int)
+df['Timestamp'] = df['Timestamp'].astype(float)
+df['Temperature'] = df['Temperature'].astype(float)
+df['Precipitation'] = df['Precipitation'].astype(float)
+df['Humidity'] = df['Humidity'].astype(float)
+
 #Function to calculate timestamp and day of the week and if a US Holiday from inputs - set to todays date in NYC
 def create_ts(hour,list_hols): 
     import pytz #Allows you to get time in different time
@@ -107,6 +122,10 @@ api_key = os.environ.get("WEATHER_API_KEY") #Key for Weather API
 url = f'http://api.weatherapi.com/v1/forecast.json?key={api_key}&q=New York City&days=1&aqi=no&alerts=no'
 response = requests.get(url)
 weather_data = response.json()
+json_data = json.dumps(weather_data, indent=4) 
+
+with open(file_path_weather, "w") as outfile:
+    outfile.write(json_data)
 
 #Create Weather Variables
 temp = []
@@ -198,11 +217,10 @@ for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zo
         new_row = {} 
 
 #Open the Pickle File
-pickle_file = "Taxi.pkl"
 busy_model = pickle.load(open(file_path_pickle, 'rb'))
 
 #Make the predictions
-busyness_predictions = busy_model.predict(df) # Make the predictions
+busyness_predictions = busy_model.predict(df)
 
 #Add predictions column to df
 df['Busyness Predicted'] = busyness_predictions
@@ -268,14 +286,10 @@ df.reset_index(drop=True, inplace=True) #This excludes the index
 df.to_json(file_path_busy_json, orient='records')
 df.to_csv(file_path_busy_csv, index=False)
 
-# weather_file = "weather.json"
-# with open(os.join(weatherdata,weather_file), "w") as outfile:
-#     json.dump(outfile, indent=4)
-
 ####### End time - to get run time #########
 end_time = time.time()
 run_time = round((end_time - start_time),1)
-print(f'\nRun time to produce busyness scores for 1 day = {run_time} seconds')
+print(f'\nRun time to produce busyness scores for 1 day for Taxis = {run_time} seconds')
 
 # Calculate Summary Parameters
 mean_value = df['Busyness Predicted'].mean()
@@ -284,7 +298,7 @@ range_value = df['Busyness Predicted'].max() - df['Busyness Predicted'].min()
 std_value = df['Busyness Predicted'].std()
 
 # Print the results
-print("\nMean of Predicted Busyness: ", mean_value)
-print("Median of Predicted Busyness: ", median_value)
-print("Range of Predicted Busyness: ", range_value)
-print("Standard Deviation of Predicted Busyness: ", std_value)
+print("\nMean of Predicted Busyness - Taxi: ", mean_value)
+print("Median of Predicted Busyness - Taxi: ", median_value)
+print("Range of Predicted Busyness - Taxi: ", range_value)
+print("Standard Deviation of Predicted Busyness - Taxi: ", std_value)
