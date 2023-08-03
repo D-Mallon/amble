@@ -58,10 +58,10 @@ const Map = () => {
 
   const { inputValues, setInputValues } = useMapInput();
   const { globalArray, setGlobalArrayValue } = useWaypointsArray();
-  const [walkRating, setWalkRating] = useState(2);
-  const [waypointRatings, setWaypointRatings] = useState({});
-  console.log(globalArray);
-
+  const [ walkRating, setWalkRating] = useState(2); 
+  const [ waypointRatings, setWaypointRatings] = useState({}); 
+  //console.log(globalArray)
+  
   const mapContainer = useRef(null);
   const [lat, setLat] = useState(40.73);
   const [lng, setLng] = useState(-73.445);
@@ -174,7 +174,7 @@ const Map = () => {
   const handleSliderChange = (event) => {
     const newDistance = event.target.value;
     setInputValues((prevValues) => ({ ...prevValues, distance: newDistance }));
-    console.log("handleSliderChange", inputValues);
+    //console.log("handleSliderChange", inputValues);
   };
 
   const handleInputSubmit = async (e) => {
@@ -266,31 +266,8 @@ const Map = () => {
 
     // score mapping - edge scores have negative and positive bonuses
     // Define mappings using arrays of tuples and convert them to objects
-    const walkRatingModifiers = Object.fromEntries([
-      [1, -0.15],
-      [2, -0.1],
-      [3, -0.05],
-      [4, 0.0],
-      [5, 0.05],
-      [6, 0.1],
-      [7, 0.15],
-      [8, 0.2],
-      [9, 0.25],
-      [10, 0.4],
-    ]);
-    const ratingModifierMapping = Object.fromEntries([
-      [-5, -0.6],
-      [-4, -0.4],
-      [-3, -0.3],
-      [-2, -0.2],
-      [-1, -0.1],
-      [0, 0],
-      [1, 0.1],
-      [2, 0.2],
-      [3, 0.3],
-      [4, 0.4],
-      [5, 0.6],
-    ]);
+    const walkRatingModifiers = Object.fromEntries([[0, -0.25], [0.5, -0.2], [1, -0.15], [1.5, -0.15], [2, -0.1], [2.5, -0.1], [3, -0.05], [3.5, -0.05], [4, 0.0], [4.5, 0.05], [5, 0.05], [5.5, 0.1], [6, 0.1], [6.5, 0.15], [7, 0.15], [7.5, 0.2], [8, 0.2], [8.5, 0.25], [9, 0.25], [9.5, 0.3], [10, 0.4]]);
+    const ratingModifierMapping = Object.fromEntries([[-5, -0.6], [-4, -0.4], [-3, -0.3], [-2, -0.2], [-1, -0.1], [0, 0], [1, 0.1], [2, 0.2], [3, 0.3], [4, 0.4], [5, 0.6]]);
 
     const updatedGlobalArray = globalArray.map((node) => {
       // Apply the walkRating modifier to all nodes
@@ -305,10 +282,17 @@ const Map = () => {
       return { ...node, rating }; // Update the node with the new rating
     });
 
+    // Send the updated global array to the backend
+    axios.post('/users/ratings', updatedGlobalArray)
+    .then((response) => {
+      console.log('Ratings updated successfully:', response.data);
+    })
+    .catch((error) => {
+      console.error('Error updating ratings:', error);
+    });
+
     // Update globalArray
     setGlobalArrayValue(updatedGlobalArray);
-    console.log("new globalArray state:", globalArray);
-    // Update main JSON file
   };
 
   const handleSubmit = () => {
