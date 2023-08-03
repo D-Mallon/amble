@@ -7,7 +7,7 @@ const viteLogo = "vite.svg";
 
 import { createTheme,ThemeProvider  } from '@mui/material/styles';
 
-import MenuAppBar from './MenuBar';
+import MenuBar from './MenuBar';
 import './HomePage.css';
 import MyButton from './mainbutton';
 import MyFunctionButton from './functionbutton';
@@ -40,6 +40,13 @@ const theme = createTheme({
         navigate('/interface-two')
     }
 
+    const logoImages = [
+      "/static/images/LO1.png",
+    
+      // Add more logo image paths here if needed
+    ];
+    
+
     useEffect(() => {
       const interval = setInterval(() => {
         setLogoIndex((prevIndex) => (prevIndex + 1) % logoImages.length);
@@ -53,26 +60,28 @@ const theme = createTheme({
 
     return (
       <>
-      <MenuAppBar />
-      <div className='homepagecontainer'>
+      <MenuBar />
+      <div className='mobilehomepage-pics-container'>
+      <div className='mobilehomepage-contain'>
         
-    
-        <div className='mapwrapper_homepage'>
-          <MapBackground zoom={12.8}/>
-        </div>
-        <div className='flex-container' >
-          <span className='hometext'> 
-          <span style={{ fontSize: '28px' ,fontWeight: 550}}>amble - the peaceful way</span>
+      <img
+            src={logoImages[logoIndex]}
+            className="Logo-amble-mobile"
+            alt="Logo"
+            
+          />
+        
+       
+          <span className='mobile-hometext'> 
+          <span style={{ fontSize: '26px' ,fontWeight: 550}}>the peaceful way</span>
           <br></br>
-          <span style={{ fontSize: '16px' }}>The purpose of our application is to generate walking routes for users to guide them though the quiet corners of Manhattan. The route generating algorthm takes forecast conditions into our machine learning model to determine busyiness based on taxizone, citibike and subway data and pair this infomation with crimes statistics for areas of Manhattan to ensure users can enjoy a quiet, peaceful and safe journey!
+
           </span>
-          </span>
-          <div className='LOGO'>
-            <img src={logoImages[logoIndex]} className='Logo' alt='Logo'/>
-          </div>
-          <MyButton onClick={handleButtonClick}/>
-        </div>
-        {/* <MyFunctionButton/> */}
+          <div className='mobile-homebut'>
+          <MyButton  onClick={handleButtonClick}/>
+       </div>
+        
+      </div>
       </div>
       </>
     );

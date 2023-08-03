@@ -1,5 +1,5 @@
 import React from 'react'
-
+import MenuBar from './MenuBar'
 
 
 const Mobile_homepage = () => {
@@ -9,8 +9,10 @@ const Mobile_homepage = () => {
 
   return (
     <div>
-      
-    </div>
+        
+        hello
+      </div>
+    
   )
 }
 

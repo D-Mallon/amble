@@ -22,7 +22,30 @@ const theme = createTheme({
   },
 });
 
+
 function LandingPage() {
+  const images_home = [
+    '/static/images/newyork17.jpg',
+    '/static/images/newyork18.jpg',
+    '/static/images/newyork6.jpg',
+    '/static/images/newyork18.jpg',
+    '/static/images/newyork17.jpg',
+    '/static/images/newyork3.jpg',
+    '/static/images/newyork15.jpg',
+  ];
+  
+  
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images_home.length);
+      }, 10000); // 切换间隔为8秒
+  
+      return () => clearInterval(timer);
+    }, []);
+
+
   const { temp1, temp2 } = useGreetingData();
   const greeting = temp1 +' ' +temp2+'!';
 
@@ -91,11 +114,11 @@ function LandingPage() {
             </span>
           </div>
           <div className="rightbox-in-2">
-            <img
-              src="/static/images/newyork6.jpg"
-              alt="pics"
-              className="pic-in-rightbox"
-            ></img>
+          <img
+        src={images_home[currentImageIndex]}
+        alt="pics"
+        className="pic-in-rightbox"
+      />
           </div>
         </div>
       </div>

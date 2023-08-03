@@ -1,0 +1,35 @@
+/* HomePage2.css */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .homepage-pics-container {
+    background-image: url('/static/images/newyork.jpg');
+    /* 设置背景图片路径 */
+    background-size: cover;
+    /* 按比例缩放背景图，保持其完全覆盖容器 */
+    background-position: center;
+    /* 调整背景图的位置为居中 */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* 设置高度为视口的100% */
+    display: flex;
+  }
+  
+  
+  .menubar-area {
+    display: flex;
+    justify-content: center;
+    /* 在主轴上居中 */
+    align-items: center;
+    /* 在交叉轴上居中 */
+    position: relative;
+    width: 100%;
+    height: 5rem;
+  }
+
+  .landing-page-container {
+    display: flex;
+    flex-direction: column;
+  }

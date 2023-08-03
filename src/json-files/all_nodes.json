@@ -5362,7 +5362,7 @@
         "23": 177.0
       },
       "c-score": null,
-      "rating": 1.55,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7548157,
         "longitude": -73.9851583
@@ -10466,7 +10466,7 @@
         "23": 411.0
       },
       "c-score": null,
-      "rating": 1.5,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7603632,
         "longitude": -73.9823986
@@ -11918,7 +11918,7 @@
         "23": 1109.0
       },
       "c-score": null,
-      "rating": 1.5,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7699426,
         "longitude": -73.9752476
@@ -15262,7 +15262,7 @@
         "23": 177.0
       },
       "c-score": null,
-      "rating": 1.85,
+      "rating": 1.5999999999999999,
       "location": {
         "latitude": 40.750256,
         "longitude": -73.987625
@@ -15306,7 +15306,7 @@
         "23": 39.0
       },
       "c-score": null,
-      "rating": 1.55,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7487036,
         "longitude": -73.9883472
@@ -74882,7 +74882,7 @@
         "23": 411.0
       },
       "c-score": null,
-      "rating": 1.55,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7557394,
         "longitude": -73.9837251
@@ -83242,7 +83242,7 @@
         "23": 1109.0
       },
       "c-score": null,
-      "rating": 1.5,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7701407,
         "longitude": -73.9723395
@@ -83286,7 +83286,7 @@
         "23": 1109.0
       },
       "c-score": null,
-      "rating": 1.5,
+      "rating": 1.4,
       "location": {
         "latitude": 40.770193,
         "longitude": -73.9725659
@@ -83418,7 +83418,7 @@
         "23": 1109.0
       },
       "c-score": null,
-      "rating": 1.5,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7703769,
         "longitude": -73.9731523
@@ -83682,7 +83682,7 @@
         "23": 411.0
       },
       "c-score": null,
-      "rating": 1.55,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7587593,
         "longitude": -73.9851462
@@ -83726,7 +83726,7 @@
         "23": 411.0
       },
       "c-score": null,
-      "rating": 1.55,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7590569,
         "longitude": -73.9849891
@@ -84166,7 +84166,7 @@
         "23": 1109.0
       },
       "c-score": null,
-      "rating": 1.5,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7660454,
         "longitude": -73.9760662
@@ -84210,7 +84210,7 @@
         "23": 1109.0
       },
       "c-score": null,
-      "rating": 1.5,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7660429,
         "longitude": -73.9766301
@@ -84342,7 +84342,7 @@
         "23": 1109.0
       },
       "c-score": null,
-      "rating": 1.5,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7657085,
         "longitude": -73.975779
@@ -84958,7 +84958,7 @@
         "23": 411.0
       },
       "c-score": null,
-      "rating": 1.5,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7629651,
         "longitude": -73.9821345
@@ -85046,7 +85046,7 @@
         "23": 411.0
       },
       "c-score": null,
-      "rating": 1.5,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7591163,
         "longitude": -73.9814519
@@ -85266,7 +85266,7 @@
         "23": 177.0
       },
       "c-score": null,
-      "rating": 1.55,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7538804,
         "longitude": -73.9874097
@@ -85794,7 +85794,7 @@
         "23": 177.0
       },
       "c-score": null,
-      "rating": 1.55,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7542354,
         "longitude": -73.9880814
@@ -85882,7 +85882,7 @@
         "23": 411.0
       },
       "c-score": null,
-      "rating": 1.5,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7617344,
         "longitude": -73.9813076
@@ -85926,7 +85926,7 @@
         "23": 411.0
       },
       "c-score": null,
-      "rating": 1.55,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7596545,
         "longitude": -73.9829247
@@ -85970,7 +85970,7 @@
         "23": 177.0
       },
       "c-score": null,
-      "rating": 1.55,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7546734,
         "longitude": -73.9853284
@@ -87114,7 +87114,7 @@
         "23": 177.0
       },
       "c-score": null,
-      "rating": 1.55,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7549607,
         "longitude": -73.9850044
@@ -100226,7 +100226,7 @@
         "23": 1109.0
       },
       "c-score": null,
-      "rating": 1.5,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7685991,
         "longitude": -73.9764477
@@ -100270,7 +100270,7 @@
         "23": 1109.0
       },
       "c-score": null,
-      "rating": 1.5,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7667885,
         "longitude": -73.9765356
@@ -100754,7 +100754,7 @@
         "23": 1109.0
       },
       "c-score": null,
-      "rating": 1.5,
+      "rating": 1.4,
       "location": {
         "latitude": 40.7701555,
         "longitude": -73.9741264
