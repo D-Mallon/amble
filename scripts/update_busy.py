@@ -57,8 +57,8 @@ def getCrime():
 
 #Function to Update Nodes Busyness Scores (incorporates some of the earlier functions)
 def update_nodes(nodes):
-
-    #Function fo get b-scores
+   
+    #Function for get b-scores
     def getBusy(taxizone):
         all_hours = {}
         for d in busyObj:
@@ -112,22 +112,25 @@ busyObj_bike = openJson(json_dir,busy_bike)
 #Open all nodes json file for crime score
 busyObj_crime = openJson(json_dir,crime)
 
-#Weightings for Busyness
+ #Weightings for Busyness
 taxi_weight = 0.70
 bike_weight = 0.20
 crime_weight = 0.10
 
-#Update the Nodes
-update_nodes(park)
-update_nodes(library)
-update_nodes(parknode)
-update_nodes(community)
-update_nodes(museum)
-update_nodes(worship)
-update_nodes(walking_node)
-update_nodes(all_nodes)
+print(busyObj)
 
-####### End time - to get run time #########
-end_time = time.time()
-run_time = round((end_time - start_time),1)
-print(f'Run time to populate busyness scores for all 24 hours = {run_time} seconds')
+
+# #Update the Nodes
+# update_nodes(park)
+# update_nodes(library)
+# update_nodes(parknode)
+# update_nodes(community)
+# update_nodes(museum)
+# update_nodes(worship)
+# update_nodes(walking_node)
+# update_nodes(all_nodes)
+
+# ####### End time - to get run time #########
+# end_time = time.time()
+# run_time = round((end_time - start_time),1)
+# print(f'Run time to populate busyness scores for all 24 hours = {run_time} seconds')

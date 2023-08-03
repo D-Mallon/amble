@@ -42,7 +42,7 @@ del taxi_data["153"]
 del taxi_data["194"]
 
 #Create column heading for dataframe
-columns_names = ['Hour', 'Timestamp', 'Snow', 'Humidity', 'Temperature', 'Precipitation',
+columns_names = ['Hour', 'Timestamp', 'Humidity', 'Temperature', 'Precipitation',
        'Day_Weekday', 'Day_Weekend', 'PULocationID_4', 'PULocationID_12',
        'PULocationID_13', 'PULocationID_24', 'PULocationID_41',
        'PULocationID_42', 'PULocationID_43', 'PULocationID_45',
@@ -66,7 +66,7 @@ columns_names = ['Hour', 'Timestamp', 'Snow', 'Humidity', 'Temperature', 'Precip
        'PULocationID_246', 'PULocationID_249', 'PULocationID_261',
        'PULocationID_262', 'PULocationID_263', 'Holiday_False', 'Holiday_True',
        'Month_1', 'Month_2', 'Month_3', 'Month_4', 'Month_5', 'Month_6',
-       'Month_7', 'Month_8', 'Month_9', 'Month_10', 'Month_11', 'Month_12']
+       'Month_7', 'Month_8', 'Month_9', 'Month_10', 'Month_11', 'Month_12', 'Snow_False', 'Snow_True']
 
 #Create an empty dataframe
 df = pd.DataFrame(columns=columns_names)
@@ -133,12 +133,16 @@ hum = []
 percip = []
 
 #Create values for snow.  Same value for each hour as Weather API only produces a daily item for snow
-snow = False
+snow_true = False
+snow_false = False
+
 snow_predict = float(weather_data['forecast']['forecastday'][0]['day']['totalsnow_cm'])
 if snow_predict != 0:
-    snow = [True] * 24
+    snow_true = [True] * 24
+    snow_false = [True] * 24
 else:
-    snow = [False] * 24
+    snow_true = [False] * 24
+    snow_false = [False] * 24
 
 #Create other Weather variables from Weather API
 for i in range(24):
@@ -178,7 +182,8 @@ for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zo
         #Create values for weather variables 
         new_row.update({'Temperature':temp[i]})
         new_row.update({'Humidity':hum[i]})
-        new_row.update({'Snow':snow[i]})
+        new_row.update({'Snow_True':snow_true[i]})
+        new_row.update({'Snow_False':snow_false[i]})
         new_row.update({'Precipitation':percip[i]})
 
         #create timestamp and other time-related data based on the hour value (i) and list of holidays
@@ -230,7 +235,7 @@ selected_columns = ['Hour', 'Timestamp','Busyness Predicted','Holiday_False', 'H
 # print(df[selected_columns].tail(30))
 
 #Drop Certain Columns
-df.drop(['Temperature', 'Humidity', 'Snow', 'Precipitation',
+df.drop(['Temperature', 'Humidity','Snow_True', 'Snow_False', 'Precipitation',
         'Holiday_False', 'Holiday_True', 'Day_Weekday', 'Day_Weekend',
        'Month_1', 'Month_2', 'Month_3', 'Month_4', 'Month_5', 'Month_6',
        'Month_7', 'Month_8', 'Month_9', 'Month_10', 'Month_11', 'Month_12',

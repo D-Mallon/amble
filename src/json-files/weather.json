@@ -6,24 +6,24 @@
         "lat": 40.71,
         "lon": -74.01,
         "tz_id": "America/New_York",
-        "localtime_epoch": 1691059072,
-        "localtime": "2023-08-03 6:37"
+        "localtime_epoch": 1691063787,
+        "localtime": "2023-08-03 7:56"
     },
     "current": {
-        "last_updated_epoch": 1691058600,
-        "last_updated": "2023-08-03 06:30",
-        "temp_c": 19.4,
-        "temp_f": 66.9,
+        "last_updated_epoch": 1691063100,
+        "last_updated": "2023-08-03 07:45",
+        "temp_c": 20.0,
+        "temp_f": 68.0,
         "is_day": 1,
         "condition": {},
-        "wind_mph": 3.8,
-        "wind_kph": 6.1,
+        "wind_mph": 2.2,
+        "wind_kph": 3.6,
         "precip_mm": 0.0,
         "precip_in": 0.0,
         "humidity": 59,
-        "feelslike_c": 19.4,
-        "feelslike_f": 66.9,
-        "uv": 5.0
+        "feelslike_c": 20.0,
+        "feelslike_f": 68.0,
+        "uv": 6.0
     },
     "forecast": {
         "forecastday": [
