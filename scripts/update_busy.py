@@ -57,13 +57,14 @@ def getCrime(busyObj_crime):
     # print(crime_score)
     return(crime_score)   
 
-#Function to Update Nodes Busyness Scores (incorporates some of the earlier functions)
+#Function to Update Nodes Busyness Scores (incorporates other functions)
 def update_nodes(nodes,new_busyObj):
    
     #Function for get b-scores
     def getBusy(taxizone):
         all_hours = {}
         for d in new_busyObj:
+            # print(f'Taxizone in new_busyObj = {d["Taxi Zone ID"]}')
             if d["Taxi Zone ID"] == taxizone:
                 all_hours[d["Hour"]] = round(d["Busyness Predicted"],4)
         return(all_hours)
@@ -77,6 +78,7 @@ def update_nodes(nodes,new_busyObj):
     #Update the b-score
     for n in Obj["data"]:
         taxizone = str(n["taxi-zone"])
+        # print(f'Taxizone type = {type(taxizone)}')
         n["b-score"] = (getBusy(taxizone))
         n["last_updated"] = create_ts()
     # print(Obj["data"])
@@ -130,12 +132,15 @@ for Obj in busyObj_taxi:
         weighted_Obj = Obj['Busyness Predicted'] * 0.64
 
 for Obj in busyObj_bike:
+    if 'start_timestamp' in Obj:
+        Obj['Timestamp'] = Obj.pop('start_timestamp')
     # taxi_Obj = Obj['Taxi Zone ID']
     # standard_Obj = Obj['Busyness Predicted'] 
     weighted_Obj = Obj['Busyness Predicted'] * 0.36
 
+# print(busyObj_bike)
 #Create dummy values in Bike object for 2 missing taxi zones 
-print(f'Pre addition = {len(busyObj_bike)}')
+# print(f'Pre addition = {len(busyObj_bike)}')
 bike_202 = {'Timestamp':create_ts(),'Busyness Predicted': 0, 'Taxi Zone ID': '202'}
 bike_128 = {'Timestamp':create_ts(),'Busyness Predicted': 0, 'Taxi Zone ID': '202'}
 for i in range(24):
@@ -143,22 +148,30 @@ for i in range(24):
     bike_128['Hour'] = i
     busyObj_bike.append(bike_202)
     busyObj_bike.append(bike_128)
-print(bike_202)
-print(f'After addition = {len(busyObj_bike)}')
+# print(bike_202)
+# print(f'After addition = {len(busyObj_bike)}')
 
 new_busyObj = []
-for i in range(len(busyObj_taxi)):
-    new_busyObj.append(busyObj_taxi[i]['Busyness Predicted'] + busyObj_bike[i]['Busyness Predicted'])
+key_to_add = 'Busyness Predicted'
+for dict1, dict2 in zip(busyObj_taxi, busyObj_bike):
+    # Add the values for each key and create a new dictionary
+    new_dict = dict1.copy()
+    new_dict[key_to_add] = dict1[key_to_add] + dict2[key_to_add]
+    new_busyObj.append(new_dict)
+
+# for i in range(len(busyObj_taxi)):
+#     new_busyObj.append(busyObj_taxi[i]['Busyness Predicted'] + busyObj_bike[i]['Busyness Predicted'])
+print(new_busyObj)
 
 #Update the Nodes
-# update_nodes(park, new_busyObj)
-# update_nodes(library)
-# update_nodes(parknode)
-# update_nodes(community)
-# update_nodes(museum)
-# update_nodes(worship)
-# update_nodes(walking_node)
-# update_nodes(all_nodes)
+update_nodes(park,new_busyObj)
+update_nodes(library,new_busyObj)
+update_nodes(parknode,new_busyObj)
+update_nodes(community,new_busyObj)
+update_nodes(museum,new_busyObj)
+update_nodes(worship,new_busyObj)
+update_nodes(walking_node,new_busyObj)
+update_nodes(all_nodes,new_busyObj)
 
 # ####### End time - to get run time #########
 # end_time = time.time()
