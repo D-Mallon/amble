@@ -5,6 +5,7 @@ import datetime
 import numpy as np
 import pandas as pd
 import requests
+import xgboost as xgb
 
 from dotenv import load_dotenv #To allow secret key for Weather API
 import time # To measue run time
@@ -22,15 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 file_path_pickle = BASE_DIR /'src'/'pickle_files'/'citibike1.pkl'
 file_path_taxi = BASE_DIR /'src'/'json-files'/'taxizones.json'
+file_path_busy_input_csv = BASE_DIR /'src'/'json-files'/'busy_bike_input.csv'
+file_path_busy_input_json = BASE_DIR /'src'/'json-files'/'busy_bike_input.json'
 file_path_busy_json = BASE_DIR /'src'/'json-files'/'busy_bike_final.json'
 file_path_busy_csv = BASE_DIR /'src'/'json-files'/'busy_bike_final.csv'
 file_path_weather = BASE_DIR /'src'/'json-files'/'weather.json'
-
-# #Create File Paths
-# pickle_dir = r"src\pickle_files" # pickle files directory
-# taxipath = r"src\json-files" #taxi zone data (name and number)
-# busyscore = r"src\json-files" #Busyness Score data
-# weatherdata = r"src\json-files" #Weather data
 
 #Open the taxi zone data file 
 with (open(file_path_taxi , "rb")) as f:
@@ -58,9 +55,21 @@ columns_names = ['Hour', 'start_timestamp', 'Temperature', 'Precipitation', 'Hum
        'Month_4', 'Month_5', 'Month_6', 'Month_7', 'Month_8', 'Month_9',
        'Month_10', 'Month_11', 'Month_12', 'Snow_False', 'Snow_True']
 
-#Create an empty dataframe
+#Create an empty dataframe and assign types to the columns
 df = pd.DataFrame(columns=columns_names)
+non_boolean_columns = []
+for column in df.columns:
+    try:
+        df[column] = df[column].astype(bool)
+    except ValueError:
+        non_boolean_columns.append(column)
 
+df['start_timestamp'] = df['start_timestamp'].astype(float)
+df['Temperature'] = df['Temperature'].astype(float)
+df['Precipitation'] = df['Precipitation'].astype(float)
+df['Humidity'] = df['Humidity'].astype(float)
+
+        # df[column] = df[column].astype(float)
 #Function to calculate timestamp and day of the week and if a US Holiday from inputs - set to todays date in NYC
 def create_ts(hour,list_hols): 
     import pytz #Allows you to get time in different time
@@ -68,13 +77,11 @@ def create_ts(hour,list_hols):
     nyc_time = datetime.datetime.now(nyc_zone)
     year = nyc_time.year
     month = nyc_time.month
-    # print(f'month = {month}')
     day = nyc_time.day
 
     #Create Date and Time variables for use in the Pickle File
     xdate = datetime.datetime(year, month, day, hour) #Produces datetime object
     dow = xdate.weekday() #Produces Day of the Week
-    # print(f'Day of the week = {dow}')
     timestamp = datetime.datetime.timestamp(xdate) #Produces Timestamp Object.
 
     #See is date matches a holiday in the USA
@@ -105,6 +112,11 @@ api_key = os.environ.get("WEATHER_API_KEY") #Key for Weather API
 url = f'http://api.weatherapi.com/v1/forecast.json?key={api_key}&q=New York City&days=1&aqi=no&alerts=no'
 response = requests.get(url)
 weather_data = response.json()
+json_data = json.dumps(weather_data, indent=4)
+# print(json_data)
+
+with open(file_path_weather, "w") as outfile:
+    outfile.write(json_data)
 
 #Create Weather Variables
 temp = []
@@ -118,10 +130,10 @@ snow_false = False
 snow_predict = float(weather_data['forecast']['forecastday'][0]['day']['totalsnow_cm'])
 if snow_predict != 0:
     snow_true = [True] * 24
-    snow_false = [False] * 24
+    snow_false = [True] * 24
 else:
     snow_true = [False] * 24
-    snow_false = [True] * 24
+    snow_false = [False] * 24
 
 #Create other Weather variables from Weather API
 for i in range(24):
@@ -148,15 +160,15 @@ for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zo
 
     #Create values for the taxi zone columns (64 of them)
     for column in df.columns[1:]:
-        if column[:13] == 'Zone_': # If column is a taxi zone column
-            if column[13:] == k: #If column ending matches the taxi zone number
+        if column[:5] == 'Zone_': # If column is a taxi zone column
+            if column[5:] == k: #If column ending matches the taxi zone number
                 new_row1.update({column:True}) #Make that entry True
             else:
                 new_row1.update({column:False}) #Else make that entry False
     
     #For each hour (in a 24 hour period) add values to a new row
     for i in range(24): 
-        new_row.update({'Hour':i})
+        new_row.update({'Hour':int(i)})
 
         #Create values for weather variables 
         new_row.update({'Temperature':temp[i]})
@@ -201,69 +213,71 @@ for k,v in taxi_data.items(): #k is number of the taxi zone and v is the taxi zo
         #Reset for the next hour
         new_row = {} 
 
+#Send df of inputs to a csv file
+df.to_csv(file_path_busy_input_csv, index=False)
+df.to_json(file_path_busy_input_json, orient='records')
+# print(df.dtypes)
+
 #Open the Pickle File
 pickle_file = "citibike1.pkl"
 busy_model = pickle.load(open(file_path_pickle, 'rb'))
 
-#Make the predictions
+# Make the predictions
+# busyness_predictions = busy_model.predict(xgb.DMatrix(df))
 busyness_predictions = busy_model.predict(df) # Make the predictions
 
 #Add predictions column to df
 df['Busyness Predicted'] = busyness_predictions
 
-selected_columns = ['Hour', 'start_timestamp','Busyness Predicted','Holiday_False', 'Holiday_True','Month_7', 'Month_8', 'Day_Weekday', 'Day_Weekend''Day_Thursday', 'Day_Tuesday']
-print(df[selected_columns].tail(30))
+# selected_columns = ['Hour', 'start_timestamp','Busyness Predicted','Holiday_False', 'Holiday_True','Month_7', 'Month_8', 'Day_Weekday', 'Day_Weekend''Day_Thursday', 'Day_Tuesday']
+# print(df[selected_columns].tail(30))
 
-# #Drop Certain Columns
-# df.drop(['Temperature', 'Humidity', 'Snow_True', 'Snow_False','Precipitation',
-#         'Holiday_False', 'Holiday_True',
-#        'Month_1', 'Month_2', 'Month_3', 'Month_4', 'Month_5', 'Month_6',
-#        'Month_7', 'Month_8', 'Month_9', 'Month_10', 'Month_11', 'Month_12','Day_Friday', 
-#        'Day_Monday', 'Day_Saturday', 'Day_Sunday','Day_Thursday', 'Day_Tuesday', 'Day_Wednesday'
-#        ], axis=1, inplace = True)
+#Drop Certain Columns
+df.drop(['Temperature', 'Humidity', 'Snow_True', 'Snow_False','Precipitation',
+        'Holiday_False', 'Holiday_True',
+       'Month_1', 'Month_2', 'Month_3', 'Month_4', 'Month_5', 'Month_6',
+       'Month_7', 'Month_8', 'Month_9', 'Month_10', 'Month_11', 'Month_12','Day_Friday', 
+       'Day_Monday', 'Day_Saturday', 'Day_Sunday','Day_Thursday', 'Day_Tuesday', 'Day_Wednesday'
+       ], axis=1, inplace = True)
 
-# #Create a list of all the taxi zones (in order)
-# names = []
-# for column in df.columns[1:]:
-#     if column[:13] == 'PULocationID_': # If column is a taxi zone column
-#         name = column[13:] #Name is Taxi Zone ID
-#         names.append(name)
+#Create a list of all the taxi zones (in order)
+names = []
+for column in df.columns[1:]:
+    if column[:5] == 'Zone_': # If column is a taxi zone column
+        name = column[5:] #Name is Taxi Zone ID
+        names.append(name)
 
-# #Create a list with 24 values for each taxi zone id (1 for each hour)
-# tzones = []
-# for name in names:
-#     for i in range(24):
-#         tzones.append(name)
+#Create a list with 24 values for each taxi zone id (1 for each hour)
+tzones = []
+for name in names:
+    for i in range(24):
+        tzones.append(name)
 
-# #Create a new dataframe with this list of taxi ids for every hour
-# df_taxi = pd.DataFrame(tzones,columns=["Taxi Zone ID"])
+#Create a new dataframe with this list of taxi ids for every hour
+df_taxi = pd.DataFrame(tzones,columns=["Taxi Zone ID"])
 
-# #Merge taxi id's with rest of dataframe
-# df = pd.concat([df, df_taxi], axis=1, join='inner')
+#Merge taxi id's with rest of dataframe
+df = pd.concat([df, df_taxi], axis=1, join='inner')
 
-# #Get rid of unwanted taxi zone dummy variable columns
-# df.drop(['Zone_100', 'Zone_107',
-    #    'Zone_113', 'Zone_114', 'Zone_116', 'Zone_12', 'Zone_120', 'Zone_125',
-    #    'Zone_127', 'Zone_13', 'Zone_137', 'Zone_140', 'Zone_141', 'Zone_142',
-    #    'Zone_143', 'Zone_144', 'Zone_148', 'Zone_151', 'Zone_152', 'Zone_158',
-    #    'Zone_161', 'Zone_162', 'Zone_163', 'Zone_164', 'Zone_166', 'Zone_170',
-    #    'Zone_186', 'Zone_209', 'Zone_211', 'Zone_224', 'Zone_229', 'Zone_230',
-    #    'Zone_231', 'Zone_232', 'Zone_233', 'Zone_234', 'Zone_236', 'Zone_237',
-    #    'Zone_238', 'Zone_239', 'Zone_24', 'Zone_243', 'Zone_244', 'Zone_246',
-    #    'Zone_249', 'Zone_261', 'Zone_262', 'Zone_263', 'Zone_4', 'Zone_41',
-    #    'Zone_42', 'Zone_43', 'Zone_45', 'Zone_48', 'Zone_50', 'Zone_68',
-    #    'Zone_74', 'Zone_75', 'Zone_79'] ,axis=1, inplace = True)
+#Get rid of unwanted taxi zone dummy variable columns
+df.drop(['Zone_100', 'Zone_107',
+       'Zone_113', 'Zone_114', 'Zone_116', 'Zone_12', 'Zone_120', 'Zone_125',
+       'Zone_127', 'Zone_13', 'Zone_137', 'Zone_140', 'Zone_141', 'Zone_142',
+       'Zone_143', 'Zone_144', 'Zone_148', 'Zone_151', 'Zone_152', 'Zone_158',
+       'Zone_161', 'Zone_162', 'Zone_163', 'Zone_164', 'Zone_166', 'Zone_170',
+       'Zone_186', 'Zone_209', 'Zone_211', 'Zone_224', 'Zone_229', 'Zone_230',
+       'Zone_231', 'Zone_232', 'Zone_233', 'Zone_234', 'Zone_236', 'Zone_237',
+       'Zone_238', 'Zone_239', 'Zone_24', 'Zone_87', 'Zone_88', 'Zone_90', 'Zone_243', 'Zone_244', 'Zone_246',
+       'Zone_249', 'Zone_261', 'Zone_262', 'Zone_263', 'Zone_4', 'Zone_41',
+       'Zone_42', 'Zone_43', 'Zone_45', 'Zone_48', 'Zone_50', 'Zone_68',
+       'Zone_74', 'Zone_75', 'Zone_79'] ,axis=1, inplace = True)
 
-# # Should be left with column for hour, busyness score, timestamp and taxi zone id
+# Should be left with column for hour, busyness score, timestamp and taxi zone id
 
-# #Send dataframe as a json file
-# df.reset_index(drop=True, inplace=True) #This excludes the index
-# df.to_json(file_path_busy_json, orient='records')
-# df.to_csv(file_path_busy_csv, index=False)
-
-# # weather_file = "weather.json"
-# # with open(os.join(weatherdata,weather_file), "w") as outfile:
-# #     json.dump(outfile, indent=4)
+#Send dataframe as a json and csv file
+df.reset_index(drop=True, inplace=True) #This excludes the index
+df.to_json(file_path_busy_json, orient='records')
+df.to_csv(file_path_busy_csv, index=False)
 
 ####### End time - to get run time #########
 end_time = time.time()
