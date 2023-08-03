@@ -89,81 +89,386 @@ def calculate_distance(lat1, lon1, lat2, lon2):
 
     distance = R * c
     return distance
+
+#Function to calculate angle between two coordinates
+def calculate_angle(lat1, lon1, lat2, lon2):
+    lat1_rad = radians(lat1)
+    lon1_rad = radians(lon1)
+    lat2_rad = radians(lat2)
+    lon2_rad = radians(lon2)
+
+    dlon = lon2_rad - lon1_rad
+
+    x = cos(lat1_rad) * sin(lat2_rad) - sin(lat1_rad) * cos(lat2_rad) * cos(dlon)
+    y = sin(dlon) * cos(lat2_rad)
+
+    angle_rad = atan2(y, x)
+    angle_deg = (angle_rad * 180 / 3.141592653589793 + 360) % 360
+
+    return angle_deg
     
-# def magic(user_latitude, user_longitude, hour, dist, endLatitude, endLongitude):
-def magic(user_latitude, user_longitude, hour):
+#def magic(user_latitude, user_longitude, hour):
+def magic(user_latitude, user_longitude, hour, dist, endLatitude, endLongitude):
     print(f"Starting location: ({user_latitude}, {user_longitude})")
+    print(f"End location: ({endLatitude}, {endLongitude})")
     print("-----------------------------------------")
+
+    direction_bias = True
+
+    startLatitude = user_latitude
+    startLongitude = user_longitude
+    
+    dist_check = calculate_distance(startLatitude,startLongitude,endLatitude,endLongitude) < 1.5*dist
 
     # Define the predefined distance to be covered
     # if dist > 10:
     #     dist = dist/10
 
-    # predefined_distance = dist  # Adjust this value as needed
-    predefined_distance = 2
+    predefined_distance = dist  # Adjust this value as needed
+    #predefined_distance = 2
     visited_parks = []  # List to store visited parks
+    print('`1.5 dist:',1.5*dist)
+    print('Start-End distance:',calculate_distance(startLatitude,startLongitude,endLatitude,endLongitude))
+    print('dist_check: ',dist_check)
 
-    while predefined_distance > 0:
-        closest_parks = []  # List to store closest parks
-        closest_distances = []  # List to store distances to closest parks
 
-        # Calculate distances to all parks from the current location
-        for park_data in data["data"]:
-            if park_data not in visited_parks:
-                park_latitude = park_data["location"]["latitude"]
-                park_longitude = park_data["location"]["longitude"]
-                distance = calculate_distance(
+    if (startLatitude == endLatitude and startLongitude == endLongitude) or calculate_distance(startLatitude,startLongitude,endLatitude,endLongitude) < 0.5:
+        if dist_check:
+            while predefined_distance > dist/2:
+                closest_parks = []  # List to store closest parks
+                closest_distances = []  # List to store distances to closest parks
+
+                # Calculate distances to all parks from the current location
+                for park_data in data["data"]:
+                    if park_data not in visited_parks:
+                        park_latitude = park_data["location"]["latitude"]
+                        park_longitude = park_data["location"]["longitude"]
+                        distance = calculate_distance(
+                            user_latitude, user_longitude, park_latitude, park_longitude
+                        )
+                        closest_distances.append(distance)
+                        closest_parks.append(park_data)
+
+                # Sort the parks based on distance and select the 7 closest parks
+                sorted_indices = sorted(range(len(closest_distances)), key=lambda k: closest_distances[k])
+                closest_parks = [closest_parks[i] for i in sorted_indices[:7]]
+
+                #Probably need something here to get the busyness scores for the taxis and for the bikes
+                #Then apply some weightings to the two - say 75% taxi and 25% bike
+                # This produces a single b-score which goes to the line of code below 
+
+
+                # Select the park with the lowest combination of "busi" values
+                selected_park = min(closest_parks, key=lambda park: park["b-score"][hour])
+                # print(selected_park["busi"][hour])
+
+                # Calculate distance to the selected park
+                park_latitude = selected_park["location"]["latitude"]
+                park_longitude = selected_park["location"]["longitude"]
+                distance_to_park = calculate_distance(
                     user_latitude, user_longitude, park_latitude, park_longitude
                 )
-                closest_distances.append(distance)
-                closest_parks.append(park_data)
 
-        # Sort the parks based on distance and select the 7 closest parks
-        sorted_indices = sorted(range(len(closest_distances)), key=lambda k: closest_distances[k])
-        closest_parks = [closest_parks[i] for i in sorted_indices[:7]]
+                # Reduce the predefined distance by the distance to the selected park
+                predefined_distance -= distance_to_park
 
-        #Probably need something here to get the busyness scores for the taxis and for the bikes
-        #Then apply some weightings to the two - say 75% taxi and 25% bike
-        # This produces a single b-score which goes to the line of code below 
+                # Add the selected park to the visited parks list
+                visited_parks.append(selected_park)
+
+                # Print information about the current journey
+                park_name = selected_park["name"]
+                park_busi = selected_park["b-score"][hour]
+                # print(f"Visiting Park: {park_name}")
+                # print(f"Busyness Rating: {park_busi}")
+                # print(f"Remaining Distance: {predefined_distance} km")
+                # print(f"Location: ({park_latitude}, {park_longitude})")
+                # print("-------------------------")
+
+                # Update the user's location for the next iteration
+                user_latitude = park_latitude
+                user_longitude = park_longitude
+
+            angle = calculate_angle(user_latitude, user_longitude, endLatitude, endLongitude)
+            closest_parks = []  # List to store closest parks
+            closest_distances = []  # List to store distances to closest parks
+
+                # Calculate distances to all parks from the current location
+            for park_data in data["data"]:
+                if park_data not in visited_parks:
+                    park_latitude = park_data["location"]["latitude"]
+                    park_longitude = park_data["location"]["longitude"]
+                    distance = calculate_distance(
+                        user_latitude, user_longitude, park_latitude, park_longitude
+                    )
+                    closest_distances.append(distance)
+                    closest_parks.append(park_data)
+
+                # Sort the parks based on distance and select the 7 closest parks
+            sorted_indices = sorted(range(len(closest_distances)), key=lambda k: closest_distances[k])
+            closest_parks = [closest_parks[i] for i in sorted_indices]# if len(closest_parks) >= 7 else closest_parks
 
 
-        # Select the park with the lowest combination of "busi" values
-        selected_park = min(closest_parks, key=lambda park: park["b-score"][hour])
-        # print(selected_park["busi"][hour])
+            filtered_parks = []
+            for park_data in closest_parks:
+                park_latitude = park_data["location"]["latitude"]
+                park_longitude = park_data["location"]["longitude"]
 
-        # Calculate distance to the selected park
-        park_latitude = selected_park["location"]["latitude"]
-        park_longitude = selected_park["location"]["longitude"]
-        distance_to_park = calculate_distance(
-            user_latitude, user_longitude, park_latitude, park_longitude
-        )
+                 # Calculate the angle between the park and user coordinates
+                park_angle = calculate_angle(user_latitude, user_longitude, park_latitude, park_longitude)
 
-        # Reduce the predefined distance by the distance to the selected park
-        predefined_distance -= distance_to_park
+                # Check if the park's angle is either 30 degrees greater or 30 degrees less than the 'angle' variable
+                if abs(park_angle - angle) >= 70:
+                    filtered_parks.append(park_data)
+                
 
-        # Add the selected park to the visited parks list
-        visited_parks.append(selected_park)
+            # Replace 'closest_parks' with the filtered parks
+            closest_parks = filtered_parks[:7]
 
-        # Print information about the current journey
-        park_name = selected_park["name"]
-        park_busi = selected_park["b-score"][hour]
-        # print(f"Visiting Park: {park_name}")
-        # print(f"Busyness Rating: {park_busi}")
-        # print(f"Remaining Distance: {predefined_distance} km")
-        # print(f"Location: ({park_latitude}, {park_longitude})")
-        # print("-------------------------")
 
-        # Update the user's location for the next iteration
-        user_latitude = park_latitude
-        user_longitude = park_longitude
 
-    # print("Visited Parks:")
-    # for park in visited_parks:
-    #     print(f"Latitude: {park['location']['latitude']}, Longitude: {park['location']['longitude']}")
 
-    visited_locations = [(park['location']['latitude'], park['location']['longitude']) for park in visited_parks]
-    # print(visited_locations)
-    return visited_locations
+
+            selected_park = min(closest_parks, key=lambda park: park["b-score"][hour])
+    
+            # print(selected_park["busi"][hour])
+
+            # Calculate distance to the selected park
+            park_latitude = selected_park["location"]["latitude"]
+            park_longitude = selected_park["location"]["longitude"]
+            distance_to_park = calculate_distance(
+                user_latitude, user_longitude, park_latitude, park_longitude
+            )
+            # Reduce the predefined distance by the distance to the selected park
+            predefined_distance -= distance_to_park
+            # Add the selected park to the visited parks list
+            visited_parks.append(selected_park)
+
+            # Bias direction for returning home
+            if calculate_angle(user_latitude, user_longitude, park_latitude,park_longitude) > angle:
+                direction_bias = True
+            else:
+                direction_bias = False
+
+            # Print information about the current journey
+            park_name = selected_park["name"]
+            park_busi = selected_park["b-score"][hour]
+            # print(f"Visiting Park: {park_name}")
+            # print(f"Busyness Rating: {park_busi}")
+            # print(f"Remaining Distance: {predefined_distance} km")
+            # print(f"Location: ({park_latitude}, {park_longitude})")
+            # print("-------------------------")
+
+            # Update the user's location for the next iteration
+            user_latitude = park_latitude
+            user_longitude = park_longitude
+
+
+            while predefined_distance > dist/6:
+                closest_parks = []  # List to store closest parks
+                closest_distances = []  # List to store distances to closest parks
+
+                # Calculate distances to all parks from the current location
+                for park_data in data["data"]:
+                    if park_data not in visited_parks:
+                        park_latitude = park_data["location"]["latitude"]
+                        park_longitude = park_data["location"]["longitude"]
+                        distance = calculate_distance(
+                            user_latitude, user_longitude, park_latitude, park_longitude
+                        )
+                        closest_distances.append(distance)
+                        closest_parks.append(park_data)
+
+                # Sort the parks based on distance and select the 7 closest parks
+                sorted_indices = sorted(range(len(closest_distances)), key=lambda k: closest_distances[k])
+                closest_parks = [closest_parks[i] for i in sorted_indices[:7]]
+
+
+
+                filtered_parks = []
+                for park_data in closest_parks:
+                    park_latitude = park_data["location"]["latitude"]
+                    park_longitude = park_data["location"]["longitude"]
+
+                 # Calculate the angle between the park and user coordinates
+                    park_angle = calculate_angle(user_latitude, user_longitude, park_latitude, park_longitude)
+
+                # Check if the park's angle is either 30 degrees greater or 30 degrees less than the 'angle' variable
+                    if direction_bias == True:
+                        if park_angle - angle < 70:
+                            filtered_parks.append(park_data)
+                    elif direction_bias == False:
+                        if park_angle - angle > 70:
+                            filtered_parks.append(park_data)
+
+                
+
+            # Replace 'closest_parks' with the filtered parks
+                closest_parks = filtered_parks[:7]
+
+
+
+
+
+                selected_park = min(closest_parks, key=lambda park: park["b-score"][hour])
+    
+            # print(selected_park["busi"][hour])
+
+            # Calculate distance to the selected park
+                park_latitude = selected_park["location"]["latitude"]
+                park_longitude = selected_park["location"]["longitude"]
+                distance_to_park = calculate_distance(
+                 user_latitude, user_longitude, park_latitude, park_longitude
+                )
+                # Reduce the predefined distance by the distance to the selected park
+                predefined_distance -= distance_to_park
+                # Add the selected park to the visited parks list
+                visited_parks.append(selected_park)
+
+                # Add the selected park to the visited parks list
+                visited_parks.append(selected_park)
+
+                # Print information about the current journey
+                park_name = selected_park["name"]
+                park_busi = selected_park["b-score"][hour]
+                # print(f"Visiting Park: {park_name}")
+                # print(f"Busyness Rating: {park_busi}")
+                # print(f"Remaining Distance: {predefined_distance} km")
+                # print(f"Location: ({park_latitude}, {park_longitude})")
+                # print("-------------------------")
+
+                # Update the user's location for the next iteration
+                user_latitude = park_latitude
+                user_longitude = park_longitude
+
+
+        
+            
+
+            while predefined_distance > 0:
+                closest_parks = []  # List to store closest parks
+                closest_distances = []  # List to store distances to closest parks
+
+                # Calculate distances to all parks from the current location
+                for park_data in data["data"]:
+                    if park_data not in visited_parks:
+                        park_latitude = park_data["location"]["latitude"]
+                        park_longitude = park_data["location"]["longitude"]
+                        distance = calculate_distance(
+                            user_latitude, user_longitude, park_latitude, park_longitude
+                        )
+                        closest_distances.append(distance)
+                        closest_parks.append(park_data)
+
+                # Sort the parks based on distance and select the 7 closest parks
+                sorted_indices = sorted(range(len(closest_distances)), key=lambda k: closest_distances[k])
+                closest_parks = [closest_parks[i] for i in sorted_indices[:7]]
+
+                #Probably need something here to get the busyness scores for the taxis and for the bikes
+                #Then apply some weightings to the two - say 75% taxi and 25% bike
+                # This produces a single b-score which goes to the line of code below 
+
+
+                # Select the park with the lowest combination of "busi" values
+                selected_park = min(closest_parks, key=lambda park: park["b-score"][hour])
+                # print(selected_park["busi"][hour])
+
+                # Calculate distance to the selected park
+                park_latitude = selected_park["location"]["latitude"]
+                park_longitude = selected_park["location"]["longitude"]
+                distance_to_park = calculate_distance(
+                    user_latitude, user_longitude, park_latitude, park_longitude
+                )
+
+                # Reduce the predefined distance by the distance to the selected park
+                predefined_distance -= distance_to_park
+
+                # Add the selected park to the visited parks list
+                visited_parks.append(selected_park)
+
+                # Print information about the current journey
+                park_name = selected_park["name"]
+                park_busi = selected_park["b-score"][hour]
+                # print(f"Visiting Park: {park_name}")
+                # print(f"Busyness Rating: {park_busi}")
+                # print(f"Remaining Distance: {predefined_distance} km")
+                # print(f"Location: ({park_latitude}, {park_longitude})")
+                # print("-------------------------")
+
+                # Update the user's location for the next iteration
+                user_latitude = park_latitude
+                user_longitude = park_longitude
+
+            # print("Visited Parks:")
+            # for park in visited_parks:
+            #     print(f"Latitude: {park['location']['latitude']}, Longitude: {park['location']['longitude']}")
+
+            visited_locations = [(park['location']['latitude'], park['location']['longitude']) for park in visited_parks]
+            # print(visited_locations)
+            return visited_locations
+
+    else:
+        if dist_check:
+            while predefined_distance > 0:
+                closest_parks = []  # List to store closest parks
+                closest_distances = []  # List to store distances to closest parks
+
+                # Calculate distances to all parks from the current location
+                for park_data in data["data"]:
+                    if park_data not in visited_parks:
+                        park_latitude = park_data["location"]["latitude"]
+                        park_longitude = park_data["location"]["longitude"]
+                        distance = calculate_distance(
+                            user_latitude, user_longitude, park_latitude, park_longitude
+                        )
+                        closest_distances.append(distance)
+                        closest_parks.append(park_data)
+
+                # Sort the parks based on distance and select the 7 closest parks
+                sorted_indices = sorted(range(len(closest_distances)), key=lambda k: closest_distances[k])
+                closest_parks = [closest_parks[i] for i in sorted_indices[:7]]
+
+                #Probably need something here to get the busyness scores for the taxis and for the bikes
+                #Then apply some weightings to the two - say 75% taxi and 25% bike
+                # This produces a single b-score which goes to the line of code below 
+
+
+                # Select the park with the lowest combination of "busi" values
+                selected_park = min(closest_parks, key=lambda park: park["b-score"][hour])
+                # print(selected_park["busi"][hour])
+
+                # Calculate distance to the selected park
+                park_latitude = selected_park["location"]["latitude"]
+                park_longitude = selected_park["location"]["longitude"]
+                distance_to_park = calculate_distance(
+                    user_latitude, user_longitude, park_latitude, park_longitude
+                )
+
+                # Reduce the predefined distance by the distance to the selected park
+                predefined_distance -= distance_to_park
+
+                # Add the selected park to the visited parks list
+                visited_parks.append(selected_park)
+
+                # Print information about the current journey
+                park_name = selected_park["name"]
+                park_busi = selected_park["b-score"][hour]
+                # print(f"Visiting Park: {park_name}")
+                # print(f"Busyness Rating: {park_busi}")
+                # print(f"Remaining Distance: {predefined_distance} km")
+                # print(f"Location: ({park_latitude}, {park_longitude})")
+                # print("-------------------------")
+
+                # Update the user's location for the next iteration
+                user_latitude = park_latitude
+                user_longitude = park_longitude
+
+            # print("Visited Parks:")
+            # for park in visited_parks:
+            #     print(f"Latitude: {park['location']['latitude']}, Longitude: {park['location']['longitude']}")
+
+            visited_locations = [(park['location']['latitude'], park['location']['longitude']) for park in visited_parks]
+            # print(visited_locations)
+            return visited_locations
 
 # magic(40.74218481889335, -73.98786664009094)
 
