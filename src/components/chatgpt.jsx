@@ -171,6 +171,8 @@ const ChatGPT = () => {
                   setShowGptbox(false);
                   setShowGptcon(true);
                   setShowBut(false);
+
+                  
                 }}
                 href="#"
                 type="submit"
@@ -181,7 +183,7 @@ const ChatGPT = () => {
           </>
         )}
 
-        {showgptcon && (
+        {showgptcon && response && (
           <div className="response-container" onClick={toggleback}>
             {response && <div className="response-text">{response}</div>}
           </div>
