@@ -23,5 +23,3 @@ Apart form park_locations.json and park_node_locations.json, the other node json
   "museum_art_locations",
   "worship_locations",
   "walking_node_locations",
-
-

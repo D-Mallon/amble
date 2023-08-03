@@ -140,6 +140,7 @@ psd
 thumb
 sketch
 
+django-env
 django-env/
 
 backend/__pycache__
@@ -151,3 +152,5 @@ backend/__pycache__/urls.cpython-39.pyc
 
 #Pickle
 src/pickle_files
+
+*.pyc

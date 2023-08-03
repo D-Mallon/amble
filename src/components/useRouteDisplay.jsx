@@ -32,13 +32,13 @@ const matchWaypointsWithData = (waypoints, jsonData) => {
 const handleWaypoints = (waypointsString, setGlobalArrayValue) => {
   const waypoints = parseWaypoints(waypointsString);
   const jsonData = [
-        ...community_locations.data,
-        ...library_locations.data,
-        ...museum_art_locations.data,
-        ...park_locations.data,
-        ...park_node_locations.data,
-        ...walking_node_locations.data,
-        ...worship_locations.data,
+    ...community_locations.data,
+    ...library_locations.data,
+    ...museum_art_locations.data,
+    ...park_locations.data,
+    ...park_node_locations.data,
+    ...walking_node_locations.data,
+    ...worship_locations.data,
   ];
   const arrayTemp = matchWaypointsWithData(waypoints, jsonData);
   setGlobalArrayValue(arrayTemp);
@@ -72,12 +72,12 @@ const useRouteDisplay = (map, inputValues) => {
       console.log("ways:", waypointsString);
 
       const callAPI = `https://api.mapbox.com/directions/v5/mapbox/walking/` +
-      `${inputValues["longitude"]},` +
-      `${inputValues["latitude"]};` +
-      `${waypointsString};` +
-      `${inputValues["endLongitude"]},` +
-      `${inputValues["endLatitude"]}` +
-      `?geometries=geojson&steps=true&voice_instructions=true&access_token=${mapboxgl.accessToken}`;    
+        `${inputValues["longitude"]},` +
+        `${inputValues["latitude"]};` +
+        `${waypointsString};` +
+        `${inputValues["endLongitude"]},` +
+        `${inputValues["endLatitude"]}` +
+        `?geometries=geojson&steps=true&voice_instructions=true&access_token=${mapboxgl.accessToken}&exclude=ferry`;
       const response = await fetch(callAPI);
       const data = await response.json();
 
@@ -183,6 +183,7 @@ const useRouteDisplay = (map, inputValues) => {
         type: 'geojson',
         data: routeGeoJSON,
       });
+
       map.addLayer({
         id: 'route',
         type: 'line',
@@ -196,24 +197,6 @@ const useRouteDisplay = (map, inputValues) => {
           'line-width': 4,
         },
       });
-
-      // Fit the map to display the route
-      const bounds = new mapboxgl.LngLatBounds();
-      routeCoordinates.forEach((coord) => {
-        if (Array.isArray(coord) && coord.length === 2 && !isNaN(coord[0]) && !isNaN(coord[1])) {
-          bounds.extend(coord);
-        } else {
-          console.error('Invalid coordinate:', coord);
-        }
-      });
-
-      if (!bounds.isEmpty()) {
-        console.log('Bounds:', bounds.toArray()); // Log the bounds
-        map.fitBounds(bounds, { margin: 100 });
-      } else {
-        console.error('No valid coordinates to fit bounds');
-      }
-
       setRoute(routeCoordinates);
     } catch (error) {
       console.error('Error:', error);

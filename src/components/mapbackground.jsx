@@ -18,7 +18,7 @@ const MapBackground = ({ zoom }) => {
     return () => {
       map.remove();
     };
-  }, [zoom]);
+  }, []);
 
   return <div id="map" style={{ width: '97.5%', height: '97.5%', border: '0px solid #00684a' }} />;
 

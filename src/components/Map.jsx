@@ -340,12 +340,12 @@ const Map = () => {
                     nowSelected
                       ? { borderRadius: 0 }
                       : {
-                          backgroundColor: "transparent",
-                          borderColor: "black",
-                          color: "black",
-                          boxShadow: "none",
-                          borderRadius: 0,
-                        }
+                        backgroundColor: "transparent",
+                        borderColor: "black",
+                        color: "black",
+                        boxShadow: "none",
+                        borderRadius: 0,
+                      }
                   }
                   onClick={handleNowButtonClick}
                 >
@@ -358,12 +358,12 @@ const Map = () => {
                     laterSelected
                       ? { borderRadius: 0 }
                       : {
-                          borderRadius: 0,
-                          backgroundColor: "transparent",
-                          borderColor: "black",
-                          color: "black",
-                          boxShadow: "none",
-                        }
+                        borderRadius: 0,
+                        backgroundColor: "transparent",
+                        borderColor: "black",
+                        color: "black",
+                        boxShadow: "none",
+                      }
                   }
                   onClick={handleLaterButtonClick}
                 >
@@ -415,15 +415,15 @@ const Map = () => {
                     style={
                       nowSelected
                         ? {
-                            borderColor: "black",
-                            color: "black",
-                            borderRadius: 0,
-                          }
+                          borderColor: "black",
+                          color: "black",
+                          borderRadius: 0,
+                        }
                         : {
-                            borderColor: "black",
-                            color: "black",
-                            borderRadius: 0,
-                          }
+                          borderColor: "black",
+                          color: "black",
+                          borderRadius: 0,
+                        }
                     }
                     onClick={() => {
                       if (sliderUnit === "km") {
@@ -480,12 +480,12 @@ const Map = () => {
                         homeSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       Home
@@ -512,12 +512,12 @@ const Map = () => {
                         searchSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       {beginLocationPressed ? "Click" : "Map"}
@@ -537,12 +537,12 @@ const Map = () => {
                         addressSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       Search
@@ -638,12 +638,12 @@ const Map = () => {
                         endHomeSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       Home
@@ -670,12 +670,12 @@ const Map = () => {
                         endSearchSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       {endLocationPressed ? "Click" : "Map"}
@@ -695,12 +695,12 @@ const Map = () => {
                         endAddressSelected
                           ? { borderRadius: 0 }
                           : {
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                              borderRadius: 0,
-                            }
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                            borderRadius: 0,
+                          }
                       }
                     >
                       Search
