@@ -5,7 +5,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import DateTimePicker from "react-datetime-picker";
 import axios from "axios";
 import { useMapInput } from "../context/MapInputContext";
-
+import routedirection from "./routedirection";
 import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -30,13 +30,13 @@ import Box from "@mui/material/Box";
 import CloseIcon from "@mui/icons-material/Close";
 
 import { ArrayContext, useWaypointsArray } from "../context/ArrayContext";
-import ChatBox from './ChatBox';
+import ChatBox from "./ChatBox";
+import Ratings from "./Ratings";
 
 import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import { getIconByType } from './ratingFunctions';
 import { StandaloneSearchBox } from "@react-google-maps/api";
 
 const apiKey = import.meta.env.VITE_MAPBOX_API_KEY;
@@ -58,7 +58,10 @@ const Map = () => {
 
   const { inputValues, setInputValues } = useMapInput();
   const { globalArray, setGlobalArrayValue } = useWaypointsArray();
-
+  const [ walkRating, setWalkRating] = useState(2); 
+  const [ waypointRatings, setWaypointRatings] = useState({}); 
+  //console.log(globalArray)
+  
   const mapContainer = useRef(null);
   const [lat, setLat] = useState(40.73);
   const [lng, setLng] = useState(-73.445);
@@ -91,12 +94,33 @@ const Map = () => {
   const [endSearchSelected, setEndSearchSelected] = useState(false);
   const [endAddressSelected, setEndAddressSelected] = useState(false);
 
-
-  const { map, markers } = useMapInit(mapContainer, lat, lng, zoom, inputValues);
-  const { route, displayRoute } = useRouteDisplay(map.current, inputValues, setInputValues, setGlobalArrayValue);
-  const { location, setLocation } = useGeocoding(map.current, beginLocationPressed, setBeginLocationPressed, endLocationPressed, setEndLocationPressed,
-    inputValues, setInputValues, showEndLocationInput, setShowEndLocationInput, setShowGoButton);
-  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } = usePlaceNameChange("", setInputValues);
+  const { map, markers } = useMapInit(
+    mapContainer,
+    lat,
+    lng,
+    zoom,
+    inputValues
+  );
+  const { route, displayRoute, directiondata } = useRouteDisplay(
+    map.current,
+    inputValues,
+    setInputValues,
+    setGlobalArrayValue
+  );
+  const { location, setLocation } = useGeocoding(
+    map.current,
+    beginLocationPressed,
+    setBeginLocationPressed,
+    endLocationPressed,
+    setEndLocationPressed,
+    inputValues,
+    setInputValues,
+    showEndLocationInput,
+    setShowEndLocationInput,
+    setShowGoButton
+  );
+  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } =
+    usePlaceNameChange("", setInputValues);
 
   const handleNowButtonClick = () => {
     setNowSelected(true);
@@ -150,7 +174,7 @@ const Map = () => {
   const handleSliderChange = (event) => {
     const newDistance = event.target.value;
     setInputValues((prevValues) => ({ ...prevValues, distance: newDistance }));
-    console.log("handleSliderChange", inputValues);
+    //console.log("handleSliderChange", inputValues);
   };
 
   const handleInputSubmit = async (e) => {
@@ -236,6 +260,46 @@ const Map = () => {
     navigate("/");
   };
 
+  const handleRatingsCalc = () => {
+    console.log("Submitted General Walk Rating:", walkRating);
+    console.log("Submitted Waypoint Ratings:", waypointRatings);
+
+    // score mapping - edge scores have negative and positive bonuses
+    // Define mappings using arrays of tuples and convert them to objects
+    const walkRatingModifiers = Object.fromEntries([[0, -0.25], [0.5, -0.2], [1, -0.15], [1.5, -0.15], [2, -0.1], [2.5, -0.1], [3, -0.05], [3.5, -0.05], [4, 0.0], [4.5, 0.05], [5, 0.05], [5.5, 0.1], [6, 0.1], [6.5, 0.15], [7, 0.15], [7.5, 0.2], [8, 0.2], [8.5, 0.25], [9, 0.25], [9.5, 0.3], [10, 0.4]]);
+    const ratingModifierMapping = Object.fromEntries([[-5, -0.6], [-4, -0.4], [-3, -0.3], [-2, -0.2], [-1, -0.1], [0, 0], [1, 0.1], [2, 0.2], [3, 0.3], [4, 0.4], [5, 0.6]]);
+
+    const updatedGlobalArray = globalArray.map((node) => {
+      // Apply the walkRating modifier to all nodes
+      let rating = node.rating + walkRatingModifiers[walkRating];
+      // Find the corresponding waypoint in waypointRatings and apply the rating_modifier if exists
+      const waypoint = waypointRatings.find((w) => w.id === node.id);
+      if (waypoint) {
+        rating += ratingModifierMapping[waypoint.rating_modifier];
+      }
+      // Clamp the rating between 0 and 5
+      rating = Math.max(0, Math.min(5, rating));
+      return { ...node, rating }; // Update the node with the new rating
+    });
+
+    // Send the updated global array to the backend
+    axios.post('/users/ratings', updatedGlobalArray)
+    .then((response) => {
+      console.log('Ratings updated successfully:', response.data);
+    })
+    .catch((error) => {
+      console.error('Error updating ratings:', error);
+    });
+
+    // Update globalArray
+    setGlobalArrayValue(updatedGlobalArray);
+  };
+
+  const handleSubmit = () => {
+    handleButtonClick_close(); // Function to close the popup
+    handleRatingsCalc(); // Function to process ratings
+  };
+
   return (
     <div>
       {plansetwin && (
@@ -260,12 +324,12 @@ const Map = () => {
                     nowSelected
                       ? { borderRadius: 0 }
                       : {
-                          backgroundColor: "transparent",
-                          borderColor: "black",
-                          color: "black",
-                          boxShadow: "none",
-                          borderRadius: 0,
-                        }
+                        backgroundColor: "transparent",
+                        borderColor: "black",
+                        color: "black",
+                        boxShadow: "none",
+                        borderRadius: 0,
+                      }
                   }
                   onClick={handleNowButtonClick}
                 >
@@ -278,12 +342,12 @@ const Map = () => {
                     laterSelected
                       ? { borderRadius: 0 }
                       : {
-                          borderRadius: 0,
-                          backgroundColor: "transparent",
-                          borderColor: "black",
-                          color: "black",
-                          boxShadow: "none",
-                        }
+                        borderRadius: 0,
+                        backgroundColor: "transparent",
+                        borderColor: "black",
+                        color: "black",
+                        boxShadow: "none",
+                      }
                   }
                   onClick={handleLaterButtonClick}
                 >
@@ -335,15 +399,15 @@ const Map = () => {
                     style={
                       nowSelected
                         ? {
-                            borderColor: "black",
-                            color: "black",
-                            borderRadius: 0,
-                          }
+                          borderColor: "black",
+                          color: "black",
+                          borderRadius: 0,
+                        }
                         : {
-                            borderColor: "black",
-                            color: "black",
-                            borderRadius: 0,
-                          }
+                          borderColor: "black",
+                          color: "black",
+                          borderRadius: 0,
+                        }
                     }
                     onClick={() => {
                       if (sliderUnit === "km") {
@@ -400,12 +464,12 @@ const Map = () => {
                         homeSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       Home
@@ -432,12 +496,12 @@ const Map = () => {
                         searchSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       {beginLocationPressed ? "Click" : "Map"}
@@ -457,12 +521,12 @@ const Map = () => {
                         addressSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       Search
@@ -558,12 +622,12 @@ const Map = () => {
                         endHomeSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       Home
@@ -590,12 +654,12 @@ const Map = () => {
                         endSearchSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       {endLocationPressed ? "Click" : "Map"}
@@ -615,12 +679,12 @@ const Map = () => {
                         endAddressSelected
                           ? { borderRadius: 0 }
                           : {
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                              borderRadius: 0,
-                            }
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                            borderRadius: 0,
+                          }
                       }
                     >
                       Search
@@ -730,11 +794,15 @@ const Map = () => {
           <div className="detailbox">
             <div className="detail-titlebox">
               <span className="text_bar-mapfunction-detail">
-                My Walk Detail
+                My Walk Details
               </span>
             </div>
-            <p>Distance and Duration</p>
-
+            <p>Distance or Duration</p>
+            {/* <span>{inputValues.distance}{sliderUnit}</span> */}
+            <span><strong>{sliderUnit === "km"
+                      ? `${sliderValue} km`
+                      : `${sliderValue} mins`}
+                      </strong></span>
             <p>Preference</p>
 
             <p>Quietness Score</p>
@@ -744,8 +812,25 @@ const Map = () => {
                 <span className="text_bar-mapfunction-detail-2">
                   Direction Helper
                 </span>
-
-                {/* direction information */}
+              </div>
+              <div className="directiondetail">
+                <ul className="directionswords">
+                  {directiondata.map((step, index) => (
+                    <span key={index}>
+                      <span className="bold-step">
+                        {`Step ${index + 1}: `}&nbsp;&nbsp;
+                      </span>
+                      {`${step.action ? step.action : "Proceed"}${
+                        step.road ? ` on ${step.road}` : ""
+                      }${
+                        step.distance
+                          ? ` for ${step.distance.toFixed(2)} meters`
+                          : ""
+                      }${step.isKeyNode ? " (Arrived at Key Node)" : ""}`}
+                      <br />
+                    </span>
+                  ))}
+                </ul>
               </div>
             </div>
 
@@ -806,10 +891,8 @@ const Map = () => {
               </div>
               <span className="text_bar-mapfunction-chat">Chat with Amble</span>
             </div>
-            {/* <div className="chatbox-content"> */}
+
             <ChatBox />
-            
-             {/* </div> */}
           </div>
         </>
       )}
@@ -824,9 +907,9 @@ const Map = () => {
             className="ratewin-background"
           ></img>
           <div className="additional-blocks-ratewin">
-            <div className="additional-block-text-ratewin">
-              <span className="text_bar_2-ratewin">Rate My Walk</span>
-            </div>
+            {/*<div className="additional-block-text-ratewin">
+              <span className="text_bar_2-ratewin">Rate Your Walk</span>
+              </div>*/}
 
             <div
               className="additional-block-rate-button"
@@ -853,39 +936,11 @@ const Map = () => {
                 "& > legend": { mt: 2 },
               }}
             >
-              {/*<div className="quite-rate">
-                <div>Quietness: </div>
-                <StyledRating
-                  name="customized-color"
-                  defaultValue={2}
-                  getLabelText={(value) =>
-                    `${value} Heart${value !== 1 ? "s" : ""}`
-                  }
-                  precision={0.5}
-                  max={10}
-                  icon={
-                    <FavoriteIcon
-                      fontSize="large"
-                      sx={{
-                        fontSize: "2.2rem",
-                      }}
-                    />
-                  }
-                  emptyIcon={
-                    <FavoriteBorderIcon
-                      fontSize="large"
-                      sx={{
-                        fontSize: "2.2rem",
-                      }}
-                    />
-                  }
-                />
-              </div>*/}
               <div className="like-rate">
-                
                 <StyledRating
                   name="customized-color"
-                  defaultValue={2}
+                  defaultValue={walkRating}
+                  onChange={(event, newValue) => setWalkRating(newValue)}
                   getLabelText={(value) =>
                     `${value} Heart${value !== 1 ? "s" : ""}`
                   }
@@ -894,17 +949,13 @@ const Map = () => {
                   icon={
                     <FavoriteIcon
                       fontSize="large"
-                      sx={{
-                        fontSize: "2.2rem",
-                      }}
+                      sx={{ fontSize: "2.2rem" }}
                     />
                   }
                   emptyIcon={
                     <FavoriteBorderIcon
                       fontSize="large"
-                      sx={{
-                        fontSize: "2.2rem",
-                      }}
+                      sx={{ fontSize: "2.2rem" }}
                     />
                   }
                 />
@@ -913,36 +964,15 @@ const Map = () => {
             <div className="stop-text">
               <span>How much did you like your stops? </span>
             </div>
-            <div className="each-stop-inform">
-            {globalArray
-              .filter(
-                (item) => item.type !== "walking_node" && item.type !== "park_node"
-              )
-              .map((stop, index) => (
-                <div className="stop-info" key={stop.id}>
-                  <div className="stand-icon">
-                  <img src={getIconByType(stop.type)} alt={`${stop.type} icon`} />
-                    </div> {/*stand-icon*/}
-                  <span>{`PLACE ${index + 1}`}</span><br/>
-                  <span className="park-name">{stop.name}</span>
-                  <Slider aria-label="love-degree" defaultValue={50} valueLabelDisplay="auto"
-                    step={10} marks min={0} max={100}/>
-                </div>
-              ))};
-            </div>
-            </div>
-
-            <div className="finishrate">
-              <a
-                className="finishrate-text"
-                type="submit"
-                onClick={handleButtonClick_close}
-              >
-                <span>Submit My Review</span>
-              </a>
-            </div>
+            <Ratings setWaypointRatings={setWaypointRatings} />{" "}
+            {/* Includes the Ratings component here */}
           </div>
-        
+          <div className="finishrate">
+            <a className="finishrate-text" type="submit" onClick={handleSubmit}>
+              <span>Submit My Review</span>
+            </a>
+          </div>
+        </div>
       )}
 
       <div ref={mapContainer} className="map-container" />

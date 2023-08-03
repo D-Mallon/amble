@@ -60,7 +60,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    
+
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -94,10 +94,10 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "backend.wsgi.application"
+# WSGI_APPLICATION = "backend.wsgi.application"
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+# # Database
+# # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
     'default': {

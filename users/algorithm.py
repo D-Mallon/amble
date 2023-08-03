@@ -15,21 +15,14 @@ file_path_par = BASE_DIR / 'src'/'json-files'/'park_locations.json'
 with open(file_path_par) as json_file:
     basedata = json.load(json_file)
 
-# #Create a json file with all nodes
-# file_path_all = BASE_DIR /'src'/'json-files'/'allnodes.json'
-# with open(file_path_all) as json_file:
-#     alldata = json.load(json_file)
-
 # Create a new dictionary and add the base nodes to it
 data = {}
 data.update(basedata)
 
-# Add the other park nodes
+# Add other park nodes
 file_path_oth_park = BASE_DIR / 'src'/'json-files'/'park_node_locations.json'
 with open(file_path_oth_park) as file:
     other_park = json.load(file)
-# print(nodes)
-# print(type(nodes))
 data = {'data': data['data'] + other_park['data']}
 
 # Check what other nodes have been selected in preferences
@@ -95,7 +88,7 @@ def calculate_distance(lat1, lon1, lat2, lon2):
 # def magic(user_latitude, user_longitude, hour, dist, endLatitude, endLongitude):
 
 
-def magic(user_latitude, user_longitude, hour):
+def magic(user_latitude, user_longitude, hour, dist, endLatitude, endLongitude):
     print(f"Starting location: ({user_latitude}, {user_longitude})")
     print("-----------------------------------------")
 
@@ -104,10 +97,10 @@ def magic(user_latitude, user_longitude, hour):
     #     dist = dist/10
 
     # predefined_distance = dist  # Adjust this value as needed
-    predefined_distance = 2
+    predefined_distance = dist
     visited_parks = []  # List to store visited parks
 
-    while predefined_distance > 0:
+    while predefined_distance > 0 and len(visited_parks) < 25:
         closest_parks = []  # List to store closest parks
         closest_distances = []  # List to store distances to closest parks
 

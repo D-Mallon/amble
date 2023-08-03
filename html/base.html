@@ -1,9 +1,10 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- For local development, uncomment the following lines and update the port if necessary -->
     <!--
     <script type="module" src="http://localhost:5173/@vite/client"></script>
@@ -18,19 +19,27 @@
     -->
     <title>amble</title>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
-    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css">
+    <!-- <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css"> -->
 
-<!--david trialling css fix with line below -->
-    <link href="{% static 'main.css' %}" rel="stylesheet">
+    <!--david had the below css line and above href included below pre-3Aug merge. It was working prior to that -->
+    <!-- <link href="{% static 'main.css' %}" rel="stylesheet"> -->
 
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css"
+      type="text/css"
+    />
+    <title>amble</title>
+  </head>
+  <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!-- The following line references the production build of the main JavaScript file -->
     <script src="{% static 'main.js' %}" type="module"></script>
-</body>
+  </body>
 </html>
-

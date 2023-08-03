@@ -45,10 +45,10 @@ def handle_routeinpput_data(request):
         latitude = request.POST.get("latitude")
         longitude = request.POST.get("longitude")
         hour = request.POST.get("hour")
-        # dist = request.POST.get("distance")
-        # endLatitude = request.POST.get("endLatitude")
-        # endLongitude = request.POST.get("endLongitude")
-        response_data = {"waypoints": magic(float(latitude), float(longitude), str(hour))}
+        dist = request.POST.get("distance")
+        endLatitude = request.POST.get("endLatitude")
+        endLongitude = request.POST.get("endLongitude")
+        response_data = {"waypoints": magic(float(latitude), float(longitude), str(hour), float(dist), float(endLatitude), float(endLongitude))}
         # response_data = {"waypoints": magic(float(latitude), float(longitude), str(hour), float(dist), float(endLatitude), float(endLongitude))}
         return JsonResponse(response_data)
 
@@ -130,3 +130,27 @@ def chatgpt(request):
         }
         return JsonResponse(response_data)
     return JsonResponse({'error': 'Invalid request method'})
+
+# Function that handles the update of rating values
+@api_view(['POST'])
+def ratingsUpdate(request):
+    if request.method != 'POST':
+        return JsonResponse({'error': 'Invalid request method'})
+    try:
+        ratingsData = json.loads(request.body)
+        # Load all_nodes.json
+        file_path = BASE_DIR / 'src' / 'json-files' / 'all_nodes.json'
+        with open(file_path, 'r') as file:
+            all_nodes = json.load(file)
+        # Update the ratings in all_nodes
+        for updated_node in ratingsData:
+            node = next((n for n in all_nodes['data'] if n['id'] == updated_node['id']), None)
+            if node:
+                node['rating'] = updated_node['rating']
+        # Write the updated all_nodes.json back to the file
+        with open(file_path, 'w') as file:
+            json.dump(all_nodes, file, indent=2)
+        return JsonResponse({'status': 'success'})
+    except Exception as e:
+        # Handle exceptions and return an error response
+        return JsonResponse({'error': str(e)})

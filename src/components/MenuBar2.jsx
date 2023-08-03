@@ -77,6 +77,9 @@ export default function MenuBar2() {
     navigate("/loginCheck");
   };
 
+  const toggleRes=()=>{
+navigate("/resources");
+  };
   const handleClickOutside = (event) => {
     if (
       optionsRef.current &&
@@ -129,7 +132,7 @@ export default function MenuBar2() {
           <div className="menu-item" onClick={handleButtonClick}>
             Create an amble
           </div>
-          <div className="menu-item">For you</div>
+          <div className="menu-item" onClick={toggleRes}>For you</div>
           <div
             className="menu-item"
             onClick={toggleOptions}

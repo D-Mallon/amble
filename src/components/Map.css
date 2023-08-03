@@ -227,7 +227,7 @@ h2 {
   position: relative;
   justify-content: center;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 40px;
   cursor: pointer;
   margin-bottom: 30px;
 }
@@ -282,20 +282,20 @@ h2 {
   position: relative;
   /* top: 26px;
   left: 30px; */
-  width: 92%;
+  width: 94%;
   background:#ffffff;
-  padding: 10px;
   border-radius: 0px;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   padding-top: 45px;
-  height:90px;
   align-items: center;
   border-width: 0px 1.5px 1.5px 1.5px;
 border-style: solid;
 border-color: #ffeea9;
+overflow: hidden;
+
 }
 
 
@@ -310,8 +310,23 @@ border-color: #ffeea9;
   display: flex;
   justify-content: left;
   align-items: center;
-  margin-bottom: 10px; 
-  
+  margin-bottom: 10px;
+}
+
+.directiondetail{
+  height: 380px; /* Set the fixed height you desire */
+  overflow-y: auto; /* Add a scrollbar when content exceeds the height */
+ position: relative;
+}
+
+.directionswords{
+  width: 110%;
+  left:-20px;
+  position: relative;
+}
+
+.bold-step {
+  font-weight: bold;
 }
 
 .text_bar-mapfunction-detail-2 {
@@ -373,9 +388,7 @@ border-color: #ffeea9;
   
 }
 
-.chatbox-content{
-  
-}
+
 
 .text_bar-mapfunction-chat {
   color: #ffffff;
@@ -563,16 +576,16 @@ border-color: #ffeea9;
 
     .General-rate-inform{
       width: 100%;
-      height: 30rem;
+      height: 37rem;
       z-index: 300;
       position: absolute;
       display: flex;
       flex-direction: column;
-      padding-top: 5%;
+      padding-top: 12%;
       padding-left: 15%;
       padding-right: 15%;
     }
-
+  
     .like-rate{
       position: relative;
       display: flex;
@@ -582,69 +595,60 @@ border-color: #ffeea9;
       justify-content: space-between; /* 左右两端对齐 */
       align-items: center; /* 垂直居中对齐 */
     }
-
-    .quite-rate{
-      position: relative;
-      display: flex;
-      font-weight: normal;
-      font-size: 18px;
-      margin-bottom: 10px;
-      justify-content: space-between; /* 左右两端对齐 */
-      align-items: center; /* 垂直居中对齐 */
-    }
-
+  
     .stop-text{
       font-weight: bold;
       font-size: 22px;
       text-align: left; /* 将文字左对齐 */
       margin-bottom: 10px;
+      text-shadow: 2px 2px 8px white;
     }
 
     .each-stop-inform{
-     display: flex;
-      /* justify-content: center; */
-     padding-top:1%;
-     width: 100%;
-     overflow: auto;
-     max-height: 90vh;
-     flex-flow: row wrap;
-     align-items: normal;
-    }
-
-    .stop-info{
-      background-color: rgb(227, 252, 247,0.8);
-      width: 15rem;
-      height: 15rem;
-      flex: 1 1 calc(25% - 4rem);
-      margin: 3px;
-      padding-left: 3%;
-      padding-right: 3%;
-      padding-top: 2%;
-      position: relative;
-      display: inline-block;
-      z-index: 100;
-    }
-
-    .stop-info span.park-name {
-      display: inline-block;
-      max-width: 160px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }    
-
-    .stand-icon{
-      width: 8rem;
-      height: 8rem;
-      background-color: #014e3d;
-      margin: auto;
-    }
+      display: flex;
+       /* justify-content: center; */
+      padding-top:1%;
+      width: 100%;
+      overflow: auto;
+      max-height: 90vh;
+      flex-flow: row wrap;
+      align-items: normal;
+     }
+   
+     .stop-info{
+       background-color: rgb(227, 252, 247,0.8);
+       width: 15rem;
+       height: 15rem;
+       flex: 1 1 calc(25% - 4rem);
+       margin: 3px;
+       padding-left: 3%;
+       padding-right: 3%;
+       padding-top: 2%;
+       position: relative;
+       display: inline-block;
+       z-index: 100;
+     }
+   
+     .stop-info span.park-name {
+       display: inline-block;
+       max-width: 160px;
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+     }    
+   
+     .stand-icon{
+       width: 6rem;
+       height: 6rem;
+       background-color: #014e3d;
+       margin: auto;
+     }
 
     .finishrate {
       position: relative;
       justify-content: center;
       align-items: center;
-      margin-top: -300px;
+      margin-top: -210px;
       cursor: pointer;
       margin-bottom: 30px;
       display: flex;

@@ -10,4 +10,5 @@ urlpatterns = [
         path('users/chatbox', views.chatbox_options),
         path('users/getquote', views.getquote),
         path('users/chatgpt', views.chatgpt),
+        path('users/ratings', views.ratingsUpdate),
 ]

@@ -32,13 +32,13 @@ const matchWaypointsWithData = (waypoints, jsonData) => {
 const handleWaypoints = (waypointsString, setGlobalArrayValue) => {
   const waypoints = parseWaypoints(waypointsString);
   const jsonData = [
-        ...community_locations.data,
-        ...library_locations.data,
-        ...museum_art_locations.data,
-        ...park_locations.data,
-        ...park_node_locations.data,
-        ...walking_node_locations.data,
-        ...worship_locations.data,
+    ...community_locations.data,
+    ...library_locations.data,
+    ...museum_art_locations.data,
+    ...park_locations.data,
+    ...park_node_locations.data,
+    ...walking_node_locations.data,
+    ...worship_locations.data,
   ];
   const arrayTemp = matchWaypointsWithData(waypoints, jsonData);
   setGlobalArrayValue(arrayTemp);
@@ -50,6 +50,7 @@ const useRouteDisplay = (map, inputValues) => {
 
   const { globalArray, setGlobalArrayValue } = useWaypointsArray();
   const [route, setRoute] = useState([]);
+  const [directiondata, setdirectiondata] = useState([]); // Initialize with an empty array
 
   const displayRoute = async () => {
     console.log('displayRoute called');
@@ -76,12 +77,83 @@ const useRouteDisplay = (map, inputValues) => {
         `${waypointsString};` +
         `${inputValues["endLongitude"]},` +
         `${inputValues["endLatitude"]}` +
-        `?geometries=geojson&access_token=${mapboxgl.accessToken}`
+        `?geometries=geojson&steps=true&voice_instructions=true&access_token=${mapboxgl.accessToken}&exclude=ferry`;
       const response = await fetch(callAPI);
       const data = await response.json();
 
       // Retrieve the route coordinates from the API response
       const routeCoordinates = data.routes[0].geometry.coordinates;
+
+      // const directions = data.routes[0].legs.flatMap(leg =>
+      //   leg.steps.map(step => {
+      //     let action;
+      //     if (step.maneuver.modifier && step.maneuver.type) {
+      //       action = `${step.maneuver.modifier} ${step.maneuver.type}`;
+      //     }
+      //     return {
+      //       action,
+      //       road: step.name,
+      //       distance: step.distance
+      //     };
+      //   })
+      // );
+
+      const directions = data.routes[0].legs.flatMap((leg, legIndex) =>
+      leg.steps.map((step, stepIndex) => {
+        let action;
+        if (step.maneuver.modifier && step.maneuver.type) {
+          action = `${step.maneuver.modifier} ${step.maneuver.type}`;
+        }
+
+        // Check if step.intersections exists and has elements
+        const hasIntersections = step.intersections && step.intersections.length > 0;
+
+        // Log the step object for debugging
+        console.log('Step:', step);
+
+        // Check if step.intersections[0].location exists and has originalIndex
+        const hasLocation = hasIntersections && step.intersections[0].location && step.intersections[0].location.originalIndex !== undefined;
+        // Get the node ID from the step's first intersection, if available
+        const nodeId = hasLocation ? step.intersections[0].location.originalIndex.toString() : null;
+
+        // Log for debugging
+        console.log('hasIntersections:', hasIntersections);
+        console.log('hasLocation:', hasLocation);
+        console.log('nodeId:', nodeId);
+        console.log('globalArray:', globalArray);
+
+        // Check if the nodeId is defined before converting it to a string
+        const nodeIdStr = nodeId !== null ? nodeId.toString() : null;
+        // Check if the nodeId matches any of the node IDs in globalArray
+        const isKeyNode = nodeIdStr !== null ? globalArray && globalArray.some(node => node.id === nodeIdStr) : false;
+
+        return {
+          action,
+          road: step.name,
+          distance: step.distance,
+          isKeyNode: isKeyNode
+        };
+      })
+    );
+    setdirectiondata(directions);
+
+
+      console.log("Please follow my instruction and trust it:", directions);
+
+      // directions.forEach((step, index) => {
+      //   const action = step.action ? step.action : 'Proceed';
+      //   const road = step.road ? ` on ${step.road}` : '';
+      //   const distance = step.distance ? ` for ${step.distance.toFixed(2)} meters` : '';
+      //   console.log(`Step ${index + 1}: ${action}${road}${distance}`);
+      // });
+
+      directions.forEach((step, index) => {
+        const action = step.action ? step.action : 'Proceed';
+        const road = step.road ? ` on ${step.road}` : '';
+        const distance = step.distance ? ` for ${step.distance.toFixed(2)} meters` : '';
+        const keyNodeInfo = step.isKeyNode ? ' (Arrived at Key Node)' : '';
+        console.log(`Step ${index + 1}: ${action}${road}${distance}${keyNodeInfo}`);
+      });
 
       // Check that routeCoordinates is an array of valid numbers
       if (!Array.isArray(routeCoordinates) ||
@@ -111,6 +183,7 @@ const useRouteDisplay = (map, inputValues) => {
         type: 'geojson',
         data: routeGeoJSON,
       });
+
       map.addLayer({
         id: 'route',
         type: 'line',
@@ -124,24 +197,6 @@ const useRouteDisplay = (map, inputValues) => {
           'line-width': 4,
         },
       });
-
-      // Fit the map to display the route
-      const bounds = new mapboxgl.LngLatBounds();
-      routeCoordinates.forEach((coord) => {
-        if (Array.isArray(coord) && coord.length === 2 && !isNaN(coord[0]) && !isNaN(coord[1])) {
-          bounds.extend(coord);
-        } else {
-          console.error('Invalid coordinate:', coord);
-        }
-      });
-
-      if (!bounds.isEmpty()) {
-        console.log('Bounds:', bounds.toArray()); // Log the bounds
-        map.fitBounds(bounds, { margin: 100 });
-      } else {
-        console.error('No valid coordinates to fit bounds');
-      }
-
       setRoute(routeCoordinates);
     } catch (error) {
       console.error('Error:', error);
@@ -153,7 +208,7 @@ const useRouteDisplay = (map, inputValues) => {
   }, [inputValues.waypoints]);
 
   console.log("globalArray:", globalArray);
-  return { route, displayRoute };
+  return { route, displayRoute,directiondata};
 };
 
 export default useRouteDisplay;
