@@ -13,6 +13,8 @@ import axios from 'axios';
 function Quotes() {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
+  const [showQuote, setShowQuote] = useState(false); // 新增的状态
+  const [showBut, setShowBut] = useState(true); // 新增的状态
 
   useEffect(() => {
     GetNewQuote();
@@ -41,30 +43,56 @@ const theme = createTheme({
     secondary: {main: '#004d40',},
   },
 });
+
+
+const toggleback = () => {
+  
+  exitandback();
+  setTimeout(() => {
+    
+    setShowQuote(false);
+        setShowBut(true);
+  }, 500);
+}
+
+
+const exitandback = () => {
+// 其他逻辑
+hideElements();
+};
+
+const hideElements = () => {
+document.querySelector(".quote").classList.add("hide");
+document.querySelector(".h2-quote").classList.add("hide");
+document.querySelector(".small-quote").classList.add("hide");
+};
   
     return (
-      <div className="landing-page-container">
-        <br></br>
-        <br></br>
-      
-            <div className="quote">
-              <h2>{quote}</h2>
-              <small>- {author}</small>
-            </div>
-
+      <div className="quote-container">
+       
+       {showQuote && ( 
+        <div className="quote" onClick={toggleback}>
+          <div className='h2-quote'>{quote}</div>
+          {/* <br></br> */}
+          <div className='small-quote'>- {author}</div>
+        </div>
+      )}
            
-
+           {showBut && ( 
             <div className="wrapper-function-quote" >
           <a
             className="wrapper-function-text-quote"
-            onClick={GetNewQuote}
+            onClick={()=>{GetNewQuote();
+              setShowQuote(true);
+              setShowBut(false);
+            } }
             href="#"
             type="submit"
           >
-            <span>Get a reflection</span>
+            <span>Get a Reflection</span>
           </a>
         </div>
-            <br></br>
+            )}
           </div>
     );
   }

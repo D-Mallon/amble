@@ -23,31 +23,71 @@ const Carbon = () => {
     const num_trees = 4 * dist;
     console.log (percentage_of_tree);
 
-return (
-    <div className="landing-page-container">
+    const [showtreecon, setShowtreecon] = useState(false); // 新增的状态
+  const [showBut, setShowBut] = useState(true); // 新增的状态
+
+
+  const [alertText, setAlertText] = useState(''); // State to hold alert text
+  const [showAlertText, setShowAlertText] = useState(false); // State to control visibility
+  const handleSeeTreesClick = () => {
+    const message = 'If you did this walk 3 times a week for a year that is a Carbon Savings equivalent to planting ' + num_trees + ' trees';
+    setAlertText(message);
+    setShowAlertText(true);
+    setShowtreecon(true);
+    setShowBut(false);
+};
+
+
+const toggleback = () => {
+  
+    exitandback();
+    setTimeout(() => {
+      setShowtreecon(false);
+          setShowBut(true);
+    }, 500);
+  }
+
+
+const exitandback = () => {
+  // 其他逻辑
+  hideElements();
+};
+
+const hideElements = () => {
+  document.querySelector(".treenum-con").classList.add("hide");
+  document.querySelector(".treenum-h3").classList.add("hide");
+  document.querySelector(".treenum-text").classList.add("hide");
+};
+
+
+return (<>
+    
         <div className="imagecarbon-container">
-            </div>
-
-        <div>
-            <h3>See how many new trees your amble is equivalent to!</h3>
            
+        {showtreecon && ( 
+        <div  className='treenum-con' onClick={toggleback}>
+            <div className='treenum-h3'>See how many new trees your amble is equivalent to:</div>
+           <div className='treenum-text'>  {showAlertText && <p>{alertText}</p>}</div>
+     </div>
+  )}
 
-            
+     {showBut && ( 
             <div className="wrapper-function-tree" >
           <a
             className="wrapper-function-text-tree"
-            onClick={() => alert('If you did this walk 3 times a week for a year that is a Carbon Savings equivalent to planting '+ num_trees + ' trees')}
+            onClick={handleSeeTreesClick}
             href="#"
             type="submit"
           >
-            <span>Number of trees</span>
+            <span>See Number of Trees</span>
           </a>
         </div>
+     )}
 
 
+       
         </div>
-
-    </div>
+        </>
     ); 
 
 };

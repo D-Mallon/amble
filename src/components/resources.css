@@ -2,144 +2,21 @@
 
 
 
-.landing-page-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      /* background-image: url('images/thought2.jpg'); */
-      font-family: Arial, sans-serif;
-} 
-.resources-pics-container {
-      /* background-image: url('/static/images/newyork.jpg'); */
-      /* opacity: .2; */
-      /* background-color: rgb(237, 240, 237); */
-      background-size: cover; 
-      background-position: center; 
-      /* position: relative; */
-      width: 100%;
-      height: 100vh;
-      display: flex;
-    }
-  
-    /* CSS for Quote */
-    .quote {
-        background-size: cover;
-        /* opacity: .1; */
-        width: 500px; 
-        height: 500px;
-        border-radius: 10px;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        /* font-weight:bolder; */
-        
-    }
-    .quote h2 {
-        font-size: 1.5em;
-        opacity: .8;
-        font-family: 'Lobster', cursive;
-        justify-content: center;
-        align-items: center;
-        font-weight:bolder;
-    }
-    .quote small {
-        font-size: 1.5em;
-        font-family: 'Dancing Script', cursive;
-        font-weight:bolder;
-    }
-  
-.btn {
-    background-color: #004d40;
-    color: #CBDAC5;
-    border: none;
-    border-radius: 0;
-    padding: 15px 30px;
-    cursor: pointer;
-    margin-top: 1rem;
-    border-radius: 10px;
-    }
-.btn-container {
-      display: grid;
-      justify-content: center;
-    }
-.btn:hover{
-      background: #008CBA;
-      color: #fff;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    }
-    
-    select {
-      width: 500px;
-      height: 50px;
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    /* Style for response display */
-.response-container {
-  margin-top: 20px;
-  width: 750px;
-  padding: 20px;
-  border: 3px solid #e2914f;
-  border-radius: 10px;
-  align-items: center;
-  text-align: center;
-}
-
-/* Style for attribution text */
-.attribution-text {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #888;
-}
-
-.endbar {
-  height: 20px;
-}
-
-.imageresources-container {
-  width: 250px;
-  height: 250px;
-  padding: 10px;
-  align-items: center;
-  /* background-image: url('/static/images/information.png'); */
-  background-size: cover;
-  background-position: center; 
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.imagecarbon-container {
-  width: 250px;
-  height: 250px;
-  padding: 10px;
-  align-items: center;
-  /* background-image: url('/static/images/tree4.png'); */
-  background-size: cover;
-  background-position: center; 
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
 
 .resource-area{
   
   background-color: #ffffff;
   width: 100%;
+  height: 100vh;
 position: relative;
 align-content: center;
 justify-content: center;
 display: flex;
 align-items: center;
-padding: 5%;
+
+padding-left: 8%;
+padding-right: 8%;
 }
 
 .r-b1{
@@ -148,31 +25,52 @@ padding: 5%;
   background-position: center;
   /* 调整背景图的位置为居中 */
   background-image: url('/static/images/newyork7.jpg');
-  width: 33.33%;
+  width: 32%;
   /* top:4rem; */
   height: 50rem;
   position: relative;
   display: flex;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
 }
 
 .r-b2{
-  background-color:#ffe212;
-  width: 33.33%;
-  left: 0;
+  background-size: cover;
+  /* 按比例缩放背景图，保持其完全覆盖容器 */
+  background-position: center;
+  /* 调整背景图的位置为居中 */
+  background-image: url('/static/images/newyork8.jpg');
+  width: 32%;
   /* top:4rem; */
   height: 50rem;
   position: relative;
   display: flex;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
 }
 
 .r-b3{
-  background-color:#ffeea9;
-  width: 33.33%;
+  background-size: cover;
+  /* 按比例缩放背景图，保持其完全覆盖容器 */
+  background-position: center;
+  /* 调整背景图的位置为居中 */
+  background-image: url('/static/images/newyork4.jpg');
+  width: 32%;
   /* top:4rem; */
-  left:0rem;
   height: 50rem;
   position: relative;
   display: flex;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0%;
 }
 
 .additional-block-close-res{
@@ -189,4 +87,13 @@ padding: 5%;
 
 .additional-block-close-res:hover{
   background-color: #b1ff05;
+}
+
+
+.attribution-text{
+  display: flex;
+  position: absolute;
+  bottom:1px;
+  font-size: 8px;
+  color: #014e3d;
 }

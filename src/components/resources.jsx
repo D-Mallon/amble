@@ -41,13 +41,10 @@ const navigate=useNavigate();
 <Carbon />
         </div>
 
-          {/* <div className="menubar-area">
-          <MenuBar2 />
-        </div> */}
     
-        {/* <div className="attribution-text">
+        <div className="attribution-text">
           Get a reflection from 'They Said So' : Something Interesting powered by ChatGPT : Number of trees from savingnature.com
-      </div> */}
+      </div>
       </div>
     );
   };

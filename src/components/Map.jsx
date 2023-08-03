@@ -30,8 +30,8 @@ import Box from "@mui/material/Box";
 import CloseIcon from "@mui/icons-material/Close";
 
 import { ArrayContext, useWaypointsArray } from "../context/ArrayContext";
-import ChatBox from './ChatBox';
-import Ratings from './Ratings';
+import ChatBox from "./ChatBox";
+import Ratings from "./Ratings";
 
 import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
@@ -58,10 +58,10 @@ const Map = () => {
 
   const { inputValues, setInputValues } = useMapInput();
   const { globalArray, setGlobalArrayValue } = useWaypointsArray();
-  const [ walkRating, setWalkRating] = useState(2); 
-  const [ waypointRatings, setWaypointRatings] = useState({}); 
-  console.log(globalArray)
-  
+  const [walkRating, setWalkRating] = useState(2);
+  const [waypointRatings, setWaypointRatings] = useState({});
+  console.log(globalArray);
+
   const mapContainer = useRef(null);
   const [lat, setLat] = useState(40.73);
   const [lng, setLng] = useState(-73.445);
@@ -94,12 +94,33 @@ const Map = () => {
   const [endSearchSelected, setEndSearchSelected] = useState(false);
   const [endAddressSelected, setEndAddressSelected] = useState(false);
 
-
-  const { map, markers } = useMapInit(mapContainer, lat, lng, zoom, inputValues);
-  const { route, displayRoute, directiondata } = useRouteDisplay(map.current, inputValues, setInputValues, setGlobalArrayValue);
-  const { location, setLocation } = useGeocoding(map.current, beginLocationPressed, setBeginLocationPressed, endLocationPressed, setEndLocationPressed,
-    inputValues, setInputValues, showEndLocationInput, setShowEndLocationInput, setShowGoButton);
-  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } = usePlaceNameChange("", setInputValues);
+  const { map, markers } = useMapInit(
+    mapContainer,
+    lat,
+    lng,
+    zoom,
+    inputValues
+  );
+  const { route, displayRoute, directiondata } = useRouteDisplay(
+    map.current,
+    inputValues,
+    setInputValues,
+    setGlobalArrayValue
+  );
+  const { location, setLocation } = useGeocoding(
+    map.current,
+    beginLocationPressed,
+    setBeginLocationPressed,
+    endLocationPressed,
+    setEndLocationPressed,
+    inputValues,
+    setInputValues,
+    showEndLocationInput,
+    setShowEndLocationInput,
+    setShowGoButton
+  );
+  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } =
+    usePlaceNameChange("", setInputValues);
 
   const handleNowButtonClick = () => {
     setNowSelected(true);
@@ -240,22 +261,45 @@ const Map = () => {
   };
 
   const handleRatingsCalc = () => {
-    console.log('Submitted General Walk Rating:', walkRating);
-    console.log('Submitted Waypoint Ratings:', waypointRatings);
+    console.log("Submitted General Walk Rating:", walkRating);
+    console.log("Submitted Waypoint Ratings:", waypointRatings);
 
     // score mapping - edge scores have negative and positive bonuses
     // Define mappings using arrays of tuples and convert them to objects
-    const walkRatingModifiers = Object.fromEntries([[1, -0.15], [2, -0.1], [3, -0.05], [4, 0.0], [5, 0.05], [6, 0.1], [7, 0.15], [8, 0.2], [9, 0.25], [10, 0.4]]);
-    const ratingModifierMapping = Object.fromEntries([[-5, -0.6], [-4, -0.4], [-3, -0.3], [-2, -0.2], [-1, -0.1], [0, 0], [1, 0.1], [2, 0.2], [3, 0.3], [4, 0.4], [5, 0.6]]);
+    const walkRatingModifiers = Object.fromEntries([
+      [1, -0.15],
+      [2, -0.1],
+      [3, -0.05],
+      [4, 0.0],
+      [5, 0.05],
+      [6, 0.1],
+      [7, 0.15],
+      [8, 0.2],
+      [9, 0.25],
+      [10, 0.4],
+    ]);
+    const ratingModifierMapping = Object.fromEntries([
+      [-5, -0.6],
+      [-4, -0.4],
+      [-3, -0.3],
+      [-2, -0.2],
+      [-1, -0.1],
+      [0, 0],
+      [1, 0.1],
+      [2, 0.2],
+      [3, 0.3],
+      [4, 0.4],
+      [5, 0.6],
+    ]);
 
     const updatedGlobalArray = globalArray.map((node) => {
       // Apply the walkRating modifier to all nodes
       let rating = node.rating + walkRatingModifiers[walkRating];
       // Find the corresponding waypoint in waypointRatings and apply the rating_modifier if exists
       const waypoint = waypointRatings.find((w) => w.id === node.id);
-        if (waypoint) {
-          rating += ratingModifierMapping[waypoint.rating_modifier];
-        }
+      if (waypoint) {
+        rating += ratingModifierMapping[waypoint.rating_modifier];
+      }
       // Clamp the rating between 0 and 5
       rating = Math.max(0, Math.min(5, rating));
       return { ...node, rating }; // Update the node with the new rating
@@ -264,10 +308,9 @@ const Map = () => {
     // Update globalArray
     setGlobalArrayValue(updatedGlobalArray);
     console.log("new globalArray state:", globalArray);
-    // Update main JSON file 
-  
+    // Update main JSON file
   };
-    
+
   const handleSubmit = () => {
     handleButtonClick_close(); // Function to close the popup
     handleRatingsCalc(); // Function to process ratings
@@ -770,8 +813,12 @@ const Map = () => {
                 My Walk Details
               </span>
             </div>
-            <p>Distance and Duration</p>
-
+            <p>Distance or Duration</p>
+            {/* <span>{inputValues.distance}{sliderUnit}</span> */}
+            <span><strong>{sliderUnit === "km"
+                      ? `${sliderValue} km`
+                      : `${sliderValue} mins`}
+                      </strong></span>
             <p>Preference</p>
 
             <p>Quietness Score</p>
@@ -781,19 +828,26 @@ const Map = () => {
                 <span className="text_bar-mapfunction-detail-2">
                   Direction Helper
                 </span>
-    
               </div>
               <div className="directiondetail">
-              <ul className="directionswords">
-  {directiondata.map((step, index) => (
-    <span key={index}>
-      <span className="bold-step">{`Step ${index + 1}: `}&nbsp;&nbsp;</span>
-      {`${step.action ? step.action : 'Proceed'}${step.road ? ` on ${step.road}` : ''}${step.distance ? ` for ${step.distance.toFixed(2)} meters` : ''}${step.isKeyNode ? ' (Arrived at Key Node)' : ''}`}
-      <br />
-    </span>
-  ))}
-</ul>
-</div>
+                <ul className="directionswords">
+                  {directiondata.map((step, index) => (
+                    <span key={index}>
+                      <span className="bold-step">
+                        {`Step ${index + 1}: `}&nbsp;&nbsp;
+                      </span>
+                      {`${step.action ? step.action : "Proceed"}${
+                        step.road ? ` on ${step.road}` : ""
+                      }${
+                        step.distance
+                          ? ` for ${step.distance.toFixed(2)} meters`
+                          : ""
+                      }${step.isKeyNode ? " (Arrived at Key Node)" : ""}`}
+                      <br />
+                    </span>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             <div className="finishdetail">
@@ -853,10 +907,8 @@ const Map = () => {
               </div>
               <span className="text_bar-mapfunction-chat">Chat with Amble</span>
             </div>
-            
+
             <ChatBox />
-            
-            
           </div>
         </>
       )}
@@ -891,40 +943,53 @@ const Map = () => {
               <CloseIcon sx={{ fontSize: 27, color: "white" }} />
             </div>
           </div>
-                    <div className="General-rate-inform">
-                <div className="stop-text">
-                  <span>Rate Your Walk</span>
-                </div>
-                <Box
-                  sx={{
-                    "& > legend": { mt: 2 },
-                  }}
-                >
-                  <div className="like-rate">
-                    <StyledRating
-                      name="customized-color"
-                      defaultValue={walkRating}
-                      onChange={(event, newValue) => setWalkRating(newValue)}
-                      getLabelText={(value) => `${value} Heart${value !== 1 ? "s" : ""}`}
-                      precision={0.5}
-                      max={10}
-                      icon={<FavoriteIcon fontSize="large" sx={{ fontSize: "2.2rem" }} />}
-                      emptyIcon={<FavoriteBorderIcon fontSize="large" sx={{ fontSize: "2.2rem" }} />}
-                    />
-                  </div>
-                </Box>
-                <div className="stop-text">
-                  <span>How much did you like your stops? </span>
-                </div>
-                <Ratings setWaypointRatings={setWaypointRatings} /> {/* Includes the Ratings component here */}
-              </div>
-              <div className="finishrate">
-                <a className="finishrate-text" type="submit" onClick={handleSubmit}>
-                  <span>Submit My Review</span>
-                </a>
-              </div>
+          <div className="General-rate-inform">
+            <div className="stop-text">
+              <span>Rate Your Walk</span>
             </div>
-          )}
+            <Box
+              sx={{
+                "& > legend": { mt: 2 },
+              }}
+            >
+              <div className="like-rate">
+                <StyledRating
+                  name="customized-color"
+                  defaultValue={walkRating}
+                  onChange={(event, newValue) => setWalkRating(newValue)}
+                  getLabelText={(value) =>
+                    `${value} Heart${value !== 1 ? "s" : ""}`
+                  }
+                  precision={0.5}
+                  max={10}
+                  icon={
+                    <FavoriteIcon
+                      fontSize="large"
+                      sx={{ fontSize: "2.2rem" }}
+                    />
+                  }
+                  emptyIcon={
+                    <FavoriteBorderIcon
+                      fontSize="large"
+                      sx={{ fontSize: "2.2rem" }}
+                    />
+                  }
+                />
+              </div>
+            </Box>
+            <div className="stop-text">
+              <span>How much did you like your stops? </span>
+            </div>
+            <Ratings setWaypointRatings={setWaypointRatings} />{" "}
+            {/* Includes the Ratings component here */}
+          </div>
+          <div className="finishrate">
+            <a className="finishrate-text" type="submit" onClick={handleSubmit}>
+              <span>Submit My Review</span>
+            </a>
+          </div>
+        </div>
+      )}
 
       <div ref={mapContainer} className="map-container" />
     </div>
