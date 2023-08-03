@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./MenuBar.css";
-
+import { Link, useNavigate } from "react-router-dom";
 import WidgetsRoundedIcon from "@mui/icons-material/WidgetsRounded";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CloseIcon from "@mui/icons-material/Close";
@@ -15,64 +15,29 @@ export default function MenuBar() {
   const [isMenuVisible, setMenuVisible] = useState(false);
   const optionsRef = useRef(null);
   const profileButtonRef = useRef(null);
-  const [isRegVisible, setRegVisible] = useState(false);
+  const menuButtonRef = useRef(null);
+ 
 
-  const hideElements = () => {
-    document
-      .querySelector(".additional-block-close-menubar")
-      .classList.add("hide");
-    document.querySelector(".overlay").classList.add("hide");
-    document.querySelector(".menu-bar").classList.add("hide");
-    document.querySelector(".additional-blocks-menubar").classList.add("hide");
-    document
-      .querySelector(".additional-block-text-menubar")
-      .classList.add("hide");
-  };
 
-  const hideElements_Reg = () => {
-    document
-      .querySelector(".additional-block-close-Reg-menu")
-      .classList.add("hide");
-    document.querySelector(".overlay-Reg").classList.add("hide");
-    document.querySelector(".Reg-menu").classList.add("hide");
-    document.querySelector(".additional-blocks-Reg").classList.add("hide");
-    document.querySelector(".additional-block-text-Reg").classList.add("hide");
-  };
-
-  const exitMenu = () => {
-    // 其他逻辑
-    hideElements();
-  };
-
-  const exitReg = () => {
-    // 其他逻辑
-    hideElements_Reg();
-  };
 
   const toggleOptions = () => {
     setOptionsVisible(!isOptionsVisible);
   };
 
+  const navigate = useNavigate();
   const toggleMenu = () => {
-    if (!isMenuVisible) {
-      setMenuVisible(true);
-    } else {
-      exitMenu();
-      setTimeout(() => {
-        setMenuVisible(false);
-      }, 1000);
-    }
+   
+      setMenuVisible(!isMenuVisible);
+    
   };
 
+
   const toggleReg = () => {
-    if (!isRegVisible) {
-      setRegVisible(true);
-    } else {
-      exitReg();
-      setTimeout(() => {
-        setRegVisible(false);
-      }, 1000);
-    }
+    navigate("/login");
+  };
+
+  const toggleSignin = () => {
+    navigate("/loginCheck");
   };
 
   const handleClickOutside = (event) => {
@@ -92,6 +57,26 @@ export default function MenuBar() {
     };
   }, []);
 
+
+
+  const handleClickOutsideM = (event) => {
+    if (
+      optionsRef.current &&
+      !optionsRef.current.contains(event.target) &&
+      !menuButtonRef.current.contains(event.target)
+    ) {
+      setMenuVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutsideM);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutsideM);
+    };
+  }, []);
+
+
   return (
     <div className="menubar-container">
       <div className="menu-button-wrapper">
@@ -99,7 +84,24 @@ export default function MenuBar() {
           className="menu-button"
           sx={{ fontSize: 24, color: "white" }}
           onClick={toggleMenu}
+          ref={menuButtonRef}
         />
+           {isMenuVisible && (
+          <div className='options-homebox ${isMenuVisible ? "active" : ""}' ref={optionsRef}>
+            <button className="option">
+              {" "}
+              <span className="option-text" onClick={toggleReg}>
+                Home
+              </span>
+            </button>
+            <button className="option">
+              <span className="option-text">Create an amble</span>
+            </button>
+            <button className="option">
+              <span className="option-text">For you</span>
+            </button>
+          </div>
+        )}
       </div>
       <div className="profile-button-wrapper">
         <PersonRoundedIcon
@@ -110,70 +112,22 @@ export default function MenuBar() {
         />
         {isOptionsVisible && (
           <div className="options-box" ref={optionsRef}>
-            <button className="option">
+            <button className="option" onClick={toggleReg}>
               {" "}
-              <span className="option-text" onClick={toggleReg}>
+              <span className="option-text" >
                 Sign Up
               </span>
             </button>
-            <button className="option">
+            <button className="option"  onClick={toggleSignin}>
               <span className="option-text">Sign In</span>
             </button>
           </div>
         )}
       </div>
-      <div className="history-button-wrapper">
-        <StyleRoundedIcon
-          className="history-button"
-          sx={{ fontSize: 25, color: "white" }}
-        />
-      </div>
-      {/* <div className="favorite-button-wrapper"><StarRoundedIcon  className='history-button'
-          sx={{ fontSize: 50, color: 'black' }}/></div> */}
-      {isMenuVisible && (
-        <>
-          <div className={`menu-bar ${isMenuVisible ? "show" : ""}`}>
-            <div className="additional-blocks-menubar">
-              <div className="additional-block-text-menubar">
-                <span className="text_bar_2-menubar">Navigation</span>
-              </div>
-              <div className="additional-block-close-menubar">
-                <CloseIcon
-                  sx={{ fontSize: 27, color: "white" }}
-                  onClick={toggleMenu}
-                />
-              </div>
-            </div>
-            <button className="option-bottom-menu">Home Page</button>
-            <button className="option-bottom-menu">Plan Page</button>
-            <button className="option-bottom-menu">Green Inform Page</button>
-            <button className="option-bottom-menu">About</button>
-          </div>
+     
+   
 
-          <div className="overlay"></div>
-        </>
-      )}
-
-      {isRegVisible && (
-        <>
-          <div className={`Reg-menu ${isRegVisible ? "show" : ""}`}>
-            <div className="additional-blocks-Reg">
-              <div className="additional-block-text-Reg">
-                <span className="text_bar_2-Reg">Sign Up</span>
-              </div>
-              <div className="additional-block-close-Reg-menu">
-                <CloseIcon
-                  sx={{ fontSize: 27, color: "white" }}
-                  onClick={toggleReg}
-                />
-              </div>
-            </div>
-            <Login/>
-          </div>
-
-          <div className="overlay-Reg"></div>
-        </>
-      )}
+      
     </div>
   );
 }

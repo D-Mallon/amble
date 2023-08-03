@@ -31,23 +31,23 @@
   .profile-button-wrapper {
     position: absolute;
     top: 0.8rem;
-    left: 6.4rem;
+    left: 4rem;
     width: 2.4rem;
-      height: 2.4rem;
-      background-color: #001E2B;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
-      opacity: 0;
-      animation: fadeIn 1s ease-in-out forwards;
-      animation-delay: 0.3s;
-      cursor: pointer;
+    height: 2.4rem;
+    background-color: #001E2B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+    cursor: pointer;
   
   }
   
   
-  .history-button-wrapper {
+  /* .history-button-wrapper {
     position: absolute;
     top: 0.8rem;
     left: 3.6rem;
@@ -63,7 +63,7 @@
     animation-delay: 0.3s;
     cursor: pointer;
   
-  }
+  } */
   
   .favorite-button-wrapper {
     position: absolute;
@@ -80,7 +80,7 @@
   
   /* 鼠标悬停效果 */
   .option:hover {
-    background-color: #aef8ec;
+    background-color: #00ed64;
     filter: brightness(0.9); /* 悬停时变暗 */
     transition: filter 1s; /* 添加过渡效果 */
     border-radius: 2px;
@@ -92,11 +92,12 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: #ffffff;
-    border: 1px solid #099840;
+    background-color: #00684a;
+   
     padding: 9px;
-    width: 100px; /* 调整选项框的宽度 */
+    width: 120px; /* 调整选项框的宽度 */
     z-index: 2;  
+    opacity: 0.8;
   }
   
   .option {
@@ -192,42 +193,7 @@
   }
   
   
-  /* .menu-bar {
-    position: absolute;
-    bottom:0;
-    display: flex;
-    flex-direction: column;
-    background-color: #30dc9acb;
-    border-radius: 5px 5px 0 0; 
-    padding-top: 2%;
-    padding-left: 1%;
-    padding-right: 1%;
-    padding-bottom: 1%;
-    width: 92%; 
-    z-index: 2;
-    margin: auto;
-    overflow: hidden;
-    opacity: 0;
-    visibility: hidden;
-  } */
-  
-  /* @keyframes slideIn {
-    0% {
-      transform: translateY(100%);
-      opacity: 0;
-      visibility: hidden;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-  .show {
-    opacity: 1;
-    visibility: visible;
-    animation: slideIn 0.5s ease-in-out;
-  } */
+
   
   .option-bottom-menu {
     display: block;
@@ -417,7 +383,53 @@
     }
   }
   
+  .option-text{
+color: #ffffff;
+  }
 
+  /* 鼠标悬停效果 */
+  .option:hover {
+    background-color: #00ed64;
+    filter: brightness(0.9); /* 悬停时变暗 */
+    transition: filter 1s; /* 添加过渡效果 */
+    border-radius: 2px;
+  }
+  .options-homebox {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #00684a;
+    
+    padding: 9px;
+    width: 180px; /* 调整选项框的宽度 */
+    z-index: 2;  
+    opacity: 0.8;
+  
+  }
+  
+  .option {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    outline: none; /* 移除默认的点击边框 */
+    transition: filter 0.3s; /* 添加过渡效果 */
+    border-radius: 2px;
+  }
+  .option:focus {
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+  }
+  /* .option-text{
+  
+  } */
   
   
   

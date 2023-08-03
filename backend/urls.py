@@ -31,4 +31,6 @@ urlpatterns = [
     path("resources", TemplateView.as_view(template_name="base.html")),
     path("quotes", TemplateView.as_view(template_name="base.html")),
     path("map", TemplateView.as_view(template_name="base.html")),
+    path("mobilehomepage", TemplateView.as_view(template_name="base.html")),
+    path("mobilemappage", TemplateView.as_view(template_name="base.html")),
 ]
