@@ -368,31 +368,3 @@
 
 
 
-
-  .setblock-mobile {
-    width: 2.4rem;
-    top: 0.8rem;
-    height: 2.4rem;
-    background-color:#014e3d;
-    left:10.4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: absolute;
-    z-index: 1;
-  }
-
-  .showblock-mobile {
-    width: 2.4rem;
-    top: 0.8rem;
-    height: 2.4rem;
-    background-color:#014e3d;
-    left:13.6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: absolute;
-    z-index: 1;
-  }

@@ -119,19 +119,7 @@ function Mobile_Mappage() {
               >
                 <CloudIcon sx={{ fontSize: 23 , color: 'white'}} />
               </div>
-              <div
-                className="setblock-mobile"
-                // onClick={toggleWeather}
-              >
-                <TuneIcon sx={{ fontSize: 23 , color: 'white'}} />
-              </div>
-
-              <div
-                className="showblock-mobile"
-                // onClick={toggleWeather}
-              >
-                <MapIcon sx={{ fontSize: 23 , color: 'white'}} />
-              </div>
+            
       </div>
          <div className='mapwrapper_routeplan'>
          <img

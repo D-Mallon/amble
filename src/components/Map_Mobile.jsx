@@ -302,10 +302,19 @@ const Map_Mobile = () => {
 
   return (
     <div>
+      <div
+        className="setblock-mobile"
+        // onClick={toggleWeather}
+      >
+        <TuneIcon sx={{ fontSize: 23, color: "white" }} />
+      </div>
 
-       
-
-
+      <div
+        className="showblock-mobile"
+        // onClick={toggleWeather}
+      >
+        <MapIcon sx={{ fontSize: 23, color: "white" }} />
+      </div>
 
       {plansetwin && (
         <>
@@ -329,12 +338,12 @@ const Map_Mobile = () => {
                     nowSelected
                       ? { borderRadius: 0 }
                       : {
-                        backgroundColor: "transparent",
-                        borderColor: "black",
-                        color: "black",
-                        boxShadow: "none",
-                        borderRadius: 0,
-                      }
+                          backgroundColor: "transparent",
+                          borderColor: "black",
+                          color: "black",
+                          boxShadow: "none",
+                          borderRadius: 0,
+                        }
                   }
                   onClick={handleNowButtonClick}
                 >
@@ -347,12 +356,12 @@ const Map_Mobile = () => {
                     laterSelected
                       ? { borderRadius: 0 }
                       : {
-                        borderRadius: 0,
-                        backgroundColor: "transparent",
-                        borderColor: "black",
-                        color: "black",
-                        boxShadow: "none",
-                      }
+                          borderRadius: 0,
+                          backgroundColor: "transparent",
+                          borderColor: "black",
+                          color: "black",
+                          boxShadow: "none",
+                        }
                   }
                   onClick={handleLaterButtonClick}
                 >
@@ -404,15 +413,15 @@ const Map_Mobile = () => {
                     style={
                       nowSelected
                         ? {
-                          borderColor: "black",
-                          color: "black",
-                          borderRadius: 0,
-                        }
+                            borderColor: "black",
+                            color: "black",
+                            borderRadius: 0,
+                          }
                         : {
-                          borderColor: "black",
-                          color: "black",
-                          borderRadius: 0,
-                        }
+                            borderColor: "black",
+                            color: "black",
+                            borderRadius: 0,
+                          }
                     }
                     onClick={() => {
                       if (sliderUnit === "km") {
@@ -469,12 +478,12 @@ const Map_Mobile = () => {
                         homeSelected
                           ? { borderRadius: 0 }
                           : {
-                            borderRadius: 0,
-                            backgroundColor: "transparent",
-                            borderColor: "black",
-                            color: "black",
-                            boxShadow: "none",
-                          }
+                              borderRadius: 0,
+                              backgroundColor: "transparent",
+                              borderColor: "black",
+                              color: "black",
+                              boxShadow: "none",
+                            }
                       }
                     >
                       Home
@@ -501,12 +510,12 @@ const Map_Mobile = () => {
                         searchSelected
                           ? { borderRadius: 0 }
                           : {
-                            borderRadius: 0,
-                            backgroundColor: "transparent",
-                            borderColor: "black",
-                            color: "black",
-                            boxShadow: "none",
-                          }
+                              borderRadius: 0,
+                              backgroundColor: "transparent",
+                              borderColor: "black",
+                              color: "black",
+                              boxShadow: "none",
+                            }
                       }
                     >
                       {beginLocationPressed ? "Click" : "Map"}
@@ -526,12 +535,12 @@ const Map_Mobile = () => {
                         addressSelected
                           ? { borderRadius: 0 }
                           : {
-                            borderRadius: 0,
-                            backgroundColor: "transparent",
-                            borderColor: "black",
-                            color: "black",
-                            boxShadow: "none",
-                          }
+                              borderRadius: 0,
+                              backgroundColor: "transparent",
+                              borderColor: "black",
+                              color: "black",
+                              boxShadow: "none",
+                            }
                       }
                     >
                       Search
@@ -627,12 +636,12 @@ const Map_Mobile = () => {
                         endHomeSelected
                           ? { borderRadius: 0 }
                           : {
-                            borderRadius: 0,
-                            backgroundColor: "transparent",
-                            borderColor: "black",
-                            color: "black",
-                            boxShadow: "none",
-                          }
+                              borderRadius: 0,
+                              backgroundColor: "transparent",
+                              borderColor: "black",
+                              color: "black",
+                              boxShadow: "none",
+                            }
                       }
                     >
                       Home
@@ -659,12 +668,12 @@ const Map_Mobile = () => {
                         endSearchSelected
                           ? { borderRadius: 0 }
                           : {
-                            borderRadius: 0,
-                            backgroundColor: "transparent",
-                            borderColor: "black",
-                            color: "black",
-                            boxShadow: "none",
-                          }
+                              borderRadius: 0,
+                              backgroundColor: "transparent",
+                              borderColor: "black",
+                              color: "black",
+                              boxShadow: "none",
+                            }
                       }
                     >
                       {endLocationPressed ? "Click" : "Map"}
@@ -684,12 +693,12 @@ const Map_Mobile = () => {
                         endAddressSelected
                           ? { borderRadius: 0 }
                           : {
-                            backgroundColor: "transparent",
-                            borderColor: "black",
-                            color: "black",
-                            boxShadow: "none",
-                            borderRadius: 0,
-                          }
+                              backgroundColor: "transparent",
+                              borderColor: "black",
+                              color: "black",
+                              boxShadow: "none",
+                              borderRadius: 0,
+                            }
                       }
                     >
                       Search
@@ -804,10 +813,13 @@ const Map_Mobile = () => {
             </div>
             <p>Distance or Duration</p>
             {/* <span>{inputValues.distance}{sliderUnit}</span> */}
-            <span><strong>{sliderUnit === "km"
-                      ? `${sliderValue} km`
-                      : `${sliderValue} mins`}
-                      </strong></span>
+            <span>
+              <strong>
+                {sliderUnit === "km"
+                  ? `${sliderValue} km`
+                  : `${sliderValue} mins`}
+              </strong>
+            </span>
             <p>Preference</p>
 
             <p>Quietness Score</p>

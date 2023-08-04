@@ -699,3 +699,31 @@
       }
       
 
+      .setblock-mobile {
+        width: 2.4rem;
+        bottom: 0.8rem;
+        height: 2.4rem;
+        background-color:#014e3d;
+        right:0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        z-index: 10;
+      }
+    
+      .showblock-mobile {
+        width: 2.4rem;
+        bottom: 3.8rem;
+        height: 2.4rem;
+        background-color:#014e3d;
+        right:0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        z-index: 10;
+      }
+    
