@@ -33,6 +33,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { ArrayContext, useWaypointsArray } from "../context/ArrayContext";
 import ChatBox from "./ChatBox";
 import Ratings from "./Ratings";
+import CircularProgress from '@mui/material/CircularProgress';
 
 import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
@@ -268,7 +269,6 @@ const Map = () => {
     console.log("Submitted General Walk Rating:", walkRating);
     console.log("Submitted Waypoint Ratings:", waypointRatings);
 
-    // score mapping - edge scores have negative and positive bonuses
     // Define mappings using arrays of tuples and convert them to objects
     const walkRatingModifiers = Object.fromEntries([[0, -0.25], [0.5, -0.2], [1, -0.15], [1.5, -0.15], [2, -0.1], [2.5, -0.1], [3, -0.05], [3.5, -0.05], [4, 0.0], [4.5, 0.05], [5, 0.05], [5.5, 0.1], [6, 0.1], [6.5, 0.15], [7, 0.15], [7.5, 0.2], [8, 0.2], [8.5, 0.25], [9, 0.25], [9.5, 0.3], [10, 0.4]]);
     const ratingModifierMapping = Object.fromEntries([[-5, -0.6], [-4, -0.4], [-3, -0.3], [-2, -0.2], [-1, -0.1], [0, 0], [1, 0.1], [2, 0.2], [3, 0.3], [4, 0.4], [5, 0.6]]);
@@ -302,6 +302,43 @@ const Map = () => {
   const handleSubmit = () => {
     handleButtonClick_close(); // Function to close the popup
     handleRatingsCalc(); // Function to process ratings
+  };
+
+  const calculateQuietnessScore = () => {
+    let totalScore = 0;
+    let locationBScores = [];
+    let givenTime = inputValues.hour.toString(); // Convert hour to string to match the keys in b-score
+    globalArray.forEach(location => {
+      let bScore = location["b-score"][givenTime];
+      if (bScore != null) {
+        locationBScores.push(bScore);
+        bScore += 1; // Add 1 to the b-score
+        bScore = Math.max(bScore, -2); // Check against the borders
+        bScore = Math.min(bScore, 2);
+        totalScore += bScore; // Add the b-score to the total score
+      }
+      console.log("total quietness score:", totalScore);
+    });
+    console.log("location b-scores:", locationBScores);
+    const averageScore = totalScore / globalArray.length;
+    console.log('Average Quietness:', averageScore);
+    const percentageQuietness = (averageScore / 2) * 100;
+    console.log('Percentage Quietness:', percentageQuietness);
+    return percentageQuietness;
+  };
+
+  const percentageQuietness = calculateQuietnessScore();
+
+  const colourPicker = (percentageQuietness) => {
+    let red, green;
+    if (percentageQuietness < 50) {
+      red = 255;
+      green = 5 * percentageQuietness; // Transition from 0 to 255 as percentage goes from 0 to 50
+    } else {
+      red = 255 - 5 * (percentageQuietness - 50); // Transition from 255 to 0 as percentage goes from 50 to 100
+      green = 255;
+    }
+    return `rgb(${Math.round(red)}, ${Math.round(green)}, 0)`;
   };
 
   return (
@@ -809,7 +846,29 @@ const Map = () => {
             </strong></span>
             <p>Preference</p>
 
-            <p>Quietness Score</p>
+            <p>Quietness Score</p><br/>
+            <div className="quietness-traffic-light" style={{ position: 'relative', display: 'inline-block' }}>
+              <CircularProgress
+                variant="determinate"
+                size="3rem"
+                sx={{
+                  ".MuiCircularProgress-circle": {
+                    stroke: colourPicker(percentageQuietness), // Apply color to the circle stroke
+                    fill: `${colourPicker(percentageQuietness)}40`,
+                  }
+                }}
+                value={percentageQuietness}
+              />
+              <div style={{
+                position: 'absolute',
+                top: '42%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                fontSize: '1rem', // Adjust font size as needed
+              }}><b>
+                {Math.round(percentageQuietness)}%</b>
+              </div>
+            </div>
 
             <div className="directionbox">
               <div className="directionbox-titlebox">
