@@ -26,6 +26,7 @@ import useRouteDisplay from "./useRouteDisplay";
 import useGeocoding from "./useGeocoding";
 import useMapInit from "./useMapInit";
 import usePlaceNameChange from "./usePlaceNameChange";
+import useHeatmap from "./useHeatmap";
 import Box from "@mui/material/Box";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -58,10 +59,10 @@ const Map = () => {
 
   const { inputValues, setInputValues } = useMapInput();
   const { globalArray, setGlobalArrayValue } = useWaypointsArray();
-  const [ walkRating, setWalkRating] = useState(2); 
-  const [ waypointRatings, setWaypointRatings] = useState({}); 
+  const [walkRating, setWalkRating] = useState(2);
+  const [waypointRatings, setWaypointRatings] = useState({});
   //console.log(globalArray)
-  
+
   const mapContainer = useRef(null);
   const [lat, setLat] = useState(40.73);
   const [lng, setLng] = useState(-73.445);
@@ -101,6 +102,9 @@ const Map = () => {
     zoom,
     inputValues
   );
+
+  useHeatmap(map);  // Call the useHeatmap hook here
+
   const { route, displayRoute, directiondata } = useRouteDisplay(
     map.current,
     inputValues,
@@ -284,12 +288,12 @@ const Map = () => {
 
     // Send the updated global array to the backend
     axios.post('/users/ratings', updatedGlobalArray)
-    .then((response) => {
-      console.log('Ratings updated successfully:', response.data);
-    })
-    .catch((error) => {
-      console.error('Error updating ratings:', error);
-    });
+      .then((response) => {
+        console.log('Ratings updated successfully:', response.data);
+      })
+      .catch((error) => {
+        console.error('Error updating ratings:', error);
+      });
 
     // Update globalArray
     setGlobalArrayValue(updatedGlobalArray);
@@ -800,9 +804,9 @@ const Map = () => {
             <p>Distance or Duration</p>
             {/* <span>{inputValues.distance}{sliderUnit}</span> */}
             <span><strong>{sliderUnit === "km"
-                      ? `${sliderValue} km`
-                      : `${sliderValue} mins`}
-                      </strong></span>
+              ? `${sliderValue} km`
+              : `${sliderValue} mins`}
+            </strong></span>
             <p>Preference</p>
 
             <p>Quietness Score</p>
@@ -820,13 +824,11 @@ const Map = () => {
                       <span className="bold-step">
                         {`Step ${index + 1}: `}&nbsp;&nbsp;
                       </span>
-                      {`${step.action ? step.action : "Proceed"}${
-                        step.road ? ` on ${step.road}` : ""
-                      }${
-                        step.distance
+                      {`${step.action ? step.action : "Proceed"}${step.road ? ` on ${step.road}` : ""
+                        }${step.distance
                           ? ` for ${step.distance.toFixed(2)} meters`
                           : ""
-                      }${step.isKeyNode ? " (Arrived at Key Node)" : ""}`}
+                        }${step.isKeyNode ? " (Arrived at Key Node)" : ""}`}
                       <br />
                     </span>
                   ))}
