@@ -38,18 +38,26 @@
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
-.custom-popup {
-  color: #000; /* Set the text color to black */
+.mapboxgl-popup h3 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
-.popup-content {
-  color: #000; /* Set the text color to black */
-  padding: 15px; /* Padding */
+.mapboxgl-popup p {
+  margin-top: 2px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -72,7 +80,7 @@ h2 {
 }
 
 .user-input {
-  color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
   position: absolute;
   top: 10px;
   left: 15px;
@@ -86,7 +94,8 @@ h2 {
   flex-direction: column;
   text-align: center;
   /* border: 1px solid #000; */
-  padding-top: 45px;;
+  padding-top: 45px;
+  ;
   align-items: center;
 }
 
@@ -100,8 +109,8 @@ h2 {
   display: flex;
   justify-content: left;
   align-items: center;
-  margin-bottom: 10px; 
-  
+  margin-bottom: 10px;
+
 }
 
 .text_bar-mapfunction {
@@ -169,7 +178,7 @@ h2 {
 }
 
 
-.detail-text{
+.detail-text {
   font-weight: 400;
   color: #00684a;
   margin-top: 15px;
@@ -179,7 +188,7 @@ h2 {
 
 
 .detailbox {
-  color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
   position: absolute;
   top: 26px;
   left: 30px;
@@ -208,8 +217,8 @@ h2 {
   display: flex;
   justify-content: left;
   align-items: center;
-  margin-bottom: 10px; 
-  
+  margin-bottom: 10px;
+
 }
 
 .text_bar-mapfunction-detail {
@@ -278,12 +287,12 @@ h2 {
 
 
 .directionbox {
-  color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
   position: relative;
   /* top: 26px;
   left: 30px; */
   width: 94%;
-  background:#ffffff;
+  background: #ffffff;
   border-radius: 0px;
   z-index: 1;
   display: flex;
@@ -292,9 +301,9 @@ h2 {
   padding-top: 45px;
   align-items: center;
   border-width: 0px 1.5px 1.5px 1.5px;
-border-style: solid;
-border-color: #ffeea9;
-overflow: hidden;
+  border-style: solid;
+  border-color: #ffeea9;
+  overflow: hidden;
 
 }
 
@@ -313,15 +322,17 @@ overflow: hidden;
   margin-bottom: 10px;
 }
 
-.directiondetail{
-  height: 380px; /* Set the fixed height you desire */
-  overflow-y: auto; /* Add a scrollbar when content exceeds the height */
- position: relative;
+.directiondetail {
+  height: 380px;
+  /* Set the fixed height you desire */
+  overflow-y: auto;
+  /* Add a scrollbar when content exceeds the height */
+  position: relative;
 }
 
-.directionswords{
+.directionswords {
   width: 110%;
-  left:-20px;
+  left: -20px;
   position: relative;
 }
 
@@ -338,26 +349,26 @@ overflow: hidden;
   font-family: "Arial", sans-serif;
 }
 
-.alien-robot{
-  right:0;
-  top:70%;
-  height:100px;
+.alien-robot {
+  right: 0;
+  top: 70%;
+  height: 100px;
   position: absolute;
   z-index: 100;
   cursor: pointer;
-  
+
 }
 
 
 
 
 .alienchatbox {
-  color: rgb(0, 0, 0); 
-  position:absolute;
+  color: rgb(0, 0, 0);
+  position: absolute;
   /* top: 56px;
   left: 420px; */
-  right:30px;
-  top:110px;
+  right: 30px;
+  top: 110px;
   width: 320px;
   height: 60%;
   /* background: #99ddff; */
@@ -384,8 +395,8 @@ overflow: hidden;
   display: flex;
   justify-content: left;
   align-items: center;
-  margin-bottom: 10px; 
-  
+  margin-bottom: 10px;
+
 }
 
 
@@ -400,12 +411,12 @@ overflow: hidden;
 }
 
 
-.additional-block-close-chatbox{
+.additional-block-close-chatbox {
   width: 2.8rem;
   height: 2.8rem;
   background-color: #00684a;
   position: absolute;
-  right:0;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -414,11 +425,11 @@ overflow: hidden;
   cursor: pointer;
 }
 
-.chat-robot-two{
+.chat-robot-two {
   z-index: 100;
   height: 60px;
-  top:-48px;
-  left:160px;
+  top: -48px;
+  left: 160px;
   display: flex;
   position: absolute;
 }
@@ -435,9 +446,9 @@ overflow: hidden;
 
 .additional-block-datail-button {
   width: 18rem;
-  height:2.8rem;
-  background-color:#014e3d;
-  right:5.6rem;
+  height: 2.8rem;
+  background-color: #014e3d;
+  right: 5.6rem;
   display: flex;
   position: absolute;
   justify-content: center;
@@ -448,43 +459,46 @@ overflow: hidden;
 
 /* Styles for hover state */
 .additional-block-datail-button:hover {
-  background-color: #ffe212; /* Change the background color to red on hover */
+  background-color: #ffe212;
+  /* Change the background color to red on hover */
 }
 
 .additional-block-datail-button:hover .text_bar_2-detail {
-  color: #014e3d;}
+  color: #014e3d;
+}
 
 
 
-  .ratewin {
-    width: 100%;
-    height: 53.2rem;
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    background-color: #ffffff;
-    z-index: 1001;
-    flex-direction: column;
+.ratewin {
+  width: 100%;
+  height: 53.2rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  background-color: #ffffff;
+  z-index: 1001;
+  flex-direction: column;
 
-  }
+}
 
-  .ratewin-background{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 添加此属性以适应ratewin */
-  }
+.ratewin-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 添加此属性以适应ratewin */
+}
 
-.white-board{
-    width: 1rem;
-    height: 100rem;
-    background-color: #ffffff;
+.white-board {
+  width: 1rem;
+  height: 100rem;
+  background-color: #ffffff;
 }
 
 .additional-blocks-ratewin {
   position: absolute;
   background-color: #dde87b;
   top: 0;
-  right:0;
+  right: 0;
   display: flex;
   align-items: flex-start;
   z-index: 2000;
@@ -498,203 +512,215 @@ overflow: hidden;
   /* padding-left: 24px; */
   justify-content: center;
   align-items: center;
-  
+
 }
 
-  .additional-block-text-ratewin {
-    width: 14rem;
-    height:2.8rem;
-    background-color:#ffeea9;
-    left:0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
- 
- 
-  
-  .additional-block-close-ratewin {
-    width: 2.8rem;
-    height: 2.8rem;
-    background-color: #014e3d;
-    right:0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 500;
-  }
-  
+.additional-block-text-ratewin {
+  width: 14rem;
+  height: 2.8rem;
+  background-color: #ffeea9;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
-  .additional-block-rate-button {
-    width: 18rem;
-    height:2.8rem;
-    background-color:#014e3d;
-    right:0;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    z-index: 500;
-    cursor: pointer;
-  }
-  
-  /* Styles for hover state */
-  .additional-block-rate-button:hover {
-    background-color: #ffe212; /* Change the background color to red on hover */
-  }
 
 
-  .additional-block-close-ratewin:hover {
-    background-color:#ffc101;
-  }
+.additional-block-close-ratewin {
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: #014e3d;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 500;
+}
 
 
-  .text_bar_2-detailtitle {
-    color: #001e2b;
-    font-size: 0.9rem;
-    font-weight: normal;
-    /* padding-left: 24px; */
-    justify-content: center;
-    align-items: center;
-    
-  }
-  
-    .additional-block-text-detailtitle {
-      width: 18rem;
-      height:2.8rem;
-      background-color:#ffeea9;
-      right:23.6rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      z-index: 5;
-    }
 
-    .General-rate-inform{
-      width: 100%;
-      height: 37rem;
-      z-index: 300;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      padding-top: 12%;
-      padding-left: 15%;
-      padding-right: 15%;
-    }
-  
-    .like-rate{
-      position: relative;
-      display: flex;
-      font-weight: normal;
-      font-size: 18px;
-      margin-bottom: 10px;
-      justify-content: space-between; /* 左右两端对齐 */
-      align-items: center; /* 垂直居中对齐 */
-    }
-  
-    .stop-text{
-      font-weight: bold;
-      font-size: 22px;
-      text-align: left; /* 将文字左对齐 */
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 8px white;
-    }
+.additional-block-rate-button {
+  width: 18rem;
+  height: 2.8rem;
+  background-color: #014e3d;
+  right: 0;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+  cursor: pointer;
+}
 
-    .each-stop-inform{
-      display: flex;
-       /* justify-content: center; */
-      padding-top:1%;
-      width: 100%;
-      overflow: auto;
-      max-height: 90vh;
-      flex-flow: row wrap;
-      align-items: normal;
-     }
-   
-     .stop-info{
-       background-color: rgb(227, 252, 247,0.8);
-       width: 15rem;
-       height: 15rem;
-       flex: 1 1 calc(25% - 4rem);
-       margin: 3px;
-       padding-left: 3%;
-       padding-right: 3%;
-       padding-top: 2%;
-       position: relative;
-       display: inline-block;
-       z-index: 100;
-     }
-   
-     .stop-info span.park-name {
-       display: inline-block;
-       max-width: 160px;
-       white-space: nowrap;
-       overflow: hidden;
-       text-overflow: ellipsis;
-     }    
-   
-     .stand-icon{
-       width: 6rem;
-       height: 6rem;
-       background-color: #014e3d;
-       margin: auto;
-     }
+/* Styles for hover state */
+.additional-block-rate-button:hover {
+  background-color: #ffe212;
+  /* Change the background color to red on hover */
+}
 
-    .finishrate {
-      position: relative;
-      justify-content: center;
-      align-items: center;
-      margin-top: -210px;
-      cursor: pointer;
-      margin-bottom: 30px;
-      display: flex;
-    }
-    
-    .finishrate-text {
-      display: flex;
-      width: 500px;
-      height: 2.5rem;
-      line-height: 40px;
-      font-size: 16px;
-      font-family: sans-serif;
-      text-decoration: none;
-      color: #E3FCF7;
-      border: 1.5px solid #333;
-      letter-spacing: 2px;
-      text-align: center;
-      position: relative;
-      transition: all .35s;
-      justify-content: center;
-      align-items: center;
-      background: #014e3d;
-      cursor: pointer;
-    }
-    
-    .finishrate-text span {
-      position: relative;
-      z-index: 2;
-    }
-    
-    .finishrate-text:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background: #b1ff05;
-      transition: all .35s;
-    }
-    
-    .finishrate-text:hover {
-      color: #014e3d;
-    }
-    
-    .finishrate-text:hover:after {
-      width: 100%;
-    }
-    
+
+.additional-block-close-ratewin:hover {
+  background-color: #ffc101;
+}
+
+
+.text_bar_2-detailtitle {
+  color: #001e2b;
+  font-size: 0.9rem;
+  font-weight: normal;
+  /* padding-left: 24px; */
+  justify-content: center;
+  align-items: center;
+
+}
+
+.additional-block-text-detailtitle {
+  width: 18rem;
+  height: 2.8rem;
+  background-color: #ffeea9;
+  right: 23.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 5;
+}
+
+.General-rate-inform {
+  width: 100%;
+  height: 37rem;
+  z-index: 300;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding-top: 12%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.like-rate {
+  position: relative;
+  display: flex;
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  /* 左右两端对齐 */
+  align-items: center;
+  /* 垂直居中对齐 */
+}
+
+.stop-text {
+  font-weight: bold;
+  font-size: 22px;
+  text-align: left;
+  /* 将文字左对齐 */
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px white;
+}
+
+.each-stop-inform {
+  display: flex;
+  /* justify-content: center; */
+  padding-top: 1%;
+  width: 100%;
+  overflow: auto;
+  max-height: 90vh;
+  flex-flow: row wrap;
+  align-items: normal;
+}
+
+.stop-info {
+  background-color: rgb(227, 252, 247, 0.8);
+  width: 15rem;
+  height: 15rem;
+  flex: 1 1 calc(25% - 4rem);
+  margin: 3px;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 2%;
+  position: relative;
+  display: inline-block;
+  z-index: 100;
+}
+
+.stop-info span.park-name {
+  display: inline-block;
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stand-icon {
+  width: 6rem;
+  height: 6rem;
+  background-color: #014e3d;
+  margin: auto;
+}
+
+.finishrate {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: -210px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.finishrate-text {
+  display: flex;
+  width: 500px;
+  height: 2.5rem;
+  line-height: 40px;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #E3FCF7;
+  border: 1.5px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  justify-content: center;
+  align-items: center;
+  background: #014e3d;
+  cursor: pointer;
+}
+
+.finishrate-text span {
+  position: relative;
+  z-index: 2;
+}
+
+.finishrate-text:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #b1ff05;
+  transition: all .35s;
+}
+
+.finishrate-text:hover {
+  color: #014e3d;
+}
+
+.finishrate-text:hover:after {
+  width: 100%;
+}
+
+.mapboxgl-popup-close-button {
+  background-color: #00684a !important;
+}
+
+.mapboxgl-popup-close-button:hover {
+  background-color: #014e3d !important;
+  transition: 0.2;
+}
