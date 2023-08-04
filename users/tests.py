@@ -2,7 +2,7 @@ import unittest
 from unittest import mock
 from unittest.mock import MagicMock
 import algorithm
-import chatbot as cb
+import chatbox as cb
 import openai
 from datetime import datetime
 from rest_framework.exceptions import ValidationError
@@ -37,7 +37,7 @@ class TestAlgorithm(unittest.TestCase):
         self.assertEqual(sorted_waypoints, [(1, 1), (2, 2), (3, 3)])
 
 
-# TestCases for chatbot.py
+# TestCases for chatbox.py
 class TestChatBot(unittest.TestCase):
 
     def setUp(self):
