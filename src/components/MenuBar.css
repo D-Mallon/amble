@@ -98,6 +98,7 @@
     width: 120px; /* 调整选项框的宽度 */
     z-index: 2;  
     opacity: 0.8;
+    z-index: 100;
   }
   
   .option {
@@ -111,6 +112,7 @@
     outline: none; /* 移除默认的点击边框 */
     transition: filter 0.3s; /* 添加过渡效果 */
     border-radius: 2px;
+    z-index: 100;
   }
   .option:focus {
     outline: none;
@@ -121,36 +123,7 @@
   
   } */
 
-  .Reg-menu {
-    background-color: #ffffff;
-    
-    position: absolute;
-    /* bottom:0; */
-    display: flex;
-    flex-direction: column;
-    /* background-color: #7affcccb; */
-    border: 1.5px solid #000000;
-    border-radius: 0px 0px 0px 0px; /* 上左 上右 下右 下左 */
-    padding-top: 0%;
-    padding-left: 22%;
-    padding-right: 22%;
-    padding-bottom: 0%;
-    width: 60%; /* 调整选项框的宽度 */
-    height:70%;
-    z-index: 2;
-    margin: auto;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
-    animation-delay: 0.3s;
-    margin: auto;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
+ 
   
   .menu-bar {
     background: url(/static/images/MenuPic5.jpg) no-repeat center fixed;
@@ -407,6 +380,7 @@ color: #ffffff;
     width: 180px; /* 调整选项框的宽度 */
     z-index: 2;  
     opacity: 0.8;
+    z-index: 100;
   
   }
   
@@ -421,6 +395,7 @@ color: #ffffff;
     outline: none; /* 移除默认的点击边框 */
     transition: filter 0.3s; /* 添加过渡效果 */
     border-radius: 2px;
+    z-index: 100;
   }
   .option:focus {
     outline: none;

@@ -47,8 +47,8 @@ function App() {
                 <Routes>
                   <Route exact path="/" element={<LandingPage />} />
 
-                  <Route exact path="/mobilehomepage" element={<Mobile_Mappage />} />
-                  <Route exact path="/mobilemappage" element={<Mobile_homepage />} />
+                  <Route path="/mobilemappage" element={<Mobile_Mappage />} />
+                  <Route path="/mobilehomepage" element={<Mobile_homepage />} />
 
                   <Route exact path="/map" element={<Interface2 />} />
                   <Route path="/login" element={<Login />} />
