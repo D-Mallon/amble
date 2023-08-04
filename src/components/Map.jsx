@@ -40,6 +40,8 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { StandaloneSearchBox } from "@react-google-maps/api";
 
+import Select from 'react-select';
+
 const apiKey = import.meta.env.VITE_MAPBOX_API_KEY;
 mapboxgl.accessToken = apiKey;
 
@@ -85,6 +87,7 @@ const Map = () => {
   const [showDistanceInput, setShowDistanceInput] = useState(false); //change to false
   const [showBeginLocationInput, setShowBeginLocationInput] = useState(false); //change to false
   const [showEndLocationInput, setShowEndLocationInput] = useState(false); //change to false
+  const [showPreferencesInput, setShowPreferencesInput] = useState(false); //change to false
   const [showGoButton, setShowGoButton] = useState(false);
   const [nowSelected, setNowSelected] = useState(false);
   const [laterSelected, setLaterSelected] = useState(false);
@@ -94,6 +97,55 @@ const Map = () => {
   const [endHomeSelected, setEndHomeSelected] = useState(false);
   const [endSearchSelected, setEndSearchSelected] = useState(false);
   const [endAddressSelected, setEndAddressSelected] = useState(false);
+
+  const options = [
+    // { value: 'park', label: 'Parks' },
+    { value: 'library_locations', label: 'Libraries' },
+    { value: 'worship_locations', label: 'Places of Worship' },
+    { value: 'community_locations', label: 'Community Centres' },
+    { value: 'museum_art_locations', label: 'Museums & Art Galleries' },
+    { value: 'walking_node_locations', label: 'Other Walking Nodes' },
+    // { value: 'park_node_locations', label: 'Other Park Nodes' },
+  ];
+
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  const handleSelectChange = (selected) => {
+    setSelectedOptions(selected);
+    setShowGoButton(true);
+  };
+
+  const selectedValues = selectedOptions.map((option) => option.value);
+
+  const handlePreferencesSubmit = async (e) => {
+    e.preventDefault();
+    console.log('Selected Values:', selectedValues);
+    console.log('Selected Options:', selectedOptions);
+    // 
+    // Make the POST request
+    axios
+      .post('/users/preferences', { selectedOptions: selectedValues }) //, headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+
+      .then((response) => {
+        // Handle successful response
+        console.log('Data:', response.data);
+        // console.log("Where is the data?");
+      })
+      // If error, alert console
+      .catch((error) => {
+        if (error.response) {
+          console.log(error.response);
+          console.log("Status code:", error.response.status);
+          console.log("Error Message", error.message);
+          console.log("Response Data:", error.response.data);
+
+        } else if (error.request) {
+          console.log("network error");
+        } else {
+          console.log(error);
+        }
+      });
+  };
 
   const { map, markers } = useMapInit(
     mapContainer,
@@ -121,7 +173,7 @@ const Map = () => {
     setInputValues,
     showEndLocationInput,
     setShowEndLocationInput,
-    setShowGoButton
+    setShowPreferencesInput
   );
   const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } =
     usePlaceNameChange("", setInputValues);
@@ -616,7 +668,7 @@ const Map = () => {
                         setEndHomeSelected(true);
                         setEndSearchSelected(false);
                         setEndAddressSelected(false);
-                        setShowGoButton(true);
+                        setShowPreferencesInput(true);
                         setShowEndField(false);
                       }}
                       startIcon={<HomeIcon />}
@@ -754,6 +806,20 @@ const Map = () => {
               </div>
             )}
 
+            {showPreferencesInput && (
+              <div>
+                <p>What would you like to see?</p>
+                <form onSubmit={handlePreferencesSubmit}>
+                  <Select
+                    options={options}
+                    isMulti='true'
+                    value={selectedOptions}
+                    onChange={handleSelectChange}
+                  />
+                </form>
+              </div>
+            )}
+
             {showGoButton && (
               // <Stack spacing={1} direction="row" justifyContent="center" paddingBottom="15px">
               //   <Button   sx={{ width: "200px", height: "2.5rem" }}  variant="contained" type="submit" size="large" style={{ borderRadius: 0 }} onClick={handleInputSubmit}>GO</Button>
@@ -773,7 +839,7 @@ const Map = () => {
             {/* <Button  sx={{ width: "200px", height: "2.5rem" }} style={{ borderRadius: 0 }} variant='outlined' onClick={() => console.log("These were the inputValues:", inputValues)}>Tell me baby...</Button> */}
             {!showGoButton && (
               <span className="detail-text">
-                Dear user, please tell me more...
+                "Tell me more, tell me more..." - Grease, 1978
               </span>
             )}
           </div>
