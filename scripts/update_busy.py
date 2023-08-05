@@ -136,7 +136,6 @@ for i in range(len(new_busyObj)):
         if taxiID == busyObj_bike[j]['Taxi Zone ID'] and hour == busyObj_bike[j]['Hour']:
             new_busyObj[i]['Busyness Predicted'] = (new_busyObj[i]['Busyness Predicted'] * taxi_weight) + (busyObj_bike[j]['Busyness Predicted'] * bike_weight)
 
-# print(new_busyObj)
 include_crime = True #Decide whether to include crime scores or not
 
 #Open all nodes json file to get crime score
