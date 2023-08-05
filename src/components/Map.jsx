@@ -33,12 +33,15 @@ import CloseIcon from "@mui/icons-material/Close";
 import { ArrayContext, useWaypointsArray } from "../context/ArrayContext";
 import ChatBox from "./ChatBox";
 import Ratings from "./Ratings";
+import CircularProgress from '@mui/material/CircularProgress';
 
 import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { StandaloneSearchBox } from "@react-google-maps/api";
+
+import Select from 'react-select';
 
 const apiKey = import.meta.env.VITE_MAPBOX_API_KEY;
 mapboxgl.accessToken = apiKey;
@@ -85,6 +88,7 @@ const Map = () => {
   const [showDistanceInput, setShowDistanceInput] = useState(false); //change to false
   const [showBeginLocationInput, setShowBeginLocationInput] = useState(false); //change to false
   const [showEndLocationInput, setShowEndLocationInput] = useState(false); //change to false
+  const [showPreferencesInput, setShowPreferencesInput] = useState(false); //change to false
   const [showGoButton, setShowGoButton] = useState(false);
   const [nowSelected, setNowSelected] = useState(false);
   const [laterSelected, setLaterSelected] = useState(false);
@@ -94,6 +98,55 @@ const Map = () => {
   const [endHomeSelected, setEndHomeSelected] = useState(false);
   const [endSearchSelected, setEndSearchSelected] = useState(false);
   const [endAddressSelected, setEndAddressSelected] = useState(false);
+
+  const options = [
+    // { value: 'park', label: 'Parks' },
+    { value: 'library_locations', label: 'Libraries' },
+    { value: 'worship_locations', label: 'Places of Worship' },
+    { value: 'community_locations', label: 'Community Centres' },
+    { value: 'museum_art_locations', label: 'Museums & Art Galleries' },
+    { value: 'walking_node_locations', label: 'Other Walking Nodes' },
+    // { value: 'park_node_locations', label: 'Other Park Nodes' },
+  ];
+
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  const handleSelectChange = (selected) => {
+    setSelectedOptions(selected);
+    setShowGoButton(true);
+  };
+
+  const selectedValues = selectedOptions.map((option) => option.value);
+
+  const handlePreferencesSubmit = async (e) => {
+    e.preventDefault();
+    console.log('Selected Values:', selectedValues);
+    console.log('Selected Options:', selectedOptions);
+    // 
+    // Make the POST request
+    axios
+      .post('/users/preferences', { selectedOptions: selectedValues }) //, headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+
+      .then((response) => {
+        // Handle successful response
+        console.log('Data:', response.data);
+        // console.log("Where is the data?");
+      })
+      // If error, alert console
+      .catch((error) => {
+        if (error.response) {
+          console.log(error.response);
+          console.log("Status code:", error.response.status);
+          console.log("Error Message", error.message);
+          console.log("Response Data:", error.response.data);
+
+        } else if (error.request) {
+          console.log("network error");
+        } else {
+          console.log(error);
+        }
+      });
+  };
 
   const { map, markers } = useMapInit(
     mapContainer,
@@ -121,7 +174,7 @@ const Map = () => {
     setInputValues,
     showEndLocationInput,
     setShowEndLocationInput,
-    setShowGoButton
+    setShowPreferencesInput
   );
   const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } =
     usePlaceNameChange("", setInputValues);
@@ -268,7 +321,6 @@ const Map = () => {
     console.log("Submitted General Walk Rating:", walkRating);
     console.log("Submitted Waypoint Ratings:", waypointRatings);
 
-    // score mapping - edge scores have negative and positive bonuses
     // Define mappings using arrays of tuples and convert them to objects
     const walkRatingModifiers = Object.fromEntries([[0, -0.25], [0.5, -0.2], [1, -0.15], [1.5, -0.15], [2, -0.1], [2.5, -0.1], [3, -0.05], [3.5, -0.05], [4, 0.0], [4.5, 0.05], [5, 0.05], [5.5, 0.1], [6, 0.1], [6.5, 0.15], [7, 0.15], [7.5, 0.2], [8, 0.2], [8.5, 0.25], [9, 0.25], [9.5, 0.3], [10, 0.4]]);
     const ratingModifierMapping = Object.fromEntries([[-5, -0.6], [-4, -0.4], [-3, -0.3], [-2, -0.2], [-1, -0.1], [0, 0], [1, 0.1], [2, 0.2], [3, 0.3], [4, 0.4], [5, 0.6]]);
@@ -302,6 +354,43 @@ const Map = () => {
   const handleSubmit = () => {
     handleButtonClick_close(); // Function to close the popup
     handleRatingsCalc(); // Function to process ratings
+  };
+
+  const calculateQuietnessScore = () => {
+    let totalScore = 0;
+    let locationBScores = [];
+    let givenTime = inputValues.hour.toString(); // Convert hour to string to match the keys in b-score
+    globalArray.forEach(location => {
+      let bScore = location["b-score"][givenTime];
+      if (bScore != null) {
+        locationBScores.push(bScore);
+        bScore += 1; // Add 1 to the b-score
+        bScore = Math.max(bScore, -2); // Check against the borders
+        bScore = Math.min(bScore, 2);
+        totalScore += bScore; // Add the b-score to the total score
+      }
+      console.log("total quietness score:", totalScore);
+    });
+    console.log("location b-scores:", locationBScores);
+    const averageScore = totalScore / globalArray.length;
+    console.log('Average Quietness:', averageScore);
+    const percentageQuietness = (averageScore / 2) * 100;
+    console.log('Percentage Quietness:', percentageQuietness);
+    return percentageQuietness;
+  };
+
+  const percentageQuietness = calculateQuietnessScore();
+
+  const colourPicker = (percentageQuietness) => {
+    let red, green;
+    if (percentageQuietness < 50) {
+      red = 255;
+      green = 5 * percentageQuietness; // Transition from 0 to 255 as percentage goes from 0 to 50
+    } else {
+      red = 255 - 5 * (percentageQuietness - 50); // Transition from 255 to 0 as percentage goes from 50 to 100
+      green = 255;
+    }
+    return `rgb(${Math.round(red)}, ${Math.round(green)}, 0)`;
   };
 
   return (
@@ -616,7 +705,7 @@ const Map = () => {
                         setEndHomeSelected(true);
                         setEndSearchSelected(false);
                         setEndAddressSelected(false);
-                        setShowGoButton(true);
+                        setShowPreferencesInput(true);
                         setShowEndField(false);
                       }}
                       startIcon={<HomeIcon />}
@@ -754,6 +843,20 @@ const Map = () => {
               </div>
             )}
 
+            {showPreferencesInput && (
+              <div>
+                <p>What would you like to see?</p>
+                <form onSubmit={handlePreferencesSubmit}>
+                  <Select
+                    options={options}
+                    isMulti='true'
+                    value={selectedOptions}
+                    onChange={handleSelectChange}
+                  />
+                </form>
+              </div>
+            )}
+
             {showGoButton && (
               // <Stack spacing={1} direction="row" justifyContent="center" paddingBottom="15px">
               //   <Button   sx={{ width: "200px", height: "2.5rem" }}  variant="contained" type="submit" size="large" style={{ borderRadius: 0 }} onClick={handleInputSubmit}>GO</Button>
@@ -773,7 +876,7 @@ const Map = () => {
             {/* <Button  sx={{ width: "200px", height: "2.5rem" }} style={{ borderRadius: 0 }} variant='outlined' onClick={() => console.log("These were the inputValues:", inputValues)}>Tell me baby...</Button> */}
             {!showGoButton && (
               <span className="detail-text">
-                Dear user, please tell me more...
+                "Tell me more, tell me more..." - Grease, 1978
               </span>
             )}
           </div>
@@ -809,7 +912,29 @@ const Map = () => {
             </strong></span>
             <p>Preference</p>
 
-            <p>Quietness Score</p>
+            <p>Quietness Score</p><br/>
+            <div className="quietness-traffic-light" style={{ position: 'relative', display: 'inline-block' }}>
+              <CircularProgress
+                variant="determinate"
+                size="3rem"
+                sx={{
+                  ".MuiCircularProgress-circle": {
+                    stroke: colourPicker(percentageQuietness), // Apply color to the circle stroke
+                    fill: `${colourPicker(percentageQuietness)}40`,
+                  }
+                }}
+                value={percentageQuietness}
+              />
+              <div style={{
+                position: 'absolute',
+                top: '42%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                fontSize: '1rem', // Adjust font size as needed
+              }}><b>
+                {Math.round(percentageQuietness)}%</b>
+              </div>
+            </div>
 
             <div className="directionbox">
               <div className="directionbox-titlebox">

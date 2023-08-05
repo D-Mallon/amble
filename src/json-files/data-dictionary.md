@@ -48,7 +48,7 @@ For the next feature (cafe/restaurant with Google Popular Times), not included i
 | b-score               | float      | Busyness-Score of the location (calculated from grid's b-score and taxi-zone's b-score)|
 | c-score               | float      | Crime-Score of the location (calculated from grid's c-score and precinct's c-score )   |
 | coordinates           | float list | Geographic coordinates (longitude, latitude) of the location                           |
-| user-rating           | float      | Rating influenced by users to influence routing & location suggestions, default: 1.5   |
+| rating                | float      | Rating influenced by users to influence routing & location suggestions, default: 1.5   |
 
 
 
