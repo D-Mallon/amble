@@ -85,7 +85,7 @@ museum = 'museum_art_locations.json'
 worship = 'worship_locations.json'
 walking_node = 'walking_node_locations.json'
 all_nodes = 'all_nodes.json'
-all_nodes_no_crime_in_bscore = 'all_nodes.json'
+all_nodes_no_crime_in_bscore = 'all_nodes_no_crime_in_bscore.json'
 
 #Open taxi busyness json file
 busyObj_taxi = openJson(json_dir,busy_taxi)
@@ -139,8 +139,8 @@ for i in range(len(new_busyObj)):
 
 update_nodes(all_nodes_no_crime_in_bscore,new_busyObj)
 
-
-include_crime = True #Decide whether to include crime scores or not
+########## Decide if to include Crime ############################
+include_crime = True 
 
 #Open all nodes json file to get crime score
 crime = 'all_nodes.json'
