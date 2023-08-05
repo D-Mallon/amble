@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import bScoreData from '../json-files/all_nodes.json';
 
-const useHeatmap = (map) => {
+const useHeatmap = (map, isHeatmapVisible) => {
   const hour = 0;  // Use a default hour value of 0
 
   // Prepare GeoJSON data from bScoreData
@@ -45,8 +45,17 @@ const useHeatmap = (map) => {
           'circle-opacity': 0.5
         }
       });
+      // Set the initial visibility of the layer
+      map.current.setLayoutProperty('b-score-layer', 'visibility', isHeatmapVisible ? 'visible' : 'none');
     });
-  }, [map]);
+  }, [map, isHeatmapVisible]);
+
+  // Additional hook for unchecks
+  useEffect(() => {
+    if (map.current && map.current.isStyleLoaded() && map.current.getLayer('b-score-layer')) {
+      map.current.setLayoutProperty('b-score-layer', 'visibility', isHeatmapVisible ? 'visible' : 'none');
+    }
+  }, [map, isHeatmapVisible]);
 };
 
 export default useHeatmap;

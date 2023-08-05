@@ -724,3 +724,47 @@ h2 {
   background-color: #014e3d !important;
   transition: 0.2;
 }
+
+/* Heatmap Checkboxes */
+.map-container {
+  position: relative;
+}
+
+.heatmap-checkboxes {
+  position: absolute;
+  bottom: 20px;
+  left: 90%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.heatmap-checkboxes label {
+  display: block; /* Each label takes up the full width */
+  margin: 5px 0;  /* Space between labels */
+  cursor: pointer; /* Indicate that the label is clickable */
+}
+
+.heatmap-checkboxes input[type="checkbox"] {
+  margin-left: 10px; /* Space between the label text and the checkbox */
+}
+
+.heatmap-checkboxes .heatmaps-click {
+  cursor: pointer;
+}
+
+.heatmap-checkboxes .heatmaps-closed,
+.checkboxes-visibility.hidden {
+  display: none;
+}
+
+.checkboxes-visibility {
+  transition: opacity 0.3s; /* Optional smooth transition */
+}
+
+.checkboxes-visibility.hidden {
+  opacity: 0; /* Hide the content */
+  pointer-events: none; /* Prevent any interaction */
+}

@@ -64,6 +64,8 @@ const Map = () => {
   const { globalArray, setGlobalArrayValue } = useWaypointsArray();
   const [walkRating, setWalkRating] = useState(2);
   const [waypointRatings, setWaypointRatings] = useState({});
+  const [isCheckboxesVisible, setCheckboxesVisible] = useState(true);
+  const [isHeatmapVisible, setHeatmapVisible] = useState(true);
   //console.log(globalArray)
 
   const mapContainer = useRef(null);
@@ -105,7 +107,7 @@ const Map = () => {
     { value: 'worship_locations', label: 'Places of Worship' },
     { value: 'community_locations', label: 'Community Centres' },
     { value: 'museum_art_locations', label: 'Museums & Art Galleries' },
-    { value: 'walking_node_locations', label: 'Other Walking Nodes' },
+    // { value: 'walking_node_locations', label: 'Other Walking Nodes' },
     // { value: 'park_node_locations', label: 'Other Park Nodes' },
   ];
 
@@ -118,19 +120,12 @@ const Map = () => {
 
   const selectedValues = selectedOptions.map((option) => option.value);
 
-  const handlePreferencesSubmit = async (e) => {
-    e.preventDefault();
-    console.log('Selected Values:', selectedValues);
-    console.log('Selected Options:', selectedOptions);
-    // 
-    // Make the POST request
-    axios
-      .post('/users/preferences', { selectedOptions: selectedValues }) //, headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-
+  const handlePreferencesSubmit = () => {
+    return axios
+      .post('/users/preferences', { selectedOptions: selectedValues })
       .then((response) => {
-        // Handle successful response
-        console.log('Data:', response.data);
-        // console.log("Where is the data?");
+        console.log('Preferences Data:', response.data);
+        return response.data; // Return response data for further use
       })
       // If error, alert console
       .catch((error) => {
@@ -156,7 +151,17 @@ const Map = () => {
     inputValues
   );
 
-  useHeatmap(map);  // Call the useHeatmap hook here
+  // Heatmap Visibility & Toggles
+  const toggleCheckboxes = () => {
+    setCheckboxesVisible(!isCheckboxesVisible);
+  };
+
+  const handleToggleHeatmap = () => {
+    setHeatmapVisible(!isHeatmapVisible);
+  };
+
+  useHeatmap(map, isHeatmapVisible);
+
 
   const { route, displayRoute, directiondata } = useRouteDisplay(
     map.current,
@@ -272,6 +277,23 @@ const Map = () => {
     }
   };
 
+  const handleOverallSubmit = async (e) => {
+    e.preventDefault();
+  
+    try {
+      // First, handle preferences
+      await handlePreferencesSubmit();
+      console.log('Preferences submitted successfully');
+  
+      // Next, handle the input
+      await handleInputSubmit(e); // You might need to pass any necessary parameters here
+      console.log('Input submitted successfully');
+    } catch (error) {
+      console.log('An error occurred:', error);
+      // Handle error, perhaps showing a message to the user
+    }
+  };
+
   //Below is route presentation part!!
   const [plansetwin, setplansetwin] = useState(true);
   const [chatalien, setchatalien] = useState(false);
@@ -318,8 +340,8 @@ const Map = () => {
   };
 
   const handleRatingsCalc = () => {
-    console.log("Submitted General Walk Rating:", walkRating);
-    console.log("Submitted Waypoint Ratings:", waypointRatings);
+    //console.log("Submitted General Walk Rating:", walkRating);
+    //console.log("Submitted Waypoint Ratings:", waypointRatings);
 
     // Define mappings using arrays of tuples and convert them to objects
     const walkRatingModifiers = Object.fromEntries([[0, -0.25], [0.5, -0.2], [1, -0.15], [1.5, -0.15], [2, -0.1], [2.5, -0.1], [3, -0.05], [3.5, -0.05], [4, 0.0], [4.5, 0.05], [5, 0.05], [5.5, 0.1], [6, 0.1], [6.5, 0.15], [7, 0.15], [7.5, 0.2], [8, 0.2], [8.5, 0.25], [9, 0.25], [9.5, 0.3], [10, 0.4]]);
@@ -369,17 +391,17 @@ const Map = () => {
         bScore = Math.min(bScore, 2);
         totalScore += bScore; // Add the b-score to the total score
       }
-      console.log("total quietness score:", totalScore);
+      //console.log("total quietness score:", totalScore);
     });
-    console.log("location b-scores:", locationBScores);
+    //console.log("location b-scores:", locationBScores);
     const averageScore = totalScore / globalArray.length;
-    console.log('Average Quietness:', averageScore);
+    //console.log('Average Quietness:', averageScore);
     const percentageQuietness = (averageScore / 2) * 100;
-    console.log('Percentage Quietness:', percentageQuietness);
+    //console.log('Percentage Quietness:', percentageQuietness);
     return percentageQuietness;
   };
 
-  const percentageQuietness = calculateQuietnessScore();
+  //const percentageQuietness = calculateQuietnessScore();
 
   const colourPicker = (percentageQuietness) => {
     let red, green;
@@ -866,7 +888,7 @@ const Map = () => {
                 <a
                   className="plansetting-text"
                   type="submit"
-                  onClick={handleInputSubmit}
+                  onClick={handleOverallSubmit}
                 >
                   <span>Let's Go!</span>
                 </a>
@@ -1103,6 +1125,46 @@ const Map = () => {
       )}
 
       <div ref={mapContainer} className="map-container" />
+        {/* Heatmap Checkboxes*/}
+       <div className="heatmap-checkboxes">
+          <span className="heatmaps-click" onClick={toggleCheckboxes}><b>HeatMaps</b></span>
+          <span className="heatmaps-open" style={{display: isCheckboxesVisible ? 'inline' : 'none'}}>&#9660;</span>
+          <span className="heatmaps-closed" style={{display: isCheckboxesVisible ? 'none' : 'inline'}}>&#9650;</span>
+          <div className={isCheckboxesVisible ? 'checkboxes-visibility' : 'checkboxes-visibility hidden'}>
+            <label>
+              Location Busyness: 
+              <input
+                type="checkbox"
+                checked={isHeatmapVisible}
+                onChange={handleToggleHeatmap}
+              />
+            </label>
+            <label>
+              Taxizone Busyness: 
+              {/*<input
+                type="checkbox"
+                checked={isHeatmapVisible}
+                onChange={handleToggleHeatmap}
+                  />*/}
+            </label>
+            <label>
+              Crime Scores: 
+              {/*<input
+                type="checkbox"
+                checked={isHeatmapVisible}
+                onChange={handleToggleHeatmap}
+                  />*/}
+            </label>
+            <label>
+              User Ratings: 
+              {/*<input
+                type="checkbox"
+                checked={isHeatmapVisible}
+                onChange={handleToggleHeatmap}
+                  />*/}
+            </label>
+          </div>
+        </div>
     </div>
   );
 };
