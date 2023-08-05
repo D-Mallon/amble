@@ -85,6 +85,7 @@ museum = 'museum_art_locations.json'
 worship = 'worship_locations.json'
 walking_node = 'walking_node_locations.json'
 all_nodes = 'all_nodes.json'
+all_nodes_no_crime_in_bscore = 'all_nodes.json'
 
 #Open taxi busyness json file
 busyObj_taxi = openJson(json_dir,busy_taxi)
@@ -114,16 +115,16 @@ for i in range(24):
     busyObj_bike.append(bike_128)
 
 ################## Checks ########################################
-# print(f'\nFor Zone {zone} at time {time}\n-----------------------')
-# for Obj in busyObj_taxi:
-#     if Obj['Taxi Zone ID'] == zone and  Obj['Hour'] == time:
-#         busy = Obj['Busyness Predicted']
-#         print(f'Taxi Busyness before weighting = {busy}')
+print(f'\nFor Zone {zone} at time {time}\n-----------------------')
+for Obj in busyObj_taxi:
+    if Obj['Taxi Zone ID'] == zone and  Obj['Hour'] == time:
+        busy = Obj['Busyness Predicted']
+        print(f'Taxi Busyness before weighting = {busy}')
 
-# for Obj in busyObj_bike:
-#     if Obj['Taxi Zone ID'] == zone and  Obj['Hour'] == time:
-#         busy = Obj['Busyness Predicted']
-#         print(f'Bike Busyness before weighting = {busy}')
+for Obj in busyObj_bike:
+    if Obj['Taxi Zone ID'] == zone and  Obj['Hour'] == time:
+        busy = Obj['Busyness Predicted']
+        print(f'Bike Busyness before weighting = {busy}')
 
 #Build inputs for new combined bike and taxi data
 new_busyObj = busyObj_taxi.copy()
@@ -135,6 +136,9 @@ for i in range(len(new_busyObj)):
     for j in range(len(busyObj_bike)):
         if taxiID == busyObj_bike[j]['Taxi Zone ID'] and hour == busyObj_bike[j]['Hour']:
             new_busyObj[i]['Busyness Predicted'] = (new_busyObj[i]['Busyness Predicted'] * taxi_weight) + (busyObj_bike[j]['Busyness Predicted'] * bike_weight)
+
+update_nodes(all_nodes_no_crime_in_bscore,new_busyObj)
+
 
 include_crime = True #Decide whether to include crime scores or not
 
@@ -167,27 +171,27 @@ update_nodes(all_nodes,new_busyObj)
 # run_time = round((end_time - start_time),1)
 # print(f'Run time to populate busyness scores for all 24 hours = {run_time} seconds')
 
-# #After combining Checks
-# print(f'\nFor Zone {zone} at time {time}\n-----------------------')
-# for Obj in busyObj_taxi:
-#     if Obj['Taxi Zone ID'] == zone and  Obj['Hour'] == time:
-#         busy = Obj['Busyness Predicted']
-#         print(f'Taxi Busyness after weighting = {busy}')
+#After combining Checks
+print(f'\nFor Zone {zone} at time {time}\n-----------------------')
+for Obj in busyObj_taxi:
+    if Obj['Taxi Zone ID'] == zone and  Obj['Hour'] == time:
+        busy = Obj['Busyness Predicted']
+        print(f'Taxi Busyness after weighting = {busy}')
 
-# for Obj in busyObj_bike:
-#     if Obj['Taxi Zone ID'] == zone and  Obj['Hour'] == time:
-#         busy = Obj['Busyness Predicted']
-#         print(f'Bike Busyness after weighting = {busy}')
+for Obj in busyObj_bike:
+    if Obj['Taxi Zone ID'] == zone and  Obj['Hour'] == time:
+        busy = Obj['Busyness Predicted']
+        print(f'Bike Busyness after weighting = {busy}')
 
-# for Obj in busyObj_crime:
-#     for k,v in crime_score.items():
-#         if zone == str(k):
-#             print(f'Crime score = {v}')
+for Obj in busyObj_crime:
+    for k,v in crime_score.items():
+        if zone == str(k):
+            print(f'Crime score = {v}')
 
-# for Obj in new_busyObj:
-#     if Obj['Taxi Zone ID'] == zone and  Obj['Hour'] == time:
-#         busy = Obj['Busyness Predicted']
-#         if include_crime == True:
-#             print(f'Crime Busyness = {busy}')
-#         else:
-#             print(f'Taxi/Bike Busyness = {busy}')
+for Obj in new_busyObj:
+    if Obj['Taxi Zone ID'] == zone and  Obj['Hour'] == time:
+        busy = Obj['Busyness Predicted']
+        if include_crime == True:
+            print(f'Crime Busyness = {busy}')
+        else:
+            print(f'Taxi/Bike Busyness = {busy}')
