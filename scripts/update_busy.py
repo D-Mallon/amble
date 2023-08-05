@@ -34,7 +34,10 @@ def getCrime(busyObj_crime):
     crime_score = {}
     crime_score[202] = 0.5 # Create dummy value (based on median value) for this missing zone
     for d in busyObj_crime['data']:
-        crime_score[d["taxi-zone"]] = d["c-score"]
+        crime_score[d["taxi-zone"]] = round(d["c-score"],4)
+    sorted_crime = dict(sorted(crime_score.items()))
+    print(sorted_crime)
+    
     # mean_crime = statistics.mean(list_crime_scores)
     # median_crime = statistics.median(list_crime_scores)
     # range_crime = max(list_crime_scores)-min(list_crime_scores)
@@ -89,6 +92,7 @@ all_nodes_no_crime_in_bscore = 'all_nodes_no_crime_in_bscore.json'
 
 #Open taxi busyness json file
 busyObj_taxi = openJson(json_dir,busy_taxi)
+print(type(busyObj_taxi ))
 
 #Open bike busyness json file
 busyObj_bike = openJson(json_dir,busy_bike)
@@ -99,8 +103,8 @@ bike_weight = 0.36 #Based on MAE
 crime_weight = 0.20 #% of busyness score based on crime levels
 
 #For checking
-zone = '202'
-time = 17
+zone = '12'
+time = 23
 
 #Change bike timestamp heading to taxi timestamp heading
 for Obj in busyObj_bike:
@@ -146,6 +150,8 @@ include_crime = True
 crime = 'all_nodes.json'
 busyObj_crime = openJson(json_dir,crime)
 crime_score = getCrime(busyObj_crime)
+# x = crime_score['12']
+# print(f'Crime Score for zone 12 {x}')
 crime_score['202'] = 0.5
 
 if include_crime == True:
@@ -157,14 +163,14 @@ if include_crime == True:
                 Obj['Busyness Predicted'] = Obj['Busyness Predicted'] * (1-crime_weight) + v * crime_weight
 
 #Update the Nodes
-update_nodes(park,new_busyObj)
-update_nodes(library,new_busyObj)
-update_nodes(parknode,new_busyObj)
-update_nodes(community,new_busyObj)
-update_nodes(museum,new_busyObj)
-update_nodes(worship,new_busyObj)
-update_nodes(walking_node,new_busyObj)
-update_nodes(all_nodes,new_busyObj)
+# update_nodes(park,new_busyObj)
+# update_nodes(library,new_busyObj)
+# update_nodes(parknode,new_busyObj)
+# update_nodes(community,new_busyObj)
+# update_nodes(museum,new_busyObj)
+# update_nodes(worship,new_busyObj)
+# update_nodes(walking_node,new_busyObj)
+# update_nodes(all_nodes,new_busyObj)
 
 # ####### End time - to get run time #########
 # end_time = time.time()
@@ -186,7 +192,7 @@ for Obj in busyObj_bike:
 for Obj in busyObj_crime:
     for k,v in crime_score.items():
         if zone == str(k):
-            print(f'Crime score = {v}')
+            print(f'Crime score = {v} for taxi zone = {k}')
 
 for Obj in new_busyObj:
     if Obj['Taxi Zone ID'] == zone and  Obj['Hour'] == time:
