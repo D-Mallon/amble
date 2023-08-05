@@ -401,7 +401,7 @@ const Map = () => {
     return percentageQuietness;
   };
 
-  //const percentageQuietness = calculateQuietnessScore();
+  const percentageQuietness = calculateQuietnessScore();
 
   const colourPicker = (percentageQuietness) => {
     let red, green;
