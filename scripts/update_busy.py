@@ -144,7 +144,7 @@ for i in range(len(new_busyObj)):
 update_nodes(all_nodes_no_crime_in_bscore,new_busyObj)
 
 ########## Decide if to include Crime ############################
-include_crime = True 
+include_crime = False 
 
 #Open all nodes json file to get crime score
 crime = 'all_nodes.json'
