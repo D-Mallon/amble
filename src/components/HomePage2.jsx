@@ -84,7 +84,7 @@ function LandingPage() {
             </span>
           </span>
           <div className="home-button-container">
-            <MyButton onClick={toggleamble} />
+            <MyButton  />
           </div>
         </div>
         <div className="guidebutton">
