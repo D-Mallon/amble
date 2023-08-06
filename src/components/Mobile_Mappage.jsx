@@ -28,6 +28,7 @@ import MyFunctionButton from './functionbutton';
 import Map_Mobile from './Map_Mobile';
 import Box from "@mui/material/Box";
 import './Mobile_Mappage.css';
+import Map from './Map';
 
 
 const theme = createTheme({
@@ -150,7 +151,7 @@ function Mobile_Mappage() {
         <div className="PlanWin-mobile">
         
 
-          <div className="PlanMap">
+          <div className="PlanMap-mobile">
             <div className="additional-blocks">
              
               {/* <div
@@ -162,7 +163,7 @@ function Mobile_Mappage() {
             
             </div>
         
-            <Map_Mobile />
+            <Map_Mobile/>
           </div>
         </div>
       </div>

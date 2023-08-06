@@ -1,6 +1,13 @@
+
+//新的特殊加入的！！
+import RouteIcon from '@mui/icons-material/Route';
+import TuneIcon from '@mui/icons-material/Tune';
+import "./Map_Mobile.css"
+import HMobiledataIcon from '@mui/icons-material/HMobiledata';
+
+
 import React, { useRef, useEffect, useState, useContext } from "react";
 import mapboxgl from "mapbox-gl";
-import "./Map_Mobile.css";
 import "mapbox-gl/dist/mapbox-gl.css";
 import DateTimePicker from "react-datetime-picker";
 import axios from "axios";
@@ -9,10 +16,11 @@ import routedirection from "./routedirection";
 import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-import TuneIcon from '@mui/icons-material/Tune';
+import MapIcon from '@mui/icons-material/Map';
+
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import MapIcon from '@mui/icons-material/Map';
+
 import HomeIcon from "@mui/icons-material/Home";
 
 import SearchIcon from "@mui/icons-material/Search";
@@ -26,18 +34,22 @@ import useRouteDisplay from "./useRouteDisplay";
 import useGeocoding from "./useGeocoding";
 import useMapInit from "./useMapInit";
 import usePlaceNameChange from "./usePlaceNameChange";
+import useHeatmap from "./useHeatmap";
 import Box from "@mui/material/Box";
 import CloseIcon from "@mui/icons-material/Close";
 
 import { ArrayContext, useWaypointsArray } from "../context/ArrayContext";
 import ChatBox from "./ChatBox";
 import Ratings from "./Ratings";
+import CircularProgress from '@mui/material/CircularProgress';
 
 import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { StandaloneSearchBox } from "@react-google-maps/api";
+
+import Select from 'react-select';
 
 const apiKey = import.meta.env.VITE_MAPBOX_API_KEY;
 mapboxgl.accessToken = apiKey;
@@ -52,16 +64,48 @@ const Map_Mobile = () => {
     },
   });
 
+
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      borderRadius: 0,
+      color: '#014e3d',
+      width: '350px', // 或者设置您需要的具体宽度值
+      borderColor: '#014e3d', // 修改边框颜色
+      borderWidth: '1.5px', // 修改边框粗细
+      '&:hover': {
+        borderColor: '#014e3d', // 修改 hover 边框颜色
+      },
+      '&:focus': {
+        borderColor: '#014e3d', // 修改被点击时的边框颜色
+      }
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: state.isFocused ? 'white' : 'white', // 修改 hover 颜色
+      '&:hover': {
+        backgroundColor: '#b1ff05', // 修改 hover 颜色
+      },
+    }),
+    singleValue: (provided, state) => ({
+      ...provided,
+      color: '#014e3d', // 修改选中颜色
+    }),
+  };
+
+
   const navigate = useNavigate();
   const normalImagePath = "/static/images/chatamble3.png";
   const hoverImagePath = "/static/images/chatamble2.png";
 
   const { inputValues, setInputValues } = useMapInput();
   const { globalArray, setGlobalArrayValue } = useWaypointsArray();
-  const [ walkRating, setWalkRating] = useState(2); 
-  const [ waypointRatings, setWaypointRatings] = useState({}); 
+  const [walkRating, setWalkRating] = useState(2);
+  const [waypointRatings, setWaypointRatings] = useState({});
+  const [isCheckboxesVisible, setCheckboxesVisible] = useState(true);
+  const [isHeatmapVisible, setHeatmapVisible] = useState(true);
   //console.log(globalArray)
-  
+
   const mapContainer = useRef(null);
   const [lat, setLat] = useState(40.73);
   const [lng, setLng] = useState(-73.445);
@@ -84,6 +128,7 @@ const Map_Mobile = () => {
   const [showDistanceInput, setShowDistanceInput] = useState(false); //change to false
   const [showBeginLocationInput, setShowBeginLocationInput] = useState(false); //change to false
   const [showEndLocationInput, setShowEndLocationInput] = useState(false); //change to false
+  const [showPreferencesInput, setShowPreferencesInput] = useState(false); //change to false
   const [showGoButton, setShowGoButton] = useState(false);
   const [nowSelected, setNowSelected] = useState(false);
   const [laterSelected, setLaterSelected] = useState(false);
@@ -94,6 +139,48 @@ const Map_Mobile = () => {
   const [endSearchSelected, setEndSearchSelected] = useState(false);
   const [endAddressSelected, setEndAddressSelected] = useState(false);
 
+  const options = [
+    // { value: 'park', label: 'Parks' },
+    { value: 'library_locations', label: 'Libraries' },
+    { value: 'worship_locations', label: 'Places of Worship' },
+    { value: 'community_locations', label: 'Community Centres' },
+    { value: 'museum_art_locations', label: 'Museums & Art Galleries' },
+    // { value: 'walking_node_locations', label: 'Other Walking Nodes' },
+    // { value: 'park_node_locations', label: 'Other Park Nodes' },
+  ];
+
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  const handleSelectChange = (selected) => {
+    setSelectedOptions(selected);
+    setShowGoButton(true);
+  };
+
+  const selectedValues = selectedOptions.map((option) => option.value);
+
+  const handlePreferencesSubmit = () => {
+    return axios
+      .post('/users/preferences', { selectedOptions: selectedValues })
+      .then((response) => {
+        console.log('Preferences Data:', response.data);
+        return response.data; // Return response data for further use
+      })
+      // If error, alert console
+      .catch((error) => {
+        if (error.response) {
+          console.log(error.response);
+          console.log("Status code:", error.response.status);
+          console.log("Error Message", error.message);
+          console.log("Response Data:", error.response.data);
+
+        } else if (error.request) {
+          console.log("network error");
+        } else {
+          console.log(error);
+        }
+      });
+  };
+
   const { map, markers } = useMapInit(
     mapContainer,
     lat,
@@ -101,6 +188,19 @@ const Map_Mobile = () => {
     zoom,
     inputValues
   );
+
+  // Heatmap Visibility & Toggles
+  const toggleCheckboxes = () => {
+    setCheckboxesVisible(!isCheckboxesVisible);
+  };
+
+  const handleToggleHeatmap = () => {
+    setHeatmapVisible(!isHeatmapVisible);
+  };
+
+  useHeatmap(map, isHeatmapVisible);
+
+
   const { route, displayRoute, directiondata } = useRouteDisplay(
     map.current,
     inputValues,
@@ -117,7 +217,7 @@ const Map_Mobile = () => {
     setInputValues,
     showEndLocationInput,
     setShowEndLocationInput,
-    setShowGoButton
+    setShowPreferencesInput
   );
   const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } =
     usePlaceNameChange("", setInputValues);
@@ -203,6 +303,10 @@ const Map_Mobile = () => {
       setplansetwin(false);
       setchatalien(true);
       setroutedetail(true);
+
+      //为了mobile新加的
+      setmobileshowbut(true);
+
     } catch (error) {
       if (error.response) {
         console.log(error.response);
@@ -212,6 +316,23 @@ const Map_Mobile = () => {
       } else {
         console.log(error);
       }
+    }
+  };
+
+  const handleOverallSubmit = async (e) => {
+    e.preventDefault();
+  
+    try {
+      // First, handle preferences
+      await handlePreferencesSubmit();
+      console.log('Preferences submitted successfully');
+  
+      // Next, handle the input
+      await handleInputSubmit(e); // You might need to pass any necessary parameters here
+      console.log('Input submitted successfully');
+    } catch (error) {
+      console.log('An error occurred:', error);
+      // Handle error, perhaps showing a message to the user
     }
   };
 
@@ -245,15 +366,13 @@ const Map_Mobile = () => {
     setcatHover(false);
   };
 
-  const backtoplanwin = () => {
-    setplansetwin(true);
-    setchatalien(false);
-    setroutedetail(false);
-    setchatbox(false);
-  };
+
 
   const toggleratewin = () => {
     setratingwin(true);
+    setchatbox(false);
+    setchatalien(false);
+    setroutedetail(false);
   };
 
   const handleButtonClick_close = () => {
@@ -261,10 +380,9 @@ const Map_Mobile = () => {
   };
 
   const handleRatingsCalc = () => {
-    console.log("Submitted General Walk Rating:", walkRating);
-    console.log("Submitted Waypoint Ratings:", waypointRatings);
+    //console.log("Submitted General Walk Rating:", walkRating);
+    //console.log("Submitted Waypoint Ratings:", waypointRatings);
 
-    // score mapping - edge scores have negative and positive bonuses
     // Define mappings using arrays of tuples and convert them to objects
     const walkRatingModifiers = Object.fromEntries([[0, -0.25], [0.5, -0.2], [1, -0.15], [1.5, -0.15], [2, -0.1], [2.5, -0.1], [3, -0.05], [3.5, -0.05], [4, 0.0], [4.5, 0.05], [5, 0.05], [5.5, 0.1], [6, 0.1], [6.5, 0.15], [7, 0.15], [7.5, 0.2], [8, 0.2], [8.5, 0.25], [9, 0.25], [9.5, 0.3], [10, 0.4]]);
     const ratingModifierMapping = Object.fromEntries([[-5, -0.6], [-4, -0.4], [-3, -0.3], [-2, -0.2], [-1, -0.1], [0, 0], [1, 0.1], [2, 0.2], [3, 0.3], [4, 0.4], [5, 0.6]]);
@@ -284,12 +402,12 @@ const Map_Mobile = () => {
 
     // Send the updated global array to the backend
     axios.post('/users/ratings', updatedGlobalArray)
-    .then((response) => {
-      console.log('Ratings updated successfully:', response.data);
-    })
-    .catch((error) => {
-      console.error('Error updating ratings:', error);
-    });
+      .then((response) => {
+        console.log('Ratings updated successfully:', response.data);
+      })
+      .catch((error) => {
+        console.error('Error updating ratings:', error);
+      });
 
     // Update globalArray
     setGlobalArrayValue(updatedGlobalArray);
@@ -300,27 +418,140 @@ const Map_Mobile = () => {
     handleRatingsCalc(); // Function to process ratings
   };
 
+  const calculateQuietnessScore = () => {
+    let totalScore = 0;
+    let locationBScores = [];
+    let givenTime = inputValues.hour.toString(); // Convert hour to string to match the keys in b-score
+    globalArray.forEach(location => {
+      let bScore = location["b-score"][givenTime];
+      if (bScore != null) {
+        locationBScores.push(bScore);
+        bScore += 1; // Add 1 to the b-score
+        bScore = Math.max(bScore, -2); // Check against the borders
+        bScore = Math.min(bScore, 2);
+        totalScore += bScore; // Add the b-score to the total score
+      }
+      //console.log("total quietness score:", totalScore);
+    });
+    //console.log("location b-scores:", locationBScores);
+    const averageScore = totalScore / globalArray.length;
+    //console.log('Average Quietness:', averageScore);
+    const percentageQuietness = (averageScore / 2) * 100;
+    //console.log('Percentage Quietness:', percentageQuietness);
+    return percentageQuietness;
+  };
+
+  const percentageQuietness = calculateQuietnessScore();
+
+  const colourPicker = (percentageQuietness) => {
+    let red, green;
+    if (percentageQuietness < 50) {
+      red = 255;
+      green = 5 * percentageQuietness; // Transition from 0 to 255 as percentage goes from 0 to 50
+    } else {
+      red = 255 - 5 * (percentageQuietness - 50); // Transition from 255 to 0 as percentage goes from 50 to 100
+      green = 255;
+    }
+    return `rgb(${Math.round(red)}, ${Math.round(green)}, 0)`;
+  };
+
+
+
+
+//为了Mobile新加的
+const [hmap, sethmap] = useState(false);
+const [mobileshowbut, setmobileshowbut] = useState(false);
+const togglehmap = () => {
+  sethmap(!hmap);
+};
+
+const togglehplan = () => {
+  setplansetwin(!plansetwin);
+  setratingwin(false);
+};
+
+const togglehdetail = () => {
+  setroutedetail(!routedetail);
+  setchatalien(true);
+  setratingwin(false);
+
+};
+
+const togglemplan = () => {
+  setplansetwin(!plansetwin);
+  setroutedetail(false);
+  setmobileshowbut(false);
+  setchatalien(false);
+  setchatbox(false);
+  setratingwin(false);
+};
+
+//这个是要改动的
+const backtoplanwin = () => {
+  setplansetwin(true);
+  setchatalien(false);
+  setroutedetail(false);
+  setchatbox(false);
+  setmobileshowbut(false);
+};
+
+const toggledetailwin = () => {
+  setroutedetail(!routedetail);
+
+  if (ratingwin) {
+    setchatalien(true);
+    setratingwin(false);
+  } else {
+    setchatalien(ratingwin => ratingwin ? true : false);
+  }
+};
+
+const togglecloserate= () => {
+  setratingwin(false);
+  setchatalien(true);
+};
+
+const togglehome = () => {
+  navigate("/mobilehomepage");
+};
+
   return (
     <div>
+
+
+
+      {/* mobile新加的 */}
+
       <div
-        className="setblock-mobile"
-        // onClick={toggleWeather}
+        className="heatmap_mobile"
+        onClick={togglehmap}
+      >
+        <HMobiledataIcon sx={{ fontSize: 29, color: "white" }} />
+      </div>
+
+      <div
+        className="set_mobile"
+        onClick={togglemplan}
       >
         <TuneIcon sx={{ fontSize: 23, color: "white" }} />
       </div>
 
-      <div
-        className="showblock-mobile"
-        // onClick={toggleWeather}
+      {mobileshowbut&&(<div
+        className="show_mobile"
+        onClick={toggledetailwin}
       >
-        <MapIcon sx={{ fontSize: 23, color: "white" }} />
-      </div>
+        <RouteIcon sx={{ fontSize: 23, color: "white" }} />
+        </div>)}
+
+
 
       {plansetwin && (
         <>
-          <div className="user-input">
+        {/* 这里为了mobile的效果变化了 */}
+          <div className="user-input-mobile">
             <div className="titlebox">
               <span className="text_bar-mapfunction">My Journey Planner</span>
+              <CloseIcon className="close-hmap" onClick={togglemplan} sx={{ fontSize: 27 , color: 'white'}} />
             </div>
             <div className="when-input">
               <p>When?</p>
@@ -338,12 +569,12 @@ const Map_Mobile = () => {
                     nowSelected
                       ? { borderRadius: 0 }
                       : {
-                          backgroundColor: "transparent",
-                          borderColor: "black",
-                          color: "black",
-                          boxShadow: "none",
-                          borderRadius: 0,
-                        }
+                        backgroundColor: "transparent",
+                        borderColor: "black",
+                        color: "black",
+                        boxShadow: "none",
+                        borderRadius: 0,
+                      }
                   }
                   onClick={handleNowButtonClick}
                 >
@@ -356,12 +587,12 @@ const Map_Mobile = () => {
                     laterSelected
                       ? { borderRadius: 0 }
                       : {
-                          borderRadius: 0,
-                          backgroundColor: "transparent",
-                          borderColor: "black",
-                          color: "black",
-                          boxShadow: "none",
-                        }
+                        borderRadius: 0,
+                        backgroundColor: "transparent",
+                        borderColor: "black",
+                        color: "black",
+                        boxShadow: "none",
+                      }
                   }
                   onClick={handleLaterButtonClick}
                 >
@@ -413,15 +644,15 @@ const Map_Mobile = () => {
                     style={
                       nowSelected
                         ? {
-                            borderColor: "black",
-                            color: "black",
-                            borderRadius: 0,
-                          }
+                          borderColor: "black",
+                          color: "black",
+                          borderRadius: 0,
+                        }
                         : {
-                            borderColor: "black",
-                            color: "black",
-                            borderRadius: 0,
-                          }
+                          borderColor: "black",
+                          color: "black",
+                          borderRadius: 0,
+                        }
                     }
                     onClick={() => {
                       if (sliderUnit === "km") {
@@ -478,12 +709,12 @@ const Map_Mobile = () => {
                         homeSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       Home
@@ -510,12 +741,12 @@ const Map_Mobile = () => {
                         searchSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       {beginLocationPressed ? "Click" : "Map"}
@@ -535,12 +766,12 @@ const Map_Mobile = () => {
                         addressSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       Search
@@ -574,29 +805,29 @@ const Map_Mobile = () => {
                         sx={{
                           "& .MuiOutlinedInput-root": {
                             "& fieldset": {
-                              borderColor: "black",
+                              borderColor: "primary",
                             },
                             "&:hover fieldset": {
-                              borderColor: "black",
+                              borderColor: "primary",
                             },
                             "&.Mui-focused fieldset": {
-                              borderColor: "black",
+                              borderColor: "primary",
                             },
                           },
                           "& .MuiFormLabel-root": {
-                            color: "black",
+                            color: "primary",
                             "&.Mui-focused": {
-                              color: "black",
+                              color: "primary",
                             },
                           },
                           "& .MuiInputBase-root": {
-                            color: "black",
+                            color: "primary",
                           },
                           "& .MuiAutocomplete-clearIndicator": {
-                            color: "black",
+                            color: "primary",
                           },
                           "& .MuiAutocomplete-popupIndicator": {
-                            color: "black",
+                            color: "primary",
                           },
                         }}
                       />
@@ -626,7 +857,7 @@ const Map_Mobile = () => {
                         setEndHomeSelected(true);
                         setEndSearchSelected(false);
                         setEndAddressSelected(false);
-                        setShowGoButton(true);
+                        setShowPreferencesInput(true);
                         setShowEndField(false);
                       }}
                       startIcon={<HomeIcon />}
@@ -636,12 +867,12 @@ const Map_Mobile = () => {
                         endHomeSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       Home
@@ -668,12 +899,12 @@ const Map_Mobile = () => {
                         endSearchSelected
                           ? { borderRadius: 0 }
                           : {
-                              borderRadius: 0,
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                            }
+                            borderRadius: 0,
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                          }
                       }
                     >
                       {endLocationPressed ? "Click" : "Map"}
@@ -693,12 +924,12 @@ const Map_Mobile = () => {
                         endAddressSelected
                           ? { borderRadius: 0 }
                           : {
-                              backgroundColor: "transparent",
-                              borderColor: "black",
-                              color: "black",
-                              boxShadow: "none",
-                              borderRadius: 0,
-                            }
+                            backgroundColor: "transparent",
+                            borderColor: "black",
+                            color: "black",
+                            boxShadow: "none",
+                            borderRadius: 0,
+                          }
                       }
                     >
                       Search
@@ -732,35 +963,50 @@ const Map_Mobile = () => {
                         sx={{
                           "& .MuiOutlinedInput-root": {
                             "& fieldset": {
-                              borderColor: "black",
+                              borderColor: "primary",
                             },
                             "&:hover fieldset": {
-                              borderColor: "black",
+                              borderColor: "primary",
                             },
                             "&.Mui-focused fieldset": {
-                              borderColor: "black",
+                              borderColor: "primary",
                             },
                           },
                           "& .MuiFormLabel-root": {
-                            color: "black",
+                            color: "primary",
                             "&.Mui-focused": {
-                              color: "black",
+                              color: "primary",
                             },
                           },
                           "& .MuiInputBase-root": {
-                            color: "black",
+                            color: "primary",
                           },
                           "& .MuiAutocomplete-clearIndicator": {
-                            color: "black",
+                            color: "primary",
                           },
                           "& .MuiAutocomplete-popupIndicator": {
-                            color: "black",
+                            color: "primary",
                           },
                         }}
                       />
                     )}
                   />
                 )}
+              </div>
+            )}
+
+            {showPreferencesInput && (
+              <div className="preference-box">
+                <p>What would you like to see?</p>
+                <form onSubmit={handlePreferencesSubmit}>
+                  <Select
+                    options={options}
+                    isMulti='true'
+                    value={selectedOptions}
+                    onChange={handleSelectChange}
+                    styles={customStyles}
+                  />
+                </form>
               </div>
             )}
 
@@ -773,7 +1019,7 @@ const Map_Mobile = () => {
                 <a
                   className="plansetting-text"
                   type="submit"
-                  onClick={handleInputSubmit}
+                  onClick={handleOverallSubmit}
                 >
                   <span>Let's Go!</span>
                 </a>
@@ -783,7 +1029,7 @@ const Map_Mobile = () => {
             {/* <Button  sx={{ width: "200px", height: "2.5rem" }} style={{ borderRadius: 0 }} variant='outlined' onClick={() => console.log("These were the inputValues:", inputValues)}>Tell me baby...</Button> */}
             {!showGoButton && (
               <span className="detail-text">
-                Dear user, please tell me more...
+                "Tell me more, tell me more..." - Grease, 1978
               </span>
             )}
           </div>
@@ -791,59 +1037,71 @@ const Map_Mobile = () => {
       )}
 
       {/* Routeshowing win part */}
+      {/* 为了Mobile而改动的！！！ */}
       {routedetail && (
         <>
-          <div className="additional-block-text-detailtitle">
-            <span className="text_bar_2-detailtitle">
-              Route Plan Presentation
-            </span>
-          </div>
-          <div
-            className="additional-block-datail-button"
-            onClick={backtoplanwin}
-          >
-            <span className="text_bar_2-detail">Change Journey Plan</span>
-          </div>
+        
+        
 
-          <div className="detailbox">
+          <div className="detailbox-mobile">
             <div className="detail-titlebox">
+            <CloseIcon className="close-hmap" onClick={toggledetailwin} sx={{ fontSize: 27 , color: 'white'}} />
               <span className="text_bar-mapfunction-detail">
                 My Walk Details
               </span>
             </div>
             <p>Distance or Duration</p>
             {/* <span>{inputValues.distance}{sliderUnit}</span> */}
-            <span>
-              <strong>
-                {sliderUnit === "km"
-                  ? `${sliderValue} km`
-                  : `${sliderValue} mins`}
-              </strong>
-            </span>
+            <span><strong>{sliderUnit === "km"
+              ? `${sliderValue} km`
+              : `${sliderValue} mins`}
+            </strong></span>
             <p>Preference</p>
 
-            <p>Quietness Score</p>
+            <p>Quietness Score</p><br/>
+            <div className="quietness-traffic-light" style={{ position: 'relative', display: 'inline-block' }}>
+              <CircularProgress
+                variant="determinate"
+                size="3rem"
+                sx={{
+                  ".MuiCircularProgress-circle": {
+                    stroke: colourPicker(percentageQuietness), // Apply color to the circle stroke
+                    fill: `${colourPicker(percentageQuietness)}40`,
+                  }
+                }}
+                value={percentageQuietness}
+              />
+              <div style={{
+                position: 'absolute',
+                top: '42%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                fontSize: '1rem', // Adjust font size as needed
+              }}><b>
+                {Math.round(percentageQuietness)}%</b>
+              </div>
+            </div>
 
-            <div className="directionbox">
+  {/* 为了Mobile而改动的！！！ */}
+
+            <div className="directionbox-mobile">
               <div className="directionbox-titlebox">
                 <span className="text_bar-mapfunction-detail-2">
                   Direction Helper
                 </span>
               </div>
-              <div className="directiondetail">
+              <div className="directiondetail-mobile">
                 <ul className="directionswords">
                   {directiondata.map((step, index) => (
                     <span key={index}>
                       <span className="bold-step">
                         {`Step ${index + 1}: `}&nbsp;&nbsp;
                       </span>
-                      {`${step.action ? step.action : "Proceed"}${
-                        step.road ? ` on ${step.road}` : ""
-                      }${
-                        step.distance
+                      {`${step.action ? step.action : "Proceed"}${step.road ? ` on ${step.road}` : ""
+                        }${step.distance
                           ? ` for ${step.distance.toFixed(2)} meters`
                           : ""
-                      }${step.isKeyNode ? " (Arrived at Key Node)" : ""}`}
+                        }${step.isKeyNode ? " (Arrived at Key Node)" : ""}`}
                       <br />
                     </span>
                   ))}
@@ -864,12 +1122,13 @@ const Map_Mobile = () => {
         </>
       )}
 
+{/* 为了mobile修改了 */}
       {chatalien && (
         <>
           <img
             src={normalImagePath}
             alt="Normal Image"
-            className="alien-robot"
+            className="alien-robot-mobile"
             onMouseEnter={(e) =>
               e.currentTarget.setAttribute("src", hoverImagePath)
             }
@@ -883,7 +1142,7 @@ const Map_Mobile = () => {
 
       {chatbox && (
         <>
-          <div className="alienchatbox" id="chatbox">
+          <div className="alienchatbox-mobile" id="chatbox">
             {cathover ? (
               <img
                 src="/static/images/chatamble0.png"
@@ -915,37 +1174,28 @@ const Map_Mobile = () => {
       )}
 
       {/* Ratings Popup for Waypoints*/}
+      {/* 为了mobile效果要变动的 */}
+
       {ratingwin && (
-        <div className="ratewin">
-          {/* <div className='white-board'></div> */}
+        <div className="ratewin-mobile">
+           
+            
           <img
             src="/static/images/MenuPic5.jpg"
             alt="pics"
             className="ratewin-background"
           ></img>
-          <div className="additional-blocks-ratewin">
-            {/*<div className="additional-block-text-ratewin">
-              <span className="text_bar_2-ratewin">Rate Your Walk</span>
-              </div>*/}
+          
+         
+            
 
-            <div
-              className="additional-block-rate-button"
-              onClick={backtodetailwin}
-            >
-              <span className="text_bar_2-detail">
-                See My Walk Detail Again!
-              </span>
-            </div>
+          
 
-            <div
-              className="additional-block-close-ratewin"
-              onClick={handleButtonClick_close}
-            >
-              <CloseIcon sx={{ fontSize: 27, color: "white" }} />
-            </div>
-          </div>
+           
+         
           <div className="General-rate-inform">
-            <div className="stop-text">
+          <CloseIcon className='rate-close-mobile' onClick={togglecloserate} sx={{ fontSize: 27, color: "#014e3d" }} />
+            <div className="stop-text-mobile">
               <span>Rate Your Walk</span>
             </div>
             <Box
@@ -966,34 +1216,85 @@ const Map_Mobile = () => {
                   icon={
                     <FavoriteIcon
                       fontSize="large"
-                      sx={{ fontSize: "2.2rem" }}
+                      sx={{ fontSize: "1.8rem" }}
                     />
                   }
                   emptyIcon={
                     <FavoriteBorderIcon
                       fontSize="large"
-                      sx={{ fontSize: "2.2rem" }}
+                      sx={{ fontSize: "1.8rem" }}
                     />
                   }
                 />
               </div>
             </Box>
-            <div className="stop-text">
+            <div className="stop-text-mobile">
               <span>How much did you like your stops? </span>
             </div>
             <Ratings setWaypointRatings={setWaypointRatings} />{" "}
             {/* Includes the Ratings component here */}
           </div>
-          <div className="finishrate">
-            <a className="finishrate-text" type="submit" onClick={handleSubmit}>
+          <div className="finishrate-mobile">
+            <a className="finishrate-text-mobile" type="submit" onClick={togglehome}>
               <span>Submit My Review</span>
             </a>
           </div>
         </div>
       )}
 
+
+
+
+{/* Mobile 版本变化的东西 !!!!!!!*/}
       <div ref={mapContainer} className="map-container" />
-    </div>
+        {/* Heatmap Checkboxes*/}
+        {hmap&&(
+       <div className="heatmap-checkboxes-mobile">
+        {/* close icon 加入 */}
+
+                <CloseIcon className="close-hmap" onClick={togglehmap} sx={{ fontSize: 27 , color: 'white'}} />
+           
+
+          {/* <span className="heatmaps-click" onClick={toggleCheckboxes}><b>HeatMaps</b></span>
+          <span className="heatmaps-open" style={{display: isCheckboxesVisible ? 'inline' : 'none'}}>&#9660;</span>
+          <span className="heatmaps-closed" style={{display: isCheckboxesVisible ? 'none' : 'inline'}}>&#9650;</span> */}
+          {/* <div className={isCheckboxesVisible ? 'checkboxes-visibility' : 'checkboxes-visibility hidden'}> */}
+            <label>
+              Location Busyness: 
+              <input
+                type="checkbox"
+                checked={isHeatmapVisible}
+                onChange={handleToggleHeatmap}
+              />
+            </label>
+            <label>
+              Taxizone Busyness: 
+              {/*<input
+                type="checkbox"
+                checked={isHeatmapVisible}
+                onChange={handleToggleHeatmap}
+                  />*/}
+            </label>
+            <label>
+              Crime Scores: 
+              {/*<input
+                type="checkbox"
+                checked={isHeatmapVisible}
+                onChange={handleToggleHeatmap}
+                  />*/}
+            </label>
+            <label>
+              User Ratings: 
+              {/*<input
+                type="checkbox"
+                checked={isHeatmapVisible}
+                onChange={handleToggleHeatmap}
+                  />*/}
+            </label>
+          </div>
+          )}
+        </div>
+    //  </div>
   );
 };
 

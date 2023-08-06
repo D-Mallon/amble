@@ -40,6 +40,18 @@ export default function MenuBar() {
     navigate("/loginCheck");
   };
 
+  const togglehome = () => {
+    navigate("/mobilehomepage");
+  };
+
+  const toggleamble = () => {
+    navigate("/mobilemappage");
+  };
+
+  const toggleforyou= () => {
+    navigate("/resources");
+  };
+  
   const handleClickOutside = (event) => {
     if (
       optionsRef.current &&
@@ -90,15 +102,15 @@ export default function MenuBar() {
           <div className='options-homebox ${isMenuVisible ? "active" : ""}' ref={optionsRef}>
             <button className="option">
               {" "}
-              <span className="option-text" onClick={toggleReg}>
+              <span className="option-text" onClick={togglehome}>
                 Home
               </span>
             </button>
             <button className="option">
-              <span className="option-text">Create an amble</span>
+              <span className="option-text" onClick={toggleamble}>Create an amble</span>
             </button>
             <button className="option">
-              <span className="option-text">For you</span>
+              <span className="option-text"  >For you</span>
             </button>
           </div>
         )}

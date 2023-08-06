@@ -4,7 +4,7 @@ import './mainbutton.scss';
 import { TimelineLite, SlowMo, Elastic } from "gsap/all";
 
 
-class MyButton extends React.Component {
+class MyButton2 extends React.Component {
   componentDidMount() {
     $('.button--bubble').each(function() {
       var $circlesTopLeft = $(this).parent().find('.circle.top-left');
@@ -69,8 +69,7 @@ class MyButton extends React.Component {
         </svg>
 
         <span className="button--bubble__container">
-          {/* <a href="/map" className="button button--bubble"  onClick={onClick}> */}
-          <a  className="button button--bubble"  >
+          <a href="/mobilemappage" className="button button--bubble"  onClick={onClick}>
             Create an amble now!
           </a>
           <span className="button--bubble__effect-container">
@@ -90,4 +89,4 @@ class MyButton extends React.Component {
   }
 }
 
-export default MyButton;
+export default MyButton2;

@@ -33,7 +33,9 @@ function LandingPage() {
     '/static/images/newyork3.jpg',
     '/static/images/newyork15.jpg',
   ];
-  
+  const toggleamble = () => {
+    navigate("/map");
+  };
   
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
@@ -82,7 +84,7 @@ function LandingPage() {
             </span>
           </span>
           <div className="home-button-container">
-            <MyButton />
+            <MyButton onClick={toggleamble} />
           </div>
         </div>
         <div className="guidebutton">

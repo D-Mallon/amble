@@ -56,6 +56,36 @@ const Map = () => {
     },
   });
 
+
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      borderRadius: 0,
+      color: '#014e3d',
+      width: '350px', // 或者设置您需要的具体宽度值
+      borderColor: '#014e3d', // 修改边框颜色
+      borderWidth: '1.5px', // 修改边框粗细
+      '&:hover': {
+        borderColor: '#014e3d', // 修改 hover 边框颜色
+      },
+      '&:focus': {
+        borderColor: '#014e3d', // 修改被点击时的边框颜色
+      }
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: state.isFocused ? 'white' : 'white', // 修改 hover 颜色
+      '&:hover': {
+        backgroundColor: '#b1ff05', // 修改 hover 颜色
+      },
+    }),
+    singleValue: (provided, state) => ({
+      ...provided,
+      color: '#014e3d', // 修改选中颜色
+    }),
+  };
+
+
   const navigate = useNavigate();
   const normalImagePath = "/static/images/chatamble3.png";
   const hoverImagePath = "/static/images/chatamble2.png";
@@ -333,6 +363,8 @@ const Map = () => {
 
   const toggleratewin = () => {
     setratingwin(true);
+    setchatbox(false);
+    setchatalien(false);
   };
 
   const handleButtonClick_close = () => {
@@ -675,29 +707,29 @@ const Map = () => {
                         sx={{
                           "& .MuiOutlinedInput-root": {
                             "& fieldset": {
-                              borderColor: "black",
+                              borderColor: "primary",
                             },
                             "&:hover fieldset": {
-                              borderColor: "black",
+                              borderColor: "primary",
                             },
                             "&.Mui-focused fieldset": {
-                              borderColor: "black",
+                              borderColor: "primary",
                             },
                           },
                           "& .MuiFormLabel-root": {
-                            color: "black",
+                            color: "primary",
                             "&.Mui-focused": {
-                              color: "black",
+                              color: "primary",
                             },
                           },
                           "& .MuiInputBase-root": {
-                            color: "black",
+                            color: "primary",
                           },
                           "& .MuiAutocomplete-clearIndicator": {
-                            color: "black",
+                            color: "primary",
                           },
                           "& .MuiAutocomplete-popupIndicator": {
-                            color: "black",
+                            color: "primary",
                           },
                         }}
                       />
@@ -833,29 +865,29 @@ const Map = () => {
                         sx={{
                           "& .MuiOutlinedInput-root": {
                             "& fieldset": {
-                              borderColor: "black",
+                              borderColor: "primary",
                             },
                             "&:hover fieldset": {
-                              borderColor: "black",
+                              borderColor: "primary",
                             },
                             "&.Mui-focused fieldset": {
-                              borderColor: "black",
+                              borderColor: "primary",
                             },
                           },
                           "& .MuiFormLabel-root": {
-                            color: "black",
+                            color: "primary",
                             "&.Mui-focused": {
-                              color: "black",
+                              color: "primary",
                             },
                           },
                           "& .MuiInputBase-root": {
-                            color: "black",
+                            color: "primary",
                           },
                           "& .MuiAutocomplete-clearIndicator": {
-                            color: "black",
+                            color: "primary",
                           },
                           "& .MuiAutocomplete-popupIndicator": {
-                            color: "black",
+                            color: "primary",
                           },
                         }}
                       />
@@ -866,7 +898,7 @@ const Map = () => {
             )}
 
             {showPreferencesInput && (
-              <div>
+              <div className="preference-box">
                 <p>What would you like to see?</p>
                 <form onSubmit={handlePreferencesSubmit}>
                   <Select
@@ -874,6 +906,7 @@ const Map = () => {
                     isMulti='true'
                     value={selectedOptions}
                     onChange={handleSelectChange}
+                    styles={customStyles}
                   />
                 </form>
               </div>

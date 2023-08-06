@@ -155,7 +155,7 @@ h2 {
 
 .plansetting-text span {
   position: relative;
-  z-index: 2;
+  z-index: 0;
 }
 
 .plansetting-text:after {
@@ -185,6 +185,9 @@ h2 {
   margin-bottom: 10px;
 }
 
+.preference-box{
+  z-index: 10;
+}
 
 
 .detailbox {
@@ -323,7 +326,7 @@ h2 {
 }
 
 .directiondetail {
-  height: 380px;
+  height: 340px;
   /* Set the fixed height you desire */
   overflow-y: auto;
   /* Add a scrollbar when content exceeds the height */
@@ -633,34 +636,8 @@ h2 {
   align-items: normal;
 }
 
-.stop-info {
-  background-color: rgb(227, 252, 247, 0.8);
-  width: 15rem;
-  height: 15rem;
-  flex: 1 1 calc(25% - 4rem);
-  margin: 3px;
-  padding-left: 3%;
-  padding-right: 3%;
-  padding-top: 2%;
-  position: relative;
-  display: inline-block;
-  z-index: 100;
-}
 
-.stop-info span.park-name {
-  display: inline-block;
-  max-width: 160px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
-.stand-icon {
-  width: 6rem;
-  height: 6rem;
-  background-color: #014e3d;
-  margin: auto;
-}
 
 .finishrate {
   position: relative;
@@ -767,4 +744,10 @@ h2 {
 .checkboxes-visibility.hidden {
   opacity: 0; /* Hide the content */
   pointer-events: none; /* Prevent any interaction */
+}
+
+
+.quietness-traffic-light{
+  margin-top: -25px;
+  margin-bottom: 5px;
 }
