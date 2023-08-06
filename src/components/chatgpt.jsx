@@ -106,7 +106,7 @@ const ChatGPT = () => {
     },
     {
       value: `Suggest some mindfulness classes around ${address[0]} `,
-      label: "3. Suggest some mindfulness classes on my route",
+      label: "3. Suggest some mindfulness classes",
     },
     {
       value: `On average how many calories will I burn on a ${dis} km walk?`,
