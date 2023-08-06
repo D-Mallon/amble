@@ -21,7 +21,7 @@ start_time = time.time()
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-file_path_pickle = BASE_DIR /'src'/'pickle_files'/'citibike1.pkl'
+file_path_pickle = BASE_DIR /'src'/'pickle_files'/'citibike.pkl'
 file_path_taxi = BASE_DIR /'src'/'json-files'/'taxizones.json'
 file_path_busy_input_csv = BASE_DIR /'src'/'json-files'/'busy_bike_input.csv'
 file_path_busy_input_json = BASE_DIR /'src'/'json-files'/'busy_bike_input.json'
