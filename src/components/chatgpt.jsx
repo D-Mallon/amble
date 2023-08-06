@@ -10,6 +10,8 @@ import MyFunctionButton from "./functionbutton";
 import MapBackground from "./mapbackground";
 import Box from "@mui/material/Box";
 import { ArrayContext, useWaypointsArray } from "../context/ArrayContext";
+import { MapInputContext } from '../context/MapInputContext';
+import { useMapInput } from '../context/MapInputContext';
 
 import axios from "axios";
 
@@ -17,13 +19,19 @@ const ChatGPT = () => {
   const [userInput, setUserInput] = useState("");
   const [response, setResponse] = useState("");
   const { globalArray, setGlobalArrayValue } = useWaypointsArray();
+  const { inputValues, setInputValues } = useContext(MapInputContext);
   console.log(globalArray);
+  console.log(inputValues);
 
   // Create a list with the data from the amble
   const name = [];
   const type = [];
   const address = [];
   const coord = [];
+
+  const dis = inputValues["distance"];
+  console.log(dis);
+ 
   for (let item in globalArray) {
     // console.log(item + ':', globalArray[item]['name']);
     const tempitem_name = globalArray[item]["name"];
@@ -75,8 +83,6 @@ const ChatGPT = () => {
     },
   });
 
-  const dist = 7;
-
   const currentDate = new Date();
   const dates = { month: "long", day: "numeric" };
   const formattedDate = currentDate.toLocaleString(undefined, dates);
@@ -103,7 +109,7 @@ const ChatGPT = () => {
       label: "3. Suggest some mindfulness classes on my route",
     },
     {
-      value: `On average how many calories will I burn on a ${dist} mile walk?`,
+      value: `On average how many calories will I burn on a ${dis} km walk?`,
       label: "4. On average how many calories will I burn?",
     },
     {
