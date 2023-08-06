@@ -61,16 +61,15 @@ function LandingPage() {
       </div>
       <div className="homepage-pics-container">
         <div className="left-color-block">
-          <span className="hometext-title">
+          <div className="hometext-title">
             {(!temp1)&&(!temp2)&&<span style={{ fontSize: "36px", fontWeight: 500 }}>
               amble <br></br>- the peaceful way
             </span>}
             {temp1&&temp2&&<span style={{ fontSize: "36px", fontWeight: 500 }}>
               Welcome back our everlasting friend,<br></br>{greeting2}!
             </span>}
-            <br></br>
-            <br></br>
-            <br></br>
+            </div>
+            <div className="hometext-body">
             <span style={{ fontSize: "16px" }}>
               The purpose of our application is to generate walking routes for
               users to guide them though the quiet corners of Manhattan.
@@ -82,7 +81,7 @@ function LandingPage() {
               statistics for areas of Manhattan to ensure users can enjoy a
               quiet, peaceful and safe journey!
             </span>
-          </span>
+          </div>
           <div className="home-button-container">
             <MyButton  />
           </div>
