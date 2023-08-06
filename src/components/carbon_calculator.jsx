@@ -34,7 +34,7 @@ const Carbon = () => {
   const [alertText, setAlertText] = useState(''); // State to hold alert text
   const [showAlertText, setShowAlertText] = useState(false); // State to control visibility
   const handleSeeTreesClick = () => {
-    const message = 'If you did this walk 3 times a week for a year that is a Carbon Savings equivalent to planting ' + num_trees + ' trees';
+    const message = 'If you did this walk 3 times a week for a year, that is a Carbon Savings equivalent to planting ' + num_trees + ' trees';
     setAlertText(message);
     setShowAlertText(true);
     setShowtreecon(true);
@@ -83,7 +83,7 @@ return (<>
             href="#"
             type="submit"
           >
-            <span>See Number of Trees</span>
+            <span>Your amble Trees</span>
           </a>
         </div>
      )}
