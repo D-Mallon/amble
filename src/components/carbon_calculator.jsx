@@ -24,8 +24,8 @@ const Carbon = () => {
     const co2_per_tree_per_year = 22;
     const tree_per_mile = 1/(co2_per_tree_per_year / co2_per_mile);
     const percentage_of_tree = tree_per_mile * dist * 3; 
-    const num_trees = 4 * dist;
-    console.log (percentage_of_tree);
+    const num_trees = Math.round(0.8285 * dist * 3);
+    console.log (dist);
 
     const [showtreecon, setShowtreecon] = useState(false); // 新增的状态
   const [showBut, setShowBut] = useState(true); // 新增的状态
