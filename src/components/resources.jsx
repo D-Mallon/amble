@@ -43,7 +43,7 @@ const navigate=useNavigate();
 
     
         <div className="attribution-text">
-          Get a Reflection from 'They Said So' : Learn Something Interesting powered by ChatGPT : Number of trees from savingnature.com
+          Get a Reflection from 'They Said So' : Learn Something Interesting powered by ChatGPT : Your amble Trees from savingnature.com
       </div>
       </div>
     );

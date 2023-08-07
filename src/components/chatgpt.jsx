@@ -98,7 +98,7 @@ const ChatGPT = () => {
     },
     {
       value: `Tell me one thing good that happened on ${formattedDate}`,
-      label: "1. What good things happened on this date?",
+      label: "1. Anything good happened on this day?",
     },
     {
       value: `Give me a short paragraph on ${name[1]} in Manhattan`,
@@ -114,7 +114,7 @@ const ChatGPT = () => {
     },
     {
       value: `What point of interest is found around longitude ${coord[0]["longitude"]} and latitude ${coord[0]["latitude"]}?`,
-      label: "5. What else is interesting as I amble?",
+      label: "5. What else might I discover?",
     },
     {
       value: `Who was born on ${formattedDate}?`,
