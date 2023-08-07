@@ -109,9 +109,9 @@ export default function MenuBar() {
             <button className="option">
               <span className="option-text" onClick={toggleamble}>Create an amble</span>
             </button>
-            <button className="option">
+            {/* <button className="option">
               <span className="option-text"  >For you</span>
-            </button>
+            </button> */}
           </div>
         )}
       </div>
@@ -136,9 +136,6 @@ export default function MenuBar() {
           </div>
         )}
       </div>
-     
-   
-
       
     </div>
   );

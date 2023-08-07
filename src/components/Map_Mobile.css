@@ -106,58 +106,7 @@ h2 {
 
 
 
-.plansetting {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  margin-top: 25px;
-  cursor: pointer;
-  margin-bottom: 30px;
-}
 
-.plansetting-text {
-  display: flex;
-  width: 250px;
-  height: 2.5rem;
-  line-height: 40px;
-  font-size: 16px;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: #E3FCF7;
-  border: 1.5px solid #333;
-  letter-spacing: 2px;
-  text-align: center;
-  position: relative;
-  transition: all .35s;
-  justify-content: center;
-  align-items: center;
-  background: #014e3d;
-  cursor: pointer;
-}
-
-.plansetting-text span {
-  position: relative;
-  z-index: 0;
-}
-
-.plansetting-text:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #00ed64;
-  transition: all .35s;
-}
-
-.plansetting-text:hover {
-  color: #014e3d;
-}
-
-.plansetting-text:hover:after {
-  width: 100%;
-}
 
 
 .detail-text {
@@ -174,59 +123,6 @@ h2 {
 
 
 
-
-.finishdetail {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  cursor: pointer;
-  margin-bottom: 30px;
-}
-
-.finishdetail-text {
-  display: flex;
-  width: 250px;
-  height: 2.5rem;
-  line-height: 40px;
-  font-size: 16px;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: #E3FCF7;
-  border: 1.5px solid #333;
-  letter-spacing: 2px;
-  text-align: center;
-  position: relative;
-  transition: all .35s;
-  justify-content: center;
-  align-items: center;
-  background: #014e3d;
-  cursor: pointer;
-}
-
-.finishdetail-text span {
-  position: relative;
-  z-index: 2;
-}
-
-.finishdetail-text:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #ffc010;
-  transition: all .35s;
-}
-
-.finishdetail-text:hover {
-  color: #014e3d;
-}
-
-.finishdetail-text:hover:after {
-  width: 100%;
-}
 
 
 
@@ -333,12 +229,6 @@ h2 {
 
 
 
-.ratewin-background {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* 添加此属性以适应ratewin */
-}
 
 .white-board {
   width: 1rem;
@@ -587,7 +477,7 @@ h2 {
 }
 
 .heatmap-checkboxes-mobile input[type="checkbox"] {
-  margin-left: 90px;
+  margin-left: 75px;
   color: #014e3d;
   /* 添加以下样式来自定义勾选框的外观 */
   appearance: none;
@@ -667,8 +557,8 @@ h2 {
   color: rgb(0, 0, 0);
   position: absolute;
   top: 2%;
-  left: 50%; /* 将元素的左边缘放在页面的中心 */
-  transform: translateX(-50%); /* 水平居中 */
+  left: 50%;
+  transform: translateX(-50%);
   width: 98%;
   background: rgba(255, 255, 255, 0.9);
   padding: 10px;
@@ -679,8 +569,11 @@ h2 {
   text-align: center;
   padding-top: 45px;
   align-items: center;
-}
 
+  /* 添加最大高度和滚动条 */
+  max-height:650px; /* 调整此值以设置您所需的最大高度 */
+  overflow-y: auto; /* 当内容超过最大高度时出现滚动条 */
+}
 
 
 
@@ -703,6 +596,7 @@ h2 {
   padding-top: 45px;
   /* height:90%; */
   align-items: center;
+  height: 650px;
 }
 
 .detail-titlebox {
@@ -766,7 +660,7 @@ h2 {
 }
 
 .directiondetail-mobile {
-  height: 280px;
+  height: 200px;
   /* Set the fixed height you desire */
   overflow-y: auto;
   /* Add a scrollbar when content exceeds the height */
@@ -801,14 +695,26 @@ h2 {
 
 .ratewin-mobile {
   width: 100%;
-  height: 53.2rem;
+  height: 650px;
   position: relative;
   display: flex;
-  overflow: hidden;
-  background-color: #ffffff;
+  /* overflow: hidden; */
+  /* background-color: #ffffff; */
   z-index: 10;
   flex-direction: column;
+    /* 添加最大高度和滚动条 */
+    /* height:650px; 调整此值以设置您所需的最大高度 */
+    overflow-y: auto; /* 当内容超过最大高度时出现滚动条 */
+    background-image: url("/static/images/newyork3.jpg");
+    background-size: cover;
+    background-position: center;
 
+}
+
+.ratewin-background-mobile {
+  width: 100%;
+  
+  object-fit: fill; /* 图片将非等比例地填充容器 */
 }
 
 
@@ -826,9 +732,9 @@ h2 {
   position: relative;
   justify-content: center;
   align-items: center;
-  margin-top: -210px;
+  margin-top: 600px;
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   display: flex;
 }
 
@@ -883,4 +789,113 @@ h2 {
   display: flex;
   cursor: pointer;
   z-index: 100;
+}
+
+
+.plansetting-mobile {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13px;
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+
+.plansetting-text-mobile {
+  display: flex;
+  width: 250px;
+  height: 2.5rem;
+  line-height: 40px;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #E3FCF7;
+  border: 1.5px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  justify-content: center;
+  align-items: center;
+  background: #014e3d;
+  cursor: pointer;
+}
+
+.plansetting-text-mobile span {
+  position: relative;
+  z-index: 0;
+}
+
+.plansetting-text-mobile:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00ed64;
+  transition: all .35s;
+}
+
+.plansetting-text-mobile:hover {
+  color: #014e3d;
+}
+
+.plansetting-text-mobile:hover:after {
+  width: 100%;
+}
+
+
+
+.finishdetail-mobile {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13px;
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+
+.finishdetail-text-mobile {
+  display: flex;
+  width: 250px;
+  height: 2.5rem;
+  line-height: 40px;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #E3FCF7;
+  border: 1.5px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  justify-content: center;
+  align-items: center;
+  background: #014e3d;
+  cursor: pointer;
+}
+
+.finishdetail-text-mobile span {
+  position: relative;
+  z-index: 2;
+}
+
+.finishdetail-text-mobile:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ffc010;
+  transition: all .35s;
+}
+
+.finishdetail-text-mobile:hover {
+  color: #014e3d;
+}
+
+.finishdetail-text-mobile:hover:after {
+  width: 100%;
 }
