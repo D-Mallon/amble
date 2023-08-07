@@ -43,25 +43,25 @@ def checklogin (username,password):
     cursor.close()
     conn.close()
 
-# # Execute some sample SQL queries to select data
-# query = "SELECT * FROM users_nodes WHERE type = 'park' and name != 'Unknown Park'"
-# cursor.execute(query)
-# results = cursor.fetchall() # Fetch the results
-# # Execute some sample SQL queries to select data
-# query = "SELECT * FROM users_nodes WHERE type = 'park' and name != 'Unknown Park'"
-# cursor.execute(query)
-# results = cursor.fetchall() # Fetch the results
+# # # Execute some sample SQL queries to select data
+# # query = "SELECT * FROM users_nodes WHERE type = 'park' and name != 'Unknown Park'"
+# # cursor.execute(query)
+# # results = cursor.fetchall() # Fetch the results
+# # # Execute some sample SQL queries to select data
+# # query = "SELECT * FROM users_nodes WHERE type = 'park' and name != 'Unknown Park'"
+# # cursor.execute(query)
+# # results = cursor.fetchall() # Fetch the results
 
-# query2 = "SELECT * FROM public.users_nodes WHERE wheelchair_accessible = 'yes' and type = 'library'"
-# cursor.execute(query2)
-# results2 = cursor.fetchall() # Fetch the results
-# query2 = "SELECT * FROM public.users_nodes WHERE wheelchair_accessible = 'yes' and type = 'library'"
-# cursor.execute(query2)
-# results2 = cursor.fetchall() # Fetch the results
+# # query2 = "SELECT * FROM public.users_nodes WHERE wheelchair_accessible = 'yes' and type = 'library'"
+# # cursor.execute(query2)
+# # results2 = cursor.fetchall() # Fetch the results
+# # query2 = "SELECT * FROM public.users_nodes WHERE wheelchair_accessible = 'yes' and type = 'library'"
+# # cursor.execute(query2)
+# # results2 = cursor.fetchall() # Fetch the results
 
-# query3 = "SELECT * FROM public.users_userpref"
-# cursor.execute(query3)
-# results3 = cursor.fetchall() # Fetch the results
-# query3 = "SELECT * FROM public.users_userpref"
-# cursor.execute(query3)
-# results3 = cursor.fetchall() # Fetch the results
+# # query3 = "SELECT * FROM public.users_userpref"
+# # cursor.execute(query3)
+# # results3 = cursor.fetchall() # Fetch the results
+# # query3 = "SELECT * FROM public.users_userpref"
+# # cursor.execute(query3)
+# # results3 = cursor.fetchall() # Fetch the results

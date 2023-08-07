@@ -36,7 +36,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['137.43.49.38', 'csi6220-2-vm2.ucd.ie']
+ALLOWED_HOSTS = ['137.43.49.38', 'csi6220-2-vm2.ucd.ie', '127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [

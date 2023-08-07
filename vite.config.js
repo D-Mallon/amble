@@ -15,6 +15,15 @@ export default defineConfig({
         assetFileNames: "[name].[ext]",
       },
     },
+    // incoming changes commented out below by David
+    // https://vitejs.dev/config/
+    // export default defineConfig({
+    //   plugins: [
+    //     react(),
+    //   ],
+    //   publicDir: './public',
+    //   optimizeDeps: {
+    //     exclude: []
   },
   base: "/static/", // assets path will be /static/
 

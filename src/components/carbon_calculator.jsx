@@ -10,11 +10,15 @@ import MyFunctionButton from './functionbutton';
 import MapBackground from './mapbackground';
 import Box from "@mui/material/Box";
 import { ArrayContext, useWaypointsArray } from '../context/ArrayContext';
+import { MapInputContext } from '../context/MapInputContext';
+import { useMapInput } from '../context/MapInputContext';
 
 const Carbon = () => {
     const [value, setValue] = useState(0);
 
-    const dist = 3.5;
+    const { inputValues, setInputValues } = useContext(MapInputContext);
+    
+    const dist = inputValues["distance"];
     const co2_per_mile = 0.77;
     const total_co2 = (dist * co2_per_mile).toFixed(2);
     const co2_per_tree_per_year = 22;

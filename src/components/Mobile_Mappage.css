@@ -40,7 +40,7 @@
     z-index: 0; 
   } */
   
-  .menubar-area-interface{
+  .menubar-area-interface-mobile{
     display: flex;
     justify-content: center;
     /* 在主轴上居中 */
@@ -49,6 +49,7 @@
     position: absolute;
     width: 100%;
     height: 5rem;
+    z-index: 100;
 
   }
   .mapwrapper_routeplan {
@@ -66,56 +67,36 @@
      opacity: 0.5;
    }
   
-  .PlanWin {
-    /* width: 80rem;
-    height: 50rem; */
-    /* width: 95rem;
-    height: 54rem; */
-    width: 92%;
-      height: 85%;
+  .PlanWin-mobile {
+   
+    width: 96%;
+      height: 90%;
       margin: auto;
       position: absolute;
-      top: 54%;
-   
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
+      top: 4rem;
+   bottom: 1rem;
+    left: 2%;
+    right: 2%;
+    /* transform: translateY(-50%); */
     display: flex;
     justify-content: center;
     align-items: center;
     /* border: 0.5px solid #000;  */
     z-index: 3; 
-    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.3); 
     overflow: hidden;
+    
+
   }
   
   
   
-/*   
-  .PlanSet {
-    width: 40%;
-    height: 100%;
-    background-color: #ffffff;
-    position: relative;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    flex-direction: column;
-  
-  } */
-  
-  /* .Map {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;
-  } */
-  
-  .PlanMap {
+
+  .PlanMap-mobile {
     width: 100%;
     height: 100%;
     position: relative;
+    justify-content: center;
+    align-items: center;
     /* overflow: hidden; */
   }
   .green-bar {
@@ -187,41 +168,9 @@
    
   }
   
-  .start-place,
-  .start-time,
-  .walk-duration,
-  .preference {
-    display: flex;
-    align-items: center;
-  }
+
   
-  .start-place {
-    background-color: #ffffff;
-    height:3rem;
-    margin-top: 140px;
-    margin-bottom: 60px; 
-  
-  
-  }
-  
-  .start-time {
-    background-color: #ffffff;
-    height: 3rem;
-    margin-bottom: 60px; 
-  
-  }
-  
-  .walk-duration {
-    background-color: #ffffff;
-    height: 3rem;
-    margin-bottom: 60px;
-  }
-  
-  .preference {
-    background-color: #ffffff;
-    height: 3rem;
-    margin-bottom: 180px; 
-  }
+
   
   
   .gain-route{
@@ -255,7 +204,7 @@
     z-index: 2;
   }
 
-  .additional-blocks-weather{
+  .additional-blocks-weather-mobile{
     position: absolute;
     background-color: #ffffff;
     width: 100%;
@@ -278,7 +227,7 @@
     align-items: center;
   }
   
-  .additional-block-text-preplan-weatherwin {
+  .additional-block-text-preplan-weatherwin-mobile {
     width: 14rem;
     height:2.8rem;
     background-color: #e3fcf7;
@@ -290,7 +239,7 @@
     animation-delay: 0.2s;
   }
 
-  .additional-block-close-weather{
+  .additional-block-close-weather-mobile{
     width: 2.8rem;
     height: 2.8rem;
     background-color: #014e3d;
@@ -314,28 +263,29 @@
     cursor: pointer;
   }
   
-  .additional-block-weather {
-    width: 2.8rem;
-    height: 2.8rem;
+  .additional-block-weather-mobile {
+    width: 2.4rem;
+    top: 0.8rem;
+    height: 2.4rem;
     background-color:#014e3d;
-    right:0;
+    left:7.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    position: absolute;
+    z-index: 1;
   }
 
- .additional-block-weather:hover{
-    background-color:#ffe212;
-  }
-
-  .additional-block-close:hover {
+ /* .additional-block-weather-mobile :hover{
+    background-color:#f3dc2f;
+  } */
+/* 
+  .additional-block-close-weather-mobile :hover{
+    
     background-color:#ffc101;
-  }
 
-  .additional-block-close-weather:hover{
-    background-color:#ffc101;
-  }
+  } */
   
   .close-button {
     position: absolute;
@@ -346,31 +296,29 @@
   }
   
   
-  .popup-overlay {
+  .popup-overlay-m {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 65%;
-    height: 50%;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    width: 100%;
+    height: 100%;
     background-color: #ffffff;
     border-radius: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000; 
-    /* border: 1.5px solid #000;  */
-    /* overflow-y: auto; */
     display: flex;
     flex-direction: column;
     animation: fadeIn 0.4s ease-in-out forwards;
     animation-delay: 0.2s;
     opacity: 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 添加投影效果 */
+    
   }
   
-  .w_current {
-    margin-top: 5%;
+  .w_current-mobile {
+    margin-top: 3rem;
     /* 设置 Flexbox 子项的弹性增长以适应剩余空间 */
     flex: 1;
     width: 100%;
@@ -380,7 +328,7 @@
     max-height: 100%; /* 或者根据需要设置具体的值 */
   }
   
-  .overlay-weatherwin{
+  .overlay-weatherwin-m {
     position: absolute;
     top: 0;
     left: 0;
@@ -402,11 +350,11 @@
     }
   }
   
-  .popup-overlay.hide,
-  .additional-blocks-weather.hide,
-  .additional-block-close-weather.hide, 
-  .w_current.hide,
-  .overlay-weatherwin.hide
+  .popup-overlay-m.hide,
+  .additional-blocks-weather-mobile.hide,
+  .additional-block-close-weather-mobile.hide, 
+  .w_current-mobile.hide,
+  .overlay-weatherwin-m.hide
   {
     animation: fadeOut 0.7s ease-in-out;
     opacity: 0;
@@ -420,3 +368,6 @@
       opacity: 0;
     }
   }
+
+
+

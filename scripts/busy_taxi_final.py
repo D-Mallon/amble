@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 import requests
 from pathlib import Path
+import xgboost as xgb
 
 from dotenv import load_dotenv  # To allow secret key for Weather API
 import time  # To measue run time
@@ -20,18 +21,17 @@ start_time = time.time()
 # Create File Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-file_path_pickle = BASE_DIR / 'src'/'pickle_files'/'Taxi.pkl'
+file_path_pickle = BASE_DIR / 'src'/'pickle_files'/'XGB_Taxi.pkl'
 file_path_taxi = BASE_DIR / 'src'/'json-files'/'taxizones.json'
 file_path_busy_json = BASE_DIR / 'src'/'json-files'/'busy_taxi_final.json'
 file_path_busy_csv = BASE_DIR / 'src'/'json-files'/'busy_taxi_final.csv'
-file_path_weather = BASE_DIR / 'src'/'json-files'/'????.json'
+file_path_weather = BASE_DIR / 'src'/'json-files'/'weather.json'
 
-# Create File Paths
-src_dir = Path("src")  # source directory
-pickle_dir = src_dir / "pickle_files"  # pickle files directory
-taxipath = src_dir / "json-files"  # taxi zone data (name and number)
-busyscore = src_dir / "json-files"  # Busyness Score data
-weatherdata = src_dir / "json-files"  # Weather data
+# #Create File Paths
+# pickle_dir = r"src\pickle_files" # pickle files directory
+# taxipath = r"src\json-files" #taxi zone data (name and number)
+# busyscore = r"src\json-files" #Busyness Score data
+# weatherdata = r"src\json-files" #Weather data
 
 # Open the taxi zone data file
 with (open(file_path_taxi, "rb")) as f:
@@ -43,7 +43,7 @@ del taxi_data["153"]
 del taxi_data["194"]
 
 # Create column heading for dataframe
-columns_names = ['Hour', 'Timestamp', 'Snow', 'Humidity', 'Temperature', 'Precipitation',
+columns_names = ['Hour', 'Timestamp', 'Humidity', 'Temperature', 'Precipitation',
                  'Day_Weekday', 'Day_Weekend', 'PULocationID_4', 'PULocationID_12',
                  'PULocationID_13', 'PULocationID_24', 'PULocationID_41',
                  'PULocationID_42', 'PULocationID_43', 'PULocationID_45',
@@ -67,10 +67,24 @@ columns_names = ['Hour', 'Timestamp', 'Snow', 'Humidity', 'Temperature', 'Precip
                  'PULocationID_246', 'PULocationID_249', 'PULocationID_261',
                  'PULocationID_262', 'PULocationID_263', 'Holiday_False', 'Holiday_True',
                  'Month_1', 'Month_2', 'Month_3', 'Month_4', 'Month_5', 'Month_6',
-                 'Month_7', 'Month_8', 'Month_9', 'Month_10', 'Month_11', 'Month_12']
+                 'Month_7', 'Month_8', 'Month_9', 'Month_10', 'Month_11', 'Month_12', 'Snow_False', 'Snow_True']
 
 # Create an empty dataframe
 df = pd.DataFrame(columns=columns_names)
+
+non_boolean_columns = []
+for column in df.columns:
+    try:
+        df[column] = df[column].astype(bool)
+    except ValueError:
+        non_boolean_columns.append(column)
+
+
+df['Hour'] = df['Hour'].astype(int)
+df['Timestamp'] = df['Timestamp'].astype(float)
+df['Temperature'] = df['Temperature'].astype(float)
+df['Precipitation'] = df['Precipitation'].astype(float)
+df['Humidity'] = df['Humidity'].astype(float)
 
 # Function to calculate timestamp and day of the week and if a US Holiday from inputs - set to todays date in NYC
 
@@ -116,6 +130,10 @@ api_key = os.environ.get("WEATHER_API_KEY")  # Key for Weather API
 url = f'http://api.weatherapi.com/v1/forecast.json?key={api_key}&q=New York City&days=1&aqi=no&alerts=no'
 response = requests.get(url)
 weather_data = response.json()
+json_data = json.dumps(weather_data, indent=4)
+
+with open(file_path_weather, "w") as outfile:
+    outfile.write(json_data)
 
 # Create Weather Variables
 temp = []
@@ -123,13 +141,17 @@ hum = []
 percip = []
 
 # Create values for snow.  Same value for each hour as Weather API only produces a daily item for snow
-snow = False
+snow_true = False
+snow_false = False
+
 snow_predict = float(weather_data['forecast']
                      ['forecastday'][0]['day']['totalsnow_cm'])
 if snow_predict != 0:
-    snow = [True] * 24
+    snow_true = [True] * 24
+    snow_false = [True] * 24
 else:
-    snow = [False] * 24
+    snow_true = [False] * 24
+    snow_false = [False] * 24
 
 # Create other Weather variables from Weather API
 for i in range(24):
@@ -165,9 +187,12 @@ for k, v in taxi_data.items():  # k is number of the taxi zone and v is the taxi
             else:
                 new_row1.update({column: False})  # Else make that entry False
 
-    # For each hour (in a 24 hour period) add values to a new row
-    for i in range(24):
-        new_row.update({'Hour': i})
+        # Create values for weather variables
+        new_row.update({'Temperature': temp[i]})
+        new_row.update({'Humidity': hum[i]})
+        new_row.update({'Snow_True': snow_true[i]})
+        new_row.update({'Snow_False': snow_false[i]})
+        new_row.update({'Precipitation': percip[i]})
 
         # Create values for weather variables
         new_row.update({'Temperature': temp[i]})
@@ -208,15 +233,11 @@ for k, v in taxi_data.items():  # k is number of the taxi zone and v is the taxi
         # Add the merged row to dataframe
         df = pd.concat([df, pd.DataFrame([new_dict])], ignore_index=True)
 
-        # Reset for the next hour
-        new_row = {}
-
 # Open the Pickle File
-pickle_file = "Taxi.pkl"
 busy_model = pickle.load(open(file_path_pickle, 'rb'))
 
 # Make the predictions
-busyness_predictions = busy_model.predict(df)  # Make the predictions
+busyness_predictions = busy_model.predict(df)
 
 # Add predictions column to df
 df['Busyness Predicted'] = busyness_predictions
@@ -227,7 +248,7 @@ selected_columns = ['Hour', 'Timestamp', 'Busyness Predicted', 'Holiday_False',
 # print(df[selected_columns].tail(30))
 
 # Drop Certain Columns
-df.drop(['Temperature', 'Humidity', 'Snow', 'Precipitation',
+df.drop(['Temperature', 'Humidity', 'Snow_True', 'Snow_False', 'Precipitation',
         'Holiday_False', 'Holiday_True', 'Day_Weekday', 'Day_Weekend',
          'Month_1', 'Month_2', 'Month_3', 'Month_4', 'Month_5', 'Month_6',
          'Month_7', 'Month_8', 'Month_9', 'Month_10', 'Month_11', 'Month_12',
@@ -283,14 +304,11 @@ df.reset_index(drop=True, inplace=True)  # This excludes the index
 df.to_json(file_path_busy_json, orient='records')
 df.to_csv(file_path_busy_csv, index=False)
 
-# weather_file = "weather.json"
-# with open(os.join(weatherdata,weather_file), "w") as outfile:
-#     json.dump(outfile, indent=4)
-
 ####### End time - to get run time #########
 end_time = time.time()
 run_time = round((end_time - start_time), 1)
-print(f'\nRun time to produce busyness scores for 1 day = {run_time} seconds')
+print(
+    f'\nRun time to produce busyness scores for 1 day for Taxis = {run_time} seconds')
 
 # Calculate Summary Parameters
 mean_value = df['Busyness Predicted'].mean()
@@ -299,7 +317,7 @@ range_value = df['Busyness Predicted'].max() - df['Busyness Predicted'].min()
 std_value = df['Busyness Predicted'].std()
 
 # Print the results
-print("\nMean of Predicted Busyness: ", mean_value)
-print("Median of Predicted Busyness: ", median_value)
-print("Range of Predicted Busyness: ", range_value)
-print("Standard Deviation of Predicted Busyness: ", std_value)
+print("\nMean of Predicted Busyness - Taxi: ", mean_value)
+print("Median of Predicted Busyness - Taxi: ", median_value)
+print("Range of Predicted Busyness - Taxi: ", range_value)
+print("Standard Deviation of Predicted Busyness - Taxi: ", std_value)

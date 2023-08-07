@@ -22,7 +22,32 @@ const theme = createTheme({
   },
 });
 
+
 function LandingPage() {
+  const images_home = [
+    '/static/images/newyork17.jpg',
+    '/static/images/newyork18.jpg',
+    '/static/images/newyork6.jpg',
+    '/static/images/newyork18.jpg',
+    '/static/images/newyork17.jpg',
+    '/static/images/newyork3.jpg',
+    '/static/images/newyork15.jpg',
+  ];
+  const toggleamble = () => {
+    navigate("/map");
+  };
+  
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images_home.length);
+      }, 10000); // 切换间隔为8秒
+  
+      return () => clearInterval(timer);
+    }, []);
+
+
   const { temp1, temp2 } = useGreetingData();
   const greeting = temp1 +' ' +temp2+'!';
 
@@ -36,16 +61,15 @@ function LandingPage() {
       </div>
       <div className="homepage-pics-container">
         <div className="left-color-block">
-          <span className="hometext-title">
+          <div className="hometext-title">
             {(!temp1)&&(!temp2)&&<span style={{ fontSize: "36px", fontWeight: 500 }}>
               amble <br></br>- the peaceful way
             </span>}
             {temp1&&temp2&&<span style={{ fontSize: "36px", fontWeight: 500 }}>
               Welcome back our everlasting friend,<br></br>{greeting2}!
             </span>}
-            <br></br>
-            <br></br>
-            <br></br>
+            </div>
+            <div className="hometext-body">
             <span style={{ fontSize: "16px" }}>
               The purpose of our application is to generate walking routes for
               users to guide them though the quiet corners of Manhattan.
@@ -57,9 +81,9 @@ function LandingPage() {
               statistics for areas of Manhattan to ensure users can enjoy a
               quiet, peaceful and safe journey!
             </span>
-          </span>
+          </div>
           <div className="home-button-container">
-            <MyButton />
+            <MyButton  />
           </div>
         </div>
         <div className="guidebutton">
@@ -91,11 +115,11 @@ function LandingPage() {
             </span>
           </div>
           <div className="rightbox-in-2">
-            <img
-              src="/static/images/newyork6.jpg"
-              alt="pics"
-              className="pic-in-rightbox"
-            ></img>
+          <img
+        src={images_home[currentImageIndex]}
+        alt="pics"
+        className="pic-in-rightbox"
+      />
           </div>
         </div>
       </div>

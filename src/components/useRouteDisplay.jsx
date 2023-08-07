@@ -3,14 +3,14 @@ import { useState, useEffect, useContext } from 'react';
 import mapboxgl from 'mapbox-gl';
 import { ArrayContext, useWaypointsArray } from '../context/ArrayContext';
 
-// might be substituted with all_nodes.json after Cormac's approval
-import community_locations from '../json-files/community_locations.json';
-import library_locations from '../json-files/library_locations.json';
-import museum_art_locations from '../json-files/museum_art_locations.json';
-import park_locations from '../json-files/park_locations.json';
-import park_node_locations from '../json-files/park_node_locations.json';
-import walking_node_locations from '../json-files/walking_node_locations.json';
-import worship_locations from '../json-files/worship_locations.json';
+//import community_locations from '../json-files/community_locations.json';
+//import library_locations from '../json-files/library_locations.json';
+//import museum_art_locations from '../json-files/museum_art_locations.json';
+//import park_locations from '../json-files/park_locations.json';
+//import park_node_locations from '../json-files/park_node_locations.json';
+//import walking_node_locations from '../json-files/walking_node_locations.json';
+//import worship_locations from '../json-files/worship_locations.json';
+import all_nodes from '../json-files/all_nodes.json';
 
 const parseWaypoints = (ways) => {
   return ways.split(";").map((way) => {
@@ -32,13 +32,7 @@ const matchWaypointsWithData = (waypoints, jsonData) => {
 const handleWaypoints = (waypointsString, setGlobalArrayValue) => {
   const waypoints = parseWaypoints(waypointsString);
   const jsonData = [
-    ...community_locations.data,
-    ...library_locations.data,
-    ...museum_art_locations.data,
-    ...park_locations.data,
-    ...park_node_locations.data,
-    ...walking_node_locations.data,
-    ...worship_locations.data,
+    ...all_nodes.data,
   ];
   const arrayTemp = matchWaypointsWithData(waypoints, jsonData);
   setGlobalArrayValue(arrayTemp);
@@ -68,8 +62,8 @@ const useRouteDisplay = (map, inputValues) => {
         handleWaypoints(waypointsString, setGlobalArrayValue);
       }
 
-      console.log(inputValues.waypoints)
-      console.log("ways:", waypointsString);
+      //console.log(inputValues.waypoints)
+      //console.log("ways:", waypointsString);
 
       const callAPI = `https://api.mapbox.com/directions/v5/mapbox/walking/` +
         `${inputValues["longitude"]},` +
@@ -109,7 +103,7 @@ const useRouteDisplay = (map, inputValues) => {
         const hasIntersections = step.intersections && step.intersections.length > 0;
 
         // Log the step object for debugging
-        console.log('Step:', step);
+        //console.log('Step:', step);
 
         // Check if step.intersections[0].location exists and has originalIndex
         const hasLocation = hasIntersections && step.intersections[0].location && step.intersections[0].location.originalIndex !== undefined;
@@ -117,10 +111,10 @@ const useRouteDisplay = (map, inputValues) => {
         const nodeId = hasLocation ? step.intersections[0].location.originalIndex.toString() : null;
 
         // Log for debugging
-        console.log('hasIntersections:', hasIntersections);
-        console.log('hasLocation:', hasLocation);
-        console.log('nodeId:', nodeId);
-        console.log('globalArray:', globalArray);
+        //console.log('hasIntersections:', hasIntersections);
+        //console.log('hasLocation:', hasLocation);
+        //console.log('nodeId:', nodeId);
+        //console.log('globalArray:', globalArray);
 
         // Check if the nodeId is defined before converting it to a string
         const nodeIdStr = nodeId !== null ? nodeId.toString() : null;
@@ -138,7 +132,7 @@ const useRouteDisplay = (map, inputValues) => {
     setdirectiondata(directions);
 
 
-      console.log("Please follow my instruction and trust it:", directions);
+      //console.log("Please follow my instruction and trust it:", directions);
 
       // directions.forEach((step, index) => {
       //   const action = step.action ? step.action : 'Proceed';
@@ -152,7 +146,7 @@ const useRouteDisplay = (map, inputValues) => {
         const road = step.road ? ` on ${step.road}` : '';
         const distance = step.distance ? ` for ${step.distance.toFixed(2)} meters` : '';
         const keyNodeInfo = step.isKeyNode ? ' (Arrived at Key Node)' : '';
-        console.log(`Step ${index + 1}: ${action}${road}${distance}${keyNodeInfo}`);
+        //console.log(`Step ${index + 1}: ${action}${road}${distance}${keyNodeInfo}`);
       });
 
       // Check that routeCoordinates is an array of valid numbers
@@ -207,7 +201,7 @@ const useRouteDisplay = (map, inputValues) => {
     displayRoute();
   }, [inputValues.waypoints]);
 
-  console.log("globalArray:", globalArray);
+  //console.log("globalArray:", globalArray);
   return { route, displayRoute,directiondata};
 };
 

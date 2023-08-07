@@ -1,13 +1,12 @@
+
 import React, { useRef, useEffect, useState,useContext } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
-
-// import StartPlace from "./components/start_place";
 
 import { createTheme,ThemeProvider  } from '@mui/material/styles';
 
 import MenuBar from './MenuBar';
-import './HomePage.css';
-import MyButton from './mainbutton';
+import './Mobile_homepage.css';
+import MyButton2 from './mainbutton2';
 import MyFunctionButton from './functionbutton';
 import MapBackground from './mapbackground';
 import Box from "@mui/material/Box";
@@ -23,14 +22,9 @@ const theme = createTheme({
     },
   });
 
-  const logoImages = [
-    
-   
+
   
-    // Add more logo image paths here if needed
-  ];
-  
-  function HomePage() {
+  function Mobile_homepage() {
     const navigate=useNavigate();
     const [logoIndex, setLogoIndex] = useState(0);
 
@@ -55,7 +49,13 @@ const theme = createTheme({
       };
     }, []);
 
-
+    const togglehome = () => {
+      navigate("/mobilehomepage");
+    };
+  
+    const toggleamble = () => {
+      navigate("/mobilemappage");
+    };
     return (
       <>
       <MenuBar />
@@ -76,7 +76,7 @@ const theme = createTheme({
 
           </span>
           <div className='mobile-homebut'>
-          <MyButton  onClick={handleButtonClick}/>
+          <MyButton2 />
        </div>
         
       </div>
@@ -85,4 +85,4 @@ const theme = createTheme({
     );
   }
 
-  export default HomePage;
+  export default Mobile_homepage;

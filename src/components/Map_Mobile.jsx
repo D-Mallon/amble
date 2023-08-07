@@ -1,6 +1,13 @@
+
+//新的特殊加入的！！
+import RouteIcon from '@mui/icons-material/Route';
+import TuneIcon from '@mui/icons-material/Tune';
+import "./Map_Mobile.css"
+import HMobiledataIcon from '@mui/icons-material/HMobiledata';
+
+
 import React, { useRef, useEffect, useState, useContext } from "react";
 import mapboxgl from "mapbox-gl";
-import "./Map.css";
 import "mapbox-gl/dist/mapbox-gl.css";
 import DateTimePicker from "react-datetime-picker";
 import axios from "axios";
@@ -9,12 +16,13 @@ import routedirection from "./routedirection";
 import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
+import MapIcon from '@mui/icons-material/Map';
 
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
 import HomeIcon from "@mui/icons-material/Home";
-import MapIcon from "@mui/icons-material/Map";
+
 import SearchIcon from "@mui/icons-material/Search";
 import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
 import { Link, useNavigate } from "react-router-dom";
@@ -46,7 +54,7 @@ import Select from 'react-select';
 const apiKey = import.meta.env.VITE_MAPBOX_API_KEY;
 mapboxgl.accessToken = apiKey;
 
-const Map = () => {
+const Map_Mobile = () => {
   const StyledRating = styled(Rating)({
     "& .MuiRating-iconFilled": {
       color: "#ff6d75",
@@ -295,6 +303,10 @@ const Map = () => {
       setplansetwin(false);
       setchatalien(true);
       setroutedetail(true);
+
+      //为了mobile新加的
+      setmobileshowbut(true);
+
     } catch (error) {
       if (error.response) {
         console.log(error.response);
@@ -354,17 +366,13 @@ const Map = () => {
     setcatHover(false);
   };
 
-  const backtoplanwin = () => {
-    setplansetwin(true);
-    setchatalien(false);
-    setroutedetail(false);
-    setchatbox(false);
-  };
+
 
   const toggleratewin = () => {
     setratingwin(true);
     setchatbox(false);
     setchatalien(false);
+    setroutedetail(false);
   };
 
   const handleButtonClick_close = () => {
@@ -447,13 +455,103 @@ const Map = () => {
     return `rgb(${Math.round(red)}, ${Math.round(green)}, 0)`;
   };
 
+
+
+
+//为了Mobile新加的
+const [hmap, sethmap] = useState(false);
+const [mobileshowbut, setmobileshowbut] = useState(false);
+const togglehmap = () => {
+  sethmap(!hmap);
+};
+
+const togglehplan = () => {
+  setplansetwin(!plansetwin);
+  setratingwin(false);
+};
+
+const togglehdetail = () => {
+  setroutedetail(!routedetail);
+  setchatalien(true);
+  setratingwin(false);
+
+};
+
+const togglemplan = () => {
+  setplansetwin(!plansetwin);
+  setroutedetail(false);
+  setmobileshowbut(false);
+  setchatalien(false);
+  setchatbox(false);
+  setratingwin(false);
+};
+
+//这个是要改动的
+const backtoplanwin = () => {
+  setplansetwin(true);
+  setchatalien(false);
+  setroutedetail(false);
+  setchatbox(false);
+  setmobileshowbut(false);
+};
+
+const toggledetailwin = () => {
+  setroutedetail(!routedetail);
+
+  if (ratingwin) {
+    setchatalien(true);
+    setratingwin(false);
+  } else {
+    setchatalien(ratingwin => ratingwin ? true : false);
+  }
+};
+
+const togglecloserate= () => {
+  setratingwin(false);
+  setchatalien(true);
+};
+
+const togglehome = () => {
+  navigate("/mobilehomepage");
+};
+
   return (
     <div>
+
+
+
+      {/* mobile新加的 */}
+
+      <div
+        className="heatmap_mobile"
+        onClick={togglehmap}
+      >
+        <HMobiledataIcon sx={{ fontSize: 29, color: "white" }} />
+      </div>
+
+      <div
+        className="set_mobile"
+        onClick={togglemplan}
+      >
+        <TuneIcon sx={{ fontSize: 23, color: "white" }} />
+      </div>
+
+      {mobileshowbut&&(<div
+        className="show_mobile"
+        onClick={toggledetailwin}
+      >
+        <RouteIcon sx={{ fontSize: 23, color: "white" }} />
+        </div>)}
+
+
+
       {plansetwin && (
         <>
-          <div className="user-input">
+        {/* 这里为了mobile的效果变化了 */}
+          <div className="user-input-mobile">
             <div className="titlebox">
               <span className="text_bar-mapfunction">My Journey Planner</span>
+              <CloseIcon className="close-hmap" onClick={togglemplan} sx={{ fontSize: 27 , color: 'white'}} />
             </div>
             <div className="when-input">
               <p>When?</p>
@@ -939,22 +1037,15 @@ const Map = () => {
       )}
 
       {/* Routeshowing win part */}
+      {/* 为了Mobile而改动的！！！ */}
       {routedetail && (
         <>
-          <div className="additional-block-text-detailtitle">
-            <span className="text_bar_2-detailtitle">
-              Route Plan Presentation
-            </span>
-          </div>
-          <div
-            className="additional-block-datail-button"
-            onClick={backtoplanwin}
-          >
-            <span className="text_bar_2-detail">Change Journey Plan</span>
-          </div>
+        
+        
 
-          <div className="detailbox">
+          <div className="detailbox-mobile">
             <div className="detail-titlebox">
+            <CloseIcon className="close-hmap" onClick={toggledetailwin} sx={{ fontSize: 27 , color: 'white'}} />
               <span className="text_bar-mapfunction-detail">
                 My Walk Details
               </span>
@@ -991,13 +1082,15 @@ const Map = () => {
               </div>
             </div>
 
-            <div className="directionbox">
+  {/* 为了Mobile而改动的！！！ */}
+
+            <div className="directionbox-mobile">
               <div className="directionbox-titlebox">
                 <span className="text_bar-mapfunction-detail-2">
                   Direction Helper
                 </span>
               </div>
-              <div className="directiondetail">
+              <div className="directiondetail-mobile">
                 <ul className="directionswords">
                   {directiondata.map((step, index) => (
                     <span key={index}>
@@ -1029,12 +1122,13 @@ const Map = () => {
         </>
       )}
 
+{/* 为了mobile修改了 */}
       {chatalien && (
         <>
           <img
             src={normalImagePath}
             alt="Normal Image"
-            className="alien-robot"
+            className="alien-robot-mobile"
             onMouseEnter={(e) =>
               e.currentTarget.setAttribute("src", hoverImagePath)
             }
@@ -1048,7 +1142,7 @@ const Map = () => {
 
       {chatbox && (
         <>
-          <div className="alienchatbox" id="chatbox">
+          <div className="alienchatbox-mobile" id="chatbox">
             {cathover ? (
               <img
                 src="/static/images/chatamble0.png"
@@ -1080,37 +1174,28 @@ const Map = () => {
       )}
 
       {/* Ratings Popup for Waypoints*/}
+      {/* 为了mobile效果要变动的 */}
+
       {ratingwin && (
-        <div className="ratewin">
-          {/* <div className='white-board'></div> */}
+        <div className="ratewin-mobile">
+           
+            
           <img
             src="/static/images/MenuPic5.jpg"
             alt="pics"
             className="ratewin-background"
           ></img>
-          <div className="additional-blocks-ratewin">
-            {/*<div className="additional-block-text-ratewin">
-              <span className="text_bar_2-ratewin">Rate Your Walk</span>
-              </div>*/}
+          
+         
+            
 
-            <div
-              className="additional-block-rate-button"
-              onClick={backtodetailwin}
-            >
-              <span className="text_bar_2-detail">
-                See My Walk Detail Again!
-              </span>
-            </div>
+          
 
-            <div
-              className="additional-block-close-ratewin"
-              onClick={handleButtonClick_close}
-            >
-              <CloseIcon sx={{ fontSize: 27, color: "white" }} />
-            </div>
-          </div>
+           
+         
           <div className="General-rate-inform">
-            <div className="stop-text">
+          <CloseIcon className='rate-close-mobile' onClick={togglecloserate} sx={{ fontSize: 27, color: "#014e3d" }} />
+            <div className="stop-text-mobile">
               <span>Rate Your Walk</span>
             </div>
             <Box
@@ -1131,39 +1216,49 @@ const Map = () => {
                   icon={
                     <FavoriteIcon
                       fontSize="large"
-                      sx={{ fontSize: "2.2rem" }}
+                      sx={{ fontSize: "1.8rem" }}
                     />
                   }
                   emptyIcon={
                     <FavoriteBorderIcon
                       fontSize="large"
-                      sx={{ fontSize: "2.2rem" }}
+                      sx={{ fontSize: "1.8rem" }}
                     />
                   }
                 />
               </div>
             </Box>
-            <div className="stop-text">
+            <div className="stop-text-mobile">
               <span>How much did you like your stops? </span>
             </div>
             <Ratings setWaypointRatings={setWaypointRatings} />{" "}
             {/* Includes the Ratings component here */}
           </div>
-          <div className="finishrate">
-            <a className="finishrate-text" type="submit" onClick={handleSubmit}>
+          <div className="finishrate-mobile">
+            <a className="finishrate-text-mobile" type="submit" onClick={togglehome}>
               <span>Submit My Review</span>
             </a>
           </div>
         </div>
       )}
 
+
+
+
+{/* Mobile 版本变化的东西 !!!!!!!*/}
       <div ref={mapContainer} className="map-container" />
         {/* Heatmap Checkboxes*/}
-       <div className="heatmap-checkboxes">
-          <span className="heatmaps-click" onClick={toggleCheckboxes}><b>HeatMaps</b></span>
+        {hmap&&(
+       <div className="heatmap-checkboxes-mobile">
+        {/* close icon 加入 */}
+
+                <CloseIcon className="close-hmap" onClick={togglehmap} sx={{ fontSize: 27 , color: 'white'}} />
+           
+
+          {/* <span className="heatmaps-click" onClick={toggleCheckboxes}><b>HeatMaps</b></span>
           <span className="heatmaps-open" style={{display: isCheckboxesVisible ? 'inline' : 'none'}}>&#9660;</span>
-          <span className="heatmaps-closed" style={{display: isCheckboxesVisible ? 'none' : 'inline'}}>&#9650;</span>
-          <div className={isCheckboxesVisible ? 'checkboxes-visibility' : 'checkboxes-visibility hidden'}>
+          <span className="heatmaps-closed" style={{display: isCheckboxesVisible ? 'none' : 'inline'}}>&#9650;</span> */}
+          {/* <div className={isCheckboxesVisible ? 'checkboxes-visibility' : 'checkboxes-visibility hidden'}> */}
             <label>
               Location Busyness: 
               <input
@@ -1197,9 +1292,10 @@ const Map = () => {
                   />*/}
             </label>
           </div>
+          )}
         </div>
-    </div>
+    //  </div>
   );
 };
 
-export default Map;
+export default Map_Mobile;

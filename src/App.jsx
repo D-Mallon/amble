@@ -27,6 +27,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 import LandingPage from './components/HomePage2';
 import Box from "@mui/material/Box";
 import Favicon from "react-favicon";
+import Mobile_Mappage from './components/Mobile_Mappage';
+import Mobile_homepage from './components/Mobile_homepage';
 
 // If a route can not be displayed this function is invoked from Route path
 function MatchAllRoute() {
@@ -44,6 +46,10 @@ function App() {
               <Favicon url="https://upload.wikimedia.org/wikipedia/commons/9/9d/Threads_%28app%29_logo.svg" />
                 <Routes>
                   <Route exact path="/" element={<LandingPage />} />
+
+                  <Route path="/mobilemappage" element={<Mobile_Mappage />} />
+                  <Route path="/mobilehomepage" element={<Mobile_homepage />} />
+
                   <Route exact path="/map" element={<Interface2 />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/loginCheck" element={<LoginCheck />} />

@@ -3,20 +3,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- For local development, uncomment the following lines and update the port if necessary -->
-    <!--
     <script type="module" src="http://localhost:5173/@vite/client"></script>
     <script type="module">
-        import RefreshRuntime from 'http://localhost:5173/@react-refresh'
-        RefreshRuntime.injectIntoGlobalHook(window)
-        window.$RefreshReg$ = () => {}
-        window.$RefreshSig$ = () => (type) => type
-        window.__vite_plugin_react_preamble_installed__ = true
-      </script>
+      import RefreshRuntime from "http://localhost:5173/@react-refresh";
+      RefreshRuntime.injectIntoGlobalHook(window);
+      window.$RefreshReg$ = () => {};
+      window.$RefreshSig$ = () => (type) => type;
+      window.__vite_plugin_react_preamble_installed__ = true;
+    </script>
     <script type="module" src="http://localhost:5173/src/main.jsx"></script>
-    -->
     <title>amble</title>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
     <link
@@ -27,7 +23,7 @@
     <!-- <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css"> -->
 
     <!--david had the below css line and above href included below pre-3Aug merge. It was working prior to that -->
-    <link href="{% static 'main.css' %}" rel="stylesheet">
+    <link href="{% static 'main.css' %}" rel="stylesheet" />
 
     <link
       rel="stylesheet"
