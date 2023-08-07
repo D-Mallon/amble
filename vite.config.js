@@ -7,6 +7,8 @@ import vitePluginFaviconsInject from "vite-plugin-favicons-inject";
 export default defineConfig({
   plugins: [react()],
   build: {
+    // Output directory for Vite build - DM trialling fix 7Aug
+    outDir: "/var/www/ucdSummerProject/backend/static",
     rollupOptions: {
       input: "/var/www/ucdSummerProject/src/main.jsx",
       output: {
@@ -26,7 +28,7 @@ export default defineConfig({
     //     exclude: []
   },
   base: "/static/", // assets path will be /static/
-
+});
   // this below was commented out by David for server
   // publicDir: './public',
   // optimizeDeps: {
@@ -41,7 +43,6 @@ export default defineConfig({
   //     input: '/path/to/main.js',
   //   },
   // },
-});
 
 // this version was working on 18 July but trying to fix newyork images routing issues and set base url for assets to static
 // export default {

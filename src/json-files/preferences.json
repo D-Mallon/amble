@@ -1,5 +1,7 @@
 {
-  "data_from_frontend": {
-    "selectedOptions": ["community_locations"]
-  }
+    "data_from_frontend": {
+        "selectedOptions": [
+            "library_locations"
+        ]
+    }
 }
