@@ -80,6 +80,7 @@ const useHeatmap = (map, isHeatmapVisible) => {
   useEffect(() => {
     if (map.current && map.current.isStyleLoaded() && map.current.getLayer('b-score-layer')) {
       map.current.setLayoutProperty('b-score-layer', 'visibility', isHeatmapVisible ? 'visible' : 'none');
+      map.current.setLayoutProperty('taxi-zone-edges', 'visibility', isHeatmapVisible ? 'visible' : 'none');
     }
   }, [map, isHeatmapVisible]);
 };
