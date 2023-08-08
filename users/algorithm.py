@@ -42,7 +42,7 @@ for k,v in other_nodes_dict.items():
         
 #Create a json object and Write to a json file
 merged_json = json.dumps(data, indent=4) 
-file_path_mer = BASE_DIR /'src'/'json-files'/'nodes_final.json'
+file_path_mer = BASE_DIR /'src'/'json-files'/'all_nodes.json'
 with open(file_path_mer, 'w') as merged_file: 
     merged_file.write(merged_json)
 

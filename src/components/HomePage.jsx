@@ -71,7 +71,7 @@ const theme = createTheme({
         
        
           <span className='mobile-hometext'> 
-          <span style={{ fontSize: '26px' ,fontWeight: 550}}>the peaceful way</span>
+          <span style={{ fontSize: '26px' ,fontWeight: 550}}>finding the peaceful way</span>
           <br></br>
 
           </span>

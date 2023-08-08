@@ -978,7 +978,7 @@ const togglehmap = () => {
               ? `${sliderValue} km`
               : `${sliderValue} mins`}
             </strong></span>
-            <p>Preference</p>
+            {/* <p>Preference</p> */}
 
             <p>Quietness Score</p><br/>
             <div className="quietness-traffic-light" style={{ position: 'relative', display: 'inline-block' }}>
