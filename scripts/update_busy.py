@@ -52,7 +52,7 @@ def update_nodes(nodes, new_busyObj, include_crime):
                 all_hours[d["Hour"]] = round(d["Busyness Predicted"], 4)
         return (all_hours)
 
-     # Function for get b-scores including c-scores
+     # Function to get b-scores including c-scores
     def getBusyCrime(taxizone, new_busyObj, crimescore):
         crime_weight = 0.20  # % of busyness score based on crime levels
         all_hours = {}
@@ -104,7 +104,7 @@ all_nodes = 'all_nodes.json'
 all_nodes_no_crime_in_bscore = 'all_nodes_no_crime_in_bscore.json'
 all_nodes_with_crime_in_bscore = 'all_nodes_with_crime_in_bscore.json'
 
-# For checking
+########### For checking - Get specific Values ############################################
 zone = 4
 time = '0'
 print(f'\nFor Zone {zone} at time {time}\n-----------------------')
@@ -124,7 +124,7 @@ for Obj in busyObj_bike:
         bikebusy = Obj['Busyness Predicted']
         print(f'Bike Busyness before weighting = {zone} {time} {bikebusy}')
 
- # Weightings for Busyness
+# Weightings for Busyness
 taxi_weight = 0.64  # Based on MAE
 bike_weight = 0.36  # Based on MAE
 
@@ -160,7 +160,7 @@ for i in range(len(new_busyObj)):
 ########## Decide if to include Crime ############################
 include_crime = True
 
-# Update the Nodes with taxi and bike busyness NOT crime
+# Update the Nodes with combined scores
 update_nodes(park, new_busyObj, include_crime)
 update_nodes(library, new_busyObj, include_crime)
 update_nodes(parknode, new_busyObj, include_crime)

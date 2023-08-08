@@ -6,13 +6,13 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Alert, AlertTitle } from "@mui/material";
 import Box from "@mui/material/Box";
 import { useGreetingData } from "./GreetingDataContext";
+import { useMapInput } from "../context/MapInputContext";
 
-
-
-const LoginCheck = () => {
+const LoginCheck = ({children}) => {
   let errorTimer;
   let passTimer;
 
+  const { setUserdata } = useMapInput();
   const { setTemp1, setTemp2 } = useGreetingData();
 
   const navigate = useNavigate();
@@ -58,6 +58,7 @@ const LoginCheck = () => {
       .then((response) => {
         // Check with database if the username and password match up
         const check = response.data["checks"];
+        setUserdata(check); 
         console.log(
           "Do the username and password match up =",
           check
@@ -122,6 +123,9 @@ console.log(temp1)
   };
 
   return (
+
+
+
     <div className="login-area-signin">
       <div
         className="additional-block-close-loginCheck"
@@ -176,5 +180,5 @@ console.log(temp1)
     </div>
   );
 };
-
+// export const check = response.data["checks"];
 export default LoginCheck;
