@@ -38,8 +38,13 @@
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  padding-bottom: 0;
-  margin-bottom: 0;
+  margin: 10px;
+  padding: 0.5rem;
+}
+
+.popup-content {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .mapboxgl-popup h3 {
