@@ -23,14 +23,14 @@ export const MapInputProvider = ({ children }) => {
   });
 
   const [userdata, setUserdata] = useState(null);
+  console.log(userdata)
   // Use useEffect to save state changes to local storage
   useEffect(() => {
     localStorage.setItem('inputValues', JSON.stringify(inputValues));
   }, [inputValues]);  // This will run every time inputValues changes
-
+  
   return (
     <MapInputContext.Provider value={{ inputValues, setInputValues, userdata, setUserdata }}>
-      console.log(userdata);
       {children}
     </MapInputContext.Provider>
   );
