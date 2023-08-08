@@ -133,7 +133,7 @@ h2 {
   margin-bottom: 30px;
 }
 
-.plansetting-text {
+.plansetting-text-web {
   display: flex;
   width: 250px;
   height: 2.5rem;
@@ -151,14 +151,15 @@ h2 {
   align-items: center;
   background: #014e3d;
   cursor: pointer;
+  
 }
 
-.plansetting-text span {
+.plansetting-text-web span {
   position: relative;
-  z-index: 0;
+  z-index: 100;
 }
 
-.plansetting-text:after {
+.plansetting-text-web:after {
   position: absolute;
   content: "";
   top: 0;
@@ -169,13 +170,15 @@ h2 {
   transition: all .35s;
 }
 
-.plansetting-text:hover {
+.plansetting-text-web:hover {
   color: #014e3d;
+ 
 }
 
-.plansetting-text:hover:after {
+.plansetting-text-web:hover:after {
   width: 100%;
 }
+
 
 
 .detail-text {

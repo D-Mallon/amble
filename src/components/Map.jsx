@@ -925,7 +925,7 @@ const togglehmap = () => {
 
               <div className="plansetting">
                 <a
-                  className="plansetting-text"
+                  className="plansetting-text-web"
                   type="submit"
                   onClick={handleOverallSubmit}
                 >
