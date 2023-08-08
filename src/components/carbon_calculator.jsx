@@ -24,8 +24,8 @@ const Carbon = () => {
     const co2_per_tree_per_year = 22;
     const tree_per_mile = 1/(co2_per_tree_per_year / co2_per_mile);
     const percentage_of_tree = tree_per_mile * dist * 3; 
-    const num_trees = 4 * dist;
-    console.log (percentage_of_tree);
+    const num_trees = Math.round(0.8285 * dist * 3);
+    console.log (dist);
 
     const [showtreecon, setShowtreecon] = useState(false); // 新增的状态
   const [showBut, setShowBut] = useState(true); // 新增的状态
@@ -34,7 +34,7 @@ const Carbon = () => {
   const [alertText, setAlertText] = useState(''); // State to hold alert text
   const [showAlertText, setShowAlertText] = useState(false); // State to control visibility
   const handleSeeTreesClick = () => {
-    const message = 'If you did this walk 3 times a week for a year that is a Carbon Savings equivalent to planting ' + num_trees + ' trees';
+    const message = 'If you did this walk 3 times a week for a year, that is a Carbon Savings equivalent to planting ' + num_trees + ' trees';
     setAlertText(message);
     setShowAlertText(true);
     setShowtreecon(true);
@@ -83,7 +83,7 @@ return (<>
             href="#"
             type="submit"
           >
-            <span>See Number of Trees</span>
+            <span>Your amble Trees</span>
           </a>
         </div>
      )}

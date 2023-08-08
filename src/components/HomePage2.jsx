@@ -69,7 +69,7 @@ function LandingPage() {
         <div className="left-color-block">
           <div className="hometext-title">
             {(!temp1)&&(!temp2)&&<span style={{ fontSize: "36px", fontWeight: 500 }}>
-              amble <br></br>- the peaceful way
+              amble <br></br>- finding the peaceful way
             </span>}
             {temp1&&temp2&&<span style={{ fontSize: "36px", fontWeight: 500 }}>
               Welcome back our everlasting friend,<br></br>{greeting2}!

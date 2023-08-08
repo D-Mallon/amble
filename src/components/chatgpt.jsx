@@ -94,27 +94,27 @@ const ChatGPT = () => {
   const options = [
     {
       value: "",
-      label: "Choose some other interesting stuff about your amble",
+      label: "Choose interesting amble stuff below:",
     },
     {
       value: `Tell me one thing good that happened on ${formattedDate}`,
-      label: "1. Tell me something good that happened on this date",
+      label: "1. Anything good happened on this day?",
     },
     {
       value: `Give me a short paragraph on ${name[1]} in Manhattan`,
-      label: "2. Where is an interesting place I might visit as I amble",
+      label: "2. Where is interesting to visit as I amble?",
     },
     {
       value: `Suggest some mindfulness classes around ${address[0]} `,
-      label: "3. Suggest some mindfulness classes on my route",
+      label: "3. Suggest some mindfulness classes",
     },
     {
       value: `On average how many calories will I burn on a ${dis} km walk?`,
-      label: "4. On average how many calories will I burn?",
+      label: "4. How many calories will I burn?",
     },
     {
       value: `What point of interest is found around longitude ${coord[0]["longitude"]} and latitude ${coord[0]["latitude"]}?`,
-      label: "5. What else is interesting as I amble?",
+      label: "5. What else might I discover?",
     },
     {
       value: `Who was born on ${formattedDate}?`,
@@ -183,7 +183,7 @@ const ChatGPT = () => {
                 href="#"
                 type="submit"
               >
-                <span>Try Something Interesting</span>
+                <span>Learn Something Interesting</span>
               </a>
             </div>
           </>
