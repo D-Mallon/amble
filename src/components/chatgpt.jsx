@@ -35,7 +35,7 @@ const ChatGPT = () => {
   for (let item in globalArray) {
     // console.log(item + ':', globalArray[item]['name']);
     const tempitem_name = globalArray[item]["name"];
-    if (tempitem_name !== null && tempitem_name !== "Unknown Park") {
+    if (tempitem_name !== null && tempitem_name !== "LiÃ¨ge Park") {
       name.push(globalArray[item]["name"]);
     }
     const tempitem_type = globalArray[item]["type"];
