@@ -54,12 +54,18 @@ function LandingPage() {
   
   const greeting2 = temp1 +' ' +temp2;
 
+
+  const [isButtonHovered, setIsButtonHovered] = useState(false);
+
   return (
     <div className="landing-page-container">
       <div className="menubar-area">
         <MenuBar2 />
       </div>
-      <div className="homepage-pics-container">
+      <div
+        className={`homepage-pics-container ${isButtonHovered ? 'hovered' : ''}`}
+      >
+        
         <div className="left-color-block">
           <div className="hometext-title">
             {(!temp1)&&(!temp2)&&<span style={{ fontSize: "36px", fontWeight: 500 }}>
@@ -83,7 +89,13 @@ function LandingPage() {
             </span>
           </div>
           <div className="home-button-container">
+          <div
+          className="my-button-wrapper"
+          onMouseEnter={() => setIsButtonHovered(true)}
+          onMouseLeave={() => setIsButtonHovered(false)}
+        >
             <MyButton  />
+            </div>
           </div>
         </div>
         <div className="guidebutton">

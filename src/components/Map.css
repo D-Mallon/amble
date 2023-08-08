@@ -38,8 +38,13 @@
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  padding-bottom: 0;
-  margin-bottom: 0;
+  margin: 10px;
+  padding: 0.5rem;
+}
+
+.popup-content {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .mapboxgl-popup h3 {
@@ -133,7 +138,7 @@ h2 {
   margin-bottom: 30px;
 }
 
-.plansetting-text {
+.plansetting-text-web {
   display: flex;
   width: 250px;
   height: 2.5rem;
@@ -151,14 +156,15 @@ h2 {
   align-items: center;
   background: #014e3d;
   cursor: pointer;
+  
 }
 
-.plansetting-text span {
+.plansetting-text-web span {
   position: relative;
-  z-index: 0;
+  z-index: 100;
 }
 
-.plansetting-text:after {
+.plansetting-text-web:after {
   position: absolute;
   content: "";
   top: 0;
@@ -169,13 +175,15 @@ h2 {
   transition: all .35s;
 }
 
-.plansetting-text:hover {
+.plansetting-text-web:hover {
   color: #014e3d;
+ 
 }
 
-.plansetting-text:hover:after {
+.plansetting-text-web:hover:after {
   width: 100%;
 }
+
 
 
 .detail-text {
@@ -447,11 +455,11 @@ h2 {
   cursor: pointer;
 }
 
-.additional-block-datail-button {
-  width: 18rem;
+.additional-block-datail-button-web {
+  width: 15rem;
   height: 2.8rem;
   background-color: #014e3d;
-  right: 5.6rem;
+  right: 8.4rem;
   display: flex;
   position: absolute;
   justify-content: center;
@@ -461,7 +469,7 @@ h2 {
 }
 
 /* Styles for hover state */
-.additional-block-datail-button:hover {
+.additional-block-datail-button-web:hover {
   background-color: #ffe212;
   /* Change the background color to red on hover */
 }
@@ -580,11 +588,11 @@ h2 {
 
 }
 
-.additional-block-text-detailtitle {
-  width: 18rem;
+.additional-block-text-detailtitle-web {
+  width: 15rem;
   height: 2.8rem;
   background-color: #ffeea9;
-  right: 23.6rem;
+  right: 23.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -709,33 +717,72 @@ h2 {
 
 .heatmap-checkboxes {
   position: absolute;
-  bottom: 20px;
-  left: 90%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
+  top: 3rem;
+  right: 4.6rem;
+  /* transform: translate(-50%, -50%); */
+  background-color: rgba(1, 78, 61, 0.9);
+  padding-left: 10px;
   border-radius: 5px;
   text-align: center;
+  width: 250px;
+  height: 260px;
+  border-radius: 0;
+  z-index: 1000;
+  padding-top: 18px;
 }
 
 .heatmap-checkboxes label {
   display: block; /* Each label takes up the full width */
-  margin: 5px 0;  /* Space between labels */
+  margin: 25px 0;  /* Space between labels */
   cursor: pointer; /* Indicate that the label is clickable */
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 5px;
+  color: #ffffff;
+ /* margin-top: 30px; */
 }
 
 .heatmap-checkboxes input[type="checkbox"] {
-  margin-left: 10px; /* Space between the label text and the checkbox */
+  margin-left:40px;
+  color: #014e3d;
+  /* 添加以下样式来自定义勾选框的外观 */
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #E3FCF7;
+  position: relative;
+  outline: none;
+  border-radius: 0;
+  top:8px;
 }
 
-.heatmap-checkboxes .heatmaps-click {
+/* 自定义勾选框的选中状态样式 */
+.heatmap-checkboxes input[type="checkbox"]::before {
+  content: '\2713'; /* Unicode 编码表示勾号 */
+  color: #E3FCF7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  line-height: 1;
+  opacity: 0; /* 默认不显示 */
+}
+
+/* 当勾选框选中时显示勾号 */
+.heatmap-checkboxes input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+
+
+/* .heatmap-checkboxes .heatmaps-click {
   cursor: pointer;
 }
 
 .heatmap-checkboxes .heatmaps-closed,
 .checkboxes-visibility.hidden {
   display: none;
-}
+} */
 
 .checkboxes-visibility {
   transition: opacity 0.3s; /* Optional smooth transition */
@@ -751,3 +798,34 @@ h2 {
   margin-top: -25px;
   margin-bottom: 5px;
 }
+
+.heatmap-web{
+
+  width: 2.8rem;
+  top: 0rem;
+  height: 2.8rem;
+  background-color:#014e3d;
+  right:5.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+}
+
+.heatmap-web:hover{
+
+  width: 2.8rem;
+  top: 0rem;
+  height: 2.8rem;
+  background-color:#00ed64;
+  right:5.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+}
+

@@ -268,12 +268,13 @@
     animation-delay: 0.2s;
   }
   
-  .additional-block-text-preplan {
-    width: 18rem;
+  .additional-block-text-preplan-web {
+    width: 15rem;
     height:2.8rem;
-    background-color:#ffeea9;
-    left:0;
+    background-color:#e3fcf7;
+    right:8.4rem;
     display: flex;
+    position:absolute;
     justify-content: center;
     align-items: center;
   }

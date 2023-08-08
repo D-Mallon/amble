@@ -3,19 +3,24 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 .homepage-pics-container {
-  background-image: url('/static/images/newyork.jpg');
-  /* 设置背景图片路径 */
   background-size: cover;
-  /* 按比例缩放背景图，保持其完全覆盖容器 */
   background-position: center;
-  /* 调整背景图的位置为居中 */
+  background-image: url('/static/images/newyork.jpg');
   position: relative;
   width: 100%;
   height: 100vh;
-  /* 设置高度为视口的100% */
   display: flex;
+  transition: background-image 2.5s ease; /* Add transition property */
 }
+
+.homepage-pics-container.hovered {
+  background-image: url('/static/images/newyork1.3.jpg');
+}
+
+
 
 
 .menubar-area {

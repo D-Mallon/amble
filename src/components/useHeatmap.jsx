@@ -3,7 +3,7 @@ import bScoreData from '../json-files/all_nodes.json';
 import taxiGeoJSON from '../json-files/taxi.json'; // Replace with the actual path to the taxi.json file
 
 const useHeatmap = (map, isHeatmapVisible) => {
-  const hour = 0;  // Use a default hour value of 0
+  const hour = 12;  // Use a default hour value of 0
 
   // Prepare GeoJSON data from bScoreData
   const geoJSONData = {
@@ -61,11 +61,11 @@ const useHeatmap = (map, isHeatmapVisible) => {
             'interpolate',
             ['linear'],
             ['get', 'b-score'],
-            -1.2,
-            'green',
-            -0.5,
-            'yellow',
             0,
+            'green',
+            0.35,
+            'yellow',
+            0.7,
             'red',
           ],
           'fill-opacity': 0.5,
@@ -80,6 +80,7 @@ const useHeatmap = (map, isHeatmapVisible) => {
   useEffect(() => {
     if (map.current && map.current.isStyleLoaded() && map.current.getLayer('b-score-layer')) {
       map.current.setLayoutProperty('b-score-layer', 'visibility', isHeatmapVisible ? 'visible' : 'none');
+      map.current.setLayoutProperty('taxi-zone-edges', 'visibility', isHeatmapVisible ? 'visible' : 'none');
     }
   }, [map, isHeatmapVisible]);
 };

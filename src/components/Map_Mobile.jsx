@@ -69,7 +69,9 @@ const Map_Mobile = () => {
     control: (provided) => ({
       ...provided,
       borderRadius: 0,
+      // margin:'0px',
       color: '#014e3d',
+     
       width: '350px', // 或者设置您需要的具体宽度值
       borderColor: '#014e3d', // 修改边框颜色
       borderWidth: '1.5px', // 修改边框粗细
@@ -82,6 +84,7 @@ const Map_Mobile = () => {
     }),
     option: (provided, state) => ({
       ...provided,
+      height:'1.6rem',
       backgroundColor: state.isFocused ? 'white' : 'white', // 修改 hover 颜色
       '&:hover': {
         backgroundColor: '#b1ff05', // 修改 hover 颜色
@@ -559,11 +562,11 @@ const togglehome = () => {
                 spacing={2}
                 direction="row"
                 justifyContent="center"
-                paddingBottom="15px"
+                paddingBottom="10px"
               >
                 <Button
                   className="now-button"
-                  sx={{ width: "100px", height: "2.5rem" }}
+                  sx={{ width: "80px", height: "2.2rem" }}
                   variant={nowSelected ? "contained" : "outlined"}
                   style={
                     nowSelected
@@ -582,7 +585,7 @@ const togglehome = () => {
                 </Button>
                 <Button
                   variant={laterSelected ? "contained" : "outlined"}
-                  sx={{ width: "100px", height: "2.5rem" }}
+                  sx={{width: "80px", height: "2.2rem"  }}
                   style={
                     laterSelected
                       ? { borderRadius: 0 }
@@ -639,7 +642,7 @@ const togglehome = () => {
                     }}
                   />
                   <Button
-                    sx={{ width: "100px", height: "2.5rem" }}
+                    sx={{ width: "80px", height: "2.2rem"  }}
                     variant="outlined"
                     style={
                       nowSelected
@@ -687,7 +690,7 @@ const togglehome = () => {
                     spacing={1}
                     direction="row"
                     justifyContent="center"
-                    paddingBottom="15px"
+                    paddingBottom="10px"
                   >
                     <Button
                       onClick={() => {
@@ -702,7 +705,7 @@ const togglehome = () => {
                         setAddressSelected(false);
                         setShowEndLocationInput(true);
                       }}
-                      sx={{ width: "110px", height: "2.5rem" }}
+                      sx={{ width: "110px", height: "2.2rem"  }}
                       startIcon={<HomeIcon />}
                       variant={homeSelected ? "contained" : "outlined"}
                       style={
@@ -728,7 +731,7 @@ const togglehome = () => {
                         setSearchSelected(true);
                         setAddressSelected(false);
                       }}
-                      sx={{ width: "110px", height: "2.5rem" }}
+                      sx={{  width: "110px", height: "2.2rem"  }}
                       startIcon={
                         beginLocationPressed ? (
                           <LocationSearchingIcon />
@@ -759,7 +762,7 @@ const togglehome = () => {
                         setSearchSelected(false);
                         setAddressSelected(true);
                       }}
-                      sx={{ width: "110px", height: "2.5rem" }}
+                      sx={{  width: "110px", height: "2.2rem"  }}
                       startIcon={<SearchIcon />}
                       variant={addressSelected ? "contained" : "outlined"}
                       style={
@@ -786,7 +789,7 @@ const togglehome = () => {
                     isOptionEqualToValue={() => true === true}
                     style={{
                       width: 350,
-                      paddingBottom: "15px",
+                      paddingBottom: "0px",
                       color: "black",
                       borderRadius: 0,
                     }}
@@ -845,7 +848,7 @@ const togglehome = () => {
                     spacing={1}
                     direction="row"
                     justifyContent="center"
-                    paddingBottom="15px"
+                    paddingBottom="10px"
                   >
                     <Button
                       onClick={() => {
@@ -861,7 +864,7 @@ const togglehome = () => {
                         setShowEndField(false);
                       }}
                       startIcon={<HomeIcon />}
-                      sx={{ width: "110px", height: "2.5rem" }}
+                      sx={{  width: "110px", height: "2.2rem" }}
                       variant={endHomeSelected ? "contained" : "outlined"}
                       style={
                         endHomeSelected
@@ -886,7 +889,7 @@ const togglehome = () => {
                         setEndAddressSelected(false);
                         setShowEndField(false);
                       }}
-                      sx={{ width: "110px", height: "2.5rem" }}
+                      sx={{ width: "110px", height: "2.2rem"  }}
                       startIcon={
                         endLocationPressed ? (
                           <LocationSearchingIcon />
@@ -917,7 +920,7 @@ const togglehome = () => {
                         setEndAddressSelected(true);
                         setShowEndField(true);
                       }}
-                      sx={{ width: "110px", height: "2.5rem" }}
+                      sx={{ width: "110px", height: "2.2rem"  }}
                       startIcon={<SearchIcon />}
                       variant={endAddressSelected ? "contained" : "outlined"}
                       style={
@@ -944,7 +947,7 @@ const togglehome = () => {
                     isOptionEqualToValue={() => true === true}
                     style={{
                       width: 350,
-                      paddingBottom: "15px",
+                      paddingBottom: "5px",
                       color: "black",
                       borderRadius: 0,
                     }}
@@ -1015,9 +1018,9 @@ const togglehome = () => {
               //   <Button   sx={{ width: "200px", height: "2.5rem" }}  variant="contained" type="submit" size="large" style={{ borderRadius: 0 }} onClick={handleInputSubmit}>GO</Button>
               // </Stack>
 
-              <div className="plansetting">
+              <div className="plansetting-mobile">
                 <a
-                  className="plansetting-text"
+                  className="plansetting-text-mobile"
                   type="submit"
                   onClick={handleOverallSubmit}
                 >
@@ -1109,9 +1112,9 @@ const togglehome = () => {
               </div>
             </div>
 
-            <div className="finishdetail">
+            <div className="finishdetail-mobile">
               <a
-                className="finishdetail-text"
+                className="finishdetail-text-mobile"
                 type="submit"
                 onClick={toggleratewin}
               >
@@ -1179,13 +1182,13 @@ const togglehome = () => {
       {ratingwin && (
         <div className="ratewin-mobile">
            
-            
+{/*             
           <img
-            src="/static/images/MenuPic5.jpg"
+            src="/static/images/newyork3.jpg"
             alt="pics"
-            className="ratewin-background"
+            className="ratewin-background-mobile"
           ></img>
-          
+           */}
          
             
 

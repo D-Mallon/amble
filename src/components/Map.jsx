@@ -9,7 +9,7 @@ import routedirection from "./routedirection";
 import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-
+import HMobiledataIcon from '@mui/icons-material/HMobiledata';
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
@@ -331,6 +331,12 @@ const Map = () => {
   const [routedetail, setroutedetail] = useState(false);
   const [ratingwin, setratingwin] = useState(false);
   const [cathover, setcatHover] = useState(false);
+  const [hmap, sethmap] = useState(false);
+
+const togglehmap = () => {
+  sethmap(!hmap);
+};
+
 
   const backtodetailwin = () => {
     setratingwin(false);
@@ -919,7 +925,7 @@ const Map = () => {
 
               <div className="plansetting">
                 <a
-                  className="plansetting-text"
+                  className="plansetting-text-web"
                   type="submit"
                   onClick={handleOverallSubmit}
                 >
@@ -939,18 +945,25 @@ const Map = () => {
       )}
 
       {/* Routeshowing win part */}
+      <div
+        className="heatmap-web"
+        onClick={togglehmap}
+      >
+        <HMobiledataIcon sx={{ fontSize: 36, color: "white" }} />
+      </div>
       {routedetail && (
         <>
-          <div className="additional-block-text-detailtitle">
+          <div className="additional-block-text-detailtitle-web">
             <span className="text_bar_2-detailtitle">
-              Route Plan Presentation
+              Plan Presentation
             </span>
           </div>
+
           <div
-            className="additional-block-datail-button"
+            className="additional-block-datail-button-web"
             onClick={backtoplanwin}
           >
-            <span className="text_bar_2-detail">Change Journey Plan</span>
+            <span className="text_bar_2-detail">Change Plan</span>
           </div>
 
           <div className="detailbox">
@@ -965,7 +978,7 @@ const Map = () => {
               ? `${sliderValue} km`
               : `${sliderValue} mins`}
             </strong></span>
-            <p>Preference</p>
+            {/* <p>Preference</p> */}
 
             <p>Quietness Score</p><br/>
             <div className="quietness-traffic-light" style={{ position: 'relative', display: 'inline-block' }}>
@@ -1159,11 +1172,12 @@ const Map = () => {
 
       <div ref={mapContainer} className="map-container" />
         {/* Heatmap Checkboxes*/}
-       <div className="heatmap-checkboxes">
-          <span className="heatmaps-click" onClick={toggleCheckboxes}><b>HeatMaps</b></span>
+       {hmap&&(<div className="heatmap-checkboxes">
+       <CloseIcon className="close-hmap" onClick={togglehmap} sx={{ fontSize: 24 , color: 'white'}} />
+          {/* <span className="heatmaps-click" onClick={toggleCheckboxes}><b>HeatMaps</b></span>
           <span className="heatmaps-open" style={{display: isCheckboxesVisible ? 'inline' : 'none'}}>&#9660;</span>
           <span className="heatmaps-closed" style={{display: isCheckboxesVisible ? 'none' : 'inline'}}>&#9650;</span>
-          <div className={isCheckboxesVisible ? 'checkboxes-visibility' : 'checkboxes-visibility hidden'}>
+          <div className={isCheckboxesVisible ? 'checkboxes-visibility' : 'checkboxes-visibility hidden'}> */}
             <label>
               Location Busyness: 
               <input
@@ -1197,8 +1211,9 @@ const Map = () => {
                   />*/}
             </label>
           </div>
+       )}
         </div>
-    </div>
+    //</div>
   );
 };
 

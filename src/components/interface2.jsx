@@ -106,11 +106,6 @@ function Interface2() {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        {/* <img
-          src="/static/images/menu.png"
-          className="menu-button"
-          alt="Menu button"
-        /> */}
           <div className="menubar-area-interface">
         <MenuBar2 />
       </div>
@@ -147,8 +142,8 @@ function Interface2() {
 
           <div className="PlanMap">
             <div className="additional-blocks">
-              <div className="additional-block-text-preplan">
-                <span className="text_bar_2-preplan">During the planning process</span>
+              <div className="additional-block-text-preplan-web">
+                <span className="text_bar_2-preplan">Plan Process</span>
               </div>
               <div
                 className="additional-block-weather"
