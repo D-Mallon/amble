@@ -9,7 +9,7 @@ import MyFunctionButton_home from "./functionbutton";
 import MapBackground from "./mapbackground";
 import Box from "@mui/material/Box";
 import { useGreetingData } from './GreetingDataContext';
-
+import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 
 const theme = createTheme({
   palette: {
@@ -63,19 +63,31 @@ function LandingPage() {
         <MenuBar2 />
       </div>
       <div
-        className={`homepage-pics-container ${isButtonHovered ? 'hovered' : ''}`}
+        className={`homepage-pics-container ${
+          isButtonHovered ? "hovered" : ""
+        }`}
       >
-        
         <div className="left-color-block">
           <div className="hometext-title">
-            {(!temp1)&&(!temp2)&&<span style={{ fontSize: "36px", fontWeight: 500 }}>
-              amble <br></br>- finding the peaceful way
-            </span>}
-            {temp1&&temp2&&<span style={{ fontSize: "36px", fontWeight: 500 }}>
-              Welcome back our everlasting friend,<br></br>{greeting2}!
-            </span>}
-            </div>
-            <div className="hometext-body">
+            {!temp1 && !temp2 && (
+              <>
+                <span style={{ fontSize: "46px", fontWeight: "bolder" }}>
+                  amble{" "}
+                </span>
+
+                <span style={{ fontSize: "30px", fontWeight: "normal" }}>
+                  - finding the peaceful way in Manhattan
+                </span>
+              </>
+            )}
+            {temp1 && temp2 && (
+              <span style={{ fontSize: "36px", fontWeight: "bolder" }}>
+                Welcome back our everlasting friend,<br></br>
+                {greeting2}!
+              </span>
+            )}
+          </div>
+          <div className="hometext-body">
             <span style={{ fontSize: "16px" }}>
               The purpose of our application is to generate walking routes for
               users to guide them though the quiet corners of Manhattan.
@@ -89,22 +101,22 @@ function LandingPage() {
             </span>
           </div>
           <div className="home-button-container">
-          <div
-          className="my-button-wrapper"
-          onMouseEnter={() => setIsButtonHovered(true)}
-          onMouseLeave={() => setIsButtonHovered(false)}
-        >
-            <MyButton  />
+            <div
+              className="my-button-wrapper"
+              onMouseEnter={() => setIsButtonHovered(true)}
+              onMouseLeave={() => setIsButtonHovered(false)}
+            >
+              <MyButton />
             </div>
           </div>
         </div>
         <div className="guidebutton">
-        <a href="#mapwrapper_landingpage">
-        <MyFunctionButton_home/>
-       </a>
+          <a href="#mapwrapper_landingpage">
+            <MyFunctionButton_home />
+          </a>
         </div>
       </div>
-      <div className="mapwrapper_landingpage"  id="mapwrapper_landingpage">
+      <div className="mapwrapper_landingpage" id="mapwrapper_landingpage">
         <div className="leftbox">
           <MapBackground zoom={12.0} />
         </div>
@@ -112,8 +124,14 @@ function LandingPage() {
         <div className="rightbox">
           <div className="rightbox-in-1">
             <span className="hometext-address">
-            <span style={{ fontSize: "42px", fontWeight: 500 }}>Hey, </span>
-             {temp1&&temp2&&<span style={{ fontSize: "38px", fontWeight: 500 }}>{greeting}</span>} 
+              <span style={{ fontSize: "42px", fontWeight: "bolder" }}>
+                Hey,{" "}
+              </span>
+              {temp1 && temp2 && (
+                <span style={{ fontSize: "38px", fontWeight: "bolder" }}>
+                  {greeting}
+                </span>
+              )}
               <br></br>
               <br></br>
               <span style={{ fontSize: "17px" }}>
@@ -127,16 +145,207 @@ function LandingPage() {
             </span>
           </div>
           <div className="rightbox-in-2">
-          <img
-        src={images_home[currentImageIndex]}
-        alt="pics"
-        className="pic-in-rightbox"
-      />
+            <img
+              src={images_home[currentImageIndex]}
+              alt="pics"
+              className="pic-in-rightbox"
+            />
           </div>
         </div>
       </div>
 
-      <div className="endbar"></div>
+      <div className="endbar">
+        <span
+          className="endbartitle"
+          style={{ fontSize: "36px", color: "#e3fcf7", fontWeight: "bolder" }}
+        >
+          Want to learn more about amble? Hit us up!
+        </span>
+        <div className="endbarcontent">
+          <div className="endbarone">
+            <span
+              style={{
+                fontSize: "22px",
+                color: "#e3fcf7",
+                fontWeight: "bolder",
+              }}
+            >
+              Data Team:
+            </span>
+            <div className="person-info-one">
+              <div className="profile-image-one">
+                <img src="/static/images/newyork1.jpg" alt="Gary Carroll" />
+              </div>
+              <div className="G">
+                <span style={{ fontSize: "18px", color: "#e3fcf7" }}>
+                  Gary Carroll
+                </span>
+                <div className="email" style={{ display: "inline-flex", alignItems: "center" }}>
+                <MailOutlineOutlinedIcon className="gary" style={{ verticalAlign: "middle", fontSize: "24px",color:"white" }}/>
+                <a
+                  href="mailto:gary.carroll@ucdconnect.ie"
+                  style={{
+                    fontSize: "18px",
+                    color: "#e3fcf7",
+                    textDecoration: "none",
+                  }}
+                >
+                 
+                  gary.carroll@ucdconnect.ie
+                </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="person-info-two">
+              <div className="profile-image-two">
+                <img src="/static/images/newyork1.jpg" alt="Nicole Neumark" />
+              </div>
+              <div className="N">
+                <span style={{ fontSize: "18px", color: "#e3fcf7" }}>
+                  Nicole Neumark
+                </span>
+                <div className="email" style={{ display: "inline-flex", alignItems: "center" }}>
+                <MailOutlineOutlinedIcon className="gary" style={{ verticalAlign: "middle", fontSize: "24px",color:"white" }}/>
+                
+                <a
+                  href="mailto:nicole.neumark@ucdconnect.ie"
+                  style={{
+                    fontSize: "18px",
+                    color: "#e3fcf7",
+                    textDecoration: "none",
+                  }}
+                >
+                  
+                  nicole.neumark@ucdconnect.ie
+                </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="endbartwo">
+            <span
+              style={{
+                fontSize: "22px",
+                color: "#e3fcf7",
+                fontWeight: "bolder",
+              }}
+            >
+              Front-End Team:
+            </span>
+            <div className="person-info-three">
+              <div className="profile-image-three">
+                <img src="/static/images/newyork1.jpg" alt="Finbar Allan" />
+              </div>
+              <div className="F">
+                <span style={{ fontSize: "18px", color: "#e3fcf7" }}>
+                  Finbar Allan
+                </span>
+                <div className="email" style={{ display: "inline-flex", alignItems: "center" }}>
+                <MailOutlineOutlinedIcon className="gary" style={{ verticalAlign: "middle", fontSize: "24px",color:"white" }}/>
+                <a
+                  href="mailto:finbar.allan@ucdconnect.ie"
+                  style={{
+                    fontSize: "18px",
+                    color: "#e3fcf7",
+                    textDecoration: "none",
+                  }}
+                >
+                
+                  finbar.allan@ucdconnect.ie
+                </a>
+</div>
+              </div>
+            </div>
+            <div className="person-info-four">
+              <div className="profile-image-four">
+                <img src="/static/images/newyork1.jpg" alt="Ye Xing" />
+              </div>
+              <div className="Y">
+                <span style={{ fontSize: "18px", color: "#e3fcf7" }}>
+                  Ye Xing
+                </span>
+                <div className="email" style={{ display: "inline-flex", alignItems: "center" }}>
+                <MailOutlineOutlinedIcon className="gary" style={{ verticalAlign: "middle", fontSize: "24px",color:"white" }}/>
+                <a
+                  href="mailto: ye.xing@ucdconnect.ie"
+                  style={{
+                    fontSize: "18px",
+                    color: "#e3fcf7",
+                    textDecoration: "none",
+                  }}
+                >
+                  
+                  ye.xing@ucdconnect.ie
+                </a>
+
+              </div>
+              </div>
+            </div>
+          </div>
+          <div className="endbarthree">
+            <span
+              style={{
+                fontSize: "22px",
+                color: "#e3fcf7",
+                fontWeight: "bolder",
+              }}
+            >
+              Back-End Team:
+            </span>
+            <div className="person-info-five">
+              <div className="profile-image-five">
+                <img src="/static/images/newyork1.jpg" alt="Cormac Lynch" />
+              </div>
+              <div className="C">
+                <span style={{ fontSize: "18px", color: "#e3fcf7" }}>
+                  Cormac Lynch
+                </span>
+                <div className="email" style={{ display: "inline-flex", alignItems: "center" }}>
+                <MailOutlineOutlinedIcon className="gary" style={{ verticalAlign: "middle", fontSize: "24px",color:"white" }}/>
+                <a
+                  href="mailto:  cormac.lynch1@ucdconnect.ie"
+                  style={{
+                    fontSize: "18px",
+                    color: "#e3fcf7",
+                    textDecoration: "none",
+                  }}
+                >
+                
+                  cormac.lynch1@ucdconnect.ie
+                </a>
+</div>
+              </div>
+            </div>
+            <div className="person-info-six">
+              <div className="profile-image-six">
+                <img src="/static/images/newyork1.jpg" alt=" David Mallon" />
+              </div>
+              <div className="D">
+                <span style={{ fontSize: "18px", color: "#e3fcf7" }}>
+                  David Mallon
+                </span>
+                <div className="email" style={{ display: "inline-flex", alignItems: "center" }}>
+                <MailOutlineOutlinedIcon className="gary" style={{ verticalAlign: "middle", fontSize: "24px",color:"white" }}/>
+                <a
+                  href="mailto:david.mallon@ucdconnect.ie"
+                  style={{
+                    fontSize: "18px",
+                    color: "#e3fcf7",
+                    textDecoration: "none",
+                  }}
+                >
+               
+                  david.mallon@ucdconnect.ie
+                </a>
+
+        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
