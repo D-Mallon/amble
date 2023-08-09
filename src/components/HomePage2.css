@@ -42,8 +42,8 @@ html {
   /* 与homepage-pics-container高度相同 */
   position: relative;
   /* 将色块靠左 */
-  top: 5rem;
-  left: 5rem;
+  top: 5.5rem;
+  left: 5.5rem;
   overflow: hidden;
   display: flex;
   /* justify-content: center; */
@@ -51,20 +51,19 @@ html {
   flex-direction: column;
 }
 .hometext-title {
-  
   display: flex;
   color: #e3fcf7;
   width: 100%;
-  padding-left: 25%;
-  
-  top: 4%;
-  z-index: 0;
+  padding-left: 27%;
+  top: 2%;
+  z-index: 1;
   position: relative;
  /* height: 25rem; */
   text-align: left;
   /* align-items: center; */
   /* justify-content: center; */
-  margin-bottom: 40px;
+  margin-bottom: 35px;
+  flex-direction: column;
   /* overflow: hidden; */
 }
 
@@ -72,7 +71,7 @@ html {
   position: relative;
   display: flex;
   color: #e3fcf7;
-  width: 87%;
+  width: 84%;
   height: 70rem;
   z-index: 0;
   overflow: hidden;
@@ -82,7 +81,7 @@ html {
   /* align-items: center; */
   justify-content: center;
   margin-bottom: 0px;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 /* 颜色：#014e3d #00ed64 #e3fcf7 #001E2B #FFC010 #FFEEA9 #FFE212 #B1FF05 #00684A*/
@@ -90,7 +89,7 @@ html {
 .home-button-container {
   width: 100%;
   height: 100%;
-  top: -1.8rem;
+  top: -0.1rem;
   /* left: 0%; */
   align-items: center;
   justify-content: center;
@@ -225,12 +224,84 @@ html {
     position: relative;
     /* bottom: 0; */
     align-items: center;
-    justify-content: space-between;
-    height: 15rem;
+    justify-content: center;
+    height: 28rem;
     width: 100%;
     z-index: 1;
+    text-align: left;
+    flex-direction: column;
+  }
+
+
+  .endbartitle{
+    left: 2rem;
+    top:3rem;
+    display: flex;
+    position:absolute;
+    margin-bottom: 10px; /* 下方间距 */
   }
   
+  /* 内容容器 */
+.endbarcontent {
+  display: flex;
+  position: absolute;
+  top:9.4rem;
+  justify-content: center;
+  width: 100%;
+}
+
+/* 内容块样式 */
+.endbarone,
+.endbartwo,
+.endbarthree {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 0 90px; /* 左右间距 */
+}
+
+/* 人员信息样式 */
+.endbarone span,
+.endbartwo span,
+.endbarthree span {
+  font-size: 18px;
+  color: #e3fcf7;
+  margin: 3px 0; /* 上下间距 */
+}
+
+.G,.N,.F,.Y,.C,.D{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 20px;
+}
+
+.profile-image-one,.profile-image-two,.profile-image-three,.profile-image-four,.profile-image-five,.profile-image-six {
+  width: 60px; /* 调整图片宽度 */
+  height: 60px; /* 调整图片高度 */
+  overflow: hidden;
+  border-radius: 50%; /* 将图片剪裁为圆形 */
+  margin-right: 10px; /* 调整图片与文字的间距 */
+  margin-top: 23px;
+}
+
+.profile-image-one img,.profile-image-two img ,.profile-image-three img,.profile-image-four img,.profile-image-five img,.profile-image-six img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.person-info-one,.person-info-two,.person-info-three,.person-info-four,.person-info-five,.person-info-six {
+  display: flex;
+  align-items: center;
+  
+}
+
+.gary {
+  margin-right: 5px; /* 调整图标与邮箱地址的间距 */
+}
+
+
   .landing-page-container {
     display: flex;
     flex-direction: column;
