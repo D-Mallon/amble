@@ -379,7 +379,7 @@ const Map_Mobile = () => {
   };
 
   const handleButtonClick_close = () => {
-    navigate("/");
+    navigate("/realmappage");
   };
 
   const handleRatingsCalc = () => {
@@ -515,7 +515,7 @@ const togglecloserate= () => {
 };
 
 const togglehome = () => {
-  navigate("/mobilehomepage");
+  navigate("/realhomepage");
 };
 
   return (

@@ -33,4 +33,7 @@ urlpatterns = [
     path("map", TemplateView.as_view(template_name="base.html")),
     path("mobilehomepage", TemplateView.as_view(template_name="base.html")),
     path("mobilemappage", TemplateView.as_view(template_name="base.html")),
+    
+    path("realmappage", TemplateView.as_view(template_name="base.html")),
+    path("realhomepage", TemplateView.as_view(template_name="base.html")),
 ]

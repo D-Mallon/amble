@@ -34,7 +34,7 @@ function LandingPage() {
     '/static/images/newyork15.jpg',
   ];
   const toggleamble = () => {
-    navigate("/map");
+    navigate("/realmappage");
   };
   
     const [currentImageIndex, setCurrentImageIndex] = useState(0);

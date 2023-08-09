@@ -29,7 +29,8 @@ import Box from "@mui/material/Box";
 import Favicon from "react-favicon";
 import Mobile_Mappage from './components/Mobile_Mappage';
 import Mobile_homepage from './components/Mobile_homepage';
-
+import Realhomepage from './components/realhomepage';
+import Realmappage from './components/realmappage';
 // If a route can not be displayed this function is invoked from Route path
 function MatchAllRoute() {
   return <h2>The requested page does not exist</h2>;
@@ -62,6 +63,8 @@ function App() {
                   <Route path="/signup" element={<Signup />} />
                   <Route path="/homepage" element={<HomePage />} />
                   <Route path="/resources" element={<Resources />} />
+                  <Route path="/realhomepage" element={<Realhomepage />} />
+                  <Route path="/realmappage" element={<Realmappage />} />
                   {/* <Route path="/chatgpt" element={<ChatGPT />} />
               <Route path="/quotes" element={<Quotes />} /> */}
                   <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />

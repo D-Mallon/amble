@@ -101,11 +101,11 @@ navigate("/resources");
   const [logoIndex, setLogoIndex] = useState(0);
 
   const handleButtonClick = () => {
-    navigate("/map");
+    navigate("/realmappage");
   };
 
   const handleButtonClick2 = () => {
-    navigate("/");
+    navigate("/realhomepage");
   };
 
   useEffect(() => {
