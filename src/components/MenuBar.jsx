@@ -41,7 +41,7 @@ export default function MenuBar() {
   };
 
   const togglehome = () => {
-    navigate("/realhomepage");
+    navigate("/");
   };
 
   const toggleamble = () => {

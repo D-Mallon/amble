@@ -515,7 +515,7 @@ const togglecloserate= () => {
 };
 
 const togglehome = () => {
-  navigate("/realhomepage");
+  navigate("/");
 };
 
   return (

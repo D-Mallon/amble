@@ -374,7 +374,7 @@ const togglehmap = () => {
   };
 
   const handleButtonClick_close = () => {
-    navigate("/realhomepage");
+    navigate("/");
   };
 
   const handleRatingsCalc = () => {

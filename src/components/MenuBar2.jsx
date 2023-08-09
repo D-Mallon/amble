@@ -78,7 +78,7 @@ export default function MenuBar2() {
   };
 
   const toggleRes=()=>{
-navigate("/resources");
+navigate("/realrespage");
   };
   const handleClickOutside = (event) => {
     if (
@@ -105,7 +105,7 @@ navigate("/resources");
   };
 
   const handleButtonClick2 = () => {
-    navigate("/realhomepage");
+    navigate("/");
   };
 
   useEffect(() => {
