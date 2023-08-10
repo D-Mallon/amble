@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     // Output directory for Vite build - DM trialling fix 7Aug
-    outDir: "/var/www/ucdSummerProject/backend/static",
+    // trialling removal of this - outDir: "/var/www/ucdSummerProject/backend/static",
     rollupOptions: {
       input: "/var/www/ucdSummerProject/src/main.jsx",
       output: {
