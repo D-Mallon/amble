@@ -96,6 +96,7 @@ const Map = () => {
   const [waypointRatings, setWaypointRatings] = useState({});
   const [isCheckboxesVisible, setCheckboxesVisible] = useState(true);
   const [isHeatmapVisible, setHeatmapVisible] = useState(true);
+  const [isOtherHeatmapVisible, setOtherHeatmapVisible] = useState(false);
   //console.log(globalArray)
 
   const mapContainer = useRef(null);
@@ -189,9 +190,15 @@ const Map = () => {
 
   const handleToggleHeatmap = () => {
     setHeatmapVisible(!isHeatmapVisible);
+    setOtherHeatmapVisible(false);
   };
 
-  useHeatmap(map, isHeatmapVisible);
+  const handleToggleOtherHeatmap = () => {
+    setOtherHeatmapVisible(!isOtherHeatmapVisible);
+    setHeatmapVisible(false);
+  };
+
+  useHeatmap(map, isHeatmapVisible, isOtherHeatmapVisible);
 
 
   const { route, displayRoute, directiondata } = useRouteDisplay(
@@ -208,12 +215,15 @@ const Map = () => {
     setEndLocationPressed,
     inputValues,
     setInputValues,
+    showBeginLocationInput,
+    setShowBeginLocationInput,
     showEndLocationInput,
     setShowEndLocationInput,
-    setShowPreferencesInput
+    setShowPreferencesInput,
+    setShowGoButton,
   );
-  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } =
-    usePlaceNameChange("", setInputValues);
+  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } = 
+  usePlaceNameChange("", setInputValues,  showBeginLocationInput, showEndLocationInput, setShowEndLocationInput, setShowPreferencesInput, setShowGoButton);
 
   const handleNowButtonClick = () => {
     setNowSelected(true);
@@ -767,13 +777,14 @@ const Map = () => {
                       onClick={() => {
                         setInputValues((prevValues) => ({
                           ...prevValues,
-                          endLatitude: 40.711667,
-                          endLongitude: -74.0125,
+                          latitude: 40.7505,
+                          longitude: -73.9934,
                         }));
                         setEndHomeSelected(true);
                         setEndSearchSelected(false);
                         setEndAddressSelected(false);
                         setShowPreferencesInput(true);
+                        setShowGoButton(true);
                         setShowEndField(false);
                       }}
                       startIcon={<HomeIcon />}
@@ -921,6 +932,7 @@ const Map = () => {
                     value={selectedOptions}
                     onChange={handleSelectChange}
                     styles={customStyles}
+                    menuPlacement="top"
                   />
                 </form>
               </div>
@@ -1209,7 +1221,7 @@ const Map = () => {
           <span className="heatmaps-closed" style={{display: isCheckboxesVisible ? 'none' : 'inline'}}>&#9650;</span>
           <div className={isCheckboxesVisible ? 'checkboxes-visibility' : 'checkboxes-visibility hidden'}> */}
         <label>
-          Location Busyness:
+          Busyness Scores:
           <input
             type="checkbox"
             checked={isHeatmapVisible}
@@ -1217,28 +1229,12 @@ const Map = () => {
           />
         </label>
         <label>
-          Taxizone Busyness:
-          {/*<input
-                type="checkbox"
-                checked={isHeatmapVisible}
-                onChange={handleToggleHeatmap}
-                  />*/}
-        </label>
-        <label>
           Crime Scores:
-          {/*<input
+          <input
                 type="checkbox"
-                checked={isHeatmapVisible}
-                onChange={handleToggleHeatmap}
-                  />*/}
-        </label>
-        <label>
-          User Ratings:
-          {/*<input
-                type="checkbox"
-                checked={isHeatmapVisible}
-                onChange={handleToggleHeatmap}
-                  />*/}
+                checked={isOtherHeatmapVisible}
+                onChange={handleToggleOtherHeatmap}
+                  />
         </label>
       </div>
       )}

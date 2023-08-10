@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 
-const useGeocoding = (map, startButtonPressed, setStartButtonPressed, endButtonPressed, setEndButtonPressed, inputValues, setInputValues, showEndLocationInput, setShowEndLocationInput, setShowGoButton) => {
+const useGeocoding = (map, startButtonPressed, setStartButtonPressed, endButtonPressed, setEndButtonPressed, inputValues, setInputValues, showBeginLocationInput, setShowBeginLocationInput, showEndLocationInput, setShowEndLocationInput, setShowPreferencesInput, setShowGoButton) => {
   const [location, setLocation] = useState({ lat: null, lng: null, address: '' });
 
   useEffect(() => {
@@ -33,21 +33,26 @@ const useGeocoding = (map, startButtonPressed, setStartButtonPressed, endButtonP
                   endLongitude: e.lngLat.lng
                 }));
               }
-              setShowEndLocationInput(true);
-              setShowGoButton(true);
+              if (showBeginLocationInput == true && showEndLocationInput == false) {
+                setShowEndLocationInput(true);
+              } else {
+                console.log("showBeginLocationInput is false");
+                setShowPreferencesInput(true);
+                setShowGoButton(true);
+              }
             })
             .catch(error => console.error('Error:', error));
         }
       };
-  
+
       map.on('click', onClick);
-  
+
       // Cleanup function
       return () => {
         map.off('click', onClick);
       };
     }
-  }, [map, startButtonPressed, endButtonPressed]);  
+  }, [map, startButtonPressed, endButtonPressed]);
 
   return { location, setLocation };
 };
