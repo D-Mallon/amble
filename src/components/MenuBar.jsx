@@ -41,11 +41,11 @@ export default function MenuBar() {
   };
 
   const togglehome = () => {
-    navigate("/mobilehomepage");
+    navigate("/");
   };
 
   const toggleamble = () => {
-    navigate("/mobilemappage");
+    navigate("/realmappage");
   };
 
   const toggleforyou= () => {

@@ -78,7 +78,7 @@ export default function MenuBar2() {
   };
 
   const toggleRes=()=>{
-navigate("/resources");
+navigate("/realrespage");
   };
   const handleClickOutside = (event) => {
     if (
@@ -101,7 +101,7 @@ navigate("/resources");
   const [logoIndex, setLogoIndex] = useState(0);
 
   const handleButtonClick = () => {
-    navigate("/map");
+    navigate("/realmappage");
   };
 
   const handleButtonClick2 = () => {
