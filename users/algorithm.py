@@ -42,7 +42,7 @@ for k,v in other_nodes_dict.items():
         
 #Create a json object and Write to a json file
 merged_json = json.dumps(data, indent=4) 
-file_path_mer = BASE_DIR /'src'/'json-files'/'all_nodes.json'
+file_path_mer = BASE_DIR /'src'/'json-files'/'all_nodes_with_crime_in_bscore.json'
 with open(file_path_mer, 'w') as merged_file: 
     merged_file.write(merged_json)
 
@@ -111,7 +111,7 @@ def magic(user_latitude, user_longitude, hour, dist, endLatitude, endLongitude):
 
     if (startLatitude == endLatitude and startLongitude == endLongitude) or calculate_distance(startLatitude,startLongitude,endLatitude,endLongitude) < 0.5:
         if dist_check:
-            while predefined_distance > dist/2:
+            while predefined_distance > dist/2 and len(visited_parks) < 23:
                 print('predefined distance: ',predefined_distance)
                 closest_parks = []  # List to store closest parks
                 closest_distances = []  # List to store distances to closest parks
@@ -222,7 +222,7 @@ def magic(user_latitude, user_longitude, hour, dist, endLatitude, endLongitude):
             user_longitude = park_longitude
 
 
-            while predefined_distance > dist/4:
+            while predefined_distance > dist/4 and len(visited_parks) < 23:
                 closest_parks = []  # List to store closest parks
                 closest_distances = []  # List to store distances to closest parks
 
@@ -284,7 +284,7 @@ def magic(user_latitude, user_longitude, hour, dist, endLatitude, endLongitude):
                 user_longitude = park_longitude
 
             
-            while predefined_distance > 0:
+            while predefined_distance > 0 and len(visited_parks) < 23:
                 closest_parks = []  # List to store closest parks
                 closest_distances = []  # List to store distances to closest parks
 
@@ -332,7 +332,7 @@ def magic(user_latitude, user_longitude, hour, dist, endLatitude, endLongitude):
 
     else:
         if dist_check:
-            while predefined_distance > 0:
+            while predefined_distance > 0 and len(visited_parks) < 23:
                 closest_parks = []  # List to store closest parks
                 closest_distances = []  # List to store distances to closest parks
 

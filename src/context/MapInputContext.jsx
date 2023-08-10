@@ -23,7 +23,6 @@ export const MapInputProvider = ({ children }) => {
   });
 
   const [userdata, setUserdata] = useState(null);
-  console.log(userdata)
   // Use useEffect to save state changes to local storage
   useEffect(() => {
     localStorage.setItem('inputValues', JSON.stringify(inputValues));

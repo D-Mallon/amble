@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 
-const usePlaceNameChange = (initialPlaceName = '', setInputValues) => {
+const usePlaceNameChange = (initialPlaceName = '', setInputValues, showBeginLocationInput, showEndLocationInput, setShowEndLocationInput, setShowPreferencesInput, setShowGoButton) => {
   const [placeName, setPlaceName] = useState(initialPlaceName);
   const [suggestions, setSuggestions] = useState([]);
 
@@ -25,11 +25,23 @@ const usePlaceNameChange = (initialPlaceName = '', setInputValues) => {
   };
 
   const handlePlaceSelect = (place) => {
-    setInputValues(prevValues => ({
-      ...prevValues,
-      latitude: place.coordinates[1],
-      longitude: place.coordinates[0]
-    }));
+    if (showBeginLocationInput == true && showEndLocationInput == false) {
+      setInputValues(prevValues => ({
+        ...prevValues,
+        latitude: place.coordinates[1],
+        longitude: place.coordinates[0]
+      }));
+      setShowEndLocationInput(true);
+    } else {
+      setInputValues(prevValues => ({
+        ...prevValues,
+        endLatitude: place.coordinates[1],
+        endLongitude: place.coordinates[0]
+      }));
+      console.log("showBeginLocationInput is false");
+      setShowPreferencesInput(true);
+      setShowGoButton(true);
+    }
   };
 
   return { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect };

@@ -46,13 +46,12 @@ function App() {
           <AuthContextProvider>
             <MapInputProvider>
               <GreetingDataProvider>
-              <Favicon url="https://upload.wikimedia.org/wikipedia/commons/9/9d/Threads_%28app%29_logo.svg" />
+                <Favicon url="https://upload.wikimedia.org/wikipedia/commons/9/9d/Threads_%28app%29_logo.svg" />
                 <Routes>
                   {/* <Route exact path="/" element={<LandingPage />} /> */}
                   <Route exact path="/" element={<Realhomepage />} />
                   <Route path="/mobilemappage" element={<Mobile_Mappage />} />
                   <Route path="/mobilehomepage" element={<Mobile_homepage />} />
-
                   <Route exact path="/map" element={<Interface2 />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/loginCheck" element={<LoginCheck />} />
@@ -68,10 +67,9 @@ function App() {
                   {/* <Route path="/realhomepage" element={<Realhomepage />} /> */}
                   <Route path="/realmappage" element={<Realmappage />} />
                   <Route path="/foryou-error" element={<Foryouerro />} />
-                 
                   <Route path="/realrespage" element={< Realrespage />} />
                   {/* <Route path="/chatgpt" element={<ChatGPT />} />
-              <Route path="/quotes" element={<Quotes />} /> */}
+                  <Route path="/quotes" element={<Quotes />} /> */}
                   <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
                 </Routes>
               </GreetingDataProvider>
