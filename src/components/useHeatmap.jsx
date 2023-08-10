@@ -1,9 +1,14 @@
-import { useEffect } from 'react';
-import bScoreData from '../json-files/all_nodes.json';
+import { useEffect, useContext } from 'react';
+import bScoreData from '../json-files/all_nodes_with_crime_in_bscore.json';
 import taxiGeoJSON from '../json-files/taxi.json'; // Replace with the actual path to the taxi.json file
+import { ArrayContext, useWaypointsArray } from "../context/ArrayContext";
+import { MapInputContext } from '../context/MapInputContext';
+import { useMapInput } from '../context/MapInputContext';
 
 const useHeatmap = (map, isHeatmapVisible) => {
-  const hour = 12;  // Use a default hour value of 0
+  const { globalArray, setGlobalArrayValue } = useWaypointsArray();
+  const { inputValues, setInputValues } = useContext(MapInputContext);
+  let hour = 12;
 
   // Prepare GeoJSON data from bScoreData
   const geoJSONData = {
@@ -24,7 +29,9 @@ const useHeatmap = (map, isHeatmapVisible) => {
   };
 
   useEffect(() => {
-    if (!map.current) return;
+    // if (!map.current) return;
+
+    hour = inputValues.hour;  // Use a default hour value of 0
 
     map.current.on('load', () => {
       // Add the taxi.geojson data as a source
@@ -62,11 +69,11 @@ const useHeatmap = (map, isHeatmapVisible) => {
             ['linear'],
             ['get', 'b-score'],
             0,
-            'green',
+            '#00684a',
             0.35,
-            'yellow',
+            '#ffff33',
             0.7,
-            'red',
+            '#ff0000',
           ],
           'fill-opacity': 0.5,
         },
@@ -74,7 +81,7 @@ const useHeatmap = (map, isHeatmapVisible) => {
       // Set the initial visibility of the layer
       map.current.setLayoutProperty('b-score-layer', 'visibility', isHeatmapVisible ? 'visible' : 'none');
     });
-  }, [map, isHeatmapVisible]);
+  }, [map, isHeatmapVisible, inputValues.hour]);
 
   // Additional hook for unchecks
   useEffect(() => {

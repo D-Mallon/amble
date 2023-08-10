@@ -1,6 +1,7 @@
 {
     "data_from_frontend": {
         "selectedOptions": [
+            "library_locations",
             "worship_locations"
         ]
     }
