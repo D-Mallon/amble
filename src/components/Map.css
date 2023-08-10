@@ -725,7 +725,7 @@ h2 {
   border-radius: 5px;
   text-align: center;
   width: 250px;
-  height: 260px;
+  height: 150px;
   border-radius: 0;
   z-index: 1000;
   padding-top: 18px;
@@ -733,7 +733,7 @@ h2 {
 
 .heatmap-checkboxes label {
   display: block; /* Each label takes up the full width */
-  margin: 25px 0;  /* Space between labels */
+  margin: 15px 0;  /* Space between labels */
   cursor: pointer; /* Indicate that the label is clickable */
   text-align: left;
   padding-left: 10px;
@@ -829,3 +829,20 @@ h2 {
   z-index: 1000;
 }
 
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-2px); }
+  20% { transform: translateX(2px); }
+  30% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  50% { transform: translateX(-2px); }
+  60% { transform: translateX(2px); }
+  70% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+  90% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.6s;
+}

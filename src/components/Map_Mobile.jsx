@@ -107,6 +107,7 @@ const Map_Mobile = () => {
   const [waypointRatings, setWaypointRatings] = useState({});
   const [isCheckboxesVisible, setCheckboxesVisible] = useState(true);
   const [isHeatmapVisible, setHeatmapVisible] = useState(true);
+  const [isOtherHeatmapVisible, setOtherHeatmapVisible] = useState(false);
   //console.log(globalArray)
 
   const mapContainer = useRef(null);
@@ -199,10 +200,16 @@ const Map_Mobile = () => {
 
   const handleToggleHeatmap = () => {
     setHeatmapVisible(!isHeatmapVisible);
+    setOtherHeatmapVisible(false);
   };
 
-  useHeatmap(map, isHeatmapVisible);
 
+  const handleToggleOtherHeatmap = () => {
+    setOtherHeatmapVisible(!isOtherHeatmapVisible);
+    setHeatmapVisible(false);
+  };
+
+  useHeatmap(map, isHeatmapVisible, isOtherHeatmapVisible);
 
   const { route, displayRoute, directiondata } = useRouteDisplay(
     map.current,
@@ -218,12 +225,15 @@ const Map_Mobile = () => {
     setEndLocationPressed,
     inputValues,
     setInputValues,
+    showBeginLocationInput,
+    setShowBeginLocationInput,
     showEndLocationInput,
     setShowEndLocationInput,
-    setShowPreferencesInput
+    setShowPreferencesInput,
+    setShowGoButton,
   );
-  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } =
-    usePlaceNameChange("", setInputValues);
+  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } = 
+  usePlaceNameChange("", setInputValues,  showBeginLocationInput, showEndLocationInput, setShowEndLocationInput, setShowPreferencesInput, setShowGoButton);
 
   const handleNowButtonClick = () => {
     setNowSelected(true);
@@ -379,7 +389,7 @@ const Map_Mobile = () => {
   };
 
   const handleButtonClick_close = () => {
-    navigate("/");
+    navigate("/realmappage");
   };
 
   const handleRatingsCalc = () => {
@@ -515,7 +525,7 @@ const togglecloserate= () => {
 };
 
 const togglehome = () => {
-  navigate("/mobilehomepage");
+  navigate("/");
 };
 
   return (
@@ -854,13 +864,14 @@ const togglehome = () => {
                       onClick={() => {
                         setInputValues((prevValues) => ({
                           ...prevValues,
-                          endLatitude: 40.711667,
-                          endLongitude: -74.0125,
+                          latitude: 40.7505,
+                          longitude: -73.9934,
                         }));
                         setEndHomeSelected(true);
                         setEndSearchSelected(false);
                         setEndAddressSelected(false);
                         setShowPreferencesInput(true);
+                        setShowGoButton(true);
                         setShowEndField(false);
                       }}
                       startIcon={<HomeIcon />}
@@ -1008,6 +1019,7 @@ const togglehome = () => {
                     value={selectedOptions}
                     onChange={handleSelectChange}
                     styles={customStyles}
+                    menuPlacement="top"
                   />
                 </form>
               </div>
@@ -1258,42 +1270,26 @@ const togglehome = () => {
                 <CloseIcon className="close-hmap" onClick={togglehmap} sx={{ fontSize: 27 , color: 'white'}} />
            
 
-          {/* <span className="heatmaps-click" onClick={toggleCheckboxes}><b>HeatMaps</b></span>
-          <span className="heatmaps-open" style={{display: isCheckboxesVisible ? 'inline' : 'none'}}>&#9660;</span>
-          <span className="heatmaps-closed" style={{display: isCheckboxesVisible ? 'none' : 'inline'}}>&#9650;</span> */}
-          {/* <div className={isCheckboxesVisible ? 'checkboxes-visibility' : 'checkboxes-visibility hidden'}> */}
+
             <label>
-              Location Busyness: 
+            Busyness Scores:
               <input
                 type="checkbox"
                 checked={isHeatmapVisible}
                 onChange={handleToggleHeatmap}
               />
             </label>
-            <label>
-              Taxizone Busyness: 
-              {/*<input
-                type="checkbox"
-                checked={isHeatmapVisible}
-                onChange={handleToggleHeatmap}
-                  />*/}
-            </label>
+       
             <label>
               Crime Scores: 
-              {/*<input
+              <input
                 type="checkbox"
-                checked={isHeatmapVisible}
-                onChange={handleToggleHeatmap}
-                  />*/}
+                checked={isOtherHeatmapVisible}
+                onChange={handleToggleOtherHeatmap}
+                  />
+
             </label>
-            <label>
-              User Ratings: 
-              {/*<input
-                type="checkbox"
-                checked={isHeatmapVisible}
-                onChange={handleToggleHeatmap}
-                  />*/}
-            </label>
+            
           </div>
           )}
         </div>

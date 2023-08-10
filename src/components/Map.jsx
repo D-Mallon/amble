@@ -96,6 +96,7 @@ const Map = () => {
   const [waypointRatings, setWaypointRatings] = useState({});
   const [isCheckboxesVisible, setCheckboxesVisible] = useState(true);
   const [isHeatmapVisible, setHeatmapVisible] = useState(true);
+  const [isOtherHeatmapVisible, setOtherHeatmapVisible] = useState(false);
   //console.log(globalArray)
 
   const mapContainer = useRef(null);
@@ -130,6 +131,7 @@ const Map = () => {
   const [endHomeSelected, setEndHomeSelected] = useState(false);
   const [endSearchSelected, setEndSearchSelected] = useState(false);
   const [endAddressSelected, setEndAddressSelected] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   const options = [
     // { value: 'park', label: 'Parks' },
@@ -188,16 +190,22 @@ const Map = () => {
 
   const handleToggleHeatmap = () => {
     setHeatmapVisible(!isHeatmapVisible);
+    setOtherHeatmapVisible(false);
   };
 
-  useHeatmap(map, isHeatmapVisible);
+  const handleToggleOtherHeatmap = () => {
+    setOtherHeatmapVisible(!isOtherHeatmapVisible);
+    setHeatmapVisible(false);
+  };
+
+  useHeatmap(map, isHeatmapVisible, isOtherHeatmapVisible);
 
 
   const { route, displayRoute, directiondata } = useRouteDisplay(
     map.current,
     inputValues,
     setInputValues,
-    setGlobalArrayValue
+    setGlobalArrayValue,
   );
   const { location, setLocation } = useGeocoding(
     map.current,
@@ -207,12 +215,15 @@ const Map = () => {
     setEndLocationPressed,
     inputValues,
     setInputValues,
+    showBeginLocationInput,
+    setShowBeginLocationInput,
     showEndLocationInput,
     setShowEndLocationInput,
-    setShowPreferencesInput
+    setShowPreferencesInput,
+    setShowGoButton,
   );
-  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } =
-    usePlaceNameChange("", setInputValues);
+  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } = 
+  usePlaceNameChange("", setInputValues,  showBeginLocationInput, showEndLocationInput, setShowEndLocationInput, setShowPreferencesInput, setShowGoButton);
 
   const handleNowButtonClick = () => {
     setNowSelected(true);
@@ -308,13 +319,21 @@ const Map = () => {
   };
 
   const handleOverallSubmit = async (e) => {
+
+    console.log("handleOverallSubmit", inputValues);
+    if (inputValues.distance <= 1.5) {
+      setShowPopup(true);
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 1000);
+      return;
+    }
+
     e.preventDefault();
-  
     try {
       // First, handle preferences
       await handlePreferencesSubmit();
       console.log('Preferences submitted successfully');
-  
       // Next, handle the input
       await handleInputSubmit(e); // You might need to pass any necessary parameters here
       console.log('Input submitted successfully');
@@ -333,10 +352,9 @@ const Map = () => {
   const [cathover, setcatHover] = useState(false);
   const [hmap, sethmap] = useState(false);
 
-const togglehmap = () => {
-  sethmap(!hmap);
-};
-
+  const togglehmap = () => {
+    sethmap(!hmap);
+  };
 
   const backtodetailwin = () => {
     setratingwin(false);
@@ -759,13 +777,14 @@ const togglehmap = () => {
                       onClick={() => {
                         setInputValues((prevValues) => ({
                           ...prevValues,
-                          endLatitude: 40.711667,
-                          endLongitude: -74.0125,
+                          latitude: 40.7505,
+                          longitude: -73.9934,
                         }));
                         setEndHomeSelected(true);
                         setEndSearchSelected(false);
                         setEndAddressSelected(false);
                         setShowPreferencesInput(true);
+                        setShowGoButton(true);
                         setShowEndField(false);
                       }}
                       startIcon={<HomeIcon />}
@@ -913,6 +932,7 @@ const togglehmap = () => {
                     value={selectedOptions}
                     onChange={handleSelectChange}
                     styles={customStyles}
+                    menuPlacement="top"
                   />
                 </form>
               </div>
@@ -922,15 +942,37 @@ const togglehmap = () => {
               // <Stack spacing={1} direction="row" justifyContent="center" paddingBottom="15px">
               //   <Button   sx={{ width: "200px", height: "2.5rem" }}  variant="contained" type="submit" size="large" style={{ borderRadius: 0 }} onClick={handleInputSubmit}>GO</Button>
               // </Stack>
+              <div>
+                <div className="plansetting">
+                  <div style={{ position: 'relative', display: 'inline-block' }}> {/* Adjusted the container display style */}
 
-              <div className="plansetting">
-                <a
-                  className="plansetting-text-web"
-                  type="submit"
-                  onClick={handleOverallSubmit}
-                >
-                  <span>Let's Go!</span>
-                </a>
+                    {showPopup && (
+                      <div style={{
+                        position: 'absolute',
+                        top: 'auto',
+                        bottom: '100%',
+                        left: '0', // Aligns the left edge of the error message with the container
+                        width: '100%', // Makes the error message the same width as the container
+                        padding: '10px',
+                        marginBottom: '5px',
+                        backgroundColor: 'white',
+                        border: '1px solid red',
+                        borderRadius: '5px',
+                        zIndex: 1000,
+                        textAlign: 'center', // Centers the text within the error message
+                      }}>
+                        <span style={{ color: 'red' }}>⚠</span> Route not possible
+                      </div>
+                    )}
+                    <a
+                      className={`plansetting-text-web ${showPopup ? 'shake' : ''}`}
+                      type="submit"
+                      onClick={handleOverallSubmit}
+                    >
+                      <span>Let's Go!</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             )}
 
@@ -980,7 +1022,7 @@ const togglehmap = () => {
             </strong></span>
             {/* <p>Preference</p> */}
 
-            <p>Quietness Score</p><br/>
+            <p>Quietness Score</p><br />
             <div className="quietness-traffic-light" style={{ position: 'relative', display: 'inline-block' }}>
               <CircularProgress
                 variant="determinate"
@@ -1000,7 +1042,7 @@ const togglehmap = () => {
                 transform: 'translate(-50%, -50%)',
                 fontSize: '1rem', // Adjust font size as needed
               }}><b>
-                {Math.round(percentageQuietness)}%</b>
+                  {Math.round(percentageQuietness)}%</b>
               </div>
             </div>
 
@@ -1019,7 +1061,7 @@ const togglehmap = () => {
                       </span>
                       {`${step.action ? step.action : "Proceed"}${step.road ? ` on ${step.road}` : ""
                         }${step.distance
-                          ? ` for ${step.distance.toFixed(2)} meters`
+                          ? ` for ${step.distance.toFixed(0)} meters`
                           : ""
                         }${step.isKeyNode ? " (Arrived at Key Node)" : ""}`}
                       <br />
@@ -1171,48 +1213,32 @@ const togglehmap = () => {
       )}
 
       <div ref={mapContainer} className="map-container" />
-        {/* Heatmap Checkboxes*/}
-       {hmap&&(<div className="heatmap-checkboxes">
-       <CloseIcon className="close-hmap" onClick={togglehmap} sx={{ fontSize: 24 , color: 'white'}} />
-          {/* <span className="heatmaps-click" onClick={toggleCheckboxes}><b>HeatMaps</b></span>
+      {/* Heatmap Checkboxes*/}
+      {hmap && (<div className="heatmap-checkboxes">
+        <CloseIcon className="close-hmap" onClick={togglehmap} sx={{ fontSize: 24, color: 'white' }} />
+        {/* <span className="heatmaps-click" onClick={toggleCheckboxes}><b>HeatMaps</b></span>
           <span className="heatmaps-open" style={{display: isCheckboxesVisible ? 'inline' : 'none'}}>&#9660;</span>
           <span className="heatmaps-closed" style={{display: isCheckboxesVisible ? 'none' : 'inline'}}>&#9650;</span>
           <div className={isCheckboxesVisible ? 'checkboxes-visibility' : 'checkboxes-visibility hidden'}> */}
-            <label>
-              Location Busyness: 
-              <input
+        <label>
+          Busyness Scores:
+          <input
+            type="checkbox"
+            checked={isHeatmapVisible}
+            onChange={handleToggleHeatmap}
+          />
+        </label>
+        <label>
+          Crime Scores:
+          <input
                 type="checkbox"
-                checked={isHeatmapVisible}
-                onChange={handleToggleHeatmap}
-              />
-            </label>
-            <label>
-              Taxizone Busyness: 
-              {/*<input
-                type="checkbox"
-                checked={isHeatmapVisible}
-                onChange={handleToggleHeatmap}
-                  />*/}
-            </label>
-            <label>
-              Crime Scores: 
-              {/*<input
-                type="checkbox"
-                checked={isHeatmapVisible}
-                onChange={handleToggleHeatmap}
-                  />*/}
-            </label>
-            <label>
-              User Ratings: 
-              {/*<input
-                type="checkbox"
-                checked={isHeatmapVisible}
-                onChange={handleToggleHeatmap}
-                  />*/}
-            </label>
-          </div>
-       )}
-        </div>
+                checked={isOtherHeatmapVisible}
+                onChange={handleToggleOtherHeatmap}
+                  />
+        </label>
+      </div>
+      )}
+    </div>
     //</div>
   );
 };

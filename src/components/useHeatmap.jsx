@@ -1,10 +1,14 @@
-import { useEffect } from "react";
-import bScoreData from "../json-files/all_nodes.json";
+import { useEffect, useContext } from "react";
+import bScoreData from "../json-files/all_nodes_with_crime_in_bscore.json";
 import taxiGeoJSON from "../json-files/taxi.json"; // Replace with the actual path to the taxi.json file
+import { ArrayContext, useWaypointsArray } from "../context/ArrayContext";
+import { MapInputContext } from "../context/MapInputContext";
+import { useMapInput } from "../context/MapInputContext";
 
-//David testing for merge reasons
-const useHeatmap = (map, isHeatmapVisible) => {
-  const hour = 12; // Use a default hour value of 0
+const useHeatmap = (map, isHeatmapVisible, isOtherHeatmapVisible) => {
+  const { globalArray, setGlobalArrayValue } = useWaypointsArray();
+  const { inputValues, setInputValues } = useContext(MapInputContext);
+  let hour = inputValues.hour;
 
   // Prepare GeoJSON data from bScoreData
   const geoJSONData = {
@@ -13,16 +17,38 @@ const useHeatmap = (map, isHeatmapVisible) => {
       const taxiZoneNodes = bScoreData.data.filter(
         (node) => node["taxi-zone"] === feature.properties.id
       );
-      const totalBScore = taxiZoneNodes.reduce(
+      const totalBScoreForHour = taxiZoneNodes.reduce(
         (acc, node) => acc + node["b-score"][hour],
         0
       );
-      const averageBScore = totalBScore / taxiZoneNodes.length;
+      const averageBScoreForHour = totalBScoreForHour / taxiZoneNodes.length;
 
       return {
         type: "Feature",
         properties: {
-          "b-score": averageBScore,
+          "b-score": averageBScoreForHour,
+        },
+        geometry: feature.geometry,
+      };
+    }),
+  };
+
+  const cScoreGeoJSONData = {
+    type: "FeatureCollection",
+    features: taxiGeoJSON.features.map((feature) => {
+      const taxiZoneNodes = bScoreData.data.filter(
+        (node) => node["taxi-zone"] === feature.properties.id
+      );
+      const totalCScore = taxiZoneNodes.reduce(
+        (acc, node) => acc + node["c-score"],
+        0
+      );
+      const averageCScore = totalCScore / taxiZoneNodes.length;
+
+      return {
+        type: "Feature",
+        properties: {
+          "c-score": averageCScore,
         },
         geometry: feature.geometry,
       };
@@ -30,25 +56,11 @@ const useHeatmap = (map, isHeatmapVisible) => {
   };
 
   useEffect(() => {
-    if (!map.current) return;
-
     map.current.on("load", () => {
       // Add the taxi.geojson data as a source
       map.current.addSource("taxi-source", {
         type: "geojson",
         data: taxiGeoJSON,
-      });
-
-      // Add a layer for the edges of taxi zones (black line)
-      map.current.addLayer({
-        id: "taxi-zone-edges",
-        type: "line",
-        source: "taxi-source",
-        paint: {
-          "line-color": "black", // Color of the outline
-          "line-width": 2, // Width of the outline
-        },
-        filter: ["==", ["get", "type"], "taxi-zone"], // Filter to display only taxi zone features
       });
 
       // Add the bScoreData as another source
@@ -68,14 +80,50 @@ const useHeatmap = (map, isHeatmapVisible) => {
             ["linear"],
             ["get", "b-score"],
             0,
-            "green",
+            "#00684a",
             0.35,
-            "yellow",
+            "#ffff33",
             0.7,
-            "red",
+            "#ff0000",
           ],
           "fill-opacity": 0.5,
         },
+      });
+
+      // Add c-score heatmap layer to the map
+      map.current.addLayer({
+        id: "c-score-layer",
+        type: "fill",
+        source: {
+          type: "geojson",
+          data: cScoreGeoJSONData,
+        },
+        paint: {
+          "fill-color": [
+            "interpolate",
+            ["linear"],
+            ["get", "c-score"],
+            0,
+            "#00684a",
+            0.5,
+            "#ffff33",
+            1,
+            "#ff0000",
+          ],
+          "fill-opacity": 0.5,
+        },
+      });
+
+      // Add a layer for the edges of taxi zones (black line)
+      map.current.addLayer({
+        id: "taxi-zone-edges",
+        type: "line",
+        source: "taxi-source",
+        paint: {
+          "line-color": "black", // Color of the outline
+          "line-width": 2, // Width of the outline
+        },
+        filter: ["==", ["get", "type"], "taxi-zone"], // Filter to display only taxi zone features
       });
       // Set the initial visibility of the layer
       map.current.setLayoutProperty(
@@ -83,28 +131,78 @@ const useHeatmap = (map, isHeatmapVisible) => {
         "visibility",
         isHeatmapVisible ? "visible" : "none"
       );
-    });
-  }, [map, isHeatmapVisible]);
-
-  // Additional hook for unchecks
-  useEffect(() => {
-    if (
-      map.current &&
-      map.current.isStyleLoaded() &&
-      map.current.getLayer("b-score-layer")
-    ) {
       map.current.setLayoutProperty(
-        "b-score-layer",
+        "c-score-layer",
         "visibility",
-        isHeatmapVisible ? "visible" : "none"
+        isOtherHeatmapVisible ? "visible" : "none"
       );
+    });
+  }, [map, isHeatmapVisible, isOtherHeatmapVisible, inputValues.hour]);
+
+  useEffect(() => {
+    if (!map.current || !map.current.isStyleLoaded()) return;
+
+    // Recalculate geoJSONData based on the current hour
+    const updatedGeoJSONData = {
+      type: "FeatureCollection",
+      features: taxiGeoJSON.features.map((feature) => {
+        const taxiZoneNodes = bScoreData.data.filter(
+          (node) => node["taxi-zone"] === feature.properties.id
+        );
+        const totalBScoreForHour = taxiZoneNodes.reduce(
+          (acc, node) => acc + (node["b-score"][inputValues.hour] || 0),
+          0
+        );
+        const averageBScoreForHour = taxiZoneNodes.length
+          ? totalBScoreForHour / taxiZoneNodes.length
+          : 0;
+
+        return {
+          type: "Feature",
+          properties: {
+            "b-score": averageBScoreForHour,
+          },
+          geometry: feature.geometry,
+        };
+      }),
+    };
+
+    // Update the heatmap-source with new data
+    map.current.getSource("heatmap-source").setData(updatedGeoJSONData);
+  }, [inputValues.hour]);
+
+  useEffect(() => {
+    if (map.current && map.current.isStyleLoaded()) {
+      // Handle b-score-layer visibility
+      if (map.current.getLayer("b-score-layer")) {
+        map.current.setLayoutProperty(
+          "b-score-layer",
+          "visibility",
+          isHeatmapVisible ? "visible" : "none"
+        );
+      }
+
+      // Handle c-score-layer visibility
+      if (map.current.getLayer("c-score-layer")) {
+        map.current.setLayoutProperty(
+          "c-score-layer",
+          "visibility",
+          isOtherHeatmapVisible ? "visible" : "none"
+        );
+      }
+
+      // Handle taxi-zone-edges visibility
+      const shouldDisplayEdges = isHeatmapVisible || isOtherHeatmapVisible;
       map.current.setLayoutProperty(
         "taxi-zone-edges",
         "visibility",
-        isHeatmapVisible ? "visible" : "none"
+        shouldDisplayEdges ? "visible" : "none"
       );
+      if (shouldDisplayEdges) {
+        map.current.moveLayer("taxi-zone-edges"); // Move the edges to the top
+      }
     }
-  }, [map, isHeatmapVisible]);
+  }, [map, isHeatmapVisible, isOtherHeatmapVisible, inputValues.hour]);
 };
 
 export default useHeatmap;

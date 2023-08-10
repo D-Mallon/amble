@@ -1,5 +1,9 @@
 {
-    "data_from_frontend": {
-        "selectedOptions": []
-    }
+  "data_from_frontend": {
+    "selectedOptions": [
+      "community_locations",
+      "worship_locations",
+      "museum_art_locations"
+    ]
+  }
 }

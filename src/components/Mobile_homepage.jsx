@@ -50,11 +50,11 @@ const theme = createTheme({
     }, []);
 
     const togglehome = () => {
-      navigate("/mobilehomepage");
+      navigate("/realhomepage");
     };
   
     const toggleamble = () => {
-      navigate("/mobilemappage");
+      navigate("/realmappage");
     };
     return (
       <>

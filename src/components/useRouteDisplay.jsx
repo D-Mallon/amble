@@ -40,7 +40,7 @@ const handleWaypoints = (waypointsString, setGlobalArrayValue) => {
 
 
 
-const useRouteDisplay = (map, inputValues) => {
+const useRouteDisplay = (map, inputValues, showPlanWindow) => {
 
   const { globalArray, setGlobalArrayValue } = useWaypointsArray();
   const [route, setRoute] = useState([]);
@@ -48,6 +48,7 @@ const useRouteDisplay = (map, inputValues) => {
 
   const displayRoute = async () => {
     console.log('displayRoute called');
+
     if (!map || !inputValues || !inputValues.waypoints || !inputValues.longitude || !inputValues.latitude || !inputValues.endLongitude || !inputValues.endLatitude) return;
 
     try {
@@ -78,76 +79,90 @@ const useRouteDisplay = (map, inputValues) => {
       // Retrieve the route coordinates from the API response
       const routeCoordinates = data.routes[0].geometry.coordinates;
 
-      // const directions = data.routes[0].legs.flatMap(leg =>
-      //   leg.steps.map(step => {
-      //     let action;
-      //     if (step.maneuver.modifier && step.maneuver.type) {
-      //       action = `${step.maneuver.modifier} ${step.maneuver.type}`;
-      //     }
-      //     return {
-      //       action,
-      //       road: step.name,
-      //       distance: step.distance
-      //     };
-      //   })
-      // );
+      // Helper function to capitalize the first letter of a string
+      const capitalizeFirstLetter = (string) => {
+        if (!string) return '';
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      };
 
-      const directions = data.routes[0].legs.flatMap((leg, legIndex) =>
-      leg.steps.map((step, stepIndex) => {
-        let action;
-        if (step.maneuver.modifier && step.maneuver.type) {
-          action = `${step.maneuver.modifier} ${step.maneuver.type}`;
+      // Extract initial directions
+      const initialDirections = data.routes[0].legs.flatMap((leg, legIndex) =>
+        leg.steps.map((step, stepIndex) => {
+          let action;
+          if (step.maneuver.modifier && step.maneuver.type) {
+            action = `${step.maneuver.modifier} ${step.maneuver.type}`;
+          }
+
+          const hasIntersections = step.intersections && step.intersections.length > 0;
+          const hasLocation = hasIntersections && step.intersections[0].location && step.intersections[0].location.originalIndex !== undefined;
+          const nodeId = hasLocation ? step.intersections[0].location.originalIndex.toString() : null;
+          const nodeIdStr = nodeId !== null ? nodeId.toString() : null;
+          const isKeyNode = nodeIdStr !== null ? globalArray && globalArray.some(node => node.id === nodeIdStr) : false;
+
+          return {
+            action,
+            road: step.name,
+            distance: step.distance,
+            isKeyNode: isKeyNode
+          };
+        })
+      );
+
+      // Combine directions that are on the same road
+      let combinedDirections = [];
+      let currentDirection = initialDirections[0];
+
+      for (let i = 1; i < initialDirections.length; i++) {
+        const step = initialDirections[i];
+        if (currentDirection.road === step.road && step.action && step.action.includes("proceed")) {
+          currentDirection.distance += step.distance;
+        } else {
+          combinedDirections.push(currentDirection);
+          currentDirection = step;
         }
+      }
+      combinedDirections.push(currentDirection);
 
-        // Check if step.intersections exists and has elements
-        const hasIntersections = step.intersections && step.intersections.length > 0;
+      // Update actions to be more human-readable
+      combinedDirections = combinedDirections.map(step => ({
+        ...step,
+        action: capitalizeFirstLetter(step.action)
+      }));
 
-        // Log the step object for debugging
-        //console.log('Step:', step);
+      // Use `combinedDirections` in your component rendering
 
-        // Check if step.intersections[0].location exists and has originalIndex
-        const hasLocation = hasIntersections && step.intersections[0].location && step.intersections[0].location.originalIndex !== undefined;
-        // Get the node ID from the step's first intersection, if available
-        const nodeId = hasLocation ? step.intersections[0].location.originalIndex.toString() : null;
+      let refinedDirections = [];
+      let currentStep = combinedDirections[0];
 
-        // Log for debugging
-        //console.log('hasIntersections:', hasIntersections);
-        //console.log('hasLocation:', hasLocation);
-        //console.log('nodeId:', nodeId);
-        //console.log('globalArray:', globalArray);
+      for (let i = 1; i < combinedDirections.length; i++) {
+        const step = combinedDirections[i];
 
-        // Check if the nodeId is defined before converting it to a string
-        const nodeIdStr = nodeId !== null ? nodeId.toString() : null;
-        // Check if the nodeId matches any of the node IDs in globalArray
-        const isKeyNode = nodeIdStr !== null ? globalArray && globalArray.some(node => node.id === nodeIdStr) : false;
+        // Merge similar steps
+        if (currentStep.road === step.road && step.action && step.action.includes("proceed")) {
+          currentStep.distance += step.distance;
+        } else {
+          // Only add steps that aren't too minor (e.g., steps longer than 50 meters or key nodes)
+          if (currentStep.distance > 50 || currentStep.isKeyNode) {
+            refinedDirections.push(currentStep);
+          }
+          currentStep = step;
+        }
+      }
 
-        return {
-          action,
-          road: step.name,
-          distance: step.distance,
-          isKeyNode: isKeyNode
-        };
-      })
-    );
-    setdirectiondata(directions);
+      // Push the last step
+      if (currentStep.distance > 50 || currentStep.isKeyNode) {
+        refinedDirections.push(currentStep);
+      }
 
+      // Simplify language and round distances
+      refinedDirections = refinedDirections.map(step => ({
+        ...step,
+        action: step.action.replace('proceed', 'Go'),
+        distance: Math.round(step.distance)
+      }));
 
-      //console.log("Please follow my instruction and trust it:", directions);
-
-      // directions.forEach((step, index) => {
-      //   const action = step.action ? step.action : 'Proceed';
-      //   const road = step.road ? ` on ${step.road}` : '';
-      //   const distance = step.distance ? ` for ${step.distance.toFixed(2)} meters` : '';
-      //   console.log(`Step ${index + 1}: ${action}${road}${distance}`);
-      // });
-
-      directions.forEach((step, index) => {
-        const action = step.action ? step.action : 'Proceed';
-        const road = step.road ? ` on ${step.road}` : '';
-        const distance = step.distance ? ` for ${step.distance.toFixed(2)} meters` : '';
-        const keyNodeInfo = step.isKeyNode ? ' (Arrived at Key Node)' : '';
-        //console.log(`Step ${index + 1}: ${action}${road}${distance}${keyNodeInfo}`);
-      });
+      // Use `refinedDirections` in your component rendering
+      setdirectiondata(refinedDirections);
 
       // Check that routeCoordinates is an array of valid numbers
       if (!Array.isArray(routeCoordinates) ||
@@ -201,8 +216,16 @@ const useRouteDisplay = (map, inputValues) => {
     displayRoute();
   }, [inputValues.waypoints]);
 
+  useEffect(() => {
+    if (map && map.getSource('route')) {
+      map.removeLayer('route');
+      map.removeSource('route');
+    }
+  }, [inputValues.latitude, inputValues.longitude, inputValues.endLatitude, inputValues.endLongitude, inputValues.distance, inputValues.hour, map]);
+
+
   //console.log("globalArray:", globalArray);
-  return { route, displayRoute,directiondata};
+  return { route, displayRoute, directiondata };
 };
 
 export default useRouteDisplay;

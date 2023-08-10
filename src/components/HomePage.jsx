@@ -35,7 +35,7 @@ const theme = createTheme({
     const [logoIndex, setLogoIndex] = useState(0);
 
     const handleButtonClick = () =>{
-        navigate('/interface-two')
+        navigate('/realmappage')
     }
 
     const logoImages = [

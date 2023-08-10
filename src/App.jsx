@@ -29,7 +29,10 @@ import Box from "@mui/material/Box";
 import Favicon from "react-favicon";
 import Mobile_Mappage from './components/Mobile_Mappage';
 import Mobile_homepage from './components/Mobile_homepage';
-
+import Realhomepage from './components/realhomepage';
+import Realmappage from './components/realmappage';
+import Foryouerro from './components/foryouerro';
+import Realrespage from './components/realresourcepage';
 // If a route can not be displayed this function is invoked from Route path
 function MatchAllRoute() {
   return <h2>The requested page does not exist</h2>;
@@ -43,13 +46,12 @@ function App() {
           <AuthContextProvider>
             <MapInputProvider>
               <GreetingDataProvider>
-              <Favicon url="https://upload.wikimedia.org/wikipedia/commons/9/9d/Threads_%28app%29_logo.svg" />
+                <Favicon url="https://upload.wikimedia.org/wikipedia/commons/9/9d/Threads_%28app%29_logo.svg" />
                 <Routes>
-                  <Route exact path="/" element={<LandingPage />} />
-
+                  {/* <Route exact path="/" element={<LandingPage />} /> */}
+                  <Route exact path="/" element={<Realhomepage />} />
                   <Route path="/mobilemappage" element={<Mobile_Mappage />} />
                   <Route path="/mobilehomepage" element={<Mobile_homepage />} />
-
                   <Route exact path="/map" element={<Interface2 />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/loginCheck" element={<LoginCheck />} />
@@ -62,8 +64,12 @@ function App() {
                   <Route path="/signup" element={<Signup />} />
                   <Route path="/homepage" element={<HomePage />} />
                   <Route path="/resources" element={<Resources />} />
+                  {/* <Route path="/realhomepage" element={<Realhomepage />} /> */}
+                  <Route path="/realmappage" element={<Realmappage />} />
+                  <Route path="/foryou-error" element={<Foryouerro />} />
+                  <Route path="/realrespage" element={< Realrespage />} />
                   {/* <Route path="/chatgpt" element={<ChatGPT />} />
-              <Route path="/quotes" element={<Quotes />} /> */}
+                  <Route path="/quotes" element={<Quotes />} /> */}
                   <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
                 </Routes>
               </GreetingDataProvider>
