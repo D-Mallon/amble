@@ -38,8 +38,6 @@ const handleWaypoints = (waypointsString, setGlobalArrayValue) => {
   setGlobalArrayValue(arrayTemp);
 };
 
-
-
 const useRouteDisplay = (map, inputValues) => {
 
   const { globalArray, setGlobalArrayValue } = useWaypointsArray();
