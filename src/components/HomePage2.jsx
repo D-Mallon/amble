@@ -76,13 +76,13 @@ function LandingPage() {
                 </span>
 
                 <span style={{ fontSize: "30px", fontWeight: "normal" }}>
-                  - finding the peaceful way in Manhattan
+                  the peaceful way
                 </span>
               </>
             )}
             {temp1 && temp2 && (
               <span style={{ fontSize: "36px", fontWeight: "bolder" }}>
-                Welcome back our everlasting friend,<br></br>
+                Welcome back<br></br>
                 {greeting2}!
               </span>
             )}
