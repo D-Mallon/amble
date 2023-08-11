@@ -93,6 +93,13 @@ all_nodes = 'all_nodes.json'
 all_nodes_no_crime_in_bscore = 'all_nodes_no_crime_in_bscore.json'
 all_nodes_with_crime_in_bscore = 'all_nodes_with_crime_in_bscore.json'
 
+# with open(os.path.join(json_dir, all_nodes_no_crime_in_bscore)) as f:
+#     full_nodes_no_crime = json.load(f)
+
+# with open(os.path.join(json_dir, all_nodes_with_crime_in_bscore), 'w') as f:
+#     json.dump(full_nodes_no_crime,f, indent =4)
+
+
 ########### For checking - Get specific Values ############################################
 zone = 4
 time = '0'
@@ -143,7 +150,7 @@ for i in range(len(new_busyObj)):
     new_busyObj[i]['Busyness Predicted'] = round((taxibusyness * taxi_weight) + (bikebusyness * bike_weight),3)
 
 ########## Decide if to include Crime ############################
-include_crime = True 
+include_crime = False 
 
 # Update the Nodes with combined scores
 update_nodes(park,new_busyObj,include_crime)
@@ -184,6 +191,18 @@ update_nodes(all_nodes_no_crime_in_bscore,new_busyObj,False)
 
 # print(f'Busyness WITH crime = {busy}, for c-score = {check_crime_score}')
 
+# ################# Zone Check ###########################
+# museum_zone = 162
+# check_museum = openJson(json_dir,all_nodes_with_crime_in_bscore)
+# # check_museum = openJson(json_dir,museum)
+# list_museum = check_museum['data']
+# for Obj in list_museum:
+#     if Obj['taxi-zone'] == museum_zone:
+#         print(Obj['taxi-zone'],Obj['type'],Obj['name']  )
+#     # print(Obj['type'])
+#     # if Obj['type'] == 'worship':
+#     if Obj['taxi-zone'] == museum_zone and Obj['type'] == 'museum_art':
+#         print(Obj)
 
 
 
