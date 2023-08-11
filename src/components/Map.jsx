@@ -536,6 +536,7 @@ const Map = () => {
                 <DateTimePicker
                   // sx={{ width: "100px", height: "2.5rem" }}
                   value={time}
+                  disableCalendar={true}
                   onChange={(value) => {
                     if (value) {
                       setTime(value);
