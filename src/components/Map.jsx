@@ -460,7 +460,7 @@ const Map = () => {
       //console.log('Percentage Quietness:', percentageQuietness);
       return percentageQuietness;
     } else {
-      return 50+Math.floor(Math.random() * 20);
+      return 52+Math.floor(Math.random() * 18);
     }
   };
 
@@ -472,7 +472,7 @@ const Map = () => {
       red = 255;
       green = 5 * percentageQuietness; // Transition from 0 to 255 as percentage goes from 0 to 50
     } else {
-      red = 255 - 5 * (percentageQuietness - 50); // Transition from 255 to 0 as percentage goes from 50 to 100
+      red = 255 - 5 * (percentageQuietness - 40); // Transition from 255 to 0 as percentage goes from 50 to 100
       green = 255;
     }
     return `rgb(${Math.round(red)}, ${Math.round(green)}, 0)`;
@@ -627,8 +627,8 @@ const Map = () => {
                       onClick={() => {
                         setInputValues((prevValues) => ({
                           ...prevValues,
-                          endLatitude: 40.712742,
-                          endLongitude: -74.013382,
+                          latitude: 40.7505,
+                          longitude: -73.9934,
                         }));
                         setShowBeginField(false);
                         setHomeSelected(true);
@@ -787,8 +787,8 @@ const Map = () => {
                       onClick={() => {
                         setInputValues((prevValues) => ({
                           ...prevValues,
-                          latitude: 40.7505,
-                          longitude: -73.9934,
+                          endLatitude: 40.7505,
+                          endLongitude: -73.9934,
                         }));
                         setEndHomeSelected(true);
                         setEndSearchSelected(false);
