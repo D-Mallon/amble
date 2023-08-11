@@ -24,6 +24,7 @@ const useMapInit = (mapContainer, lat, lng, zoom, inputValues) => {
 
   // Track the start location and add a marker on change
   useEffect(() => {
+    console.log('useEffect in useMapInit.jsx');
     if (!map.current) return; // If map is not defined, return
     if (startMarkerRef.current) startMarkerRef.current.remove(); // If a start marker already exists, remove it
 

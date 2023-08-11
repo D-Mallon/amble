@@ -205,7 +205,7 @@ const Map = () => {
     map.current,
     inputValues,
     setInputValues,
-    setGlobalArrayValue,
+    setGlobalArrayValue
   );
   const { location, setLocation } = useGeocoding(
     map.current,
@@ -226,6 +226,7 @@ const Map = () => {
   usePlaceNameChange("", setInputValues,  showBeginLocationInput, showEndLocationInput, setShowEndLocationInput, setShowPreferencesInput, setShowGoButton);
 
   const handleNowButtonClick = () => {
+    console.log("handleNowButtonClick:", inputValues);
     setNowSelected(true);
     setLaterSelected(false);
     const now = new Date();
@@ -320,14 +321,14 @@ const Map = () => {
 
   const handleOverallSubmit = async (e) => {
 
-    console.log("handleOverallSubmit", inputValues);
-    if (inputValues.distance <= 1.5) {
-      setShowPopup(true);
-      setTimeout(() => {
-        setShowPopup(false);
-      }, 1000);
-      return;
-    }
+    // console.log("handleOverallSubmit", inputValues);
+    // if (inputValues.distance <= 1.5) {
+    //   setShowPopup(true);
+    //   setTimeout(() => {
+    //     setShowPopup(false);
+    //   }, 1000);
+    //   return;
+    // }
 
     e.preventDefault();
     try {
@@ -619,8 +620,13 @@ const Map = () => {
                       onClick={() => {
                         setInputValues((prevValues) => ({
                           ...prevValues,
-                          endLatitude: 40.7505,
-                          endLongitude: -73.9934,
+                          endLatitude: 0,
+                          endLongitude: 0,
+                        }));
+                        setInputValues((prevValues) => ({
+                          ...prevValues,
+                          endLatitude: 40.712742,
+                          endLongitude: -74.013382,
                         }));
                         setShowBeginField(false);
                         setHomeSelected(true);
@@ -775,6 +781,11 @@ const Map = () => {
                   >
                     <Button
                       onClick={() => {
+                        setInputValues((prevValues) => ({
+                          ...prevValues,
+                          latitude: 0,
+                          longitude: 0,
+                        }));
                         setInputValues((prevValues) => ({
                           ...prevValues,
                           latitude: 40.7505,
