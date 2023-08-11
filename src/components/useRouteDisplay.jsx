@@ -40,7 +40,7 @@ const handleWaypoints = (waypointsString, setGlobalArrayValue) => {
 
 
 
-const useRouteDisplay = (map, inputValues, setInputValues) => {
+const useRouteDisplay = (map, inputValues) => {
 
   const { globalArray, setGlobalArrayValue } = useWaypointsArray();
   const [route, setRoute] = useState([]);

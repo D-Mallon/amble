@@ -109,7 +109,7 @@ def magic(user_latitude, user_longitude, hour, dist, endLatitude, endLongitude):
     print('dist_check: ',dist_check)
 
 
-    if (startLatitude == endLatitude and startLongitude == endLongitude) or calculate_distance(startLatitude,startLongitude,endLatitude,endLongitude) < 0.5:
+    if calculate_distance(startLatitude,startLongitude,endLatitude,endLongitude) < 0.001:
         # if dist_check:
             while predefined_distance > dist/2 and len(visited_parks) < 23:
                 print('predefined distance: ',predefined_distance)
