@@ -77,8 +77,8 @@ export default function MenuBar2() {
     navigate("/loginCheck");
   };
 
-  const toggleRes=()=>{
-navigate("/realrespage");
+  const toggleRes = () => {
+    navigate("/realrespage");
   };
   const handleClickOutside = (event) => {
     if (
@@ -142,20 +142,20 @@ navigate("/realrespage");
           </div>
           {isOptionsVisible && (
             <div className="options-box-menubar2" ref={optionsRef}>
-              <button className="option-menubar2"onClick={toggleReg}>
+              <button className="option-menubar2" onClick={toggleReg}>
                 {" "}
                 <span className="option-text-menubar2" >
                   Sign Up
                 </span>
               </button>
-              <button className="option-menubar2"onClick={toggleSignin}>
+              <button className="option-menubar2" onClick={toggleSignin}>
                 <span className="option-text-menubar2" >
                   Sign In</span>
               </button>
             </div>
           )}
         </div>
-      
+
       </div>
     </ThemeProvider>
   );
