@@ -725,7 +725,7 @@ h2 {
   border-radius: 5px;
   text-align: center;
   width: 250px;
-  height: 260px;
+  height: 150px;
   border-radius: 0;
   z-index: 1000;
   padding-top: 18px;
@@ -733,7 +733,7 @@ h2 {
 
 .heatmap-checkboxes label {
   display: block; /* Each label takes up the full width */
-  margin: 25px 0;  /* Space between labels */
+  margin: 15px 0;  /* Space between labels */
   cursor: pointer; /* Indicate that the label is clickable */
   text-align: left;
   padding-left: 10px;
