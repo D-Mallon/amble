@@ -54,7 +54,7 @@ const theme = createTheme({
     };
   
     const toggleamble = () => {
-      navigate("/realmappage");
+      navigate("/mobilemappage");
     };
     return (
       <>
