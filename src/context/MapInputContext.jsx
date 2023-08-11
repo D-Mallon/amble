@@ -12,10 +12,10 @@ export const MapInputProvider = ({ children }) => {
       return JSON.parse(savedState);
     }
     return {
-      "latitude": 40.74218481889335,
-      "longitude": -73.98786664009094,
-      "endLatitude": 40.72540497175606,
-      "endLongitude": -74.01052594184875,
+      "latitude": 0,
+      "longitude": 0,
+      "endLatitude": 0,
+      "endLongitude": 0,
       "hour": 0,
       "distance": 0,
       waypoints: [],

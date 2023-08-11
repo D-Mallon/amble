@@ -14,7 +14,7 @@ const toTitleCase = (str) => {
   });
 };
 
-const useMapInit = (mapContainer, lat, lng, zoom, inputValues) => {
+const useMapInit = (mapContainer, lat, lng, zoom, inputValues, setInputValues) => {
   const map = useRef(null);
   const [markers, setMarkers] = useState([]);
   const [popup, setPopup] = useState(null);
@@ -24,6 +24,7 @@ const useMapInit = (mapContainer, lat, lng, zoom, inputValues) => {
 
   // Track the start location and add a marker on change
   useEffect(() => {
+    console.log('useEffect in useMapInit.jsx');
     if (!map.current) return; // If map is not defined, return
     if (startMarkerRef.current) startMarkerRef.current.remove(); // If a start marker already exists, remove it
 
@@ -181,6 +182,18 @@ const useMapInit = (mapContainer, lat, lng, zoom, inputValues) => {
           setPopup(popup);
         }
       });
+
+      setInputValues((prevValues) => ({
+        ...prevValues,
+        latitude: 0,
+        longitude: 0,
+      }));
+
+      setInputValues((prevValues) => ({
+        ...prevValues,
+        endLatitude: 0,
+        endLongitude: 0,
+      }));
 
     });
   }, []);

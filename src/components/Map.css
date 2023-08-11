@@ -315,7 +315,6 @@ h2 {
   border-style: solid;
   border-color: #ffeea9;
   overflow: hidden;
-
 }
 
 
@@ -339,11 +338,12 @@ h2 {
   overflow-y: auto;
   /* Add a scrollbar when content exceeds the height */
   position: relative;
+  padding-right: 25px;
 }
 
 .directionswords {
   width: 110%;
-  left: -20px;
+  left: -25px;
   position: relative;
 }
 
