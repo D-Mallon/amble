@@ -76,7 +76,7 @@ const theme = createTheme({
 
           </span>
           <div className='mobile-homebut'>
-          <MyButton  onClick={handleButtonClick}/>
+          <MyButton />
        </div>
         
       </div>
