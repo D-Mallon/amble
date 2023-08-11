@@ -143,6 +143,7 @@ const Map_Mobile = () => {
   const [endSearchSelected, setEndSearchSelected] = useState(false);
   const [endAddressSelected, setEndAddressSelected] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [activeSearchBox, setActiveSearchBox] = useState(null);
 
   const options = [
     // { value: 'park', label: 'Parks' },
@@ -191,7 +192,8 @@ const Map_Mobile = () => {
     lat,
     lng,
     zoom,
-    inputValues
+    inputValues,
+    setInputValues,
   );
 
   // Heatmap Visibility & Toggles
@@ -233,10 +235,10 @@ const Map_Mobile = () => {
     setShowPreferencesInput,
     setShowGoButton,
   );
-  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } = 
-  usePlaceNameChange("", setInputValues,  showBeginLocationInput, showEndLocationInput, setShowEndLocationInput, setShowPreferencesInput, setShowGoButton);
-
-  const handleNowButtonClick = () => {
+  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } =
+    usePlaceNameChange("", activeSearchBox, setInputValues, showBeginLocationInput, showEndLocationInput, setShowEndLocationInput, setShowPreferencesInput, setShowGoButton);
+  
+    const handleNowButtonClick = () => {
     setNowSelected(true);
     setLaterSelected(false);
     const now = new Date();
@@ -805,6 +807,7 @@ const togglehome = () => {
                 {showBeginField && (
                   <Autocomplete
                     id="address-input"
+                    onFocus={() => setActiveSearchBox("start")}
                     options={suggestions}
                     getOptionLabel={(option) => option.label}
                     isOptionEqualToValue={() => true === true}
@@ -818,6 +821,7 @@ const togglehome = () => {
                     onChange={(event, newValue) => {
                       if (newValue) {
                         handlePlaceSelect(newValue);
+                        setActiveSearchBox(null);
                       }
                     }}
                     renderInput={(params) => (
@@ -964,6 +968,7 @@ const togglehome = () => {
                 {showEndField && (
                   <Autocomplete
                     id="address-input"
+                    onFocus={() => setActiveSearchBox("end")}
                     options={suggestions}
                     getOptionLabel={(option) => option.label}
                     isOptionEqualToValue={() => true === true}
@@ -977,6 +982,7 @@ const togglehome = () => {
                     onChange={(event, newValue) => {
                       if (newValue) {
                         handlePlaceSelect(newValue);
+                        setActiveSearchBox(null);
                       }
                     }}
                     renderInput={(params) => (
