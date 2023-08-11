@@ -1,10 +1,7 @@
 {
     "data_from_frontend": {
         "selectedOptions": [
-            "museum_art_locations",
-            "community_locations",
-            "worship_locations",
-            "library_locations"
+            "worship_locations"
         ]
     }
 }

@@ -41,10 +41,10 @@ for k,v in other_nodes_dict.items():
         data ={'data':data['data'] + nodes['data']}
         
 #Create a json object and Write to a json file
-merged_json = json.dumps(data, indent=4) 
-file_path_mer = BASE_DIR /'src'/'json-files'/'all_nodes_with_crime_in_bscore.json'
-with open(file_path_mer, 'w') as merged_file: 
-    merged_file.write(merged_json)
+# merged_json = json.dumps(data, indent=4) 
+# file_path_mer = BASE_DIR /'src'/'json-files'/'all_nodes_with_crime_in_bscore.json'
+# with open(file_path_mer, 'w') as merged_file: 
+#     merged_file.write(merged_json)
 
 # Extract latitude and longitude values
 latitudes = []
