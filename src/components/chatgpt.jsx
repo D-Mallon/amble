@@ -31,26 +31,28 @@ const ChatGPT = () => {
 
   const dis = inputValues["distance"];
   console.log(dis);
- 
+
   for (let item in globalArray) {
     // console.log(item + ':', globalArray[item]['name']);
-    const tempitem_name = globalArray[item]["name"];
-    if (tempitem_name !== null && tempitem_name !== "LiÃ¨ge Park") {
-      name.push(globalArray[item]["name"]);
-    }
-    const tempitem_type = globalArray[item]["type"];
-    if (tempitem_type !== null) {
-      type.push(globalArray[item]["type"]);
-    }
-    const tempitem_address = globalArray[item]["address"];
-    if (tempitem_address !== null && tempitem_address !== "null") {
-      address.push(globalArray[item]["address"]);
-    }
-    const tempitem_coord = globalArray[item]["location"];
-    if (tempitem_coord !== null && tempitem_coord !== "null") {
-      const lat = tempitem_coord["latitude"];
-      const lon = tempitem_coord["longitude"];
-      coord.push({ latitude: lat, longitude: lon });
+    if (globalArray[item] && globalArray[item]["name"] != null) {
+      const tempitem_name = globalArray[item]["name"];
+      if (tempitem_name !== null && tempitem_name !== "Liege Park") {
+        name.push(globalArray[item]["name"]);
+      }
+      const tempitem_type = globalArray[item]["type"];
+      if (tempitem_type !== null) {
+        type.push(globalArray[item]["type"]);
+      }
+      const tempitem_address = globalArray[item]["address"];
+      if (tempitem_address !== null && tempitem_address !== "null") {
+        address.push(globalArray[item]["address"]);
+      }
+      const tempitem_coord = globalArray[item]["location"];
+      if (tempitem_coord !== null && tempitem_coord !== "null") {
+        const lat = tempitem_coord["latitude"];
+        const lon = tempitem_coord["longitude"];
+        coord.push({ latitude: lat, longitude: lon });
+      }
     }
   }
   console.log(name);
@@ -64,7 +66,7 @@ const ChatGPT = () => {
 
   const handleSubmit = async () => {
     try {
-       // Clear the previous response
+      // Clear the previous response
       setResponse("");
       const response = await axios.post("/users/chatgpt", {
         input: userInput,
@@ -124,15 +126,15 @@ const ChatGPT = () => {
 
 
   const toggleback = () => {
-  
-      exitandback();
-      setTimeout(() => {
-        setShowGptbox(true);
-            setShowGptcon(false);
-            setShowBut(true);
-      }, 500);
-    }
-  
+
+    exitandback();
+    setTimeout(() => {
+      setShowGptbox(true);
+      setShowGptcon(false);
+      setShowBut(true);
+    }, 500);
+  }
+
 
   const exitandback = () => {
     // 其他逻辑
@@ -178,7 +180,7 @@ const ChatGPT = () => {
                   setShowGptcon(true);
                   setShowBut(false);
 
-                  
+
                 }}
                 href="#"
                 type="submit"
