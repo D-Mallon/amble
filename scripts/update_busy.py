@@ -61,6 +61,9 @@ def update_nodes(nodes,new_busyObj,include_crime):
         crimescore = n["c-score"]   #Get Crime Score 
         n["last_updated"] = create_ts()
 
+        if n['name'] == "Li\u00c3\u00a8ge Park":
+            n['name'] = "Liege Park"
+
         if include_crime == False:
             n["b-score"] = (getBusy(taxizone,new_busyObj))
         else:
@@ -89,6 +92,13 @@ walking_node = 'walking_node_locations.json'
 all_nodes = 'all_nodes.json'
 all_nodes_no_crime_in_bscore = 'all_nodes_no_crime_in_bscore.json'
 all_nodes_with_crime_in_bscore = 'all_nodes_with_crime_in_bscore.json'
+
+# with open(os.path.join(json_dir, all_nodes_no_crime_in_bscore)) as f:
+#     full_nodes_no_crime = json.load(f)
+
+# with open(os.path.join(json_dir, all_nodes_with_crime_in_bscore), 'w') as f:
+#     json.dump(full_nodes_no_crime,f, indent =4)
+
 
 ########### For checking - Get specific Values ############################################
 zone = 4
@@ -140,7 +150,7 @@ for i in range(len(new_busyObj)):
     new_busyObj[i]['Busyness Predicted'] = round((taxibusyness * taxi_weight) + (bikebusyness * bike_weight),3)
 
 ########## Decide if to include Crime ############################
-include_crime = True 
+include_crime = False 
 
 # Update the Nodes with combined scores
 update_nodes(park,new_busyObj,include_crime)
@@ -158,29 +168,41 @@ update_nodes(all_nodes_no_crime_in_bscore,new_busyObj,False)
 # run_time = round((end_time - start_time),1)
 # print(f'Run time to populate busyness scores for all 24 hours = {run_time} seconds')
 
-################## Crime Check ########################################
-busyObj_nocrime = openJson(json_dir,all_nodes_no_crime_in_bscore)
-list_nocrime = busyObj_nocrime['data']
+# ################## Crime Check ########################################
+# busyObj_nocrime = openJson(json_dir,all_nodes_no_crime_in_bscore)
+# list_nocrime = busyObj_nocrime['data']
 
-for Obj in list_nocrime:
-    for i in Obj['b-score']:
-        # print(Obj['taxi-zone'],i )
-        if Obj['taxi-zone'] == zone and i == time:
-            busynocrime = Obj['b-score'][i]
-print(f'Busyness NO crime = {busynocrime}')
+# for Obj in list_nocrime:
+#     for i in Obj['b-score']:
+#         # print(Obj['taxi-zone'],i )
+#         if Obj['taxi-zone'] == zone and i == time:
+#             busynocrime = Obj['b-score'][i]
+# print(f'Busyness NO crime = {busynocrime}')
 
-busyObj_withcrime = openJson(json_dir,all_nodes_with_crime_in_bscore)
-list_withcrime = busyObj_withcrime['data']
+# busyObj_withcrime = openJson(json_dir,all_nodes_with_crime_in_bscore)
+# list_withcrime = busyObj_withcrime['data']
 
-for Obj in list_withcrime:
-    for i in Obj['b-score']:
-        # print(Obj['taxi-zone'],i )
-        if Obj['taxi-zone'] == zone and i == time:
-            busy = Obj['b-score'][i]
-            check_crime_score = Obj['c-score']
+# for Obj in list_withcrime:
+#     for i in Obj['b-score']:
+#         # print(Obj['taxi-zone'],i )
+#         if Obj['taxi-zone'] == zone and i == time:
+#             busy = Obj['b-score'][i]
+#             check_crime_score = Obj['c-score']
 
-print(f'Busyness WITH crime = {busy}, for c-score = {check_crime_score}')
+# print(f'Busyness WITH crime = {busy}, for c-score = {check_crime_score}')
 
+# ################# Zone Check ###########################
+# museum_zone = 162
+# check_museum = openJson(json_dir,all_nodes_with_crime_in_bscore)
+# # check_museum = openJson(json_dir,museum)
+# list_museum = check_museum['data']
+# for Obj in list_museum:
+#     if Obj['taxi-zone'] == museum_zone:
+#         print(Obj['taxi-zone'],Obj['type'],Obj['name']  )
+#     # print(Obj['type'])
+#     # if Obj['type'] == 'worship':
+#     if Obj['taxi-zone'] == museum_zone and Obj['type'] == 'museum_art':
+#         print(Obj)
 
 
 

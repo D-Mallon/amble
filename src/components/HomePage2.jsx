@@ -82,7 +82,7 @@ function LandingPage() {
             )}
             {temp1 && temp2 && (
               <span style={{ fontSize: "36px", fontWeight: "bolder" }}>
-                Welcome back<br></br>
+                Welcome back,<br></br>
                 {greeting2}!
               </span>
             )}
