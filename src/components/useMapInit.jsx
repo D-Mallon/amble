@@ -14,7 +14,7 @@ const toTitleCase = (str) => {
   });
 };
 
-const useMapInit = (mapContainer, lat, lng, zoom, inputValues) => {
+const useMapInit = (mapContainer, lat, lng, zoom, inputValues, setInputValues) => {
   const map = useRef(null);
   const [markers, setMarkers] = useState([]);
   const [popup, setPopup] = useState(null);
@@ -182,6 +182,18 @@ const useMapInit = (mapContainer, lat, lng, zoom, inputValues) => {
           setPopup(popup);
         }
       });
+
+      setInputValues((prevValues) => ({
+        ...prevValues,
+        latitude: 0,
+        longitude: 0,
+      }));
+
+      setInputValues((prevValues) => ({
+        ...prevValues,
+        endLatitude: 0,
+        endLongitude: 0,
+      }));
 
     });
   }, []);

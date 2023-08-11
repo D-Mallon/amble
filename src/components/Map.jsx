@@ -132,6 +132,7 @@ const Map = () => {
   const [endSearchSelected, setEndSearchSelected] = useState(false);
   const [endAddressSelected, setEndAddressSelected] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [activeSearchBox, setActiveSearchBox] = useState(null);
 
   const options = [
     // { value: 'park', label: 'Parks' },
@@ -180,7 +181,8 @@ const Map = () => {
     lat,
     lng,
     zoom,
-    inputValues
+    inputValues,
+    setInputValues
   );
 
   // Heatmap Visibility & Toggles
@@ -222,8 +224,8 @@ const Map = () => {
     setShowPreferencesInput,
     setShowGoButton,
   );
-  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } = 
-  usePlaceNameChange("", setInputValues,  showBeginLocationInput, showEndLocationInput, setShowEndLocationInput, setShowPreferencesInput, setShowGoButton);
+  const { placeName, suggestions, handlePlaceNameChange, handlePlaceSelect } =
+    usePlaceNameChange("", activeSearchBox, setInputValues, showBeginLocationInput, showEndLocationInput, setShowEndLocationInput, setShowPreferencesInput, setShowGoButton);
 
   const handleNowButtonClick = () => {
     console.log("handleNowButtonClick:", inputValues);
@@ -321,14 +323,14 @@ const Map = () => {
 
   const handleOverallSubmit = async (e) => {
 
-    // console.log("handleOverallSubmit", inputValues);
-    // if (inputValues.distance <= 1.5) {
-    //   setShowPopup(true);
-    //   setTimeout(() => {
-    //     setShowPopup(false);
-    //   }, 1000);
-    //   return;
-    // }
+    console.log("handleOverallSubmit", inputValues);
+    if (inputValues.distance <= 1.5) {
+      setShowPopup(true);
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 1000);
+      return;
+    }
 
     e.preventDefault();
     try {
@@ -620,11 +622,6 @@ const Map = () => {
                       onClick={() => {
                         setInputValues((prevValues) => ({
                           ...prevValues,
-                          endLatitude: 0,
-                          endLongitude: 0,
-                        }));
-                        setInputValues((prevValues) => ({
-                          ...prevValues,
                           endLatitude: 40.712742,
                           endLongitude: -74.013382,
                         }));
@@ -713,6 +710,7 @@ const Map = () => {
                 {showBeginField && (
                   <Autocomplete
                     id="address-input"
+                    onFocus={() => setActiveSearchBox("start")}
                     options={suggestions}
                     getOptionLabel={(option) => option.label}
                     isOptionEqualToValue={() => true === true}
@@ -726,6 +724,7 @@ const Map = () => {
                     onChange={(event, newValue) => {
                       if (newValue) {
                         handlePlaceSelect(newValue);
+                        setActiveSearchBox(null);
                       }
                     }}
                     renderInput={(params) => (
@@ -781,11 +780,6 @@ const Map = () => {
                   >
                     <Button
                       onClick={() => {
-                        setInputValues((prevValues) => ({
-                          ...prevValues,
-                          latitude: 0,
-                          longitude: 0,
-                        }));
                         setInputValues((prevValues) => ({
                           ...prevValues,
                           latitude: 40.7505,
@@ -877,6 +871,7 @@ const Map = () => {
                 {showEndField && (
                   <Autocomplete
                     id="address-input"
+                    onFocus={() => setActiveSearchBox("end")}
                     options={suggestions}
                     getOptionLabel={(option) => option.label}
                     isOptionEqualToValue={() => true === true}
@@ -890,6 +885,7 @@ const Map = () => {
                     onChange={(event, newValue) => {
                       if (newValue) {
                         handlePlaceSelect(newValue);
+                        setActiveSearchBox(null);
                       }
                     }}
                     renderInput={(params) => (
@@ -1242,10 +1238,10 @@ const Map = () => {
         <label>
           Crime Scores:
           <input
-                type="checkbox"
-                checked={isOtherHeatmapVisible}
-                onChange={handleToggleOtherHeatmap}
-                  />
+            type="checkbox"
+            checked={isOtherHeatmapVisible}
+            onChange={handleToggleOtherHeatmap}
+          />
         </label>
       </div>
       )}

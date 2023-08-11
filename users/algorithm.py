@@ -110,7 +110,7 @@ def magic(user_latitude, user_longitude, hour, dist, endLatitude, endLongitude):
 
 
     if (startLatitude == endLatitude and startLongitude == endLongitude) or calculate_distance(startLatitude,startLongitude,endLatitude,endLongitude) < 0.5:
-        if dist_check:
+        # if dist_check:
             while predefined_distance > dist/2 and len(visited_parks) < 23:
                 print('predefined distance: ',predefined_distance)
                 closest_parks = []  # List to store closest parks
@@ -331,7 +331,7 @@ def magic(user_latitude, user_longitude, hour, dist, endLatitude, endLongitude):
             return visited_locations
 
     else:
-        if dist_check:
+        # if dist_check:
             while predefined_distance > 0 and len(visited_parks) < 23:
                 closest_parks = []  # List to store closest parks
                 closest_distances = []  # List to store distances to closest parks
