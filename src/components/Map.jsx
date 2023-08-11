@@ -619,8 +619,8 @@ const Map = () => {
                       onClick={() => {
                         setInputValues((prevValues) => ({
                           ...prevValues,
-                          latitude: 40.7505,
-                          longitude: -73.9934,
+                          endLatitude: 40.7505,
+                          endLongitude: -73.9934,
                         }));
                         setShowBeginField(false);
                         setHomeSelected(true);
