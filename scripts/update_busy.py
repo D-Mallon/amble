@@ -61,7 +61,7 @@ def update_nodes(nodes,new_busyObj,include_crime):
         crimescore = n["c-score"]   #Get Crime Score 
         n["last_updated"] = create_ts()
 
-        if n['name'] == "Li\u00c3\u00a8ge Park":
+        if n['name'] == "Li\u00c3\u00a8ge Park" or n['name'] == 'LiÃ¨ge Park':
             n['name'] = "Liege Park"
 
         if include_crime == False:
